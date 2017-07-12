@@ -1,0 +1,8 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+.y-image {
+  display: inline-block;
+}
+
+.y-image__fullWidth {
+  display: block;
+}

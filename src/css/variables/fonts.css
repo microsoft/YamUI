@@ -1,0 +1,60 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+
+/**
+  * Only use these sizes. $fontSize__xSmall should rarely be used.
+  */
+
+$fontSize__xxLarge: 2.4rem;
+$lineHeight__xxLarge: 2.8rem;
+
+$fontSize__xLarge: 2.2rem;
+$lineHeight__xLarge: 2.8rem;
+
+$fontSize__large: 1.8rem;
+$lineHeight__large: 2.4rem;
+
+$fontSize__medium: 1.5rem;
+$lineHeight__medium: 2.0rem;
+
+$fontSize__mediumSub: 1.4rem;
+$lineHeight__mediumSub: 2.0rem;
+
+$fontSize__small: 1.2rem;
+$lineHeight__small: 1.6rem;
+
+$fontSize__xSmall: 1.0rem;
+$lineHeight__xSmall: 1.6rem;
+
+$fontWeight__normal: 400;
+$fontWeight__bold: 600;
+
+
+/* Extend helpers for typography sets */
+@define-extend text__xxLarge {
+  font-size: $fontSize__xxLarge;
+  line-height: $lineHeight__xxLarge;
+}
+@define-extend text__xLarge {
+  font-size: $fontSize__xLarge;
+  line-height: $lineHeight__xLarge;
+}
+@define-extend text__large {
+  font-size: $fontSize__large;
+  line-height: $lineHeight__large;
+}
+@define-extend text__medium {
+  font-size: $fontSize__medium;
+  line-height: $lineHeight__medium;
+}
+@define-extend text__mediumSub {
+  font-size: $fontSize__mediumSub;
+  line-height: $lineHeight__mediumSub;
+}
+@define-extend text__small {
+  font-size: $fontSize__small;
+  line-height: $lineHeight__small;
+}
+@define-extend text__xSmall {
+  font-size: $fontSize__xSmall;
+  line-height: $lineHeight__xSmall;
+}

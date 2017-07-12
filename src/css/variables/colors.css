@@ -1,0 +1,22 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+
+/**
+  * Contextual color names which express their intended use.
+  * Duplication is ok, intent is more important.
+  */
+
+@import "./_yammer_palette.css";
+
+$borderColor: $color__indieRock;
+$borderColor__secondary: $color__altRock;
+$borderColor__tertiary: $color__popRock;
+
+$textColor: $color__blackMetal;
+$textColor__secondary: $color__deathMetal;
+$textColor__metadata: $color__heavyMetal;
+$textColor__white: $color__white;
+
+$linkColor: $color__river;
+$linkColor__active: $color__bay;
+
+$captionBGColor: $color__sunrise;

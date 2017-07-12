@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Block /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-block TEST_CLASSNAME"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with default options matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with negative push matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={
+    Object {
+      "marginTop": "-0.2rem",
+    }
+  }
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with padding matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner y-block--inner__padding-small"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with positive push matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={
+    Object {
+      "paddingTop": "0.3rem",
+    }
+  }
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with spacing matches its snapshot 1`] = `
+<div
+  className="y-block y-block__bottomSpacing-xLarge"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with textAlign right matches its snapshot 1`] = `
+<div
+  className="y-block y-block__textAlign-right"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
+<div
+  className="y-block y-block__textSize-xLarge"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;

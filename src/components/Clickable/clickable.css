@@ -1,0 +1,19 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+.y-clickable {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  line-height: inherit;
+  display: inline;
+  background: none;
+  overflow: visible;
+  border: none;
+  cursor: pointer;
+}
+
+.y-clickable__block {
+  display: block;
+  width: 100%;
+}

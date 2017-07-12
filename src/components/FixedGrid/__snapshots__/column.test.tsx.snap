@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FixedGridColumn /> when given a width but not fixed matches its snapshot 1`] = `
+<div
+  className="y-fixedGridColumn y-fixedGridColumn__hasWidth"
+  style={Object {}}
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridColumn /> when set to fixed and given a width matches its snapshot 1`] = `
+<div
+  className="y-fixedGridColumn y-fixedGridColumn__isFixed y-fixedGridColumn__hasWidth"
+  style={
+    Object {
+      "width": "150px",
+    }
+  }
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridColumn /> when set to fixed matches its snapshot 1`] = `
+<div
+  className="y-fixedGridColumn y-fixedGridColumn__isFixed"
+  style={Object {}}
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridColumn /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-fixedGridColumn TEST_CLASSNAME"
+  style={Object {}}
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridColumn /> with default options matches its snapshot 1`] = `
+<div
+  className="y-fixedGridColumn"
+  style={Object {}}
+>
+  grid content
+</div>
+`;

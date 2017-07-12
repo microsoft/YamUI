@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Callout /> with additional className matches its snapshot 1`] = `
+<span
+  className="y-callout TEST_CLASSNAME"
+>
+  <span
+    className="y-callout--trigger"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      Trigger
+    </span>
+  </span>
+</span>
+`;
+
+exports[`<Callout /> with default options at initial render matches its snapshot 1`] = `
+<span
+  className="y-callout"
+>
+  <span
+    className="y-callout--trigger"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      Trigger
+    </span>
+  </span>
+</span>
+`;
+
+exports[`<Callout /> with screenreaderTitle matches its snapshot 1`] = `
+<span
+  className="y-callout"
+>
+  <span
+    className="y-callout--trigger"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      Trigger
+    </span>
+  </span>
+  <Callout
+    directionalHint={5}
+    isBeakVisible={true}
+    onDismiss={[Function]}
+    preventDismissOnScroll={false}
+  >
+    <div
+      className="y-callout--modal-container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <ScreenreaderText>
+        <h1>
+          HIDDEN TITLE
+        </h1>
+      </ScreenreaderText>
+      <div>
+        Callout content
+      </div>
+    </div>
+  </Callout>
+</span>
+`;

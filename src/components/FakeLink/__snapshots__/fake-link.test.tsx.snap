@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FakeLink /> with additional className matches its snapshot 1`] = `
+<span
+  className="y-fakeLink TEST_CLASSNAME"
+>
+  test content
+</span>
+`;
+
+exports[`<FakeLink /> with default options matches its snapshot 1`] = `
+<span
+  className="y-fakeLink"
+>
+  link content
+</span>
+`;

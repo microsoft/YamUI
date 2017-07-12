@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FixedGridRow /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-fixedGridRow y-fixedGridRow__gutter-small TEST_CLASSNAME"
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridRow /> with bottom spacing matches its snapshot 1`] = `
+<div
+  className="y-fixedGridRow y-fixedGridRow__gutter-small y-fixedGridRow__bottomSpacing-xLarge"
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridRow /> with default options matches its snapshot 1`] = `
+<div
+  className="y-fixedGridRow y-fixedGridRow__gutter-small"
+>
+  grid content
+</div>
+`;
+
+exports[`<FixedGridRow /> with gutter size matches its snapshot 1`] = `
+<div
+  className="y-fixedGridRow y-fixedGridRow__gutter-large"
+>
+  grid content
+</div>
+`;

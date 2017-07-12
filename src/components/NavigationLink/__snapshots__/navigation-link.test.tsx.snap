@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
+<a
+  className="y-navigationLink y-navigationLink__newWindow"
+  href="test.html"
+  onClick={[Function]}
+  rel="nofollow noreferrer"
+  target="_blank"
+>
+  link content
+</a>
+`;
+
+exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
+<a
+  className="y-navigationLink y-navigationLink__unstyled"
+  href="test.html"
+  onClick={[Function]}
+>
+  link content
+</a>
+`;
+
+exports[`<NavigationLink /> with additional className matches its snapshot 1`] = `
+<a
+  className="y-navigationLink TEST_CLASSNAME"
+  href="test.html"
+  onClick={[Function]}
+>
+  test content
+</a>
+`;
+
+exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
+<a
+  className="y-navigationLink"
+  href="test.html"
+  onClick={[Function]}
+>
+  link content
+</a>
+`;

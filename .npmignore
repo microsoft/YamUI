@@ -1,0 +1,3 @@
+# Only need to publish the dist/ directory, ignore everything else
+*
+!dist/**

@@ -1,0 +1,48 @@
+{
+  "verbose": true,
+  "cacheDirectory": ".jest",
+  "rootDir": "../../",
+  "roots": [
+    "src/components",
+    "src/util"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx"   
+  ],
+  "moduleNameMapper": {
+    "^.+\\.css$": "identity-obj-proxy",
+    "\\.(svg)$": "<rootDir>/src/util/mocks/svgMock.js"
+  },
+  "transform": {
+    ".(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  },
+  "testRegex": ".*\\.test\\.(js|jsx|ts|tsx)$",
+  "testPathIgnorePatterns": [
+    "/node_modules/"
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}"
+  ],
+  "coverageDirectory": "build/jest/coverage",
+  "coverageReporters": [
+    "text",
+    "text-summary",
+    "html"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 95,
+      "branches": 95,
+      "functions": 95,
+      "lines": 95
+    }
+  },
+  "mapCoverage": true,
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/jest-serializer-enzyme"
+  ]
+}

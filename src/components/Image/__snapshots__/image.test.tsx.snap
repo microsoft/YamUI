@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> with additional className matches its snapshot 1`] = `
+<Image
+  alt="description"
+  className="y-image TEST_CLASSNAME"
+  shouldFadeIn={true}
+  src="image.png"
+/>
+`;
+
+exports[`<Image /> with default options matches its snapshot 1`] = `
+<Image
+  alt="description"
+  className="y-image"
+  shouldFadeIn={true}
+  src="image.png"
+/>
+`;
+
+exports[`<Image /> with fullWidth matches its snapshot 1`] = `
+<Image
+  alt="description"
+  className="y-image y-image__fullWidth"
+  shouldFadeIn={true}
+  src="image.png"
+  width="100%"
+/>
+`;
+
+exports[`<Image /> with height and width matches its snapshot 1`] = `
+<Image
+  alt="description"
+  className="y-image"
+  height={50}
+  shouldFadeIn={true}
+  src="image.png"
+  width={100}
+/>
+`;
+
+exports[`<Image /> with imageFit matches its snapshot 1`] = `
+<Image
+  alt="description"
+  className="y-image"
+  imageFit={2}
+  shouldFadeIn={true}
+  src="image.png"
+/>
+`;
