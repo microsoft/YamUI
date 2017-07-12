@@ -1,0 +1,72 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/fonts.css";
+@import "src/css/variables/gutters.css";
+
+.y-block {
+  /* Setting full width to push out when nested in a Clickable button */
+  width: 100%;
+}
+
+.y-block__bottomSpacing-xxLarge {
+  margin-bottom: $gutterWidth__xxLarge;
+}
+.y-block__bottomSpacing-xLarge {
+  margin-bottom: $gutterWidth__xLarge;
+}
+.y-block__bottomSpacing-large {
+  margin-bottom: $gutterWidth__large;
+}
+.y-block__bottomSpacing-medium {
+  margin-bottom: $gutterWidth__medium;
+}
+.y-block__bottomSpacing-small {
+  margin-bottom: $gutterWidth__small;
+}
+.y-block__bottomSpacing-xSmall {
+  margin-bottom: $gutterWidth__xSmall;
+}
+
+.y-block--inner__padding-xxLarge {
+  padding: $gutterWidth__xxLarge;
+}
+.y-block--inner__padding-xLarge {
+  padding: $gutterWidth__xLarge;
+}
+.y-block--inner__padding-large {
+  padding: $gutterWidth__large;
+}
+.y-block--inner__padding-medium {
+  padding: $gutterWidth__medium;
+}
+.y-block--inner__padding-small {
+  padding: $gutterWidth__small;
+}
+.y-block--inner__padding-xSmall {
+  padding: $gutterWidth__xSmall;
+}
+
+.y-block__textSize-xxLarge {
+  @extend text__xxLarge;
+}
+.y-block__textSize-xLarge {
+  @extend text__xLarge;
+}
+.y-block__textSize-large {
+  @extend text__large;
+}
+.y-block__textSize-medium {
+  @extend text__medium;
+}
+.y-block__textSize-mediumSub {
+  @extend text__mediumSub;
+}
+.y-block__textSize-small {
+  @extend text__small;
+}
+.y-block__textSize-xSmall {
+  @extend text__xSmall;
+}
+
+.y-block__textAlign-right {
+  text-align: right;
+}

@@ -1,0 +1,50 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+.y-avatar {
+  position: relative;
+}
+
+.y-avatar__size-xLarge {
+  height: 72px;
+  width: 72px;
+}
+.y-avatar__size-large {
+  height: 48px;
+  width: 48px;
+}
+.y-avatar__size-medium {
+  height: 40px;
+  width: 40px;
+}
+.y-avatar__size-small {
+  height: 32px;
+  width: 32px;
+}
+.y-avatar__size-xSmall {
+  height: 24px;
+  width: 24px;
+}
+
+.y-avatar--badge {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: -2px;
+  right: -2px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 2px #fff;
+}
+.y-avatar__size-small--badge,
+.y-avatar__size-xSmall--badge {
+  height: 16px;
+  width: 16px;
+}
+
+/* Fabric CSS overrides */
+ .y-avatar > .ms-Persona {
+   margin: 0;
+ }
+.y-avatar__borderType-soft .ms-Persona-imageArea,
+.y-avatar__borderType-soft .ms-Image {
+  border-radius: 2px;
+}

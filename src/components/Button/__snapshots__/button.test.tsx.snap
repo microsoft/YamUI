@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> set as disabled matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary y-button__state-disabled"
+  classNames={Object {}}
+  disabled={true}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with SMALL size matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-small y-button__color-primary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-small y-button__color-primary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--icon-wrapper"
+  >
+    <Icon
+      className="y-button--icon"
+      icon="plus"
+      size="12"
+    />
+  </span>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with additional className matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary TEST_CLASSNAME"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with aria label matches its snapshot 1`] = `
+<BaseButton
+  ariaLabel="Aria description"
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with color set to SECONDARY matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-secondary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with default options matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with icon matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  disabled={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--icon-wrapper"
+  >
+    <Icon
+      className="y-button--icon"
+      icon="plus"
+      size="14"
+    />
+  </span>
+  Click Me
+</BaseButton>
+`;

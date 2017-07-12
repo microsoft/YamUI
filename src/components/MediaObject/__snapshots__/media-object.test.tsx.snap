@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MediaObject /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium TEST_CLASSNAME"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component />
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with arbitrary children matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component>
+      <div
+        className="CHILDREN"
+      >
+        CHILDREN CONTENT
+      </div>
+    </Component>
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with extra content at extra large size matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-xLarge"
+>
+  <Component
+    gutterSize="xLarge"
+  >
+    <Component
+      className="y-media-object__size-xLarge--image"
+      fixed={true}
+      width={72}
+    />
+    <Component>
+      <MediaObjectExtra>
+        <div
+          className="EXTRA"
+        >
+          EXTRA CONTENT
+        </div>
+      </MediaObjectExtra>
+    </Component>
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component />
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with image content matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    >
+      <img
+        alt=""
+        src="404.jpg"
+      />
+    </Component>
+    <Component />
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with metadata content at extra small size matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-xSmall"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-xSmall--image"
+      fixed={true}
+      width={24}
+    />
+    <Component />
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component>
+      <MediaObjectMetadata
+        size="medium"
+      >
+        <div
+          className="METADATA"
+        >
+          METADATA CONTENT
+        </div>
+      </MediaObjectMetadata>
+    </Component>
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with minimal options matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component />
+  </Component>
+</div>
+`;
+
+exports[`<MediaObject /> with title content matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <Component
+    gutterSize="medium"
+  >
+    <Component
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <Component>
+      <MediaObject
+        size="medium"
+      >
+        <div
+          className="TITLE"
+        >
+          TITLE CONTENT
+        </div>
+      </MediaObject>
+    </Component>
+  </Component>
+</div>
+`;

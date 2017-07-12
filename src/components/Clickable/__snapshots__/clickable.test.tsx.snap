@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
+<button
+  aria-label="aria label content"
+  className="y-clickable"
+>
+  clickable content
+</button>
+`;
+
+exports[`<Clickable /> when block is true matches its snapshot 1`] = `
+<button
+  className="y-clickable y-clickable__block"
+>
+  clickable content
+</button>
+`;
+
+exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
+<button
+  className="y-clickable"
+  title="extra browser tooltip content"
+>
+  clickable content
+</button>
+`;
+
+exports[`<Clickable /> with additional className matches its snapshot 1`] = `
+<button
+  className="y-clickable TEST_CLASSNAME"
+>
+  clickable content
+</button>
+`;
+
+exports[`<Clickable /> with default options matches its snapshot 1`] = `
+<button
+  className="y-clickable"
+>
+  clickable content
+</button>
+`;

@@ -1,0 +1,14 @@
+# Dev dependencies
+# --------------
+node_modules
+
+# Test dependencies
+# --------------
+.travis.yml
+
+# Gitignore referenced things
+# --------------
+.jest
+.tscache
+build
+.DS_Store

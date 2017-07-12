@@ -1,0 +1,169 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
+@import "src/css/variables/gutters.css";
+@import "src/css/variables/links.css";
+
+
+html {
+  /* Sets 1.0rem to 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: $textColor;
+  @extend text__medium;
+  font-family: Segoe UI WestEuropean, Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-weight: $fontWeight__normal;
+}
+
+/* Headings */
+h1 {
+  @extend text__xxLarge;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+h2 {
+  @extend text__xLarge;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+h3 {
+  @extend text__large;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__medium;
+}
+h4 {
+  @extend text__large;
+  font-weight: $fontWeight__normal;
+  margin-bottom: $gutterWidth__medium;
+}
+h5 {
+  @extend text__medium;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__medium;
+}
+h6 {
+  @extend text__mediumSub;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+
+/* Text elements */
+p {
+  margin: 0 0 1.5rem;
+  line-height: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  list-style-type: decimal;
+  margin: 0 1.5rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $textColor__secondary;
+}
+
+address {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 1.5rem;
+  color: $textColor__secondary;
+  font-style: italic;
+}
+
+caption {
+  background: $captionBGColor;
+}
+
+b,
+strong {
+  font-weight: $fontWeight__bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  @extend text__small;
+}
+big {
+  @extend text__large;
+}
+
+dfn {
+  font-style: italic;
+  font-weight: $fontWeight__bold;
+}
+
+pre,
+code {
+  font-size: 1rem;
+  font-family: 'andale mono', 'monotype.com', 'lucida console', monospace;
+  margin: 1.5rem 0;
+  white-space: pre;
+  line-height: 1.5;
+}
+
+/* Tables, layout */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  @extend text__mediumSub;
+  padding: 6px 10px 6px 0;
+  vertical-align: top;
+}
+th {
+  padding-bottom: 2px;
+}
+th,
+table thead th {
+  font-weight: $fontWeight__bold;
+}
+
+hr {
+  clear: both;
+  margin: 15px auto;
+  width: 80%;
+  height: 0;
+  border-top: 1px solid $borderColor__secondary;
+}
+
+/* Forms */
+form input,
+form textarea,
+form select {
+  @extend text__mediumSub;
+}
+
+input[type="checkbox"] {
+  margin: 0 4px 0 0;
+}
+
+/* Links */
+a {
+  @mixin linkComplete;
+}
+
+/* Use @dark-gray for placeholder text for 4.5:1 contrast ratio. */
+/* Specify opacity to override semi-transparent placeholder text on firefox */
+input::placeholder,
+textarea::placeholder {
+  color: $textColor__secondary;
+  opacity: 1;
+}

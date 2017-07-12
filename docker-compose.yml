@@ -1,0 +1,13 @@
+version: "3"
+services:
+  yamui:
+    build: .
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./build:/usr/src/yamui/build
+      - ./src:/usr/src/yamui/src
+      - ./dist:/usr/src/yamui/dist
+      - ./docs:/usr/src/yamui/docs
+      - ./config:/usr/src/yamui/config
+    command: ["yarn", "test"]

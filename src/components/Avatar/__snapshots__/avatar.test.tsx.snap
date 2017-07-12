@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> accessible text with badge description matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME - BADGE
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> accessible text without badge description matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium TEST_CLASSNAME"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with badge content matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-xSmall"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={1}
+  />
+  <div
+    className="y-avatar--badge y-avatar__size-xSmall--badge"
+  >
+    <Text>
+      badge
+    </Text>
+  </div>
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with image url matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with initials matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageInitials="AB"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with size matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-xLarge"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={5}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium y-avatar__borderType-soft"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageUrl="test.jpg"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with too many characters and size XSMALL matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-xSmall"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageInitials="A"
+    presence={0}
+    primaryText="NAME"
+    size={1}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
+<div
+  className="y-avatar y-avatar__size-medium"
+>
+  <Persona
+    hidePersonaDetails={true}
+    imageAlt=""
+    imageInitials="AB"
+    presence={0}
+    primaryText="NAME"
+    size={3}
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;

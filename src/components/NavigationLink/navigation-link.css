@@ -1,0 +1,9 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+.y-navigationLink__unstyled,
+.y-navigationLink__unstyled:active,
+.y-navigationLink__unstyled:focus,
+.y-navigationLink__unstyled:hover {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}

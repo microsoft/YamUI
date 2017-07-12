@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+      "global-require": "off",
+      "import/no-extraneous-dependencies": "off"
+    }
+}
