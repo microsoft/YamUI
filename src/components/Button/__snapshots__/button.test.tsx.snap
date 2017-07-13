@@ -6,6 +6,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-primary y-button__state-disabled"
   classNames={Object {}}
   disabled={true}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -18,6 +19,7 @@ exports[`<Button /> with SMALL size matches its snapshot 1`] = `
   className="y-button y-button__size-small y-button__color-primary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -30,6 +32,7 @@ exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
   className="y-button y-button__size-small y-button__color-primary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   <span
@@ -51,6 +54,7 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-primary TEST_CLASSNAME"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -64,6 +68,7 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -76,6 +81,7 @@ exports[`<Button /> with color set to SECONDARY matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-secondary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -88,6 +94,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   Click Me
@@ -100,6 +107,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
   disabled={false}
+  split={false}
   styles={Object {}}
 >
   <span

@@ -1,13 +1,13 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=4.15.0",
+    "office-ui-fabric-react": "=4.19.0",
     "typescript-string-enums": "=0.3.2"
   },
   "devDependencies": {
