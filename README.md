@@ -12,7 +12,7 @@ To run visual diff regression tests:
 
 ## Development
 ### Start up the dev server:
-* `yarn start:dev` and visit http://localhost:5555/
+* `yarn start:dev` and visit [localhost:5555](http://localhost:5555/)
 
 ### Build some components
 * Develop components in the `/src/components` directory.
