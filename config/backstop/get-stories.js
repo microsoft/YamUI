@@ -1,3 +1,5 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+
 // NOTE: This is hacky and brittle. Find a better way to get story types/names
 //       https://github.com/storybooks/storybook/issues/775
 const fs = require('fs');

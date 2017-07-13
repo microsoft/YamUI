@@ -21,7 +21,7 @@ describe('<Avatar />', () => {
       expect(component.hasClass('y-avatar')).toBe(true);
     });
 
-    it('renders the given image', () => {      
+    it('renders the given image', () => {
       expect(component.render().find('img').attr('src')).toEqual('test.jpg');
     });
 
@@ -89,11 +89,11 @@ describe('<Avatar />', () => {
       );
     });
 
-    it('renders the given badge content', () => {      
+    it('renders the given badge content', () => {
       expect(component.find('.y-avatar--badge').find(Text).length).toEqual(1);
     });
 
-    it('renders the size class on the badge', () => {     
+    it('renders the size class on the badge', () => {
       expect(component.find('.y-avatar--badge').hasClass('y-avatar__size-xSmall--badge')).toBe(true);
     });
 
@@ -109,7 +109,7 @@ describe('<Avatar />', () => {
       );
     });
 
-    it('contains the soft border class', () => {      
+    it('contains the soft border class', () => {
       expect(component.hasClass('y-avatar__borderType-soft')).toBe(true);
     });
 
@@ -125,11 +125,11 @@ describe('<Avatar />', () => {
       );
     });
 
-    it('contains the correct size class', () => {      
+    it('contains the correct size class', () => {
       expect(component.hasClass('y-avatar__size-xLarge')).toBe(true);
     });
 
-    it('renders a Persona component with the correct size', () => {      
+    it('renders a Persona component with the correct size', () => {
       expect(component.find(Persona).prop('size')).toEqual(PersonaSize.large);
     });
 
