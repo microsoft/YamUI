@@ -1,3 +1,4 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {

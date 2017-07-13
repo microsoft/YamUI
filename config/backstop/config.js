@@ -1,3 +1,4 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 const getStories = require('./get-stories.js');
 
 const scenarioBase = {
