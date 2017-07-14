@@ -9,6 +9,7 @@ import './navigation-link.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   href: string;
+  title?: string;
   newWindow?: boolean;
   unstyled?: boolean;
 }
@@ -52,7 +53,8 @@ export default class NavigationLink extends React.Component<NavigationLinkProps,
       rel = 'nofollow noreferrer';
     }
     return (
-      <a href={this.props.href} className={this.getClasses()} onClick={this.handleClick} target={target} rel={rel}>
+      <a href={this.props.href} className={this.getClasses()} onClick={this.handleClick}
+         target={target} rel={rel} title={this.props.title}>
         {this.props.children}
       </a>
     );

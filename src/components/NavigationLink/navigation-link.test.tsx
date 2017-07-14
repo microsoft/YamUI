@@ -63,6 +63,22 @@ describe('<NavigationLink />', () => {
     });
   });
 
+  describe('with title', () => {
+    beforeEach(() => {
+      component = shallow(
+        <NavigationLink href="test.html" title="TITLE CONTENT">link content</NavigationLink>,
+      );
+    });
+
+    it('contains the given title', () => {
+      expect(component.getNode().props.title).toEqual('TITLE CONTENT');
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('when newWindow is true', () => {
     beforeEach(() => {
       component = shallow(
