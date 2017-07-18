@@ -41,3 +41,14 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
   link content
 </a>
 `;
+
+exports[`<NavigationLink /> with title matches its snapshot 1`] = `
+<a
+  className="y-navigationLink"
+  href="test.html"
+  onClick={[Function]}
+  title="TITLE CONTENT"
+>
+  link content
+</a>
+`;

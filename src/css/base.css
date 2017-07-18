@@ -164,6 +164,6 @@ a {
 /* Specify opacity to override semi-transparent placeholder text on firefox */
 input::placeholder,
 textarea::placeholder {
-  color: $textColor__secondary;
+  color: $textColor__metadata;
   opacity: 1;
 }
