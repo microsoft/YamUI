@@ -34,3 +34,9 @@ time, mark, audio, video {
 ::-webkit-file-upload-button {
   -webkit-appearance: push-button;
 }
+
+/* Removes IE 10-11's text input clear button */
+/* (Not supported in Edge, remove this line when we drop IE11 support) */
+input[type=text]::-ms-clear {
+  display: none;
+}
