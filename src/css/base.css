@@ -14,7 +14,7 @@ body {
   background-color: #fff;
   color: $textColor;
   @extend text__medium;
-  font-family: Segoe UI WestEuropean, Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: $fontStack;
   font-weight: $fontWeight__normal;
 }
 
@@ -145,9 +145,10 @@ hr {
 }
 
 /* Forms */
-form input,
-form textarea,
-form select {
+input,
+textarea,
+select {
+  font-family: $fontStack;
   @extend text__mediumSub;
 }
 
