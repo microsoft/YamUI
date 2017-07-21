@@ -15,7 +15,7 @@ Avatars show a thumbnail representation of both an individual or group.
 | badgeContent | JSX.Element | Image, SVG, icon, etc. See example below. |
 | badgeDescription | string | A short accessible description of the badge. Will be appended to name if provided. |
 
-* property is required
+\* property is required
 
 ---
 
