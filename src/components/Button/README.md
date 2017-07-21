@@ -16,7 +16,7 @@ Allows user to take an action. Is based on Office Fabric UI's [Button](https://d
 | onClick | (event: any) => void | Click callback handler. |
 | icon | IconName | Optional icon. |
 
-* property is required
+\* property is required
 
 ---
 

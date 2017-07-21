@@ -13,7 +13,7 @@ Adds a single-color SVG icon.
 | color | string | Override inherited color. Can be any valid CSS color. |
 | block | boolean | Sets style to display: block. |
 
-* property is required
+\* property is required
 
 ---
 

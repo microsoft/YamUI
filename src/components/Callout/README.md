@@ -14,7 +14,7 @@ Callouts are small popover overlays, useful for hovercards and tooltips. Callout
 | isBeakVisible | boolean| Show the small arrow pointing to the callout origin. Defaults to true. |
 | startVisible | boolean| Manually sets its displayed state to true. Defaults to false. |
 
-* property is required
+\* property is required
 
 ---
 
