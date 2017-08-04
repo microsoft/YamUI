@@ -163,41 +163,54 @@ describe('<Button />', () => {
     });
   });
 
-  describe('with mouse events', () => {
-    let clicked: boolean;
-    let hoveredIn: boolean;
-    let hoveredOut: boolean;
-    function onClick() {
-      clicked = true;
-    }
-    function onHoverIn() {
-      hoveredIn = true;
-    }
-    function onHoverOut() {
-      hoveredOut = true;
-    }
+  describe('with event callbacks', () => {
+    let onClick: jest.Mock<{}>;
+    let onHoverIn: jest.Mock<{}>;
+    let onHoverOut: jest.Mock<{}>;
+
     beforeEach(() => {
-      clicked = false;  
-      hoveredIn = false;  
-      hoveredOut = false;
+      onClick = jest.fn();  
+      onHoverIn = jest.fn();  
+      onHoverOut = jest.fn();  
       component = shallow(
         <Button text={sampleText} onClick={onClick} onHoverIn={onHoverIn} onHoverOut={onHoverOut} />,
       );
     });
 
-    it('triggers its onClick callback', () => {
-      component.simulate('click');
-      expect(clicked).toBe(true);
+    describe('when clicked', () => {
+      beforeEach(() => {
+        component.simulate('click');
+      });
+
+      it('triggers its onClick callback', () => {
+        expect(onClick).toHaveBeenCalled();
+        expect(onHoverIn).not.toHaveBeenCalled();
+        expect(onHoverOut).not.toHaveBeenCalled();
+      });
     });
 
-    it('triggers its onHoverIn callback', () => {
-      component.simulate('mouseEnter');
-      expect(hoveredIn).toBe(true);
+    describe('when hovered', () => {
+      beforeEach(() => {
+        component.simulate('mouseEnter');
+      });
+
+      it('triggers its onHoverIn callback', () => {
+        expect(onClick).not.toHaveBeenCalled();
+        expect(onHoverIn).toHaveBeenCalled();
+        expect(onHoverOut).not.toHaveBeenCalled();
+      });
     });
 
-    it('triggers its onHoverOut callback', () => {
-      component.simulate('mouseLeave');
-      expect(hoveredOut).toBe(true);
+    describe('when hovered out', () => {
+      beforeEach(() => {
+        component.simulate('mouseLeave');
+      });
+
+      it('triggers its onHoverOut callback', () => {
+        expect(onClick).not.toHaveBeenCalled();
+        expect(onHoverIn).not.toHaveBeenCalled();
+        expect(onHoverOut).toHaveBeenCalled();
+      });
     });
   });
 
