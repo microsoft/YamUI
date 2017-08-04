@@ -109,7 +109,7 @@ storiesOf('Button', module)
     return (
       <div>
         <Button onHoverIn={action('button hovered in')} onHoverOut={action('button hovered out')}
-                text={sampleClickButtonText} />
+                text="Hover over me" />
       </div>
     );
   });
