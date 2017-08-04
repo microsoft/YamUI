@@ -184,8 +184,6 @@ describe('<Button />', () => {
 
       it('triggers its onClick callback', () => {
         expect(onClick).toHaveBeenCalled();
-        expect(onHoverIn).not.toHaveBeenCalled();
-        expect(onHoverOut).not.toHaveBeenCalled();
       });
     });
 
@@ -195,7 +193,6 @@ describe('<Button />', () => {
       });
 
       it('triggers its onHoverIn callback', () => {
-        expect(onClick).not.toHaveBeenCalled();
         expect(onHoverIn).toHaveBeenCalled();
         expect(onHoverOut).not.toHaveBeenCalled();
       });
@@ -207,7 +204,6 @@ describe('<Button />', () => {
       });
 
       it('triggers its onHoverOut callback', () => {
-        expect(onClick).not.toHaveBeenCalled();
         expect(onHoverIn).not.toHaveBeenCalled();
         expect(onHoverOut).toHaveBeenCalled();
       });
