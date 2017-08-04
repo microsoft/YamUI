@@ -47,9 +47,17 @@ export interface ButtonProps extends BaseComponentProps {
    */
   disabled?: boolean;
   /**
-   * Click callback handler. Will be provided the React synthetic event.
+   * Click callback handler. Will provide the React synthetic event.
    */
   onClick?: (event: any) => void;
+  /**
+   * Hover callback handler. Will provide the React synthetic event.
+   */
+  onHoverIn?: (event: any) => void;
+  /**
+   * Hover out callback handler. Will provide the React synthetic event.
+   */
+  onHoverOut?: (event: any) => void;
   /**
    * Optional icon
    */
@@ -64,10 +72,12 @@ export default class Button extends React.Component<ButtonProps, {}> {
   };
 
   public render() {
-    const { color, size, onClick, disabled, ariaLabel, text, icon } = this.props;
+    const { color, size, onClick, onHoverIn, onHoverOut, disabled, ariaLabel, text, icon } = this.props;
     return (
       <BaseButton className={this.getClasses()}
                   onClick={onClick}
+                  onMouseEnter={onHoverIn}
+                  onMouseLeave={onHoverOut}
                   disabled={disabled}
                   ariaLabel={ariaLabel}>
         {icon && (

@@ -163,21 +163,41 @@ describe('<Button />', () => {
     });
   });
 
-  describe('when clicked', () => {
+  describe('with mouse events', () => {
     let clicked: boolean;
-    function clickMe() {
+    let hoveredIn: boolean;
+    let hoveredOut: boolean;
+    function onClick() {
       clicked = true;
+    }
+    function onHoverIn() {
+      hoveredIn = true;
+    }
+    function onHoverOut() {
+      hoveredOut = true;
     }
     beforeEach(() => {
       clicked = false;  
+      hoveredIn = false;  
+      hoveredOut = false;
       component = shallow(
-        <Button text={sampleText} onClick={clickMe} />,
+        <Button text={sampleText} onClick={onClick} onHoverIn={onHoverIn} onHoverOut={onHoverOut} />,
       );
     });
 
     it('triggers its onClick callback', () => {
       component.simulate('click');
       expect(clicked).toBe(true);
+    });
+
+    it('triggers its onHoverIn callback', () => {
+      component.simulate('mouseEnter');
+      expect(hoveredIn).toBe(true);
+    });
+
+    it('triggers its onHoverOut callback', () => {
+      component.simulate('mouseLeave');
+      expect(hoveredOut).toBe(true);
     });
   });
 

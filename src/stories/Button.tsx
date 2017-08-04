@@ -104,4 +104,12 @@ storiesOf('Button', module)
         <Button onClick={action('button clicked')} text={sampleClickButtonText} />
       </div>
     );
+  })
+  .add('with onHover', () => {
+    return (
+      <div>
+        <Button onHoverIn={action('button hovered in')} onHoverOut={action('button hovered out')}
+                text={sampleClickButtonText} />
+      </div>
+    );
   });
