@@ -145,11 +145,11 @@ hr {
 }
 
 /* Forms */
+button,
 input,
 textarea,
 select {
   font-family: $fontStack;
-  @extend text__mediumSub;
 }
 
 input[type="checkbox"] {

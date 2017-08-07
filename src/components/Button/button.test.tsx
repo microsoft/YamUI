@@ -163,21 +163,73 @@ describe('<Button />', () => {
     });
   });
 
-  describe('when clicked', () => {
-    let clicked: boolean;
-    function clickMe() {
-      clicked = true;
-    }
+  describe('with event callbacks', () => {
+    let onClick: jest.Mock<{}>;
+    let onMouseEnter: jest.Mock<{}>;
+    let onMouseLeave: jest.Mock<{}>;
+    let onFocus: jest.Mock<{}>;
+    let onBlur: jest.Mock<{}>;
+
     beforeEach(() => {
-      clicked = false;  
+      onClick = jest.fn();
+      onMouseEnter = jest.fn();
+      onMouseLeave = jest.fn();
+      onFocus = jest.fn();
+      onBlur = jest.fn();
       component = shallow(
-        <Button text={sampleText} onClick={clickMe} />,
+        <Button text={sampleText} onClick={onClick} onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave} onFocus={onFocus} onBlur={onBlur} />,
       );
     });
 
-    it('triggers its onClick callback', () => {
-      component.simulate('click');
-      expect(clicked).toBe(true);
+    describe('when clicked', () => {
+      beforeEach(() => {
+        component.simulate('click');
+      });
+
+      it('triggers its onClick callback', () => {
+        expect(onClick).toHaveBeenCalled();
+      });
+    });
+
+    describe('when hovered', () => {
+      beforeEach(() => {
+        component.simulate('mouseEnter');
+      });
+
+      it('triggers its onMouseEnter callback', () => {
+        expect(onMouseEnter).toHaveBeenCalled();
+      });
+    });
+
+    describe('when hovered out', () => {
+      beforeEach(() => {
+        component.simulate('mouseLeave');
+      });
+
+      it('triggers its onMouseLeave callback', () => {
+        expect(onMouseLeave).toHaveBeenCalled();
+      });
+    });
+
+    describe('when focused', () => {
+      beforeEach(() => {
+        component.simulate('focus');
+      });
+
+      it('triggers its onFocus callback', () => {
+        expect(onFocus).toHaveBeenCalled();
+      });
+    });
+
+    describe('when blurred', () => {
+      beforeEach(() => {
+        component.simulate('blur');
+      });
+
+      it('triggers its onBlur callback', () => {
+        expect(onBlur).toHaveBeenCalled();
+      });
     });
   });
 
