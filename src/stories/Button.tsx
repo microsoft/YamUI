@@ -87,10 +87,10 @@ storiesOf('Button', module)
             </td>
             <td>
               <Button icon="plus"
-                        disabled={true}
-                        size={ButtonSize.SMALL}
-                        text={sampleText}
-                        color={ButtonColor.SECONDARY}
+                      disabled={true}
+                      size={ButtonSize.SMALL}
+                      text={sampleText}
+                      color={ButtonColor.SECONDARY}
                 />
             </td>
           </tr>
@@ -98,18 +98,15 @@ storiesOf('Button', module)
       </table>
     </div>
   ))
-  .add('with onClick', () => {
+  .add('with event handlers', () => {
     return (
       <div>
-        <Button onClick={action('button clicked')} text={sampleClickButtonText} />
-      </div>
-    );
-  })
-  .add('with onHover', () => {
-    return (
-      <div>
-        <Button onHoverIn={action('button hovered in')} onHoverOut={action('button hovered out')}
-                text="Hover over me" />
+        <Button text="Interact with me"
+                onClick={action('button clicked')}
+                onMouseEnter={action('button hovered in')}
+                onMouseLeave={action('button hovered out')}
+                onFocus={action('button focused')}
+                onBlur={action('button focus lost')} />
       </div>
     );
   });

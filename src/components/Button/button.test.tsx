@@ -165,15 +165,20 @@ describe('<Button />', () => {
 
   describe('with event callbacks', () => {
     let onClick: jest.Mock<{}>;
-    let onHoverIn: jest.Mock<{}>;
-    let onHoverOut: jest.Mock<{}>;
+    let onMouseEnter: jest.Mock<{}>;
+    let onMouseLeave: jest.Mock<{}>;
+    let onFocus: jest.Mock<{}>;
+    let onBlur: jest.Mock<{}>;
 
     beforeEach(() => {
-      onClick = jest.fn();  
-      onHoverIn = jest.fn();  
-      onHoverOut = jest.fn();  
+      onClick = jest.fn();
+      onMouseEnter = jest.fn();
+      onMouseLeave = jest.fn();
+      onFocus = jest.fn();
+      onBlur = jest.fn();
       component = shallow(
-        <Button text={sampleText} onClick={onClick} onHoverIn={onHoverIn} onHoverOut={onHoverOut} />,
+        <Button text={sampleText} onClick={onClick} onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave} onFocus={onFocus} onBlur={onBlur} />,
       );
     });
 
@@ -192,9 +197,8 @@ describe('<Button />', () => {
         component.simulate('mouseEnter');
       });
 
-      it('triggers its onHoverIn callback', () => {
-        expect(onHoverIn).toHaveBeenCalled();
-        expect(onHoverOut).not.toHaveBeenCalled();
+      it('triggers its onMouseEnter callback', () => {
+        expect(onMouseEnter).toHaveBeenCalled();
       });
     });
 
@@ -203,9 +207,28 @@ describe('<Button />', () => {
         component.simulate('mouseLeave');
       });
 
-      it('triggers its onHoverOut callback', () => {
-        expect(onHoverIn).not.toHaveBeenCalled();
-        expect(onHoverOut).toHaveBeenCalled();
+      it('triggers its onMouseLeave callback', () => {
+        expect(onMouseLeave).toHaveBeenCalled();
+      });
+    });
+
+    describe('when focused', () => {
+      beforeEach(() => {
+        component.simulate('focus');
+      });
+
+      it('triggers its onFocus callback', () => {
+        expect(onFocus).toHaveBeenCalled();
+      });
+    });
+
+    describe('when blurred', () => {
+      beforeEach(() => {
+        component.simulate('blur');
+      });
+
+      it('triggers its onBlur callback', () => {
+        expect(onBlur).toHaveBeenCalled();
       });
     });
   });
