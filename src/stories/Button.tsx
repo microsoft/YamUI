@@ -10,6 +10,8 @@ const readme = require('../components/Button/README');
 const sampleText = 'Next';
 const sampleClickButtonText = 'Click me';
 
+const url = 'https://www.yammer.com';
+
 storiesOf('Button', module)
   .addDecorator(withReadme(readme))
   .add('all', () => (
@@ -18,8 +20,9 @@ storiesOf('Button', module)
       <table>
         <thead>
           <tr>
-            <th>&nbsp;</th>
+            <th></th>
             <th>Default</th>
+            <th>Link</th>
             <th>Disabled</th>
           </tr>
         </thead>
@@ -27,26 +30,29 @@ storiesOf('Button', module)
           <tr>
             <td>Primary</td>
             <td><Button text={sampleText} /></td>
+            <td><Button text={sampleText} href={url} /></td>
             <td><Button disabled={true} text={sampleText} /></td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
+            <td></td>
             <td><Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} /></td>
+            <td><Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} href={url} /></td>
             <td><Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} /></td>
           </tr>
           <tr>
             <td>Secondary</td>
             <td><Button text={sampleText} color={ButtonColor.SECONDARY} /></td>
+            <td><Button text={sampleText} color={ButtonColor.SECONDARY} href={url} /></td>
             <td><Button disabled={true} text={sampleText} color={ButtonColor.SECONDARY} /></td>
           </tr>
           <tr>
-            <td>Secondary</td>
+            <td></td>
+            <td><Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td>
-              <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} color={ButtonColor.SECONDARY} />
+              <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText}
+                      color={ButtonColor.SECONDARY} href={url} />
             </td>
-            <td>
-              <Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
-            </td>
+            <td><Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} /></td>
           </tr>
         </tbody>
       </table>
@@ -55,8 +61,9 @@ storiesOf('Button', module)
       <table>
         <thead>
           <tr>
-            <th>&nbsp;</th>
+            <th></th>
             <th>Default</th>
+            <th>Link</th>
             <th>Disabled</th>
           </tr>
         </thead>
@@ -64,26 +71,26 @@ storiesOf('Button', module)
           <tr>
             <td>Primary</td>
             <td><Button size={ButtonSize.SMALL} text={sampleText} /></td>
+            <td><Button size={ButtonSize.SMALL} text={sampleText} href={url} /></td>
             <td><Button disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
           </tr>
           <tr>
-            <td>Primary</td>
+            <td></td>
             <td><Button icon="plus" size={ButtonSize.SMALL} text={sampleText} /></td>
+            <td><Button icon="plus" size={ButtonSize.SMALL} text={sampleText} href={url} /></td>
             <td><Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
           </tr>
           <tr>
             <td>Secondary</td>
-            <td>
-              <Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} />
-            </td>
-            <td>
-              <Button disabled={true} size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} />
-            </td>
+            <td><Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
+            <td><Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} href={url} /></td>
+            <td><Button disabled={true} size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
           </tr>
           <tr>
-            <td>Secondary</td>
+            <td></td>
+            <td><Button icon="plus" size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td>
-              <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} />
+              <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} href={url} />
             </td>
             <td>
               <Button icon="plus"
@@ -107,6 +114,13 @@ storiesOf('Button', module)
                 onMouseLeave={action('button hovered out')}
                 onFocus={action('button focused')}
                 onBlur={action('button focus lost')} />
+      </div>
+    );
+  })
+  .add('link button', () => {
+    return (
+      <div>
+        <Button text="I am a link" href="https://www.yammer.com" />
       </div>
     );
   });

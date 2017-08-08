@@ -3,6 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Enum } from 'typescript-string-enums';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { isValidHref } from '../../util/link';
 import { BaseButton } from 'office-ui-fabric-react/lib/Button';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import './button.css';
@@ -70,6 +71,10 @@ export interface ButtonProps extends BaseComponentProps {
    * Optional icon
    */
   icon?: IconName;
+  /**
+   * If provided, will render a Link styled as a Button
+   */
+  href?: string;
 }
 
 export default class Button extends React.Component<ButtonProps, {}> {
@@ -79,9 +84,10 @@ export default class Button extends React.Component<ButtonProps, {}> {
     disabled: false,
   };
 
-  public render() {
-    const { color, size, disabled, ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur }
-      = this.props;
+  public render () {
+    const { disabled, ariaLabel, text, icon, href, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur } = this.props;
+    const url = isValidHref(href) ? href : undefined;
+
     return (
       <BaseButton className={this.getClasses()}
                   onClick={onClick}
@@ -90,7 +96,8 @@ export default class Button extends React.Component<ButtonProps, {}> {
                   onFocus={onFocus}
                   onBlur={onBlur}
                   disabled={disabled}
-                  ariaLabel={ariaLabel}>
+                  ariaLabel={ariaLabel}
+                  href={url}>
         {icon && (
           <span className="y-button--icon-wrapper">
             <Icon {...this.getIconProps()} />
