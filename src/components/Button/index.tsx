@@ -122,14 +122,8 @@ export default class Button extends React.Component<ButtonProps, {}> {
     const { props } = this;
     const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur } = props;
 
-    // Only use href for LinkButton, and only use disabled for non-LinkButton
-    let disabled;
-    let href;
-    if ((props as RegularButtonProps).disabled) {
-      disabled = (props as RegularButtonProps).disabled;
-    } else if ((props as LinkButtonProps).href) {
-      href = (props as LinkButtonProps).href;
-    }
+    const disabled = (props as RegularButtonProps).disabled;
+    const href = (props as LinkButtonProps).href;
 
     return (
       <BaseButton className={this.getClasses()}
