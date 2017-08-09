@@ -3,7 +3,7 @@ import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import { Key } from '../../util/enums/key';
 import { Callout as FabricCallout } from 'office-ui-fabric-react/lib/Callout';
-import { Callout, CalloutProps, CalloutState, DirectionalHint, TriggerType } from './callout';
+import { Callout, CalloutProps, CalloutState, DirectionalHint, TriggerType } from './index';
 import ScreenreaderText from '../ScreenreaderText';
 
 describe('<Callout />', () => {
