@@ -18,7 +18,6 @@ exports[`<Button /> with SMALL size matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-small y-button__color-primary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -31,7 +30,6 @@ exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-small y-button__color-primary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -53,7 +51,6 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-regular y-button__color-primary TEST_CLASSNAME"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -67,7 +64,6 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -80,7 +76,6 @@ exports[`<Button /> with color set to SECONDARY matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-regular y-button__color-secondary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -93,7 +88,6 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -106,7 +100,6 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__size-regular y-button__color-primary"
   classNames={Object {}}
-  disabled={false}
   split={false}
   styles={Object {}}
 >
@@ -119,6 +112,32 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
       size="14"
     />
   </span>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with invalid href matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  href="#"
+  split={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with valid href matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  href="https://www.yammer.com"
+  split={false}
+  styles={Object {}}
+>
   Click Me
 </BaseButton>
 `;

@@ -163,6 +163,38 @@ describe('<Button />', () => {
     });
   });
 
+  describe('with valid href', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Button text={sampleText} href="https://www.yammer.com" />,
+      );
+    });
+
+    it('renders a link instead of a button', () => {
+      expect(component.render().find('a.y-button').attr('href')).toBe('https://www.yammer.com');
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with invalid href', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Button text={sampleText} href="#" />,
+      );
+    });
+
+    it('complains via proptypes but does not throw an error', () => {
+      expect(component.render().find('a.y-button').attr('href')).toBe('#');
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with event callbacks', () => {
     let onClick: jest.Mock<{}>;
     let onMouseEnter: jest.Mock<{}>;
