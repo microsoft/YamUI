@@ -13,6 +13,10 @@
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+}
+
+.y-button,
+.y-button:hover {
   text-decoration: none;
 }
 
@@ -28,7 +32,9 @@
   padding: 5px 12px;
 }
 
-.y-button__color-primary {
+.y-button__color-primary,
+.y-button__color-primary:active,
+.y-button__color-primary:focus {
   background-color: $color__river;
   border-color: $color__river;
   color: $color__white;
@@ -40,7 +46,9 @@
   color: $color__white;
 }
 
-.y-button__color-secondary {
+.y-button__color-secondary,
+.y-button__color-secondary:active,
+.y-button__color-secondary:focus {
   background-color: $color__white;
   border-color: $color__indieRock;
   color: $color__river;

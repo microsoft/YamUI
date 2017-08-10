@@ -7,6 +7,13 @@ import { BaseButton } from 'office-ui-fabric-react/lib/Button';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import './button.css';
 
+
+const hrefBlacklist = [
+  '',
+  '#',
+  'javascript://',
+];
+
 export const ButtonSize = Enum({
   REGULAR: 'regular',
   SMALL: 'small',
@@ -25,7 +32,7 @@ export const ButtonColor = Enum({
 });
 export type ButtonColor = Enum<typeof ButtonColor>;
 
-export interface ButtonProps extends BaseComponentProps {
+export interface BaseButtonProps extends BaseComponentProps {
   /**
    * The visible button text.
    */
@@ -42,10 +49,6 @@ export interface ButtonProps extends BaseComponentProps {
    * The color describing the button's intent. Defaults to Primary.
    */
   color?: ButtonColor;
-  /**
-   * Whether this button should be disabled or not. Defaults to false.
-   */
-  disabled?: boolean;
   /**
    * Click callback handler. Will provide the React synthetic event.
    */
@@ -71,17 +74,57 @@ export interface ButtonProps extends BaseComponentProps {
    */
   icon?: IconName;
 }
+export interface RegularButtonProps extends BaseButtonProps {
+  /**
+   * Whether this button should be disabled or not. Defaults to false.
+   */
+  disabled?: boolean;
+  /**
+   * Disabled buttons cannot have a Link href
+   */
+  href?: void;
+}
+export interface LinkButtonProps extends BaseButtonProps {
+  /**
+   * If provided, will render a Link styled as a Button
+   */
+  href: string;
+  /**
+   * Link buttons cannot be disabled
+   */
+  disabled?: void;
+}
+export type ButtonProps = RegularButtonProps | LinkButtonProps;
 
 export default class Button extends React.Component<ButtonProps, {}> {
+  static propTypes = {
+    // TypeScript does not support negated types; using PropTypes custom validator instead of runtime validations
+    href (props: LinkButtonProps, propName: string, componentName: string) {
+      const href = props.href;
+      if (typeof href !== 'string') {
+        return;
+      }
+      if (hrefBlacklist.indexOf(href) > -1) {
+        return new Error(
+          `Invalid prop ${propName} supplied to ${componentName}: "${href}".
+          Please use a Button for actions, NavigationLink (or Button with href) for navigation.`,
+        );
+      }
+    },
+  };
+
   static defaultProps = {
     size: ButtonSize.REGULAR,
     color: ButtonColor.PRIMARY,
-    disabled: false,
   };
 
-  public render() {
-    const { color, size, disabled, ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur }
-      = this.props;
+  public render () {
+    const { props } = this;
+    const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur } = props;
+
+    const disabled = (props as RegularButtonProps).disabled;
+    const href = (props as LinkButtonProps).href;
+
     return (
       <BaseButton className={this.getClasses()}
                   onClick={onClick}
@@ -90,7 +133,8 @@ export default class Button extends React.Component<ButtonProps, {}> {
                   onFocus={onFocus}
                   onBlur={onBlur}
                   disabled={disabled}
-                  ariaLabel={ariaLabel}>
+                  ariaLabel={ariaLabel}
+                  href={href}>
         {icon && (
           <span className="y-button--icon-wrapper">
             <Icon {...this.getIconProps()} />
@@ -110,16 +154,17 @@ export default class Button extends React.Component<ButtonProps, {}> {
   }
 
   private getClasses () {
+    const { props } = this;
     const classes: string[] = [
       'y-button',
-      `y-button__size-${this.props.size}`,
-      `y-button__color-${this.props.color}`,
+      `y-button__size-${props.size}`,
+      `y-button__color-${props.color}`,
     ];
-    if (this.props.disabled) {
+    if ((props as RegularButtonProps).disabled) {
       classes.push(`y-button__state-disabled`);
     }
-    if (this.props.className) {
-      classes.push(this.props.className);
+    if (props.className) {
+      classes.push(props.className);
     }
     return classes.join(' ');
   }
