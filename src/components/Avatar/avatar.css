@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 .y-avatar {
   position: relative;
+  overflow: hidden;
 }
 
 .y-avatar__size-xLarge {
@@ -22,6 +23,11 @@
 .y-avatar__size-xSmall {
   height: 24px;
   width: 24px;
+}
+.y-avatar__size-xSmall > .ms-Persona {
+  /* Fabric Persona adds extra height here. This should be unnecessary
+     if we can extract a Fabric Avatar component out of Persona. */
+  height: 24px;
 }
 
 .y-avatar--badge {

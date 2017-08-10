@@ -235,7 +235,7 @@ describe('<Callout />', () => {
 
     describe('and the ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', ({keyCode: Key.Escape} as any));
+        const event = new KeyboardEvent('keydown', ({ keyCode: Key.Escape } as any));
         document.dispatchEvent(event);
       });
 
@@ -246,7 +246,7 @@ describe('<Callout />', () => {
 
     describe('and a non-ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', ({keyCode: Key.Enter} as any));
+        const event = new KeyboardEvent('keydown', ({ keyCode: Key.Enter } as any));
         document.dispatchEvent(event);
       });
 

@@ -5,7 +5,7 @@ import Block, { TextSize } from '../Block';
 import Text, { TextColor } from '../Text';
 
 
-const MediaObjectExtra: React.StatelessComponent<NestableBaseComponentProps> = (props) => (
+const MediaObjectExtra: React.StatelessComponent<NestableBaseComponentProps> = props => (
   <Block className="y-media-object--extra" textSize={TextSize.SMALL} push={4}>
     <Text color={TextColor.METADATA}>
       {props.children}
