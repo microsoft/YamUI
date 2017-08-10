@@ -7,6 +7,7 @@ import Button, { ButtonColor } from '../components/Button';
 import { Callout, CalloutHeader, CalloutBody, DirectionalHint, TriggerType } from '../components/Callout';
 import FakeLink from '../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
+import { HorizontalList, ListItem } from '../components/HorizontalList';
 import Icon, { IconSize } from '../components/Icon';
 import Image from '../components/Image';
 import MediaObject, { MediaObjectSize } from '../components/MediaObject';
@@ -115,24 +116,19 @@ function getUserHovercard(type: UserHovercardType) {
             </FixedGridRow>
           </Block>
 
-          <Block className="group-list" bottomSpacing={GutterSize.XXLARGE}>
-            <FixedGridRow gutterSize={GutterSize.SMALL}>
-              <FixedGridColumn fixed>{iconGroup}</FixedGridColumn>
-              <FixedGridColumn>{userGroups}</FixedGridColumn>
-            </FixedGridRow>
-          </Block>
+          <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XXLARGE} className="group-list">
+            <FixedGridColumn fixed>{iconGroup}</FixedGridColumn>
+            <FixedGridColumn>{userGroups}</FixedGridColumn>
+          </FixedGridRow>
 
-          <Block className="actions">
-            <FixedGridRow gutterSize={GutterSize.SMALL}>
-              <FixedGridColumn></FixedGridColumn>
-              <FixedGridColumn fixed>
-                <Button text="Send Message" color={ButtonColor.SECONDARY} />
-              </FixedGridColumn>
-              <FixedGridColumn fixed>
-                <Button {...userOptions[type].buttonProps} />
-              </FixedGridColumn>
-            </FixedGridRow>
-          </Block>
+          <HorizontalList align="right" className="actions">
+            <ListItem>
+              <Button text="Send Message" color={ButtonColor.SECONDARY} />
+            </ListItem>
+            <ListItem>
+              <Button {...userOptions[type].buttonProps} />
+            </ListItem>
+          </HorizontalList>
         </Block>
       </CalloutBody>
     </div>
@@ -217,24 +213,13 @@ function getGroupHovercard(type: GroupHovercardType) {
 
           <Block className="group-members" bottomSpacing={GutterSize.LARGE}>
             <Block bottomSpacing={GutterSize.XSMALL}>{groupMembersTitle}</Block>
-            <FixedGridRow gutterSize={GutterSize.XSMALL}>
-              <FixedGridColumn fixed>
-                {memberAvatar1}
-              </FixedGridColumn>
-              <FixedGridColumn fixed>
-                {memberAvatar2}
-              </FixedGridColumn>
-              <FixedGridColumn fixed>
-                {memberAvatar3}
-              </FixedGridColumn>
-              <FixedGridColumn fixed>
-                {memberAvatar4}
-              </FixedGridColumn>
-              <FixedGridColumn fixed>
-                {memberAvatar5}
-              </FixedGridColumn>
-              <FixedGridColumn></FixedGridColumn>
-            </FixedGridRow>
+            <HorizontalList>
+              <ListItem>{memberAvatar1}</ListItem>
+              <ListItem>{memberAvatar2}</ListItem>
+              <ListItem>{memberAvatar3}</ListItem>
+              <ListItem>{memberAvatar4}</ListItem>
+              <ListItem>{memberAvatar5}</ListItem>
+            </HorizontalList>
           </Block>
 
           <Block className="related-groups" bottomSpacing={GutterSize.XXLARGE}>
@@ -244,8 +229,12 @@ function getGroupHovercard(type: GroupHovercardType) {
             </FixedGridRow>
           </Block>
 
-          <Block className="actions" push={-1} textAlign="right">
-            <Button {...groupOptions[type].buttonProps} />
+          <Block className="actions" push={-1}>
+            <HorizontalList align="right">
+              <ListItem>
+                <Button {...groupOptions[type].buttonProps} />
+              </ListItem>
+            </HorizontalList>
           </Block>
         </Block>
       </CalloutBody>
@@ -364,17 +353,14 @@ storiesOf('...', module)
               </FixedGridRow>
             </Block>
 
-            <Block className="actions">
-              <FixedGridRow gutterSize={GutterSize.SMALL}>
-                <FixedGridColumn></FixedGridColumn>
-                <FixedGridColumn fixed>
+              <HorizontalList align="right" className="actions">
+                <ListItem>
                   <Button text="Go To File" color={ButtonColor.SECONDARY} />
-                </FixedGridColumn>
-                <FixedGridColumn fixed>
+                </ListItem>
+                <ListItem>
                   <Button text="Preview" />
-                </FixedGridColumn>
-              </FixedGridRow>
-            </Block>
+                </ListItem>
+              </HorizontalList>
           </Block>
         </CalloutBody>
       </div>
