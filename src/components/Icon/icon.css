@@ -4,7 +4,7 @@
   /* IE/Edge do not bubble click events up from SVG elements, so allow clicks to pass through */
   pointer-events: none;
   position: relative;
-  top: 1px;
+  top: 2px;
   fill: currentColor;
 }
 

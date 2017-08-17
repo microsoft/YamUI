@@ -23,13 +23,13 @@
 .y-button__size-regular {
   font-size: $fontSize__mediumSub;
   line-height: $lineHeight__mediumSub;
-  padding: 7px 15px;
+  padding: 7px 16px;
 }
 
 .y-button__size-small {
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
-  padding: 4px 12px 6px;
+  padding: 4px 10px 6px;
 }
 
 .y-button__color-primary,
