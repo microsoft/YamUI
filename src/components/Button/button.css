@@ -29,7 +29,7 @@
 .y-button__size-small {
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
-  padding: 5px 12px;
+  padding: 4px 12px 6px;
 }
 
 .y-button__color-primary,
