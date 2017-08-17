@@ -22,7 +22,7 @@ const getClasses = (props: HorizontalListProps) => {
   return classes.join(' ');
 };
 
-export const HorizontalList: React.StatelessComponent<HorizontalListProps> = (props) =>
+export const HorizontalList: React.StatelessComponent<HorizontalListProps> = props =>
   <ul className={getClasses(props)}>{props.children}</ul>;
 
 HorizontalList.defaultProps = {
