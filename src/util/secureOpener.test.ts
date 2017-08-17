@@ -14,7 +14,7 @@ describe('secureOpener', () => {
     });
 
     describe('when window.open returns a window instance', () => {
-      const newWindow = {opener: 'opener'};
+      const newWindow = { opener: 'opener' };
       window.open = function (): any {
         return newWindow;
       };

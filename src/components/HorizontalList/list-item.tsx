@@ -17,5 +17,5 @@ const getClasses = (props: NestableBaseComponentProps) => {
   return classes.join(' ');
 };
 
-export const ListItem: React.StatelessComponent<NestableBaseComponentProps> = (props) =>
+export const ListItem: React.StatelessComponent<NestableBaseComponentProps> = props =>
   <li className={getClasses(props)}>{props.children}</li>;

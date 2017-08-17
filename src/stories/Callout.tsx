@@ -32,8 +32,8 @@ interface HintedProps {
 const HintedPositionCallout = (props: HintedProps) => {
   // NOTE: We can clean this up with layout components when they exist
   return (
-    <div style={{position: 'relative', height: '500px'}}>
-      <div style={{position: 'absolute', top: '50%', left: '50%'}}>
+    <div style={{ position: 'relative', height: '500px' }}>
+      <div style={{ position: 'absolute', top: '50%', left: '50%' }}>
         <Callout content={fakeContent} directionalHint={props.hint} startVisible={true} {...actions}>
           <a>Hover over me</a>
         </Callout>

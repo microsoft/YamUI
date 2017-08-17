@@ -138,7 +138,7 @@ describe('<Image />', () => {
 
     it('triggers a callback with loaded status on load', () => {
       fullComponent.find('img').simulate('load');
-      setTimeout(function () {}, 1);
+      setTimeout(() => {}, 1);
       
       jest.runAllTimers();
       expect(loadState).toEqual(ImageLoadState.loaded);
@@ -146,7 +146,7 @@ describe('<Image />', () => {
 
     it('triggers a callback with error status on error', () => {
       fullComponent.find('img').simulate('error');
-      setTimeout(function () {}, 1);
+      setTimeout(() => {}, 1);
       
       jest.runAllTimers();
       expect(loadState).toEqual(ImageLoadState.error);

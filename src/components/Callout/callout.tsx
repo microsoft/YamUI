@@ -86,7 +86,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
     startVisible: false,
   };
 
-  private triggerElement: HTMLElement;
+  private triggerElement: HTMLSpanElement;
   private showTimeout: number;
   private hideTimeout: number;
 
@@ -109,7 +109,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
   render () {
     return (
       <span className={classNames('y-callout', this.props.className)}>
-        <span className="y-callout--trigger" ref={(node) => this.triggerElement = node}
+        <span className="y-callout--trigger" ref={(node: HTMLSpanElement) => this.triggerElement = node}
               onClick={this.handleTriggerClick} onMouseEnter={this.handleTriggerHover}
               onMouseLeave={this.handleTriggerHoverLeave}>
           {this.props.children}
@@ -172,9 +172,9 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
   private beginShow () {
     this.showTimeout = window.setTimeout(
-      function (this: Callout) {
+      () => {
         this.show();
-      }.bind(this),
+      },
       showDelay,
     );
   }
@@ -184,9 +184,9 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
   private beginHide () {
     this.hideTimeout = window.setTimeout(
-      function (this: Callout) {
+      () => {
         this.hide();
-      }.bind(this),
+      },
       hideDelay,
     );
   }
@@ -201,7 +201,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
     this.props.onContentDisplay && this.props.onContentDisplay();
 
-    this.setState({visible: true});
+    this.setState({ visible: true });
     this.startKeyListener();
   }
   private hide () {
@@ -211,7 +211,7 @@ export class Callout extends React.Component<CalloutProps, CalloutState> {
 
     this.props.onContentDismiss && this.props.onContentDismiss();
 
-    this.setState({visible: false});
+    this.setState({ visible: false });
     this.stopKeyListener();
   }
 
