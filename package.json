@@ -7,7 +7,7 @@
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=4.31.0",
+    "office-ui-fabric-react": "=4.34.0",
     "typescript-string-enums": "=0.3.2"
   },
   "devDependencies": {
@@ -67,7 +67,7 @@
   "peerDependencies": {
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.0"
   },
   "scripts": {
     "clean:dist": "rimraf dist/*",

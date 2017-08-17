@@ -215,7 +215,7 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@uifabric/styling@>=0.19.0 <1.0.0":
+"@uifabric/styling@>=0.19.2 <1.0.0":
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/@uifabric/styling/-/styling-0.19.2.tgz#c89a840bfcf3ebd80e2cb9d3c53c861d24e8c4b9"
   dependencies:
@@ -5321,12 +5321,12 @@ object.values@^1.0.4:
     function-bind "^1.1.0"
     has "^1.0.1"
 
-office-ui-fabric-react@=4.31.0:
-  version "4.31.0"
-  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-4.31.0.tgz#cfc96a3f5443d4cd27c8fd7bc0dd5877fd6820e8"
+office-ui-fabric-react@=4.34.0:
+  version "4.34.0"
+  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-4.34.0.tgz#ec0531cdc867b07d7ae506611af872ad076753d1"
   dependencies:
     "@microsoft/load-themed-styles" "^1.5.1"
-    "@uifabric/styling" ">=0.19.0 <1.0.0"
+    "@uifabric/styling" ">=0.19.2 <1.0.0"
     "@uifabric/utilities" ">=4.9.0 <5.0.0"
     prop-types "^15.5.10"
     tslib "^1.6.0"
