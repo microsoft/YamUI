@@ -86,7 +86,7 @@ storiesOf('Text', module)
       <Text color={TextColor.PRIMARY}>This is color PRIMARY</Text><br />
       <Text color={TextColor.SECONDARY}>This is color SECONDARY</Text><br />
       <Text color={TextColor.METADATA}>This is color METADATA</Text><br />
-      <div style={{backgroundColor: '#a8b0bd', padding: '16px'}}>
+      <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
         <Text color={TextColor.WHITE}>
           This is color WHITE.
           It should be used where the background is a darker color.
