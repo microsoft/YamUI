@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Button, { ButtonSize, ButtonColor } from '../components/Button';
+import Button, { ButtonSize, ButtonColor, IconPosition } from '../components/Button';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Button/README');
 
@@ -40,6 +40,12 @@ storiesOf('Button', module)
             <td><Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} /></td>
           </tr>
           <tr>
+            <td></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.REGULAR} text={sampleText} /></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.REGULAR} text={sampleText} href={url} /></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} disabled={true} size={ButtonSize.REGULAR} text={sampleText} /></td>
+          </tr>
+          <tr>
             <td>Secondary</td>
             <td><Button text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td><Button text={sampleText} color={ButtonColor.SECONDARY} href={url} /></td>
@@ -53,6 +59,15 @@ storiesOf('Button', module)
                       color={ButtonColor.SECONDARY} href={url} />
             </td>
             <td><Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.REGULAR} text={sampleText} color={ButtonColor.SECONDARY} /></td>
+            <td>
+              <Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.REGULAR} text={sampleText}
+                      color={ButtonColor.SECONDARY} href={url} />
+            </td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} disabled={true} text={sampleText} color={ButtonColor.SECONDARY} /></td>
           </tr>
         </tbody>
       </table>
@@ -81,6 +96,12 @@ storiesOf('Button', module)
             <td><Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
           </tr>
           <tr>
+            <td></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL} text={sampleText} /></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL} text={sampleText} href={url} /></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
+          </tr>
+          <tr>
             <td>Secondary</td>
             <td><Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td><Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} href={url} /></td>
@@ -94,6 +115,22 @@ storiesOf('Button', module)
             </td>
             <td>
               <Button icon="plus"
+                      disabled={true}
+                      size={ButtonSize.SMALL}
+                      text={sampleText}
+                      color={ButtonColor.SECONDARY}
+                />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
+            <td>
+              <Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} href={url} />
+            </td>
+            <td>
+              <Button icon="down"
+                      iconPosition={IconPosition.RIGHT}
                       disabled={true}
                       size={ButtonSize.SMALL}
                       text={sampleText}

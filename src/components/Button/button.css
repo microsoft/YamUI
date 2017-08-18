@@ -65,6 +65,10 @@
   cursor: default;
 }
 
-.y-button--icon-wrapper {
+.y-button--icon-wrapper-left {
   padding-right: 4px;
+}
+
+.y-button--icon-wrapper-right {
+  padding-left: 4px;
 }

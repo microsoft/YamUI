@@ -20,6 +20,12 @@ export const ButtonSize = Enum({
 });
 export type ButtonSize = Enum<typeof ButtonSize>;
 
+export const IconPosition = Enum({
+  LEFT: 'left',
+  RIGHT: 'right',
+});
+export type IconPosition = Enum<typeof IconPosition>;
+
 export const ButtonColor = Enum({
   /**
    * Primary blue. Only one primary action should be offered at one time.
@@ -73,6 +79,10 @@ export interface BaseButtonProps extends BaseComponentProps {
    * Optional icon
    */
   icon?: IconName;
+  /**
+   * Icon position
+   */
+  iconPosition?: IconPosition;
 }
 export interface RegularButtonProps extends BaseButtonProps {
   /**
@@ -116,11 +126,12 @@ export default class Button extends React.Component<ButtonProps, {}> {
   static defaultProps = {
     size: ButtonSize.REGULAR,
     color: ButtonColor.PRIMARY,
+    iconPosition: IconPosition.LEFT,
   };
 
   public render () {
     const { props } = this;
-    const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur } = props;
+    const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur, iconPosition } = props;
 
     const disabled = (props as RegularButtonProps).disabled;
     const href = (props as LinkButtonProps).href;
@@ -135,12 +146,17 @@ export default class Button extends React.Component<ButtonProps, {}> {
                   disabled={disabled}
                   ariaLabel={ariaLabel}
                   href={href}>
-        {icon && (
-          <span className="y-button--icon-wrapper">
+        {icon && (iconPosition === IconPosition.LEFT) && (
+          <span className="y-button--icon-wrapper-left">
             <Icon {...this.getIconProps()} />
           </span>
         )}
         {text}
+        {icon && (iconPosition === IconPosition.RIGHT) && (
+          <span className="y-button--icon-wrapper-right">
+            <Icon {...this.getIconProps()} />
+          </span>
+        )}
       </BaseButton>
     );
   }
