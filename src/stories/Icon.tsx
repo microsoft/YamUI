@@ -78,7 +78,7 @@ storiesOf('Icon', module)
           <h4>XXLarge</h4>
           <Icon size={IconSize.XXLARGE} icon="attach" />
         </div>
-        <hr style={{ margin: '15px 5px'}} />
+        <hr style={{ margin: '15px 5px' }} />
       </div>
     );
   })

@@ -26,7 +26,7 @@ export interface MediaObjectTitleProps {
   size: MediaObjectSize;
 }
 
-const MediaObject: React.StatelessComponent<MediaObjectTitleProps> = (props) => (
+const MediaObject: React.StatelessComponent<MediaObjectTitleProps> = props => (
   <Block className="y-media-object--title"
           push={BlockPushMap[props.size]}
           textSize={TextSizeMap[props.size] as TextSize}>

@@ -54,7 +54,7 @@ const getClasses = (props: TextProps) => {
   return classes.join(' ');
 };
 
-const Text: React.StatelessComponent<TextProps> = (props) => (
+const Text: React.StatelessComponent<TextProps> = props => (
   <span className={getClasses(props)}>
     {props.children}
   </span>

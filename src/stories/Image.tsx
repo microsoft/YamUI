@@ -92,7 +92,7 @@ storiesOf('Image', module)
     const fullWidthImage = <Image source={yammerLogo} description={yammerLogoDescription} fullWidth={true} />;
     return(
       <div>
-        <table style={{maxWidth: '500px'}}>
+        <table style={{ maxWidth: '500px' }}>
           <tbody>
             <tr>
               <td colSpan={4}>
@@ -102,14 +102,14 @@ storiesOf('Image', module)
               </td>
             </tr>
             <tr>
-              <td width="25%">{fullWidthImage}</td>
-              <td width="25%">{fullWidthImage}</td>
-              <td width="25%">{fullWidthImage}</td>
-              <td width="25%">{fullWidthImage}</td>
+              <td style={{ width: '25%' }}>{fullWidthImage}</td>
+              <td style={{ width: '25%' }}>{fullWidthImage}</td>
+              <td style={{ width: '25%' }}>{fullWidthImage}</td>
+              <td style={{ width: '25%' }}>{fullWidthImage}</td>
             </tr>
             <tr>
-              <td colSpan={2} width="50%">{fullWidthImage}</td>
-              <td colSpan={2} width="50%">{fullWidthImage}</td>
+              <td colSpan={2} style={{ width: '50%' }}>{fullWidthImage}</td>
+              <td colSpan={2} style={{ width: '50%' }}>{fullWidthImage}</td>
             </tr>
             <tr>
               <td colSpan={4}>{fullWidthImage}</td>
@@ -145,7 +145,7 @@ storiesOf('Image', module)
       handleStateChange (loadState: ImageLoadState) {
         action(ImageLoadState[loadState])();
         if (loadState === ImageLoadState.error) {
-          this.setState({source: yammerLogoOrange});
+          this.setState({ source: yammerLogoOrange });
         }
       }
     }
