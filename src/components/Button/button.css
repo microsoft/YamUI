@@ -13,6 +13,7 @@
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+  font-weight: 600;
 }
 
 .y-button,
@@ -23,13 +24,13 @@
 .y-button__size-regular {
   font-size: $fontSize__mediumSub;
   line-height: $lineHeight__mediumSub;
-  padding: 7px 16px;
+  padding: 7px 15px;
 }
 
 .y-button__size-small {
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
-  padding: 4px 10px 6px;
+  padding: 4px 9px 6px;
 }
 
 .y-button__color-primary,
@@ -66,9 +67,9 @@
 }
 
 .y-button--icon-wrapper-left {
-  padding-right: 4px;
+  padding-right: 5px;
 }
 
 .y-button--icon-wrapper-right {
-  padding-left: 4px;
+  padding-left: 5px;
 }
