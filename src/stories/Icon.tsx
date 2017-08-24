@@ -3,7 +3,8 @@ import { GutterSize } from '../util/enums/gutter';
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Block, { TextSize } from '../components/Block';
-import Icon, { IconSize, ICONS } from '../components/Icon';
+import Icon, { IconName, IconSize } from '../components/Icon';
+import iconPaths from '../components/Icon/paths';
 import Text, { TextColor } from '../components/Text';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Icon/README');
@@ -21,11 +22,8 @@ const tableStyles = {
   textAlign: 'center',
 };
 
-const iconsArray: any[] = [];
 
-Object.keys(ICONS).forEach((icon) => {
-  iconsArray.push(icon);
-});
+const iconsArray = Object.keys(iconPaths).map((name: IconName) => name);
 
 storiesOf('Icon', module)
   .addDecorator(withReadme(readme))
@@ -35,6 +33,7 @@ storiesOf('Icon', module)
         <table style={tableStyles}>
           <thead>
             <tr>
+              <th />
               <th>Inherit color</th>
               <th>Override color</th>
             </tr>
@@ -42,6 +41,7 @@ storiesOf('Icon', module)
           <tbody>
             {iconsArray.map((icon, index) => (
               <tr key={index}>
+                <th>{icon}</th>
                 <td><Icon size={IconSize.LARGE} icon={icon} /></td>
                 <td><Icon size={IconSize.LARGE} icon={icon} color="teal" /></td>
               </tr>
