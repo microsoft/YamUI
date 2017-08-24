@@ -13,8 +13,7 @@
     "jsx"   
   ],
   "moduleNameMapper": {
-    "^.+\\.css$": "identity-obj-proxy",
-    "\\.(svg)$": "<rootDir>/src/util/mocks/svgMock.js"
+    "^.+\\.css$": "identity-obj-proxy"
   },
   "transform": {
     ".(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"

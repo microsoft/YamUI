@@ -13,12 +13,12 @@ describe('<Icon />', () => {
       );
     });
 
-    it('contains the correct SVG icon', () => {
-      expect(component.find('use').prop('xlinkHref')).toBe('#attach');
-    });
-
     it('contains its base className', () => {
       expect(component.hasClass('y-icon')).toBe(true);
+    });
+
+    it('contains its specific icon className', () => {
+      expect(component.hasClass('y-icon__attach')).toBe(true);
     });
 
     it('is the default height', () => {

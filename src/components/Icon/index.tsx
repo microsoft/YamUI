@@ -3,12 +3,12 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from '../../util/enums/iconSize';
-import ICONS from './icons';
+import paths from './paths';
 import './icon.css';
 
 
-export { IconSize, ICONS };
-export type IconName = keyof typeof ICONS;
+export { IconSize };
+export type IconName = keyof typeof paths;
 
 export interface IconProps extends BaseComponentProps {
   /**
@@ -38,43 +38,54 @@ interface IconStyles {
   width: string;
 }
 
-export default class Icon extends React.Component<IconProps, {}> {
-  static defaultProps = {
-    size: IconSize.MEDIUM,
+const getClasses = (props: IconProps) => {
+  const classes = [
+    'y-icon',
+    `y-icon__${props.icon}`,
+  ];
+  if (props.block) {
+    classes.push('y-icon__isBlock');
+  }
+  if (props.className) {
+    classes.push(props.className);
+  }
+  return classes.join(' ');
+};
+
+const getInlineStyles = (props: IconProps) => {
+  const length = `${props.size}px`;
+  const styles: IconStyles = {
+    height: length,
+    width: length,
   };
-
-  public render () {
-    const { size, icon } = this.props;
-
-    return (
-      <svg className={this.getClasses()} style={this.getInlineStyles()} aria-hidden="true">
-        <use xlinkHref={`#${icon}`} />
-      </svg>
-    );
+  if (props.color) {
+    styles.color = props.color;
   }
+  return styles;
+};
 
-  private getClasses () {
-    const classes = [
-      'y-icon',
-    ];
-    if (this.props.block) {
-      classes.push('y-icon__isBlock');
-    }
-    if (this.props.className) {
-      classes.push(this.props.className);
-    }
-    return classes.join(' ');
-  }
+const Icon: React.StatelessComponent<IconProps> = (props) => {
+  const { size, icon } = props;
+  const path = paths[icon];
 
-  private getInlineStyles () {
-    const length = this.props.size + 'px';
-    const styles: IconStyles = {
-      height: length,
-      width: length,
-    };
-    if (this.props.color) {
-      styles.color = this.props.color;
-    }
-    return styles;
-  }
-}
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="320"
+      height="320"
+      viewBox="0 0 320 320"
+      aria-hidden="true"
+      className={getClasses(props)}
+      style={getInlineStyles(props)}
+    >
+      <path fillRule="evenodd" d={path}/>
+    </svg>
+  );
+
+};
+
+Icon.defaultProps = {
+  size: IconSize.MEDIUM,
+};
+
+export default Icon;

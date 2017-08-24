@@ -34,9 +34,9 @@ To run visual diff regression tests:
 * `yarn report` will open latest results from both Jest unit tests and Backstop visual diff regression tests.
 
 ### Adding icons
-1. Put clean SVG(s) in the src/components/Icon/icons folder
-2. Export from src/components/Icon/icons/index.ts using the filename as the label
-3. Use the icon via it's label `<Icon icon="plus" />`
+1. Get the SVG from your Designer and ensure it was created at size 320x320
+2. Copy the `<path>` element's `d` attribute value, paste it under a new key (label) in `src/components/Icon/paths.ts`
+3. Use the new icon via its label `<Icon icon="plus" />`
 
 
 ## Using YamUI in your own app
