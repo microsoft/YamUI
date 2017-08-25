@@ -36,7 +36,6 @@ const fontStyles = {
         lineHeight: '2.0rem',
       },
       mediumPlus: fontStyles,
-      icon: fontStyles,
       large: {
         ...fontStyles,
         fontSize: '1.8rem',
