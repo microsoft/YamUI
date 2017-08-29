@@ -1,34 +1,35 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-const attach = require('./attach.svg');
-const cross = require('./cross.svg');
-const minus = require('./minus.svg');
-const no = require('./no.svg');
-const plus = require('./plus.svg');
-const down = require('./down.svg');
-const info = require('./info.svg');
-const check = require('./check.svg');
-const leave = require('./leave.svg');
-const mail = require('./mail.svg');
-const group = require('./group.svg');
-const phone = require('./phone.svg');
-const external = require('./external.svg');
-const lock = require('./lock.svg');
-const time = require('./time.svg');
+
+import attach from './Attach';
+import check from './Check';
+import cross from './Cross';
+import down from './Down';
+import external from './External';
+import group from './Group';
+import info from './Info';
+import leave from './Leave';
+import lock from './Lock';
+import mail from './Mail';
+import minus from './Minus';
+import no from './No';
+import phone from './Phone';
+import plus from './Plus';
+import time from './Time';
 
 export default {
   attach,
+  check,
   cross,
+  down,
+  external,
+  group,
+  info,
+  leave,
+  lock,
+  mail,
   minus,
   no,
-  plus,
-  down,
-  info,
-  check,
-  leave,
-  mail,
-  group,
   phone,
-  external,
-  lock,
+  plus,
   time,
 };

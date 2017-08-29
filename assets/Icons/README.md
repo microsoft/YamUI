@@ -1,0 +1,1 @@
+Source icons used to build React components in src/components/Icon/icons/.
