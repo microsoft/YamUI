@@ -3,7 +3,7 @@
 /**
   * Only use these sizes. $fontSize__xSmall should rarely be used.
   */
-$fontStack: Segoe UI WestEuropean, Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+$fontStack: Segoe UI WestEuropean, Segoe UI, Segoe UI Emoji, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 
 $fontSize__xxLarge: 2.4rem;
 $lineHeight__xxLarge: 2.8rem;
