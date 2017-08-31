@@ -43,13 +43,8 @@ export default class Icon extends React.Component<IconProps, {}> {
   };
 
   public render () {
-    const { size, icon } = this.props;
-    return React.createElement(ICONS[icon], {
-      // width: size,
-      // height: size,
-      className: this.getClasses(),
-      style: this.getInlineStyles(),
-    });
+    const CurrentIcon = ICONS[this.props.icon];
+    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />
   }
 
   private getClasses () {
