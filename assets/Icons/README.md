@@ -12,7 +12,7 @@ If necessary, install svgo. `npm install svgo -g`
 cd assets/Icons
 svgo --pretty --indent=2 (remove title and fill) raw/ -o optimized/
 ```
-(Exported SVGs require the `<title>` tag and the fill attribute removed.)
+(Exported SVGs require the `<title>` tag and the "fill" attribute removed.)
 
 3. Make a React component using this template (we are working on a tool to do this):
 
