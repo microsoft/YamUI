@@ -44,7 +44,7 @@ export default class Icon extends React.Component<IconProps, {}> {
 
   public render () {
     const CurrentIcon = ICONS[this.props.icon];
-    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />
+    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />;
   }
 
   private getClasses () {

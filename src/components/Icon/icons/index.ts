@@ -1,5 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
+// Let's try to keep these alphabetized
 import attach from './Attach';
 import check from './Check';
 import cross from './Cross';
@@ -33,3 +34,4 @@ export default {
   plus,
   time,
 };
+
