@@ -1,26 +1,20 @@
-#Source SVG icons used to build React components
+# Source SVG icons used to build React components
 
-###SVG requirements
- - square field of 240
- - includes viewBox, width and height
- - no id in path element
+### Here we collect the raw (exported from Sketch) and optimized SVGs.
 
-###Run SVG through `svgo` before adding to this folder
+1. Add raw SVGs to assets/Icons/raw folder
 
-If necessary, install svgo.
+2. Process SVGs with svgo
 
-```
-npm install svgo -g
-```
-
-Exported SVGs require the `<title>` tag and the fill attribute removed.
+If necessary, install svgo. `npm install svgo -g`
 
 ```
 cd assets/Icons
-svgo --pretty --indent=2 raw/ -o optimized/
+svgo --pretty --indent=2 (remove title and fill) raw/ -o optimized/
 ```
+(Exported SVGs require the `<title>` tag and the fill attribute removed.)
 
-###Make a React component using this template:
+3. Make a React component using this template (we are working on a tool to do this):
 
 ```
 (Example.tsx)
@@ -40,4 +34,11 @@ export default Example;
 ```
 
 Next, add the component file you created to src/components/Icon/icons/ and continue the steps for [Adding Icons](https://github.com/Microsoft/YamUI#adding-icons)
+
+4. Commit all these resources to a new branch.
+
+### SVG requirements
+ - square field of 240
+ - includes viewBox, width and height
+ - no id or fill in path element. fill-rule ok.
 
