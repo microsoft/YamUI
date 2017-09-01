@@ -1,7 +1,7 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
@@ -74,7 +74,7 @@
     "clean:docs": "rimraf docs/*",
     "clean:build": "rimraf build/*",
     "copy:story-assets": "cpx \"src/stories/assets/**/*\" \"dist/stories/assets\"",
-    "copy:icon-assets": "cpx \"src/components/Icon/icons/*\" \"dist/components/Icon/icons\"",
+    "copy:icon-assets": "cpx \"src/components/Icon/icons/*.svg\" \"dist/components/Icon/icons\"",
     "copy:readmes": "cpx \"src/components/**/README.md\" \"dist/components\"",
     "build:css:global": "postcss src/css/index.css --output dist/yamui-base.css",
     "build:css:components": "postcss \"src/components/**/*.css\" --dir \"dist/components\" --base \"src/components\"",
