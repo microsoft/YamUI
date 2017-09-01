@@ -3,31 +3,10 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Icon, { IconProps, IconSize } from './index';
 import ICONS from './icons';
+import * as util from 'util';
 
 describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
-  const iconsArray: any[] = [];
-  let count:number = 0;
-  Object.keys(ICONS).forEach((icon) => {
-    iconsArray.push(icon);
-  });
-
-  describe('can render', () => {
-    beforeEach(() => {
-      iconsArray.map((icon) => {
-        component = shallow(
-          <Icon icon={icon} />,
-        );
-        if (typeof component.render() === 'string') {
-          count = count + 1;
-        }
-      });
-    });
-
-    it('all library icons', () => {
-      expect(iconsArray.length).toEqual(count);
-    });
-  });
 
   describe('with minimal options', () => {
     beforeEach(() => {
