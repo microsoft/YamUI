@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> with additional className matches its snapshot 1`] = `
-<svg
-  aria-hidden="true"
+<Attach
   className="y-icon TEST_CLASSNAME"
   style={
     Object {
@@ -10,16 +9,11 @@ exports[`<Icon /> with additional className matches its snapshot 1`] = `
       "width": "16px",
     }
   }
->
-  <use
-    xlinkHref="#attach"
-  />
-</svg>
+/>
 `;
 
 exports[`<Icon /> with block matches its snapshot 1`] = `
-<svg
-  aria-hidden="true"
+<Attach
   className="y-icon y-icon__isBlock"
   style={
     Object {
@@ -27,16 +21,11 @@ exports[`<Icon /> with block matches its snapshot 1`] = `
       "width": "16px",
     }
   }
->
-  <use
-    xlinkHref="#attach"
-  />
-</svg>
+/>
 `;
 
 exports[`<Icon /> with color matches its snapshot 1`] = `
-<svg
-  aria-hidden="true"
+<Attach
   className="y-icon"
   style={
     Object {
@@ -45,16 +34,11 @@ exports[`<Icon /> with color matches its snapshot 1`] = `
       "width": "16px",
     }
   }
->
-  <use
-    xlinkHref="#attach"
-  />
-</svg>
+/>
 `;
 
 exports[`<Icon /> with minimal options matches its snapshot 1`] = `
-<svg
-  aria-hidden="true"
+<Attach
   className="y-icon"
   style={
     Object {
@@ -62,16 +46,11 @@ exports[`<Icon /> with minimal options matches its snapshot 1`] = `
       "width": "16px",
     }
   }
->
-  <use
-    xlinkHref="#attach"
-  />
-</svg>
+/>
 `;
 
 exports[`<Icon /> with passed size value matches its snapshot 1`] = `
-<svg
-  aria-hidden="true"
+<Attach
   className="y-icon"
   style={
     Object {
@@ -79,9 +58,5 @@ exports[`<Icon /> with passed size value matches its snapshot 1`] = `
       "width": "32px",
     }
   }
->
-  <use
-    xlinkHref="#attach"
-  />
-</svg>
+/>
 `;

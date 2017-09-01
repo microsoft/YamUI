@@ -3,10 +3,14 @@ import { GutterSize } from '../util/enums/gutter';
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Block, { TextSize } from '../components/Block';
-import Icon, { IconSize, ICONS } from '../components/Icon';
+import Icon, { IconProps, IconSize, ICONS } from '../components/Icon';
 import Text, { TextColor } from '../components/Text';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Icon/README');
+import { shallow, ShallowWrapper } from 'enzyme';
+
+let component: ShallowWrapper<IconProps, {}>;
+let count:number = 0;
 
 
 const simpleFloat = {
@@ -28,6 +32,17 @@ const iconsArray: any[] = [];
 
 Object.keys(ICONS).forEach((icon) => {
   iconsArray.push(icon);
+});
+
+iconsArray.map((icon) => {
+  component = shallow(
+    <Icon icon={icon} />,
+  );
+  console.log('- - - - - ');
+  console.log(component.render());
+  if (typeof component.render() === 'string') {
+    count = count + 1;
+  }
 });
 
 storiesOf('Icon', module)
