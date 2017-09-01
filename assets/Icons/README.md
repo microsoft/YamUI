@@ -13,10 +13,11 @@ If necessary, install svgo.
 npm install svgo -g
 ```
 
-Exports need the `<title>` tag and the fill attribute removed.
+Exported SVGs require the `<title>` tag and the fill attribute removed.
 
 ```
-svgo --pretty --indent=2 <path_to_svg> -o assets/Icons/example.svg
+cd assets/Icons
+svgo --pretty --indent=2 raw/ -o optimized/
 ```
 
 ###Make a React component using this template:
@@ -30,7 +31,7 @@ import * as React from 'react';
 const Example = function Example(props: any) {
   return (
     <svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" {...props}>
-      <path d="xxx"/>
+      <path fillRule="evenodd" d="xxx"/>
     </svg>
   );
 };
