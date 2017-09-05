@@ -56,6 +56,10 @@ Example using a Button component:
 <Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} text="Click me!" />
 ```
 
+### Boo
+
+Boo boo boo boo.
+
 
 ## Roadmap
 
