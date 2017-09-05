@@ -12,7 +12,7 @@ const scenarioBase = {
   ],
   readyEvent: null,
   delay: 350,
-  misMatchThreshold: 0.001,
+  misMatchThreshold: 0.0001,
 };
 function getScenarios() {
   const storybook = getStories.getAllStories();

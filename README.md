@@ -1,4 +1,4 @@
-# YamUI [![Travis](https://img.shields.io/travis/Microsoft/YamUI.svg)](https://travis-ci.org/Microsoft/YamUI)
+# YamUI ![Travis status](https://travis-ci.org/Microsoft/YamUI.svg?branch=master)
 UI Component Framework for Yammer.com. This is built with React on top of [Fabric](https://dev.office.com/fabric#/components/) components. Unit tests with [Jest](https://facebook.github.io/jest/), isolated development environment + documentation with [ReactStorybook](https://github.com/storybooks/storybook), visual diff regression with [BackstopJS](https://garris.github.io/BackstopJS/). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local dev environments and CI.
 
 ## Installation
