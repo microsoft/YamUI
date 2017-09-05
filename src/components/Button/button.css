@@ -13,6 +13,7 @@
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+  font-weight: 600;
 }
 
 .y-button,
@@ -29,7 +30,7 @@
 .y-button__size-small {
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
-  padding: 5px 12px;
+  padding: 4px 9px 6px;
 }
 
 .y-button__color-primary,
@@ -65,6 +66,12 @@
   cursor: default;
 }
 
-.y-button--icon-wrapper {
-  padding-right: 4px;
+.y-button--icon-wrapper-left {
+  opacity: 0.7;
+  padding-right: 5px;
+}
+
+.y-button--icon-wrapper-right {
+  opacity: 0.7;
+  padding-left: 5px;
 }
