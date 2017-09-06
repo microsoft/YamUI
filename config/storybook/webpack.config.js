@@ -13,7 +13,7 @@ module.exports = {
         loaders: ['babel-loader', 'ts-loader'],
       },
       {
-        test: /\.(gif|jpg|jpeg|png)$/,
+        test: /\.(gif|jpg|jpeg|png|svg)$/,
         loader: 'file-loader?name=[name].[ext]',
       },
       {
