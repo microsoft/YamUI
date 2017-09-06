@@ -10,8 +10,6 @@ const readme = require('../components/Icon/README');
 import { shallow, ShallowWrapper } from 'enzyme';
 
 let component: ShallowWrapper<IconProps, {}>;
-let count:number = 0;
-
 
 const simpleFloat = {
   width: '80px',
@@ -32,17 +30,6 @@ const iconsArray: any[] = [];
 
 Object.keys(ICONS).forEach((icon) => {
   iconsArray.push(icon);
-});
-
-iconsArray.map((icon) => {
-  component = shallow(
-    <Icon icon={icon} />,
-  );
-  console.log('- - - - - ');
-  console.log(component.render());
-  if (typeof component.render() === 'string') {
-    count = count + 1;
-  }
 });
 
 storiesOf('Icon', module)
