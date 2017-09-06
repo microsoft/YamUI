@@ -9,8 +9,6 @@ import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Icon/README');
 import { shallow, ShallowWrapper } from 'enzyme';
 
-let component: ShallowWrapper<IconProps, {}>;
-
 const simpleFloat = {
   width: '80px',
   height: '80px',
