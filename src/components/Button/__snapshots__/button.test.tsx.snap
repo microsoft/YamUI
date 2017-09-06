@@ -34,7 +34,7 @@ exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
   styles={Object {}}
 >
   <span
-    className="y-button--icon-wrapper"
+    className="y-button--icon-wrapper-left"
   >
     <Icon
       className="y-button--icon"
@@ -104,7 +104,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   styles={Object {}}
 >
   <span
-    className="y-button--icon-wrapper"
+    className="y-button--icon-wrapper-left"
   >
     <Icon
       className="y-button--icon"

@@ -14,6 +14,7 @@ Allows user to take an action. Is based on Office Fabric UI's [Button](https://d
 | disabled | boolean | Whether this button should be disabled or not. Defaults to false. |
 | ariaLabel | string | Required if button text is not descriptive enough. |
 | icon | IconName | Optional icon. |
+| iconPosition | IconPosition | Position icon before or after text. Defaults to IconPosition.LEFT (before) |
 | onClick | (event: any) => void | Click callback handler. |
 | onMouseEnter | (event: any) => void | Hover callback handler. |
 | onMouseLeave | (event: any) => void | Hover out callback handler. |
