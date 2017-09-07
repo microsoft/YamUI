@@ -1,10 +1,12 @@
+sudo: false
+dist: trusty
 language: node_js
 
 node_js:
-  - "6"
+  - "6.10.3"
 
-before_install:
-  - npm install -g yarn
-  - yarn install
+cache:
+  directories:
+    - "node_modules"
 
 script: yarn run test
