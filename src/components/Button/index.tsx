@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Enum } from 'typescript-string-enums';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { BaseButton } from 'office-ui-fabric-react/lib/Button';
+import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import './button.css';
 
