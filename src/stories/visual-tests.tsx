@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 
 const yammerLogo = require('./assets/img/yammer-logo.png');
 
+
 storiesOf('...', module)
   .add('fake markup', () => (
     <div>
