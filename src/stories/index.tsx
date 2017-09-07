@@ -40,4 +40,5 @@ import './FixedGrid';
 import './HorizontalList';
 
 // Import other non-component documentation and demos
+import './visual-tests';
 import './hovercard';
