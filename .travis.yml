@@ -8,3 +8,7 @@ before_install:
   - yarn install
 
 script: yarn run test
+
+# This upgrade seems to have broken us. This downgrades us for now.
+# https://blog.travis-ci.com/2017-08-29-trusty-image-updates
+group: deprecated-2017Q3
