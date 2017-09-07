@@ -1,7 +1,7 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
@@ -56,8 +56,6 @@
     "serve": "=5.1.4",
     "storybook-readme": "=3.0.6",
     "style-loader": "=0.16.1",
-    "svg-sprite-loader": "=3.0.5",
-    "svgo-loader": "=1.2.1",
     "ts-jest": "=20.0.6",
     "ts-loader": "=2.0.3",
     "tslint": "=5.6.0",
@@ -74,7 +72,6 @@
     "clean:docs": "rimraf docs/*",
     "clean:build": "rimraf build/*",
     "copy:story-assets": "cpx \"src/stories/assets/**/*\" \"dist/stories/assets\"",
-    "copy:icon-assets": "cpx \"src/components/Icon/icons/*.svg\" \"dist/components/Icon/icons\"",
     "copy:readmes": "cpx \"src/components/**/README.md\" \"dist/components\"",
     "build:css:global": "postcss src/css/index.css --output dist/yamui-base.css",
     "build:css:components": "postcss \"src/components/**/*.css\" --dir \"dist/components\" --base \"src/components\"",

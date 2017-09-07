@@ -2,6 +2,8 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Icon, { IconProps, IconSize } from './index';
+import ICONS from './icons';
+import * as util from 'util';
 
 describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
@@ -14,7 +16,7 @@ describe('<Icon />', () => {
     });
 
     it('contains the correct SVG icon', () => {
-      expect(component.find('use').prop('xlinkHref')).toBe('#attach');
+      expect(component.find(ICONS['attach'])).toHaveLength(1);
     });
 
     it('contains its base className', () => {

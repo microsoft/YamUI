@@ -3,11 +3,11 @@ import { GutterSize } from '../util/enums/gutter';
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Block, { TextSize } from '../components/Block';
-import Icon, { IconSize, ICONS } from '../components/Icon';
+import Icon, { IconProps, IconSize, ICONS } from '../components/Icon';
 import Text, { TextColor } from '../components/Text';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Icon/README');
-
+import { shallow, ShallowWrapper } from 'enzyme';
 
 const simpleFloat = {
   width: '80px',
@@ -18,7 +18,10 @@ const simpleFloat = {
 
 const tableStyles = {
   border: '1px solid #CCC',
-  textAlign: 'center',
+};
+
+const labelStyles = {
+  paddingLeft: '10px',
 };
 
 const iconsArray: any[] = [];
@@ -35,6 +38,7 @@ storiesOf('Icon', module)
         <table style={tableStyles}>
           <thead>
             <tr>
+              <th style={labelStyles}>Label</th>
               <th>Inherit color</th>
               <th>Override color</th>
             </tr>
@@ -42,6 +46,7 @@ storiesOf('Icon', module)
           <tbody>
             {iconsArray.map((icon, index) => (
               <tr key={index}>
+                <td style={labelStyles}>{icon}</td>
                 <td><Icon size={IconSize.LARGE} icon={icon} /></td>
                 <td><Icon size={IconSize.LARGE} icon={icon} color="teal" /></td>
               </tr>

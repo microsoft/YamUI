@@ -1,5 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   module: {
@@ -14,14 +13,7 @@ module.exports = {
         loaders: ['babel-loader', 'ts-loader'],
       },
       {
-        test: /\.svg$/,
-        loaders: [
-          'svg-sprite-loader',
-          'svgo-loader',
-        ],
-      },
-      {
-        test: /\.(gif|jpg|jpeg|png)$/,
+        test: /\.(gif|jpg|jpeg|png|svg)$/,
         loader: 'file-loader?name=[name].[ext]',
       },
       {
@@ -45,7 +37,4 @@ module.exports = {
       '.md',
     ],
   },
-  plugins: [
-    new SpriteLoaderPlugin(),
-  ],
 };

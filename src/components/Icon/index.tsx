@@ -6,7 +6,6 @@ import { IconSize } from '../../util/enums/iconSize';
 import ICONS from './icons';
 import './icon.css';
 
-
 export { IconSize, ICONS };
 export type IconName = keyof typeof ICONS;
 
@@ -44,13 +43,8 @@ export default class Icon extends React.Component<IconProps, {}> {
   };
 
   public render () {
-    const { size, icon } = this.props;
-
-    return (
-      <svg className={this.getClasses()} style={this.getInlineStyles()} aria-hidden="true">
-        <use xlinkHref={`#${icon}`} />
-      </svg>
-    );
+    const CurrentIcon = ICONS[this.props.icon];
+    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />;
   }
 
   private getClasses () {
