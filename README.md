@@ -11,7 +11,7 @@ To run visual diff regression tests:
 * Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yarn-docker` executable, like this: `alias y="./yarn-docker"`. Visual-diff tasks `test` and `test:visual` need to run in Docker via the `y` alias -- `y test` and `y test:visual`.
 
 ## Development
-### Start up the dev server:
+### Start up the Storybook app dev server:
 * `yarn start:dev` and visit [localhost:5555](http://localhost:5555/)
 
 ### Build some components
