@@ -116,6 +116,27 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 </BaseButton>
 `;
 
+exports[`<Button /> with icon on the right matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__size-regular y-button__color-primary"
+  classNames={Object {}}
+  split={false}
+  styles={Object {}}
+>
+  Click Me
+  <span
+    className="y-button--icon-wrapper-right"
+  >
+    <Icon
+      className="y-button--icon"
+      icon="plus"
+      size="14"
+    />
+  </span>
+</BaseButton>
+`;
+
 exports[`<Button /> with invalid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"

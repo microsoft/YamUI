@@ -70,12 +70,32 @@ describe('<Button />', () => {
       expect(component.find(Icon).hasClass('y-button--icon')).toBe(true);
     });
 
+    it('renders the icon on the left', () => {
+      expect(component.find('.y-button--icon-wrapper-left').length).toBe(1);
+    });
+
     it('renders the correct icon size', () => {
       expect(component.find(Icon).props().size).toEqual(IconSize.SMALL);
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+
+    describe('on the right', () => {
+      beforeEach(() => {
+        component = shallow(
+          <Button icon="plus" text={sampleText} iconPosition="right" />,
+        );
+      });
+  
+      it('renders the icon on the right', () => {
+        expect(component.find('.y-button--icon-wrapper-right').length).toBe(1);
+      });
+  
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 
