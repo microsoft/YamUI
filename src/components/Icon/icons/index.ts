@@ -1,23 +1,23 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
 // Let's try to keep these alphabetized
-import attach from './Attach';
-import check from './Check';
-import cross from './Cross';
-import down from './Down';
-import edit from './Edit';
-import external from './External';
-import group from './Group';
-import info from './Info';
-import leave from './Leave';
-import lock from './Lock';
-import mail from './Mail';
-import minus from './Minus';
-import no from './No';
-import phone from './Phone';
-import plus from './Plus';
-import skype from './Skype';
-import time from './Time';
+const attach = require('./Attach').default;
+const check = require('./Check').default;
+const cross = require('./Cross').default;
+const down  = require('./Down').default;
+const edit  = require('./Edit').default;
+const external = require('./External').default;
+const group = require('./Group').default;
+const info = require('./Info').default;
+const leave = require('./Leave').default;
+const lock = require('./Lock').default;
+const mail = require('./Mail').default;
+const minus = require('./Minus').default;
+const no = require('./No').default;
+const phone = require('./Phone').default;
+const plus = require('./Plus').default;
+const skype = require('./Skype').default;
+const time = require('./Time').default;
 
 export default {
   attach,

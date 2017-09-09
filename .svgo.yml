@@ -1,0 +1,15 @@
+plugins:
+  - mergePaths: true
+  - transformsWithOnePath: true
+  - removeTitle: true
+  - removeXMLNS: true
+  - removeDimensions: true
+  - sortAttrs: true
+  - removeStyleElement: true
+  - removeScriptElement: true
+  - removeAttrs:
+      attrs: ['stroke', 'fill', 'id', 'style', 'xmlns', 'xmlns:xlink']
+
+js2svg:
+  pretty: true
+  indent: '  '
