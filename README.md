@@ -35,8 +35,7 @@ To run visual diff regression tests:
 
 ### Adding icons
 1. Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/Icons)
-2. Export new React SVG from src/components/Icon/icons/index.ts using the filename as the label
-3. Use the icon via it's label `<Icon icon="plus" />`
+2. Use the icon via its new label: `<Icon icon="plus" />`
 
 
 ## Using YamUI in your own app
