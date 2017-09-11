@@ -191,7 +191,6 @@ storiesOf('...', module)
               </table>
               <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
-            {/*
             <article id="text__code">
               <header><h1>Code</h1></header>
               <div>
@@ -212,7 +211,6 @@ storiesOf('...', module)
               </div>
               <footer><p><a href="#top">[Top]</a></p></footer>
             </article>
-            */}
             {/*
             <article id="text__inline">
               <header><h1>Inline elements</h1></header>
