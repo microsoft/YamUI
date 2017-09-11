@@ -44,7 +44,7 @@
     "jest": "=21.0.2",
     "jest-serializer-enzyme": "=1.0.0",
     "npm-run-all": "=4.0.2",
-    "phantomjs-prebuilt": "=2.1.14",
+    "phantomjs-prebuilt": "=2.1.15",
     "postcss": "=5.2.16",
     "postcss-cli": "=3.2.0",
     "postcss-import": "=9.1.0",
