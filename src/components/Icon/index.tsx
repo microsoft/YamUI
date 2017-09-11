@@ -43,7 +43,12 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   public render () {
     const length = this.props.size + 'px';
     const CurrentIcon = ICONS[this.props.icon];
-    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} height={length} width={length} />;
+    return <CurrentIcon
+            className={this.getClasses()}
+            style={this.getInlineStyles()}
+            height={length}
+            width={length}
+            ariaHidden />;
   }
 
   private getClasses () {
