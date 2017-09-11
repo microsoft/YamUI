@@ -8,7 +8,7 @@ plugins:
   - removeStyleElement: true
   - removeScriptElement: true
   - removeAttrs:
-      attrs: ['stroke', 'fill', 'id', 'style', 'xmlns', 'xmlns:xlink']
+      attrs: ['stroke', 'fill', 'style', 'xmlns', 'xmlns:xlink']
 
 js2svg:
   pretty: true

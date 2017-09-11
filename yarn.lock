@@ -615,7 +615,7 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
-babel-cli@^6.26.0:
+babel-cli@=6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-cli/-/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
   dependencies:
@@ -807,7 +807,7 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-jest@^21.0.2:
+babel-jest@=21.0.2, babel-jest@^21.0.2:
   version "21.0.2"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-21.0.2.tgz#817ea52c23f1c6c4b684d6960968416b6a9e9c6c"
   dependencies:
@@ -1205,7 +1205,7 @@ babel-plugin-transform-react-jsx-source@6.22.0, babel-plugin-transform-react-jsx
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-react-jsx@6.24.1, babel-plugin-transform-react-jsx@^6.24.1:
+babel-plugin-transform-react-jsx@6.24.1, babel-plugin-transform-react-jsx@=6.24.1, babel-plugin-transform-react-jsx@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-jsx/-/babel-plugin-transform-react-jsx-6.24.1.tgz#840a028e7df460dfc3a2d29f0c0d91f6376e66a3"
   dependencies:
