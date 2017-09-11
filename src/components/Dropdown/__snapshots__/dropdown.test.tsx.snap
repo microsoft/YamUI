@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-dropdown TEST_CLASSNAME"
+>
+  <WithResponsiveMode
+    options={Array []}
+  />
+</div>
+`;
+
+exports[`<Dropdown /> with additional className matches its snapshot 2`] = `
+<div
+  className="y-dropdown TEST_CLASSNAME"
+>
+  <WithResponsiveMode
+    options={Array []}
+  />
+</div>
+`;
+
+exports[`<Dropdown /> with all props matches its snapshot 1`] = `
+<div
+  className="y-dropdown TEST_CLASSNAME"
+>
+  <WithResponsiveMode
+    label="TEST_LABEL"
+    onChanged={[Function]}
+    options={
+      Array [
+        Object {
+          "key": "A",
+          "text": "Option a",
+        },
+        Object {
+          "key": "B",
+          "text": "Option b",
+        },
+      ]
+    }
+    placeHolder="TEST_PLACEHOLDER"
+    selectedKey="A"
+  />
+</div>
+`;
+
+exports[`<Dropdown /> with default options matches its snapshot 1`] = `
+<div
+  className="y-dropdown"
+>
+  <WithResponsiveMode
+    options={Array []}
+  />
+</div>
+`;
