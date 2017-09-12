@@ -42,12 +42,10 @@ Dropdown can be used as either a [controlled](https://facebook.github.io/react/d
 ```
 import Dropdown from 'yamui/dist/components/Dropdown';
 
-class ControlledDropdown extends React.Component<any, any> {
+class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
   constructor() {
     super();
-    this.state = {
-      selectedOption: null,
-    };
+    this.state = {};
   }
 
   public render() {

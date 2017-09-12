@@ -6,12 +6,13 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import './dropdown.css';
 
 export type DropdownOptionKey = string | number;
+export type DropdownOption = IDropdownOption;
 
 export interface DropdownProps extends BaseComponentProps {
   /**
    * Items to be presented to the user.
   **/
-  options: IDropdownOption[];
+  options: DropdownOption[];
 
   /**
    * Label text that will be rendered above the dropdown.
@@ -26,7 +27,7 @@ export interface DropdownProps extends BaseComponentProps {
   /**
    * Function to call when user changes the selected item.
   **/
-  onChanged?: (option: IDropdownOption) => void;
+  onChanged?: (option: DropdownOption) => void;
 
   /**
    * Input placeholder text. Displayed until option is selected.

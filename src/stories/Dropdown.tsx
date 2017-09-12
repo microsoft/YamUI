@@ -3,18 +3,20 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
-import Dropdown from '../components/Dropdown';
+import Dropdown, { DropdownOption } from '../components/Dropdown';
 import Block from '../components/Block';
 import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
 
 const readme = require('../components/Dropdown/README');
 
-class ControlledDropdown extends React.Component<any, any> {
+interface ControlledDropdownState {
+  selectedOption?: DropdownOption;
+}
+
+class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
   constructor() {
     super();
-    this.state = {
-      selectedOption: null,
-    };
+    this.state = {};
   }
 
   public render() {
