@@ -5,6 +5,7 @@ exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    onChanged={[Function]}
     options={Array []}
   />
 </div>
@@ -15,6 +16,7 @@ exports[`<Dropdown /> with additional className matches its snapshot 2`] = `
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    onChanged={[Function]}
     options={Array []}
   />
 </div>
@@ -50,6 +52,7 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
   className="y-dropdown"
 >
   <WithResponsiveMode
+    onChanged={[Function]}
     options={Array []}
   />
 </div>

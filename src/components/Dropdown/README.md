@@ -11,7 +11,7 @@ A Dropdown is a list in which the selected item is always visible, and the other
 | options *| [IDropdownOption] | Items to be presented to the user. |
 | label | string | Text that will be rendered above the dropdown.
 | selectedKey | string | Use to specify an initially selected option. |
-| onChanged | function | Function to call when user changes the selected item. |
+| onChanged | function | Function to call when user changes the selected item. Returns the new selected key. |
 | placeHolder | string | Input placeholder text. Displayed until option is selected. |
 
 * indicates property is required
@@ -40,7 +40,11 @@ Dropdown can be used as either a [controlled](https://facebook.github.io/react/d
 ## Example implementation
 
 ```
-import Dropdown from 'yamui/dist/components/Dropdown';
+import Dropdown, { DropdownOptionKey } from 'yamui/dist/components/Dropdown';
+
+interface ControlledDropdownState {
+  selectedKey?: DropdownOptionKey;
+}
 
 class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
   constructor() {
@@ -49,7 +53,7 @@ class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
   }
 
   public render() {
-    const { selectedOption } = this.state;
+    const { selectedKey } = this.state;
 
     return (<Dropdown
       options={[
@@ -58,12 +62,11 @@ class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
         { key: 'C', text: 'Option c' },
       ]}
       placeHolder="Please Select"
-      selectedKey={ selectedOption && selectedOption.key }
-      onChanged={ option => this.setState({ selectedOption: option }) }
+      selectedKey={ selectedKey }
+      onChanged={ key => this.setState({ selectedKey: key }) }
     />);
   }
 }
 
 <ControlledDropdown />
-
 ```

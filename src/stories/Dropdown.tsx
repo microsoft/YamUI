@@ -3,14 +3,14 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
-import Dropdown, { DropdownOption } from '../components/Dropdown';
+import Dropdown, { DropdownOptionKey } from '../components/Dropdown';
 import Block from '../components/Block';
 import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
 
 const readme = require('../components/Dropdown/README');
 
 interface ControlledDropdownState {
-  selectedOption?: DropdownOption;
+  selectedKey?: DropdownOptionKey;
 }
 
 class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
@@ -20,7 +20,8 @@ class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
   }
 
   public render() {
-    const { selectedOption } = this.state;
+    const { selectedKey } = this.state;
+    
 
     return (<Dropdown
       options={[
@@ -29,10 +30,10 @@ class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
         { key: 'C', text: 'Option c' },
       ]}
       placeHolder="Please Select"
-      selectedKey={ selectedOption && selectedOption.key }
-      onChanged={ (option) => {
-        action('dropdown changed')();
-        this.setState({ selectedOption: option });
+      selectedKey={ selectedKey }
+      onChanged={ (key) => {
+        action('dropdown changed')(key);
+        this.setState({ selectedKey: key });
       }}
     />);
   }
@@ -53,6 +54,7 @@ storiesOf('Dropdown', module)
           { key: 'B', text: 'Option b' },
           { key: 'C', text: 'Option c' },
         ]}
+        onChanged={action('dropdown changed')}
       />
     </div>
   ))

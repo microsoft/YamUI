@@ -27,7 +27,7 @@ export interface DropdownProps extends BaseComponentProps {
   /**
    * Function to call when user changes the selected item.
   **/
-  onChanged?: (option: DropdownOption) => void;
+  onChanged?: (key: DropdownOptionKey) => void;
 
   /**
    * Input placeholder text. Displayed until option is selected.
@@ -35,29 +35,38 @@ export interface DropdownProps extends BaseComponentProps {
   placeHolder?: string;
 }
 
-const getClasses = (props: DropdownProps) => {
-  const classes: string[] = [
-    'y-dropdown',
-  ];
-  if (props.className) {
-    classes.push(props.className);
+export default class Dropdown extends React.Component<DropdownProps, {}> {
+  constructor() {
+    super();
+    this.handleChanged = this.handleChanged.bind(this);
   }
-  return classes.join(' ');
-};
 
-const Dropdown: React.StatelessComponent<DropdownProps> = (props) => {
-  const { options, selectedKey, onChanged, placeHolder, label } = props;
-  return (
-    <div className={getClasses(props)}>
-      <FabricDropdown
-        options={options}
-        selectedKey={selectedKey}
-        onChanged={onChanged}
-        placeHolder={placeHolder}
-        label={label}
-      />
-    </div>
-  );
-};
+  render() {
+    const { options, selectedKey, onChanged, placeHolder, label } = this.props;
+    return (
+      <div className={this.getClasses()}>
+        <FabricDropdown
+          options={options}
+          selectedKey={selectedKey}
+          onChanged={this.handleChanged}
+          placeHolder={placeHolder}
+          label={label}
+        />
+      </div>
+    );
+  }
 
-export default Dropdown;
+  private getClasses() {
+    const classes: string[] = [
+      'y-dropdown',
+    ];
+    if (this.props.className) {
+      classes.push(this.props.className);
+    }
+    return classes.join(' ');
+  }
+
+  private handleChanged(option: DropdownOption) {
+    this.props.onChanged && this.props.onChanged(option.key);
+  }
+}
