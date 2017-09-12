@@ -9,4 +9,8 @@ cache:
   directories:
     - "node_modules"
 
+branches:
+   only:
+   - master
+
 script: yarn run test
