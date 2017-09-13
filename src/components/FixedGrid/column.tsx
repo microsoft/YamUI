@@ -7,7 +7,14 @@ import './fixed-grid.css';
 
 
 export interface FixedGridColumnProps extends NestableBaseComponentProps {
+  /**
+   * Set to true if this column should have a fixed width. If true, and `width` is not provided,
+   * this column will shrink to fit its content.
+   */
   fixed?: boolean;
+  /**
+   * The number of pixels wide this column should be. Ignored if `fixed` is not set to true.
+  */
   width?: number;
 }
 

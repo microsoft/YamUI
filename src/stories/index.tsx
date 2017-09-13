@@ -28,6 +28,7 @@ import './Block';
 import './Text';
 import './Button';
 import './Clickable';
+import './Dropdown';
 import './NavigationLink';
 import './FakeLink';
 import './Icon';
