@@ -5,6 +5,7 @@ import attach from './Attach';
 import check from './Check';
 import cross from './Cross';
 import down from './Down';
+import edit from './Edit';
 import external from './External';
 import group from './Group';
 import info from './Info';
@@ -15,6 +16,7 @@ import minus from './Minus';
 import no from './No';
 import phone from './Phone';
 import plus from './Plus';
+import skype from './Skype';
 import time from './Time';
 
 export default {
@@ -22,6 +24,7 @@ export default {
   check,
   cross,
   down,
+  edit,
   external,
   group,
   info,
@@ -32,6 +35,7 @@ export default {
   no,
   phone,
   plus,
+  skype,
   time,
 };
 
