@@ -5,4 +5,6 @@
 /docs
 /node_modules
 
+/config/travis/deploy.key
+
 .DS_Store
