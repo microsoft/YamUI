@@ -70,7 +70,7 @@ export interface InitialsAvatarProps extends BaseAvatarProps {
 // AvatarProps requires either imageUrl OR initials
 export type AvatarProps = ImageAvatarProps | InitialsAvatarProps;
 
-export default class Avatar extends React.Component<AvatarProps, {}> {
+export default class Avatar extends React.PureComponent<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
     borderType: BorderType.ROUND,
     size: AvatarSize.MEDIUM,

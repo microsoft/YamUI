@@ -50,7 +50,7 @@ export interface ImageProps extends BaseComponentProps {
   onLoadingStateChange?: (loadState: ImageLoadState) => void;
 }
 
-export default class Image extends React.Component<ImageProps, {}> {
+export default class Image extends React.PureComponent<ImageProps, {}> {
   static defaultProps: Partial<ImageProps> = {
     fullWidth: false,
   };
