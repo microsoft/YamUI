@@ -1,3 +1,4 @@
+
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 /* tslint:disable:max-line-length */
 import * as React from 'react';
@@ -11,4 +12,3 @@ const Minus = function Minus(props: any) {
 };
 
 export default Minus;
-
