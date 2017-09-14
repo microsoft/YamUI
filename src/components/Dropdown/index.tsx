@@ -35,7 +35,7 @@ export interface DropdownProps extends BaseComponentProps {
   placeHolder?: string;
 }
 
-export default class Dropdown extends React.Component<DropdownProps, {}> {
+export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   constructor() {
     super();
     this.handleChanged = this.handleChanged.bind(this);
