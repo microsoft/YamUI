@@ -99,7 +99,7 @@
     "storybook:start": "start-storybook --port 5555 --config-dir config/storybook",
     "storybook:static:build": "yarn clean:docs && build-storybook --config-dir config/storybook --output-dir docs",
     "storybook:static:serve": "serve docs --port 5555",
-    "storybook:static:stop": "pkill -f \"sh -c serve docs --port 5555\"",
+    "storybook:static:stop": "pkill -f \"node_modules/.bin/serve docs\"",
     "visual:test": "backstop test --config config/backstop/config.js",
     "visual:approve": "backstop approve --config config/backstop/config.js",
     "prepublishOnly": "yarn build"
