@@ -123,7 +123,7 @@ storiesOf('Image', module)
     interface StateChangeDemoState {
       source: string;
     }
-    class StateChangeDemo extends React.Component<{}, StateChangeDemoState> {
+    class StateChangeDemo extends React.PureComponent<{}, StateChangeDemoState> {
       constructor () {
         super();
         this.state = {
