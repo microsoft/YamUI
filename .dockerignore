@@ -1,14 +1,5 @@
-# Dev dependencies
-# --------------
-node_modules
-
-# Test dependencies
-# --------------
-.travis.yml
-
-# Gitignore referenced things
-# --------------
-.jest
-.tscache
+.*
+!.browserslistrc
+!.eslintrc.json
 build
-.DS_Store
+node_modules
