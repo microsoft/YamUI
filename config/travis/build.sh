@@ -20,7 +20,7 @@ chmod 600 config/travis/deploy.key
 ssh-add config/travis/deploy.key
 
 npm run test:visual:build
-cd docs
+cd build/storybook
 
 git init
 git config user.name "Travis"

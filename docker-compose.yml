@@ -8,6 +8,5 @@ services:
       - ./build:/usr/src/yamui/build
       - ./src:/usr/src/yamui/src
       - ./dist:/usr/src/yamui/dist
-      - ./docs:/usr/src/yamui/docs
       - ./config:/usr/src/yamui/config
     command: ["yarn", "test"]
