@@ -6,7 +6,7 @@ services:
       - "5555:5555"
     volumes:
       - ./build:/usr/src/yamui/build
-      - ./src:/usr/src/yamui/src
-      - ./dist:/usr/src/yamui/dist
       - ./config:/usr/src/yamui/config
+      - ./dist:/usr/src/yamui/dist
+      - ./src:/usr/src/yamui/src
     command: ["yarn", "test"]
