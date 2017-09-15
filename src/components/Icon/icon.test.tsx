@@ -1,12 +1,16 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import Icon, { IconProps, IconSize } from './index';
-import ICONS from './icons';
+import { shallow, ShallowWrapper, mount, ReactWrapper } from 'enzyme';
+import Icon, { IconProps, IconSize, ICONS } from './index';
 import * as util from 'util';
 
 describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
+  let fullComponent: ReactWrapper<IconProps, {}>;
+
+  const icons = Object.keys(ICONS).map((icon) => {
+    return icon;
+  });
 
   describe('with minimal options', () => {
     beforeEach(() => {
@@ -24,11 +28,11 @@ describe('<Icon />', () => {
     });
 
     it('is the default height', () => {
-      expect(component.getNode().props.style.height).toBe(IconSize.MEDIUM + 'px');
+      expect(component.getNode().props.height).toBe(IconSize.MEDIUM + 'px');
     });
 
     it('is the default width', () => {
-      expect(component.getNode().props.style.width).toBe(IconSize.MEDIUM + 'px');
+      expect(component.getNode().props.width).toBe(IconSize.MEDIUM + 'px');
     });
 
     it('matches its snapshot', () => {
@@ -76,11 +80,11 @@ describe('<Icon />', () => {
     });
 
     it('is the correct height', () => {
-      expect(component.getNode().props.style.height).toBe(IconSize.XXLARGE + 'px');
+      expect(component.getNode().props.height).toBe(IconSize.XXLARGE + 'px');
     });
 
     it('is the correct width', () => {
-      expect(component.getNode().props.style.width).toBe(IconSize.XXLARGE + 'px');
+      expect(component.getNode().props.width).toBe(IconSize.XXLARGE + 'px');
     });
 
     it('matches its snapshot', () => {
@@ -105,6 +109,17 @@ describe('<Icon />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('each React component generated from SVG source', () => {
+    it('renders without error', () => {
+      icons.forEach((icon: any) => {
+        fullComponent = mount(
+          <Icon icon={icon} />,
+        );
+        expect(fullComponent.hasClass(`y-icon__${icon}`)).toBe(true);
+      });
     });
   });
 });

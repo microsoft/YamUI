@@ -2,61 +2,54 @@
 
 exports[`<Icon /> with additional className matches its snapshot 1`] = `
 <Attach
-  className="y-icon TEST_CLASSNAME"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  ariaHidden={true}
+  className="y-icon y-icon__attach TEST_CLASSNAME"
+  height="16px"
+  style={Object {}}
+  width="16px"
 />
 `;
 
 exports[`<Icon /> with block matches its snapshot 1`] = `
 <Attach
-  className="y-icon y-icon__isBlock"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  ariaHidden={true}
+  className="y-icon y-icon__attach y-icon__isBlock"
+  height="16px"
+  style={Object {}}
+  width="16px"
 />
 `;
 
 exports[`<Icon /> with color matches its snapshot 1`] = `
 <Attach
-  className="y-icon"
+  ariaHidden={true}
+  className="y-icon y-icon__attach"
+  height="16px"
   style={
     Object {
       "color": "blue",
-      "height": "16px",
-      "width": "16px",
     }
   }
+  width="16px"
 />
 `;
 
 exports[`<Icon /> with minimal options matches its snapshot 1`] = `
 <Attach
-  className="y-icon"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  ariaHidden={true}
+  className="y-icon y-icon__attach"
+  height="16px"
+  style={Object {}}
+  width="16px"
 />
 `;
 
 exports[`<Icon /> with passed size value matches its snapshot 1`] = `
 <Attach
-  className="y-icon"
-  style={
-    Object {
-      "height": "32px",
-      "width": "32px",
-    }
-  }
+  ariaHidden={true}
+  className="y-icon y-icon__attach"
+  height="32px"
+  style={Object {}}
+  width="32px"
 />
 `;

@@ -13,11 +13,11 @@
     "jsx"   
   ],
   "moduleNameMapper": {
-    "^.+\\.css$": "identity-obj-proxy",
-    "\\.(svg)$": "<rootDir>/src/util/mocks/svgMock.js"
+    "^.+\\.css$": "identity-obj-proxy"
   },
   "transform": {
-    ".(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    ".(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+    "^.+\\.jsx?$": "babel-jest"
   },
   "testRegex": ".*\\.test\\.(js|jsx|ts|tsx)$",
   "testPathIgnorePatterns": [
@@ -25,8 +25,7 @@
   ],
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/components/Icon/icons/*.{tsx}"
+    "src/**/*.{js,jsx,ts,tsx}"
   ],
   "coverageDirectory": "build/jest/coverage",
   "coverageReporters": [

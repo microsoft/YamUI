@@ -24,10 +24,8 @@ const labelStyles = {
   paddingLeft: '10px',
 };
 
-const iconsArray: any[] = [];
-
-Object.keys(ICONS).forEach((icon) => {
-  iconsArray.push(icon);
+const iconsArray: any[] = Object.keys(ICONS).map((icon) => {
+  return icon;
 });
 
 storiesOf('Icon', module)

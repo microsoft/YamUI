@@ -33,8 +33,6 @@ export interface IconProps extends BaseComponentProps {
 
 interface IconStyles {
   color?: string;
-  height: string;
-  width: string;
 }
 
 export default class Icon extends React.PureComponent<IconProps, {}> {
@@ -43,13 +41,20 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   };
 
   public render () {
+    const length = this.props.size + 'px';
     const CurrentIcon = ICONS[this.props.icon];
-    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />;
+    return <CurrentIcon
+            className={this.getClasses()}
+            style={this.getInlineStyles()}
+            height={length}
+            width={length}
+            ariaHidden />;
   }
 
   private getClasses () {
     const classes = [
       'y-icon',
+      `y-icon__${this.props.icon}`,
     ];
     if (this.props.block) {
       classes.push('y-icon__isBlock');
@@ -61,11 +66,7 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   }
 
   private getInlineStyles () {
-    const length = this.props.size + 'px';
-    const styles: IconStyles = {
-      height: length,
-      width: length,
-    };
+    const styles: IconStyles = {};
     if (this.props.color) {
       styles.color = this.props.color;
     }
