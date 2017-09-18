@@ -13,7 +13,7 @@ interface ControlledDropdownState {
   selectedKey?: DropdownOptionKey;
 }
 
-class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
+class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState> {
   constructor() {
     super();
     this.state = {};
@@ -21,7 +21,7 @@ class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
 
   public render() {
     const { selectedKey } = this.state;
-    
+
 
     return (<Dropdown
       options={[
@@ -65,6 +65,23 @@ storiesOf('Dropdown', module)
         `onChanged` props.
       </Block>
       <ControlledDropdown />
+    </div>
+  ))
+  .add('with label', () => (
+    <div>
+      <Block bottomSpacing="large">
+        This dropdown renders its own label text.
+      </Block>
+      <Dropdown
+        placeHolder="Please Select"
+        options={[
+          { key: 'A', text: 'Option a' },
+          { key: 'B', text: 'Option b' },
+          { key: 'C', text: 'Option c' },
+        ]}
+        onChanged={action('dropdown changed')}
+        label="Please choose from the following options"
+      />
     </div>
   ))
   .add('within grid', () => (

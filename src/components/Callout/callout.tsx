@@ -78,7 +78,7 @@ export interface CalloutState {
 }
 export { DirectionalHint };
 
-export class Callout extends React.Component<CalloutProps, CalloutState> {
+export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
   static defaultProps: Partial<CalloutProps> = {
     isBeakVisible: true,
     directionalHint: DirectionalHint.bottomCenter,

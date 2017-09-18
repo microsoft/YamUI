@@ -46,7 +46,7 @@ interface ControlledDropdownState {
   selectedKey?: DropdownOptionKey;
 }
 
-class ControlledDropdown extends React.Component<{}, ControlledDropdownState> {
+class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState> {
   constructor() {
     super();
     this.state = {};

@@ -1,7 +1,6 @@
-/.jest
-/.tscache
 /build
 /dist
+/docs
 /node_modules
-
-.DS_Store
+/config/travis/deploy.key
+.*
