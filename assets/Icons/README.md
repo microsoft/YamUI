@@ -2,16 +2,15 @@
 
 ## To add a new icon or icons
 
-1. Add prepared SVGs to assets/Icons/optimized folder
+1. Add prepared SVGs to assets/Icons/svgs-from-design folder
 
-2. Run `yarn create:svg:components`
+2. Run `yarn svg`
 
 3. Export the new icon from src/components/Icon/icons/index.ts
 
-4. Commit all these resources to a new branch.
+4. Commit new resources and visual diffs to a new branch.
 
 ### SVG requirements
  - square field of 240
- - viewBox required, height and width optional
- - no id or fill in path element. fill-rule ok.
+ - `viewBox` required, height and width optional
 
