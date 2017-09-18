@@ -10,7 +10,7 @@ To run visual diff regression tests:
 * Install docker from https://docs.docker.com/docker-for-mac/install/
 * Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yarn-docker` executable, like this: `alias y="./yarn-docker"`. Visual-diff tasks `test` and `test:visual` need to run in Docker via the `y` alias -- `y test` and `y test:visual`.
 
-A note about Docker images: they grow until your hard drive fills up, stopping you from working. Ideally you have a very large hard drive -- like 500GB. If you have only 250GB you can expect to have to clear images every week or so.
+A note about Docker images: they grow until your hard drive fills up, stopping you from working. Ideally you have a very large hard drive -- like 500GB -- or a lot of available space. If you don't have a lot of available space (> 30GB) you can expect to need to clear the Docker container every week or so.
 
 To view your Docker container size on Mac OS: `ls -lha ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2`
 
