@@ -1,7 +1,7 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
