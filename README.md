@@ -10,6 +10,12 @@ To run visual diff regression tests:
 * Install docker from https://docs.docker.com/docker-for-mac/install/
 * Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yarn-docker` executable, like this: `alias y="./yarn-docker"`. Visual-diff tasks `test` and `test:visual` need to run in Docker via the `y` alias -- `y test` and `y test:visual`.
 
+It's best to have at least 30GB of free space for Docker containers and images. If you find that Docker is taking up too much space, try the following:
+
+To view your Docker container size on Mac OS: `ls -lha ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2`
+
+You can clear space with commands like `docker rmi $(docker images -a -q)` (remove all images) or `docker rm $(docker ps -a -f status=exited -q)` (remove all exited containers), or you can remove the container from disk, directly (on Mac OS): `rm ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2`
+
 ## Development
 ### Start up the dev server:
 * `yarn start:dev` and visit [localhost:5555](http://localhost:5555/)
