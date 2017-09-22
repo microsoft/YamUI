@@ -24,7 +24,7 @@
   height: 24px;
   width: 24px;
 }
-.y-avatar__size-xSmall > .ms-Persona {
+.y-avatar__size-xSmall .ms-Persona {
   /* Fabric Persona adds extra height here. This should be unnecessary
      if we can extract a Fabric Avatar component out of Persona. */
   height: 24px;
