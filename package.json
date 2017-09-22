@@ -7,7 +7,7 @@
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=4.34.0",
+    "office-ui-fabric-react": "=4.50.0",
     "typescript-string-enums": "=0.3.2"
   },
   "devDependencies": {
