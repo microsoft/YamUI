@@ -7,3 +7,11 @@
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
 }
+
+.y-dropdown__caretDown {
+  right: 12px;
+  position: absolute;
+  top: 8px;
+  height: 32px;
+  line-height: 30px;
+}

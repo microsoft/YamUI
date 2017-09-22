@@ -3,6 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Dropdown as FabricDropdown, IDropdownOption } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import Icon from '../Icon';
 import './dropdown.css';
 
 export type DropdownOptionKey = string | number;
@@ -51,6 +52,7 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
           onChanged={this.handleChanged}
           placeHolder={placeHolder}
           label={label}
+          onRenderCaretDown={this.getIcon}
         />
       </div>
     );
@@ -64,6 +66,10 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
       classes.push(this.props.className);
     }
     return classes.join(' ');
+  }
+
+  private getIcon() {
+    return <Icon className="y-dropdown__caretDown" icon="down"/>;
   }
 
   private handleChanged(option: DropdownOption) {
