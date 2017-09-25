@@ -25,6 +25,7 @@ import './NavigationLink';
 import './FakeLink';
 import './Icon';
 import './Image';
+import './Spinner';
 import './Avatar';
 import './MediaObject';
 import './Callout';

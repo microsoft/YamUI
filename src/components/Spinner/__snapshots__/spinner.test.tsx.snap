@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-spinner TEST_CLASSNAME"
+>
+  <Spinner
+    ariaLive="polite"
+    size={2}
+  />
+</div>
+`;
+
+exports[`<Spinner /> with default options matches its snapshot 1`] = `
+<div
+  className="y-spinner"
+>
+  <Spinner
+    ariaLive="polite"
+    size={2}
+  />
+</div>
+`;
