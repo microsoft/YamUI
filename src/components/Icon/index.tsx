@@ -37,7 +37,7 @@ interface IconStyles {
   width: string;
 }
 
-export default class Icon extends React.Component<IconProps, {}> {
+export default class Icon extends React.PureComponent<IconProps, {}> {
   static defaultProps = {
     size: IconSize.MEDIUM,
   };

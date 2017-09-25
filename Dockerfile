@@ -2,7 +2,7 @@ FROM travisci/ci-nodejs:packer-1494866191
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update && sudo apt-get install yarn
+RUN apt-get update && sudo apt-get install yarn=0.27.5-1
 RUN su - travis -c "nvm install 6.11.3"
 
 ENV APP_ROOT /usr/src/yamui

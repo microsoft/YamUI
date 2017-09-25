@@ -106,7 +106,7 @@ export interface LinkButtonProps extends BaseButtonProps {
 }
 export type ButtonProps = RegularButtonProps | LinkButtonProps;
 
-export default class Button extends React.Component<ButtonProps, {}> {
+export default class Button extends React.PureComponent<ButtonProps, {}> {
   static propTypes = {
     // TypeScript does not support negated types; using PropTypes custom validator instead of runtime validations
     href (props: LinkButtonProps, propName: string, componentName: string) {

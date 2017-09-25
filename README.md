@@ -10,6 +10,12 @@ To run visual diff regression tests:
 * Install docker from https://docs.docker.com/docker-for-mac/install/
 * Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yarn-docker` executable, like this: `alias y="./yarn-docker"`. Visual-diff tasks `test` and `test:visual` need to run in Docker via the `y` alias -- `y test` and `y test:visual`.
 
+It's best to have at least 30GB of free space for Docker containers and images. If you find that Docker is taking up too much space, try the following:
+
+To view your Docker container size on Mac OS: `ls -lha ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2`
+
+You can clear space with commands like `docker rmi $(docker images -a -q)` (remove all images) or `docker rm $(docker ps -a -f status=exited -q)` (remove all exited containers), or you can remove the container from disk, directly (on Mac OS): `rm ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2`
+
 ## Development
 ### Start up the dev server:
 * `yarn start:dev` and visit [localhost:5555](http://localhost:5555/)
@@ -21,11 +27,11 @@ To run visual diff regression tests:
 * The dev tasks will copy and compile individual files into the `/dist` directory, then Storybook will pick up those changes and automatically update the app in your browser using Hot Module Replacement.
 
 ### Focus on unit tests
-* `yarn start:test` will start Jest in watch mode, showing passing status and a covereage report. The CLI task remains active and will re-test automatically as you make changes.
+* `yarn start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
 * `yarn report:unit` will open the latest test coverage report in your browser. The reports let you browse into specific tests and get details about each line, which can be helpful when you're having trouble getting test coverage.
 
 ### Run visual diff regression tests with BackstopJS
-* `y test:visual` will compile the components, build+export a static version of the Storybook app, start a dev server, take screenshots of each Storybook story, and fail if there are visual changes from the last approved screenshots. This will fail on brand new stories because they won't have reference images. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `yarn` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with suble visual differences. Running in the Docker Linux container ensures consistent screenshots between all development evironments and CI.
+* `y test:visual` will compile the components, build+export a static version of the Storybook app, start a dev server, take screenshots of each Storybook story, and fail if there are visual changes from the last approved screenshots. This will fail on brand new stories because they won't have reference images. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `yarn` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
 * `yarn report:visual` will open the most recent visual test you've run in your browser. This is helpful if you have failing visual tests and want to see exactly what is wrong.
 * `yarn visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its story and you have manually verified that the new visual changes are correct.
 
@@ -35,7 +41,7 @@ To run visual diff regression tests:
 
 ### Adding icons
 1. Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/Icons)
-2. Export new React SVG from src/components/Icon/icons/index.ts using the filename as the label
+2. Export new React SVG from `src/components/Icon/icons/index.ts` using the filename as the label
 3. Use the icon via it's label `<Icon icon="plus" />`
 
 
@@ -59,7 +65,7 @@ Example using a Button component:
 
 ## Roadmap
 
-The YamUI project is currently in a pre-release state. We are building out the components and features we need for Yammer.com to meet our specific UX Design guidelines.
+The YamUI project is currently in a pre-release state. We are building out the components and features we need for [Yammer.com](https://www.yammer.com/) to meet our specific UX Design guidelines.
 
 ## Contributing
 

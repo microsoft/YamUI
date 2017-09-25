@@ -1,7 +1,7 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
@@ -60,17 +60,18 @@
     "ts-loader": "=2.0.3",
     "tslint": "=5.6.0",
     "tslint-config-airbnb": "=5.2.1",
-    "typescript": "=2.4.2"
+    "typescript": "=2.5.2"
   },
   "peerDependencies": {
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "typescript": "^2.4.0"
+    "typescript": "^2.5.0"
   },
   "scripts": {
-    "clean:dist": "rimraf dist/*",
-    "clean:docs": "rimraf docs/*",
+    "clean:storybook": "rimraf build/storybook/*",
     "clean:build": "rimraf build/*",
+    "clean:dist": "rimraf dist/*",
+    "clean": "run-p clean:build clean:dist",
     "copy:story-assets": "cpx \"src/stories/assets/**/*\" \"dist/stories/assets\"",
     "copy:readmes": "cpx \"src/components/**/README.md\" \"dist/components\"",
     "build:css:global": "postcss src/css/index.css --output dist/yamui-base.css",
@@ -80,9 +81,9 @@
     "test:eslint:root": "eslint \"./*.+(js|jsx)\"",
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
     "test:eslint": "run-p test:eslint:*",
-    "test:tslint": "tslint \"src/**/*.+(ts|tsx)\"",
+    "test:tslint": "tslint --type-check --project tsconfig.json",
     "test:unit": "jest --config config/jest/config.json",
-    "test:visual:build": "run-s build storybook:static:build",
+    "test:visual:build": "run-s clean:storybook build storybook:static:build",
     "test:visual:serve": "run-p storybook:static:serve test:visual:test-and-stop",
     "test:visual:test-and-stop": "run-s --continue-on-error visual:test storybook:static:stop",
     "test:visual": "run-s test:visual:build test:visual:serve",
@@ -91,15 +92,15 @@
     "watch:css:components": "postcss \"src/components/**/*.css\" --dir \"dist/components\" --base \"src/components\" --watch",
     "watch:ts:components": "tsc --project . --watch",
     "watch": "run-p watch:**",
-    "start:dev": "yarn build && run-p watch storybook:start",
+    "start:dev": "npm-run-all build --parallel watch storybook:start",
     "start:test": "jest --config config/jest/config.json --watchAll",
     "report:unit": "open \"build/jest/coverage/index.html\"",
     "report:visual": "backstop openReport --config config/backstop/config.js",
     "report": "run-p report:*",
     "storybook:start": "start-storybook --port 5555 --config-dir config/storybook",
-    "storybook:static:build": "yarn clean:docs && build-storybook --config-dir config/storybook --output-dir docs",
-    "storybook:static:serve": "serve docs --port 5555",
-    "storybook:static:stop": "pkill -f \"sh -c serve docs --port 5555\"",
+    "storybook:static:build": "build-storybook --config-dir config/storybook --output-dir build/storybook",
+    "storybook:static:serve": "serve build/storybook --port 5555 || true",
+    "storybook:static:stop": "pkill -f \"node_modules/.bin/serve build/storybook\"",
     "visual:test": "backstop test --config config/backstop/config.js",
     "visual:approve": "backstop approve --config config/backstop/config.js",
     "prepublishOnly": "yarn build"

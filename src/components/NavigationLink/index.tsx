@@ -14,7 +14,7 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
   unstyled?: boolean;
 }
 
-export default class NavigationLink extends React.Component<NavigationLinkProps, {}> {
+export default class NavigationLink extends React.PureComponent<NavigationLinkProps, {}> {
   constructor (props: NavigationLinkProps) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
