@@ -22,7 +22,7 @@ function getScenarios() {
     storybook[kind].forEach((story) => {
       storybookScenarios.push(Object.assign({}, scenarioBase, {
         label: `${kind} - ${story}`,
-        url: `http://localhost:5555/iframe.html?selectedKind=${kind}&selectedStory=${story}&dataId=0`,
+        url: `http://localhost:5555/iframe.html?selectedKind=${kind}&selectedStory=${story}&visualDiff=true&dataId=0`,
       }));
     });
   });
