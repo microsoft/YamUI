@@ -233,9 +233,17 @@
     rtl-css-js "^1.1.3"
     tslib "^1.7.1"
 
-"@uifabric/utilities@>=4.13.1 <5.0.0", "@uifabric/utilities@>=4.14.0 <5.0.0":
+"@uifabric/utilities@>=4.13.1 <5.0.0":
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/@uifabric/utilities/-/utilities-4.14.0.tgz#0fb23d5dbb12ed79f9e382ef5f817b1c6bb5e1f3"
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.2"
+    prop-types "^15.5.10"
+    tslib "^1.7.1"
+
+"@uifabric/utilities@>=4.14.1 <5.0.0":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@uifabric/utilities/-/utilities-4.14.1.tgz#445c7420de91454c64b9a66f439f0d71ef971785"
   dependencies:
     "@microsoft/load-themed-styles" "^1.7.2"
     prop-types "^15.5.10"
@@ -5244,13 +5252,13 @@ object.values@^1.0.4:
     function-bind "^1.1.0"
     has "^1.0.1"
 
-office-ui-fabric-react@=4.50.0:
-  version "4.50.0"
-  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-4.50.0.tgz#ca0e7d628d6fb8c24be07b2cc50b0298bb33263b"
+office-ui-fabric-react@^4.50.1:
+  version "4.50.1"
+  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-4.50.1.tgz#4244a1442928155fa37a9522005ee1502da1aaec"
   dependencies:
     "@microsoft/load-themed-styles" "^1.7.2"
     "@uifabric/styling" ">=0.24.0 <1.0.0"
-    "@uifabric/utilities" ">=4.14.0 <5.0.0"
+    "@uifabric/utilities" ">=4.14.1 <5.0.0"
     prop-types "^15.5.10"
     tslib "^1.7.1"
 
