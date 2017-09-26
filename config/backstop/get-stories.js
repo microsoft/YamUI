@@ -10,7 +10,7 @@ const STORYNAME_REGEX = /\.add\s*\(\s*['|"].*?['|"],/g;
 
 
 function hasStoryTypes(text) {
-  return text.indexOf('storiesOf') > -1;
+  return text.indexOf('storiesOf') > -1 && text.match(/\/\/.\s?storiesOf/) === null;
 }
 function getStoryTypeName(text) {
   const nameMatches = text.match(GROUPNAME_REGEX);
