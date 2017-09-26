@@ -6,11 +6,8 @@ import * as React from 'react';
 
 const Check = function Check(props: any) {
   return (
-    <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <defs>
-        <path id="a" d="M74.477 112.264L21.606 59.393.393 80.606l73.893 73.893L209.51 21.702 188.49.298z" />
-      </defs>
-      <use transform="translate(10 55)" xlinkHref="#a" />
+    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
+      <path d="M84.477 167.264l-52.871-52.871-21.213 21.213 73.893 73.893L219.51 76.702l-21.02-21.404z" />
     </svg>
   );
 };

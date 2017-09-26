@@ -4,12 +4,12 @@
 
 import * as React from 'react';
 
-const ArrowUp = function ArrowUp(props: any) {
+const More = function More(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path d="M135.119 80.078l64.076 64.077 21.213-21.214L120.125 22.658 19.842 122.941l21.213 21.214 64.147-64.147-.067 139.887 29.917.013.067-139.83z" />
+      <path fillRule="evenodd" d="M145 195c0 13.807-11.193 25-25 25s-25-11.193-25-25 11.193-25 25-25 25 11.193 25 25zm0-75c0 13.807-11.193 25-25 25s-25-11.193-25-25 11.193-25 25-25 25 11.193 25 25zm0-75c0 13.807-11.193 25-25 25S95 58.807 95 45s11.193-25 25-25 25 11.193 25 25z" />
     </svg>
   );
 };
 
-export default ArrowUp;
+export default More;

@@ -1,1 +1,3 @@
-<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M1 31h200V1H1z"/></defs><use fill-rule="nonzero" xlink:href="#a" transform="translate(19 104)"/></svg>
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 135h200v-30H20z" fill-rule="nonzero"/>
+</svg>

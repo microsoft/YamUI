@@ -6,11 +6,8 @@ import * as React from 'react';
 
 const Minus = function Minus(props: any) {
   return (
-    <svg width={240} height={240} viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...props}>
-      <defs>
-        <path id="a" d="M1 31h200V1H1z" />
-      </defs>
-      <use fillRule="nonzero" xlinkHref="#a" transform="translate(19 104)" />
+    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
+      <path d="M20 135h200v-30H20z" />
     </svg>
   );
 };
