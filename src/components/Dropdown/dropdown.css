@@ -44,11 +44,11 @@
 .ms-Dropdown-items .ms-Dropdown-item:hover,
 .ms-Dropdown-items .ms-Dropdown-item:active,
 .ms-Dropdown-items .ms-Dropdown-item:focus {
-  background-color: $borderColor__tertiary;
+  background-color: $color__popRock;
 }
 
 .ms-Dropdown-items .ms-Dropdown-item.is-selected {
-  background-color: $borderColor__secondary;
+  background-color: $color__altRock;
 }
 
 .ms-Dropdown-items .ms-Dropdown-optionText {
