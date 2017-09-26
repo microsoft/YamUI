@@ -6,10 +6,10 @@ import arrowLeft from './ArrowLeft';
 import arrowRight from './ArrowRight';
 import arrowUp from './ArrowUp';
 import attach from './Attach';
-import carrotDown from './CarrotDown';
-import carrotLeft from './CarrotLeft';
-import carrotRight from './CarrotRight';
-import carrotUp from './CarrotUp';
+import caretDown from './CaretDown';
+import caretLeft from './CaretLeft';
+import caretRight from './CaretRight';
+import caretUp from './CaretUp';
 import check from './Check';
 import cross from './Cross';
 import down from './Down';
@@ -36,10 +36,10 @@ export default {
   arrowRight,
   arrowUp,
   attach,
-  carrotDown,
-  carrotLeft,
-  carrotRight,
-  carrotUp,
+  caretDown,
+  caretLeft,
+  caretRight,
+  caretUp,
   check,
   cross,
   down,

@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 
-const CarrotLeft = function CarrotLeft(props: any) {
+const CaretLeft = function CaretLeft(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
       <path d="M111.713 120.5l59.07-59.07-21.213-21.213L69.287 120.5l80.283 80.283 21.213-21.213z" />
@@ -12,4 +12,4 @@ const CarrotLeft = function CarrotLeft(props: any) {
   );
 };
 
-export default CarrotLeft;
+export default CaretLeft;
