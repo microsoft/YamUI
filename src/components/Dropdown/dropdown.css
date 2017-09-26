@@ -20,7 +20,7 @@
 }
 
 .y-dropdown .y-dropdown__caretDown {
-  color: $color__river;
+  color: $linkColor;
 }
 
 .y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
