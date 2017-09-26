@@ -102,6 +102,8 @@
     "storybook:static:build": "build-storybook --config-dir config/storybook --output-dir build/storybook",
     "storybook:static:serve": "serve build/storybook --port 5555 || true",
     "storybook:static:stop": "pkill -f \"node_modules/.bin/serve build/storybook\"",
+    "svg:clean-build": "rimraf build/icons",
+    "svg:clean-components": "rimraf src/components/Icon/icons/*.tsx",
     "svg:svgo": "svgo --folder=./assets/Icons --output=./build/icons --config=./.svgo.yml",
     "svg": "run-s svg:*",
     "visual:test": "backstop test --config config/backstop/config.js",
