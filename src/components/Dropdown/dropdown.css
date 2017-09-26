@@ -2,7 +2,7 @@
 @import "src/css/variables/fonts.css";
 @import "src/css/variables/colors.css";
 
-.y-dropdown .ms-Dropdown-label{
+.y-dropdown .ms-Dropdown-label {
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
@@ -11,5 +11,46 @@
 .y-dropdown .ms-Dropdown-title,
 .y-dropdown .ms-Dropdown-caretDownWrapper {
   height: 36px;
-  line-height: 3.1rem;
+  line-height: 3.3rem;
+}
+
+.y-dropdown .ms-Dropdown-title {
+  color: $textColor;
+  border-color: $borderColor;
+}
+
+.y-dropdown .y-dropdown__caretDown {
+  color: $color__river;
+}
+
+.y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
+.y-dropdown .ms-Dropdown:active .ms-Dropdown-title,
+.y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
+  color: $textColor;
+  border-color: $borderColor;
+}
+
+.y-dropdown .ms-Dropdown:active .ms-Dropdown-title {
+  border-color: $color__lake;
+}
+
+.y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
+  border-color: $color__lake;
+}
+
+/* NOTE: y-dropdown cannot be used here since the options are not a descendent
+ * of dropdown element
+ */
+.ms-Dropdown-items .ms-Dropdown-item:hover,
+.ms-Dropdown-items .ms-Dropdown-item:active,
+.ms-Dropdown-items .ms-Dropdown-item:focus {
+  background-color: $borderColor__tertiary;
+}
+
+.ms-Dropdown-items .ms-Dropdown-item.is-selected {
+  background-color: $borderColor__secondary;
+}
+
+.ms-Dropdown-items .ms-Dropdown-optionText {
+  color: $textColor;
 }
