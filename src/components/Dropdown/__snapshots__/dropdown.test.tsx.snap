@@ -6,6 +6,7 @@ exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 >
   <WithResponsiveMode
     onChanged={[Function]}
+    onRenderCaretDown={[Function]}
     options={Array []}
   />
 </div>
@@ -17,6 +18,7 @@ exports[`<Dropdown /> with additional className matches its snapshot 2`] = `
 >
   <WithResponsiveMode
     onChanged={[Function]}
+    onRenderCaretDown={[Function]}
     options={Array []}
   />
 </div>
@@ -29,6 +31,7 @@ exports[`<Dropdown /> with all props matches its snapshot 1`] = `
   <WithResponsiveMode
     label="TEST_LABEL"
     onChanged={[Function]}
+    onRenderCaretDown={[Function]}
     options={
       Array [
         Object {
@@ -53,6 +56,7 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
 >
   <WithResponsiveMode
     onChanged={[Function]}
+    onRenderCaretDown={[Function]}
     options={Array []}
   />
 </div>
