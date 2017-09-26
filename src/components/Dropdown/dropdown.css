@@ -31,11 +31,11 @@
 }
 
 .y-dropdown .ms-Dropdown:active .ms-Dropdown-title {
-  border-color: $color__lake;
+  border-color: $borderColor__focused;
 }
 
 .y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
-  border-color: $color__lake;
+  border-color: $borderColor__focused;
 }
 
 /* NOTE: y-dropdown cannot be used here since the options are not a descendent
