@@ -21,3 +21,6 @@ $linkColor: $color__river;
 $linkColor__active: $color__bay;
 
 $captionBGColor: $color__sunrise;
+
+$dropdownOptionBGColor__focused: $color__popRock;
+$dropdownOptionBGColor__selected: $color__altRock;
