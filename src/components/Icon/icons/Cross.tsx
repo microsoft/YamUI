@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 /* tslint:disable:max-line-length */
-// This file was auto-generated -- do not edit. Use https://www.npmjs.com/package/create-svg-component
+// This file was auto-generated -- do not edit
 
 import * as React from 'react';
 
