@@ -6,6 +6,7 @@
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
+  padding-bottom: 4px;
 }
 
 .y-dropdown .ms-Dropdown-title,
@@ -17,10 +18,13 @@
 .y-dropdown .ms-Dropdown-title {
   color: $textColor;
   border-color: $borderColor;
+  border-radius: 1px;
+  padding: 0 33px 0 11px;
 }
 
 .y-dropdown .y-dropdown__caretDown {
   color: $linkColor;
+
 }
 
 .y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
@@ -34,6 +38,7 @@
   border-color: $borderColor__focused;
 }
 
+.y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
 .y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
   border-color: $borderColor__focused;
 }
@@ -41,6 +46,15 @@
 /* NOTE: y-dropdown cannot be used here since the options are not a descendent
  * of dropdown element
  */
+.ms-Dropdown-items {
+  padding-bottom: 2px;
+}
+
+.ms-Dropdown-items .ms-Dropdown-item {
+  @extend text__mediumSub;
+  padding: 0 11px;
+}
+
 .ms-Dropdown-items .ms-Dropdown-item:hover,
 .ms-Dropdown-items .ms-Dropdown-item:active,
 .ms-Dropdown-items .ms-Dropdown-item:focus {
@@ -53,4 +67,8 @@
 
 .ms-Dropdown-items .ms-Dropdown-optionText {
   color: $textColor;
+  margin: 0;
+  position: relative;
+  top: -1px;
+
 }
