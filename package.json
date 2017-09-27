@@ -7,7 +7,7 @@
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=4.34.0",
+    "office-ui-fabric-react": "=5.0.1",
     "typescript-string-enums": "=0.3.2"
   },
   "devDependencies": {
@@ -28,10 +28,11 @@
     "cpx": "=1.5.0",
     "css-loader": "=0.27.3",
     "enzyme": "=2.9.1",
-    "eslint": "=3.19.0",
+    "eslint": "=4.7.2",
     "eslint-config-airbnb": "=14.1.0",
+    "eslint-config-airbnb-base": "=12.0.1",
     "eslint-plugin-header": "=1.0.0",
-    "eslint-plugin-import": "=2.2.0",
+    "eslint-plugin-import": "=2.7.0",
     "eslint-plugin-jsx-a11y": "=4.0.0",
     "eslint-plugin-react": "=6.10.3",
     "file-loader": "=0.11.1",
