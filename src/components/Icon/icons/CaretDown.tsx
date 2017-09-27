@@ -4,12 +4,12 @@
 
 import * as React from 'react';
 
-const Check = function Check(props: any) {
+const CaretDown = function CaretDown(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path d="M84.477 167.264l-52.871-52.871-21.213 21.213 73.893 73.893L219.51 76.702l-21.02-21.404z" />
+      <path d="M120 128.787l-59.07-59.07L39.717 90.93 120 171.213l80.283-80.283-21.213-21.213z" />
     </svg>
   );
 };
 
-export default Check;
+export default CaretDown;

@@ -1,14 +1,15 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 /* tslint:disable:max-line-length */
+// This file was auto-generated -- do not edit
+
 import * as React from 'react';
 
 const Plus = function Plus(props: any) {
   return (
-    <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" {...props}>
-      <path d="M140.025 140H40.5c-11.046 0-20 8.954-20 20s8.954 20 20 20h99.525v99.525c0 11.045 8.954 20 20 20 11.045 0 20-8.955 20-20V180h99.524c11.046 0 20-8.954 20-20s-8.954-20-20-20h-99.524V40.475c0-11.045-8.955-20-20-20-11.046 0-20 8.955-20 20V140z"/>
+    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
+      <path d="M105 105H20v30h85v85h30v-85h85v-30h-85V20h-30v85z" />
     </svg>
   );
 };
 
 export default Plus;
-

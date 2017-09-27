@@ -4,12 +4,12 @@
 
 import * as React from 'react';
 
-const Check = function Check(props: any) {
+const ArrowDown = function ArrowDown(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path d="M84.477 167.264l-52.871-52.871-21.213 21.213 73.893 73.893L219.51 76.702l-21.02-21.404z" />
+      <path d="M105.291 159.83L41.214 95.754 20 116.967 120.285 217.25 220.57 116.967l-21.214-21.213-64.148 64.146.067-139.887L105.358 20z" />
     </svg>
   );
 };
 
-export default Check;
+export default ArrowDown;

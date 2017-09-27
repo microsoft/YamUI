@@ -1,7 +1,7 @@
 {
   "name": "yamui",
   "description": "UI component framework for Yammer.com",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
@@ -56,6 +56,7 @@
     "serve": "=5.1.4",
     "storybook-readme": "=3.0.6",
     "style-loader": "=0.16.1",
+    "svgo": "=0.7.2",
     "ts-jest": "=20.0.6",
     "ts-loader": "=2.0.3",
     "tslint": "=5.6.0",
@@ -101,6 +102,10 @@
     "storybook:static:build": "build-storybook --config-dir config/storybook --output-dir build/storybook",
     "storybook:static:serve": "serve build/storybook --port 5555 || true",
     "storybook:static:stop": "pkill -f \"node_modules/.bin/serve build/storybook\"",
+    "svg:clean-build": "rimraf build/icons",
+    "svg:clean-components": "rimraf src/components/Icon/icons/*.tsx",
+    "svg:svgo": "svgo --folder=./assets/Icons --output=./build/icons --config=./.svgo.yml",
+    "svg": "run-s svg:*",
     "visual:test": "backstop test --config config/backstop/config.js",
     "visual:approve": "backstop approve --config config/backstop/config.js",
     "prepublishOnly": "yarn build"
