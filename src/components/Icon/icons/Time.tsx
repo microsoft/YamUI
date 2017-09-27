@@ -1,14 +1,18 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 /* tslint:disable:max-line-length */
+// This file was auto-generated -- do not edit
+
 import * as React from 'react';
 
 const Time = function Time(props: any) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 280 280" height="280" width="280" {...props}>
-      <path d="M0 140c0 77.32 62.68 140 140 140s140-62.68 140-140S217.32 0 140 0 0 62.68 0 140zm240 0c0 55.228-44.772 100-100 100S40 195.228 40 140 84.772 40 140 40s100 44.772 100 100zm-90-56c0-7.732-6.268-14-14-14s-14 6.268-14 14v52c0 3.797 1.512 7.242 3.966 9.764.906.953 1.962 1.793 3.158 2.484l51.962 30c6.696 3.866 15.258 1.572 19.124-5.124 3.866-6.696 1.572-15.258-5.124-19.124L150 127.97V84z" />
+    <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240" width={240} height={240} {...props}>
+      <defs>
+        <path id="a" d="M0 102.5C0 159.11 45.89 205 102.5 205S205 159.11 205 102.5 159.11 0 102.5 0 0 45.89 0 102.5zm175.714 0c0 40.435-32.78 73.214-73.214 73.214-40.435 0-73.214-32.78-73.214-73.214 0-40.435 32.78-73.214 73.214-73.214 40.435 0 73.214 32.78 73.214 73.214zm-65.893-41c0-5.66-4.589-10.25-10.25-10.25-5.66 0-10.25 4.59-10.25 10.25v38.071a10.22 10.22 0 0 0 2.904 7.15 10.279 10.279 0 0 0 2.312 1.818l38.044 21.964c4.902 2.83 11.17 1.15 14.001-3.751 2.83-4.903 1.151-11.172-3.751-14.002l-33.01-19.058V61.5z" />
+      </defs>
+      <use transform="translate(17 17)" xlinkHref="#a" />
     </svg>
   );
 };
 
 export default Time;
-

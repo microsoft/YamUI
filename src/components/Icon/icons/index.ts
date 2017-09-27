@@ -12,7 +12,6 @@ import caretRight from './CaretRight';
 import caretUp from './CaretUp';
 import check from './Check';
 import cross from './Cross';
-import down from './Down';
 import dynamicGroup from './DynamicGroup';
 import edit from './Edit';
 import external from './External';
@@ -42,7 +41,6 @@ export default {
   caretUp,
   check,
   cross,
-  down,
   edit,
   external,
   group,
