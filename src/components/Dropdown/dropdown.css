@@ -18,6 +18,10 @@
   padding: 0 33px 0 11px;
 }
 
+.y-dropdown .ms-Dropdown-titleIsPlaceHolder {
+  color: $textColor__metadata;
+}
+
 .y-dropdown .ms-Dropdown-caretDownWrapper {
   display: inline-flex;
   align-items: center;
