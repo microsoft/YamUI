@@ -10,6 +10,7 @@
 $borderColor: $color__indieRock;
 $borderColor__secondary: $color__altRock;
 $borderColor__tertiary: $color__popRock;
+$borderColor__focused: $color__lake;
 
 $textColor: $color__blackMetal;
 $textColor__secondary: $color__deathMetal;
@@ -20,3 +21,6 @@ $linkColor: $color__river;
 $linkColor__active: $color__bay;
 
 $captionBGColor: $color__sunrise;
+
+$dropdownOptionBGColor__focused: $color__popRock;
+$dropdownOptionBGColor__selected: $color__altRock;
