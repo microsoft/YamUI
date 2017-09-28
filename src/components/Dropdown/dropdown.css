@@ -9,17 +9,18 @@
   padding-bottom: 4px;
 }
 
-.y-dropdown .ms-Dropdown-title,
-.y-dropdown .ms-Dropdown-caretDownWrapper {
-  height: 36px;
-  line-height: 3.3rem;
-}
-
 .y-dropdown .ms-Dropdown-title {
+  line-height: 3.3rem;
+  height: 36px;
   color: $textColor;
   border-color: $borderColor;
   border-radius: 1px;
   padding: 0 33px 0 11px;
+}
+
+.y-dropdown .ms-Dropdown-caretDownWrapper {
+  display: inline-flex;
+  align-items: center;
 }
 
 .y-dropdown .y-dropdown__caretDown {
