@@ -23,19 +23,19 @@
 }
 
 .y-dropdown .ms-Dropdown-caretDownWrapper {
+  top: 0;
+  right: 10;
   display: inline-flex;
   align-items: center;
 }
 
 .y-dropdown .y-dropdown__caretDown {
   color: $linkColor;
-
 }
 
 .y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
 .y-dropdown .ms-Dropdown:active .ms-Dropdown-title,
 .y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
-  color: $textColor;
   border-color: $borderColor;
 }
 
