@@ -42,20 +42,20 @@ storiesOf('Button', module)
           <tr>
             <td></td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.REGULAR}
                       text={sampleText} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.REGULAR}
                       text={sampleText}
                       href={url} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       disabled={true}
                       size={ButtonSize.REGULAR}
@@ -92,14 +92,14 @@ storiesOf('Button', module)
           <tr>
             <td></td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.REGULAR}
                       text={sampleText}
                       color={ButtonColor.SECONDARY} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.REGULAR}
                       text={sampleText}
@@ -107,7 +107,7 @@ storiesOf('Button', module)
                       href={url} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       disabled={true}
                       text={sampleText}
@@ -143,20 +143,20 @@ storiesOf('Button', module)
           <tr>
             <td></td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.SMALL}
                       text={sampleText} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       size={ButtonSize.SMALL}
                       text={sampleText}
                       href={url} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       disabled={true}
                       size={ButtonSize.SMALL}
@@ -202,14 +202,14 @@ storiesOf('Button', module)
           </tr>
           <tr>
             <td></td>
-            <td><Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
+            <td><Button icon="caretDown" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
                         text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td>
-              <Button icon="down" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
+              <Button icon="caretDown" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
                       text={sampleText} color={ButtonColor.SECONDARY} href={url} />
             </td>
             <td>
-              <Button icon="down"
+              <Button icon="caretDown"
                       iconPosition={IconPosition.RIGHT}
                       disabled={true}
                       size={ButtonSize.SMALL}
