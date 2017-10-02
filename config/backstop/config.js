@@ -1,7 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+const { stringify } = require('querystring');
 const getStories = require('./get-stories.js');
 
-const scenarioBase = {
+const baseUrl = 'http://localhost:5555/iframe.html';
+const standardThreshold = 0.001;
+const flakyThreshold = 0.25;
+
+const baseScenario = {
   label: '',
   url: '',
   hideSelectors: [],
@@ -12,22 +17,39 @@ const scenarioBase = {
   ],
   readyEvent: null,
   delay: 350,
-  misMatchThreshold: 0.001,
 };
+
+const flakyScenarios = [
+  'Spinner',
+];
+
+function isFlakyScenario(kind) {
+  return flakyScenarios.indexOf(kind) >= 0;
+}
+
 function getScenarios() {
   const storybook = getStories.getAllStories();
-  const storybookScenarios = [];
-  const kinds = Object.keys(storybook);
-  kinds.forEach((kind) => {
-    storybook[kind].forEach((story) => {
-      storybookScenarios.push(Object.assign({}, scenarioBase, {
-        label: `${kind} - ${story}`,
-        url: `http://localhost:5555/iframe.html?selectedKind=${kind}&selectedStory=${story}&visualDiff=true&dataId=0`,
-      }));
-    });
-  });
 
-  return storybookScenarios;
+  return Object.keys(storybook).reduce((storybookScenarios, kind) => {
+    const stories = storybook[kind];
+    return stories.reduce((storyScenarios, story) => {
+      const params = {
+        selectedKind: kind,
+        selectedStory: story,
+        visualDiff: true,
+        dataId: 0,
+      };
+
+      const scenario = Object.assign({}, baseScenario, {
+        label: `${kind} - ${story}`,
+        url: `${baseUrl}?${stringify(params)}`,
+        misMatchThreshold: isFlakyScenario(kind) ? flakyThreshold : standardThreshold,
+      });
+
+      storyScenarios.push(scenario);
+      return storyScenarios;
+    }, storybookScenarios);
+  }, []);
 }
 
 const config = {
