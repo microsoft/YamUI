@@ -7,7 +7,7 @@ import * as React from 'react';
 const CaretLeft = function CaretLeft(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path d="M111.713 120.5l59.07-59.07-21.213-21.213L69.287 120.5l80.283 80.283 21.213-21.213z" />
+      <path d="M111.93 120.283L171 61.213 149.787 40l-80.283 80.283 80.283 80.283L171 179.353z" />
     </svg>
   );
 };

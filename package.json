@@ -7,7 +7,7 @@
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=4.34.0",
+    "office-ui-fabric-react": "=5.1.0",
     "typescript-string-enums": "=0.3.2"
   },
   "devDependencies": {
@@ -56,7 +56,7 @@
     "serve": "=5.1.4",
     "storybook-readme": "=3.0.6",
     "style-loader": "=0.16.1",
-    "svgcomp": "^1.0.1",
+    "svgcomp": "=1.0.1",
     "svgo": "=0.7.2",
     "ts-jest": "=20.0.6",
     "ts-loader": "=2.0.3",
