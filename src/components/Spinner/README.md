@@ -11,8 +11,6 @@ A Spinner is an outline of a circle which animates around itself indicating to t
 | label | string | Text that will be rendered below the spinner.
 | size | SpinnerSize | Size of spinner.
 
-* indicates property is required
-
 ## Examples
 
 ### Default spinner
