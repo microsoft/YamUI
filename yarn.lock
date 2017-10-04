@@ -7465,7 +7465,7 @@ svg-tag-names@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/svg-tag-names/-/svg-tag-names-1.1.1.tgz#9641b29ef71025ee094c7043f7cdde7d99fbd50a"
 
-svgcomp@^1.0.1:
+svgcomp@=1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/svgcomp/-/svgcomp-1.0.1.tgz#dc5158a2c8935aa0ddc53f3ced35e16a90838e2a"
   dependencies:
@@ -7713,6 +7713,12 @@ tslint-microsoft-contrib@^5.0.0:
   dependencies:
     tsutils "^1.4.0"
 
+tslint-react@=3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-3.2.0.tgz#851fb505201c63d0343c51726e6364f7e9ad2e99"
+  dependencies:
+    tsutils "^2.8.0"
+
 tslint@=5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.6.0.tgz#088aa6c6026623338650b2900828ab3edf59f6cf"
@@ -7749,6 +7755,12 @@ tsutils@^1.4.0:
 tsutils@^2.6.1, tsutils@^2.7.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.9.0.tgz#7e1537b556bab6872fa7e6485dff45b076d5533d"
+  dependencies:
+    tslib "^1.7.1"
+
+tsutils@^2.8.0:
+  version "2.11.2"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.11.2.tgz#6013601e36fa14ff958413e541d427fb8c6ac341"
   dependencies:
     tslib "^1.7.1"
 
