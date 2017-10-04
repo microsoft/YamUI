@@ -5,7 +5,6 @@ import { Image as FabricImage, ImageFit, ImageLoadState } from 'office-ui-fabric
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import './image.css';
 
-
 export { ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
@@ -55,10 +54,8 @@ export default class Image extends React.PureComponent<ImageProps, {}> {
     fullWidth: false,
   };
 
-  getClasses () {
-    const classes: string[] = [
-      'y-image',
-    ];
+  getClasses() {
+    const classes: string[] = ['y-image'];
     if (this.props.fullWidth) {
       classes.push('y-image__fullWidth');
     }
@@ -68,7 +65,7 @@ export default class Image extends React.PureComponent<ImageProps, {}> {
     return classes.join(' ');
   }
 
-  render () {
+  render() {
     let height = this.props.height;
     let width: number | string | undefined = this.props.width;
     if (this.props.fullWidth) {
@@ -77,13 +74,15 @@ export default class Image extends React.PureComponent<ImageProps, {}> {
     }
 
     return (
-      <FabricImage src={this.props.source}
-                   alt={this.props.description}
-                   className={this.getClasses()}
-                   height={height}
-                   width={width}
-                   imageFit={this.props.imageFit}
-                   onLoadingStateChange={this.props.onLoadingStateChange} />
+      <FabricImage
+        src={this.props.source}
+        alt={this.props.description}
+        className={this.getClasses()}
+        height={height}
+        width={width}
+        imageFit={this.props.imageFit}
+        onLoadingStateChange={this.props.onLoadingStateChange}
+      />
     );
   }
 }

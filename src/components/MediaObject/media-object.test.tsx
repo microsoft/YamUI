@@ -3,7 +3,6 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import MediaObject, { MediaObjectSize, MediaObjectProps } from './index';
 
-
 const image = <img src="404.jpg" alt="" />;
 const title = <div className="TITLE">TITLE CONTENT</div>;
 const metadata = <div className="METADATA">METADATA CONTENT</div>;
@@ -15,9 +14,7 @@ describe('<MediaObject />', () => {
 
   describe('with minimal options', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} />);
     });
 
     it('contains its base className', () => {
@@ -39,9 +36,7 @@ describe('<MediaObject />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -59,13 +54,16 @@ describe('<MediaObject />', () => {
 
   describe('with image content', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} imageContent={image} />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} imageContent={image} />);
     });
 
     it('renders the image content', () => {
-      expect(component.render().find('img').attr('src')).toEqual('404.jpg');
+      expect(
+        component
+          .render()
+          .find('img')
+          .attr('src'),
+      ).toEqual('404.jpg');
     });
 
     it('matches its snapshot', () => {
@@ -75,13 +73,16 @@ describe('<MediaObject />', () => {
 
   describe('with title content', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} titleContent={title} />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} titleContent={title} />);
     });
 
     it('renders the title content', () => {
-      expect(component.render().find('.TITLE').text()).toEqual('TITLE CONTENT');
+      expect(
+        component
+          .render()
+          .find('.TITLE')
+          .text(),
+      ).toEqual('TITLE CONTENT');
     });
 
     it('matches its snapshot', () => {
@@ -91,13 +92,16 @@ describe('<MediaObject />', () => {
 
   describe('with metadata content', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} metadataContent={metadata} />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} metadataContent={metadata} />);
     });
 
     it('renders the metadata content', () => {
-      expect(component.render().find('.METADATA').text()).toEqual('METADATA CONTENT');
+      expect(
+        component
+          .render()
+          .find('.METADATA')
+          .text(),
+      ).toEqual('METADATA CONTENT');
     });
 
     it('matches its snapshot', () => {
@@ -123,9 +127,7 @@ describe('<MediaObject />', () => {
 
   describe('with extra content', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM} extraContent={extra} />,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} extraContent={extra} />);
     });
 
     it('does not render the extra content by default', () => {
@@ -138,13 +140,16 @@ describe('<MediaObject />', () => {
 
     describe('at extra large size', () => {
       beforeEach(() => {
-        component = shallow(
-          <MediaObject size={MediaObjectSize.XLARGE} extraContent={extra} />,
-        );
+        component = shallow(<MediaObject size={MediaObjectSize.XLARGE} extraContent={extra} />);
       });
 
       it('does render the extra content', () => {
-        expect(component.render().find('.EXTRA').text()).toEqual('EXTRA CONTENT');
+        expect(
+          component
+            .render()
+            .find('.EXTRA')
+            .text(),
+        ).toEqual('EXTRA CONTENT');
       });
 
       it('matches its snapshot', () => {
@@ -155,21 +160,20 @@ describe('<MediaObject />', () => {
 
   describe('with arbitrary children', () => {
     beforeEach(() => {
-      component = shallow(
-        <MediaObject size={MediaObjectSize.MEDIUM}>
-          {children}
-        </MediaObject>,
-      );
+      component = shallow(<MediaObject size={MediaObjectSize.MEDIUM}>{children}</MediaObject>);
     });
 
     it('renders them', () => {
-      expect(component.render().find('.CHILDREN').text()).toEqual('CHILDREN CONTENT');
+      expect(
+        component
+          .render()
+          .find('.CHILDREN')
+          .text(),
+      ).toEqual('CHILDREN CONTENT');
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
-
   });
-
 });

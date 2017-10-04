@@ -8,9 +8,7 @@ describe('<FixedGridColumn />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridColumn>grid content</FixedGridColumn>,
-      );
+      component = shallow(<FixedGridColumn>grid content</FixedGridColumn>);
     });
 
     it('renders its given content', () => {
@@ -48,9 +46,7 @@ describe('<FixedGridColumn />', () => {
 
   describe('when set to fixed', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridColumn fixed>grid content</FixedGridColumn>,
-      );
+      component = shallow(<FixedGridColumn fixed={true}>grid content</FixedGridColumn>);
     });
 
     it('includes the fixed class name', () => {
@@ -69,7 +65,9 @@ describe('<FixedGridColumn />', () => {
   describe('when set to fixed and given a width', () => {
     beforeEach(() => {
       component = shallow(
-        <FixedGridColumn fixed width={150}>grid content</FixedGridColumn>,
+        <FixedGridColumn fixed={true} width={150}>
+          grid content
+        </FixedGridColumn>,
       );
     });
 
@@ -96,9 +94,7 @@ describe('<FixedGridColumn />', () => {
 
   describe('when given a width but not fixed', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridColumn width={150}>grid content</FixedGridColumn>,
-      );
+      component = shallow(<FixedGridColumn width={150}>grid content</FixedGridColumn>);
     });
 
     it('does not include the fixed class name', () => {
@@ -117,5 +113,4 @@ describe('<FixedGridColumn />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

@@ -11,9 +11,7 @@ describe('<Clickable />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Clickable>clickable content</Clickable>,
-      );
+      component = shallow(<Clickable>clickable content</Clickable>);
     });
 
     it('renders its given content', () => {
@@ -31,9 +29,7 @@ describe('<Clickable />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Clickable className="TEST_CLASSNAME">clickable content</Clickable>,
-      );
+      component = shallow(<Clickable className="TEST_CLASSNAME">clickable content</Clickable>);
     });
 
     it('includes that className', () => {
@@ -51,9 +47,7 @@ describe('<Clickable />', () => {
 
   describe('when block is true', () => {
     beforeEach(() => {
-      component = shallow(
-        <Clickable block={true}>clickable content</Clickable>,
-      );
+      component = shallow(<Clickable block={true}>clickable content</Clickable>);
     });
 
     it('renders the correct block className', () => {
@@ -77,7 +71,12 @@ describe('<Clickable />', () => {
     });
 
     it('has title attribute', () => {
-      expect(component.render().find('button').attr('title')).toEqual('extra browser tooltip content');
+      expect(
+        component
+          .render()
+          .find('button')
+          .attr('title'),
+      ).toEqual('extra browser tooltip content');
     });
 
     it('matches its snapshot', () => {
@@ -87,13 +86,16 @@ describe('<Clickable />', () => {
 
   describe('when ariaLabel is passed', () => {
     beforeEach(() => {
-      component = shallow(
-        <Clickable ariaLabel="aria label content">clickable content</Clickable>,
-      );
+      component = shallow(<Clickable ariaLabel="aria label content">clickable content</Clickable>);
     });
 
     it('has aria-label attribute', () => {
-      expect(component.render().find('button').attr('aria-label')).toEqual('aria label content');
+      expect(
+        component
+          .render()
+          .find('button')
+          .attr('aria-label'),
+      ).toEqual('aria label content');
     });
 
     it('matches its snapshot', () => {
@@ -108,9 +110,7 @@ describe('<Clickable />', () => {
     }
     beforeEach(() => {
       clicked = false;
-      component = shallow(
-        <Clickable onClick={clickMe}>clickable content</Clickable>,
-      );
+      component = shallow(<Clickable onClick={clickMe}>clickable content</Clickable>);
     });
 
     it('triggers its onClick callback', () => {
@@ -118,5 +118,4 @@ describe('<Clickable />', () => {
       expect(clicked).toBe(true);
     });
   });
-
 });

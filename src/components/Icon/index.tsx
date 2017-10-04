@@ -42,15 +42,13 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
     size: IconSize.MEDIUM,
   };
 
-  public render () {
+  public render() {
     const CurrentIcon = ICONS[this.props.icon];
     return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />;
   }
 
-  private getClasses () {
-    const classes = [
-      'y-icon',
-    ];
+  private getClasses() {
+    const classes = ['y-icon'];
     if (this.props.block) {
       classes.push('y-icon__isBlock');
     }
@@ -60,7 +58,7 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
     return classes.join(' ');
   }
 
-  private getInlineStyles () {
+  private getInlineStyles() {
     const length = this.props.size + 'px';
     const styles: IconStyles = {
       height: length,

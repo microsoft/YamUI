@@ -6,7 +6,6 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { secureOpen } from '../../util/secureOpener';
 import './navigation-link.css';
 
-
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   href: string;
   title?: string;
@@ -15,15 +14,34 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
 }
 
 export default class NavigationLink extends React.PureComponent<NavigationLinkProps, {}> {
-  constructor (props: NavigationLinkProps) {
+  constructor(props: NavigationLinkProps) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  getClasses () {
-    const classes: string[] = [
-      'y-navigationLink',
-    ];
+  render() {
+    let target;
+    let rel;
+    if (this.props.newWindow) {
+      target = '_blank';
+      rel = 'nofollow noreferrer';
+    }
+    return (
+      <a
+        href={this.props.href}
+        className={this.getClasses()}
+        onClick={this.handleClick}
+        target={target}
+        rel={rel}
+        title={this.props.title}
+      >
+        {this.props.children}
+      </a>
+    );
+  }
+
+  private getClasses() {
+    const classes: string[] = ['y-navigationLink'];
     if (this.props.newWindow) {
       classes.push('y-navigationLink__newWindow');
     }
@@ -36,27 +54,12 @@ export default class NavigationLink extends React.PureComponent<NavigationLinkPr
     return classNames(classes);
   }
 
-  handleClick (event: React.SyntheticEvent<HTMLAnchorElement>) {
+  private handleClick(event: React.SyntheticEvent<HTMLAnchorElement>) {
     if (!this.props.newWindow) {
       return;
     }
 
     secureOpen(this.props.href);
     event.preventDefault();
-  }
-
-  render () {
-    let target;
-    let rel;
-    if (this.props.newWindow) {
-      target = '_blank';
-      rel = 'nofollow noreferrer';
-    }
-    return (
-      <a href={this.props.href} className={this.getClasses()} onClick={this.handleClick}
-         target={target} rel={rel} title={this.props.title}>
-        {this.props.children}
-      </a>
-    );
   }
 }

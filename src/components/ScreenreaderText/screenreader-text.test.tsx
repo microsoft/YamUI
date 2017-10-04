@@ -8,9 +8,7 @@ describe('<ScreenreaderText />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <ScreenreaderText>text content</ScreenreaderText>,
-      );
+      component = shallow(<ScreenreaderText>text content</ScreenreaderText>);
     });
 
     it('renders its given content', () => {
@@ -45,5 +43,4 @@ describe('<ScreenreaderText />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

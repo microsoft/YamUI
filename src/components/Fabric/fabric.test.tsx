@@ -9,9 +9,7 @@ describe('<Fabric />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Fabric>wrapped content</Fabric>,
-      );
+      component = shallow(<Fabric>wrapped content</Fabric>);
     });
 
     it('renders its given content', () => {
@@ -22,5 +20,4 @@ describe('<Fabric />', () => {
       expect(component.render().find('.ms-Fabric').length).toEqual(1);
     });
   });
-
 });

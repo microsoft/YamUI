@@ -65,7 +65,11 @@ describe('<Callout />', () => {
   describe('with screenreaderTitle', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout content={<div>Callout content</div>} screenreaderTitle="HIDDEN TITLE" triggerType={TriggerType.CLICK}>
+        <Callout
+          content={<div>Callout content</div>}
+          screenreaderTitle="HIDDEN TITLE"
+          triggerType={TriggerType.CLICK}
+        >
           <span>Trigger</span>
         </Callout>,
       );
@@ -73,7 +77,9 @@ describe('<Callout />', () => {
     });
 
     it('renders the hidden title', () => {
-      expect(component.find('.y-callout--modal-container ScreenreaderText h1').text()).toEqual('HIDDEN TITLE');
+      expect(component.find('.y-callout--modal-container ScreenreaderText h1').text()).toEqual(
+        'HIDDEN TITLE',
+      );
     });
 
     it('matches its snapshot', () => {
@@ -235,7 +241,7 @@ describe('<Callout />', () => {
 
     describe('and the ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', ({ keyCode: Key.Escape } as any));
+        const event = new KeyboardEvent('keydown', { keyCode: Key.Escape } as any);
         document.dispatchEvent(event);
       });
 
@@ -246,7 +252,7 @@ describe('<Callout />', () => {
 
     describe('and a non-ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', ({ keyCode: Key.Enter } as any));
+        const event = new KeyboardEvent('keydown', { keyCode: Key.Enter } as any);
         document.dispatchEvent(event);
       });
 
@@ -313,8 +319,12 @@ describe('<Callout />', () => {
       onShow = jest.fn();
       onHide = jest.fn();
       component = shallow(
-        <Callout content={<div>Callout content</div>} onTriggerHover={onHover}
-                 onContentDisplay={onShow}  onContentDismiss={onHide}>
+        <Callout
+          content={<div>Callout content</div>}
+          onTriggerHover={onHover}
+          onContentDisplay={onShow}
+          onContentDismiss={onHide}
+        >
           <span>Trigger</span>
         </Callout>,
       );
@@ -351,5 +361,4 @@ describe('<Callout />', () => {
       });
     });
   });
-
 });

@@ -9,7 +9,6 @@ import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-reac
 import ScreenreaderText from '../ScreenreaderText';
 import './callout.css';
 
-
 const showDelay = 750;
 const hideDelay = 500;
 
@@ -90,7 +89,7 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
   private showTimeout: number;
   private hideTimeout: number;
 
-  constructor (props: CalloutProps) {
+  constructor(props: CalloutProps) {
     super(props);
     this.state = {
       visible: false,
@@ -106,53 +105,67 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
     this.beginHide = this.beginHide.bind(this);
   }
 
-  render () {
+  render() {
+    const screenreaderTitle = this.props.screenreaderTitle && (
+      <ScreenreaderText>
+        <h1>{this.props.screenreaderTitle}</h1>
+      </ScreenreaderText>
+    );
+    const callout = this.state.visible && (
+      <FabricCallout
+        isBeakVisible={this.props.isBeakVisible}
+        directionalHint={this.props.directionalHint}
+        target={this.triggerElement}
+        onDismiss={this.hide}
+        preventDismissOnScroll={false}
+      >
+        <div
+          className="y-callout--modal-container"
+          onMouseEnter={this.handleBodyHover}
+          onMouseLeave={this.beginHide}
+        >
+          {screenreaderTitle}
+          {this.props.content}
+        </div>
+      </FabricCallout>
+    );
+
     return (
       <span className={classNames('y-callout', this.props.className)}>
-        <span className="y-callout--trigger" ref={(node: HTMLSpanElement) => this.triggerElement = node}
-              onClick={this.handleTriggerClick} onMouseEnter={this.handleTriggerHover}
-              onMouseLeave={this.handleTriggerHoverLeave}>
+        <span
+          className="y-callout--trigger"
+          ref={(node: HTMLSpanElement) => (this.triggerElement = node)}
+          onClick={this.handleTriggerClick}
+          onMouseEnter={this.handleTriggerHover}
+          onMouseLeave={this.handleTriggerHoverLeave}
+        >
           {this.props.children}
         </span>
-        {this.state.visible && (
-          <FabricCallout isBeakVisible={this.props.isBeakVisible}
-                         directionalHint={this.props.directionalHint}
-                         target={this.triggerElement}
-                         onDismiss={this.hide}
-                         preventDismissOnScroll={false}>
-            <div className="y-callout--modal-container" onMouseEnter={this.handleBodyHover}
-                 onMouseLeave={this.beginHide}>
-              {this.props.screenreaderTitle && (
-                <ScreenreaderText><h1>{this.props.screenreaderTitle}</h1></ScreenreaderText>
-              )}
-              {this.props.content}
-            </div>
-          </FabricCallout>
-        )}
+        {callout}
       </span>
     );
   }
 
   // Set initial visible state after mount so the trigger ref exists for positioning
-  componentDidMount () {
+  componentDidMount() {
     if (this.props.startVisible) {
       this.show();
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.clearTimeout(this.showTimeout);
     window.clearTimeout(this.hideTimeout);
     this.stopKeyListener();
   }
 
-  private handleTriggerClick () {
+  private handleTriggerClick() {
     if (this.props.triggerType === TriggerType.CLICK) {
       this.show();
     }
   }
 
-  private handleTriggerHover () {
+  private handleTriggerHover() {
     this.props.onTriggerHover && this.props.onTriggerHover();
 
     this.cancelHide();
@@ -161,40 +174,37 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
       this.beginShow();
     }
   }
-  private handleTriggerHoverLeave () {
+
+  private handleTriggerHoverLeave() {
     this.cancelShow();
     this.beginHide();
   }
 
-  private handleBodyHover () {
+  private handleBodyHover() {
     this.cancelHide();
   }
 
-  private beginShow () {
+  private beginShow() {
     this.showTimeout = window.setTimeout(
-      () => {
-        this.show();
-      },
+      () => { this.show(); },
       showDelay,
     );
   }
-  private cancelShow () {
+  private cancelShow() {
     window.clearTimeout(this.showTimeout);
   }
 
-  private beginHide () {
+  private beginHide() {
     this.hideTimeout = window.setTimeout(
-      () => {
-        this.hide();
-      },
+      () => { this.hide(); },
       hideDelay,
     );
   }
-  private cancelHide () {
+  private cancelHide() {
     window.clearTimeout(this.hideTimeout);
   }
 
-  private show () {
+  private show() {
     if (this.state.visible) {
       return;
     }
@@ -204,7 +214,8 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
     this.setState({ visible: true });
     this.startKeyListener();
   }
-  private hide () {
+
+  private hide() {
     if (!this.state.visible) {
       return;
     }
@@ -215,16 +226,17 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
     this.stopKeyListener();
   }
 
-  private handleKeyDown (e: KeyboardEvent) {
+  private handleKeyDown(e: KeyboardEvent) {
     if (e.keyCode === Key.Escape) {
       this.hide();
     }
   }
 
-  private startKeyListener () {
+  private startKeyListener() {
     document.addEventListener('keydown', this.handleKeyDown);
   }
-  private stopKeyListener () {
+
+  private stopKeyListener() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 }

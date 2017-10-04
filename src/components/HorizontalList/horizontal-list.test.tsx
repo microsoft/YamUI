@@ -8,9 +8,7 @@ describe('<HorizontalList />', () => {
 
   describe('without props', () => {
     beforeEach(() => {
-      component = shallow(
-        <HorizontalList />,
-      );
+      component = shallow(<HorizontalList />);
     });
 
     it('renders a ul tag', () => {
@@ -28,9 +26,7 @@ describe('<HorizontalList />', () => {
 
   describe('with align "right"', () => {
     beforeEach(() => {
-      component = shallow(
-        <HorizontalList align="right" />,
-      );
+      component = shallow(<HorizontalList align="right" />);
     });
 
     it('adds the align-right class', () => {
@@ -44,9 +40,7 @@ describe('<HorizontalList />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <HorizontalList className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<HorizontalList className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -64,9 +58,7 @@ describe('<HorizontalList />', () => {
 
   describe('with child content', () => {
     beforeEach(() => {
-      component = shallow(
-        <HorizontalList>list content</HorizontalList>,
-      );
+      component = shallow(<HorizontalList>list content</HorizontalList>);
     });
 
     it('renders the child content', () => {
@@ -77,5 +69,4 @@ describe('<HorizontalList />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

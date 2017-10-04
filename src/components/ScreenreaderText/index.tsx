@@ -5,14 +5,10 @@ import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './screenreader-text.css';
 
-
 export interface ScreenreaderTextProps extends NestableBaseComponentProps {}
 
-const ScreenreaderText: React.StatelessComponent<ScreenreaderTextProps> = (props) => {
-  return (
-    <span className={classNames('y-screenreaderText', props.className)}>
-      {props.children}
-    </span>
-  );
-};
+const ScreenreaderText: React.StatelessComponent<ScreenreaderTextProps> = props => (
+  <span className={classNames('y-screenreaderText', props.className)}>{props.children}</span>
+);
+
 export default ScreenreaderText;

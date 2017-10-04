@@ -9,9 +9,7 @@ describe('<NavigationLink />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <NavigationLink href="test.html">link content</NavigationLink>,
-      );
+      component = shallow(<NavigationLink href="test.html">link content</NavigationLink>);
     });
 
     it('renders its given content', () => {
@@ -33,7 +31,7 @@ describe('<NavigationLink />', () => {
     describe('when clicked', () => {
       let spy: jest.SpyInstance<{}>;
       beforeEach(() => {
-        spy = jest.spyOn(secureOpener, 'secureOpen');     
+        spy = jest.spyOn(secureOpener, 'secureOpen');
       });
 
       it('does not open in a new window', () => {
@@ -46,7 +44,9 @@ describe('<NavigationLink />', () => {
   describe('when unstyled', () => {
     beforeEach(() => {
       component = shallow(
-        <NavigationLink href="test.html" unstyled>link content</NavigationLink>,
+        <NavigationLink href="test.html" unstyled={true}>
+          link content
+        </NavigationLink>,
       );
     });
 
@@ -66,7 +66,9 @@ describe('<NavigationLink />', () => {
   describe('with title', () => {
     beforeEach(() => {
       component = shallow(
-        <NavigationLink href="test.html" title="TITLE CONTENT">link content</NavigationLink>,
+        <NavigationLink href="test.html" title="TITLE CONTENT">
+          link content
+        </NavigationLink>,
       );
     });
 
@@ -82,7 +84,9 @@ describe('<NavigationLink />', () => {
   describe('when newWindow is true', () => {
     beforeEach(() => {
       component = shallow(
-        <NavigationLink href="test.html" newWindow>link content</NavigationLink>,
+        <NavigationLink href="test.html" newWindow={true}>
+          link content
+        </NavigationLink>,
       );
     });
 
@@ -97,7 +101,7 @@ describe('<NavigationLink />', () => {
     describe('when clicked', () => {
       let spy: jest.SpyInstance<{}>;
       beforeEach(() => {
-        spy = jest.spyOn(secureOpener, 'secureOpen');     
+        spy = jest.spyOn(secureOpener, 'secureOpen');
       });
 
       it('opens in a new window', () => {
@@ -110,7 +114,9 @@ describe('<NavigationLink />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(
-        <NavigationLink href="test.html" className="TEST_CLASSNAME">test content</NavigationLink>,
+        <NavigationLink href="test.html" className="TEST_CLASSNAME">
+          test content
+        </NavigationLink>,
       );
     });
 
@@ -126,5 +132,4 @@ describe('<NavigationLink />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });
