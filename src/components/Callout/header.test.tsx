@@ -9,9 +9,7 @@ describe('<CalloutHeader />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <CalloutHeader>header content</CalloutHeader>,
-      );
+      component = shallow(<CalloutHeader>header content</CalloutHeader>);
     });
 
     it('renders its given content', () => {
@@ -29,9 +27,7 @@ describe('<CalloutHeader />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <CalloutHeader className="TEST_CLASSNAME">header content</CalloutHeader>,
-      );
+      component = shallow(<CalloutHeader className="TEST_CLASSNAME">header content</CalloutHeader>);
     });
 
     it('includes that className', () => {
@@ -42,5 +38,4 @@ describe('<CalloutHeader />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

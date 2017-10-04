@@ -6,7 +6,6 @@ import Button, { ButtonColor } from '../components/Button';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/HorizontalList/README');
 
-
 storiesOf('HorizontalList', module)
   .addDecorator(withReadme(readme))
   .add('list of Buttons', () => (
@@ -22,7 +21,7 @@ storiesOf('HorizontalList', module)
       </ListItem>
     </HorizontalList>
   ))
-.add('aligned right', () => (
+  .add('aligned right', () => (
     <HorizontalList align="right">
       <ListItem>
         <Button text="1" color={ButtonColor.SECONDARY} />

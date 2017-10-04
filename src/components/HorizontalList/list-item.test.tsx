@@ -8,9 +8,7 @@ describe('<ListItem />', () => {
 
   describe('without props', () => {
     beforeEach(() => {
-      component = shallow(
-        <ListItem />,
-      );
+      component = shallow(<ListItem />);
     });
 
     it('renders an li element', () => {
@@ -28,9 +26,7 @@ describe('<ListItem />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <ListItem className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<ListItem className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -48,9 +44,7 @@ describe('<ListItem />', () => {
 
   describe('with child content', () => {
     beforeEach(() => {
-      component = shallow(
-        <ListItem>list item content</ListItem>,
-      );
+      component = shallow(<ListItem>list item content</ListItem>);
     });
 
     it('renders the child content', () => {
@@ -61,5 +55,4 @@ describe('<ListItem />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

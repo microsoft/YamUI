@@ -5,16 +5,13 @@ import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Image, { ImageProps, ImageFit, ImageLoadState } from './index';
 import { Image as FabricImage } from 'office-ui-fabric-react/lib/Image';
 
-
 describe('<Image />', () => {
   let component: ShallowWrapper<ImageProps, {}>;
   let fullComponent: ReactWrapper<ImageProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" />,
-      );
+      component = shallow(<Image source="image.png" description="description" />);
     });
 
     it('has its correct base class', () => {
@@ -100,9 +97,7 @@ describe('<Image />', () => {
 
   describe('with fullWidth', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" fullWidth />,
-      );
+      component = shallow(<Image source="image.png" description="description" fullWidth={true} />);
     });
 
     it('renders the fullWidth class', () => {
@@ -139,7 +134,7 @@ describe('<Image />', () => {
     it('triggers a callback with loaded status on load', () => {
       fullComponent.find('img').simulate('load');
       setTimeout(() => {}, 1);
-      
+
       jest.runAllTimers();
       expect(loadState).toEqual(ImageLoadState.loaded);
     });
@@ -147,10 +142,9 @@ describe('<Image />', () => {
     it('triggers a callback with error status on error', () => {
       fullComponent.find('img').simulate('error');
       setTimeout(() => {}, 1);
-      
+
       jest.runAllTimers();
       expect(loadState).toEqual(ImageLoadState.error);
     });
   });
-
 });

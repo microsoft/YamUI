@@ -5,7 +5,6 @@ import { Enum } from 'typescript-string-enums';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './clickable.css';
 
-
 export interface ClickableProps extends NestableBaseComponentProps {
   block?: boolean;
   ariaLabel?: string;
@@ -14,9 +13,7 @@ export interface ClickableProps extends NestableBaseComponentProps {
 }
 
 const getClasses = (props: ClickableProps) => {
-  const classes: string[] = [
-    'y-clickable',
-  ];
+  const classes: string[] = ['y-clickable'];
   if (props.block) {
     classes.push('y-clickable__block');
   }
@@ -26,11 +23,15 @@ const getClasses = (props: ClickableProps) => {
   return classes.join(' ');
 };
 
-const Clickable: React.StatelessComponent<ClickableProps> = (props) => {
-  return (
-    <button className={getClasses(props)} onClick={props.onClick} aria-label={props.ariaLabel} title={props.title}>
-      {props.children}
-    </button>
-  );
-};
+const Clickable: React.StatelessComponent<ClickableProps> = props => (
+  <button
+    className={getClasses(props)}
+    onClick={props.onClick}
+    aria-label={props.ariaLabel}
+    title={props.title}
+  >
+    {props.children}
+  </button>
+);
+
 export default Clickable;

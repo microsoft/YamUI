@@ -9,22 +9,21 @@ import NavigationLink from '../components/NavigationLink';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/FakeLink/README');
 
-
 storiesOf('FakeLink', module)
   .addDecorator(withReadme(readme))
   .add('default', () => (
     <div>
-      Here is a <FakeLink>FakeLink component</FakeLink>. It styles text as if it were
-      a NavigationLink. It does not accept any options.
+      Here is a <FakeLink>FakeLink component</FakeLink>. It styles text as if it were a
+      NavigationLink. It does not accept any options.
     </div>
   ))
   .add('in unstyled link', () => (
     <div>
       <NavigationLink href="/404.html" unstyled={true}>
         <Block>
-          This unstyled NavigationLink component wraps an entire block of text. Here is
-          a <FakeLink>FakeLink component</FakeLink> nested in that block of text. Notice that
-          it reflects the hover styles when its parent NavigationLink is hovered, focused or active.
+          This unstyled NavigationLink component wraps an entire block of text. Here is a{' '}
+          <FakeLink>FakeLink component</FakeLink> nested in that block of text. Notice that it
+          reflects the hover styles when its parent NavigationLink is hovered, focused or active.
           This allows screenreaders to understand an entire block of text within a NavigationLink
           while also supporting nice visual styles for sighted users.
         </Block>
@@ -35,9 +34,9 @@ storiesOf('FakeLink', module)
     <div>
       <Clickable block={true} onClick={action('button clicked')}>
         <Block>
-          Here is an example of a <FakeLink>FakeLink component</FakeLink> within
-          a <strong>Clickable</strong> block. <FakeLink>Here's another one</FakeLink>. Hover
-          anywhere over this block to see the <strong>FakeLink</strong> components get underlined.
+          Here is an example of a <FakeLink>FakeLink component</FakeLink> within a{' '}
+          <strong>Clickable</strong> block. <FakeLink>Here's another one</FakeLink>. Hover anywhere
+          over this block to see the <strong>FakeLink</strong> components get underlined.
         </Block>
       </Clickable>
     </div>

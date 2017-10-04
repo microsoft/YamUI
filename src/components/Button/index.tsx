@@ -7,12 +7,7 @@ import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseBut
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import './button.css';
 
-
-const hrefBlacklist = [
-  '',
-  '#',
-  'javascript://',
-];
+const hrefBlacklist = ['', '#', 'javascript://'];
 
 export const ButtonSize = Enum({
   REGULAR: 'regular',
@@ -109,7 +104,7 @@ export type ButtonProps = RegularButtonProps | LinkButtonProps;
 export default class Button extends React.PureComponent<ButtonProps, {}> {
   static propTypes = {
     // TypeScript does not support negated types; using PropTypes custom validator instead of runtime validations
-    href (props: LinkButtonProps, propName: string, componentName: string) {
+    href(props: LinkButtonProps, propName: string, componentName: string) {
       const href = props.href;
       if (typeof href !== 'string') {
         return;
@@ -129,39 +124,56 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     iconPosition: IconPosition.LEFT,
   };
 
-  public render () {
+  public render() {
     const { props } = this;
-    const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur, iconPosition } = props;
+    const {
+      ariaLabel,
+      text,
+      icon,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onFocus,
+      onBlur,
+      iconPosition,
+    } = props;
 
     const disabled = (props as RegularButtonProps).disabled;
     const href = (props as LinkButtonProps).href;
 
+    const leftIcon = icon &&
+      iconPosition === IconPosition.LEFT && (
+        <span className="y-button--icon-wrapper-left">
+          <Icon {...this.getIconProps()} />
+        </span>
+      );
+    const rightIcon = icon &&
+      iconPosition === IconPosition.RIGHT && (
+        <span className="y-button--icon-wrapper-right">
+          <Icon {...this.getIconProps()} />
+        </span>
+      );
+
     return (
-      <BaseButton className={this.getClasses()}
-                  onClick={onClick}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  disabled={disabled}
-                  ariaLabel={ariaLabel}
-                  href={href}>
-        {icon && (iconPosition === IconPosition.LEFT) && (
-          <span className="y-button--icon-wrapper-left">
-            <Icon {...this.getIconProps()} />
-          </span>
-        )}
+      <BaseButton
+        className={this.getClasses()}
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        disabled={disabled}
+        ariaLabel={ariaLabel}
+        href={href}
+      >
+        {leftIcon}
         {text}
-        {icon && (iconPosition === IconPosition.RIGHT) && (
-          <span className="y-button--icon-wrapper-right">
-            <Icon {...this.getIconProps()} />
-          </span>
-        )}
+        {rightIcon}
       </BaseButton>
     );
   }
 
-  private getIconProps (): IconProps {
+  private getIconProps(): IconProps {
     return {
       size: this.props.size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
       icon: this.props.icon as IconName,
@@ -169,7 +181,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     };
   }
 
-  private getClasses () {
+  private getClasses() {
     const { props } = this;
     const classes: string[] = [
       'y-button',
@@ -185,4 +197,3 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     return classes.join(' ');
   }
 }
-

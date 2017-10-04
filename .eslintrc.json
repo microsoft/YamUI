@@ -1,14 +1,13 @@
 {
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import",
-        "header"
-    ],
-    "rules": {
-      "global-require": "off",
-      "import/no-extraneous-dependencies": "off",
-      "header/header": [2, "block", "! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "]
-    }
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-a11y", "import", "header"],
+  "rules": {
+    "global-require": "off",
+    "import/no-extraneous-dependencies": "off",
+    "header/header": [
+      2,
+      "block",
+      "! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "
+    ]
+  }
 }

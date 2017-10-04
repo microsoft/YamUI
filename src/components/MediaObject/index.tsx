@@ -23,7 +23,7 @@ export interface MediaObjectProps extends NestableBaseComponentProps {
    * can set fullWidth:true to fill the left column width.
    */
   imageContent?: JSX.Element;
-  
+
   /**
    * Title content. This should be plain text, but could be wrapped in arbitrary JSX like a Link if necessary.
    */
@@ -52,10 +52,7 @@ const ImageWidthMap = {
 };
 
 const getClasses = (props: MediaObjectProps) => {
-  const classes: string[] = [
-    'y-media-object',
-    `y-media-object__size-${props.size}`,
-  ];
+  const classes: string[] = ['y-media-object', `y-media-object__size-${props.size}`];
   if (props.className) {
     classes.push(props.className);
   }
@@ -90,22 +87,27 @@ const MediaObject: React.StatelessComponent<MediaObjectProps> = (props) => {
   const gutterSize = getGutterSize(props.size);
   const imageColumnClass = `y-media-object__size-${props.size}--image`;
 
+  const titleContent = props.titleContent && (
+    <MediaObjectTitle size={props.size}>{props.titleContent}</MediaObjectTitle>
+  );
+  const metadataContent = showMetadata(props) && (
+    <MediaObjectMetadata size={props.size}>{props.metadataContent}</MediaObjectMetadata>
+  );
+
   return (
     <div className={getClasses(props)}>
       <FixedGridRow gutterSize={gutterSize}>
-        <FixedGridColumn width={ImageWidthMap[props.size]} fixed className={imageColumnClass}>
+        <FixedGridColumn
+          width={ImageWidthMap[props.size]}
+          fixed={true}
+          className={imageColumnClass}
+        >
           {props.imageContent}
         </FixedGridColumn>
         <FixedGridColumn>
-          {props.titleContent &&
-            <MediaObjectTitle size={props.size}>{props.titleContent}</MediaObjectTitle>
-          }
-          {showMetadata(props) &&
-            <MediaObjectMetadata size={props.size}>{props.metadataContent}</MediaObjectMetadata>
-          }
-          {showExtra(props) &&
-            <MediaObjectExtra>{props.extraContent}</MediaObjectExtra>
-          }
+          {titleContent}
+          {metadataContent}
+          {showExtra(props) && <MediaObjectExtra>{props.extraContent}</MediaObjectExtra>}
           {props.children}
         </FixedGridColumn>
       </FixedGridRow>

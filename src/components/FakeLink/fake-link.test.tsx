@@ -8,9 +8,7 @@ describe('<FakeLink />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <FakeLink>link content</FakeLink>,
-      );
+      component = shallow(<FakeLink>link content</FakeLink>);
     });
 
     it('renders its given content', () => {
@@ -28,9 +26,7 @@ describe('<FakeLink />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <FakeLink className="TEST_CLASSNAME">test content</FakeLink>,
-      );
+      component = shallow(<FakeLink className="TEST_CLASSNAME">test content</FakeLink>);
     });
 
     it('includes that className', () => {
@@ -45,5 +41,4 @@ describe('<FakeLink />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

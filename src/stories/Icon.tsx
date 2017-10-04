@@ -33,6 +33,18 @@ Object.keys(ICONS).forEach((icon) => {
 storiesOf('Icon', module)
   .addDecorator(withReadme(readme))
   .add('library', () => {
+    const icons = iconsArray.map((icon, index) => (
+      <tr key={index}>
+        <td style={labelStyles}>{icon}</td>
+        <td>
+          <Icon size={IconSize.LARGE} icon={icon} />
+        </td>
+        <td>
+          <Icon size={IconSize.LARGE} icon={icon} color="teal" />
+        </td>
+      </tr>
+    ));
+
     return (
       <div>
         <table style={tableStyles}>
@@ -44,13 +56,7 @@ storiesOf('Icon', module)
             </tr>
           </thead>
           <tbody>
-            {iconsArray.map((icon, index) => (
-              <tr key={index}>
-                <td style={labelStyles}>{icon}</td>
-                <td><Icon size={IconSize.LARGE} icon={icon} /></td>
-                <td><Icon size={IconSize.LARGE} icon={icon} color="teal" /></td>
-              </tr>
-            ))}
+            {icons}
           </tbody>
         </table>
       </div>
@@ -91,10 +97,14 @@ storiesOf('Icon', module)
     return (
       <div>
         Can be added <Icon size={IconSize.SMALL} icon="plus" /> inline with text.
-        <br /><br />
-        Inherits the <span style={{ color: 'blue' }}>
-        color <Icon size={IconSize.SMALL} icon="plus" /> of the text</span>.
-        <br /><br />
+        <br />
+        <br />
+        Inherits the{' '}
+        <span style={{ color: 'blue' }}>
+          color <Icon size={IconSize.SMALL} icon="plus" /> of the text
+        </span>.
+        <br />
+        <br />
         Color can be <Icon size={IconSize.SMALL} icon="plus" color="red" /> overridden.
       </div>
     );

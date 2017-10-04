@@ -2,15 +2,18 @@
 import * as React from 'react';
 import { storiesOf, StoryDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Callout, CalloutHeader, CalloutBody, DirectionalHint, TriggerType } from '../components/Callout';
+import {
+  Callout,
+  CalloutHeader,
+  CalloutBody,
+  DirectionalHint,
+  TriggerType,
+} from '../components/Callout';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Callout/README');
 
-
 const HeightDecorator: StoryDecorator = (story: Function) => (
-  <div style={{ minHeight: '500px' }}>
-    {story()}
-  </div>
+  <div style={{ minHeight: '500px' }}>{story()}</div>
 );
 
 const actions = {
@@ -22,7 +25,9 @@ const actions = {
 const fakeContent = (
   <div>
     <CalloutHeader>Callout Header</CalloutHeader>
-    <CalloutBody>Callout body content. Callout body content. Callout body content. Callout body content.</CalloutBody>
+    <CalloutBody>
+      Callout body content. Callout body content. Callout body content. Callout body content.
+    </CalloutBody>
   </div>
 );
 
@@ -34,7 +39,12 @@ const HintedPositionCallout = (props: HintedProps) => {
   return (
     <div style={{ position: 'relative', height: '500px' }}>
       <div style={{ position: 'absolute', top: '50%', left: '50%' }}>
-        <Callout content={fakeContent} directionalHint={props.hint} startVisible={true} {...actions}>
+        <Callout
+          content={fakeContent}
+          directionalHint={props.hint}
+          startVisible={true}
+          {...actions}
+        >
           <a>Hover over me</a>
         </Callout>
       </div>
@@ -48,7 +58,8 @@ storiesOf('Callout', module)
   .add('default display (hidden)', () => {
     return (
       <div>
-        This is a Callout component with default props. It's hidden by default and is triggered with mouse hover.
+        This is a Callout component with default props. It's hidden by default and is triggered with
+        mouse hover.
         <br />
         <br />
         <Callout content={fakeContent} {...actions}>
@@ -60,10 +71,10 @@ storiesOf('Callout', module)
   .add('default display', () => {
     return (
       <div>
-        This is a Callout component with default props.
-        It has a beak and is triggered by hover.
+        This is a Callout component with default props. It has a beak and is triggered by hover.
         <br />
-        Note that the rest of these examples set startVisible=true, which will probably not be used often in production.
+        Note that the rest of these examples set startVisible=true, which will probably not be used
+        often in production.
         <br />
         <br />
         <Callout content={fakeContent} startVisible={true} {...actions}>
@@ -78,7 +89,12 @@ storiesOf('Callout', module)
         This is a Callout component triggered by a click.
         <br />
         <br />
-        <Callout content={fakeContent} triggerType={TriggerType.CLICK} startVisible={true} {...actions}>
+        <Callout
+          content={fakeContent}
+          triggerType={TriggerType.CLICK}
+          startVisible={true}
+          {...actions}
+        >
           <a>Click me</a>
         </Callout>
       </div>
@@ -99,8 +115,7 @@ storiesOf('Callout', module)
   .add('top right edge', () => {
     return (
       <div>
-        This is a callout aligned to the top right edge of its trigger
-        (when screen width permits).
+        This is a callout aligned to the top right edge of its trigger (when screen width permits).
         <HintedPositionCallout hint={DirectionalHint.topRightEdge} />
       </div>
     );
@@ -108,8 +123,7 @@ storiesOf('Callout', module)
   .add('top center', () => {
     return (
       <div>
-        This is a callout aligned to the top center of its trigger
-        (when screen width permits).
+        This is a callout aligned to the top center of its trigger (when screen width permits).
         <HintedPositionCallout hint={DirectionalHint.topCenter} />
       </div>
     );
@@ -117,8 +131,7 @@ storiesOf('Callout', module)
   .add('top left edge', () => {
     return (
       <div>
-        This is a callout aligned to the top left edge of its trigger
-        (when screen width permits).
+        This is a callout aligned to the top left edge of its trigger (when screen width permits).
         <HintedPositionCallout hint={DirectionalHint.topLeftEdge} />
       </div>
     );
@@ -126,8 +139,8 @@ storiesOf('Callout', module)
   .add('right center', () => {
     return (
       <div>
-        This is a callout aligned to the right and center of its trigger
-        (when screen width permits).
+        This is a callout aligned to the right and center of its trigger (when screen width
+        permits).
         <HintedPositionCallout hint={DirectionalHint.rightCenter} />
       </div>
     );
@@ -135,8 +148,8 @@ storiesOf('Callout', module)
   .add('bottom left edge', () => {
     return (
       <div>
-        This is a callout aligned to the bottom left edge of its trigger
-        (when screen width permits).
+        This is a callout aligned to the bottom left edge of its trigger (when screen width
+        permits).
         <HintedPositionCallout hint={DirectionalHint.bottomLeftEdge} />
       </div>
     );
@@ -144,8 +157,7 @@ storiesOf('Callout', module)
   .add('bottom center', () => {
     return (
       <div>
-        This is a callout aligned to the bottom center of its trigger
-        (when screen width permits).
+        This is a callout aligned to the bottom center of its trigger (when screen width permits).
         <HintedPositionCallout hint={DirectionalHint.bottomCenter} />
       </div>
     );
@@ -153,8 +165,8 @@ storiesOf('Callout', module)
   .add('bottom right edge', () => {
     return (
       <div>
-        This is a callout aligned to the bottom right edge of its trigger
-        (when screen width permits).
+        This is a callout aligned to the bottom right edge of its trigger (when screen width
+        permits).
         <HintedPositionCallout hint={DirectionalHint.bottomRightEdge} />
       </div>
     );
@@ -162,8 +174,7 @@ storiesOf('Callout', module)
   .add('left center', () => {
     return (
       <div>
-        This is a callout aligned to the left and center of its trigger
-        (when screen width permits).
+        This is a callout aligned to the left and center of its trigger (when screen width permits).
         <HintedPositionCallout hint={DirectionalHint.leftCenter} />
       </div>
     );

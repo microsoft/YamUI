@@ -6,15 +6,12 @@ import Avatar, { AvatarProps, AvatarSize, BorderType } from './index';
 import ScreenreaderText from '../ScreenreaderText';
 import Text from '../Text';
 
-
 describe('<Avatar />', () => {
   let component: ShallowWrapper<AvatarProps, {}>;
 
   describe('with image url', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" />,
-      );
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />);
     });
 
     it('contains its base className', () => {
@@ -22,7 +19,12 @@ describe('<Avatar />', () => {
     });
 
     it('renders the given image', () => {
-      expect(component.render().find('img').attr('src')).toEqual('test.jpg');
+      expect(
+        component
+          .render()
+          .find('img')
+          .attr('src'),
+      ).toEqual('test.jpg');
     });
 
     it('defaults to medium size', () => {
@@ -36,13 +38,16 @@ describe('<Avatar />', () => {
 
   describe('with initials', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" initials="AB" />,
-      );
+      component = shallow(<Avatar name="NAME" initials="AB" />);
     });
 
     it('renders the initials', () => {
-      expect(component.find(Persona).render().text()).toEqual('AB');
+      expect(
+        component
+          .find(Persona)
+          .render()
+          .text(),
+      ).toEqual('AB');
     });
 
     it('matches its snapshot', () => {
@@ -52,13 +57,16 @@ describe('<Avatar />', () => {
 
   describe('with too many characters', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" initials="ABCD" />,
-      );
+      component = shallow(<Avatar name="NAME" initials="ABCD" />);
     });
 
     it('only renders 2 letters', () => {
-      expect(component.find(Persona).render().text()).toEqual('AB');
+      expect(
+        component
+          .find(Persona)
+          .render()
+          .text(),
+      ).toEqual('AB');
     });
 
     it('matches its snapshot', () => {
@@ -68,13 +76,16 @@ describe('<Avatar />', () => {
 
   describe('with too many characters and size XSMALL', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" initials="ABCD" size={AvatarSize.XSMALL} />,
-      );
+      component = shallow(<Avatar name="NAME" initials="ABCD" size={AvatarSize.XSMALL} />);
     });
 
     it('only renders 1 letter', () => {
-      expect(component.find(Persona).render().text()).toEqual('A');
+      expect(
+        component
+          .find(Persona)
+          .render()
+          .text(),
+      ).toEqual('A');
     });
 
     it('matches its snapshot', () => {
@@ -85,7 +96,12 @@ describe('<Avatar />', () => {
   describe('with badge content', () => {
     beforeEach(() => {
       component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XSMALL} badgeContent={<Text>badge</Text>} />,
+        <Avatar
+          name="NAME"
+          imageUrl="test.jpg"
+          size={AvatarSize.XSMALL}
+          badgeContent={<Text>badge</Text>}
+        />,
       );
     });
 
@@ -94,7 +110,9 @@ describe('<Avatar />', () => {
     });
 
     it('renders the size class on the badge', () => {
-      expect(component.find('.y-avatar--badge').hasClass('y-avatar__size-xSmall--badge')).toBe(true);
+      expect(component.find('.y-avatar--badge').hasClass('y-avatar__size-xSmall--badge')).toBe(
+        true,
+      );
     });
 
     it('matches its snapshot', () => {
@@ -104,9 +122,7 @@ describe('<Avatar />', () => {
 
   describe('with soft border type', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />,
-      );
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />);
     });
 
     it('contains the soft border class', () => {
@@ -120,9 +136,7 @@ describe('<Avatar />', () => {
 
   describe('with size', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XLARGE} />,
-      );
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XLARGE} />);
     });
 
     it('contains the correct size class', () => {
@@ -140,9 +154,7 @@ describe('<Avatar />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -161,15 +173,15 @@ describe('<Avatar />', () => {
   describe('accessible text', () => {
     describe('without badge description', () => {
       beforeEach(() => {
-        component = shallow(
-          <Avatar name="NAME" imageUrl="test.jpg" />,
-        );
+        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />);
       });
 
       it('renders the name in a ScreenreaderText component', () => {
-        expect(component.find(ScreenreaderText)
-          .matchesElement(<ScreenreaderText>NAME</ScreenreaderText>))
-          .toEqual(true);
+        expect(
+          component
+            .find(ScreenreaderText)
+            .matchesElement(<ScreenreaderText>NAME</ScreenreaderText>),
+        ).toEqual(true);
       });
 
       it('matches its snapshot', () => {
@@ -179,15 +191,15 @@ describe('<Avatar />', () => {
 
     describe('with badge description', () => {
       beforeEach(() => {
-        component = shallow(
-          <Avatar name="NAME" imageUrl="test.jpg" badgeDescription="BADGE" />,
-        );
+        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" badgeDescription="BADGE" />);
       });
 
       it('renders the name and badge description in a ScreenreaderText component', () => {
-        expect(component.find(ScreenreaderText)
-          .matchesElement(<ScreenreaderText>NAME - BADGE</ScreenreaderText>))
-          .toEqual(true);
+        expect(
+          component
+            .find(ScreenreaderText)
+            .matchesElement(<ScreenreaderText>NAME - BADGE</ScreenreaderText>),
+        ).toEqual(true);
       });
 
       it('matches its snapshot', () => {
@@ -195,5 +207,4 @@ describe('<Avatar />', () => {
       });
     });
   });
-
 });

@@ -9,9 +9,7 @@ describe('<CalloutBody />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <CalloutBody>body content</CalloutBody>,
-      );
+      component = shallow(<CalloutBody>body content</CalloutBody>);
     });
 
     it('renders its given content', () => {
@@ -29,9 +27,7 @@ describe('<CalloutBody />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <CalloutBody className="TEST_CLASSNAME">body content</CalloutBody>,
-      );
+      component = shallow(<CalloutBody className="TEST_CLASSNAME">body content</CalloutBody>);
     });
 
     it('includes that className', () => {
@@ -46,5 +42,4 @@ describe('<CalloutBody />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

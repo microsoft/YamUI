@@ -6,7 +6,6 @@ import { GutterSize } from '../../util/enums/gutter';
 import { TextSize } from '../../util/enums/textSize';
 import './block.css';
 
-
 export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Gutter spacing to be added below this Block
@@ -37,14 +36,10 @@ export interface BlockProps extends NestableBaseComponentProps {
 
 export { GutterSize, TextSize };
 
-const pixelsToRems = function (pixels: number) {
-  return pixels / 10;
-};
+const pixelsToRems = (pixels: number) => pixels / 10;
 
 const getClasses = (props: BlockProps) => {
-  const classes: string[] = [
-    'y-block',
-  ];
+  const classes: string[] = ['y-block'];
   if (props.bottomSpacing) {
     classes.push(`y-block__bottomSpacing-${props.bottomSpacing}`);
   }
@@ -61,9 +56,7 @@ const getClasses = (props: BlockProps) => {
 };
 
 const getInnerClasses = (props: BlockProps) => {
-  const classes: string[] = [
-    'y-block--inner',
-  ];
+  const classes: string[] = ['y-block--inner'];
   if (props.padding) {
     classes.push(`y-block--inner__padding-${props.padding}`);
   }
@@ -92,14 +85,10 @@ const getStyle = (props: BlockProps) => {
   return styles;
 };
 
-const Block: React.StatelessComponent<BlockProps> = (props) => {
-  return (
-    <div className={getClasses(props)} style={getStyle(props)}>
-      <div className={getInnerClasses(props)}>
-        {props.children}
-      </div>
-    </div>
-  );
-};
+const Block: React.StatelessComponent<BlockProps> = props => (
+  <div className={getClasses(props)} style={getStyle(props)}>
+    <div className={getInnerClasses(props)}>{props.children}</div>
+  </div>
+);
 
 export default Block;
