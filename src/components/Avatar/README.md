@@ -1,61 +1,63 @@
 # Avatar
 
-Avatars show a thumbnail representation of both an individual or group. 
+An `Avatar` shows a thumbnail representation of both an individual or group.
 
-
-### Properties
+## Properties
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
-| size | AvatarSize| Size of avatar. |
-| name * | string | The name of the person or object being represented. Will be used as accessible alt text. |
+| size | AvatarSize | Size of avatar. |
+| name * | string | Name of the person or object being represented. Will be used as accessible alt text. |
 | initials | string | Initials of person to display if no mugshot provided. |
-| imageUrl | string| Image src URL |
-| borderType | BorderType| Round or soft border. Defaults to round. |
-| badgeContent | JSX.Element | Image, SVG, icon, etc. See example below. |
+| imageUrl | string | Image source URL. |
+| borderType | BorderType | Round or soft border. Defaults to round. |
+| badgeContent | ReactNode | Image, SVG, icon, etc. See example below. |
 | badgeDescription | string | A short accessible description of the badge. Will be appended to name if provided. |
 
 \* property is required
 
----
-
 ## Notes for use
 
-Avatar takes care of setting the alt text for you when you pass the one required attribute, `name`.
+`Avatar` takes care of setting the alt text for you when you pass the one required attribute, `name`.
 
-You must provide either an imageUrl property or an initials property.
-
----
+You must provide either an `imageUrl` property or an `initials` property.
 
 ## Examples
 
-### Person avatar no image
+### Person avatar without image
 
-Use to present an avatar for a person
-
-```
-<Avatar size={AvatarSize.XLARGE} initials="WW" name="Walter White" />
-```
-
-### Group avatar
-
-Use to present an avatar for a group
-
-```
-<Avatar imageUrl={antelope} size={AvatarSize.XSMALL} name="Annie Antelope"
-        borderType={BorderType.SOFT} />
+```js
+<Avatar
+  size={AvatarSize.XLARGE}
+  name="Walter White"
+  initials="WW"
+/>
 ```
 
-## Example implementation
+### Group avatar with image
 
-Present an avatar for an admin
-
+```js
+<Avatar
+  size={AvatarSize.XSMALL}
+  name="Marketing Team"
+  imageUrl={antelope}
+  borderType={BorderType.SOFT}
+/>
 ```
+
+## Avatar with image and badge
+
+```js
 import Avatar from 'yamui/dist/components/Avatar';
 import Image from 'yamui/dist/components/Image';
 
 const badgeImage = <Image source="badge-image.png" description="" fullWidth={true} />;
 
-<Avatar imageUrl="my-image.jpg" size={AvatarSize.XSMALL} name="Smiley Face"
-        badgeContent={badgeImage} badgeDescription="Admin" />
+<Avatar
+  size={AvatarSize.XSMALL}
+  name="Smiley Face"
+  imageUrl="my-image.jpg"
+  badgeContent={badgeImage}
+  badgeDescription="Admin"
+/>
 ```

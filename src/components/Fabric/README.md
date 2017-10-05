@@ -2,13 +2,9 @@
 
 The `<Fabric />` component is provided directly by the Fabric library and manages typography and other styles for the entire nested app. It manages styles dynamically, changing some classes as elements receive and lose focus. Eventually, as Fabric continues to adopt Glamor, it will set language-specific fonts. All visible markup should be wrapped in a single `Fabric` component.
 
----
-
-### Properties
+## Properties
 
 (none)
-
----
 
 ## Notes for use
 
@@ -18,28 +14,25 @@ NOTE: Some codebases are not purely React and cannot be wrapped in a React compo
 
 Also note that any legacy (non-React) overlays in your app which render at the end of the body outside of your wrapping `<Fabric>` component, like a jQuery ToolTip or Lightbox, should wrap their own content in a `<Fabric>` component to ensure proper styling and typography. This is not necessary for any YamUI/Fabric popup-type components because they automatically nest their content in another`<Fabric>` component.
 
----
-
 ## Examples
 
-### Default component
+### Basic usage
 
-```
+```html
 <!doctype html>
 <html dir="ltr">
-<head>...</head>
-<body>
-  <Fabric>
-    Entire application
-  </Fabric>
-
-  <!-- Legacy lightbox etc. rendering at the end of the body outside our Fabric component would also need its own Fabric wrapper -->
-  <div id="lightbox">
+  <body>
     <Fabric>
-      Lightbox content
+      Entire application
     </Fabric>
-  </div>
-</body>
+
+    <!-- Legacy lightbox etc. rendering at the end of the body outside our Fabric component would
+         also need its own Fabric wrapper. -->
+    <div id="lightbox">
+      <Fabric>
+        Lightbox content
+      </Fabric>
+    </div>
+  </body>
 </html>
 ```
----

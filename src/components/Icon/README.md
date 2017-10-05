@@ -2,9 +2,7 @@
 
 Adds a single-color SVG icon.
 
----
-
-### Properties
+## Properties
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
@@ -15,33 +13,27 @@ Adds a single-color SVG icon.
 
 \* property is required
 
----
-
 ## Content guidelines
 
-No need to pass aria-label; it's either unnecessary or handled by the parent component. For example, a simple 'follow' button will set the aria-label to the translated button text.
-
-## Notes for use
+No need to pass `aria-label`; it's either unnecessary or handled by the parent component. For example, a simple *Follow* button will set the `aria-label` to the translated button text.
 
 The `block` property may be necessary to remove text descenders space.
 
----
-
 ## Examples
 
-Attach a file
+### Basic usage
 
-```
+```js
 <Icon size={IconSize.MEDIUM} icon="attach" />
 ```
----
 
-## Example implementation
+### Button with icon
 
-Create a button with an icon. Note you do not have to import Icon.
-
-```
-import Button from 'yamui/dist/components/Button';
-
-<Button icon="plus" size={ButtonSize.REGULAR} text="Follow" color={ButtonColor.SECONDARY} />
+```js
+<Button
+  text="Follow"
+  color={ButtonColor.SECONDARY}
+  size={ButtonSize.REGULAR}
+  icon="plus"
+/>
 ```

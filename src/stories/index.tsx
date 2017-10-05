@@ -33,4 +33,4 @@ import './FixedGrid';
 import './HorizontalList';
 
 // Import other non-component documentation and demos
-import './hovercard';
+import './Hovercard';

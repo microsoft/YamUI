@@ -11,12 +11,12 @@ export type IconName = keyof typeof ICONS;
 
 export interface IconProps extends BaseComponentProps {
   /**
-   * Icon classname, which matches the keys of ICONS
+   * Icon classname.
    */
   icon: IconName;
 
   /**
-   * Optional pre-determined size. Defaults to IconSize.MEDIUM
+   * Optional pre-determined size. Defaults to medium.
    */
   size?: IconSize;
 
@@ -26,7 +26,7 @@ export interface IconProps extends BaseComponentProps {
   color?: string;
 
   /**
-   * Sets Icon style to display: block.
+   * Sets icon style to `display: block`.
    */
   block?: boolean;
 }

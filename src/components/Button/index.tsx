@@ -38,72 +38,88 @@ export interface BaseButtonProps extends BaseComponentProps {
    * The visible button text.
    */
   text: string;
+
   /**
    * Button description. This must be provided if the button text is not descriptive enough.
    */
   ariaLabel?: string;
+
   /**
-   * Button size. Defaults to Regular.
+   * Button size. Defaults to regular.
    */
   size?: ButtonSize;
+
   /**
-   * The color describing the button's intent. Defaults to Primary.
+   * The color describing the button's intent. Defaults to primary.
    */
   color?: ButtonColor;
+
   /**
    * Click callback handler. Will provide the React synthetic event.
    */
   onClick?: (event: any) => void;
+
   /**
    * Hover callback handler. Will provide the React synthetic event.
    */
   onMouseEnter?: (event: any) => void;
+
   /**
    * Hover out callback handler. Will provide the React synthetic event.
    */
   onMouseLeave?: (event: any) => void;
+
   /**
    * Focus callback handler. Will provide the React synthetic event.
    */
   onFocus?: (event: any) => void;
+
   /**
    * Focus lost callback handler. Will provide the React synthetic event.
    */
   onBlur?: (event: any) => void;
+
   /**
-   * Optional icon
+   * Optional icon.
    */
   icon?: IconName;
+
   /**
-   * Icon position
+   * Icon position.
    */
   iconPosition?: IconPosition;
 }
+
 export interface RegularButtonProps extends BaseButtonProps {
   /**
    * Whether this button should be disabled or not. Defaults to false.
    */
   disabled?: boolean;
+
   /**
-   * Disabled buttons cannot have a Link href
+   * Disabled buttons cannot have a link href.
    */
   href?: void;
 }
+
 export interface LinkButtonProps extends BaseButtonProps {
   /**
    * If provided, will render a Link styled as a Button
    */
   href: string;
+
   /**
-   * Link buttons cannot be disabled
+   * Link buttons cannot be disabled.
    */
   disabled?: void;
 }
+
 export type ButtonProps = RegularButtonProps | LinkButtonProps;
 
 export default class Button extends React.PureComponent<ButtonProps, {}> {
   static propTypes = {
-    // TypeScript does not support negated types; using PropTypes custom validator instead of runtime validations
+    // TypeScript does not support negated types. Using PropTypes custom validator instead of
+    // runtime validations.
     href(props: LinkButtonProps, propName: string, componentName: string) {
       const href = props.href;
       if (typeof href !== 'string') {
@@ -124,7 +140,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     iconPosition: IconPosition.LEFT,
   };
 
-  public render() {
+  render() {
     const { props } = this;
     const {
       ariaLabel,

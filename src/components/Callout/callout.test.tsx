@@ -314,6 +314,7 @@ describe('<Callout />', () => {
     let onHover: jest.Mock<{}>;
     let onShow: jest.Mock<{}>;
     let onHide: jest.Mock<{}>;
+
     beforeEach(() => {
       onHover = jest.fn();
       onShow = jest.fn();
