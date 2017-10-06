@@ -2,30 +2,21 @@
 
 HorizontalList is made up of two components - `HorizontalList` and `ListItem`. HorizontalLists are useful whenever you need to display a number of items with equal spacing between. Note that spacing between items is standardized at 4px and is not adjustable.
 
----
-
-### HorizontalList Props
+## HorizontalList Props
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
-| align | 'right' or 'left' | Horizontal alignment of items |
+| align | 'right' or 'left' | Horizontal alignment of items. |
 
-
-### ListItem Props
+## ListItem Props
 
 none
 
----
+## Examples
 
-## Example implementation
+### Basic usage
 
-A list of Buttons
-
-```
-import { HorizontalList, ListItem } from 'yamui/dist/components/HorizontalList';
-import Button, { ButtonColor } from 'yamui/dist/components/Button';
-
-
+```js
 <HorizontalList>
   <ListItem>
     <Button text="Send Message" icon="mail" color={ButtonColor.SECONDARY} />

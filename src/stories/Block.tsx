@@ -25,8 +25,8 @@ storiesOf('Block', module)
         vertical rhythm between components.
       </Block>
       <Block>
-        This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't a{' '}
-        <strong>bottomSpacing</strong> or <strong>padding</strong> prop set the wrapper is just an
+        This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't
+        a <strong>bottomSpacing</strong> or <strong>padding</strong> prop set the wrapper is just an
         unstyled div.
       </Block>
     </div>
@@ -94,9 +94,10 @@ storiesOf('Block', module)
           </Block>
           <Block bottomSpacing={GutterSize.MEDIUM}>
             Components should generally only manage their bottom spacing and rely on the component
-            above them to do the same. You should only ever need to provide a <strong>push</strong>{' '}
-            value for minor adjustments between -3 and 3, and you should only need to deal with{' '}
-            <strong>push</strong> to reset the vertical rhythm (an imaginary 4px grid).
+            above them to do the same. You should only ever need to provide a{' '}
+            <strong>push</strong> value for minor adjustments between -3 and 3, and you should only
+            need to deal with <strong>push</strong> to reset the vertical rhythm (an imaginary 4px
+            grid).
           </Block>
           <Block bottomSpacing={GutterSize.MEDIUM}>
             Note that YamUI actually uses rem instead of px for its font-related units, and converts
@@ -135,8 +136,8 @@ storiesOf('Block', module)
           This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of border. It
           specifies <strong>push: -2</strong>, which still pulls the component up 2px, creating a
           total top spacing of 18px. These three negative push examples show that a{' '}
-          <strong>&lt;Block /&gt;</strong>
-          can pull up consistently regardless of the content above it.
+          <strong>&lt;Block /&gt;</strong> can pull up consistently regardless of the content above
+          it.
         </Block>
       </BorderWrapper>
     </div>

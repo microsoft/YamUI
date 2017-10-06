@@ -11,6 +11,7 @@ export interface FixedGridColumnProps extends NestableBaseComponentProps {
    * this column will shrink to fit its content.
    */
   fixed?: boolean;
+
   /**
    * The number of pixels wide this column should be. Ignored if `fixed` is not set to true.
   */
@@ -34,6 +35,7 @@ const getClasses = (props: FixedGridColumnProps) => {
 interface ColumnStyles {
   width?: string;
 }
+
 const getStyle = (props: FixedGridColumnProps) => {
   const styles: ColumnStyles = {};
 

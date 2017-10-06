@@ -9,10 +9,12 @@ import ScreenreaderText from '../ScreenreaderText';
 import './avatar.css';
 
 export { AvatarSize };
+
 export const BorderType = Enum({
   SOFT: 'soft',
   ROUND: 'round',
 });
+
 export type BorderType = Enum<typeof BorderType>;
 
 const SizeMap = {
@@ -25,29 +27,35 @@ const SizeMap = {
 
 export interface BaseAvatarProps extends BaseComponentProps {
   /**
-   * Image src URL
+   * Image source URL.
    */
   imageUrl?: string;
+
   /**
-   * 2 letters to be displayed if an imageUrl wasn't provided
+   * 2 letters to be displayed if an imageUrl wasn't provided.
    */
   initials?: string;
+
   /**
    * The name of the person or object being represented. Will be used as accessible alt text.
    */
   name: string;
+
   /**
    * Image, SVG, icon, etc. You can set its height and width to fill the available area.
    */
-  badgeContent?: JSX.Element;
+  badgeContent?: React.ReactNode;
+
   /**
    * A short accessible description of the badge. Will be appended to name if provided.
    */
   badgeDescription?: string;
+
   /**
    * Round or soft border. Defaults to round.
    */
   borderType?: BorderType;
+
   /**
    * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px. Defaults to medium.
    */
@@ -55,13 +63,13 @@ export interface BaseAvatarProps extends BaseComponentProps {
 }
 export interface ImageAvatarProps extends BaseAvatarProps {
   /**
-   * Image src URL
+   * Image source URL.
    */
   imageUrl: string;
 }
 export interface InitialsAvatarProps extends BaseAvatarProps {
   /**
-   * 2 letters to be displayed if an imageUrl wasn't provided
+   * 2 letters to be displayed if an imageUrl wasn't provided.
    */
   initials: string;
 }

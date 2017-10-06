@@ -13,7 +13,8 @@ export { MediaObjectSize };
 
 export interface MediaObjectProps extends NestableBaseComponentProps {
   /**
-   * The MediaObjectSize which this component's dimensions, font-sizes and text vertical rhythm will be based on.
+   * The MediaObjectSize which this component's dimensions, font-sizes and text vertical rhythm will
+   * be based on.
    */
   size: MediaObjectSize;
 
@@ -22,25 +23,25 @@ export interface MediaObjectProps extends NestableBaseComponentProps {
    * may not match the corresponding MediaObject size. If you're providing an Image component you
    * can set fullWidth:true to fill the left column width.
    */
-  imageContent?: JSX.Element;
+  imageContent?: React.ReactNode;
 
   /**
-   * Title content. This should be plain text, but could be wrapped in arbitrary JSX like a Link if necessary.
+   * Title content. This should be plain text, but could be wrapped in arbitrary node if necessary.
    */
-  titleContent?: string | JSX.Element;
+  titleContent?: string | React.ReactNode;
 
   /**
    * Metadata/secondary content. Will be displayed light gray. This should generally be plain text,
    * but you can pass in arbitrary JSX if necessary.
    */
-  metadataContent?: string | JSX.Element;
+  metadataContent?: string | React.ReactNode;
 
   /**
    * Extra/tertiary content. Will be displayed light gray. This should generally be plain text,
    * but you can pass in arbitrary JSX if necessary. If you need to pass in arbitrary extra content
    * like buttons or other HTML, pass those in as children instead of the extraContent prop.
    */
-  extraContent?: string | JSX.Element;
+  extraContent?: string | React.ReactNode;
 }
 
 const ImageWidthMap = {

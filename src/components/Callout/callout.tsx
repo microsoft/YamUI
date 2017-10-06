@@ -20,13 +20,14 @@ export const TriggerType = Enum({
   CLICK: 'click',
   HOVER: 'hover',
 });
+
 export type TriggerType = Enum<typeof TriggerType>;
 
 export interface CalloutProps extends NestableBaseComponentProps {
   /**
-   * The React components or HTML to populate the Callout's popup area
+   * The React components or HTML to populate the Callout's popup area.
    */
-  content: JSX.Element;
+  content: React.ReactNode;
 
   /**
    * A hidden title to be rendered in an h1 tag
@@ -34,8 +35,8 @@ export interface CalloutProps extends NestableBaseComponentProps {
   screenreaderTitle?: string;
 
   /**
-   * This side or corner to place the Callout in relationship to its visible trigger content.
-   * Note that this is a hint and the popup position will adjust to available screen real estate.
+   * This side or corner to place the Callout in relationship to its visible trigger content. Note
+   * that this is a hint and the popup position will adjust to available screen real estate.
    */
   directionalHint?: DirectionalHint;
 
@@ -46,8 +47,8 @@ export interface CalloutProps extends NestableBaseComponentProps {
 
   /**
    * If true, the component will manually set its displayed state to true. Note that it will wait
-   * until componentDidMount to ensure it can properly position itself in relation to the trigger content.
-   * Defaults to false.
+   * until componentDidMount to ensure it can properly position itself in relation to the trigger
+   * content. Defaults to false.
    */
   startVisible?: boolean;
 
