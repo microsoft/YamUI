@@ -9,9 +9,7 @@ describe('<Text />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Text>test content</Text>,
-      );
+      component = shallow(<Text>test content</Text>);
     });
 
     it('renders its given content', () => {
@@ -29,9 +27,7 @@ describe('<Text />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Text className="TEST_CLASSNAME">test content</Text>,
-      );
+      component = shallow(<Text className="TEST_CLASSNAME">test content</Text>);
     });
 
     it('includes that className', () => {
@@ -49,9 +45,7 @@ describe('<Text />', () => {
 
   describe('with a valid size', () => {
     beforeEach(() => {
-      component = shallow(
-        <Text size={TextSize.XLARGE}>test content</Text>,
-      );
+      component = shallow(<Text size={TextSize.XLARGE}>test content</Text>);
     });
 
     it('renders the correct size className', () => {
@@ -69,9 +63,7 @@ describe('<Text />', () => {
 
   describe('with a valid color', () => {
     beforeEach(() => {
-      component = shallow(
-        <Text color={TextColor.SECONDARY}>test content</Text>,
-      );
+      component = shallow(<Text color={TextColor.SECONDARY}>test content</Text>);
     });
 
     it('renders the correct color className', () => {
@@ -82,5 +74,4 @@ describe('<Text />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

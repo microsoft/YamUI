@@ -7,7 +7,6 @@ import Clickable from '../components/Clickable';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Clickable/README');
 
-
 storiesOf('Clickable', module)
   .addDecorator(withReadme(readme))
   .add('text with button', () => (
@@ -16,7 +15,8 @@ storiesOf('Clickable', module)
         Here is some plain text, followed by text in a Clickable component:
       </Block>
       <Block>
-        This is some content. <Clickable onClick={action('button clicked')}>Blah blah blah blah</Clickable>.
+        This is some content.{' '}
+        <Clickable onClick={action('button clicked')}>Blah blah blah blah</Clickable>.
       </Block>
     </div>
   ))
@@ -26,7 +26,9 @@ storiesOf('Clickable', module)
         Here is some plain text entirely inside a Clickable component:
       </Block>
       <Block>
-        <Clickable onClick={action('button clicked')}>This is some content. Blah blah blah blah</Clickable>.
+        <Clickable onClick={action('button clicked')}>
+          This is some content. Blah blah blah blah
+        </Clickable>.
       </Block>
     </div>
   ))

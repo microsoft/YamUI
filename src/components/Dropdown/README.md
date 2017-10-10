@@ -1,10 +1,8 @@
 # Dropdown
 
-A Dropdown is a list in which the selected item is always visible, and the others are visible on demand by clicking a drop-down button.
+A `Dropdown` is a list in which the selected item is always visible, and the others are visible on demand by clicking a drop-down button.
 
----
-
-### Properties
+## Properties
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
@@ -14,20 +12,17 @@ A Dropdown is a list in which the selected item is always visible, and the other
 | onChanged | function | Function to call when user changes the selected item. Returns the new selected key. |
 | placeHolder | string | Input placeholder text. Displayed until option is selected. |
 
-* indicates property is required
-
----
+\* indicates property is required
 
 ## Notes for use
-Dropdown can be used as either a [controlled](https://facebook.github.io/react/docs/forms.html#controlled-components) or [uncontrolled](https://facebook.github.io/react/docs/uncontrolled-components.html) component.
 
----
+`Dropdown` can be used as either a [controlled](https://facebook.github.io/react/docs/forms.html#controlled-components) or [uncontrolled](https://facebook.github.io/react/docs/uncontrolled-components.html) component.
 
 ## Examples
 
-### Default component
+### Basic usage
 
-```
+```js
 <Dropdown
   options={[
     { key: 'A', text: 'Option a' },
@@ -35,38 +30,61 @@ Dropdown can be used as either a [controlled](https://facebook.github.io/react/d
   ]}
 />
 ```
----
 
-## Example implementation
+### Dropdown inside a form
 
-```
-import Dropdown, { DropdownOptionKey } from 'yamui/dist/components/Dropdown';
+```js
+import Dropdown from 'yamui/dist/components/Dropdown';
 
-interface ControlledDropdownState {
-  selectedKey?: DropdownOptionKey;
+interface RandomFormState {
+  fieldOne: string;
+  fieldTwo: string;
 }
 
-class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState> {
+class RandomForm extends React.PureComponent<{}, ControlledDropdownState> {
   constructor() {
     super();
-    this.state = {};
+
+    this.state = {
+      fieldOne: '',
+      fieldTwo: '',
+    };
+
+    this.onFieldOneChange = this.onFieldChange.bind(this, 'fieldOne');
+    this.onFieldTwoChange = this.onFieldChange.bind(this, 'fieldTwo');
   }
 
-  public render() {
-    const { selectedKey } = this.state;
+  render() {
+    const { fieldOne, fieldTwo } = this.state;
 
-    return (<Dropdown
-      options={[
-        { key: 'A', text: 'Option a' },
-        { key: 'B', text: 'Option b' },
-        { key: 'C', text: 'Option c' },
-      ]}
-      placeHolder="Please Select"
-      selectedKey={ selectedKey }
-      onChanged={ key => this.setState({ selectedKey: key }) }
-    />);
+    return (
+      <form>
+        <Dropdown
+          options={[
+            { key: 'A1', text: 'Option A1' },
+            { key: 'A2', text: 'Option A2' },
+          ]}
+          placeHolder="Field one"
+          selectedKey={fieldOne}
+          onChanged={this.onFieldOneChange}
+        />
+        <Dropdown
+          options={[
+            { key: 'B1', text: 'Option B1' },
+            { key: 'B2', text: 'Option B2' },
+          ]}
+          placeHolder="Field two"
+          selectedKey={fieldTwo}
+          onChanged={this.onFieldTwoChange}
+        />
+      </form>
+    );
+  }
+
+  private onFieldChange(name, key) {
+    this.setState({
+      [name]: key
+    })
   }
 }
-
-<ControlledDropdown />
 ```

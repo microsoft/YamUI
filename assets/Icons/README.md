@@ -1,16 +1,18 @@
-# Source SVG icons used to build React components
+# SVG icons
 
-## To add a new icon or icons
+These are the source SVG icons used to generate the corresponding React components.
 
-1. Add prepared SVGs to assets/Icons/svgs-from-design folder
+## Adding new icons
 
-2. Run `yarn svg`
+* Add prepared SVGs to this folder.
+* Run `yarn svg`.
+* Export the new icon from `src/components/Icon/icons/index.ts`.
+* Commit the new resources and visual diffs to a new branch, and open a pull request.
 
-3. Export the new icon from src/components/Icon/icons/index.ts
+## Requirements
 
-4. Commit new resources and visual diffs to a new branch.
+These are the requirements for all SVG files you add to this folder:
 
-### SVG requirements
- - square field of 240
- - `viewBox` required, height and width optional
-
+* The size of the icon should be `240x240`.
+* `viewBox` is required.
+* `height` and `width` are optional.

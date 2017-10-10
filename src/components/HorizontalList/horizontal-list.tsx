@@ -4,15 +4,12 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './horizontal-list.css';
 
-
 export interface HorizontalListProps extends NestableBaseComponentProps {
   align?: 'left' | 'right';
 }
 
 const getClasses = (props: HorizontalListProps) => {
-  const classes: string[] = [
-    'y-horizontalList',
-  ];
+  const classes: string[] = ['y-horizontalList'];
   if (props.align === 'right') {
     classes.push('y-horizontalList__align-right');
   }
@@ -22,8 +19,9 @@ const getClasses = (props: HorizontalListProps) => {
   return classes.join(' ');
 };
 
-export const HorizontalList: React.StatelessComponent<HorizontalListProps> = props =>
-  <ul className={getClasses(props)}>{props.children}</ul>;
+export const HorizontalList: React.StatelessComponent<HorizontalListProps> = props => (
+  <ul className={getClasses(props)}>{props.children}</ul>
+);
 
 HorizontalList.defaultProps = {
   align: 'left',

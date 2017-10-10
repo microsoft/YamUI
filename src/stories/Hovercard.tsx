@@ -4,14 +4,19 @@ import { storiesOf, StoryDecorator } from '@storybook/react';
 import Avatar, { AvatarSize, BorderType } from '../components/Avatar';
 import Block, { GutterSize, TextSize } from '../components/Block';
 import Button, { ButtonColor } from '../components/Button';
-import { Callout, CalloutHeader, CalloutBody, DirectionalHint, TriggerType } from '../components/Callout';
+import {
+  Callout,
+  CalloutHeader,
+  CalloutBody,
+  DirectionalHint,
+  TriggerType,
+} from '../components/Callout';
 import FakeLink from '../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
 import { HorizontalList, ListItem } from '../components/HorizontalList';
 import Icon, { IconSize } from '../components/Icon';
 import Image from '../components/Image';
 import MediaObject, { MediaObjectSize } from '../components/MediaObject';
-
 
 // Images for avatars
 const smiley = require('./assets/img/smiley.png');
@@ -40,8 +45,9 @@ const groupMetaPrivate = 'Private Group';
 const groupMetaExternal = 'Constoso and 3 others';
 const groupDesc = 'Group for data analytics, metrics, reporting, number-crunching, etc.';
 const groupMembersTitle = '102 members';
-const groupAvatar = <Avatar imageUrl={smiley} name={groupName}
-                            size={AvatarSize.LARGE} borderType={BorderType.SOFT} />;
+const groupAvatar = (
+  <Avatar imageUrl={smiley} name={groupName} size={AvatarSize.LARGE} borderType={BorderType.SOFT} />
+);
 const memberAvatar1 = <Avatar imageUrl={smiley} name={userName} size={AvatarSize.XSMALL} />;
 const memberAvatar2 = <Avatar imageUrl={smiley} name="Eddie smiley" size={AvatarSize.XSMALL} />;
 const memberAvatar3 = <Avatar imageUrl={smiley} name="Manny smiley" size={AvatarSize.XSMALL} />;
@@ -57,16 +63,15 @@ const relatedGroups = (
 // File data
 const fileName = 'List of Access Points.xls';
 const fileMeta = 'Posted in Yammer 101';
-const fileImage = <Image source={spreadsheet} description={fileMeta} fullWidth />;
+const fileImage = <Image source={spreadsheet} description={fileMeta} fullWidth={true} />;
 const fileFollowersTitle = '2 followers';
 
 // Shared icons
-const iconMail = <Icon size={IconSize.MEDIUM} icon="mail" block color="#a8b0bd" />;
-const iconPhone = <Icon size={IconSize.MEDIUM} icon="phone" block color="#a8b0bd" />;
-const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block color="#a8b0bd" />;
+const iconMail = <Icon size={IconSize.MEDIUM} icon="mail" block={true} color="#a8b0bd" />;
+const iconPhone = <Icon size={IconSize.MEDIUM} icon="phone" block={true} color="#a8b0bd" />;
+const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block={true} color="#a8b0bd" />;
 const iconPrivate = <Icon size={IconSize.XSMALL} icon="lock" color="#a8b0bd" />;
 const iconExternal = <Icon size={IconSize.XSMALL} icon="external" color="#a8b0bd" />;
-
 
 type UserHovercardType = 'follow' | 'following' | 'unfollow';
 const userOptions: any = {
@@ -96,28 +101,36 @@ function getUserHovercard(type: UserHovercardType) {
   return (
     <div>
       <CalloutHeader>
-        <MediaObject size={MediaObjectSize.LARGE} imageContent={userAvatar}
-                     titleContent={userName} metadataContent={userRole} />
+        <MediaObject
+          size={MediaObjectSize.LARGE}
+          imageContent={userAvatar}
+          titleContent={userName}
+          metadataContent={userRole}
+        />
       </CalloutHeader>
       <CalloutBody>
         <Block textSize={TextSize.MEDIUM_SUB}>
           <Block className="contact-details" bottomSpacing={GutterSize.LARGE} push={1}>
             <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XSMALL}>
-              <FixedGridColumn fixed>{iconMail}</FixedGridColumn>
+              <FixedGridColumn fixed={true}>{iconMail}</FixedGridColumn>
               <FixedGridColumn>{userEmailLink}</FixedGridColumn>
             </FixedGridRow>
             <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XSMALL}>
-              <FixedGridColumn fixed>{iconPhone}</FixedGridColumn>
+              <FixedGridColumn fixed={true}>{iconPhone}</FixedGridColumn>
               <FixedGridColumn>{userPhone}</FixedGridColumn>
             </FixedGridRow>
             <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XSMALL}>
-              <FixedGridColumn fixed>{iconPhone}</FixedGridColumn>
+              <FixedGridColumn fixed={true}>{iconPhone}</FixedGridColumn>
               <FixedGridColumn>{userFax}</FixedGridColumn>
             </FixedGridRow>
           </Block>
 
-          <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XXLARGE} className="group-list">
-            <FixedGridColumn fixed>{iconGroup}</FixedGridColumn>
+          <FixedGridRow
+            gutterSize={GutterSize.SMALL}
+            bottomSpacing={GutterSize.XXLARGE}
+            className="group-list"
+          >
+            <FixedGridColumn fixed={true}>{iconGroup}</FixedGridColumn>
             <FixedGridColumn>{userGroups}</FixedGridColumn>
           </FixedGridRow>
 
@@ -201,13 +214,21 @@ function getGroupHovercard(type: GroupHovercardType) {
   return (
     <div>
       <CalloutHeader>
-        <MediaObject size={MediaObjectSize.LARGE} imageContent={groupAvatar}
-                      titleContent={groupName} metadataContent={subtitle} />
+        <MediaObject
+          size={MediaObjectSize.LARGE}
+          imageContent={groupAvatar}
+          titleContent={groupName}
+          metadataContent={subtitle}
+        />
       </CalloutHeader>
       <CalloutBody>
         <Block textSize={TextSize.MEDIUM_SUB}>
-          <Block className="group-description" bottomSpacing={GutterSize.MEDIUM}
-                push={1} textSize={TextSize.MEDIUM_SUB}>
+          <Block
+            className="group-description"
+            bottomSpacing={GutterSize.MEDIUM}
+            push={1}
+            textSize={TextSize.MEDIUM_SUB}
+          >
             {groupDesc}
           </Block>
 
@@ -224,7 +245,7 @@ function getGroupHovercard(type: GroupHovercardType) {
 
           <Block className="related-groups" bottomSpacing={GutterSize.XXLARGE}>
             <FixedGridRow bottomSpacing={GutterSize.XSMALL}>
-              <FixedGridColumn fixed>{iconGroup}</FixedGridColumn>
+              <FixedGridColumn fixed={true}>{iconGroup}</FixedGridColumn>
               <FixedGridColumn>{relatedGroups}</FixedGridColumn>
             </FixedGridRow>
           </Block>
@@ -243,9 +264,7 @@ function getGroupHovercard(type: GroupHovercardType) {
 }
 
 const HeightDecorator: StoryDecorator = (story: Function) => (
-  <div style={{ minHeight: '500px' }}>
-    {story()}
-  </div>
+  <div style={{ minHeight: '500px' }}>{story()}</div>
 );
 
 storiesOf('...', module)
@@ -253,7 +272,7 @@ storiesOf('...', module)
   .add('user hovercard', () => {
     return (
       <div>
-        <Callout content={getUserHovercard('follow')} startVisible>
+        <Callout content={getUserHovercard('follow')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -262,7 +281,7 @@ storiesOf('...', module)
   .add('user hovercard (following)', () => {
     return (
       <div>
-        <Callout content={getUserHovercard('following')} startVisible>
+        <Callout content={getUserHovercard('following')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -271,7 +290,7 @@ storiesOf('...', module)
   .add('user hovercard (unfollow)', () => {
     return (
       <div>
-        <Callout content={getUserHovercard('unfollow')} startVisible>
+        <Callout content={getUserHovercard('unfollow')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -280,7 +299,7 @@ storiesOf('...', module)
   .add('group hovercard', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('join')} startVisible>
+        <Callout content={getGroupHovercard('join')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -289,7 +308,7 @@ storiesOf('...', module)
   .add('group hovercard (joined)', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('joined')} startVisible>
+        <Callout content={getGroupHovercard('joined')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -298,7 +317,7 @@ storiesOf('...', module)
   .add('group hovercard (leave)', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('leave')} startVisible>
+        <Callout content={getGroupHovercard('leave')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -307,7 +326,7 @@ storiesOf('...', module)
   .add('group hovercard (private)', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('private')} startVisible>
+        <Callout content={getGroupHovercard('private')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -316,7 +335,7 @@ storiesOf('...', module)
   .add('group hovercard (external)', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('external')} startVisible>
+        <Callout content={getGroupHovercard('external')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -325,7 +344,7 @@ storiesOf('...', module)
   .add('group hovercard (private external)', () => {
     return (
       <div>
-        <Callout content={getGroupHovercard('privateExternal')} startVisible>
+        <Callout content={getGroupHovercard('privateExternal')} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>
@@ -335,32 +354,32 @@ storiesOf('...', module)
     const fileHovercardContent = (
       <div>
         <CalloutHeader>
-          <MediaObject size={MediaObjectSize.LARGE} imageContent={fileImage}
-                       titleContent={fileName} metadataContent={fileMeta} />
+          <MediaObject
+            size={MediaObjectSize.LARGE}
+            imageContent={fileImage}
+            titleContent={fileName}
+            metadataContent={fileMeta}
+          />
         </CalloutHeader>
         <CalloutBody>
           <Block textSize={TextSize.MEDIUM_SUB}>
             <Block className="file-followers" bottomSpacing={GutterSize.XXLARGE} push={1}>
               <Block bottomSpacing={GutterSize.XSMALL}>{fileFollowersTitle}</Block>
               <FixedGridRow gutterSize={GutterSize.XSMALL}>
-                <FixedGridColumn fixed>
-                  {memberAvatar4}
-                </FixedGridColumn>
-                <FixedGridColumn fixed>
-                  {memberAvatar5}
-                </FixedGridColumn>
-                <FixedGridColumn></FixedGridColumn>
+                <FixedGridColumn fixed={true}>{memberAvatar4}</FixedGridColumn>
+                <FixedGridColumn fixed={true}>{memberAvatar5}</FixedGridColumn>
+                <FixedGridColumn />
               </FixedGridRow>
             </Block>
 
-              <HorizontalList align="right" className="actions">
-                <ListItem>
-                  <Button text="Go To File" color={ButtonColor.SECONDARY} />
-                </ListItem>
-                <ListItem>
-                  <Button text="Preview" />
-                </ListItem>
-              </HorizontalList>
+            <HorizontalList align="right" className="actions">
+              <ListItem>
+                <Button text="Go To File" color={ButtonColor.SECONDARY} />
+              </ListItem>
+              <ListItem>
+                <Button text="Preview" />
+              </ListItem>
+            </HorizontalList>
           </Block>
         </CalloutBody>
       </div>
@@ -368,7 +387,7 @@ storiesOf('...', module)
 
     return (
       <div>
-        <Callout content={fileHovercardContent} startVisible>
+        <Callout content={fileHovercardContent} startVisible={true}>
           <FakeLink>HoverCard Trigger</FakeLink>
         </Callout>
       </div>

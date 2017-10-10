@@ -7,7 +7,6 @@ import Image from '../components/Image';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Avatar/README');
 
-
 const badge = require('./assets/img/badge.png');
 const smiley = require('./assets/img/smiley.png');
 const yammerLogo = require('./assets/img/yammer-logo.png');
@@ -86,24 +85,49 @@ storiesOf('Avatar', module)
         <tbody>
           <tr>
             <td>
-              <Avatar imageUrl={smiley} size={AvatarSize.XLARGE} name="Walter White"
-                      badgeContent={badgeContent} badgeDescription="Admin" />
+              <Avatar
+                imageUrl={smiley}
+                size={AvatarSize.XLARGE}
+                name="Walter White"
+                badgeContent={badgeContent}
+                badgeDescription="Admin"
+              />
             </td>
             <td>
-              <Avatar imageUrl={smiley} size={AvatarSize.LARGE} name="Walter White"
-                      badgeContent={badgeContent} badgeDescription="Admin" />
+              <Avatar
+                imageUrl={smiley}
+                size={AvatarSize.LARGE}
+                name="Walter White"
+                badgeContent={badgeContent}
+                badgeDescription="Admin"
+              />
             </td>
             <td>
-              <Avatar imageUrl={smiley} size={AvatarSize.MEDIUM} name="Walter White"
-                      badgeContent={badgeContent} badgeDescription="Admin" />
+              <Avatar
+                imageUrl={smiley}
+                size={AvatarSize.MEDIUM}
+                name="Walter White"
+                badgeContent={badgeContent}
+                badgeDescription="Admin"
+              />
             </td>
             <td>
-              <Avatar imageUrl={smiley} size={AvatarSize.SMALL} name="Walter White"
-                      badgeContent={badgeContent} badgeDescription="Admin" />
+              <Avatar
+                imageUrl={smiley}
+                size={AvatarSize.SMALL}
+                name="Walter White"
+                badgeContent={badgeContent}
+                badgeDescription="Admin"
+              />
             </td>
             <td>
-              <Avatar imageUrl={smiley} size={AvatarSize.XSMALL} name="Walter White"
-                      badgeContent={badgeContent} badgeDescription="Admin" />
+              <Avatar
+                imageUrl={smiley}
+                size={AvatarSize.XSMALL}
+                name="Walter White"
+                badgeContent={badgeContent}
+                badgeDescription="Admin"
+              />
             </td>
           </tr>
         </tbody>
@@ -117,19 +141,44 @@ storiesOf('Avatar', module)
         <tbody>
           <tr>
             <td>
-              <Avatar imageUrl={yammerLogo} size={AvatarSize.XLARGE} name="Walter White" borderType={BorderType.SOFT} />
+              <Avatar
+                imageUrl={yammerLogo}
+                size={AvatarSize.XLARGE}
+                name="Walter White"
+                borderType={BorderType.SOFT}
+              />
             </td>
             <td>
-              <Avatar imageUrl={yammerLogo} size={AvatarSize.LARGE} name="Walter White" borderType={BorderType.SOFT} />
+              <Avatar
+                imageUrl={yammerLogo}
+                size={AvatarSize.LARGE}
+                name="Walter White"
+                borderType={BorderType.SOFT}
+              />
             </td>
             <td>
-              <Avatar imageUrl={yammerLogo} size={AvatarSize.MEDIUM} name="Walter White" borderType={BorderType.SOFT} />
+              <Avatar
+                imageUrl={yammerLogo}
+                size={AvatarSize.MEDIUM}
+                name="Walter White"
+                borderType={BorderType.SOFT}
+              />
             </td>
             <td>
-              <Avatar imageUrl={yammerLogo} size={AvatarSize.SMALL} name="Walter White" borderType={BorderType.SOFT} />
+              <Avatar
+                imageUrl={yammerLogo}
+                size={AvatarSize.SMALL}
+                name="Walter White"
+                borderType={BorderType.SOFT}
+              />
             </td>
             <td>
-              <Avatar imageUrl={yammerLogo} size={AvatarSize.XSMALL} name="Walter White" borderType={BorderType.SOFT} />
+              <Avatar
+                imageUrl={yammerLogo}
+                size={AvatarSize.XSMALL}
+                name="Walter White"
+                borderType={BorderType.SOFT}
+              />
             </td>
           </tr>
         </tbody>
@@ -139,11 +188,11 @@ storiesOf('Avatar', module)
   .add('example colors', () => (
     <div>
       <Block bottomSpacing={GutterSize.SMALL}>
-        A background color will be automatically set when an imageUrl is not provided. Fabric handles
-        this behind the scenes for us, based on the name prop passed in.
+        A background color will be automatically set when an imageUrl is not provided. Fabric
+        handles this behind the scenes for us, based on the name prop passed in.
       </Block>
       <Block bottomSpacing={GutterSize.SMALL}>
-          <Avatar size={AvatarSize.MEDIUM} name="DDD DDD" initials="LG" />
+        <Avatar size={AvatarSize.MEDIUM} name="DDD DDD" initials="LG" />
       </Block>
       <Block bottomSpacing={GutterSize.SMALL}>
         <Avatar size={AvatarSize.MEDIUM} name="GGG GGG" initials="LB" />

@@ -37,10 +37,10 @@ export const TextSize = Enum({
    * font-size: 12px, line-height: 16px
    */
   SMALL: 'small',
-  
+
   /**
    * Very limited use.
-   * font-size: 10px, line-height: 16px, 
+   * font-size: 10px, line-height: 16px,
    */
   XSMALL: 'xSmall',
 });

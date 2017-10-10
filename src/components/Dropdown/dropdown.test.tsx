@@ -2,16 +2,17 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Dropdown, { DropdownProps } from './index';
-import { Dropdown as FabricDropdown, IDropdownProps } from 'office-ui-fabric-react/lib/components/Dropdown';
+import {
+  Dropdown as FabricDropdown,
+  IDropdownProps,
+} from 'office-ui-fabric-react/lib/components/Dropdown';
 
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Dropdown options={[]} />,
-      );
+      component = shallow(<Dropdown options={[]} />);
     });
 
     it('has its correct base class', () => {
@@ -25,9 +26,7 @@ describe('<Dropdown />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Dropdown options={[]} className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Dropdown options={[]} className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -45,9 +44,7 @@ describe('<Dropdown />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Dropdown options={[]} className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Dropdown options={[]} className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -67,10 +64,7 @@ describe('<Dropdown />', () => {
     beforeEach(() => {
       component = shallow(
         <Dropdown
-          options={[
-            { key: 'A', text: 'Option a' },
-            { key: 'B', text: 'Option b' },
-          ]}
+          options={[{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }]}
           className="TEST_CLASSNAME"
           selectedKey="A"
           placeHolder="TEST_PLACEHOLDER"
@@ -87,19 +81,11 @@ describe('<Dropdown />', () => {
 
   describe('with onChanged handler', () => {
     let callback: jest.Mock<{}>;
-    const options = [
-      { key: 'A', text: 'Option a' },
-      { key: 'B', text: 'Option b' },
-    ];
+    const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
 
     beforeEach(() => {
       callback = jest.fn();
-      component = shallow(
-        <Dropdown
-          options={options}
-          onChanged={callback}
-        />,
-      );
+      component = shallow(<Dropdown options={options} onChanged={callback} />);
     });
 
     describe('when an option is selected', () => {

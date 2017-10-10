@@ -10,9 +10,7 @@ describe('<Icon />', () => {
 
   describe('with minimal options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Icon icon="attach" />,
-      );
+      component = shallow(<Icon icon="attach" />);
     });
 
     it('contains the correct SVG icon', () => {
@@ -38,9 +36,7 @@ describe('<Icon />', () => {
 
   describe('with color', () => {
     beforeEach(() => {
-      component = shallow(
-        <Icon icon="attach" color="blue" />,
-      );
+      component = shallow(<Icon icon="attach" color="blue" />);
     });
 
     it('contains the given color style', () => {
@@ -54,9 +50,7 @@ describe('<Icon />', () => {
 
   describe('with block', () => {
     beforeEach(() => {
-      component = shallow(
-        <Icon icon="attach" block />,
-      );
+      component = shallow(<Icon icon="attach" block={true} />);
     });
 
     it('contains its block className', () => {
@@ -70,9 +64,7 @@ describe('<Icon />', () => {
 
   describe('with passed size value', () => {
     beforeEach(() => {
-      component = shallow(
-        <Icon icon="attach" size={IconSize.XXLARGE} />,
-      );
+      component = shallow(<Icon icon="attach" size={IconSize.XXLARGE} />);
     });
 
     it('is the correct height', () => {
@@ -90,9 +82,7 @@ describe('<Icon />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Icon icon="attach" className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Icon icon="attach" className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {

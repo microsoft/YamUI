@@ -59,9 +59,7 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   }
 
   private getClasses() {
-    const classes: string[] = [
-      'y-dropdown',
-    ];
+    const classes: string[] = ['y-dropdown'];
     if (this.props.className) {
       classes.push(this.props.className);
     }
@@ -69,7 +67,7 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   }
 
   private getIcon() {
-    return <Icon className="y-dropdown__caretDown" icon="caretDown"/>;
+    return <Icon className="y-dropdown__caretDown" icon="caretDown" />;
   }
 
   private handleChanged(option: DropdownOption) {

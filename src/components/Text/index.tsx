@@ -6,7 +6,6 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextSize } from '../../util/enums/textSize';
 import './text.css';
 
-
 export const TextColor = Enum({
   /**
    * Primary black text color
@@ -39,9 +38,7 @@ export { TextSize };
 
 // TODO: Create a helper to handle this across components
 const getClasses = (props: TextProps) => {
-  const classes: string[] = [
-    'y-text',
-  ];
+  const classes: string[] = ['y-text'];
   if (props.size) {
     classes.push(`y-text__size-${props.size}`);
   }
@@ -55,8 +52,6 @@ const getClasses = (props: TextProps) => {
 };
 
 const Text: React.StatelessComponent<TextProps> = props => (
-  <span className={getClasses(props)}>
-    {props.children}
-  </span>
+  <span className={getClasses(props)}>{props.children}</span>
 );
 export default Text;

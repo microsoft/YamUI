@@ -7,7 +7,7 @@
 
 import { loadTheme, IRawStyle } from 'office-ui-fabric-react/lib/Styling';
 
-const fontStyles : IRawStyle = {
+const fontStyles: IRawStyle = {
   color: '#343A41',
 };
 

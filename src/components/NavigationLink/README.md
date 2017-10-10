@@ -2,9 +2,7 @@
 
 This renders an `<a>` tag for navigation between web pages.
 
----
-
-### Properties
+## Properties
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
@@ -12,19 +10,16 @@ This renders an `<a>` tag for navigation between web pages.
 | newWindow | boolean | If true, will open the URL in a new window and securely break any reference back to this window. |
 | unstyled | boolean | If true, will render the content as if it were not nested in an `<a>` tag. |
 
----
+## Notes for use
 
-
-## Content guidelines
-
-NavigationLink purposefully does not offer an onClick event as it should only be used for navigation. Please use a Clickable component for event handlers.
-
----
+`NavigationLink` purposefully does not offer an `onClick` event as it should only be used for navigation. Please use a `Clickable` component for event handlers.
 
 ## Examples
 
-### Basic example
+### Basic usage
 
-```
-<NavigationLink href="my_page.html">This NavigationLink is tabbable and navigates to the given href when clicked</NavigationLink>.
+```js
+<NavigationLink href="my_page.html">
+  This NavigationLink is tabbable and navigates to the given href when clicked.
+</NavigationLink>.
 ```
