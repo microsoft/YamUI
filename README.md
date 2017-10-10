@@ -1,6 +1,32 @@
 # YamUI [![Travis](https://img.shields.io/travis/Microsoft/YamUI.svg)](https://travis-ci.org/Microsoft/YamUI)
 UI Component Framework for Yammer.com. This is built with React on top of [Fabric](https://dev.office.com/fabric#/components/) components. Unit tests with [Jest](https://facebook.github.io/jest/), isolated development environment + documentation with [ReactStorybook](https://github.com/storybooks/storybook), visual diff regression with [BackstopJS](https://garris.github.io/BackstopJS/). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local dev environments and CI.
 
+## Using YamUI components
+### Importing the baseline CSS
+
+If necessary, add YamUI to your project.
+```
+npm install --save yamui
+```
+
+Import `yamui/dist/yamui-base.css` into your app. You could link to it directly before your own CSS, or import it through JS/CSS and include it at the top of your CSS bundle. This file is currently about 4kb minified+gzipped. This is a requirement as YamUI expects to own the baseline styles of the page.
+
+Each component's source folder has a README which documents the API and provides example use. For example, Button's README is here: [/src/components/Button](https://github.com/Microsoft/YamUI/tree/master/src/components/Button)
+
+READMEs are also viewable through the [Storybook app](https://microsoft.github.io/YamUI/) in the component view's bottom pane.
+
+Each component is compiled from its TypeScript source into `yamui/dist/components`. This allows you to import the individual components you need and keep your bundle size smaller. Note that each component may import its own CSS and other JS dependencies so you may need to adjust your build process to accommodate.
+
+Example importing a Button component:
+```
+import Button, { ButtonSize, ButtonColor } from 'yamui/dist/components/Button';
+```
+
+Example using a Button component:
+```
+<Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} text="Click me!" />
+```
+
 ## Installation
 * Clone this repo
 * `cd YamUI`
@@ -43,25 +69,6 @@ You can clear space with commands like `docker rmi $(docker images -a -q)` (remo
 1. Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/Icons)
 2. Export new React SVG from `src/components/Icon/icons/index.ts` using the filename as the label
 3. Use the icon via it's label `<Icon icon="plus" />`
-
-
-## Using YamUI in your own app
-### Importing the baseline CSS
-Import `yamui/dist/yamui-base.css` into your app. You could link to it directly before your own CSS, or import it through JS/CSS and include it at the top of your CSS bundle. This file is currently about 4kb minified+gzipped. This is a requirement as YamUI expects to own the baseline styles of the page.
-
-### Using components
-Each component is compiled from its TypeScript source into `yamui/dist/components`. This allows you to import the individual components you need and keep your bundle size smaller. Note that each component may import its own CSS and other JS dependencies so you may need to adjust your build process to accommodate.
-
-Example importing a Button component:
-```
-import Button, { ButtonSize, ButtonColor } from 'yamui/dist/components/Button';
-```
-
-Example using a Button component:
-```
-<Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} text="Click me!" />
-```
-
 
 ## Roadmap
 
