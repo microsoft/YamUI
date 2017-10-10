@@ -2,9 +2,38 @@
 
 This is the UI component framework for [Yammer.com](https://www.yammer.com/).
 
-It is built with [React](https://reactjs.org/) on top of [Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Storybook](https://github.com/storybooks/storybook), and visual diff regression is done with [BackstopJS](https://garris.github.io/BackstopJS/).
+It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Storybook](https://github.com/storybooks/storybook), and visual diff regression is done with [BackstopJS](https://garris.github.io/BackstopJS/). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
 
-Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
+## Using YamUI in your own app
+
+If necessary, add YamUI to your project.
+```
+npm install --save yamui
+```
+
+### Importing the baseline CSS
+
+Import `yamui/dist/yamui-base.css` into your app. You could link to it directly before your own CSS, or import it through JS/CSS and include it at the top of your CSS bundle. This file is currently about 4kb minified+gzipped. This is a requirement as YamUI expects to own the baseline styles of the page.
+
+### Using components
+
+Each component's source folder has a README which documents the API and provides example use. For example, Button's README is here: [/src/components/Button](https://github.com/Microsoft/YamUI/tree/master/src/components/Button)
+
+You can also view component READMEs through the [Storybook app](https://microsoft.github.io/YamUI/) in the component view bottom pane.
+
+Each component is compiled from its TypeScript source into `yamui/dist/components`. This allows you to import the individual components you need and keep your bundle size smaller. Note that each component may import its own CSS and other JS dependencies so you may need to adjust your build process to accommodate.
+
+Example importing a `Button` component:
+
+```js
+import Button, { ButtonSize, ButtonColor } from 'yamui/dist/components/Button';
+```
+
+Example using a `Button` component:
+
+```js
+<Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} text="Click me!" />
+```
 
 ## Installation
 
@@ -73,28 +102,6 @@ git push
 ```
 
 Then create a pull request, and once that gets reviewed and merged into master, Travis will publish your new version to npm!
-
-## Using YamUI in your own app
-
-### Importing the baseline CSS
-
-Import `yamui/dist/yamui-base.css` into your app. You could link to it directly before your own CSS, or import it through JS/CSS and include it at the top of your CSS bundle. This file is currently about 4kb minified+gzipped. This is a requirement as YamUI expects to own the baseline styles of the page.
-
-### Using components
-
-Each component is compiled from its TypeScript source into `yamui/dist/components`. This allows you to import the individual components you need and keep your bundle size smaller. Note that each component may import its own CSS and other JS dependencies so you may need to adjust your build process to accommodate.
-
-Example importing a `Button` component:
-
-```js
-import Button, { ButtonSize, ButtonColor } from 'yamui/dist/components/Button';
-```
-
-Example using a `Button` component:
-
-```js
-<Button size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} text="Click me!" />
-```
 
 ## Roadmap
 
