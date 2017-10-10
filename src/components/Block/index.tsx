@@ -6,26 +6,25 @@ import { GutterSize } from '../../util/enums/gutter';
 import { TextSize } from '../../util/enums/textSize';
 import './block.css';
 
-
 export interface BlockProps extends NestableBaseComponentProps {
   /**
-   * Gutter spacing to be added below this Block
+   * Gutter spacing to be added below this block.
    */
   bottomSpacing?: GutterSize;
 
   /**
-   * Padding to be added uniformly within this Block
+   * Padding to be added uniformly within this block.
    */
   padding?: GutterSize;
 
   /**
-   * Number of pixels to finely adjust the gutter spacing above this Block. Positive pushes the component down,
-   * negative pulls it up. Only use this to adjust for vertical rhythm in text.
+   * Number of pixels to finely adjust the gutter spacing above this block. Positive pushes the
+   * component down, negative pulls it up. Only use this to adjust for vertical rhythm in text.
    */
   push?: number;
 
   /**
-   * Determines the font-size/line-height combination within this Block
+   * Determines the font-size/line-height combination within this block.
    */
   textSize?: TextSize;
 
@@ -37,14 +36,10 @@ export interface BlockProps extends NestableBaseComponentProps {
 
 export { GutterSize, TextSize };
 
-const pixelsToRems = function (pixels: number) {
-  return pixels / 10;
-};
+const pixelsToRems = (pixels: number) => pixels / 10;
 
 const getClasses = (props: BlockProps) => {
-  const classes: string[] = [
-    'y-block',
-  ];
+  const classes: string[] = ['y-block'];
   if (props.bottomSpacing) {
     classes.push(`y-block__bottomSpacing-${props.bottomSpacing}`);
   }
@@ -61,9 +56,7 @@ const getClasses = (props: BlockProps) => {
 };
 
 const getInnerClasses = (props: BlockProps) => {
-  const classes: string[] = [
-    'y-block--inner',
-  ];
+  const classes: string[] = ['y-block--inner'];
   if (props.padding) {
     classes.push(`y-block--inner__padding-${props.padding}`);
   }
@@ -74,14 +67,15 @@ interface BlockStyles {
   marginTop?: string;
   paddingTop?: string;
 }
+
 const getStyle = (props: BlockProps) => {
   const styles: BlockStyles = {};
   if (!props.push) {
     return styles;
   }
 
-  // If push is negative, set negative top margin to "pull" it up.
-  // If positive, "push" it down with top padding (because margins can collapse)
+  // If `push` is negative, set negative top margin to "pull" it up.
+  // If positive, "push" it down with top padding (because margins can collapse).
   const rems = pixelsToRems(props.push);
   const value = `${rems}rem`;
   if (rems < 0) {
@@ -92,14 +86,10 @@ const getStyle = (props: BlockProps) => {
   return styles;
 };
 
-const Block: React.StatelessComponent<BlockProps> = (props) => {
-  return (
-    <div className={getClasses(props)} style={getStyle(props)}>
-      <div className={getInnerClasses(props)}>
-        {props.children}
-      </div>
-    </div>
-  );
-};
+const Block: React.StatelessComponent<BlockProps> = props => (
+  <div className={getClasses(props)} style={getStyle(props)}>
+    <div className={getInnerClasses(props)}>{props.children}</div>
+  </div>
+);
 
 export default Block;

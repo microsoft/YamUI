@@ -7,12 +7,7 @@ import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseBut
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import './button.css';
 
-
-const hrefBlacklist = [
-  '',
-  '#',
-  'javascript://',
-];
+const hrefBlacklist = ['', '#', 'javascript://'];
 
 export const ButtonSize = Enum({
   REGULAR: 'regular',
@@ -43,73 +38,89 @@ export interface BaseButtonProps extends BaseComponentProps {
    * The visible button text.
    */
   text: string;
+
   /**
    * Button description. This must be provided if the button text is not descriptive enough.
    */
   ariaLabel?: string;
+
   /**
-   * Button size. Defaults to Regular.
+   * Button size. Defaults to regular.
    */
   size?: ButtonSize;
+
   /**
-   * The color describing the button's intent. Defaults to Primary.
+   * The color describing the button's intent. Defaults to primary.
    */
   color?: ButtonColor;
+
   /**
    * Click callback handler. Will provide the React synthetic event.
    */
   onClick?: (event: any) => void;
+
   /**
    * Hover callback handler. Will provide the React synthetic event.
    */
   onMouseEnter?: (event: any) => void;
+
   /**
    * Hover out callback handler. Will provide the React synthetic event.
    */
   onMouseLeave?: (event: any) => void;
+
   /**
    * Focus callback handler. Will provide the React synthetic event.
    */
   onFocus?: (event: any) => void;
+
   /**
    * Focus lost callback handler. Will provide the React synthetic event.
    */
   onBlur?: (event: any) => void;
+
   /**
-   * Optional icon
+   * Optional icon.
    */
   icon?: IconName;
+
   /**
-   * Icon position
+   * Icon position.
    */
   iconPosition?: IconPosition;
 }
+
 export interface RegularButtonProps extends BaseButtonProps {
   /**
    * Whether this button should be disabled or not. Defaults to false.
    */
   disabled?: boolean;
+
   /**
-   * Disabled buttons cannot have a Link href
+   * Disabled buttons cannot have a link href.
    */
   href?: void;
 }
+
 export interface LinkButtonProps extends BaseButtonProps {
   /**
    * If provided, will render a Link styled as a Button
    */
   href: string;
+
   /**
-   * Link buttons cannot be disabled
+   * Link buttons cannot be disabled.
    */
   disabled?: void;
 }
+
 export type ButtonProps = RegularButtonProps | LinkButtonProps;
 
 export default class Button extends React.PureComponent<ButtonProps, {}> {
   static propTypes = {
-    // TypeScript does not support negated types; using PropTypes custom validator instead of runtime validations
-    href (props: LinkButtonProps, propName: string, componentName: string) {
+    // TypeScript does not support negated types. Using PropTypes custom validator instead of
+    // runtime validations.
+    href(props: LinkButtonProps, propName: string, componentName: string) {
       const href = props.href;
       if (typeof href !== 'string') {
         return;
@@ -129,39 +140,56 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     iconPosition: IconPosition.LEFT,
   };
 
-  public render () {
+  render() {
     const { props } = this;
-    const { ariaLabel, text, icon, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur, iconPosition } = props;
+    const {
+      ariaLabel,
+      text,
+      icon,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onFocus,
+      onBlur,
+      iconPosition,
+    } = props;
 
     const disabled = (props as RegularButtonProps).disabled;
     const href = (props as LinkButtonProps).href;
 
+    const leftIcon = icon &&
+      iconPosition === IconPosition.LEFT && (
+        <span className="y-button--icon-wrapper-left">
+          <Icon {...this.getIconProps()} />
+        </span>
+      );
+    const rightIcon = icon &&
+      iconPosition === IconPosition.RIGHT && (
+        <span className="y-button--icon-wrapper-right">
+          <Icon {...this.getIconProps()} />
+        </span>
+      );
+
     return (
-      <BaseButton className={this.getClasses()}
-                  onClick={onClick}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  disabled={disabled}
-                  ariaLabel={ariaLabel}
-                  href={href}>
-        {icon && (iconPosition === IconPosition.LEFT) && (
-          <span className="y-button--icon-wrapper-left">
-            <Icon {...this.getIconProps()} />
-          </span>
-        )}
+      <BaseButton
+        className={this.getClasses()}
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        disabled={disabled}
+        ariaLabel={ariaLabel}
+        href={href}
+      >
+        {leftIcon}
         {text}
-        {icon && (iconPosition === IconPosition.RIGHT) && (
-          <span className="y-button--icon-wrapper-right">
-            <Icon {...this.getIconProps()} />
-          </span>
-        )}
+        {rightIcon}
       </BaseButton>
     );
   }
 
-  private getIconProps (): IconProps {
+  private getIconProps(): IconProps {
     return {
       size: this.props.size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
       icon: this.props.icon as IconName,
@@ -169,7 +197,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     };
   }
 
-  private getClasses () {
+  private getClasses() {
     const { props } = this;
     const classes: string[] = [
       'y-button',
@@ -185,4 +213,3 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     return classes.join(' ');
   }
 }
-

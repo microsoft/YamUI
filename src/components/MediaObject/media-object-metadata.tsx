@@ -4,7 +4,6 @@ import { MediaObjectSize } from '../../util/enums/mediaObject';
 import Block, { TextSize, GutterSize } from '../Block';
 import Text, { TextColor } from '../Text';
 
-
 export { MediaObjectSize };
 
 const BlockPushMap = {
@@ -19,14 +18,14 @@ export interface MediaObjectMetadataProps {
   size: MediaObjectSize;
 }
 
-const MediaObjectMetadata: React.StatelessComponent<MediaObjectMetadataProps> = (props) => {
-  return (
-    <Block className="y-media-object--metadata" textSize={TextSize.SMALL} push={BlockPushMap[props.size]}>
-      <Text color={TextColor.METADATA}>
-        {props.children}
-      </Text>
-    </Block>
-  );
-};
+const MediaObjectMetadata: React.StatelessComponent<MediaObjectMetadataProps> = props => (
+  <Block
+    className="y-media-object--metadata"
+    textSize={TextSize.SMALL}
+    push={BlockPushMap[props.size]}
+  >
+    <Text color={TextColor.METADATA}>{props.children}</Text>
+  </Block>
+);
 
 export default MediaObjectMetadata;

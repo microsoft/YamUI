@@ -5,7 +5,6 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../../util/enums/gutter';
 import './fixed-grid.css';
 
-
 export interface FixedGridRowProps extends NestableBaseComponentProps {
   gutterSize?: GutterSize;
   bottomSpacing?: GutterSize;
@@ -14,10 +13,7 @@ export interface FixedGridRowProps extends NestableBaseComponentProps {
 export { GutterSize };
 
 const getClasses = (props: FixedGridRowProps) => {
-  const classes: string[] = [
-    'y-fixedGridRow',
-    `y-fixedGridRow__gutter-${props.gutterSize}`,
-  ];
+  const classes: string[] = ['y-fixedGridRow', `y-fixedGridRow__gutter-${props.gutterSize}`];
   if (props.bottomSpacing) {
     classes.push(`y-fixedGridRow__bottomSpacing-${props.bottomSpacing}`);
   }
@@ -27,13 +23,9 @@ const getClasses = (props: FixedGridRowProps) => {
   return classes.join(' ');
 };
 
-export const FixedGridRow: React.StatelessComponent<FixedGridRowProps> = (props) => {
-  return (
-    <div className={getClasses(props)}>
-      {props.children}
-    </div>
-  );
-};
+export const FixedGridRow: React.StatelessComponent<FixedGridRowProps> = props => (
+  <div className={getClasses(props)}>{props.children}</div>
+);
 
 FixedGridRow.defaultProps = {
   gutterSize: GutterSize.SMALL,

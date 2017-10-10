@@ -13,7 +13,8 @@ export { MediaObjectSize };
 
 export interface MediaObjectProps extends NestableBaseComponentProps {
   /**
-   * The MediaObjectSize which this component's dimensions, font-sizes and text vertical rhythm will be based on.
+   * The MediaObjectSize which this component's dimensions, font-sizes and text vertical rhythm will
+   * be based on.
    */
   size: MediaObjectSize;
 
@@ -22,25 +23,25 @@ export interface MediaObjectProps extends NestableBaseComponentProps {
    * may not match the corresponding MediaObject size. If you're providing an Image component you
    * can set fullWidth:true to fill the left column width.
    */
-  imageContent?: JSX.Element;
-  
+  imageContent?: React.ReactNode;
+
   /**
-   * Title content. This should be plain text, but could be wrapped in arbitrary JSX like a Link if necessary.
+   * Title content. This should be plain text, but could be wrapped in arbitrary node if necessary.
    */
-  titleContent?: string | JSX.Element;
+  titleContent?: string | React.ReactNode;
 
   /**
    * Metadata/secondary content. Will be displayed light gray. This should generally be plain text,
    * but you can pass in arbitrary JSX if necessary.
    */
-  metadataContent?: string | JSX.Element;
+  metadataContent?: string | React.ReactNode;
 
   /**
    * Extra/tertiary content. Will be displayed light gray. This should generally be plain text,
    * but you can pass in arbitrary JSX if necessary. If you need to pass in arbitrary extra content
    * like buttons or other HTML, pass those in as children instead of the extraContent prop.
    */
-  extraContent?: string | JSX.Element;
+  extraContent?: string | React.ReactNode;
 }
 
 const ImageWidthMap = {
@@ -52,10 +53,7 @@ const ImageWidthMap = {
 };
 
 const getClasses = (props: MediaObjectProps) => {
-  const classes: string[] = [
-    'y-media-object',
-    `y-media-object__size-${props.size}`,
-  ];
+  const classes: string[] = ['y-media-object', `y-media-object__size-${props.size}`];
   if (props.className) {
     classes.push(props.className);
   }
@@ -90,22 +88,27 @@ const MediaObject: React.StatelessComponent<MediaObjectProps> = (props) => {
   const gutterSize = getGutterSize(props.size);
   const imageColumnClass = `y-media-object__size-${props.size}--image`;
 
+  const titleContent = props.titleContent && (
+    <MediaObjectTitle size={props.size}>{props.titleContent}</MediaObjectTitle>
+  );
+  const metadataContent = showMetadata(props) && (
+    <MediaObjectMetadata size={props.size}>{props.metadataContent}</MediaObjectMetadata>
+  );
+
   return (
     <div className={getClasses(props)}>
       <FixedGridRow gutterSize={gutterSize}>
-        <FixedGridColumn width={ImageWidthMap[props.size]} fixed className={imageColumnClass}>
+        <FixedGridColumn
+          width={ImageWidthMap[props.size]}
+          fixed={true}
+          className={imageColumnClass}
+        >
           {props.imageContent}
         </FixedGridColumn>
         <FixedGridColumn>
-          {props.titleContent &&
-            <MediaObjectTitle size={props.size}>{props.titleContent}</MediaObjectTitle>
-          }
-          {showMetadata(props) &&
-            <MediaObjectMetadata size={props.size}>{props.metadataContent}</MediaObjectMetadata>
-          }
-          {showExtra(props) &&
-            <MediaObjectExtra>{props.extraContent}</MediaObjectExtra>
-          }
+          {titleContent}
+          {metadataContent}
+          {showExtra(props) && <MediaObjectExtra>{props.extraContent}</MediaObjectExtra>}
           {props.children}
         </FixedGridColumn>
       </FixedGridRow>

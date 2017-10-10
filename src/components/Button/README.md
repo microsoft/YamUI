@@ -1,20 +1,18 @@
 # Button
 
-Allows user to take an action. Is based on Office Fabric UI's [Button](https://dev.office.com/fabric#/components/button)
+A `Button` allows a user to take an action.
 
----
-
-### Properties
+## Properties
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
-| text * | string | The button's label. |
+| text * | string | Label on the button. |
 | color | ButtonColor| Primary or secondary. Defaults to primary. |
 | size | ButtonSize| Regular or small. Defaults to regular. |
 | disabled | boolean | Whether this button should be disabled or not. Defaults to false. |
 | ariaLabel | string | Required if button text is not descriptive enough. |
 | icon | IconName | Optional icon. |
-| iconPosition | IconPosition | Position icon before or after text. Defaults to IconPosition.LEFT (before) |
+| iconPosition | IconPosition | Position icon before or after text. Defaults to left (before). |
 | onClick | (event: any) => void | Click callback handler. |
 | onMouseEnter | (event: any) => void | Hover callback handler. |
 | onMouseLeave | (event: any) => void | Hover out callback handler. |
@@ -23,34 +21,27 @@ Allows user to take an action. Is based on Office Fabric UI's [Button](https://d
 
 \* property is required
 
----
-
-## Content guidelines
-
-Use concise, specific, self-explanatory text, usually a single word. Should include a verb. If acting on something, text should include the noun it is acting on. Ex. "Create Group"
-
 ## Notes for use
 
 While buttons can technically be used to navigate a user to another part of the experience, this is not recommended unless that navigation is part of an action or their flow.
 
----
+Also, use concise, specific, self-explanatory text, usually a single word. Should include a verb. If acting on something, text should include the noun it is acting on. Ex. "Create Group"
 
 ## Examples
 
-### Default button
+### Simple button
 
-```
+```js
 <Button text="Create Group" />
 ```
----
 
-## Example implementation
+### Button with icon
 
-Create a button with an icon
-
-```
-import Button from 'yamui/dist/components/Button';
-```
-```
-<Button icon="plus" size={ButtonSize.REGULAR} text="Follow" color={ButtonColor.SECONDARY} />
+```js
+<Button
+  text="Follow"
+  color={ButtonColor.SECONDARY}
+  size={ButtonSize.REGULAR}
+  icon="plus"
+/>
 ```

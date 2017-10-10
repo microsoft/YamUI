@@ -4,7 +4,6 @@ import { MediaObjectSize } from '../../util/enums/mediaObject';
 import Block, { GutterSize, TextSize } from '../Block';
 import Text, { TextColor } from '../Text';
 
-
 export { MediaObjectSize };
 
 const TextSizeMap = {
@@ -27,12 +26,12 @@ export interface MediaObjectTitleProps {
 }
 
 const MediaObject: React.StatelessComponent<MediaObjectTitleProps> = props => (
-  <Block className="y-media-object--title"
-          push={BlockPushMap[props.size]}
-          textSize={TextSizeMap[props.size] as TextSize}>
-    <Text color={TextColor.PRIMARY}>
-      {props.children}
-    </Text>
+  <Block
+    className="y-media-object--title"
+    push={BlockPushMap[props.size]}
+    textSize={TextSizeMap[props.size] as TextSize}
+  >
+    <Text color={TextColor.PRIMARY}>{props.children}</Text>
   </Block>
 );
 

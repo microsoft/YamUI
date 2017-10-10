@@ -3,12 +3,12 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": true,
     "jsx": "react",
+    "declaration": true,
     "sourceMap": true,
     "pretty": true,
+    "strict": true,
     "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true
+    "outDir": "./dist"
   }
 }

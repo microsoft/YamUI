@@ -6,6 +6,4 @@ function secureOpen(url: string) {
   }
 }
 
-export {
-  secureOpen,
-};
+export { secureOpen };

@@ -9,9 +9,7 @@ describe('<Block />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block>block content</Block>,
-      );
+      component = shallow(<Block>block content</Block>);
     });
 
     it('renders its given content', () => {
@@ -29,9 +27,7 @@ describe('<Block />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block className="TEST_CLASSNAME">block content</Block>,
-      );
+      component = shallow(<Block className="TEST_CLASSNAME">block content</Block>);
     });
 
     it('includes that className', () => {
@@ -49,9 +45,7 @@ describe('<Block />', () => {
 
   describe('with xLarge text size', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block textSize={TextSize.XLARGE}>block content</Block>,
-      );
+      component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('includes the xLarge className', () => {
@@ -69,9 +63,7 @@ describe('<Block />', () => {
 
   describe('with textAlign right', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block textAlign="right">block content</Block>,
-      );
+      component = shallow(<Block textAlign="right">block content</Block>);
     });
 
     it('includes the aligned right className', () => {
@@ -89,9 +81,7 @@ describe('<Block />', () => {
 
   describe('with spacing', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block bottomSpacing={GutterSize.XLARGE}>block content</Block>,
-      );
+      component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('contains the bottomSpacing className', () => {
@@ -105,9 +95,7 @@ describe('<Block />', () => {
 
   describe('with padding', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block padding={GutterSize.SMALL}>block content</Block>,
-      );
+      component = shallow(<Block padding={GutterSize.SMALL}>block content</Block>);
     });
 
     it('contains the padding className', () => {
@@ -121,9 +109,7 @@ describe('<Block />', () => {
 
   describe('with positive push', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block push={3}>block content</Block>,
-      );
+      component = shallow(<Block push={3}>block content</Block>);
     });
 
     it('adds top outer padding', () => {
@@ -137,9 +123,7 @@ describe('<Block />', () => {
 
   describe('with negative push', () => {
     beforeEach(() => {
-      component = shallow(
-        <Block push={-2}>block content</Block>,
-      );
+      component = shallow(<Block push={-2}>block content</Block>);
     });
 
     it('adds a negative top margin', () => {
@@ -150,5 +134,4 @@ describe('<Block />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

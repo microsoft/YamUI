@@ -5,15 +5,10 @@ import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
 
-
 export interface CalloutBodyProps extends NestableBaseComponentProps {}
 
-export const CalloutBody: React.StatelessComponent<CalloutBodyProps> = (props) => {
-  return (
-    <div className={classNames('y-callout--body', props.className)}>
-      <Block padding={GutterSize.XLARGE}>
-        {props.children}
-      </Block>
-    </div>
-  );
-};
+export const CalloutBody: React.StatelessComponent<CalloutBodyProps> = props => (
+  <div className={classNames('y-callout--body', props.className)}>
+    <Block padding={GutterSize.XLARGE}>{props.children}</Block>
+  </div>
+);

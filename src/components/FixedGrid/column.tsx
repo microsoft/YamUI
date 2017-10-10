@@ -5,13 +5,13 @@ import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './fixed-grid.css';
 
-
 export interface FixedGridColumnProps extends NestableBaseComponentProps {
   /**
    * Set to true if this column should have a fixed width. If true, and `width` is not provided,
    * this column will shrink to fit its content.
    */
   fixed?: boolean;
+
   /**
    * The number of pixels wide this column should be. Ignored if `fixed` is not set to true.
   */
@@ -19,9 +19,7 @@ export interface FixedGridColumnProps extends NestableBaseComponentProps {
 }
 
 const getClasses = (props: FixedGridColumnProps) => {
-  const classes: string[] = [
-    'y-fixedGridColumn',
-  ];
+  const classes: string[] = ['y-fixedGridColumn'];
   if (props.fixed) {
     classes.push('y-fixedGridColumn__isFixed');
   }
@@ -37,6 +35,7 @@ const getClasses = (props: FixedGridColumnProps) => {
 interface ColumnStyles {
   width?: string;
 }
+
 const getStyle = (props: FixedGridColumnProps) => {
   const styles: ColumnStyles = {};
 
@@ -49,11 +48,8 @@ const getStyle = (props: FixedGridColumnProps) => {
   return styles;
 };
 
-
-export const FixedGridColumn: React.StatelessComponent<FixedGridColumnProps> = (props) => {
-  return (
-    <div className={getClasses(props)} style={getStyle(props)}>
-      {props.children}
-    </div>
-  );
-};
+export const FixedGridColumn: React.StatelessComponent<FixedGridColumnProps> = props => (
+  <div className={getClasses(props)} style={getStyle(props)}>
+    {props.children}
+  </div>
+);

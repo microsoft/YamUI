@@ -1,5 +1,8 @@
 {
-  "extends": "tslint-config-airbnb",
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-react"
+  ],
   "rules": {
     "import-name": false,
     "variable-name": [
@@ -7,7 +10,6 @@
       "check-format",
       "allow-pascal-case"
     ],
-    "max-line-length": [true, 120],
     "file-header": [true, "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "]
   }
 }

@@ -6,7 +6,6 @@ import Button, { ButtonSize, ButtonColor, IconPosition } from '../components/But
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Button/README');
 
-
 const sampleText = 'Next';
 const sampleClickButtonText = 'Click me';
 
@@ -20,7 +19,7 @@ storiesOf('Button', module)
       <table>
         <thead>
           <tr>
-            <th></th>
+            <th />
             <th>Default</th>
             <th>Link</th>
             <th>Disabled</th>
@@ -29,99 +28,132 @@ storiesOf('Button', module)
         <tbody>
           <tr>
             <td>Primary</td>
-            <td><Button text={sampleText} /></td>
-            <td><Button text={sampleText} href={url} /></td>
-            <td><Button disabled={true} text={sampleText} /></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} /></td>
-            <td><Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} href={url} /></td>
-            <td><Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} /></td>
-          </tr>
-          <tr>
-            <td></td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.REGULAR}
-                      text={sampleText} />
+              <Button text={sampleText} />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.REGULAR}
-                      text={sampleText}
-                      href={url} />
+              <Button text={sampleText} href={url} />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      disabled={true}
-                      size={ButtonSize.REGULAR}
-                      text={sampleText} />
+              <Button disabled={true} text={sampleText} />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} />
+            </td>
+            <td>
+              <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} href={url} />
+            </td>
+            <td>
+              <Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+                href={url}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                disabled={true}
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+              />
             </td>
           </tr>
           <tr>
             <td>Secondary</td>
-            <td><Button text={sampleText} color={ButtonColor.SECONDARY} /></td>
-            <td><Button text={sampleText} color={ButtonColor.SECONDARY} href={url} /></td>
-            <td><Button disabled={true} text={sampleText} color={ButtonColor.SECONDARY} /></td>
-          </tr>
-          <tr>
-            <td></td>
             <td>
-              <Button icon="plus"
-                      size={ButtonSize.REGULAR}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} />
+              <Button text={sampleText} color={ButtonColor.SECONDARY} />
             </td>
             <td>
-              <Button icon="plus"
-                      size={ButtonSize.REGULAR}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} href={url} />
+              <Button text={sampleText} color={ButtonColor.SECONDARY} href={url} />
             </td>
             <td>
-              <Button icon="plus"
-                        disabled={true}
-                        text={sampleText}
-                        color={ButtonColor.SECONDARY} />
+              <Button disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td />
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.REGULAR}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} />
+              <Button
+                icon="plus"
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.REGULAR}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY}
-                      href={url} />
+              <Button
+                icon="plus"
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+                href={url}
+              />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      disabled={true}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} />
+              <Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.REGULAR}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+                href={url}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                disabled={true}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
             </td>
           </tr>
         </tbody>
       </table>
-      <br /><br />
+      <br />
+      <br />
       <h3>Small buttons</h3>
       <table>
         <thead>
           <tr>
-            <th></th>
+            <th />
             <th>Default</th>
             <th>Link</th>
             <th>Disabled</th>
@@ -130,92 +162,138 @@ storiesOf('Button', module)
         <tbody>
           <tr>
             <td>Primary</td>
-            <td><Button size={ButtonSize.SMALL} text={sampleText} /></td>
-            <td><Button size={ButtonSize.SMALL} text={sampleText} href={url} /></td>
-            <td><Button disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><Button icon="plus" size={ButtonSize.SMALL} text={sampleText} /></td>
-            <td><Button icon="plus" size={ButtonSize.SMALL} text={sampleText} href={url} /></td>
-            <td><Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} /></td>
-          </tr>
-          <tr>
-            <td></td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.SMALL}
-                      text={sampleText} />
+              <Button size={ButtonSize.SMALL} text={sampleText} />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      href={url} />
+              <Button size={ButtonSize.SMALL} text={sampleText} href={url} />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      disabled={true}
-                      size={ButtonSize.SMALL}
-                      text={sampleText} />
+              <Button disabled={true} size={ButtonSize.SMALL} text={sampleText} />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} />
+            </td>
+            <td>
+              <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} href={url} />
+            </td>
+            <td>
+              <Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                href={url}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                disabled={true}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+              />
             </td>
           </tr>
           <tr>
             <td>Secondary</td>
-            <td><Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} /></td>
             <td>
-              <Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} href={url} />
+              <Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} />
             </td>
             <td>
-              <Button disabled={true}
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <Button icon="plus"
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY} />
+              <Button
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+                href={url}
+              />
             </td>
             <td>
-              <Button icon="plus"
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY}
-                      href={url} />
-            </td>
-            <td>
-              <Button icon="plus"
-                      disabled={true}
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY}
-                />
+              <Button
+                disabled={true}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
             </td>
           </tr>
           <tr>
-            <td></td>
-            <td><Button icon="caretDown" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
-                        text={sampleText} color={ButtonColor.SECONDARY} /></td>
+            <td />
             <td>
-              <Button icon="caretDown" iconPosition={IconPosition.RIGHT} size={ButtonSize.SMALL}
-                      text={sampleText} color={ButtonColor.SECONDARY} href={url} />
+              <Button
+                icon="plus"
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
             </td>
             <td>
-              <Button icon="caretDown"
-                      iconPosition={IconPosition.RIGHT}
-                      disabled={true}
-                      size={ButtonSize.SMALL}
-                      text={sampleText}
-                      color={ButtonColor.SECONDARY}
-                />
+              <Button
+                icon="plus"
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+                href={url}
+              />
+            </td>
+            <td>
+              <Button
+                icon="plus"
+                disabled={true}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+                href={url}
+              />
+            </td>
+            <td>
+              <Button
+                icon="caretDown"
+                iconPosition={IconPosition.RIGHT}
+                disabled={true}
+                size={ButtonSize.SMALL}
+                text={sampleText}
+                color={ButtonColor.SECONDARY}
+              />
             </td>
           </tr>
         </tbody>
@@ -225,12 +303,14 @@ storiesOf('Button', module)
   .add('with event handlers', () => {
     return (
       <div>
-        <Button text="Interact with me"
-                onClick={action('button clicked')}
-                onMouseEnter={action('button hovered in')}
-                onMouseLeave={action('button hovered out')}
-                onFocus={action('button focused')}
-                onBlur={action('button focus lost')} />
+        <Button
+          text="Interact with me"
+          onClick={action('button clicked')}
+          onMouseEnter={action('button hovered in')}
+          onMouseLeave={action('button hovered out')}
+          onFocus={action('button focused')}
+          onBlur={action('button focus lost')}
+        />
       </div>
     );
   })

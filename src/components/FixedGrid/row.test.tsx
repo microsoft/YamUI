@@ -8,9 +8,7 @@ describe('<FixedGridRow />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridRow>grid content</FixedGridRow>,
-      );
+      component = shallow(<FixedGridRow>grid content</FixedGridRow>);
     });
 
     it('renders its given content', () => {
@@ -32,9 +30,7 @@ describe('<FixedGridRow />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridRow className="TEST_CLASSNAME">grid content</FixedGridRow>,
-      );
+      component = shallow(<FixedGridRow className="TEST_CLASSNAME">grid content</FixedGridRow>);
     });
 
     it('includes that className', () => {
@@ -52,9 +48,7 @@ describe('<FixedGridRow />', () => {
 
   describe('with gutter size', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridRow gutterSize={GutterSize.LARGE}>grid content</FixedGridRow>,
-      );
+      component = shallow(<FixedGridRow gutterSize={GutterSize.LARGE}>grid content</FixedGridRow>);
     });
 
     it('includes the gutter size class name', () => {
@@ -89,5 +83,4 @@ describe('<FixedGridRow />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
 });

@@ -1,5 +1,6 @@
 .*
 !.browserslistrc
 !.eslintrc.json
+!.markdownlint.json
 build
 node_modules
