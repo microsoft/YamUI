@@ -48,7 +48,7 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   }
 
   private getClasses() {
-    const classes = ['y-icon'];
+    const classes = ['y-icon', 'y-icon-' + this.props.icon];
     if (this.props.block) {
       classes.push('y-icon__isBlock');
     }
