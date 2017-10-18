@@ -44,11 +44,17 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
 
   public render() {
     const CurrentIcon = ICONS[this.props.icon];
-    return <CurrentIcon className={this.getClasses()} style={this.getInlineStyles()} />;
+    return (
+      <CurrentIcon
+        className={this.getClasses()}
+        style={this.getInlineStyles()}
+        data-icon={this.props.icon}
+      />
+    );
   }
 
   private getClasses() {
-    const classes = ['y-icon', 'y-icon-' + this.props.icon];
+    const classes = ['y-icon'];
     if (this.props.block) {
       classes.push('y-icon__isBlock');
     }
