@@ -7,6 +7,7 @@ It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](http
 ## Using YamUI in your own app
 
 If necessary, add YamUI to your project.
+
 ```
 npm install --save yamui
 ```
