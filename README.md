@@ -8,7 +8,7 @@ It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](http
 
 If necessary, add YamUI to your project.
 
-```
+```sh
 npm install --save yamui
 ```
 
