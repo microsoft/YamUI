@@ -102,7 +102,7 @@ npm version patch -m "Release version %s"
 git push
 ```
 
-Then create a pull request, and once that gets reviewed and merged into master, Travis will publish your new version to npm!
+Then create a pull request, and once that gets reviewed and merged into master, Travis will publish your new version to npm! This is an alternative to creating releases manually or through GitHub's tools. Learn more about npm versioning [here](https://docs.npmjs.com/cli/version).
 
 ## Roadmap
 
