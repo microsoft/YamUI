@@ -98,7 +98,7 @@ Travis is setup to automatically publish tagged releases to the npm registry. So
 
 ```sh
 git checkout -b awesome-release-branch
-npm version patch "Release version %s!"
+npm version patch -m "Release version %s"
 git push
 ```
 
