@@ -20,11 +20,16 @@ $textColor__white: $color__white;
 $linkColor: $color__river;
 $linkColor__active: $color__bay;
 
-$captionBGColor: $color__sunrise;
+$captionBackgroundColor: $color__sunrise;
 
-$dropdownOptionBGColor__focused: $color__popRock;
-$dropdownOptionBGColor__selected: $color__altRock;
+$dropdownOptionBackgroundColor__focused: $color__popRock;
+$dropdownOptionBackgroundColor__selected: $color__altRock;
 
-$messagebarBarColor__info: $color__punkRock;
-$messagebarBarColor__warning: $color__noon;
-$messagebarBarColor__error: $color__angel;
+$messageBarTextColor: $color__blackMetal;
+$messageBarBackgroundColor: $color__popRock;
+$messageBarBorderColor__info: $color__punkRock;
+$messageBarBorderColor__warning: $color__noon;
+$messageBarBorderColor__error: $color__angel;
+
+$spinnerColor__light: $color__river;
+$spinnerColor__dark: $color__white;

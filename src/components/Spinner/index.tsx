@@ -3,10 +3,12 @@ import '../../yamui';
 import * as React from 'react';
 import { Enum } from 'typescript-string-enums';
 import {
+  ISpinnerProps as FabricSpinnerProps,
   Spinner as FabricSpinner,
   SpinnerSize as FabricSpinnerSize,
 } from 'office-ui-fabric-react/lib/Spinner';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import Text, { TextProps, TextColor, TextSize } from '../Text';
 import { SpinnerSize } from '../../util/enums/spinner';
 import './spinner.css';
 
@@ -19,35 +21,90 @@ const SizeMap = {
   [SpinnerSize.XSMALL]: FabricSpinnerSize.xSmall,
 };
 
+export const SpinnerColor = Enum({
+  /**
+   * Light theme.
+   */
+  LIGHT: 'light',
+  /**
+   * Dark theme.
+   */
+  DARK: 'dark',
+});
+export type SpinnerColor = Enum<typeof SpinnerColor>;
+
 export interface SpinnerProps extends BaseComponentProps {
   /**
-   * Label displayed below the spinner.
+   * Alternative label for screen readers.
+   */
+  ariaLabel?: string;
+
+  /**
+   * Politeness for label update announcement.
+   * @default polite
+   */
+  ariaLive?: FabricSpinnerProps['ariaLive'];
+
+  /**
+   * Color of the spinner.
+   * @default SpinnerColor.LIGHT
+   */
+  color?: SpinnerColor;
+
+  /**
+   * Label displayed besides/below the spinner.
    */
   label?: string;
+
   /**
-   * LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px. Defaults to medium.
+   * Size of the spinner.
+   * @default SpinnerSize.MEDIUM
    */
   size?: SpinnerSize;
 }
 
 export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   static defaultProps: Partial<SpinnerProps> = {
+    ariaLive: 'polite',
+    color: SpinnerColor.LIGHT,
     size: SpinnerSize.MEDIUM,
   };
 
   render() {
-    const { label, size } = this.props;
-    const spinnerSize = SizeMap[size as string];
+    const { label } = this.props;
 
     return (
       <div className={this.getClasses()}>
-        <FabricSpinner label={label} size={spinnerSize} />
+        <FabricSpinner {...this.getSpinnerProps()} />
+        {label && <Text {...this.getLabelProps()}>{label}</Text>}
       </div>
     );
   }
 
+  private getSpinnerProps(): FabricSpinnerProps {
+    return {
+      ariaLabel: this.props.ariaLabel || this.props.label,
+      ariaLive: this.props.ariaLive,
+      size: SizeMap[this.props.size as string],
+      className: 'y-spinner--circle',
+    };
+  }
+
+  private getLabelProps(): TextProps {
+    return {
+      color: this.props.color === SpinnerColor.DARK ? TextColor.WHITE : TextColor.PRIMARY,
+      size: this.props.size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM,
+      className: 'y-spinner--label',
+    };
+  }
+
   private getClasses() {
-    const classes: string[] = ['y-spinner'];
+    const { props } = this;
+    const classes: string[] = [
+      'y-spinner',
+      `y-spinner__color-${props.color}`,
+      `y-spinner__size-${props.size}`,
+    ];
     if (this.props.className) {
       classes.push(this.props.className);
     }

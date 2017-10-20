@@ -7,7 +7,7 @@
   border-radius: 1px;
   border-left-width: 4px;
   border-left-style: solid;
-  background-color: $color__popRock;
+  background-color: $messageBarBackgroundColor;
   padding: 7px 12px 8px 12px;
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
@@ -15,7 +15,7 @@
 
 .y-message-bar--message {
   flex-grow: 1;
-  color: $color__blackMetal;
+  color: $messageBarTextColor;
 }
 
 .y-message-bar--actions {
@@ -24,13 +24,13 @@
 }
 
 .y-message-bar__type-info {
-  border-left-color: $messagebarBarColor__info;
+  border-left-color: $messageBarBorderColor__info;
 }
 
 .y-message-bar__type-warning {
-  border-left-color: $messagebarBarColor__warning;
+  border-left-color: $messageBarBorderColor__warning;
 }
 
 .y-message-bar__type-error {
-  border-left-color: $messagebarBarColor__error;
+  border-left-color: $messageBarBorderColor__error;
 }

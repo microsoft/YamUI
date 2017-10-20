@@ -3,7 +3,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
-import Spinner, { SpinnerSize } from '../components/Spinner';
+import Spinner, { SpinnerColor, SpinnerSize } from '../components/Spinner';
 import Block from '../components/Block';
 
 const readme = require('../components/Spinner/README');
@@ -18,6 +18,10 @@ const tableHeader = (
     </tr>
   </thead>
 );
+
+const darkWrapper = {
+  backgroundColor: '#386cbb',
+};
 
 storiesOf('Spinner', module)
   .addDecorator(withReadme(readme))
@@ -38,6 +42,20 @@ storiesOf('Spinner', module)
             </td>
             <td>
               <Spinner size={SpinnerSize.XSMALL} />
+            </td>
+          </tr>
+          <tr style={darkWrapper}>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} />
             </td>
           </tr>
         </tbody>
@@ -61,6 +79,20 @@ storiesOf('Spinner', module)
             </td>
             <td>
               <Spinner size={SpinnerSize.XSMALL} label="Loading..." />
+            </td>
+          </tr>
+          <tr style={darkWrapper}>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} label="Loading..." />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} label="Loading..." />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} label="Loading..." />
+            </td>
+            <td>
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} label="Loading..." />
             </td>
           </tr>
         </tbody>
