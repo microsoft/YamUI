@@ -1,0 +1,36 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
+
+.y-message-bar {
+  display: flex;
+  border-radius: 1px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  background-color: $color__popRock;
+  padding: 7px 12px 8px 12px;
+  font-size: $fontSize__small;
+  line-height: $lineHeight__small;
+}
+
+.y-message-bar--message {
+  flex-grow: 1;
+  color: $color__blackMetal;
+}
+
+.y-message-bar--actions {
+  padding-left: 32px;
+  flex-grow: 0;
+}
+
+.y-message-bar__type-info {
+  border-left-color: $messagebarBarColor__info;
+}
+
+.y-message-bar__type-warning {
+  border-left-color: $messagebarBarColor__warning;
+}
+
+.y-message-bar__type-error {
+  border-left-color: $messagebarBarColor__error;
+}
