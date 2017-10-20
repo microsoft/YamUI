@@ -2,10 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
-import { Enum } from 'typescript-string-enums';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { Key } from '../../util/enums/key';
 import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-react/lib/Callout';
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
 import './callout.css';
 
@@ -16,12 +15,10 @@ export interface VoidCallback {
   (): void;
 }
 
-export const TriggerType = Enum({
-  CLICK: 'click',
-  HOVER: 'hover',
-});
-
-export type TriggerType = Enum<typeof TriggerType>;
+export enum TriggerType {
+  CLICK = 'click',
+  HOVER = 'hover',
+}
 
 export interface CalloutProps extends NestableBaseComponentProps {
   /**

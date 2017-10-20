@@ -1,9 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-
-import Image, { ImageProps, ImageFit, ImageLoadState } from './index';
 import { Image as FabricImage } from 'office-ui-fabric-react/lib/Image';
+import Image, { ImageProps, ImageFit, ImageLoadState } from '.';
 
 describe('<Image />', () => {
   let component: ShallowWrapper<ImageProps, {}>;

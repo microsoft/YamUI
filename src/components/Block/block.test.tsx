@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Block, { BlockProps, GutterSize, TextSize } from './index';
+import Block, { BlockProps, GutterSize, TextSize } from '.';
 
 describe('<Block />', () => {
   let component: ShallowWrapper<BlockProps, {}>;

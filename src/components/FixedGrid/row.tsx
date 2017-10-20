@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { GutterSize } from '../../util/enums/gutter';
+import { GutterSize } from './enums';
 import './fixed-grid.css';
 
 export interface FixedGridRowProps extends NestableBaseComponentProps {

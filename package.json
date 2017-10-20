@@ -7,8 +7,7 @@
   "dependencies": {
     "classnames": "=2.2.5",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=5.1.0",
-    "typescript-string-enums": "=0.3.2"
+    "office-ui-fabric-react": "=5.1.0"
   },
   "devDependencies": {
     "@storybook/addon-options": "=3.2.3",

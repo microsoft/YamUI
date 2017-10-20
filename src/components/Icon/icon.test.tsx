@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Icon, { IconProps, IconSize } from './index';
+import Icon, { IconProps, IconSize } from '.';
 import ICONS from './icons';
 import * as util from 'util';
 

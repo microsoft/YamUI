@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
 import Dropdown, { DropdownOptionKey } from '../components/Dropdown';
 import Block from '../components/Block';
-import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
+import { FixedGridRow, FixedGridColumn, GutterSize } from '../components/FixedGrid';
 
 const readme = require('../components/Dropdown/README');
 
@@ -51,7 +51,7 @@ storiesOf('Dropdown', module)
   .addDecorator(withReadme(readme))
   .add('basic uncontrolled', () => (
     <div>
-      <Block bottomSpacing="large">
+      <Block bottomSpacing={GutterSize.LARGE}>
         In this example, the state of the Dropdown is maintained within the component, rather than
         being set using `selectedKey`.
       </Block>
@@ -64,7 +64,7 @@ storiesOf('Dropdown', module)
   ))
   .add('basic controlled', () => (
     <div>
-      <Block bottomSpacing="large">
+      <Block bottomSpacing={GutterSize.LARGE}>
         In this example, the state of the dropdown is controlled by the parent component using the
         `selectedKey` and `onChanged` props.
       </Block>
@@ -73,7 +73,7 @@ storiesOf('Dropdown', module)
   ))
   .add('with label', () => (
     <div>
-      <Block bottomSpacing="large">This dropdown renders its own label text.</Block>
+      <Block bottomSpacing={GutterSize.LARGE}>This dropdown renders its own label text.</Block>
       <Dropdown
         placeHolder="Please Select"
         options={options}
@@ -84,7 +84,7 @@ storiesOf('Dropdown', module)
   ))
   .add('within grid', () => (
     <div>
-      <Block bottomSpacing="large">
+      <Block bottomSpacing={GutterSize.LARGE}>
         To manage the dropdown's width, use a container; it will expand to fill the entire width.
       </Block>
       <FixedGridRow>

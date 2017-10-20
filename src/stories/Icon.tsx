@@ -1,13 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { GutterSize } from '../util/enums/gutter';
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import Block, { TextSize } from '../components/Block';
-import Icon, { IconProps, IconSize, ICONS } from '../components/Icon';
-import Text, { TextColor } from '../components/Text';
 import withReadme from 'storybook-readme/with-readme';
+import Block, { TextSize } from '../components/Block';
+import { GutterSize } from '../components/FixedGrid';
+import Icon, { IconProps, IconSize, icons } from '../components/Icon';
+import Text, { TextColor } from '../components/Text';
 const readme = require('../components/Icon/README');
-import { shallow, ShallowWrapper } from 'enzyme';
 
 const simpleFloat = {
   width: '80px',
@@ -26,7 +25,7 @@ const labelStyles = {
 
 const iconsArray: any[] = [];
 
-Object.keys(ICONS).forEach((icon) => {
+Object.keys(icons).forEach((icon) => {
   iconsArray.push(icon);
 });
 

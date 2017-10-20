@@ -1,8 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { MediaObjectSize } from '../../util/enums/mediaObject';
 import Block, { GutterSize, TextSize } from '../Block';
 import Text, { TextColor } from '../Text';
+import { MediaObjectSize } from './enums';
 
 export { MediaObjectSize };
 

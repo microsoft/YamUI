@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { HorizontalList, HorizontalListProps } from './index';
+import { HorizontalList, HorizontalListProps } from '.';
 
 describe('<HorizontalList />', () => {
   let component: ShallowWrapper<HorizontalListProps, {}>;

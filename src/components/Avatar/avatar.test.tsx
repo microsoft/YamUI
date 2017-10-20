@@ -2,9 +2,9 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { Persona, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
-import Avatar, { AvatarProps, AvatarSize, BorderType } from './index';
 import ScreenreaderText from '../ScreenreaderText';
 import Text from '../Text';
+import Avatar, { AvatarProps, AvatarSize, AvatarBorderType } from '.';
 
 describe('<Avatar />', () => {
   let component: ShallowWrapper<AvatarProps, {}>;
@@ -122,7 +122,9 @@ describe('<Avatar />', () => {
 
   describe('with soft border type', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />);
+      component = shallow(
+        <Avatar name="NAME" imageUrl="test.jpg" borderType={AvatarBorderType.SOFT} />,
+      );
     });
 
     it('contains the soft border class', () => {

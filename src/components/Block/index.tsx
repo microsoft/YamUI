@@ -2,9 +2,11 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { GutterSize } from '../../util/enums/gutter';
-import { TextSize } from '../../util/enums/textSize';
+import { GutterSize } from '../FixedGrid/enums';
+import { TextSize } from '../Text/enums';
 import './block.css';
+
+export { GutterSize, TextSize };
 
 export interface BlockProps extends NestableBaseComponentProps {
   /**
@@ -33,8 +35,6 @@ export interface BlockProps extends NestableBaseComponentProps {
    */
   textAlign?: 'left' | 'right';
 }
-
-export { GutterSize, TextSize };
 
 const pixelsToRems = (pixels: number) => pixels / 10;
 

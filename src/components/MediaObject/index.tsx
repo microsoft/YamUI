@@ -2,8 +2,8 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { MediaObjectSize } from '../../util/enums/mediaObject';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
+import { MediaObjectSize } from './enums';
 import MediaObjectTitle from './media-object-title';
 import MediaObjectMetadata from './media-object-metadata';
 import MediaObjectExtra from './media-object-extra';

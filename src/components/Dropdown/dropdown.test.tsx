@@ -1,11 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Dropdown, { DropdownProps } from './index';
 import {
   Dropdown as FabricDropdown,
   IDropdownProps,
 } from 'office-ui-fabric-react/lib/components/Dropdown';
+import Dropdown, { DropdownProps } from '.';
 
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;

@@ -10,7 +10,7 @@ Describe the problem the component solves as simply as possible. It might sound 
 | ---- | ---- | ----------- |
 | size | ComponentSize| Size of component |
 | name * | string | The component's label. |
-| borderType | BorderType| Round or soft border. Defaults to round.|
+| borderType | AvatarBorderType| Round or soft border. Defaults to round.|
 
 \* indicates property is required
 
@@ -39,7 +39,7 @@ Use component in some certain way that shows flexibility of use:
 ```js
 <Component
   size={ComponentSize.MEDIUM}
-  borderType={BorderType.SOFT}
+  borderType={AvatarBorderType.SOFT}
   name="Annie Antelope"
 />
 ```

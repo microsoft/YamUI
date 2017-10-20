@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import MediaObject, { MediaObjectSize, MediaObjectProps } from './index';
+import MediaObject, { MediaObjectSize, MediaObjectProps } from '.';
 
 const image = <img src="404.jpg" alt="" />;
 const title = <div className="TITLE">TITLE CONTENT</div>;
