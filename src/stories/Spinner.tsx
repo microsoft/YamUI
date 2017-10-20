@@ -69,30 +69,30 @@ storiesOf('Spinner', module)
         <tbody>
           <tr>
             <td>
-              <Spinner size={SpinnerSize.LARGE} label="Loading..." />
+              <Spinner size={SpinnerSize.LARGE} label="Loading" />
             </td>
             <td>
-              <Spinner size={SpinnerSize.MEDIUM} label="Loading..." />
+              <Spinner size={SpinnerSize.MEDIUM} label="Loading" />
             </td>
             <td>
-              <Spinner size={SpinnerSize.SMALL} label="Loading..." />
+              <Spinner size={SpinnerSize.SMALL} label="Loading" />
             </td>
             <td>
-              <Spinner size={SpinnerSize.XSMALL} label="Loading..." />
+              <Spinner size={SpinnerSize.XSMALL} label="Loading" />
             </td>
           </tr>
           <tr style={darkWrapper}>
             <td>
-              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} label="Loading..." />
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} label="Loading" />
             </td>
             <td>
-              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} label="Loading..." />
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} label="Loading" />
             </td>
             <td>
-              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} label="Loading..." />
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} label="Loading" />
             </td>
             <td>
-              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} label="Loading..." />
+              <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} label="Loading" />
             </td>
           </tr>
         </tbody>

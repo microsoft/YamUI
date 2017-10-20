@@ -45,7 +45,7 @@ describe('<Spinner />', () => {
   describe('with an aria-label', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner ariaLabel="Loading..." />,
+        <Spinner ariaLabel="Loading" />,
       );
     });
 
@@ -57,7 +57,7 @@ describe('<Spinner />', () => {
   describe('with an aria-live', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner ariaLabel="Loading..." ariaLive="assertive" />,
+        <Spinner ariaLabel="Loading" ariaLive="assertive" />,
       );
     });
 
@@ -69,7 +69,7 @@ describe('<Spinner />', () => {
   describe('with a label', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner label="Loading..." />,
+        <Spinner label="Loading" />,
       );
     });
 
@@ -81,7 +81,7 @@ describe('<Spinner />', () => {
   describe('with a color', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner label="Loading..." color={SpinnerColor.DARK} />,
+        <Spinner label="Loading" color={SpinnerColor.DARK} />,
       );
     });
 
@@ -93,7 +93,7 @@ describe('<Spinner />', () => {
   describe('with a size', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner label="Loading..." size={SpinnerSize.XSMALL} />,
+        <Spinner label="Loading" size={SpinnerSize.XSMALL} />,
       );
     });
 
