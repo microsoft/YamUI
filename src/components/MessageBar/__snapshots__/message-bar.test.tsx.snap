@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FakeLink /> with a type matches its snapshot 1`] = `
+<div
+  aria-label="label"
+  className="y-message-bar y-message-bar__type-warning"
+>
+  <div
+    className="y-message-bar--message"
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`<FakeLink /> with actions matches its snapshot 1`] = `
+<div
+  aria-label="label"
+  className="y-message-bar y-message-bar__type-info"
+>
+  <div
+    className="y-message-bar--message"
+  >
+    content
+  </div>
+  <div
+    className="y-message-bar--actions"
+  >
+    <FakeLink>
+      Link
+    </FakeLink>
+  </div>
+</div>
+`;
+
+exports[`<FakeLink /> with default options matches its snapshot 1`] = `
+<div
+  aria-label="label"
+  className="y-message-bar y-message-bar__type-info"
+>
+  <div
+    className="y-message-bar--message"
+  >
+    content
+  </div>
+</div>
+`;

@@ -31,6 +31,7 @@ import './Callout';
 import './ScreenreaderText';
 import './FixedGrid';
 import './HorizontalList';
+import './MessageBar';
 
 // Import other non-component documentation and demos
 import './Hovercard';

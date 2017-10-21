@@ -24,3 +24,7 @@ $captionBGColor: $color__sunrise;
 
 $dropdownOptionBGColor__focused: $color__popRock;
 $dropdownOptionBGColor__selected: $color__altRock;
+
+$messagebarBarColor__info: $color__punkRock;
+$messagebarBarColor__warning: $color__noon;
+$messagebarBarColor__error: $color__angel;
