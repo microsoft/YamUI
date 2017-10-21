@@ -111,6 +111,6 @@
     "svg": "run-s svg:*",
     "visual:test": "backstop test --config config/backstop/config.js",
     "visual:approve": "backstop approve --config config/backstop/config.js",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "npm run build"
   }
 }

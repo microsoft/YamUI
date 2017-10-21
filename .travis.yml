@@ -3,7 +3,7 @@ dist: trusty
 language: node_js
 
 node_js:
-  - "6.11.3"
+  - "8.7.0"
 
 branches:
   only:

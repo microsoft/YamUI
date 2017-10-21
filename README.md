@@ -41,13 +41,13 @@ Example using a `Button` component:
 ```sh
 git clone https://github.com/Microsoft/YamUI.git
 cd YamUI
-yarn install
+npm install
 ```
 
 To run visual diff regression tests:
 
 * Install Docker ([Docker for macOS](https://docs.docker.com/docker-for-mac/install/) / [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)).
-* Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yarn-docker` executable that looks like `alias y="./yarn-docker"`. Visual diff tasks need to run in Docker via the `y` alias, e.g. `y test` and `y test:visual`.
+* Create an alias `y` in your `~/.zshrc` or `~/.bashrc` file for the `yamui-docker` executable that looks like `alias y="./yamui-docker"`. Visual diff tasks need to run in Docker via the `y` alias, e.g. `y run test` and `y run test:visual`.
 
 It's best to have at least 30GB of free space for Docker containers and images. If you find that Docker is taking up too much space, try the following:
 
@@ -61,7 +61,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Starting up the dev server
 
-* `yarn start:dev` and visit [localhost:5555](http://localhost:5555/)
+* `npm run start:dev` and visit [localhost:5555](http://localhost:5555/)
 
 ### Building some components
 
@@ -72,19 +72,19 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Writing unit tests
 
-* `yarn start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
-* `yarn report:unit` will open the latest test coverage report in your browser. The reports let you browse into specific tests and get details about each line, which can be helpful when you're having trouble getting test coverage.
+* `npm run start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
+* `npm run report:unit` will open the latest test coverage report in your browser. The reports let you browse into specific tests and get details about each line, which can be helpful when you're having trouble getting test coverage.
 
 ### Runing visual diff regression tests
 
-* `y test:visual` will compile the components, build+export a static version of the Storybook app, start a dev server, take screenshots of each Storybook story, and fail if there are visual changes from the last approved screenshots. This will fail on brand new stories because they won't have reference images. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `yarn` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
-* `yarn report:visual` will open the most recent visual test you've run in your browser. This is helpful if you have failing visual tests and want to see exactly what is wrong.
-* `yarn visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its story and you have manually verified that the new visual changes are correct.
+* `y run test:visual` will compile the components, build+export a static version of the Storybook app, start a dev server, take screenshots of each Storybook story, and fail if there are visual changes from the last approved screenshots. This will fail on brand new stories because they won't have reference images. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `npm run` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
+* `npm run report:visual` will open the most recent visual test you've run in your browser. This is helpful if you have failing visual tests and want to see exactly what is wrong.
+* `npm run visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its story and you have manually verified that the new visual changes are correct.
 
 ### Testing all the things
 
-* `y test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
-* `yarn report` will open latest results from both Jest unit tests and Backstop visual diff regression tests.
+* `y run test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
+* `npm run report` will open latest results from both Jest unit tests and Backstop visual diff regression tests.
 
 ### Adding icons
 
