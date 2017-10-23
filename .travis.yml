@@ -10,7 +10,7 @@ branches:
     - master
 
 script:
-  - yarn run test
+  - npm run test
 
 after_success:
   - ./config/travis/build.sh
