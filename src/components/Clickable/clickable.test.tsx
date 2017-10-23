@@ -3,7 +3,7 @@ import { consoleTestResultHandler } from 'vrsource-tslint-rules/node_modules/tsl
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Clickable, { ClickableProps } from './index';
+import Clickable, { ClickableProps } from '.';
 
 describe('<Clickable />', () => {
   let component: ShallowWrapper<ClickableProps, {}>;

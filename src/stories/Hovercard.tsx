@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { storiesOf, StoryDecorator } from '@storybook/react';
-import Avatar, { AvatarSize, BorderType } from '../components/Avatar';
+import Avatar, { AvatarBorderType, AvatarSize } from '../components/Avatar';
 import Block, { GutterSize, TextSize } from '../components/Block';
 import Button, { ButtonColor } from '../components/Button';
 import {
@@ -46,7 +46,12 @@ const groupMetaExternal = 'Constoso and 3 others';
 const groupDesc = 'Group for data analytics, metrics, reporting, number-crunching, etc.';
 const groupMembersTitle = '102 members';
 const groupAvatar = (
-  <Avatar imageUrl={smiley} name={groupName} size={AvatarSize.LARGE} borderType={BorderType.SOFT} />
+  <Avatar
+    imageUrl={smiley}
+    name={groupName}
+    size={AvatarSize.LARGE}
+    borderType={AvatarBorderType.SOFT}
+  />
 );
 const memberAvatar1 = <Avatar imageUrl={smiley} name={userName} size={AvatarSize.XSMALL} />;
 const memberAvatar2 = <Avatar imageUrl={smiley} name="Eddie smiley" size={AvatarSize.XSMALL} />;

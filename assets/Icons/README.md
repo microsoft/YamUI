@@ -5,7 +5,7 @@ These are the source SVG icons used to generate the corresponding React componen
 ## Adding new icons
 
 * Add prepared SVGs to this folder.
-* Run `yarn svg`.
+* Run `npm run svg`.
 * Export the new icon from `src/components/Icon/icons/index.ts`.
 * Commit the new resources and visual diffs to a new branch, and open a pull request.
 

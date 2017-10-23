@@ -1,17 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { Enum } from 'typescript-string-enums';
 import classNames = require('classnames');
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { MessageBarType } from './enums';
 import './message-bar.css';
 
-export const MessageBarType = Enum({
-  INFO: 'info',
-  WARNING: 'warning',
-  ERROR: 'error',
-});
-export type MessageBarType = Enum<typeof MessageBarType>;
+export { MessageBarType };
 
 export interface MessageBarProps extends NestableBaseComponentProps {
   ariaLabel: string;
@@ -24,7 +19,7 @@ const getActions = (props: MessageBarProps) => {
   if (!props.actions) {
     return null;
   }
-  return (<div className="y-message-bar--actions">{props.actions}</div>);
+  return <div className="y-message-bar--actions">{props.actions}</div>;
 };
 
 const MessageBar: React.StatelessComponent<MessageBarProps> = (props) => {
@@ -34,7 +29,8 @@ const MessageBar: React.StatelessComponent<MessageBarProps> = (props) => {
     <div className={classes} aria-label={props.ariaLabel}>
       <div className="y-message-bar--message">{props.children}</div>
       {actions}
-    </div>);
+    </div>
+  );
 };
 
 export default MessageBar;

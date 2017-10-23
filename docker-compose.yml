@@ -9,4 +9,4 @@ services:
       - ./config:/usr/src/yamui/config
       - ./dist:/usr/src/yamui/dist
       - ./src:/usr/src/yamui/src
-    command: ["yarn", "test"]
+    command: ["npm", "run", "test"]

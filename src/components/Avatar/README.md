@@ -10,7 +10,7 @@ An `Avatar` shows a thumbnail representation of both an individual or group.
 | name * | string | Name of the person or object being represented. Will be used as accessible alt text. |
 | initials | string | Initials of person to display if no mugshot provided. |
 | imageUrl | string | Image source URL. |
-| borderType | BorderType | Round or soft border. Defaults to round. |
+| borderType | AvatarBorderType | Round or soft border. Defaults to round. |
 | badgeContent | ReactNode | Image, SVG, icon, etc. See example below. |
 | badgeDescription | string | A short accessible description of the badge. Will be appended to name if provided. |
 
@@ -41,7 +41,7 @@ You must provide either an `imageUrl` property or an `initials` property.
   size={AvatarSize.XSMALL}
   name="Marketing Team"
   imageUrl={antelope}
-  borderType={BorderType.SOFT}
+  borderType={AvatarBorderType.SOFT}
 />
 ```
 

@@ -12,7 +12,7 @@ A `Button` allows a user to take an action.
 | disabled | boolean | Whether this button should be disabled or not. Defaults to false. |
 | ariaLabel | string | Required if button text is not descriptive enough. |
 | icon | IconName | Optional icon. |
-| iconPosition | IconPosition | Position icon before or after text. Defaults to left (before). |
+| iconPosition | ButtonIconPosition | Position icon before or after text. Defaults to left (before). |
 | onClick | (event: any) => void | Click callback handler. |
 | onMouseEnter | (event: any) => void | Hover callback handler. |
 | onMouseLeave | (event: any) => void | Hover out callback handler. |

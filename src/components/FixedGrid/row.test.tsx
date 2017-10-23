@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { FixedGridRow, FixedGridRowProps, GutterSize } from './index';
+import { FixedGridRow, FixedGridRowProps, GutterSize } from '.';
 
 describe('<FixedGridRow />', () => {
   let component: ShallowWrapper<FixedGridRowProps, {}>;

@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Enum } from 'typescript-string-enums';
 import {
   ISpinnerProps as FabricSpinnerProps,
   Spinner as FabricSpinner,
@@ -9,7 +8,7 @@ import {
 } from 'office-ui-fabric-react/lib/Spinner';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Text, { TextProps, TextColor, TextSize } from '../Text';
-import { SpinnerSize } from '../../util/enums/spinner';
+import { SpinnerSize } from './enums';
 import './spinner.css';
 
 export { SpinnerSize };
@@ -21,17 +20,16 @@ const SizeMap = {
   [SpinnerSize.XSMALL]: FabricSpinnerSize.xSmall,
 };
 
-export const SpinnerColor = Enum({
+export enum SpinnerColor {
   /**
    * Light theme.
    */
-  LIGHT: 'light',
+  LIGHT = 'light',
   /**
    * Dark theme.
    */
-  DARK: 'dark',
-});
-export type SpinnerColor = Enum<typeof SpinnerColor>;
+  DARK = 'dark',
+}
 
 export interface SpinnerProps extends BaseComponentProps {
   /**

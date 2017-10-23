@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import Avatar, { AvatarSize, BorderType } from '../components/Avatar';
+import Avatar, { AvatarBorderType, AvatarSize } from '../components/Avatar';
 import Block, { GutterSize } from '../components/Block';
 import Image from '../components/Image';
 import withReadme from 'storybook-readme/with-readme';
@@ -145,7 +145,7 @@ storiesOf('Avatar', module)
                 imageUrl={yammerLogo}
                 size={AvatarSize.XLARGE}
                 name="Walter White"
-                borderType={BorderType.SOFT}
+                borderType={AvatarBorderType.SOFT}
               />
             </td>
             <td>
@@ -153,7 +153,7 @@ storiesOf('Avatar', module)
                 imageUrl={yammerLogo}
                 size={AvatarSize.LARGE}
                 name="Walter White"
-                borderType={BorderType.SOFT}
+                borderType={AvatarBorderType.SOFT}
               />
             </td>
             <td>
@@ -161,7 +161,7 @@ storiesOf('Avatar', module)
                 imageUrl={yammerLogo}
                 size={AvatarSize.MEDIUM}
                 name="Walter White"
-                borderType={BorderType.SOFT}
+                borderType={AvatarBorderType.SOFT}
               />
             </td>
             <td>
@@ -169,7 +169,7 @@ storiesOf('Avatar', module)
                 imageUrl={yammerLogo}
                 size={AvatarSize.SMALL}
                 name="Walter White"
-                borderType={BorderType.SOFT}
+                borderType={AvatarBorderType.SOFT}
               />
             </td>
             <td>
@@ -177,7 +177,7 @@ storiesOf('Avatar', module)
                 imageUrl={yammerLogo}
                 size={AvatarSize.XSMALL}
                 name="Walter White"
-                borderType={BorderType.SOFT}
+                borderType={AvatarBorderType.SOFT}
               />
             </td>
           </tr>

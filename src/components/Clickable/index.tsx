@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Enum } from 'typescript-string-enums';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './clickable.css';
 

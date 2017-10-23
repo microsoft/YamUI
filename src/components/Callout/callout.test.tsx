@@ -1,10 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import { Key } from '../../util/enums/key';
 import { Callout as FabricCallout } from 'office-ui-fabric-react/lib/Callout';
-import { Callout, CalloutProps, CalloutState, DirectionalHint, TriggerType } from './index';
+import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
+import { Callout, CalloutProps, CalloutState, DirectionalHint, TriggerType } from '.';
 
 describe('<Callout />', () => {
   jest.useFakeTimers();

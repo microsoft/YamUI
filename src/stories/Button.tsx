@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Button, { ButtonSize, ButtonColor, IconPosition } from '../components/Button';
+import Button, { ButtonColor, ButtonIconPosition, ButtonSize } from '../components/Button';
 import withReadme from 'storybook-readme/with-readme';
 const readme = require('../components/Button/README');
 
@@ -55,7 +55,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.REGULAR}
                 text={sampleText}
               />
@@ -63,7 +63,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.REGULAR}
                 text={sampleText}
                 href={url}
@@ -72,7 +72,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 disabled={true}
                 size={ButtonSize.REGULAR}
                 text={sampleText}
@@ -119,7 +119,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.REGULAR}
                 text={sampleText}
                 color={ButtonColor.SECONDARY}
@@ -128,7 +128,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.REGULAR}
                 text={sampleText}
                 color={ButtonColor.SECONDARY}
@@ -138,7 +138,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 disabled={true}
                 text={sampleText}
                 color={ButtonColor.SECONDARY}
@@ -189,7 +189,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.SMALL}
                 text={sampleText}
               />
@@ -197,7 +197,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.SMALL}
                 text={sampleText}
                 href={url}
@@ -206,7 +206,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 disabled={true}
                 size={ButtonSize.SMALL}
                 text={sampleText}
@@ -269,7 +269,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.SMALL}
                 text={sampleText}
                 color={ButtonColor.SECONDARY}
@@ -278,7 +278,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 size={ButtonSize.SMALL}
                 text={sampleText}
                 color={ButtonColor.SECONDARY}
@@ -288,7 +288,7 @@ storiesOf('Button', module)
             <td>
               <Button
                 icon="caretDown"
-                iconPosition={IconPosition.RIGHT}
+                iconPosition={ButtonIconPosition.RIGHT}
                 disabled={true}
                 size={ButtonSize.SMALL}
                 text={sampleText}

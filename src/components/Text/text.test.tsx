@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Text, { TextProps, TextColor, TextSize } from './index';
+import Text, { TextProps, TextColor, TextSize } from '.';
 
 describe('<Text />', () => {
   let component: ShallowWrapper<TextProps, {}>;

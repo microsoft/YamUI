@@ -1,21 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Enum } from 'typescript-string-enums';
 import { Persona, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { AvatarSize } from '../../util/enums/avatar';
 import ScreenreaderText from '../ScreenreaderText';
+import { AvatarBorderType, AvatarSize } from './enums';
 import './avatar.css';
 
-export { AvatarSize };
-
-export const BorderType = Enum({
-  SOFT: 'soft',
-  ROUND: 'round',
-});
-
-export type BorderType = Enum<typeof BorderType>;
+export { AvatarBorderType, AvatarSize };
 
 const SizeMap = {
   [AvatarSize.XLARGE]: PersonaSize.large,
@@ -54,7 +46,7 @@ export interface BaseAvatarProps extends BaseComponentProps {
   /**
    * Round or soft border. Defaults to round.
    */
-  borderType?: BorderType;
+  borderType?: AvatarBorderType;
 
   /**
    * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px. Defaults to medium.
@@ -79,7 +71,7 @@ export type AvatarProps = ImageAvatarProps | InitialsAvatarProps;
 
 export default class Avatar extends React.PureComponent<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
-    borderType: BorderType.ROUND,
+    borderType: AvatarBorderType.ROUND,
     size: AvatarSize.MEDIUM,
   };
 

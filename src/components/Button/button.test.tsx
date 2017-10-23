@@ -1,9 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Button, { ButtonProps, ButtonColor, ButtonSize } from './index';
-import Icon, { IconSize } from '../Icon';
 import { BaseButton } from 'office-ui-fabric-react/lib/Button';
+import Icon, { IconSize } from '../Icon';
+import Button, { ButtonProps, ButtonColor, ButtonIconPosition, ButtonSize } from '.';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -78,7 +78,9 @@ describe('<Button />', () => {
 
     describe('on the right', () => {
       beforeEach(() => {
-        component = shallow(<Button icon="plus" text={sampleText} iconPosition="right" />);
+        component = shallow(
+          <Button icon="plus" text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
+        );
       });
 
       it('renders the icon on the right', () => {

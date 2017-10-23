@@ -2,12 +2,12 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { IconSize } from '../../util/enums/iconSize';
-import ICONS from './icons';
+import { IconSize } from './enums';
+import icons from './icons';
 import './icon.css';
 
-export { IconSize, ICONS };
-export type IconName = keyof typeof ICONS;
+export { IconSize, icons };
+export type IconName = keyof typeof icons;
 
 export interface IconProps extends BaseComponentProps {
   /**
@@ -43,7 +43,7 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   };
 
   public render() {
-    const CurrentIcon = ICONS[this.props.icon];
+    const CurrentIcon = icons[this.props.icon];
     return (
       <CurrentIcon
         className={this.getClasses()}

@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Dropdown as FabricDropdown, IDropdownOption } from 'office-ui-fabric-react/lib/Dropdown';
+import { IDropdownOption, Dropdown as FabricDropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon from '../Icon';
 import './dropdown.css';

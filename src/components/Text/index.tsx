@@ -1,40 +1,16 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Enum } from 'typescript-string-enums';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { TextSize } from '../../util/enums/textSize';
+import { TextColor, TextSize } from './enums';
 import './text.css';
 
-export const TextColor = Enum({
-  /**
-   * Primary black text color
-   */
-  PRIMARY: 'primary',
-
-  /**
-   * Secondary dark gray text color
-   */
-  SECONDARY: 'secondary',
-
-  /**
-   * Tertiary color for metadata
-   */
-  METADATA: 'metadata',
-
-  /**
-   * For use on darker backgrounds
-   */
-  WHITE: 'white',
-});
-export type TextColor = Enum<typeof TextColor>;
+export { TextColor, TextSize };
 
 export interface TextProps extends NestableBaseComponentProps {
   size?: TextSize;
   color?: TextColor;
 }
-
-export { TextSize };
 
 // TODO: Create a helper to handle this across components
 const getClasses = (props: TextProps) => {

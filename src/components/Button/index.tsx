@@ -1,37 +1,15 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Enum } from 'typescript-string-enums';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
+import { ButtonColor, ButtonIconPosition, ButtonSize } from './enums';
 import './button.css';
 
+export { ButtonColor, ButtonIconPosition, ButtonSize };
+
 const hrefBlacklist = ['', '#', 'javascript://'];
-
-export const ButtonSize = Enum({
-  REGULAR: 'regular',
-  SMALL: 'small',
-});
-export type ButtonSize = Enum<typeof ButtonSize>;
-
-export const IconPosition = Enum({
-  LEFT: 'left',
-  RIGHT: 'right',
-});
-export type IconPosition = Enum<typeof IconPosition>;
-
-export const ButtonColor = Enum({
-  /**
-   * Primary blue. Only one primary action should be offered at one time.
-   */
-  PRIMARY: 'primary',
-  /**
-   * Most buttons should be secondary if multiple actions are offered.
-   */
-  SECONDARY: 'secondary',
-});
-export type ButtonColor = Enum<typeof ButtonColor>;
 
 export interface BaseButtonProps extends BaseComponentProps {
   /**
@@ -87,7 +65,7 @@ export interface BaseButtonProps extends BaseComponentProps {
   /**
    * Icon position.
    */
-  iconPosition?: IconPosition;
+  iconPosition?: ButtonIconPosition;
 }
 
 export interface RegularButtonProps extends BaseButtonProps {
@@ -137,7 +115,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   static defaultProps = {
     size: ButtonSize.REGULAR,
     color: ButtonColor.PRIMARY,
-    iconPosition: IconPosition.LEFT,
+    iconPosition: ButtonIconPosition.LEFT,
   };
 
   render() {
@@ -158,13 +136,13 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     const href = (props as LinkButtonProps).href;
 
     const leftIcon = icon &&
-      iconPosition === IconPosition.LEFT && (
+      iconPosition === ButtonIconPosition.LEFT && (
         <span className="y-button--icon-wrapper-left">
           <Icon {...this.getIconProps()} />
         </span>
       );
     const rightIcon = icon &&
-      iconPosition === IconPosition.RIGHT && (
+      iconPosition === ButtonIconPosition.RIGHT && (
         <span className="y-button--icon-wrapper-right">
           <Icon {...this.getIconProps()} />
         </span>
