@@ -93,7 +93,7 @@ export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   private getLabelProps(): TextProps {
     return {
       color: this.props.color === SpinnerColor.DARK ? TextColor.WHITE : TextColor.PRIMARY,
-      size: this.props.size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM,
+      size: this.props.size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB,
       className: 'y-spinner--label',
     };
   }

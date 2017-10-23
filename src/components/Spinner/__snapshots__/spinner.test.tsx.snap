@@ -5,7 +5,7 @@ exports[`<Spinner /> with a color matches its snapshot 1`] = `
   className="y-spinner y-spinner__color-dark y-spinner__size-medium"
 >
   <Spinner
-    ariaLabel="Loading..."
+    ariaLabel="Loading"
     ariaLive="polite"
     className="y-spinner--circle"
     size={2}
@@ -13,9 +13,9 @@ exports[`<Spinner /> with a color matches its snapshot 1`] = `
   <Text
     className="y-spinner--label"
     color="white"
-    size="medium"
+    size="mediumSub"
   >
-    Loading...
+    Loading
   </Text>
 </div>
 `;
@@ -25,7 +25,7 @@ exports[`<Spinner /> with a label matches its snapshot 1`] = `
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
   <Spinner
-    ariaLabel="Loading..."
+    ariaLabel="Loading"
     ariaLive="polite"
     className="y-spinner--circle"
     size={2}
@@ -33,9 +33,9 @@ exports[`<Spinner /> with a label matches its snapshot 1`] = `
   <Text
     className="y-spinner--label"
     color="primary"
-    size="medium"
+    size="mediumSub"
   >
-    Loading...
+    Loading
   </Text>
 </div>
 `;
@@ -45,7 +45,7 @@ exports[`<Spinner /> with a size matches its snapshot 1`] = `
   className="y-spinner y-spinner__color-light y-spinner__size-xSmall"
 >
   <Spinner
-    ariaLabel="Loading..."
+    ariaLabel="Loading"
     ariaLive="polite"
     className="y-spinner--circle"
     size={0}
@@ -55,7 +55,7 @@ exports[`<Spinner /> with a size matches its snapshot 1`] = `
     color="primary"
     size="small"
   >
-    Loading...
+    Loading
   </Text>
 </div>
 `;
@@ -77,7 +77,7 @@ exports[`<Spinner /> with an aria-label matches its snapshot 1`] = `
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
   <Spinner
-    ariaLabel="Loading..."
+    ariaLabel="Loading"
     ariaLive="polite"
     className="y-spinner--circle"
     size={2}
@@ -90,7 +90,7 @@ exports[`<Spinner /> with an aria-live matches its snapshot 1`] = `
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
   <Spinner
-    ariaLabel="Loading..."
+    ariaLabel="Loading"
     ariaLive="assertive"
     className="y-spinner--circle"
     size={2}
