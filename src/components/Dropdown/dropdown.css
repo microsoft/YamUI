@@ -63,11 +63,11 @@
 .ms-Dropdown-items .ms-Dropdown-item:hover,
 .ms-Dropdown-items .ms-Dropdown-item:active,
 .ms-Dropdown-items .ms-Dropdown-item:focus {
-  background-color: $dropdownOptionBGColor__focused;
+  background-color: $dropdownOptionBackgroundColor__focused;
 }
 
 .ms-Dropdown-items .ms-Dropdown-item.is-selected {
-  background-color: $dropdownOptionBGColor__selected;
+  background-color: $dropdownOptionBackgroundColor__selected;
 }
 
 .ms-Dropdown-items .ms-Dropdown-optionText {

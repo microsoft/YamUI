@@ -15,6 +15,7 @@ If a component needs to be modified, Yammer UX will update the graphic and indic
 * [Button](https://zpl.io/2yNNDGV)
 * [Dropdown](https://zpl.io/bz8nlzE)
 * [MediaObject](https://zpl.io/bllMzze)
+* [Spinner](https://zpl.io/ano399n)
 * [TextField](https://zpl.io/a7w8ZzK)
 
 ## Modules

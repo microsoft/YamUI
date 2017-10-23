@@ -1,0 +1,39 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/fonts.css";
+@import "src/css/variables/colors.css";
+
+.y-spinner {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.y-spinner--circle > .ms-Spinner-circle {
+  border: 2px solid color($spinnerColor__light a(30%));
+  border-top-color: $spinnerColor__light;
+}
+
+.y-spinner__color-dark > .y-spinner--circle > .ms-Spinner-circle {
+  border: 2px solid color($spinnerColor__dark a(30%));
+  border-top-color: $spinnerColor__dark;
+}
+
+.y-spinner--label {
+  margin: 0 0 0 8px;
+}
+
+.y-spinner__size-xSmall > .y-spinner--label {
+  margin: -1px 0 0 6px;
+}
+
+.y-spinner__size-small > .y-spinner--label {
+  margin: -1px 0 0 8px;
+}
+
+.y-spinner__size-large {
+  flex-direction: column;
+}
+
+.y-spinner__size-large > .y-spinner--label {
+  margin: 4px 0 0;
+}

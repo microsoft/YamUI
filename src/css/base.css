@@ -84,7 +84,7 @@ blockquote {
 }
 
 caption {
-  background: $captionBGColor;
+  background: $captionBackgroundColor;
 }
 
 b,

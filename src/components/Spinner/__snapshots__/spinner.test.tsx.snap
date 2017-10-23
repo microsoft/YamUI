@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> with a color matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-dark y-spinner__size-medium"
+>
+  <Spinner
+    ariaLabel="Loading"
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={2}
+  />
+  <Text
+    className="y-spinner--label"
+    color="white"
+    size="mediumSub"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with a label matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+>
+  <Spinner
+    ariaLabel="Loading"
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={2}
+  />
+  <Text
+    className="y-spinner--label"
+    color="primary"
+    size="mediumSub"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with a size matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-xSmall"
+>
+  <Spinner
+    ariaLabel="Loading"
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={0}
+  />
+  <Text
+    className="y-spinner--label"
+    color="primary"
+    size="small"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-medium TEST_CLASSNAME"
+>
+  <Spinner
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={2}
+  />
+</div>
+`;
+
+exports[`<Spinner /> with an aria-label matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+>
+  <Spinner
+    ariaLabel="Loading"
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={2}
+  />
+</div>
+`;
+
+exports[`<Spinner /> with an aria-live matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+>
+  <Spinner
+    ariaLabel="Loading"
+    ariaLive="assertive"
+    className="y-spinner--circle"
+    size={2}
+  />
+</div>
+`;
+
+exports[`<Spinner /> with default options matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+>
+  <Spinner
+    ariaLive="polite"
+    className="y-spinner--circle"
+    size={2}
+  />
+</div>
+`;

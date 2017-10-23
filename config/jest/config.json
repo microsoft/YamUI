@@ -1,5 +1,4 @@
 {
-  "verbose": true,
   "cacheDirectory": ".jest",
   "rootDir": "../../",
   "roots": [
@@ -10,7 +9,7 @@
     "ts",
     "tsx",
     "js",
-    "jsx"   
+    "jsx"
   ],
   "moduleNameMapper": {
     "^.+\\.css$": "identity-obj-proxy",
@@ -23,7 +22,11 @@
   "testPathIgnorePatterns": [
     "/node_modules/"
   ],
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/jest-serializer-enzyme"
+  ],
   "collectCoverage": true,
+  "mapCoverage": true,
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/components/Icon/icons/*.{tsx}"
@@ -41,9 +44,5 @@
       "functions": 95,
       "lines": 95
     }
-  },
-  "mapCoverage": true,
-  "snapshotSerializers": [
-    "<rootDir>/node_modules/jest-serializer-enzyme"
-  ]
+  }
 }
