@@ -7,8 +7,10 @@ import './screenreader-text.css';
 
 export interface ScreenreaderTextProps extends NestableBaseComponentProps {}
 
-const ScreenreaderText: React.StatelessComponent<ScreenreaderTextProps> = props => (
-  <span className={classNames('y-screenreaderText', props.className)}>{props.children}</span>
-);
+export default class ScreenreaderText extends React.PureComponent<ScreenreaderTextProps, {}> {
+  render() {
+    const { className, children } = this.props;
 
-export default ScreenreaderText;
+    return <span className={classNames('y-screenreaderText', className)}>{children}</span>;
+  }
+}

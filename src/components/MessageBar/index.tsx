@@ -15,26 +15,40 @@ export interface MessageBarProps extends NestableBaseComponentProps {
   children: React.ReactNode;
 }
 
-const getActions = (props: MessageBarProps) => {
-  if (!props.actions) {
-    return null;
+export default class MessageBar extends React.PureComponent<MessageBarProps, {}> {
+  static defaultProps = {
+    type: MessageBarType.INFO,
+  };
+
+  render() {
+    const { ariaLabel, children } = this.props;
+
+    return (
+      <div className={this.getClasses()} aria-label={ariaLabel}>
+        <div className="y-message-bar--message">{children}</div>
+        {this.getActions()}
+      </div>
+    );
   }
-  return <div className="y-message-bar--actions">{props.actions}</div>;
-};
 
-const MessageBar: React.StatelessComponent<MessageBarProps> = (props) => {
-  const actions = getActions(props);
-  const classes = classNames(`y-message-bar y-message-bar__type-${props.type}`, props.className);
-  return (
-    <div className={classes} aria-label={props.ariaLabel}>
-      <div className="y-message-bar--message">{props.children}</div>
-      {actions}
-    </div>
-  );
-};
+  private getClasses() {
+    const { className, type } = this.props;
 
-export default MessageBar;
+    const classes: string[] = ['y-message-bar', `y-message-bar__type-${type}`];
+    if (className) {
+      classes.push(className);
+    }
 
-MessageBar.defaultProps = {
-  type: MessageBarType.INFO,
-};
+    return classes.join(' ');
+  }
+
+  private getActions() {
+    const { actions } = this.props;
+
+    if (!actions) {
+      return null;
+    }
+
+    return <div className="y-message-bar--actions">{actions}</div>;
+  }
+}

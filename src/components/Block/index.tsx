@@ -26,70 +26,81 @@ export interface BlockProps extends NestableBaseComponentProps {
   push?: number;
 
   /**
-   * Determines the font-size/line-height combination within this block.
-   */
-  textSize?: TextSize;
-
-  /**
    * Convenience prop to align text left or right. Defaults to left.
    */
   textAlign?: 'left' | 'right';
+
+  /**
+   * Determines the font-size/line-height combination within this block.
+   */
+  textSize?: TextSize;
 }
-
-const pixelsToRems = (pixels: number) => pixels / 10;
-
-const getClasses = (props: BlockProps) => {
-  const classes: string[] = ['y-block'];
-  if (props.bottomSpacing) {
-    classes.push(`y-block__bottomSpacing-${props.bottomSpacing}`);
-  }
-  if (props.textSize) {
-    classes.push(`y-block__textSize-${props.textSize}`);
-  }
-  if (props.textAlign === 'right') {
-    classes.push('y-block__textAlign-right');
-  }
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
-
-const getInnerClasses = (props: BlockProps) => {
-  const classes: string[] = ['y-block--inner'];
-  if (props.padding) {
-    classes.push(`y-block--inner__padding-${props.padding}`);
-  }
-  return classes.join(' ');
-};
 
 interface BlockStyles {
   marginTop?: string;
   paddingTop?: string;
 }
 
-const getStyle = (props: BlockProps) => {
-  const styles: BlockStyles = {};
-  if (!props.push) {
+export default class Block extends React.PureComponent<BlockProps, {}> {
+  render() {
+    const { children } = this.props;
+
+    return (
+      <div className={this.getClasses()} style={this.getStyle()}>
+        <div className={this.getInnerClasses()}>{children}</div>
+      </div>
+    );
+  }
+
+  private getClasses() {
+    const { bottomSpacing, textSize, textAlign, className } = this.props;
+
+    const classes: string[] = ['y-block'];
+    if (bottomSpacing) {
+      classes.push(`y-block__bottomSpacing-${bottomSpacing}`);
+    }
+    if (textSize) {
+      classes.push(`y-block__textSize-${textSize}`);
+    }
+    if (textAlign === 'right') {
+      classes.push('y-block__textAlign-right');
+    }
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+
+  private getInnerClasses() {
+    const { padding } = this.props;
+
+    const classes: string[] = ['y-block--inner'];
+    if (padding) {
+      classes.push(`y-block--inner__padding-${padding}`);
+    }
+
+    return classes.join(' ');
+  }
+
+  private getStyle() {
+    const { push } = this.props;
+    const styles: BlockStyles = {};
+
+    if (!push) {
+      return styles;
+    }
+
+    // If `push` is negative, set negative top margin to "pull" it up.
+    // If positive, "push" it down with top padding (because margins can collapse).
+    const rems = push / 10;
+    const value = `${rems}rem`;
+    if (rems < 0) {
+      styles.marginTop = value;
+    } else {
+      styles.paddingTop = value;
+    }
+
     return styles;
   }
-
-  // If `push` is negative, set negative top margin to "pull" it up.
-  // If positive, "push" it down with top padding (because margins can collapse).
-  const rems = pixelsToRems(props.push);
-  const value = `${rems}rem`;
-  if (rems < 0) {
-    styles.marginTop = value;
-  } else {
-    styles.paddingTop = value;
-  }
-  return styles;
-};
-
-const Block: React.StatelessComponent<BlockProps> = props => (
-  <div className={getClasses(props)} style={getStyle(props)}>
-    <div className={getInnerClasses(props)}>{props.children}</div>
-  </div>
-);
-
-export default Block;
+}

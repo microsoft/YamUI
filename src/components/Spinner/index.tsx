@@ -79,33 +79,39 @@ export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
     );
   }
 
+  private getClasses() {
+    const { className, color, size } = this.props;
+
+    const classes: string[] = [
+      'y-spinner',
+      `y-spinner__color-${color}`,
+      `y-spinner__size-${size}`,
+    ];
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+
   private getSpinnerProps(): FabricSpinnerProps {
+    const { ariaLabel, ariaLive, label, size } = this.props;
+
     return {
-      ariaLabel: this.props.ariaLabel || this.props.label,
-      ariaLive: this.props.ariaLive,
-      size: SizeMap[this.props.size as string],
+      ariaLive,
+      ariaLabel: ariaLabel || label,
       className: 'y-spinner--circle',
+      size: SizeMap[size as string],
     };
   }
 
   private getLabelProps(): TextProps {
+    const { color, size } = this.props;
+
     return {
-      color: this.props.color === SpinnerColor.DARK ? TextColor.WHITE : TextColor.PRIMARY,
-      size: this.props.size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB,
+      color: color === SpinnerColor.DARK ? TextColor.WHITE : TextColor.PRIMARY,
+      size: size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB,
       className: 'y-spinner--label',
     };
-  }
-
-  private getClasses() {
-    const { props } = this;
-    const classes: string[] = [
-      'y-spinner',
-      `y-spinner__color-${props.color}`,
-      `y-spinner__size-${props.size}`,
-    ];
-    if (this.props.className) {
-      classes.push(this.props.className);
-    }
-    return classes.join(' ');
   }
 }

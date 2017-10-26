@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import autobind from 'core-decorators/lib/autobind';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { secureOpen } from '../../util/secureOpener';
@@ -8,58 +9,57 @@ import './navigation-link.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   href: string;
-  title?: string;
   newWindow?: boolean;
+  title?: string;
   unstyled?: boolean;
 }
 
 export default class NavigationLink extends React.PureComponent<NavigationLinkProps, {}> {
-  constructor(props: NavigationLinkProps) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
   render() {
-    let target;
-    let rel;
-    if (this.props.newWindow) {
-      target = '_blank';
-      rel = 'nofollow noreferrer';
-    }
+    const { href, newWindow, title, children } = this.props;
+    const target = newWindow ? '_blank' : undefined;
+    const rel = newWindow ? 'nofollow noreferrer' : undefined;
+
     return (
       <a
-        href={this.props.href}
         className={this.getClasses()}
-        onClick={this.handleClick}
-        target={target}
+        href={href}
         rel={rel}
-        title={this.props.title}
+        target={target}
+        title={title}
+        onClick={this.handleClick}
       >
-        {this.props.children}
+        {children}
       </a>
     );
   }
 
   private getClasses() {
+    const { className, newWindow, unstyled } = this.props;
+
     const classes: string[] = ['y-navigationLink'];
-    if (this.props.newWindow) {
+    if (newWindow) {
       classes.push('y-navigationLink__newWindow');
     }
-    if (this.props.unstyled) {
+    if (unstyled) {
       classes.push('y-navigationLink__unstyled');
     }
-    if (this.props.className) {
-      classes.push(this.props.className);
+    if (className) {
+      classes.push(className);
     }
+
     return classNames(classes);
   }
 
+  @autobind
   private handleClick(event: React.SyntheticEvent<HTMLAnchorElement>) {
-    if (!this.props.newWindow) {
+    const { href, newWindow } = this.props;
+
+    if (!newWindow) {
       return;
     }
 
-    secureOpen(this.props.href);
     event.preventDefault();
+    secureOpen(href);
   }
 }

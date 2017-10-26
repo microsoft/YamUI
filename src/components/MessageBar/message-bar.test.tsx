@@ -12,6 +12,32 @@ describe('<FakeLink />', () => {
       component = shallow(<MessageBar ariaLabel="label">content</MessageBar>);
     });
 
+    it('has its correct base class', () => {
+      expect(component.hasClass('y-message-bar')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with additional className', () => {
+    beforeEach(() => {
+      component = shallow(
+        <MessageBar ariaLabel="label" className="TEST_CLASSNAME">
+          content
+        </MessageBar>,
+      );
+    });
+
+    it('includes that className', () => {
+      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
+    });
+
+    it('still includes its base className', () => {
+      expect(component.hasClass('y-message-bar')).toBe(true);
+    });
+
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -20,7 +46,10 @@ describe('<FakeLink />', () => {
   describe('with a type', () => {
     beforeEach(() => {
       component = shallow(
-        <MessageBar ariaLabel="label" type={MessageBarType.WARNING}>content</MessageBar>);
+        <MessageBar ariaLabel="label" type={MessageBarType.WARNING}>
+          content
+        </MessageBar>,
+      );
     });
 
     it('matches its snapshot', () => {
@@ -32,7 +61,10 @@ describe('<FakeLink />', () => {
     beforeEach(() => {
       const link = <FakeLink>Link</FakeLink>;
       component = shallow(
-        <MessageBar ariaLabel="label" actions={link}>content</MessageBar>);
+        <MessageBar ariaLabel="label" actions={link}>
+          content
+        </MessageBar>,
+      );
     });
 
     it('matches its snapshot', () => {

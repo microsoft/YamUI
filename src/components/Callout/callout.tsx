@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import autobind from 'core-decorators/lib/autobind';
 import classNames = require('classnames');
 import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-react/lib/Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
@@ -8,8 +9,8 @@ import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
 import './callout.css';
 
-const showDelay = 750;
 const hideDelay = 500;
+const showDelay = 750;
 
 export interface VoidCallback {
   (): void;
@@ -27,11 +28,6 @@ export interface CalloutProps extends NestableBaseComponentProps {
   content: React.ReactNode;
 
   /**
-   * A hidden title to be rendered in an h1 tag
-   */
-  screenreaderTitle?: string;
-
-  /**
    * This side or corner to place the Callout in relationship to its visible trigger content. Note
    * that this is a hint and the popup position will adjust to available screen real estate.
    */
@@ -43,6 +39,11 @@ export interface CalloutProps extends NestableBaseComponentProps {
   isBeakVisible?: boolean;
 
   /**
+   * A hidden title to be rendered in an h1 tag
+   */
+  screenreaderTitle?: string;
+
+  /**
    * If true, the component will manually set its displayed state to true. Note that it will wait
    * until componentDidMount to ensure it can properly position itself in relation to the trigger
    * content. Defaults to false.
@@ -50,15 +51,9 @@ export interface CalloutProps extends NestableBaseComponentProps {
   startVisible?: boolean;
 
   /**
-   * Callback to be fired on trigger hover. Can be used to preload Ajax content early before the
-   * callout content is actually displayed.
+   * Whether a click or hover should trigger the Callout to display. Defaults to hover.
    */
-  onTriggerHover?: VoidCallback;
-
-  /**
-   * Callback to be fired when the callout content is displayed
-   */
-  onContentDisplay?: VoidCallback;
+  triggerType?: TriggerType;
 
   /**
    * Callback to be fired when the callout content is removed
@@ -66,21 +61,29 @@ export interface CalloutProps extends NestableBaseComponentProps {
   onContentDismiss?: VoidCallback;
 
   /**
-   * Whether a click or hover should trigger the Callout to display. Defaults to hover.
+   * Callback to be fired when the callout content is displayed
    */
-  triggerType?: TriggerType;
+  onContentDisplay?: VoidCallback;
+
+  /**
+   * Callback to be fired on trigger hover. Can be used to preload Ajax content early before the
+   * callout content is actually displayed.
+   */
+  onTriggerHover?: VoidCallback;
 }
+
 export interface CalloutState {
   visible: boolean;
 }
+
 export { DirectionalHint };
 
 export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
   static defaultProps: Partial<CalloutProps> = {
-    isBeakVisible: true,
     directionalHint: DirectionalHint.bottomCenter,
-    triggerType: TriggerType.HOVER,
+    isBeakVisible: true,
     startVisible: false,
+    triggerType: TriggerType.HOVER,
   };
 
   private triggerElement: HTMLSpanElement;
@@ -89,30 +92,31 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
 
   constructor(props: CalloutProps) {
     super(props);
+
     this.state = {
       visible: false,
     };
-
-    // TODO: Use @autobind decorator
-    this.handleTriggerClick = this.handleTriggerClick.bind(this);
-    this.handleTriggerHover = this.handleTriggerHover.bind(this);
-    this.handleTriggerHoverLeave = this.handleTriggerHoverLeave.bind(this);
-    this.handleBodyHover = this.handleBodyHover.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.hide = this.hide.bind(this);
-    this.beginHide = this.beginHide.bind(this);
   }
 
   render() {
-    const screenreaderTitle = this.props.screenreaderTitle && (
+    const {
+      className,
+      content,
+      directionalHint,
+      isBeakVisible,
+      screenreaderTitle,
+      children,
+    } = this.props;
+
+    const screenreaderTitleChild = screenreaderTitle && (
       <ScreenreaderText>
-        <h1>{this.props.screenreaderTitle}</h1>
+        <h1>{screenreaderTitle}</h1>
       </ScreenreaderText>
     );
     const callout = this.state.visible && (
       <FabricCallout
-        isBeakVisible={this.props.isBeakVisible}
-        directionalHint={this.props.directionalHint}
+        isBeakVisible={isBeakVisible}
+        directionalHint={directionalHint}
         target={this.triggerElement}
         onDismiss={this.hide}
         preventDismissOnScroll={false}
@@ -122,14 +126,14 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
           onMouseEnter={this.handleBodyHover}
           onMouseLeave={this.beginHide}
         >
-          {screenreaderTitle}
-          {this.props.content}
+          {screenreaderTitleChild}
+          {content}
         </div>
       </FabricCallout>
     );
 
     return (
-      <span className={classNames('y-callout', this.props.className)}>
+      <span className={classNames('y-callout', className)}>
         <span
           className="y-callout--trigger"
           ref={(node: HTMLSpanElement) => (this.triggerElement = node)}
@@ -137,7 +141,7 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
           onMouseEnter={this.handleTriggerHover}
           onMouseLeave={this.handleTriggerHoverLeave}
         >
-          {this.props.children}
+          {children}
         </span>
         {callout}
       </span>
@@ -146,7 +150,9 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
 
   // Set initial visible state after mount so the trigger ref exists for positioning
   componentDidMount() {
-    if (this.props.startVisible) {
+    const { startVisible } = this.props;
+
+    if (startVisible) {
       this.show();
     }
   }
@@ -157,83 +163,108 @@ export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
     this.stopKeyListener();
   }
 
+  @autobind
   private handleTriggerClick() {
-    if (this.props.triggerType === TriggerType.CLICK) {
+    const { triggerType } = this.props;
+
+    if (triggerType === TriggerType.CLICK) {
       this.show();
     }
   }
 
+  @autobind
   private handleTriggerHover() {
-    this.props.onTriggerHover && this.props.onTriggerHover();
+    const { triggerType, onTriggerHover } = this.props;
+
+    onTriggerHover && onTriggerHover();
 
     this.cancelHide();
 
-    if (this.props.triggerType === TriggerType.HOVER) {
+    if (triggerType === TriggerType.HOVER) {
       this.beginShow();
     }
   }
 
+  @autobind
   private handleTriggerHoverLeave() {
     this.cancelShow();
     this.beginHide();
   }
 
+  @autobind
   private handleBodyHover() {
     this.cancelHide();
   }
 
+  @autobind
   private beginShow() {
     this.showTimeout = window.setTimeout(
       () => { this.show(); },
       showDelay,
     );
   }
+
+  @autobind
   private cancelShow() {
     window.clearTimeout(this.showTimeout);
   }
 
+  @autobind
   private beginHide() {
     this.hideTimeout = window.setTimeout(
       () => { this.hide(); },
       hideDelay,
     );
   }
+
+  @autobind
   private cancelHide() {
     window.clearTimeout(this.hideTimeout);
   }
 
+  @autobind
   private show() {
+    const { onContentDisplay } = this.props;
+    const { visible } = this.state;
+
     if (this.state.visible) {
       return;
     }
 
-    this.props.onContentDisplay && this.props.onContentDisplay();
+    onContentDisplay && onContentDisplay();
 
     this.setState({ visible: true });
     this.startKeyListener();
   }
 
+  @autobind
   private hide() {
+    const { onContentDismiss } = this.props;
+    const { visible } = this.state;
+
     if (!this.state.visible) {
       return;
     }
 
-    this.props.onContentDismiss && this.props.onContentDismiss();
+    onContentDismiss && onContentDismiss();
 
     this.setState({ visible: false });
     this.stopKeyListener();
   }
 
+  @autobind
   private handleKeyDown(e: KeyboardEvent) {
     if (e.keyCode === Key.Escape) {
       this.hide();
     }
   }
 
+  @autobind
   private startKeyListener() {
     document.addEventListener('keydown', this.handleKeyDown);
   }
 
+  @autobind
   private stopKeyListener() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }

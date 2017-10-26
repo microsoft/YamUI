@@ -52,68 +52,83 @@ const ImageWidthMap = {
   [MediaObjectSize.XSMALL]: 24,
 };
 
-const getClasses = (props: MediaObjectProps) => {
-  const classes: string[] = ['y-media-object', `y-media-object__size-${props.size}`];
-  if (props.className) {
-    classes.push(props.className);
+export default class MediaObject extends React.PureComponent<MediaObjectProps, {}> {
+  render() {
+    const {
+      size,
+      imageContent,
+      titleContent,
+      metadataContent,
+      extraContent,
+      children,
+    } = this.props;
+
+    const gutterSize = this.getGutterSize();
+    const imageColumnClass = `y-media-object__size-${size}--image`;
+
+    const titleContentChild = titleContent && (
+      <MediaObjectTitle size={size}>{titleContent}</MediaObjectTitle>
+    );
+    const metadataContentChild = this.showMetadata() && (
+      <MediaObjectMetadata size={size}>{metadataContent}</MediaObjectMetadata>
+    );
+    const extraContentChild = this.showExtra() && (
+      <MediaObjectExtra>{extraContent}</MediaObjectExtra>
+    );
+
+    return (
+      <div className={this.getClasses()}>
+        <FixedGridRow gutterSize={gutterSize}>
+          <FixedGridColumn width={ImageWidthMap[size]} fixed={true} className={imageColumnClass}>
+            {imageContent}
+          </FixedGridColumn>
+          <FixedGridColumn>
+            {titleContentChild}
+            {metadataContentChild}
+            {extraContentChild}
+            {children}
+          </FixedGridColumn>
+        </FixedGridRow>
+      </div>
+    );
   }
-  return classes.join(' ');
-};
 
-const getGutterSize = (size: MediaObjectSize) => {
-  if (size === MediaObjectSize.XLARGE) {
-    return GutterSize.XLARGE;
+  private getClasses() {
+    const { className, size } = this.props;
+
+    const classes: string[] = ['y-media-object', `y-media-object__size-${size}`];
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
   }
-  return GutterSize.MEDIUM;
-};
 
-const showMetadata = (props: MediaObjectProps) => {
-  if (!props.metadataContent) {
-    return false;
+  private getGutterSize() {
+    const { size } = this.props;
+
+    return size === MediaObjectSize.XLARGE ? GutterSize.XLARGE : GutterSize.MEDIUM;
   }
-  if (props.size === MediaObjectSize.XSMALL) {
-    return false;
+
+  private showMetadata() {
+    const { metadataContent, size } = this.props;
+
+    if (!metadataContent) {
+      return false;
+    }
+    if (size === MediaObjectSize.XSMALL) {
+      return false;
+    }
+    return true;
   }
-  return true;
-};
 
-const showExtra = (props: MediaObjectProps) => {
-  if (!props.extraContent) {
-    return false;
+  private showExtra() {
+    const { extraContent, size } = this.props;
+
+    if (!extraContent) {
+      return false;
+    }
+
+    return size === MediaObjectSize.XLARGE;
   }
-  return props.size === MediaObjectSize.XLARGE;
-};
-
-const MediaObject: React.StatelessComponent<MediaObjectProps> = (props) => {
-  const gutterSize = getGutterSize(props.size);
-  const imageColumnClass = `y-media-object__size-${props.size}--image`;
-
-  const titleContent = props.titleContent && (
-    <MediaObjectTitle size={props.size}>{props.titleContent}</MediaObjectTitle>
-  );
-  const metadataContent = showMetadata(props) && (
-    <MediaObjectMetadata size={props.size}>{props.metadataContent}</MediaObjectMetadata>
-  );
-
-  return (
-    <div className={getClasses(props)}>
-      <FixedGridRow gutterSize={gutterSize}>
-        <FixedGridColumn
-          width={ImageWidthMap[props.size]}
-          fixed={true}
-          className={imageColumnClass}
-        >
-          {props.imageContent}
-        </FixedGridColumn>
-        <FixedGridColumn>
-          {titleContent}
-          {metadataContent}
-          {showExtra(props) && <MediaObjectExtra>{props.extraContent}</MediaObjectExtra>}
-          {props.children}
-        </FixedGridColumn>
-      </FixedGridRow>
-    </div>
-  );
-};
-
-export default MediaObject;
+}

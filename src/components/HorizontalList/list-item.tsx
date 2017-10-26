@@ -6,14 +6,21 @@ import './horizontal-list.css';
 
 export { NestableBaseComponentProps };
 
-const getClasses = (props: NestableBaseComponentProps) => {
-  const classes: string[] = ['y-horizontalList--item'];
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
+export class ListItem extends React.PureComponent<NestableBaseComponentProps, {}> {
+  render() {
+    const { children } = this.props;
 
-export const ListItem: React.StatelessComponent<NestableBaseComponentProps> = props => (
-  <li className={getClasses(props)}>{props.children}</li>
-);
+    return <li className={this.getClasses()}>{children}</li>;
+  }
+
+  private getClasses() {
+    const { className } = this.props;
+
+    const classes: string[] = ['y-horizontalList--item'];
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+}

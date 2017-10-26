@@ -5,32 +5,34 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './clickable.css';
 
 export interface ClickableProps extends NestableBaseComponentProps {
-  block?: boolean;
   ariaLabel?: string;
+  block?: boolean;
   title?: string;
   onClick?: (event: any) => void;
 }
 
-const getClasses = (props: ClickableProps) => {
-  const classes: string[] = ['y-clickable'];
-  if (props.block) {
-    classes.push('y-clickable__block');
-  }
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
+export default class Clickable extends React.PureComponent<ClickableProps, {}> {
+  render() {
+    const { ariaLabel, title, onClick, children } = this.props;
 
-const Clickable: React.StatelessComponent<ClickableProps> = props => (
-  <button
-    className={getClasses(props)}
-    onClick={props.onClick}
-    aria-label={props.ariaLabel}
-    title={props.title}
-  >
-    {props.children}
-  </button>
-);
+    return (
+      <button className={this.getClasses()} aria-label={ariaLabel} title={title} onClick={onClick}>
+        {children}
+      </button>
+    );
+  }
 
-export default Clickable;
+  private getClasses() {
+    const { block, className } = this.props;
+
+    const classes: string[] = ['y-clickable'];
+    if (block) {
+      classes.push('y-clickable__block');
+    }
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+}

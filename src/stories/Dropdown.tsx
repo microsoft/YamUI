@@ -1,5 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
+import autobind from 'core-decorators/lib/autobind';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
@@ -22,10 +23,8 @@ interface ControlledDropdownState {
 class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState> {
   constructor() {
     super();
-    this.state = {};
 
-    // TODO: Use @autobind decorator
-    this.onChanged = this.onChanged.bind(this);
+    this.state = {};
   }
 
   public render() {
@@ -41,6 +40,7 @@ class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState
     );
   }
 
+  @autobind
   private onChanged(key: DropdownOptionKey) {
     action('dropdown changed')(key);
     this.setState({ selectedKey: key });

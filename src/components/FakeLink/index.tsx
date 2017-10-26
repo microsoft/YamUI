@@ -7,8 +7,10 @@ import './fake-link.css';
 
 export interface FakeLinkProps extends NestableBaseComponentProps {}
 
-const FakeLink: React.StatelessComponent<FakeLinkProps> = props => (
-  <span className={classNames('y-fakeLink', props.className)}>{props.children}</span>
-);
+export default class FakeLink extends React.PureComponent<FakeLinkProps, {}> {
+  render() {
+    const { className, children } = this.props;
 
-export default FakeLink;
+    return <span className={classNames('y-fakeLink', className)}>{children}</span>;
+  }
+}
