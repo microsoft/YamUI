@@ -61,21 +61,33 @@ describe('<Block />', () => {
     });
   });
 
-  describe('with textAlign right', () => {
-    beforeEach(() => {
-      component = shallow(<Block textAlign="right">block content</Block>);
+  describe('with textAlign', () => {
+    describe('right', () => {
+      beforeEach(() => {
+        component = shallow(<Block textAlign="right">block content</Block>);
+      });
+
+      it('includes the aligned right className', () => {
+        expect(component.hasClass('y-block__textAlign-right')).toBe(true);
+      });
+
+      it('still has its base className', () => {
+        expect(component.hasClass('y-block')).toBe(true);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
 
-    it('includes the aligned right className', () => {
-      expect(component.hasClass('y-block__textAlign-right')).toBe(true);
-    });
+    describe('center', () => {
+      beforeEach(() => {
+        component = shallow(<Block textAlign="center">block content</Block>);
+      });
 
-    it('still has its base className', () => {
-      expect(component.hasClass('y-block')).toBe(true);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      it('includes the aligned right className', () => {
+        expect(component.hasClass('y-block__textAlign-center')).toBe(true);
+      });
     });
   });
 

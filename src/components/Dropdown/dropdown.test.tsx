@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import {
   Dropdown as FabricDropdown,
   IDropdownProps,
@@ -9,31 +9,14 @@ import Dropdown, { DropdownProps } from '.';
 
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;
-
+  let fullComponent: ReactWrapper<DropdownProps, {}>;
+  
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(<Dropdown options={[]} />);
     });
 
     it('has its correct base class', () => {
-      expect(component.hasClass('y-dropdown')).toBe(true);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with additional className', () => {
-    beforeEach(() => {
-      component = shallow(<Dropdown options={[]} className="TEST_CLASSNAME" />);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
       expect(component.hasClass('y-dropdown')).toBe(true);
     });
 
@@ -76,6 +59,16 @@ describe('<Dropdown />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when fully rendered', () => {
+    beforeEach(() => {
+      fullComponent = mount(<Dropdown options={[]} />);
+    });
+
+    it('displays our custom caret icon', () => {
+      expect(fullComponent.find('.y-dropdown__caretDown').length).toBe(1);
     });
   });
 
