@@ -7,8 +7,14 @@ import Block, { GutterSize } from '../Block';
 
 export interface CalloutBodyProps extends NestableBaseComponentProps {}
 
-export const CalloutBody: React.StatelessComponent<CalloutBodyProps> = props => (
-  <div className={classNames('y-callout--body', props.className)}>
-    <Block padding={GutterSize.XLARGE}>{props.children}</Block>
-  </div>
-);
+export class CalloutBody extends React.PureComponent<CalloutBodyProps, {}> {
+  render() {
+    const { className, children } = this.props;
+
+    return (
+      <div className={classNames('y-callout--body', className)}>
+        <Block padding={GutterSize.XLARGE}>{children}</Block>
+      </div>
+    );
+  }
+}

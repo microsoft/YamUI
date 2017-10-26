@@ -9,25 +9,27 @@ export { ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
   /**
-   * Image source URL.
-   */
-  source: string;
-
-  /**
    * Alt text, required for accessibility. Set to an empty string if screenreaders should not read
    * anything out loud.
    */
   description: string;
 
   /**
+   * Image source URL.
+   */
+  source: string;
+
+  /**
+   * Set this to true in responsive layouts where the image's container element should dictate the
+   * image's width. The image will grow to fit its container's width and its height will grow to
+   * match its natural aspect ratio.
+   */
+  fullWidth?: boolean;
+
+  /**
    * Height in pixels.
    */
   height?: number;
-
-  /**
-   * Width in pixels.
-   */
-  width?: number;
 
   /**
    * Specifies how to position this image within its div wrapper. Not setting a value will behave
@@ -39,11 +41,9 @@ export interface ImageProps extends BaseComponentProps {
   imageFit?: ImageFit;
 
   /**
-   * Set this to true in responsive layouts where the image's container element should dictate the
-   * image's width. The image will grow to fit its container's width and its height will grow to
-   * match its natural aspect ratio.
+   * Width in pixels.
    */
-  fullWidth?: boolean;
+  width?: number;
 
   /**
    * Callback to be invoked when the image's loading state changes.
@@ -57,34 +57,40 @@ export default class Image extends React.PureComponent<ImageProps, {}> {
   };
 
   render() {
+    const { description, fullWidth, imageFit, source, onLoadingStateChange } = this.props;
+
     let height = this.props.height;
     let width: number | string | undefined = this.props.width;
-    if (this.props.fullWidth) {
+
+    if (fullWidth) {
       height = undefined;
       width = '100%';
     }
 
     return (
       <FabricImage
-        src={this.props.source}
-        alt={this.props.description}
+        alt={description}
         className={this.getClasses()}
         height={height}
+        imageFit={imageFit}
         width={width}
-        imageFit={this.props.imageFit}
-        onLoadingStateChange={this.props.onLoadingStateChange}
+        src={source}
+        onLoadingStateChange={onLoadingStateChange}
       />
     );
   }
 
   private getClasses() {
+    const { className, fullWidth } = this.props;
+
     const classes: string[] = ['y-image'];
-    if (this.props.fullWidth) {
+    if (fullWidth) {
       classes.push('y-image__fullWidth');
     }
-    if (this.props.className) {
-      classes.push(this.props.className);
+    if (className) {
+      classes.push(className);
     }
+
     return classes.join(' ');
   }
 }

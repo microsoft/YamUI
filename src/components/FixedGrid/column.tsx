@@ -18,38 +18,48 @@ export interface FixedGridColumnProps extends NestableBaseComponentProps {
   width?: number;
 }
 
-const getClasses = (props: FixedGridColumnProps) => {
-  const classes: string[] = ['y-fixedGridColumn'];
-  if (props.fixed) {
-    classes.push('y-fixedGridColumn__isFixed');
-  }
-  if (props.width) {
-    classes.push('y-fixedGridColumn__hasWidth');
-  }
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
-
 interface ColumnStyles {
   width?: string;
 }
 
-const getStyle = (props: FixedGridColumnProps) => {
-  const styles: ColumnStyles = {};
+export class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
+  render() {
+    const { children } = this.props;
 
-  // Only set a width on a fixed column
-  if (!props.fixed || !props.width) {
-    return styles;
+    return (
+      <div className={this.getClasses()} style={this.getStyle()}>
+        {children}
+      </div>
+    );
   }
 
-  styles.width = `${props.width}px`;
-  return styles;
-};
+  private getClasses() {
+    const { className, fixed, width } = this.props;
 
-export const FixedGridColumn: React.StatelessComponent<FixedGridColumnProps> = props => (
-  <div className={getClasses(props)} style={getStyle(props)}>
-    {props.children}
-  </div>
-);
+    const classes: string[] = ['y-fixedGridColumn'];
+    if (fixed) {
+      classes.push('y-fixedGridColumn__isFixed');
+    }
+    if (width) {
+      classes.push('y-fixedGridColumn__hasWidth');
+    }
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+
+  private getStyle() {
+    const { fixed, width } = this.props;
+    const styles: ColumnStyles = {};
+
+    // Only set a width on a fixed column
+    if (!fixed || !width) {
+      return styles;
+    }
+
+    styles.width = `${width}px`;
+    return styles;
+  }
+}

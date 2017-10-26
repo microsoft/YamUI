@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import autobind from 'core-decorators/lib/autobind';
 import { IDropdownOption, Dropdown as FabricDropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon from '../Icon';
@@ -21,6 +22,11 @@ export interface DropdownProps extends BaseComponentProps {
   label?: string;
 
   /**
+   * Input placeholder text. Displayed until option is selected.
+  **/
+  placeHolder?: string;
+
+  /**
    * Use to specify an initially selected option.
   **/
   selectedKey?: DropdownOptionKey;
@@ -29,29 +35,20 @@ export interface DropdownProps extends BaseComponentProps {
    * Function to call when user changes the selected item.
   **/
   onChanged?: (key: DropdownOptionKey) => void;
-
-  /**
-   * Input placeholder text. Displayed until option is selected.
-  **/
-  placeHolder?: string;
 }
 
 export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
-  constructor() {
-    super();
-    this.handleChanged = this.handleChanged.bind(this);
-  }
-
   render() {
-    const { options, selectedKey, onChanged, placeHolder, label } = this.props;
+    const { label, options, placeHolder, selectedKey, onChanged } = this.props;
+
     return (
       <div className={this.getClasses()}>
         <FabricDropdown
+          label={label}
           options={options}
+          placeHolder={placeHolder}
           selectedKey={selectedKey}
           onChanged={this.handleChanged}
-          placeHolder={placeHolder}
-          label={label}
           onRenderCaretDown={this.getIcon}
         />
       </div>
@@ -59,10 +56,13 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   }
 
   private getClasses() {
+    const { className } = this.props;
+
     const classes: string[] = ['y-dropdown'];
-    if (this.props.className) {
-      classes.push(this.props.className);
+    if (className) {
+      classes.push(className);
     }
+
     return classes.join(' ');
   }
 
@@ -70,7 +70,10 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
     return <Icon className="y-dropdown__caretDown" icon="caretDown" />;
   }
 
+  @autobind
   private handleChanged(option: DropdownOption) {
-    this.props.onChanged && this.props.onChanged(option.key);
+    const { onChanged } = this.props;
+
+    onChanged && onChanged(option.key);
   }
 }

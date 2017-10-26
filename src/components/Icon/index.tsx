@@ -16,9 +16,9 @@ export interface IconProps extends BaseComponentProps {
   icon: IconName;
 
   /**
-   * Optional pre-determined size. Defaults to medium.
+   * Sets icon style to `display: block`.
    */
-  size?: IconSize;
+  block?: boolean;
 
   /**
    * Override inherited color. Can be any valid CSS color.
@@ -26,15 +26,15 @@ export interface IconProps extends BaseComponentProps {
   color?: string;
 
   /**
-   * Sets icon style to `display: block`.
+   * Optional pre-determined size. Defaults to medium.
    */
-  block?: boolean;
+  size?: IconSize;
 }
 
 interface IconStyles {
-  color?: string;
   height: string;
   width: string;
+  color?: string;
 }
 
 export default class Icon extends React.PureComponent<IconProps, {}> {
@@ -43,36 +43,44 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
   };
 
   public render() {
-    const CurrentIcon = icons[this.props.icon];
+    const { icon } = this.props;
+    const CurrentIcon = icons[icon];
+
     return (
       <CurrentIcon
         className={this.getClasses()}
+        data-icon={icon}
         style={this.getInlineStyles()}
-        data-icon={this.props.icon}
       />
     );
   }
 
   private getClasses() {
+    const { block, className } = this.props;
+
     const classes = ['y-icon'];
-    if (this.props.block) {
+    if (block) {
       classes.push('y-icon__isBlock');
     }
-    if (this.props.className) {
-      classes.push(this.props.className);
+    if (className) {
+      classes.push(className);
     }
+
     return classes.join(' ');
   }
 
   private getInlineStyles() {
-    const length = this.props.size + 'px';
+    const { color, size } = this.props;
+    const length = size + 'px';
     const styles: IconStyles = {
       height: length,
       width: length,
     };
-    if (this.props.color) {
-      styles.color = this.props.color;
+
+    if (color) {
+      styles.color = color;
     }
+
     return styles;
   }
 }

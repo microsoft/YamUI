@@ -33,6 +33,19 @@ exports[`<FakeLink /> with actions matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<FakeLink /> with additional className matches its snapshot 1`] = `
+<div
+  aria-label="label"
+  className="y-message-bar y-message-bar__type-info TEST_CLASSNAME"
+>
+  <div
+    className="y-message-bar--message"
+  >
+    content
+  </div>
+</div>
+`;
+
 exports[`<FakeLink /> with default options matches its snapshot 1`] = `
 <div
   aria-label="label"

@@ -23,39 +23,9 @@ export interface BaseButtonProps extends BaseComponentProps {
   ariaLabel?: string;
 
   /**
-   * Button size. Defaults to regular.
-   */
-  size?: ButtonSize;
-
-  /**
    * The color describing the button's intent. Defaults to primary.
    */
   color?: ButtonColor;
-
-  /**
-   * Click callback handler. Will provide the React synthetic event.
-   */
-  onClick?: (event: any) => void;
-
-  /**
-   * Hover callback handler. Will provide the React synthetic event.
-   */
-  onMouseEnter?: (event: any) => void;
-
-  /**
-   * Hover out callback handler. Will provide the React synthetic event.
-   */
-  onMouseLeave?: (event: any) => void;
-
-  /**
-   * Focus callback handler. Will provide the React synthetic event.
-   */
-  onFocus?: (event: any) => void;
-
-  /**
-   * Focus lost callback handler. Will provide the React synthetic event.
-   */
-  onBlur?: (event: any) => void;
 
   /**
    * Optional icon.
@@ -66,18 +36,48 @@ export interface BaseButtonProps extends BaseComponentProps {
    * Icon position.
    */
   iconPosition?: ButtonIconPosition;
+
+  /**
+   * Button size. Defaults to regular.
+   */
+  size?: ButtonSize;
+
+  /**
+   * Focus lost callback handler. Will provide the React synthetic event.
+   */
+  onBlur?: (event: any) => void;
+
+  /**
+   * Click callback handler. Will provide the React synthetic event.
+   */
+  onClick?: (event: any) => void;
+
+  /**
+   * Focus callback handler. Will provide the React synthetic event.
+   */
+  onFocus?: (event: any) => void;
+
+  /**
+   * Hover callback handler. Will provide the React synthetic event.
+   */
+  onMouseEnter?: (event: any) => void;
+
+  /**
+   * Hover out callback handler. Will provide the React synthetic event.
+   */
+  onMouseLeave?: (event: any) => void;
 }
 
 export interface RegularButtonProps extends BaseButtonProps {
   /**
-   * Whether this button should be disabled or not. Defaults to false.
-   */
-  disabled?: boolean;
-
-  /**
    * Disabled buttons cannot have a link href.
    */
   href?: void;
+
+  /**
+   * Whether this button should be disabled or not. Defaults to false.
+   */
+  disabled?: boolean;
 }
 
 export interface LinkButtonProps extends BaseButtonProps {
@@ -119,21 +119,20 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   };
 
   render() {
-    const { props } = this;
     const {
       ariaLabel,
-      text,
       icon,
+      iconPosition,
+      text,
+      onBlur,
       onClick,
+      onFocus,
       onMouseEnter,
       onMouseLeave,
-      onFocus,
-      onBlur,
-      iconPosition,
-    } = props;
+    } = this.props;
 
-    const disabled = (props as RegularButtonProps).disabled;
-    const href = (props as LinkButtonProps).href;
+    const disabled = (this.props as RegularButtonProps).disabled;
+    const href = (this.props as LinkButtonProps).href;
 
     const leftIcon = icon &&
       iconPosition === ButtonIconPosition.LEFT && (
@@ -150,15 +149,15 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
 
     return (
       <BaseButton
+        ariaLabel={ariaLabel}
         className={this.getClasses()}
+        disabled={disabled}
+        href={href}
+        onBlur={onBlur}
         onClick={onClick}
+        onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        disabled={disabled}
-        ariaLabel={ariaLabel}
-        href={href}
       >
         {leftIcon}
         {text}
@@ -168,26 +167,30 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   }
 
   private getIconProps(): IconProps {
+    const { icon, size } = this.props;
+
     return {
-      size: this.props.size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
-      icon: this.props.icon as IconName,
       className: 'y-button--icon',
+      icon: icon as IconName,
+      size: size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
     };
   }
 
   private getClasses() {
-    const { props } = this;
+    const { className, color, disabled, size } = this.props;
+
     const classes: string[] = [
       'y-button',
-      `y-button__size-${props.size}`,
-      `y-button__color-${props.color}`,
+      `y-button__color-${color}`,
+      `y-button__size-${size}`,
     ];
-    if ((props as RegularButtonProps).disabled) {
+    if (disabled) {
       classes.push(`y-button__state-disabled`);
     }
-    if (props.className) {
-      classes.push(props.className);
+    if (className) {
+      classes.push(className);
     }
+
     return classes.join(' ');
   }
 }

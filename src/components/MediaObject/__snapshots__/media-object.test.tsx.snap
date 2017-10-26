@@ -4,16 +4,16 @@ exports[`<MediaObject /> with additional className matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium TEST_CLASSNAME"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component />
-  </Component>
+    <FixedGridColumn />
+  </FixedGridRow>
 </div>
 `;
 
@@ -21,22 +21,22 @@ exports[`<MediaObject /> with arbitrary children matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component>
+    <FixedGridColumn>
       <div
         className="CHILDREN"
       >
         CHILDREN CONTENT
       </div>
-    </Component>
-  </Component>
+    </FixedGridColumn>
+  </FixedGridRow>
 </div>
 `;
 
@@ -44,15 +44,15 @@ exports[`<MediaObject /> with extra content at extra large size matches its snap
 <div
   className="y-media-object y-media-object__size-xLarge"
 >
-  <Component
+  <FixedGridRow
     gutterSize="xLarge"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-xLarge--image"
       fixed={true}
       width={72}
     />
-    <Component>
+    <FixedGridColumn>
       <MediaObjectExtra>
         <div
           className="EXTRA"
@@ -60,8 +60,8 @@ exports[`<MediaObject /> with extra content at extra large size matches its snap
           EXTRA CONTENT
         </div>
       </MediaObjectExtra>
-    </Component>
-  </Component>
+    </FixedGridColumn>
+  </FixedGridRow>
 </div>
 `;
 
@@ -69,16 +69,16 @@ exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component />
-  </Component>
+    <FixedGridColumn />
+  </FixedGridRow>
 </div>
 `;
 
@@ -86,10 +86,10 @@ exports[`<MediaObject /> with image content matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
@@ -98,9 +98,9 @@ exports[`<MediaObject /> with image content matches its snapshot 1`] = `
         alt=""
         src="404.jpg"
       />
-    </Component>
-    <Component />
-  </Component>
+    </FixedGridColumn>
+    <FixedGridColumn />
+  </FixedGridRow>
 </div>
 `;
 
@@ -108,16 +108,16 @@ exports[`<MediaObject /> with metadata content at extra small size matches its s
 <div
   className="y-media-object y-media-object__size-xSmall"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-xSmall--image"
       fixed={true}
       width={24}
     />
-    <Component />
-  </Component>
+    <FixedGridColumn />
+  </FixedGridRow>
 </div>
 `;
 
@@ -125,15 +125,15 @@ exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component>
+    <FixedGridColumn>
       <MediaObjectMetadata
         size="medium"
       >
@@ -143,8 +143,8 @@ exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
           METADATA CONTENT
         </div>
       </MediaObjectMetadata>
-    </Component>
-  </Component>
+    </FixedGridColumn>
+  </FixedGridRow>
 </div>
 `;
 
@@ -152,16 +152,16 @@ exports[`<MediaObject /> with minimal options matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component />
-  </Component>
+    <FixedGridColumn />
+  </FixedGridRow>
 </div>
 `;
 
@@ -169,15 +169,15 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
 <div
   className="y-media-object y-media-object__size-medium"
 >
-  <Component
+  <FixedGridRow
     gutterSize="medium"
   >
-    <Component
+    <FixedGridColumn
       className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
-    <Component>
+    <FixedGridColumn>
       <MediaObject
         size="medium"
       >
@@ -187,7 +187,7 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
           TITLE CONTENT
         </div>
       </MediaObject>
-    </Component>
-  </Component>
+    </FixedGridColumn>
+  </FixedGridRow>
 </div>
 `;

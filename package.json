@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "classnames": "=2.2.5",
+    "core-decorators": "=0.20.0",
     "normalize.css": "=6.0.0",
     "office-ui-fabric-react": "=5.1.0"
   },

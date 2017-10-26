@@ -8,26 +8,31 @@ import './text.css';
 export { TextColor, TextSize };
 
 export interface TextProps extends NestableBaseComponentProps {
-  size?: TextSize;
   color?: TextColor;
+  size?: TextSize;
 }
 
-// TODO: Create a helper to handle this across components
-const getClasses = (props: TextProps) => {
-  const classes: string[] = ['y-text'];
-  if (props.size) {
-    classes.push(`y-text__size-${props.size}`);
-  }
-  if (props.color) {
-    classes.push(`y-text__color-${props.color}`);
-  }
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
+export default class Text extends React.PureComponent<TextProps, {}> {
+  render() {
+    const { children } = this.props;
 
-const Text: React.StatelessComponent<TextProps> = props => (
-  <span className={getClasses(props)}>{props.children}</span>
-);
-export default Text;
+    return <span className={this.getClasses()}>{children}</span>;
+  }
+
+  private getClasses() {
+    const { className, color, size } = this.props;
+
+    const classes: string[] = ['y-text'];
+    if (size) {
+      classes.push(`y-text__size-${size}`);
+    }
+    if (color) {
+      classes.push(`y-text__color-${color}`);
+    }
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+}

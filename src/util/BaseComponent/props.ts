@@ -5,5 +5,5 @@ export interface BaseComponentProps {
 
 // This interface should be used for "container" components which allow child components
 export interface NestableBaseComponentProps extends BaseComponentProps {
-  children?: any;
+  children?: React.ReactNode;
 }

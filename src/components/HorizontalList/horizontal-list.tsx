@@ -8,21 +8,28 @@ export interface HorizontalListProps extends NestableBaseComponentProps {
   align?: 'left' | 'right';
 }
 
-const getClasses = (props: HorizontalListProps) => {
-  const classes: string[] = ['y-horizontalList'];
-  if (props.align === 'right') {
-    classes.push('y-horizontalList__align-right');
-  }
-  if (props.className) {
-    classes.push(props.className);
-  }
-  return classes.join(' ');
-};
+export class HorizontalList extends React.PureComponent<HorizontalListProps, {}> {
+  static defaultProps = {
+    align: 'left',
+  };
 
-export const HorizontalList: React.StatelessComponent<HorizontalListProps> = props => (
-  <ul className={getClasses(props)}>{props.children}</ul>
-);
+  render() {
+    const { children } = this.props;
 
-HorizontalList.defaultProps = {
-  align: 'left',
-};
+    return <ul className={this.getClasses()}>{children}</ul>;
+  }
+
+  private getClasses() {
+    const { align, className } = this.props;
+
+    const classes: string[] = ['y-horizontalList'];
+    if (align === 'right') {
+      classes.push('y-horizontalList__align-right');
+    }
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+}

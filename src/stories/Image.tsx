@@ -1,5 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
+import autobind from 'core-decorators/lib/autobind';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Image, { ImageFit, ImageLoadState } from '../components/Image';
@@ -132,15 +133,16 @@ storiesOf('Image', module)
     interface StateChangeDemoState {
       source: string;
     }
+
     class StateChangeDemo extends React.PureComponent<{}, StateChangeDemoState> {
       constructor() {
         super();
+
         this.state = {
           source: '404.png',
         };
-
-        this.handleStateChange = this.handleStateChange.bind(this);
       }
+
       render() {
         return (
           <Image
@@ -153,6 +155,8 @@ storiesOf('Image', module)
           />
         );
       }
+
+      @autobind
       handleStateChange(loadState: ImageLoadState) {
         action(ImageLoadState[loadState])();
         if (loadState === ImageLoadState.error) {
@@ -160,6 +164,7 @@ storiesOf('Image', module)
         }
       }
     }
+
     return (
       <div>
         When an Image component's loading state changes it will trigger the onLoadingStateChange
