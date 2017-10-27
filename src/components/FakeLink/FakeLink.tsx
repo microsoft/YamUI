@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './fake-link.css';
+import './FakeLink.css';
 
 export interface FakeLinkProps extends NestableBaseComponentProps {}
 
