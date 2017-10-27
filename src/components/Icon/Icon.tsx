@@ -4,7 +4,7 @@ import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from './enums';
 import icons from './icons';
-import './icon.css';
+import './Icon.css';
 
 export { IconSize, icons };
 export type IconName = keyof typeof icons;
