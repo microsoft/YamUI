@@ -6,10 +6,11 @@ A `Block` is a layout component, allowing us to build consistent paddings and ve
 
 | Prop | Type | Description |
 | ---- | ---- | ----------- |
-| textSize | TextSize | Sets both font-size and line-height, ensuring text conforms to our vertical rhythm. |
 | padding | GutterSize | Uniform padding around the block's content. |
 | bottomSpacing | GutterSize | Spacing/margin to be added below the block. |
 | push | number | The number of pixels to push the block down (postive value) or pull the block up (negative value). Generally avoid this unless you need to adjust a few pixels to achieve our 4px typography vertical rhythm. |
+| textAlign | "right", "left" or "center" | Aligns its text content. Defaults to "left". |
+| textSize | TextSize | Sets both font-size and line-height, ensuring text conforms to our vertical rhythm. |
 
 ## Notes for use
 

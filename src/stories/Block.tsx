@@ -77,6 +77,19 @@ storiesOf('Block', module)
       <Block>This example has no padding specified</Block>
     </div>
   ))
+  .add('with textAlign', () => (
+    <div>
+      <Block textAlign="left" bottomSpacing={GutterSize.XXLARGE}>
+        This example has <strong>textAlign: "left"</strong>, which is the default
+      </Block>
+      <Block textAlign="center" bottomSpacing={GutterSize.XXLARGE}>
+        This example has <strong>textAlign: "center"</strong>
+      </Block>
+      <Block textAlign="right" bottomSpacing={GutterSize.XXLARGE}>
+        This example has <strong>textAlign: "right"</strong>
+      </Block>
+    </div>
+  ))
   .add('positive push', () => (
     <div>
       <MarginWrapper>

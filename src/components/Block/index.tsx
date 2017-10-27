@@ -28,7 +28,7 @@ export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Convenience prop to align text left or right. Defaults to left.
    */
-  textAlign?: 'left' | 'right';
+  textAlign?: 'left' | 'right' | 'center';
 
   /**
    * Determines the font-size/line-height combination within this block.
@@ -62,8 +62,8 @@ export default class Block extends React.PureComponent<BlockProps, {}> {
     if (textSize) {
       classes.push(`y-block__textSize-${textSize}`);
     }
-    if (textAlign === 'right') {
-      classes.push('y-block__textAlign-right');
+    if (textAlign === 'center' || textAlign === 'right') {
+      classes.push(`y-block__textAlign-${textAlign}`);
     }
     if (className) {
       classes.push(className);

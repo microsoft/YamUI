@@ -12,18 +12,6 @@ exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Dropdown /> with additional className matches its snapshot 2`] = `
-<div
-  className="y-dropdown TEST_CLASSNAME"
->
-  <WithResponsiveMode
-    onChanged={[Function]}
-    onRenderCaretDown={[Function]}
-    options={Array []}
-  />
-</div>
-`;
-
 exports[`<Dropdown /> with all props matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"

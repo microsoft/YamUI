@@ -7,4 +7,3 @@
 * [ ] Component `README.md` file is up-to-date.
 * [ ] Component visual reference files are up-to-date.
 * [ ] Component is unit tested.
-* [ ] Somebody from the UX team has reviewed your changes.
