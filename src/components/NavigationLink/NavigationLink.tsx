@@ -5,7 +5,7 @@ import autobind from 'core-decorators/lib/autobind';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { secureOpen } from '../../util/secureOpener';
-import './navigation-link.css';
+import './NavigationLink.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   href: string;
