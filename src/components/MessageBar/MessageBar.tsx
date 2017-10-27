@@ -4,7 +4,7 @@ import * as React from 'react';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { MessageBarType } from './enums';
-import './message-bar.css';
+import './MessageBar.css';
 
 export { MessageBarType };
 
