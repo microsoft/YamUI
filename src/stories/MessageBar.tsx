@@ -5,11 +5,8 @@ import MessageBar, { MessageBarType } from '../components/MessageBar';
 import FakeLink from '../components/FakeLink';
 import Text, { TextSize } from '../components/Text';
 import Icon, { IconSize } from '../components/Icon';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/MessageBar/README.md');
 
 storiesOf('MessageBar', module)
-  .addDecorator(withReadme(readme))
   .add('basic usage', () => (
     <div>
       <MessageBar ariaLabel="A sample notice informing you about something">

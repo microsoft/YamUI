@@ -3,8 +3,6 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button, { ButtonColor, ButtonIconPosition, ButtonSize } from '../components/Button';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Button/README');
 
 const sampleText = 'Next';
 const sampleClickButtonText = 'Click me';
@@ -12,7 +10,6 @@ const sampleClickButtonText = 'Click me';
 const url = 'https://www.yammer.com';
 
 storiesOf('Button', module)
-  .addDecorator(withReadme(readme))
   .add('all', () => (
     <div>
       <h3>Regular buttons</h3>

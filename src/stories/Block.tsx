@@ -2,8 +2,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Block, { GutterSize } from '../components/Block';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Block/README');
 
 const BorderWrapper: React.StatelessComponent<any> = (props) => {
   return <div style={{ paddingTop: '2rem' }}>{props.children}</div>;
@@ -16,7 +14,6 @@ const PaddingWrapper: React.StatelessComponent<any> = (props) => {
 };
 
 storiesOf('Block', module)
-  .addDecorator(withReadme(readme))
   .add('without props', () => (
     <div>
       <Block>

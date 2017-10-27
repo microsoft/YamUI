@@ -4,11 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Block, { GutterSize } from '../components/Block';
 import Clickable from '../components/Clickable';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Clickable/README');
 
 storiesOf('Clickable', module)
-  .addDecorator(withReadme(readme))
   .add('text with button', () => (
     <div>
       <Block bottomSpacing={GutterSize.MEDIUM}>

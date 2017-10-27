@@ -5,7 +5,7 @@ import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseBut
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
 import { ButtonColor, ButtonIconPosition, ButtonSize } from './enums';
-import './button.css';
+import './Button.css';
 
 export { ButtonColor, ButtonIconPosition, ButtonSize };
 

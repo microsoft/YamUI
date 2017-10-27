@@ -3,11 +3,8 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { HorizontalList, ListItem } from '../components/HorizontalList';
 import Button, { ButtonColor } from '../components/Button';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/HorizontalList/README');
 
 storiesOf('HorizontalList', module)
-  .addDecorator(withReadme(readme))
   .add('list of Buttons', () => (
     <HorizontalList>
       <ListItem>

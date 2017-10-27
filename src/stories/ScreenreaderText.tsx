@@ -2,11 +2,8 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import ScreenreaderText from '../components/ScreenreaderText';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/ScreenreaderText/README');
 
 storiesOf('ScreenreaderText', module)
-  .addDecorator(withReadme(readme))
   .add('default', () => (
     <div>
       There is a <strong>ScreenreaderText</strong> component with text after this visible text which

@@ -5,7 +5,7 @@ import autobind from 'core-decorators/lib/autobind';
 import { IDropdownOption, Dropdown as FabricDropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon from '../Icon';
-import './dropdown.css';
+import './Dropdown.css';
 
 export type DropdownOptionKey = string | number;
 export type DropdownOption = IDropdownOption;

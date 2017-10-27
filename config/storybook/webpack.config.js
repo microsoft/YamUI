@@ -20,10 +20,6 @@ module.exports = {
         test: /\.(woff|woff2|ttf)$/,
         loader: 'file-loader?name=[name].[ext]',
       },
-      {
-        test: /\.md$/,
-        loader: 'raw-loader',
-      },
     ],
   },
   resolve: {
@@ -34,7 +30,6 @@ module.exports = {
       '.jsx',
       '.ts',
       '.tsx',
-      '.md',
     ],
   },
 };

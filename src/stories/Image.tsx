@@ -4,15 +4,12 @@ import autobind from 'core-decorators/lib/autobind';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Image, { ImageFit, ImageLoadState } from '../components/Image';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Image/README');
 
 const yammerLogo = require('./assets/img/yammer-logo.png');
 const yammerLogoOrange = require('./assets/img/yammer-logo-orange.jpg');
 const yammerLogoDescription = 'Yammer "y" logo';
 
 storiesOf('Image', module)
-  .addDecorator(withReadme(readme))
   .add('basic image', () => (
     <div>
       The Image component renders an img element within a wrapper div. This div is displayed as

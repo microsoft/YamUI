@@ -4,8 +4,6 @@ import { storiesOf } from '@storybook/react';
 import Avatar, { AvatarBorderType, AvatarSize } from '../components/Avatar';
 import Block, { GutterSize } from '../components/Block';
 import Image from '../components/Image';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Avatar/README');
 
 const badge = require('./assets/img/badge.png');
 const smiley = require('./assets/img/smiley.png');
@@ -25,7 +23,6 @@ const tableHeader = (
 );
 
 storiesOf('Avatar', module)
-  .addDecorator(withReadme(readme))
   .add('with initials', () => (
     <div>
       <table>

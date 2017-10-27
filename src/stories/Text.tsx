@@ -2,11 +2,8 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import Text, { TextColor, TextSize } from '../components/Text';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Text/README');
 
 storiesOf('Text', module)
-  .addDecorator(withReadme(readme))
   .add('without props', () => (
     <div>
       <Text>

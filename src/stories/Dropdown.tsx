@@ -3,12 +3,9 @@ import * as React from 'react';
 import autobind from 'core-decorators/lib/autobind';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import withReadme from 'storybook-readme/with-readme';
 import Dropdown, { DropdownOptionKey } from '../components/Dropdown';
 import Block from '../components/Block';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../components/FixedGrid';
-
-const readme = require('../components/Dropdown/README');
 
 const options = [
   { key: 'A', text: 'Option a' },
@@ -48,7 +45,6 @@ class ControlledDropdown extends React.PureComponent<{}, ControlledDropdownState
 }
 
 storiesOf('Dropdown', module)
-  .addDecorator(withReadme(readme))
   .add('basic uncontrolled', () => (
     <div>
       <Block bottomSpacing={GutterSize.LARGE}>

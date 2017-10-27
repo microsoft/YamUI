@@ -2,11 +2,8 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import withReadme from 'storybook-readme/with-readme';
 import Spinner, { SpinnerColor, SpinnerSize } from '../components/Spinner';
 import Block from '../components/Block';
-
-const readme = require('../components/Spinner/README');
 
 const tableHeader = (
   <thead>
@@ -24,7 +21,6 @@ const darkWrapper = {
 };
 
 storiesOf('Spinner', module)
-  .addDecorator(withReadme(readme))
   .add('without label', () => (
     <div>
       <table>

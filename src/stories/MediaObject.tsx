@@ -7,8 +7,6 @@ import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
 import Image from '../components/Image';
 import MediaObject, { MediaObjectSize } from '../components/MediaObject';
 import Button, { ButtonColor, ButtonSize } from '../components/Button';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/MediaObject/README');
 
 const smiley = require('./assets/img/smiley.png');
 const image = <Image source={smiley} description="Smiley Face" fullWidth={true} />;
@@ -18,7 +16,6 @@ function getAvatar(size: AvatarSize) {
 }
 
 storiesOf('MediaObject', module)
-  .addDecorator(withReadme(readme))
   .add('with avatar', () => (
     <div>
       <MediaObject

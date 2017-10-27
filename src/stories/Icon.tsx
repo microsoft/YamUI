@@ -1,12 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import withReadme from 'storybook-readme/with-readme';
 import Block, { TextSize } from '../components/Block';
 import { GutterSize } from '../components/FixedGrid';
 import Icon, { IconProps, IconSize, icons } from '../components/Icon';
 import Text, { TextColor } from '../components/Text';
-const readme = require('../components/Icon/README');
 
 const simpleFloat = {
   width: '80px',
@@ -30,7 +28,6 @@ Object.keys(icons).forEach((icon) => {
 });
 
 storiesOf('Icon', module)
-  .addDecorator(withReadme(readme))
   .add('library', () => {
     const icons = iconsArray.map((icon, index) => (
       <tr key={index}>

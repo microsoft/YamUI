@@ -5,7 +5,7 @@ import { Persona, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarBorderType, AvatarSize } from './enums';
-import './avatar.css';
+import './Avatar.css';
 
 export { AvatarBorderType, AvatarSize };
 

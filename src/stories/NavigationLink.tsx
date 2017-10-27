@@ -3,11 +3,8 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import NavigationLink from '../components/NavigationLink';
 import Text, { TextColor } from '../components/Text';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/NavigationLink/README');
 
 storiesOf('NavigationLink', module)
-  .addDecorator(withReadme(readme))
   .add('default', () => (
     <div>
       Here is a <NavigationLink href="/404.html">NavigationLink component</NavigationLink> with just

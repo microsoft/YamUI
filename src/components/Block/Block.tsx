@@ -4,7 +4,7 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../FixedGrid/enums';
 import { TextSize } from '../Text/enums';
-import './block.css';
+import './Block.css';
 
 export { GutterSize, TextSize };
 

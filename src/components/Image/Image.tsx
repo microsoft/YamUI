@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Image as FabricImage, ImageFit, ImageLoadState } from 'office-ui-fabric-react/lib/Image';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import './image.css';
+import './Image.css';
 
 export { ImageFit, ImageLoadState };
 

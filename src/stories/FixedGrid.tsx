@@ -3,13 +3,10 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../components/FixedGrid';
 import Image from '../components/Image';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/FixedGrid/README');
 
 const yammerLogo = require('./assets/img/yammer-logo.png');
 
 storiesOf('FixedGrid', module)
-  .addDecorator(withReadme(readme))
   .add('fixed left column with width', () => (
     <div>
       <FixedGridRow>

@@ -9,8 +9,6 @@ import {
   DirectionalHint,
   TriggerType,
 } from '../components/Callout';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/Callout/README');
 
 const HeightDecorator: StoryDecorator = (story: Function) => (
   <div style={{ minHeight: '500px' }}>{story()}</div>
@@ -53,7 +51,6 @@ const HintedPositionCallout = (props: HintedProps) => {
 };
 
 storiesOf('Callout', module)
-  .addDecorator(withReadme(readme))
   .addDecorator(HeightDecorator)
   .add('default display (hidden)', () => {
     return (

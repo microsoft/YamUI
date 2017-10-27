@@ -6,11 +6,8 @@ import Block from '../components/Block';
 import FakeLink from '../components/FakeLink';
 import Clickable from '../components/Clickable';
 import NavigationLink from '../components/NavigationLink';
-import withReadme from 'storybook-readme/with-readme';
-const readme = require('../components/FakeLink/README');
 
 storiesOf('FakeLink', module)
-  .addDecorator(withReadme(readme))
   .add('default', () => (
     <div>
       Here is a <FakeLink>FakeLink component</FakeLink>. It styles text as if it were a

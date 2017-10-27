@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './clickable.css';
+import './Clickable.css';
 
 export interface ClickableProps extends NestableBaseComponentProps {
   ariaLabel?: string;
