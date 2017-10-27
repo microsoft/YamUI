@@ -2,7 +2,6 @@
 @import "src/css/variables/fonts.css";
 @import "src/css/variables/colors.css";
 
-
 .y-text {
   /**
     * Inline-block allows line-height to be smaller than the nearest block-level
