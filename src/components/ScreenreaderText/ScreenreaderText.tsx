@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './screenreader-text.css';
+import './ScreenreaderText.css';
 
 export interface ScreenreaderTextProps extends NestableBaseComponentProps {}
 
