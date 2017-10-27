@@ -20,7 +20,7 @@ const options = [
 
 <div>
   <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the Dropdown is maintained within the component, rather than being set using <code>selectedKey</code>.
+    In this example, the state of the Dropdown is maintained within the component, rather than being set using <em>selectedKey</em>.
   </Block>
   <Dropdown
     placeHolder="Please select..."
@@ -47,6 +47,8 @@ class ControlledDropdown extends React.PureComponent {
     super();
 
     this.state = {};
+
+    this.handleChanged = this.handleChanged.bind(this);
   }
 
   render() {
@@ -62,7 +64,7 @@ class ControlledDropdown extends React.PureComponent {
     );
   }
 
-  onChanged(key) {
+  handleChanged(key) {
     action('changed')(key);
     this.setState({ selectedKey: key });
   }
@@ -70,7 +72,7 @@ class ControlledDropdown extends React.PureComponent {
 
 <div>
   <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the dropdown is controlled by the parent component using the <code>selectedKey</code> and <code>onChanged</code> props.
+    In this example, the state of the dropdown is controlled by the parent component using the <em>selectedKey</em> and <em>onChanged</em> props.
   </Block>
   <ControlledDropdown />
 </div>

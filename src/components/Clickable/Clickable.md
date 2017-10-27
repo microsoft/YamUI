@@ -30,11 +30,9 @@ Clickable block:
 const { GutterSize } = require('../Block')
 const action = (msg) => () => { console.log(msg) };
 
-<div>
-  <Clickable block={true} onClick={action('clicked')}>
-    <Block>
-      This is a block of text entirely inside a clickable component. When wrapping an entire component like this be sure to set <strong>block: true</strong>, otherwise the button element might constrict the width of its contents.
-    </Block>
-  </Clickable>
-</div>
+<Clickable block={true} onClick={action('clicked')}>
+  <Block>
+    This is a block of text entirely inside a clickable component. When wrapping an entire component like this be sure to set <strong>block: true</strong>, otherwise the button element might constrict the width of its contents.
+  </Block>
+</Clickable>
 ```

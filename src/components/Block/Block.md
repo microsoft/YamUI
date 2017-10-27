@@ -15,10 +15,10 @@ Plain block:
 ```js { "props": { "data-description": "plain" } }
 <div>
   <Block>
-    The <strong>&lt;Block /&gt;</strong> component renders its children in a div. It's a convenient way to set consistent bottom gutters and padding, and manage pixel-perfect vertical rhythm between components.
+    The <strong>&lt;Block /&gt;</strong> component renders its children in a <em>div</em>. It's a convenient way to set consistent bottom gutters and padding, and manage pixel-perfect vertical rhythm between components.
   </Block>
   <Block>
-    This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't a <strong>bottomSpacing</strong> or <strong>padding</strong> prop set the wrapper is just an unstyled div.
+    This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't a <strong>bottomSpacing</strong> or <strong>padding</strong> prop set the wrapper is just an unstyled <em>div</em>.
   </Block>
 </div>
 ```

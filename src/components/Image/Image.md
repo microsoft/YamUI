@@ -10,13 +10,13 @@ If an image is used as a supplemental icon, or screenreaders should not read it 
 
 Basic image:
 
-```js
+```js { "props": { "data-description": "basic" } }
 const yammerLogo = 'yammer-logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
   <p>
-    The component renders an <code>img</code> element within a wrapper <code>div</code>. This <code>div</code> is <code>display: inline-block</code> so it behaves like a standard inline image. Height and width actually get applied to the wrapper <code>div</code>, and the image will get scaled/positioned within the wrapper depending on which props you provide.
+    The component renders an <em>img</em> element within a wrapper <em>div</em>. This <em>div</em> is <em>display: inline-block</em> so it behaves like a standard inline image. Height and width actually get applied to the wrapper <em>div</em>, and the image will get scaled/positioned within the wrapper depending on which props you provide.
   </p>
   <Image source={yammerLogo} description={yammerLogoDescription} width={250} height={140} />
 </div>
@@ -112,7 +112,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
   <p>
-    The <em>none</em> option places the image at the top left of its <code>div</code> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
+    The <em>none</em> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
   </p>
   <Image
     source={yammerLogo}
@@ -139,7 +139,7 @@ const fullWidthImage = (
   <tbody>
     <tr>
       <td colSpan={4}>
-        Your image will grow to fit the width of its container. Use this option when you have a grid or some other layout component determining the space an image should fill. Any provided height and width will be ignored in this case, replaced with a <code>width: 100%</code> and <code>height: auto</code>.
+        Your image will grow to fit the width of its container. Use this option when you have a grid or some other layout component determining the space an image should fill. Any provided height and width will be ignored in this case, replaced with a <em>width: 100%</em> and <em>height: auto</em>.
       </td>
     </tr>
     <tr>
@@ -203,7 +203,7 @@ class StateChangeDemo extends React.PureComponent {
 
 <div>
   <p>
-    When an image's loading state changes, it will trigger the <code>onLoadingStateChange</code> callback. This example updates the source URL passed to the image when its <code>onLoadingStateChange</code> is called with an error.
+    When an image's loading state changes, it will trigger the <em>onLoadingStateChange</em> callback. This example updates the source URL passed to the image when its <em>onLoadingStateChange</em> is called with an error.
   </p>
   <StateChangeDemo />
 </div>

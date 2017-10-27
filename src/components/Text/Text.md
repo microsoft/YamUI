@@ -1,8 +1,8 @@
-The `Text` component simply renders a `<span>`. It offers size and color props so UI features don't need to own this CSS. This is both a convenience for engineers and a way to enforce consistency of supported text colors and font-size/line-height combinations.
+The `Text` component simply renders a `span`. It offers size and color props so UI features don't need to own this CSS. This is both a convenience for engineers and a way to enforce consistency of supported text colors and font-size/line-height combinations.
 
 ### Notes for use
 
-`<Text>` is an inline element. Note that inline elements cannot set a smaller line-height than what is set or inherited by the nearest block-level parent element. For this reason, it is generally best to set font-size on a parent block-level element (`<Block textSize={TextSize.LARGE}>`) rather than on individual `<Text>` coponents.
+`Text` is an inline element. Note that inline elements cannot set a smaller line-height than what is set or inherited by the nearest block-level parent element. For this reason, it is generally best to set a font size on a parent block-level element (`<Block textSize={TextSize.LARGE}>`) rather than on individual `Text` components.
 
 ### Examples
 
@@ -11,7 +11,7 @@ Basic text:
 ```js { "props": { "data-description": "basic" } }
 <div>
   <Text>
-    The <strong>&lt;Text /&gt;</strong> component renders its children in a span. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
+    The <strong>&lt;Text /&gt;</strong> component renders its children in a <strong>span</strong>. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
   </Text>
   <br />
   <Text>

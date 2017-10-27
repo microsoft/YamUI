@@ -4,7 +4,7 @@ A `Button` allows a user to take an action.
 
 While buttons can technically be used to navigate a user to another part of the experience, this is not recommended unless that navigation is part of an action or their flow.
 
-Also, use concise, specific, self-explanatory text, usually a single word. Should include a verb. If acting on something, text should include the noun it is acting on. Ex. "Create Group"
+Also, use concise, specific, self-explanatory text, usually a single word. Should include a verb. If acting on something, text should include the noun it is acting on. For example, *"Create Group"*.
 
 ### Examples
 

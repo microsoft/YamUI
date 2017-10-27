@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './enums';
-import './text.css';
+import './Text.css';
 
 export { TextColor, TextSize };
 
