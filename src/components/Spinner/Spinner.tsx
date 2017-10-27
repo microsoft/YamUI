@@ -9,7 +9,7 @@ import {
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Text, { TextProps, TextColor, TextSize } from '../Text';
 import { SpinnerSize } from './enums';
-import './spinner.css';
+import './Spinner.css';
 
 export { SpinnerSize };
 
