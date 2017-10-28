@@ -13,7 +13,7 @@ Avatar without image:
 ```js { "props": { "data-description": "without image" } }
 const { AvatarSize } = require('.');
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
       <th>XL</th>
@@ -50,7 +50,7 @@ Avatar with image:
 ```js { "props": { "data-description": "with image" } }
 const { AvatarBorderType, AvatarSize } = require('.');
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
       <th>XL</th>
@@ -88,7 +88,7 @@ Avatar with image and badge:
 const { AvatarBorderType, AvatarSize } = require('.');
 const badgeContent = <Image source="badge.png" description="" fullWidth={true} />;
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
       <th>XL</th>

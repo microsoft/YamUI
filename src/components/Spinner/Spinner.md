@@ -7,7 +7,7 @@ Spinners without label:
 ```js
 const { SpinnerColor, SpinnerSize } = require('.');
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
       <th style={{ width: '100px' }}>L</th>
@@ -54,7 +54,7 @@ Spinners with label:
 ```js
 const { SpinnerColor, SpinnerSize } = require('.');
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
       <th style={{ width: '100px' }}>L</th>

@@ -16,10 +16,10 @@ const { ButtonColor, ButtonIconPosition, ButtonSize } = require('.');
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
-      <th />
+      <th style={{ textAlign: 'right' }} />
       <th>Default</th>
       <th>Link</th>
       <th>Disabled</th>
@@ -157,10 +157,10 @@ const { ButtonColor, ButtonIconPosition, ButtonSize } = require('.');
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<table>
+<table style={{ textAlign: 'center' }}>
   <thead>
     <tr>
-      <th />
+      <th style={{ textAlign: 'right' }} />
       <th>Default</th>
       <th>Link</th>
       <th>Disabled</th>
