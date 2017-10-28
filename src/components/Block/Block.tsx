@@ -26,12 +26,12 @@ export interface BlockProps extends NestableBaseComponentProps {
   push?: number;
 
   /**
-   * Convenience prop to align text left or right. Defaults to left.
+   * Text alignment within this block.
    */
   textAlign?: 'left' | 'right' | 'center';
 
   /**
-   * Determines the font-size/line-height combination within this block.
+   * Text size (`font-size` and `line-height`) within this block.
    */
   textSize?: TextSize;
 }
@@ -41,6 +41,12 @@ interface BlockStyles {
   paddingTop?: string;
 }
 
+/**
+ * A `Block` is a layout component to build consistent padding and vertical spacing between
+ * components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in
+ * the `4px` vertical rhythm. It's also the primary place you should set `textSize` in your UIs,
+ * providing enumerated options for the supported `font-size`/`line-height` combinations.
+ */
 export default class Block extends React.PureComponent<BlockProps, {}> {
   render() {
     const { children } = this.props;

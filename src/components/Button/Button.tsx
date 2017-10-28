@@ -13,7 +13,7 @@ const hrefBlacklist = ['', '#', 'javascript://'];
 
 export interface BaseButtonProps extends BaseComponentProps {
   /**
-   * The visible button text.
+   * Visible button text.
    */
   text: string;
 
@@ -23,7 +23,8 @@ export interface BaseButtonProps extends BaseComponentProps {
   ariaLabel?: string;
 
   /**
-   * The color describing the button's intent. Defaults to primary.
+   * Color describing the button's intent.
+   * @default ButtonColor.PRIMARY
    */
   color?: ButtonColor;
 
@@ -34,18 +35,15 @@ export interface BaseButtonProps extends BaseComponentProps {
 
   /**
    * Icon position.
+   * @default ButtonIconPosition.LEFT
    */
   iconPosition?: ButtonIconPosition;
 
   /**
-   * Button size. Defaults to regular.
+   * Button size.
+   * @default ButtonSize.REGULAR
    */
   size?: ButtonSize;
-
-  /**
-   * Focus lost callback handler. Will provide the React synthetic event.
-   */
-  onBlur?: (event: any) => void;
 
   /**
    * Click callback handler. Will provide the React synthetic event.
@@ -56,6 +54,11 @@ export interface BaseButtonProps extends BaseComponentProps {
    * Focus callback handler. Will provide the React synthetic event.
    */
   onFocus?: (event: any) => void;
+
+  /**
+   * Focus lost callback handler. Will provide the React synthetic event.
+   */
+  onBlur?: (event: any) => void;
 
   /**
    * Hover callback handler. Will provide the React synthetic event.
@@ -70,34 +73,36 @@ export interface BaseButtonProps extends BaseComponentProps {
 
 export interface RegularButtonProps extends BaseButtonProps {
   /**
-   * Disabled buttons cannot have a link href.
+   * Disabled buttons cannot have a link.
    */
   href?: void;
 
   /**
-   * Whether this button should be disabled or not. Defaults to false.
+   * Whether this button should be disabled or not.
    */
   disabled?: boolean;
 }
 
 export interface LinkButtonProps extends BaseButtonProps {
   /**
-   * If provided, will render a Link styled as a Button
+   * If provided, will render a link styled as a button.
    */
   href: string;
 
   /**
-   * Link buttons cannot be disabled.
+   * Links cannot be disabled.
    */
   disabled?: void;
 }
 
 export type ButtonProps = RegularButtonProps | LinkButtonProps;
 
+/**
+ * A `Button` allows a user to take an action.
+ */
 export default class Button extends React.PureComponent<ButtonProps, {}> {
   static propTypes = {
-    // TypeScript does not support negated types. Using PropTypes custom validator instead of
-    // runtime validations.
+    // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {
       const href = props.href;
       if (typeof href !== 'string') {
@@ -113,20 +118,20 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   };
 
   static defaultProps = {
-    size: ButtonSize.REGULAR,
     color: ButtonColor.PRIMARY,
     iconPosition: ButtonIconPosition.LEFT,
+    size: ButtonSize.REGULAR,
   };
 
   render() {
     const {
+      text,
       ariaLabel,
       icon,
       iconPosition,
-      text,
-      onBlur,
       onClick,
       onFocus,
+      onBlur,
       onMouseEnter,
       onMouseLeave,
     } = this.props;

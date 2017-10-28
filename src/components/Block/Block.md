@@ -1,8 +1,6 @@
-A `Block` is a layout component, allowing us to build consistent paddings and vertical spacing between components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in our 4px vertical rhythm. It's also the primary place you should set `textSize` in your UIs, providing enumerated options for our supported font-size/line-height combinations.
-
 ### Notes for use
 
-You should generally use a `Block` component instead of a `div` for layouts. By using the component's `padding` and `bottomSpacing` props instead of writing your own CSS we can maintain component spacings easier. For example, YamUI may eventually support more advanced responsive features based on device type or screen width. YamUI could dynamically adjust its gutters, but any UI with its own layout CSS may not conform to new layouts.
+You should generally use a `Block` component instead of a `div` for layouts. By using the component's `padding` and `bottomSpacing` props instead of writing your own CSS, you'll be able to maintain consistent component spacing. For example, YamUI may eventually support more advanced responsive features based on device type or screen width. YamUI could dynamically adjust its gutters, but any UI with its own layout CSS may not conform to new layouts.
 
 #### Spacing
 
@@ -18,7 +16,7 @@ Plain block:
     The <strong>&lt;Block /&gt;</strong> component renders its children in a <em>div</em>. It's a convenient way to set consistent bottom gutters and padding, and manage pixel-perfect vertical rhythm between components.
   </Block>
   <Block>
-    This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't a <strong>bottomSpacing</strong> or <strong>padding</strong> prop set the wrapper is just an unstyled <em>div</em>.
+    This text is in a second <strong>&lt;Block /&gt;</strong> component. Since there isn't a <strong>bottomSpacing</strong> or <strong>padding</strong> prop set, the wrapper is just an unstyled <em>div</em>.
   </Block>
 </div>
 ```
@@ -30,24 +28,26 @@ const { GutterSize } = require('.');
 
 <div>
   <Block bottomSpacing={GutterSize.XXLARGE}>
-    This example has <strong>bottomSpacing: XXLARGE</strong>
+    This example has <strong>bottomSpacing: XXLARGE</strong>.
   </Block>
   <Block bottomSpacing={GutterSize.XLARGE}>
-    This example has <strong>bottomSpacing: XLARGE</strong>
+    This example has <strong>bottomSpacing: XLARGE</strong>.
   </Block>
   <Block bottomSpacing={GutterSize.LARGE}>
-    This example has <strong>bottomSpacing: LARGE</strong>
+    This example has <strong>bottomSpacing: LARGE</strong>.
   </Block>
   <Block bottomSpacing={GutterSize.MEDIUM}>
-    This example has <strong>bottomSpacing: MEDIUM</strong>
+    This example has <strong>bottomSpacing: MEDIUM</strong>.
   </Block>
   <Block bottomSpacing={GutterSize.SMALL}>
-    This example has <strong>bottomSpacing: SMALL</strong>
+    This example has <strong>bottomSpacing: SMALL</strong>.
   </Block>
   <Block bottomSpacing={GutterSize.XSMALL}>
-    This example has <strong>bottomSpacing: XSMALL</strong>
+    This example has <strong>bottomSpacing: XSMALL</strong>.
   </Block>
-  <Block>This example has no spacing specified</Block>
+  <Block>
+    This example has no spacing specified.
+  </Block>
 </div>
 ```
 
@@ -58,24 +58,44 @@ const { GutterSize } = require('.');
 
 <div>
   <Block padding={GutterSize.XXLARGE}>
-    This example has <strong>padding: XXLARGE</strong>
+    This example has <strong>padding: XXLARGE</strong>.
   </Block>
   <Block padding={GutterSize.XLARGE}>
-    This example has <strong>padding: XLARGE</strong>
+    This example has <strong>padding: XLARGE</strong>.
   </Block>
   <Block padding={GutterSize.LARGE}>
-    This example has <strong>padding: LARGE</strong>
+    This example has <strong>padding: LARGE</strong>.
   </Block>
   <Block padding={GutterSize.MEDIUM}>
-    This example has <strong>padding: MEDIUM</strong>
+    This example has <strong>padding: MEDIUM</strong>.
   </Block>
   <Block padding={GutterSize.SMALL}>
-    This example has <strong>padding: SMALL</strong>
+    This example has <strong>padding: SMALL</strong>.
   </Block>
   <Block padding={GutterSize.XSMALL}>
-    This example has <strong>padding: XSMALL</strong>
+    This example has <strong>padding: XSMALL</strong>.
   </Block>
-  <Block>This example has no padding specified</Block>
+  <Block>
+    This example has no padding specified.
+  </Block>
+</div>
+```
+
+Block with text alignment:
+
+```js { "props": { "data-description": "with text alignment" } }
+const { GutterSize } = require('.');
+
+<div>
+  <Block textAlign="left" bottomSpacing={GutterSize.XXLARGE}>
+    This example has <strong>textAlign: "left"</strong>.
+  </Block>
+  <Block textAlign="center" bottomSpacing={GutterSize.XXLARGE}>
+    This example has <strong>textAlign: "center"</strong>.
+  </Block>
+  <Block textAlign="right" bottomSpacing={GutterSize.XXLARGE}>
+    This example has <strong>textAlign: "right"</strong>.
+  </Block>
 </div>
 ```
 
@@ -91,13 +111,13 @@ const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{chil
       The <strong>&lt;Block /&gt;</strong> component accepts a <strong>push</strong> prop, a number of pixels to adjust the component's top spacing. A positive value will push the component down, a negative value will pull it up. This is handy when a feature requires manual pixel adjustment between blocks of content to maintain our vertical rhythm.
     </Block>
     <Block bottomSpacing={GutterSize.MEDIUM}>
-      This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of margin. It specifies <strong>push: 3</strong>, which pushes it down an additional 3px and creates a total top spacing of 23px.
+      This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of margin. It specifies <strong>push: 3</strong>, which pushes it down an additional <em>3px</em> and creates a total top spacing of <em>23px</em>.
     </Block>
     <Block bottomSpacing={GutterSize.MEDIUM}>
-      Components should generally only manage their bottom spacing and rely on the component above them to do the same. You should only ever need to provide a <strong>push</strong> value for minor adjustments between -3 and 3, and you should only need to deal with <strong>push</strong> to reset the vertical rhythm (an imaginary 4px grid).
+      Components should generally only manage their bottom spacing and rely on the component above them to do the same. You should only ever need to provide a <strong>push</strong> value for minor adjustments between <em>-3</em> and <em>3</em>, and you should only need to deal with <strong>push</strong> to reset the vertical rhythm (an imaginary <em>4px</em> grid).
     </Block>
     <Block bottomSpacing={GutterSize.MEDIUM}>
-      Note that YamUI actually uses rem instead of px for its font-related units, and converts the push pixel value to rem. YamUI has set 0.1rem equal to 1px.
+      Note that YamUI actually uses <em>rem</em> instead of <em>px</em> for its font-related units, and converts the push pixel value to <em>rem</em>. YamUI has set <em>0.1rem</em> equal to <em>1px</em>.
     </Block>
   </Block>
 </MarginWrapper>
@@ -110,7 +130,7 @@ const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{chil
 
 <MarginWrapper>
   <Block push={-2}>
-    This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of margin. It specifies <strong>push: -2</strong> which pulls the component up 2px, creating a total top spacing of 18px.
+    This example shows a <strong>&lt;Block /&gt;</strong> below an existing <em>20px</em> of margin. It specifies <strong>push: -2</strong> which pulls the component up <em>2px</em>, creating a total top spacing of <em>18px</em>.
   </Block>
 </MarginWrapper>
 ```
@@ -122,7 +142,7 @@ const PaddingWrapper = ({ children }) => <div style={{ paddingTop: '2rem' }}>{ch
 
 <PaddingWrapper>
   <Block push={-2}>
-    This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of padding. It specifies <strong>push: -2</strong>, which still pulls the component up 2px, creating a total top spacing of 18px.
+    This example shows a <strong>&lt;Block /&gt;</strong> below an existing <em>20px</em> of padding. It specifies <strong>push: -2</strong>, which still pulls the component up <em>2px</em>, creating a total top spacing of <em>18px</em>.
   </Block>
 </PaddingWrapper>
 ```
@@ -134,7 +154,7 @@ const BorderWrapper = ({ children }) => <div style={{ paddingTop: '2rem' }}>{chi
 
 <BorderWrapper>
   <Block push={-2}>
-    This example shows a <strong>&lt;Block /&gt;</strong> below an existing 20px of border. It specifies <strong>push: -2</strong>, which still pulls the component up 2px, creating a total top spacing of 18px. These three negative push examples show that a{' '} <strong>&lt;Block /&gt;</strong> can pull up consistently regardless of the content above it.
+    This example shows a <strong>&lt;Block /&gt;</strong> below an existing <em>20px</em> of border. It specifies <strong>push: -2</strong>, which still pulls the component up <em>2px</em>, creating a total top spacing of <em>18px</em>. These three negative push examples show that a <strong>&lt;Block /&gt;</strong> can pull up consistently regardless of the content above it.
   </Block>
 </BorderWrapper>
 ```

@@ -19,22 +19,23 @@ const SizeMap = {
 
 export interface BaseAvatarProps extends BaseComponentProps {
   /**
-   * The name of the person or object being represented. Will be used as accessible alt text.
+   * Name of the person or object being represented. Will be used as accessible alt text.
    */
   name: string;
 
   /**
-   * Image, SVG, icon, etc. You can set its height and width to fill the available area.
+   * Element to be used as badge. You can set its height and width to fill the available area.
    */
   badgeContent?: React.ReactNode;
 
   /**
-   * A short accessible description of the badge. Will be appended to name if provided.
+   * Short accessible description of the badge. Will be appended to name if provided.
    */
   badgeDescription?: string;
 
   /**
-   * Round or soft border. Defaults to round.
+   * Type of border around the avatar.
+   * @default AvatarBorderType.ROUND
    */
   borderType?: AvatarBorderType;
 
@@ -44,12 +45,13 @@ export interface BaseAvatarProps extends BaseComponentProps {
   imageUrl?: string;
 
   /**
-   * 2 letters to be displayed if an imageUrl wasn't provided.
+   * Two letters to be displayed if an `imageUrl` wasn't provided.
    */
   initials?: string;
 
   /**
-   * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px. Defaults to medium.
+   * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px.
+   * @default AvatarSize.MEDIUM
    */
   size?: AvatarSize;
 }
@@ -63,14 +65,17 @@ export interface ImageAvatarProps extends BaseAvatarProps {
 
 export interface InitialsAvatarProps extends BaseAvatarProps {
   /**
-   * 2 letters to be displayed if an imageUrl wasn't provided.
+   * Two letters to be displayed if an `imageUrl` wasn't provided.
    */
   initials: string;
 }
 
-// AvatarProps requires either imageUrl OR initials
+// `AvatarProps` requires either `imageUrl` OR `initials`.
 export type AvatarProps = ImageAvatarProps | InitialsAvatarProps;
 
+/**
+ * An `Avatar` shows a thumbnail representation of both an individual or group.
+ */
 export default class Avatar extends React.PureComponent<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
     borderType: AvatarBorderType.ROUND,

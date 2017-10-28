@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/fonts.css";
 @import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
 
 .y-spinner {
   display: flex;
