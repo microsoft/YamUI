@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from './enums';
-import './fixed-grid.css';
+import './FixedGrid.css';
 
 export interface FixedGridRowProps extends NestableBaseComponentProps {
   bottomSpacing?: GutterSize;
@@ -12,7 +12,7 @@ export interface FixedGridRowProps extends NestableBaseComponentProps {
 
 export { GutterSize };
 
-export class FixedGridRow extends React.PureComponent<FixedGridRowProps, {}> {
+export default class FixedGridRow extends React.PureComponent<FixedGridRowProps, {}> {
   static defaultProps = {
     gutterSize: GutterSize.SMALL,
   };

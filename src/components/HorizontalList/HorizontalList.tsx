@@ -2,13 +2,13 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './horizontal-list.css';
+import './HorizontalList.css';
 
 export interface HorizontalListProps extends NestableBaseComponentProps {
   align?: 'left' | 'right';
 }
 
-export class HorizontalList extends React.PureComponent<HorizontalListProps, {}> {
+export default class HorizontalList extends React.PureComponent<HorizontalListProps, {}> {
   static defaultProps = {
     align: 'left',
   };

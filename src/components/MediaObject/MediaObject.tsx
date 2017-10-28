@@ -4,10 +4,10 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { MediaObjectSize } from './enums';
-import MediaObjectTitle from './media-object-title';
-import MediaObjectMetadata from './media-object-metadata';
-import MediaObjectExtra from './media-object-extra';
-import './media-object.css';
+import MediaObjectTitle from './MediaObjectTitle';
+import MediaObjectMetadata from './MediaObjectMetadata';
+import MediaObjectExtra from './MediaObjectExtra';
+import './MediaObject.css';
 
 export { MediaObjectSize };
 

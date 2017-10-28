@@ -13,7 +13,7 @@ import {
 } from '../components/Callout';
 import FakeLink from '../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../components/FixedGrid';
-import { HorizontalList, ListItem } from '../components/HorizontalList';
+import { HorizontalList, HorizontalListItem } from '../components/HorizontalList';
 import Icon, { IconSize } from '../components/Icon';
 import Image from '../components/Image';
 import MediaObject, { MediaObjectSize } from '../components/MediaObject';
@@ -140,12 +140,12 @@ function getUserHovercard(type: UserHovercardType) {
           </FixedGridRow>
 
           <HorizontalList align="right" className="actions">
-            <ListItem>
+            <HorizontalListItem>
               <Button text="Send Message" color={ButtonColor.SECONDARY} />
-            </ListItem>
-            <ListItem>
+            </HorizontalListItem>
+            <HorizontalListItem>
               <Button {...userOptions[type].buttonProps} />
-            </ListItem>
+            </HorizontalListItem>
           </HorizontalList>
         </Block>
       </CalloutBody>
@@ -240,11 +240,11 @@ function getGroupHovercard(type: GroupHovercardType) {
           <Block className="group-members" bottomSpacing={GutterSize.LARGE}>
             <Block bottomSpacing={GutterSize.XSMALL}>{groupMembersTitle}</Block>
             <HorizontalList>
-              <ListItem>{memberAvatar1}</ListItem>
-              <ListItem>{memberAvatar2}</ListItem>
-              <ListItem>{memberAvatar3}</ListItem>
-              <ListItem>{memberAvatar4}</ListItem>
-              <ListItem>{memberAvatar5}</ListItem>
+              <HorizontalListItem>{memberAvatar1}</HorizontalListItem>
+              <HorizontalListItem>{memberAvatar2}</HorizontalListItem>
+              <HorizontalListItem>{memberAvatar3}</HorizontalListItem>
+              <HorizontalListItem>{memberAvatar4}</HorizontalListItem>
+              <HorizontalListItem>{memberAvatar5}</HorizontalListItem>
             </HorizontalList>
           </Block>
 
@@ -257,9 +257,9 @@ function getGroupHovercard(type: GroupHovercardType) {
 
           <Block className="actions" push={-1}>
             <HorizontalList align="right">
-              <ListItem>
+              <HorizontalListItem>
                 <Button {...groupOptions[type].buttonProps} />
-              </ListItem>
+              </HorizontalListItem>
             </HorizontalList>
           </Block>
         </Block>
@@ -378,12 +378,12 @@ storiesOf('...', module)
             </Block>
 
             <HorizontalList align="right" className="actions">
-              <ListItem>
+              <HorizontalListItem>
                 <Button text="Go To File" color={ButtonColor.SECONDARY} />
-              </ListItem>
-              <ListItem>
+              </HorizontalListItem>
+              <HorizontalListItem>
                 <Button text="Preview" />
-              </ListItem>
+              </HorizontalListItem>
             </HorizontalList>
           </Block>
         </CalloutBody>

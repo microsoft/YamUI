@@ -18,14 +18,18 @@ export interface MediaObjectMetadataProps {
   size: MediaObjectSize;
 }
 
-const MediaObjectMetadata: React.StatelessComponent<MediaObjectMetadataProps> = props => (
-  <Block
-    className="y-media-object--metadata"
-    textSize={TextSize.SMALL}
-    push={BlockPushMap[props.size]}
-  >
-    <Text color={TextColor.METADATA}>{props.children}</Text>
-  </Block>
-);
+export default class MediaObjectMetadata extends React.PureComponent<MediaObjectMetadataProps, {}> {
+  render() {
+    const { size, children } = this.props;
 
-export default MediaObjectMetadata;
+    return (
+      <Block
+        className="y-media-object--metadata"
+        textSize={TextSize.SMALL}
+        push={BlockPushMap[size]}
+      >
+        <Text color={TextColor.METADATA}>{children}</Text>
+      </Block>
+    );
+  }
+}

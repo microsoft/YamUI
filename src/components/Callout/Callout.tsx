@@ -7,7 +7,7 @@ import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-reac
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
-import './callout.css';
+import './Callout.css';
 
 const hideDelay = 500;
 const showDelay = 750;
@@ -78,7 +78,7 @@ export interface CalloutState {
 
 export { DirectionalHint };
 
-export class Callout extends React.PureComponent<CalloutProps, CalloutState> {
+export default class Callout extends React.PureComponent<CalloutProps, CalloutState> {
   static defaultProps: Partial<CalloutProps> = {
     directionalHint: DirectionalHint.bottomCenter,
     isBeakVisible: true,

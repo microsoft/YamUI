@@ -31,7 +31,7 @@ module.exports = {
   components: componentGlob,
   ignore: ignoredGlobs,
   skipComponentsWithoutExample: true,
-  resolver: docgen.resolver.findExportedComponentDefinition,
+  resolver: docgen.resolver.findAllComponentDefinitions,
   propsParser: docgenParser.parse,
   getComponentPathLine,
   webpackConfig,

@@ -5,14 +5,14 @@ import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
 
-export interface CalloutHeaderProps extends NestableBaseComponentProps {}
+export interface CalloutBodyProps extends NestableBaseComponentProps {}
 
-export class CalloutHeader extends React.PureComponent<CalloutHeaderProps, {}> {
+export default class CalloutBody extends React.PureComponent<CalloutBodyProps, {}> {
   render() {
     const { className, children } = this.props;
 
     return (
-      <div className={classNames('y-callout--header', className)}>
+      <div className={classNames('y-callout--body', className)}>
         <Block padding={GutterSize.XLARGE}>{children}</Block>
       </div>
     );

@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './fixed-grid.css';
+import './FixedGrid.css';
 
 export interface FixedGridColumnProps extends NestableBaseComponentProps {
   /**
@@ -22,7 +22,7 @@ interface ColumnStyles {
   width?: string;
 }
 
-export class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
+export default class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
   render() {
     const { children } = this.props;
 

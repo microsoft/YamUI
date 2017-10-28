@@ -1,33 +1,33 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { HorizontalList, ListItem } from '../components/HorizontalList';
+import { HorizontalList, HorizontalListItem } from '../components/HorizontalList';
 import Button, { ButtonColor } from '../components/Button';
 
 storiesOf('HorizontalList', module)
   .add('list of Buttons', () => (
     <HorizontalList>
-      <ListItem>
+      <HorizontalListItem>
         <Button text="1" color={ButtonColor.SECONDARY} />
-      </ListItem>
-      <ListItem>
+      </HorizontalListItem>
+      <HorizontalListItem>
         <Button text="2" color={ButtonColor.SECONDARY} />
-      </ListItem>
-      <ListItem>
+      </HorizontalListItem>
+      <HorizontalListItem>
         <Button text="3" />
-      </ListItem>
+      </HorizontalListItem>
     </HorizontalList>
   ))
   .add('aligned right', () => (
     <HorizontalList align="right">
-      <ListItem>
+      <HorizontalListItem>
         <Button text="1" color={ButtonColor.SECONDARY} />
-      </ListItem>
-      <ListItem>
+      </HorizontalListItem>
+      <HorizontalListItem>
         <Button text="2" color={ButtonColor.SECONDARY} />
-      </ListItem>
-      <ListItem>
+      </HorizontalListItem>
+      <HorizontalListItem>
         <Button text="3" />
-      </ListItem>
+      </HorizontalListItem>
     </HorizontalList>
   ));

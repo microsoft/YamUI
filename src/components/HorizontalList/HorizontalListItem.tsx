@@ -1,12 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './horizontal-list.css';
+import {
+  NestableBaseComponentProps as HorizontalListItemProps,
+} from '../../util/BaseComponent/props';
+import './HorizontalList.css';
 
-export { NestableBaseComponentProps };
+export { HorizontalListItemProps };
 
-export class ListItem extends React.PureComponent<NestableBaseComponentProps, {}> {
+export default class HorizontalListItem extends React.PureComponent<HorizontalListItemProps, {}> {
   render() {
     const { children } = this.props;
 

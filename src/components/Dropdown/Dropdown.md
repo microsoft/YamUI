@@ -107,6 +107,7 @@ Dropdown in a grid:
 
 ```js { "props": { "data-description": "in grid" } }
 const { GutterSize } = require('../Block')
+const { FixedGridColumn, FixedGridRow } = require('../FixedGrid')
 const action = (msg) => (...args) => { console.log(msg, ...args) };
 
 const options = [

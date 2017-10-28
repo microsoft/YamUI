@@ -178,7 +178,7 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
       width={40}
     />
     <FixedGridColumn>
-      <MediaObject
+      <MediaObjectTitle
         size="medium"
       >
         <div
@@ -186,7 +186,7 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
         >
           TITLE CONTENT
         </div>
-      </MediaObject>
+      </MediaObjectTitle>
     </FixedGridColumn>
   </FixedGridRow>
 </div>

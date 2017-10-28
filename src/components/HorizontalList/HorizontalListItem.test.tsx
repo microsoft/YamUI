@@ -1,14 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { ListItem, NestableBaseComponentProps } from '.';
+import { HorizontalListItem, HorizontalListItemProps } from '.';
 
-describe('<ListItem />', () => {
-  let component: ShallowWrapper<NestableBaseComponentProps, {}>;
+describe('<HorizontalListItem />', () => {
+  let component: ShallowWrapper<HorizontalListItemProps, {}>;
 
   describe('without props', () => {
     beforeEach(() => {
-      component = shallow(<ListItem />);
+      component = shallow(<HorizontalListItem />);
     });
 
     it('renders an li element', () => {
@@ -26,7 +26,7 @@ describe('<ListItem />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<ListItem className="TEST_CLASSNAME" />);
+      component = shallow(<HorizontalListItem className="TEST_CLASSNAME" />);
     });
 
     it('includes that className', () => {
@@ -44,7 +44,7 @@ describe('<ListItem />', () => {
 
   describe('with child content', () => {
     beforeEach(() => {
-      component = shallow(<ListItem>list item content</ListItem>);
+      component = shallow(<HorizontalListItem>list item content</HorizontalListItem>);
     });
 
     it('renders the child content', () => {

@@ -46,18 +46,21 @@ Unstyled navigation link wrapping content:
 const { TextColor } = require('../Text');
 
 <div>
-  <NavigationLink href="/404.html" unstyled={true}>
-    <div>
-      This is an unstyled <em>NavigationLink</em> component wrapping an entire block of text.
-    </div>
-  </NavigationLink>
-  <br />
-  <NavigationLink href="/404.html" unstyled={true}>
-    <div>
-      <Text color={TextColor.METADATA}>
-        This is another unstyled <em>NavigationLink</em> component wrapping a block of text with a different color.
-      </Text>
-    </div>
-  </NavigationLink>
+  <p>
+    <NavigationLink href="/404.html" unstyled={true}>
+      <div>
+        This is an unstyled <em>NavigationLink</em> component wrapping an entire block of text.
+      </div>
+    </NavigationLink>
+  </p>
+  <p>
+    <NavigationLink href="/404.html" unstyled={true}>
+      <div>
+        <Text color={TextColor.METADATA}>
+          This is another unstyled <em>NavigationLink</em> component wrapping a block of text with a different color.
+        </Text>
+      </div>
+    </NavigationLink>
+  </p>
 </div>
 ```

@@ -25,14 +25,18 @@ export interface MediaObjectTitleProps {
   size: MediaObjectSize;
 }
 
-const MediaObject: React.StatelessComponent<MediaObjectTitleProps> = props => (
-  <Block
-    className="y-media-object--title"
-    push={BlockPushMap[props.size]}
-    textSize={TextSizeMap[props.size] as TextSize}
-  >
-    <Text color={TextColor.PRIMARY}>{props.children}</Text>
-  </Block>
-);
+export default class MediaObjectTitle extends React.PureComponent<MediaObjectTitleProps, {}> {
+  render() {
+    const { size, children } = this.props;
 
-export default MediaObject;
+    return (
+      <Block
+        className="y-media-object--title"
+        push={BlockPushMap[size]}
+        textSize={TextSizeMap[size] as TextSize}
+      >
+        <Text color={TextColor.PRIMARY}>{children}</Text>
+      </Block>
+    );
+  }
+}
