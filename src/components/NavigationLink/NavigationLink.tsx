@@ -8,9 +8,22 @@ import { secureOpen } from '../../util/secureOpener';
 import './NavigationLink.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
+  /**
+   * The URL to navigate to on click
+   */
   href: string;
+  /**
+   * If true, opens the href in a new window and securely removes access to the opening window
+   */
   newWindow?: boolean;
+  /**
+   * An optional title attribute for the anchor tag
+   */
   title?: string;
+  /**
+   * If true, removes styling so text/content does not look like a link. Useful for allowing a large
+   * area to be clickable while nesting a FakeLink component(s) to show link and hover state visuals
+   */
   unstyled?: boolean;
 }
 

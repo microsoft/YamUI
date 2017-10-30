@@ -9,10 +9,18 @@ import './MessageBar.css';
 export { MessageBarType };
 
 export interface MessageBarProps extends NestableBaseComponentProps {
+  /**
+   * A descriptive message explanation for screenreaders
+   */
   ariaLabel: string;
+  /**
+   * The type of alert being relayed - info, warning or error
+   */
   type?: MessageBarType;
+  /**
+   * Actionable buttons, links, etc. as arbitrary JSX
+   */
   actions?: React.ReactNode;
-  children: React.ReactNode;
 }
 
 export default class MessageBar extends React.PureComponent<MessageBarProps, {}> {

@@ -2,7 +2,7 @@ The `Text` component simply renders a `span`. It offers size and color props so 
 
 ### Notes for use
 
-`Text` is an inline element. Note that inline elements cannot set a smaller line-height than what is set or inherited by the nearest block-level parent element. For this reason, it is generally best to set a font size on a parent block-level element (`<Block textSize={TextSize.LARGE}>`) rather than on individual `Text` components.
+`Text` is an inline element. Note that inline elements cannot set a smaller line-height than what is set or inherited by the nearest block-level parent element. For this reason, it is generally best to set a `textSize` on a parent `Block` component rather than on individual `Text` components.
 
 ### Examples
 
@@ -67,9 +67,9 @@ const { TextSize } = require('.');
   <p>
     <Text>
       This is text without size specified. It will inherit its size and line-height from its parent. This is text without size specified. <strong>It will inherit</strong> its size and line-height from its parent. This is text without size specified. It will inherit its size and line-height from its parent.
-  </Text>
-    <p>
+    </Text>
   </p>
+  <p>
     <Text size={TextSize.XXLARGE}>
       This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. <strong>This is size <em>XXLARGE</em>.</strong> This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>.
     </Text>

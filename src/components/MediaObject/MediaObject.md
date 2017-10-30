@@ -2,9 +2,9 @@ This component renders an image on the left with blocks of descriptive content o
 
 ### Examples
 
-Media object with avatar:
+With avatar:
 
-```js
+```js { "props": { "data-example": "with avatar" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('.');
 
@@ -51,9 +51,9 @@ const avatar = (size) => (
 </div>
 ```
 
-Media object with image:
+With image:
 
-```js
+```js { "props": { "data-example": "with image" } }
 const { MediaObjectSize } = require('.');
 
 const image = (
@@ -99,9 +99,9 @@ const image = (
 </div>
 ```
 
-Media object with additional UI:
+With additional arbitrary UI:
 
-```js
+```js { "props": { "data-example": "with additional arbitrary ui" } }
 const { AvatarSize } = require('../Avatar');
 const { ButtonColor, ButtonSize } = require('../Button');
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');
@@ -121,7 +121,7 @@ const avatar = (size) => (
   <Block push={4}>
     <FixedGridRow>
       <FixedGridColumn>
-        <Button text="Follow" size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
+        <Button text="Follow" size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} icon="plus" />
       </FixedGridColumn>
       <FixedGridColumn fixed>
         <Button text="..." size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
