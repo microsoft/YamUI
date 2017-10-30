@@ -27,7 +27,7 @@ export interface DropdownProps extends BaseComponentProps {
   placeHolder?: string;
 
   /**
-   * Use to specify an initially selected option.
+   * Initially selected option.
   **/
   selectedKey?: DropdownOptionKey;
 
@@ -37,6 +37,10 @@ export interface DropdownProps extends BaseComponentProps {
   onChanged?: (key: DropdownOptionKey) => void;
 }
 
+/**
+ * A `Dropdown` is a list in which the selected item is always visible, and the others are visible
+ * on demand by clicking a button.
+ */
 export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   render() {
     const { label, options, placeHolder, selectedKey, onChanged } = this.props;

@@ -1,1 +1,1 @@
-To be rendered in a `Callout` component.
+To be rendered only inside a `Callout` component.

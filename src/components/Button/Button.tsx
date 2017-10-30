@@ -18,7 +18,7 @@ export interface BaseButtonProps extends BaseComponentProps {
   text: string;
 
   /**
-   * Button description. This must be provided if the button text is not descriptive enough.
+   * Additional label that must be provided if the button text is not descriptive enough.
    */
   ariaLabel?: string;
 
@@ -46,34 +46,34 @@ export interface BaseButtonProps extends BaseComponentProps {
   size?: ButtonSize;
 
   /**
-   * Click callback handler. Will provide the React synthetic event.
+   * Click callback handler.
    */
-  onClick?: (event: any) => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 
   /**
-   * Focus callback handler. Will provide the React synthetic event.
+   * Focus callback handler.
    */
-  onFocus?: (event: any) => void;
+  onFocus?: (event: React.FocusEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 
   /**
-   * Focus lost callback handler. Will provide the React synthetic event.
+   * Blur callback handler.
    */
-  onBlur?: (event: any) => void;
+  onBlur?: (event: React.FocusEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 
   /**
-   * Hover callback handler. Will provide the React synthetic event.
+   * Mouse enter callback handler.
    */
-  onMouseEnter?: (event: any) => void;
+  onMouseEnter?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 
   /**
-   * Hover out callback handler. Will provide the React synthetic event.
+   * Mouse leave callback handler.
    */
-  onMouseLeave?: (event: any) => void;
+  onMouseLeave?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 }
 
 export interface RegularButtonProps extends BaseButtonProps {
   /**
-   * Disabled buttons cannot have a link.
+   * Buttons cannot have a link.
    */
   href?: void;
 
@@ -85,7 +85,8 @@ export interface RegularButtonProps extends BaseButtonProps {
 
 export interface LinkButtonProps extends BaseButtonProps {
   /**
-   * If provided, will render a link styled as a button.
+   * URL or a URL fragment that the link points to. If provided, the component will be rendered as a
+   * link styled as a button.
    */
   href: string;
 

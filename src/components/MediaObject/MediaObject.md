@@ -1,5 +1,3 @@
-This component renders an image on the left with blocks of descriptive content on the right. The image area and pieces of text content are passed in as props, with size/layout determined by the `size` prop.
-
 ### Examples
 
 With avatar:
@@ -57,7 +55,7 @@ With image:
 const { MediaObjectSize } = require('.');
 
 const image = (
-  <Image source="smiley.png" description="" fullWidth />
+  <Image source="yammer-logo.png" description="" fullWidth={true} />
 );
 
 <div>
@@ -101,7 +99,7 @@ const image = (
 
 With additional arbitrary UI:
 
-```js { "props": { "data-example": "with additional arbitrary ui" } }
+```js { "props": { "data-example": "with additional ui" } }
 const { AvatarSize } = require('../Avatar');
 const { ButtonColor, ButtonSize } = require('../Button');
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');
@@ -123,7 +121,7 @@ const avatar = (size) => (
       <FixedGridColumn>
         <Button text="Follow" size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} icon="plus" />
       </FixedGridColumn>
-      <FixedGridColumn fixed>
+      <FixedGridColumn fixed={true}>
         <Button text="..." size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
       </FixedGridColumn>
     </FixedGridRow>

@@ -2,7 +2,7 @@
 
 While buttons can technically be used to navigate a user to another part of the experience, this is not recommended unless that navigation is part of an action or their flow.
 
-Also, use concise, specific, self-explanatory text, usually a single word. Should include a verb. If acting on something, text should include the noun it is acting on. For example, *"Create Group"*.
+Also, use concise, specific, self-explanatory text, usually a single word. They should include a verb. If acting on something, their text should include the noun they're acting on, e.g. *"Create Group"*.
 
 ### Examples
 
@@ -25,7 +25,7 @@ const sampleUrl = 'https://www.yammer.com';
   </thead>
   <tbody>
     <tr>
-      <td>Primary</td>
+      <td style={{ textAlign: 'right' }}>Primary</td>
       <td>
         <Button text={sampleText} />
       </td>
@@ -33,7 +33,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled text={sampleText} />
+        <Button disabled={true} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button icon="plus" disabled size={ButtonSize.REGULAR} text={sampleText} />
+        <Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -71,14 +71,14 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled
+          disabled={true}
           size={ButtonSize.REGULAR}
           text={sampleText}
         />
       </td>
     </tr>
     <tr>
-      <td>Secondary</td>
+      <td style={{ textAlign: 'right' }}>Secondary</td>
       <td>
         <Button text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
@@ -86,7 +86,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button text={sampleText} color={ButtonColor.SECONDARY} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled text={sampleText} color={ButtonColor.SECONDARY} />
+        <Button disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ const sampleUrl = 'https://www.yammer.com';
         />
       </td>
       <td>
-        <Button icon="plus" disabled text={sampleText} color={ButtonColor.SECONDARY} />
+        <Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
     </tr>
     <tr>
@@ -137,7 +137,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled
+          disabled={true}
           text={sampleText}
           color={ButtonColor.SECONDARY}
         />
@@ -166,7 +166,7 @@ const sampleUrl = 'https://www.yammer.com';
   </thead>
   <tbody>
     <tr>
-      <td>Primary</td>
+      <td style={{ textAlign: 'right' }}>Primary</td>
       <td>
         <Button size={ButtonSize.SMALL} text={sampleText} />
       </td>
@@ -174,7 +174,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button size={ButtonSize.SMALL} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled size={ButtonSize.SMALL} text={sampleText} />
+        <Button disabled={true} size={ButtonSize.SMALL} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -186,7 +186,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button icon="plus" disabled size={ButtonSize.SMALL} text={sampleText} />
+        <Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -212,14 +212,14 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled
+          disabled={true}
           size={ButtonSize.SMALL}
           text={sampleText}
         />
       </td>
     </tr>
     <tr>
-      <td>Secondary</td>
+      <td style={{ textAlign: 'right' }}>Secondary</td>
       <td>
         <Button size={ButtonSize.SMALL} text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
@@ -233,7 +233,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          disabled
+          disabled={true}
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -262,7 +262,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td>
         <Button
           icon="plus"
-          disabled
+          disabled={true}
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -294,7 +294,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled
+          disabled={true}
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -308,15 +308,13 @@ const sampleUrl = 'https://www.yammer.com';
 Button with event handler:
 
 ```js { "props": { "data-example": "with event handler" } }
-const action = (msg) => () => { console.log(msg) };
-
 <Button
   text="Interact with me"
   onClick={action('button clicked')}
-  onMouseEnter={action('button hovered in')}
-  onMouseLeave={action('button hovered out')}
+  onMouseEnter={action('button mouse enter')}
+  onMouseLeave={action('button mouse leave')}
   onFocus={action('button focused')}
-  onBlur={action('button focus lost')}
+  onBlur={action('button blurred')}
 />
 ```
 

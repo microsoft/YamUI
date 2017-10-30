@@ -86,7 +86,7 @@ With image and badge:
 const { AvatarSize } = require('.');
 
 const badgeContent = (
-  <Image source="badge.png" description="" fullWidth />
+  <Image source="badge.png" description="" fullWidth={true} />
 );
 
 <table style={{ textAlign: 'center' }}>
@@ -223,50 +223,56 @@ const { AvatarSize } = require('.');
   <Block bottomSpacing={GutterSize.SMALL}>
     A background color will be automatically set when an <em>imageUrl</em> is not provided. Fabric handles this behind the scenes for us, based on the <em>name</em> prop passed in.
   </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="DDD DDD" initials="LG" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="GGG GGG" initials="LB" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="SSS SSS" initials="LP" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="BBB BBB" initials="GR" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="AAA AAA" initials="DG" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="OOO OOO" initials="PI" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="LLL LLL" initials="MA" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="CCC CCC" initials="PU" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="ZZZ ZZZ" initials="BL" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="NNN NNN" initials="TE" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="MMM MMM" initials="BL" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="ooo ooo" initials="DB" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="EEE EEE" initials="OR" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="FFF FFF" initials="DR" />
-  </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
-    <Avatar size={AvatarSize.MEDIUM} name="HHH HHH" initials="RE" />
-  </Block>
+  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="DDD DDD" initials="LG" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="GGG GGG" initials="LB" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="SSS SSS" initials="LP" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="BBB BBB" initials="GR" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="AAA AAA" initials="DG" />
+    </FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="OOO OOO" initials="PI" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="LLL LLL" initials="MA" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="CCC CCC" initials="PU" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="ZZZ ZZZ" initials="BL" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="NNN NNN" initials="TE" />
+    </FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="MMM MMM" initials="BL" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="ooo ooo" initials="DB" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="EEE EEE" initials="OR" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="FFF FFF" initials="DR" />
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Avatar size={AvatarSize.MEDIUM} name="HHH HHH" initials="RE" />
+    </FixedGridColumn>
+  </FixedGridRow>
 </div>
 ```

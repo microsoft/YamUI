@@ -12,10 +12,6 @@ import './Callout.css';
 const hideDelay = 500;
 const showDelay = 750;
 
-export interface VoidCallback {
-  (): void;
-}
-
 export enum TriggerType {
   CLICK = 'click',
   HOVER = 'hover',
@@ -23,53 +19,56 @@ export enum TriggerType {
 
 export interface CalloutProps extends NestableBaseComponentProps {
   /**
-   * The React components or HTML to populate the Callout's popup area.
+   * The content to populate the callout's popup area.
    */
   content: React.ReactNode;
 
   /**
-   * This side or corner to place the Callout in relationship to its visible trigger content. Note
-   * that this is a hint and the popup position will adjust to available screen real estate.
+   * Direction to place the callout in relationship to its visible trigger content. Note that this
+   * is a hint, and the popup position will adjust to available screen real estate.
+   * @default DirectionalHint.bottomCenter
    */
   directionalHint?: DirectionalHint;
 
   /**
-   * Whether or not the arrow/beak should be displayed. Defaults to true.
+   * Whether to display the callout's arrow/beak.
+   * @default true
    */
   isBeakVisible?: boolean;
 
   /**
-   * A hidden title to be rendered in an h1 tag
+   * A hidden title to be rendered in an `h1` tag.
    */
   screenreaderTitle?: string;
 
   /**
-   * If true, the component will manually set its displayed state to true. Note that it will wait
-   * until componentDidMount to ensure it can properly position itself in relation to the trigger
-   * content. Defaults to false.
+   * Whether the callout should start visible. Note that it will wait until `componentDidMount` to
+   * ensure it can properly position itself in relation to the trigger.
+   * @default false
    */
   startVisible?: boolean;
 
   /**
-   * Whether a click or hover should trigger the Callout to display. Defaults to hover.
+   * Whether a mouse click or hover should trigger the callout.
+   * @default TriggerType.HOVER
    */
   triggerType?: TriggerType;
 
   /**
-   * Callback to be fired when the callout content is removed
+   * Callback to be fired when the callout content is removed.
    */
-  onContentDismiss?: VoidCallback;
+  onContentDismiss?: () => void;
 
   /**
-   * Callback to be fired when the callout content is displayed
+   * Callback to be fired when the callout content is displayed.
    */
-  onContentDisplay?: VoidCallback;
+  onContentDisplay?: () => void;
 
   /**
-   * Callback to be fired on trigger hover. Can be used to preload Ajax content early before the
-   * callout content is actually displayed.
+   * Callback to be fired on trigger hover. Can be used to preload content early before the callout
+   * content is actually displayed.
    */
-  onTriggerHover?: VoidCallback;
+  onTriggerHover?: () => void;
 }
 
 export interface CalloutState {
@@ -78,6 +77,11 @@ export interface CalloutState {
 
 export { DirectionalHint };
 
+/**
+ * A `Callout` is a small popover overlay, to be used for hovercards. `Callout` opens on click or
+ * mouse enter, and closes on mouse out and `ESC`. It should be used with `CalloutHeader` and
+ * `CalloutBody` components for consistent layouts.
+ */
 export default class Callout extends React.PureComponent<CalloutProps, CalloutState> {
   static defaultProps: Partial<CalloutProps> = {
     directionalHint: DirectionalHint.bottomCenter,

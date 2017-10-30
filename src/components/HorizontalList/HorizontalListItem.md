@@ -1,1 +1,1 @@
-`HorizontalListItem` components should be nested within a `HorizontalList` component.
+To be rendered only inside a `HorizontalList` component.

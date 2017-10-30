@@ -33,13 +33,13 @@ export enum SpinnerColor {
 
 export interface SpinnerProps extends BaseComponentProps {
   /**
-   * Alternative label for screen readers.
+   * Additional label that can be provided for screenreaders.
    */
   ariaLabel?: string;
 
   /**
    * Politeness for label update announcement.
-   * @default polite
+   * @default 'polite'
    */
   ariaLive?: FabricSpinnerProps['ariaLive'];
 
@@ -61,6 +61,10 @@ export interface SpinnerProps extends BaseComponentProps {
   size?: SpinnerSize;
 }
 
+/**
+ * A `Spinner` is an outline of a circle which animates around itself indicating to the user that
+ * things are processing. It is shown when we're unsure how long a task will take.
+ */
 export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   static defaultProps: Partial<SpinnerProps> = {
     ariaLive: 'polite',

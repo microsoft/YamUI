@@ -1,8 +1,8 @@
-This component renders an SVG icon.
+### Notes for use
 
-We're currently not supporting `aria-label` as it is being specified by wrapper components. For example, `Button` adds `aria-label` when it renders its `Icon` component.
+Adding an `aria-label` to the icon is not supported, as it is being specified by wrapper components. For example, `Button` adds `aria-label` when it renders its `Icon` component.
 
-The `block` prop may be necessary to remove extra line-height.
+The `block` prop may be necessary to remove extra `line-height`.
 
 ### Examples
 
@@ -87,13 +87,13 @@ const { IconSize } = require('.');
 
 <div>
   <p>
-    This is a line of text with an <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
+    This is a line of text with a <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
   </p>
   <p style={{ color: 'blue' }}>
-    This is a line of colored text with an <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
+    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
   </p>
   <p>
-    This is a line of colored text with an <Icon size={IconSize.SMALL} icon="plus" color="red" /> inline icon that overrides its color.
+    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="plus" color="red" /> inline icon that overrides its color.
   </p>
 </div>
 ```

@@ -10,19 +10,26 @@ export { MessageBarType };
 
 export interface MessageBarProps extends NestableBaseComponentProps {
   /**
-   * A descriptive message explanation for screenreaders
+   * Additional label that must be provided for screenreaders.
    */
   ariaLabel: string;
+
   /**
-   * The type of alert being relayed - info, warning or error
+   * Type of message being displayed.
+   * @default MessageBarType.INFO
    */
   type?: MessageBarType;
+
   /**
-   * Actionable buttons, links, etc. as arbitrary JSX
+   * Elements to be displayed as actions for this message.
    */
   actions?: React.ReactNode;
 }
 
+/**
+ * A `MessageBar` displays relevant status information. You can use a `MessageBar` to tell the user
+ * about a situation, and optionally provide actions for them to take.
+ */
 export default class MessageBar extends React.PureComponent<MessageBarProps, {}> {
   static defaultProps = {
     type: MessageBarType.INFO,

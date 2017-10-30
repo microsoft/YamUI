@@ -11,24 +11,25 @@ export type IconName = keyof typeof icons;
 
 export interface IconProps extends BaseComponentProps {
   /**
-   * The specific icon graphic to render.
+   * Specific icon graphic to render.
    */
   icon: IconName;
 
   /**
-   * Sets icon style to `display: block`, helpful if the inline icon's
-   * line-height is taller than the current line's line-height and creating
-   * extra vertical space.
+   * Sets icon style to `display: block`. This is helpful if the inline icon's `line-height` is
+   * taller than the current line's `line-height`, and is creating extra vertical space.
    */
   block?: boolean;
 
   /**
-   * Manually override the inherited color. Can be any valid CSS color.
+   * Manual color override (by default the icon inherits its parent's color). Can be any valid CSS
+   * color.
    */
   color?: string;
 
   /**
-   * Optional pre-determined size, which accounts for font-size and line-height. Defaults to medium.
+   * Icon size, which also accounts for `font-size` and `line-height`.
+   * @default IconSize.MEDIUM
    */
   size?: IconSize;
 }
@@ -39,6 +40,9 @@ interface IconStyles {
   color?: string;
 }
 
+/**
+ * An `Icon` renders an SVG icon.
+ */
 export default class Icon extends React.PureComponent<IconProps, {}> {
   static defaultProps = {
     size: IconSize.MEDIUM,

@@ -1,5 +1,3 @@
-The `Text` component simply renders a `span`. It offers size and color props so UI features don't need to own this CSS. This is both a convenience for engineers and a way to enforce consistency of supported text colors and font-size/line-height combinations.
-
 ### Notes for use
 
 `Text` is an inline element. Note that inline elements cannot set a smaller line-height than what is set or inherited by the nearest block-level parent element. For this reason, it is generally best to set a `textSize` on a parent `Block` component rather than on individual `Text` components.
@@ -12,12 +10,12 @@ Basic text:
 <div>
   <p>
     <Text>
-      The <strong>&lt;Text /&gt;</strong> component renders its children in a <strong>span</strong>. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
+      The <strong>Text</strong> component renders its children in a <strong>span</strong>. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
     </Text>
   </p>
   <p>
     <Text>
-      By default the <strong>&lt;Text /&gt;</strong> component does not render any styling so it can inherit styles of its parent.
+      By default the <strong>Text</strong> component does not render any styling so it can inherit styles of its parent.
     </Text>
   </p>
 </div>
@@ -35,25 +33,25 @@ const { TextSize } = require('.');
     </Text>
   </p>
   <p>
-    <Text size={TextSize.XXLARGE}>This is size <em>XXLARGE</em>.</Text>
+    <Text size={TextSize.XXLARGE}>This example has <strong>size: XXLARGE</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.XLARGE}>This is size <em>XLARGE</em>.</Text>
+    <Text size={TextSize.XLARGE}>This example has <strong>size: XLARGE</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.LARGE}>This is size <em>LARGE</em>.</Text>
+    <Text size={TextSize.LARGE}>This example has <strong>size: LARGE</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.MEDIUM}>This is size <em>MEDIUM</em>.</Text>
+    <Text size={TextSize.MEDIUM}>This example has <strong>size: MEDIUM</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.MEDIUM_SUB}>This is size <em>MEDIUM_SUB</em>.</Text>
+    <Text size={TextSize.MEDIUM_SUB}>This example has <strong>size: MEDIUM_SUB</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.SMALL}>This is size <em>SMALL</em>.</Text>
+    <Text size={TextSize.SMALL}>This example has <strong>size: SMALL</strong>.</Text>
   </p>
   <p>
-    <Text size={TextSize.XSMALL}>This is size <em>XSMALL</em>.</Text>
+    <Text size={TextSize.XSMALL}>This example has <strong>size: XSMALL</strong>.</Text>
   </p>
 </div>
 ```
@@ -66,42 +64,70 @@ const { TextSize } = require('.');
 <div>
   <p>
     <Text>
-      This is text without size specified. It will inherit its size and line-height from its parent. This is text without size specified. <strong>It will inherit</strong> its size and line-height from its parent. This is text without size specified. It will inherit its size and line-height from its parent.
+      This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent. This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent. This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent.
     </Text>
   </p>
   <p>
     <Text size={TextSize.XXLARGE}>
-      This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. <strong>This is size <em>XXLARGE</em>.</strong> This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>. This is size <em>XXLARGE</em>.
+      This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.XLARGE}>
-      This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. <strong>This is size <em>XLARGE</em>.</strong> This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>. This is size <em>XLARGE</em>.
+      This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.LARGE}>
-      This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. <strong>This is size <em>LARGE</em>.</strong> This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>. This is size <em>LARGE</em>.
+      This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.MEDIUM}>
-      This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. <strong>This is size <em>MEDIUM</em>.</strong> This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>. This is size <em>MEDIUM</em>.
+      This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.MEDIUM_SUB}>
-      This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. <strong>This is size <em>MEDIUM_SUB</em>.</strong> This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>. This is size <em>MEDIUM_SUB</em>.
+      This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.SMALL}>
-      This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. <strong>This is size <em>SMALL</em>.</strong> This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>. This is size <em>SMALL</em>.
+      This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>.
     </Text>
   </p>
   <p>
     <Text size={TextSize.XSMALL}>
-      This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. <strong>This is size <em>XSMALL</em>.</strong> This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>. This is size <em>XSMALL</em>.
+      This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>.
+    </Text>
+  </p>
+</div>
+```
+
+Different text colors:
+
+```js { "props": { "data-example": "colors" } }
+const { TextColor } = require('.');
+
+<div>
+  <p>
+    <Text>
+      This is text without a color specified. It will inherit its color from its parent.
+    </Text>
+  </p>
+  <p>
+    <Text color={TextColor.PRIMARY}>This example has <strong>color: PRIMARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.SECONDARY}>This example has <strong>color: SECONDARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
+  </p>
+  <p style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
+    <Text color={TextColor.WHITE}>
+      This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
     </Text>
   </p>
 </div>

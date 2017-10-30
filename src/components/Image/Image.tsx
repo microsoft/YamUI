@@ -9,15 +9,25 @@ export { ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
   /**
-   * Alt text, required for accessibility. Set to an empty string if screenreaders should not read
-   * anything out loud.
+   * Description of the image that must be provided for screenreaders. Set to an empty string if
+   * screenreaders should not read anything out loud.
    */
   description: string;
 
   /**
-   * Image source URL.
+   * Source URL.
    */
   source: string;
+
+  /**
+   * Height in pixels.
+   */
+  height?: number;
+
+  /**
+   * Width in pixels.
+   */
+  width?: number;
 
   /**
    * Set this to true in responsive layouts where the image's container element should dictate the
@@ -25,11 +35,6 @@ export interface ImageProps extends BaseComponentProps {
    * match its natural aspect ratio.
    */
   fullWidth?: boolean;
-
-  /**
-   * Height in pixels.
-   */
-  height?: number;
 
   /**
    * Specifies how to position this image within its div wrapper. Not setting a value will behave
@@ -41,16 +46,17 @@ export interface ImageProps extends BaseComponentProps {
   imageFit?: ImageFit;
 
   /**
-   * Width in pixels.
-   */
-  width?: number;
-
-  /**
    * Callback to be invoked when the image's loading state changes.
    */
   onLoadingStateChange?: (loadState: ImageLoadState) => void;
 }
 
+/**
+ * An `Image` renders an `img` element within a wrapper `div`. This `div` is displayed as
+ * `inline-block`, so it behaves like a standard inline image. The `height` and `width` actually get
+ * applied to the wrapper `div`, and the image will get scaled/positioned within the wrapper
+ * depending on which props you provide.
+ */
 export default class Image extends React.PureComponent<ImageProps, {}> {
   static defaultProps: Partial<ImageProps> = {
     fullWidth: false,

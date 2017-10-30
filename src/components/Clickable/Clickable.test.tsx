@@ -2,7 +2,6 @@
 import { consoleTestResultHandler } from 'vrsource-tslint-rules/node_modules/tslint/lib/test';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-
 import Clickable, { ClickableProps } from '.';
 
 describe('<Clickable />', () => {

@@ -2,11 +2,14 @@
 import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps as CalloutBodyProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
 
-export interface CalloutBodyProps extends NestableBaseComponentProps {}
+export { CalloutBodyProps };
 
+/**
+ * Body of a `Callout` component. Used to maintain a consistent layout.
+ */
 export default class CalloutBody extends React.PureComponent<CalloutBodyProps, {}> {
   render() {
     const { className, children } = this.props;

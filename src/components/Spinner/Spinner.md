@@ -1,8 +1,6 @@
-A `Spinner` is an outline of a circle which animates around itself indicating to the user that things are processing. It is shown when we're unsure how long a task will take.
-
 ### Examples
 
-Spinners without label:
+Without label:
 
 ```js { "props": { "data-example": "without label" } }
 const { SpinnerColor, SpinnerSize } = require('.');
@@ -49,7 +47,7 @@ const { SpinnerColor, SpinnerSize } = require('.');
 </table>
 ```
 
-Spinners with label:
+With label:
 
 ```js { "props": { "data-example": "with label" } }
 const { SpinnerColor, SpinnerSize } = require('.');

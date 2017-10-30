@@ -6,11 +6,15 @@ import './HorizontalList.css';
 
 export interface HorizontalListProps extends NestableBaseComponentProps {
   /**
-   * Whether list items should be aligned left or right. Defaults to left.
+   * Alignment of the list.
+   * @default 'left'
    */
   align?: 'left' | 'right';
 }
 
+/**
+ * A `HorizontalList` displays a horizontal list of evenly spaced items.
+ */
 export default class HorizontalList extends React.PureComponent<HorizontalListProps, {}> {
   static defaultProps = {
     align: 'left',

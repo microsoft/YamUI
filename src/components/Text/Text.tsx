@@ -12,6 +12,11 @@ export interface TextProps extends NestableBaseComponentProps {
   size?: TextSize;
 }
 
+/**
+ * A `Text` component simply renders a `span`. It offers size and color props so UI features don't
+ * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
+ * of supported text colors and `font-size`/`line-height` combinations.
+ */
 export default class Text extends React.PureComponent<TextProps, {}> {
   render() {
     const { children } = this.props;

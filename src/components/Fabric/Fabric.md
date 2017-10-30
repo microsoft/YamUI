@@ -1,5 +1,3 @@
-The `Fabric` component is provided directly by the Fabric library and manages typography and other styles for the entire nested app. It manages styles dynamically, changing some classes as elements receive and lose focus. Eventually, as Fabric continues to adopt Glamor, it will set language-specific fonts. All visible markup should be wrapped in a single `Fabric` component.
-
 ### Notes for use
 
 You should wrap your entire app in a `Fabric` component. The Fabric library relies on this component to manage some overall styling, a language-specific font stack, and some special styling for accessible keyboard tabbing. By wrapping your entire app you can ensure that all content conforms to the same baseline styles.
@@ -18,7 +16,7 @@ Basic usage:
     Entire application
   </Fabric>
 
-  <!-- Legacy lightbox etc. rendered outside the main Fabric wrapper -->
+  {/* Legacy lightbox rendered outside the main Fabric wrapper. */}
   <div className="lightbox">
     <Fabric>
       Lightbox content

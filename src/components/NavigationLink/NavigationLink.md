@@ -1,36 +1,34 @@
-This renders an `<a>` tag for navigation between web pages.
-
 ### Notes for use
 
 `NavigationLink` purposefully does not offer an `onClick` event as it should only be used for navigation. Please use a `Clickable` component for event handlers which do not change the current URL.
 
 ### Examples
 
-Basic navigation link:
+Basic:
 
 ```js { "props": { "data-example": "basic" } }
 <div>
-  Here is a <NavigationLink href="/404.html">NavigationLink component</NavigationLink> with just an <strong>href</strong>, its only required property.
+  Here is a <NavigationLink href="/404.html"><strong>NavigationLink</strong> component</NavigationLink> with just an <strong>href</strong>, its only required property.
 </div>
 ```
 
-Navigation link that opens a new window:
+Opens a new window:
 
 ```js { "props": { "data-example": "new window" } }
 <div>
-  Here is a <NavigationLink href="/404.html" newWindow>NavigationLink component</NavigationLink> which opens its link securely in a new window.
+  Here is a <NavigationLink href="/404.html" newWindow={true}><strong>NavigationLink</strong> component</NavigationLink> which opens its link securely in a new window.
 </div>
 ```
 
-Unstyled navigation link:
+Unstyled link:
 
 ```js { "props": { "data-example": "unstyled" } }
 <div>
-  Here is a <NavigationLink href="/404.html" unstyled>NavigationLink component</NavigationLink> which removes the link styling and inherits its color.
+  Here is a <NavigationLink href="/404.html" unstyled={true}><strong>NavigationLink</strong> component</NavigationLink> which removes the link styling and inherits its parent's color.
 </div>
 ```
 
-Navigation link wrapping content:
+Link wrapping content:
 
 ```js { "props": { "data-example": "wrapping" } }
 <NavigationLink href="/404.html">
@@ -40,7 +38,7 @@ Navigation link wrapping content:
 </NavigationLink>
 ```
 
-Unstyled navigation link wrapping content:
+Unstyled link wrapping content:
 
 ```js { "props": { "data-example": "unstyled wrapping" } }
 const { TextColor } = require('../Text');

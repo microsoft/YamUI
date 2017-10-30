@@ -11,6 +11,10 @@ const getComponentPathLine = (componentPath) => {
   return `import ${name} from '${dir}';`;
 };
 
+const context = {
+  action: path.resolve(__dirname, 'config/styleguide/context/action'),
+};
+
 const baseStyles = path.resolve(__dirname, 'src/css/index.css');
 const assetsDir = path.resolve(__dirname, 'config/styleguide/assets');
 const componentGlob = 'src/components/**/*.{ts,tsx}';
@@ -36,6 +40,7 @@ module.exports = {
   getComponentPathLine,
   webpackConfig,
   assetsDir,
+  context,
   require: [baseStyles],
   serverPort: 5555,
   styleguideDir: 'build/docs',

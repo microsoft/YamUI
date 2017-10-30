@@ -7,17 +7,22 @@ import './FixedGrid.css';
 
 export interface FixedGridRowProps extends NestableBaseComponentProps {
   /**
-   * Margin added below the row
+   * Margin added below the row.
    */
   bottomSpacing?: GutterSize;
+
   /**
-   * The horizontal gutter space between each column
+   * Horizontal gutter space between each column.
+   * @default GutterSize.SMALL
    */
   gutterSize?: GutterSize;
 }
 
 export { GutterSize };
 
+/**
+ * A `FixedGridRow` represents each row inside a `FixedGrid`. It should wrap `FixedGridColumn`s.
+ */
 export default class FixedGridRow extends React.PureComponent<FixedGridRowProps, {}> {
   static defaultProps = {
     gutterSize: GutterSize.SMALL,

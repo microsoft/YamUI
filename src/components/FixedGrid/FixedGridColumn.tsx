@@ -22,6 +22,10 @@ interface ColumnStyles {
   width?: string;
 }
 
+/**
+ * A `FixedGridColumn` represents each column inside a `FixedGrid`. It should be wrapped in a
+ * `FixedGridRow`.
+ */
 export default class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
   render() {
     const { children } = this.props;
