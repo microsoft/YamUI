@@ -1,5 +1,6 @@
 {
   "name": "List of Access Points.xls",
-  "description": "Posted in Security Group",
+  "location": "Posted in Security Group",
+  "description": "The AP table is a central element of the configuration for WLCs.",
   "imageUrl": "file.png"
 }

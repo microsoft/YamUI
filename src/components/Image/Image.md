@@ -12,7 +12,7 @@ Basic:
 const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
-<Image source={yammerLogo} description={yammerLogoDescription} width={250} height={140} />
+<Image source={yammerLogo} description={yammerLogoDescription} width={320} height={240} />
 ```
 
 Fit cover:
@@ -30,8 +30,8 @@ const yammerLogoDescription = 'Yammer "y" logo';
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
-    height={250}
-    width={250}
+    height={240}
+    width={240}
     imageFit={ImageFit.cover}
   />
 </div>
@@ -52,8 +52,8 @@ const yammerLogoDescription = 'Yammer "y" logo';
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
-    height={250}
-    width={250}
+    height={240}
+    width={240}
     imageFit={ImageFit.contain}
   />
 </div>
@@ -74,8 +74,8 @@ const yammerLogoDescription = 'Yammer "y" logo';
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
-    height={250}
-    width={250}
+    height={240}
+    width={240}
     imageFit={ImageFit.center}
   />
 </div>
@@ -91,7 +91,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
   <p>
     The <strong>imageFit: none</strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
   </p>
-  <Image source={yammerLogo} description={yammerLogoDescription} height={250} width={250} />
+  <Image source={yammerLogo} description={yammerLogoDescription} height={240} width={240} />
 </div>
 ```
 
@@ -110,8 +110,8 @@ const yammerLogoDescription = 'Yammer "y" logo';
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
-    height={250}
-    width={250}
+    height={240}
+    width={320}
     imageFit={ImageFit.none}
   />
 </div>
@@ -157,8 +157,8 @@ Handling load state:
 ```js { "props": { "data-example": "load state" } }
 const { ImageFit, ImageLoadState } = require('.');
 
-const badImage = '404.png';
-const yammerLogo = 'logo.png';
+const badImage = 'logoNotFound.png';
+const yammerLogo = 'logoFallback.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 class StateChangeDemo extends React.PureComponent {
@@ -175,8 +175,8 @@ class StateChangeDemo extends React.PureComponent {
       <Image
         source={this.state.source}
         description={yammerLogoDescription}
-        height={150}
-        width={250}
+        height={240}
+        width={240}
         imageFit={ImageFit.cover}
         onLoadingStateChange={this.handleStateChange}
       />

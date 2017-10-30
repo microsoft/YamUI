@@ -55,44 +55,44 @@ With image:
 const { MediaObjectSize } = require('.');
 
 const image = (
-  <Image source={group.imageUrl} description="" fullWidth={true} />
+  <Image source={file.imageUrl} description="" fullWidth={true} />
 );
 
 <div>
   <MediaObject
     size={MediaObjectSize.XLARGE}
     imageContent={image}
-    titleContent={group.name}
-    metadataContent={group.privacy}
-    extraContent={group.description}
+    titleContent={file.name}
+    metadataContent={file.location}
+    extraContent={file.description}
   />
   <MediaObject
     size={MediaObjectSize.LARGE}
     imageContent={image}
-    titleContent={group.name}
-    metadataContent={group.privacy}
-    extraContent={group.description}
+    titleContent={file.name}
+    metadataContent={file.location}
+    extraContent={file.description}
   />
   <MediaObject
     size={MediaObjectSize.MEDIUM}
     imageContent={image}
-    titleContent={group.name}
-    metadataContent={group.privacy}
-    extraContent={group.description}
+    titleContent={file.name}
+    metadataContent={file.location}
+    extraContent={file.description}
   />
   <MediaObject
     size={MediaObjectSize.SMALL}
     imageContent={image}
-    titleContent={group.name}
-    metadataContent={group.privacy}
-    extraContent={group.description}
+    titleContent={file.name}
+    metadataContent={file.location}
+    extraContent={file.description}
   />
   <MediaObject
     size={MediaObjectSize.XSMALL}
     imageContent={image}
-    titleContent={group.name}
-    metadataContent={group.privacy}
-    extraContent={group.description}
+    titleContent={file.name}
+    metadataContent={file.location}
+    extraContent={file.description}
   />
 </div>
 ```

@@ -11,7 +11,7 @@ Fixed left column with width:
   </FixedGridColumn>
   <FixedGridColumn>
     <p>
-      The left column is fixed with <strong>fixed: true</strong> and <strong>width: 100</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
+      The left column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
     </p>
     <p>
       The right column is not fixed, and will grow or shrink to fill the grid's container.
@@ -25,7 +25,7 @@ Fixed left column without width:
 ```js { "props": { "data-example": "fixed left column without width" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true}>
-    <Image source={user.imageUrl} description="" width={100} />
+    <Image source="logo.png" description="" width={100} />
   </FixedGridColumn>
   <FixedGridColumn>
     <p>
@@ -44,7 +44,7 @@ Fixed right column with width:
 <FixedGridRow>
   <FixedGridColumn>
     <p>
-      The right column is fixed with <strong>fixed: true</strong> and <strong>width: 100</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
+      The right column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
     </p>
     <p>
       The left column is not fixed, and will grow or shrink to fill the grid's container.
@@ -69,7 +69,7 @@ Fixed right column without width:
     </p>
   </FixedGridColumn>
   <FixedGridColumn fixed={true}>
-    <Image source={user.imageUrl} description="" width={100} />
+    <Image source="logo.png" description="" width={100} />
   </FixedGridColumn>
 </FixedGridRow>
 ```

@@ -53,7 +53,7 @@ export default class FileHovercard extends React.PureComponent<FileHovercardProp
             size={MediaObjectSize.LARGE}
             imageContent={fileImage}
             titleContent={file.name}
-            metadataContent={file.description}
+            metadataContent={file.location}
           />
         </CalloutHeader>
         <CalloutBody>
