@@ -143,37 +143,43 @@ const HintedPositionCallout = (props) => (
 );
 
 <div style={{ height: '400px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-  <FixedGridRow>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.topRightEdge} align="left" label="Top right" />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.topCenter} align="center" label="Top center" />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.topLeftEdge} align="right" label="Top left" />
-    </FixedGridColumn>
-  </FixedGridRow>
-  <FixedGridRow>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.leftCenter} align="left" label="Left center" />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.rightCenter} align="right" label="Right center" />
-    </FixedGridColumn>
-  </FixedGridRow>
-  <FixedGridRow>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.bottomRightEdge} align="left" label="Bottom right" />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.bottomCenter} align="center" label="Bottom center" />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <HintedPositionCallout hint={DirectionalHint.bottomLeftEdge} align="right" label="Bottom left" />
-    </FixedGridColumn>
-  </FixedGridRow>
+  <div>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.topRightEdge} align="left" label="Top right" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.topCenter} align="center" label="Top center" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.topLeftEdge} align="right" label="Top left" />
+      </FixedGridColumn>
+    </FixedGridRow>
+  </div>
+  <div>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.leftCenter} align="left" label="Left center" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.rightCenter} align="right" label="Right center" />
+      </FixedGridColumn>
+    </FixedGridRow>
+  </div>
+  <div>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.bottomRightEdge} align="left" label="Bottom right" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.bottomCenter} align="center" label="Bottom center" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={DirectionalHint.bottomLeftEdge} align="right" label="Bottom left" />
+      </FixedGridColumn>
+    </FixedGridRow>
+  </div>
 </div>
 ```

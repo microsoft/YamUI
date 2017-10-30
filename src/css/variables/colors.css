@@ -25,11 +25,11 @@ $captionBackgroundColor: $color__sunrise;
 $dropdownOptionBackgroundColor__focused: $color__popRock;
 $dropdownOptionBackgroundColor__selected: $color__altRock;
 
-$messageBarTextColor: $color__blackMetal;
 $messageBarBackgroundColor: $color__popRock;
-$messageBarBorderColor__info: $color__punkRock;
-$messageBarBorderColor__warning: $color__noon;
-$messageBarBorderColor__error: $color__angel;
+
+$alertColor__info: $color__punkRock;
+$alertColor__warning: $color__noon;
+$alertColor__error: $color__angel;
 
 $spinnerColor__light: $color__river;
 $spinnerColor__dark: $color__white;

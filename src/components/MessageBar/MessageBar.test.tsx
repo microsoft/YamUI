@@ -4,12 +4,12 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import MessageBar, { MessageBarType, MessageBarProps } from './index';
 import FakeLink from '../../components/FakeLink';
 
-describe('<FakeLink />', () => {
+describe('<MessageBar />', () => {
   let component: ShallowWrapper<MessageBarProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<MessageBar ariaLabel="label">content</MessageBar>);
+      component = shallow(<MessageBar>content</MessageBar>);
     });
 
     it('has its correct base class', () => {
@@ -24,7 +24,7 @@ describe('<FakeLink />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(
-        <MessageBar ariaLabel="label" className="TEST_CLASSNAME">
+        <MessageBar className="TEST_CLASSNAME">
           content
         </MessageBar>,
       );
@@ -46,7 +46,7 @@ describe('<FakeLink />', () => {
   describe('with a type', () => {
     beforeEach(() => {
       component = shallow(
-        <MessageBar ariaLabel="label" type={MessageBarType.WARNING}>
+        <MessageBar type={MessageBarType.WARNING}>
           content
         </MessageBar>,
       );
@@ -61,7 +61,7 @@ describe('<FakeLink />', () => {
     beforeEach(() => {
       const link = <FakeLink>Link</FakeLink>;
       component = shallow(
-        <MessageBar ariaLabel="label" actions={link}>
+        <MessageBar actions={link}>
           content
         </MessageBar>,
       );
