@@ -17,6 +17,7 @@
         url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: optional;
 }
 
 
@@ -34,6 +35,7 @@
         url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-light.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: optional;
 }
 @font-face {
   font-family: 'Segoe UI WestEuropean';
@@ -43,6 +45,7 @@
         url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semilight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
+  font-display: optional;
 }
 @font-face {
   font-family: 'Segoe UI WestEuropean';
@@ -52,4 +55,5 @@
         url('https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: optional;
 }
