@@ -81,7 +81,7 @@
     "build:css:global": "postcss src/css/index.css --output dist/yamui-base.css",
     "build:css:components": "postcss \"src/components/**/*.css\" --dir \"dist/components\" --base \"src/components\"",
     "build:ts:components": "tsc --project .",
-    "build": "run-s clean:dist clean:build copy:** build:**",
+    "build": "run-s clean:dist clean:build build:**",
     "test:eslint:root": "eslint \"./*.+(js|jsx)\"",
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
     "test:eslint": "run-p test:eslint:*",
