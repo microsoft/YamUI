@@ -1,8 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 const getAllExamples = require('./get-examples.js');
 
-const standardThreshold = 0.001;
-const flakyThreshold = 0.25;
+// const standardThreshold = 0.001;
+// const flakyThreshold = 0.25;
 
 
 const baseScenario = {
@@ -12,35 +12,35 @@ const baseScenario = {
   misMatchThreshold: 0.001,
 };
 
-const flakyScenarios = [
-  'Spinner',
-];
+// const flakyScenarios = [
+//   'Spinner',
+// ];
 
-function isFlakyScenario(kind) {
-  return flakyScenarios.indexOf(kind) >= 0;
-}
+// function isFlakyScenario(kind) {
+//   return flakyScenarios.indexOf(kind) >= 0;
+// }
 
-function getScenarios() {
-  const exampleLibrary = getAllExamples();
+// function getScenarios() {
+//   const exampleLibrary = getAllExamples();
 
-  return Object.keys(exampleLibrary).reduce((allScenarios, componentName) => {
-    const examples = exampleLibrary[componentName];
+//   return Object.keys(exampleLibrary).reduce((allScenarios, componentName) => {
+//     const examples = exampleLibrary[componentName];
 
-    return examples.reduce((scenarios, exampleName) => {
-      const scenario = Object.assign({}, baseScenario, {
-        label: `${componentName} ${exampleName}`,
-        url: 'http://localhost:5555?visualDiff=true',
-        selectors: [
-          `[data-preview="${componentName}"][data-example="${exampleName}"]`,
-        ],
-        misMatchThreshold: isFlakyScenario(componentName) ? flakyThreshold : standardThreshold,
-      });
+//     return examples.reduce((scenarios, exampleName) => {
+//       const scenario = Object.assign({}, baseScenario, {
+//         label: `${componentName} ${exampleName}`,
+//         url: 'http://localhost:5555?visualDiff=true',
+//         selectors: [
+//           `[data-preview="${componentName}"][data-example="${exampleName}"]`,
+//         ],
+//         misMatchThreshold: isFlakyScenario(componentName) ? flakyThreshold : standardThreshold,
+//       });
 
-      scenarios.push(scenario);
-      return scenarios;
-    }, allScenarios);
-  }, []);
-}
+//       scenarios.push(scenario);
+//       return scenarios;
+//     }, allScenarios);
+//   }, []);
+// }
 
 function getSelectors() {
   const exampleLibrary = getAllExamples();
@@ -50,7 +50,7 @@ function getSelectors() {
   componentNames.forEach((component) => {
     const examples = exampleLibrary[component];
     examples.forEach((example) => {
-      selectors.push(`[data-preview="${component}"][data-example="${example}"] > div > div > .ms-Fabric`);
+      selectors.push(`[data-preview="${component}"][data-example="${example}"]`);
     });
   });
 
