@@ -7,44 +7,44 @@ const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('.');
 
 const avatar = (size) => (
-  <Avatar imageUrl="smiley.png" name="Smiley Face" size={size} />
+  <Avatar imageUrl={user.imageUrl} name={user.name} size={size} />
 );
 
 <div>
   <MediaObject
     size={MediaObjectSize.XLARGE}
     imageContent={avatar(AvatarSize.XLARGE)}
-    titleContent="First name Last name"
-    metadataContent="Job Title - Metadata"
-    extraContent="Extra information"
+    titleContent={user.name}
+    metadataContent={user.jobTitle}
+    extraContent={user.status}
   />
   <MediaObject
     size={MediaObjectSize.LARGE}
     imageContent={avatar(AvatarSize.LARGE)}
-    titleContent="First name Last name"
-    metadataContent="Job Title - Metadata"
-    extraContent="Extra information"
+    titleContent={user.name}
+    metadataContent={user.jobTitle}
+    extraContent={user.status}
   />
   <MediaObject
     size={MediaObjectSize.MEDIUM}
     imageContent={avatar(AvatarSize.MEDIUM)}
-    titleContent="First name Last name"
-    metadataContent="Job Title - Metadata"
-    extraContent="Extra information"
+    titleContent={user.name}
+    metadataContent={user.jobTitle}
+    extraContent={user.status}
   />
   <MediaObject
     size={MediaObjectSize.SMALL}
     imageContent={avatar(AvatarSize.SMALL)}
-    titleContent="First name Last name"
-    metadataContent="Job Title - Metadata"
-    extraContent="Extra information"
+    titleContent={user.name}
+    metadataContent={user.jobTitle}
+    extraContent={user.status}
   />
   <MediaObject
     size={MediaObjectSize.XSMALL}
     imageContent={avatar(AvatarSize.XSMALL)}
-    titleContent="First name Last name"
-    metadataContent="Job Title - Metadata"
-    extraContent="Extra information"
+    titleContent={user.name}
+    metadataContent={user.jobTitle}
+    extraContent={user.status}
   />
 </div>
 ```
@@ -55,44 +55,44 @@ With image:
 const { MediaObjectSize } = require('.');
 
 const image = (
-  <Image source="yammer-logo.png" description="" fullWidth={true} />
+  <Image source={group.imageUrl} description="" fullWidth={true} />
 );
 
 <div>
   <MediaObject
     size={MediaObjectSize.XLARGE}
     imageContent={image}
-    titleContent="Extra large media object title"
-    metadataContent="Media object metadata"
-    extraContent="Extra information"
+    titleContent={group.name}
+    metadataContent={group.privacy}
+    extraContent={group.description}
   />
   <MediaObject
     size={MediaObjectSize.LARGE}
     imageContent={image}
-    titleContent="Large media object title"
-    metadataContent="Media object metadata"
-    extraContent="Extra information"
+    titleContent={group.name}
+    metadataContent={group.privacy}
+    extraContent={group.description}
   />
   <MediaObject
     size={MediaObjectSize.MEDIUM}
     imageContent={image}
-    titleContent="Medium media object title"
-    metadataContent="Media object metadata"
-    extraContent="Extra information"
+    titleContent={group.name}
+    metadataContent={group.privacy}
+    extraContent={group.description}
   />
   <MediaObject
     size={MediaObjectSize.SMALL}
     imageContent={image}
-    titleContent="Small media object title"
-    metadataContent="Media object metadata"
-    extraContent="Extra information"
+    titleContent={group.name}
+    metadataContent={group.privacy}
+    extraContent={group.description}
   />
   <MediaObject
     size={MediaObjectSize.XSMALL}
     imageContent={image}
-    titleContent="Extra small media object title"
-    metadataContent="Media object metadata"
-    extraContent="Extra information"
+    titleContent={group.name}
+    metadataContent={group.privacy}
+    extraContent={group.description}
   />
 </div>
 ```
@@ -106,15 +106,15 @@ const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');
 const { MediaObjectSize } = require('.');
 
 const avatar = (size) => (
-  <Avatar imageUrl="smiley.png" name="Smiley Face" size={size} />
+  <Avatar imageUrl={user.imageUrl} name={user.name} size={size} />
 );
 
 <MediaObject
   size={MediaObjectSize.SMALL}
   imageContent={avatar(AvatarSize.SMALL)}
-  titleContent="Eddie Eagle"
-  metadataContent="Sr. Product Manager"
-  extraContent="Extra information"
+  titleContent={user.name}
+  metadataContent={user.jobTitle}
+  extraContent={user.status}
 >
   <Block push={4}>
     <FixedGridRow>

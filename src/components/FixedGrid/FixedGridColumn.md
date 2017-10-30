@@ -7,7 +7,7 @@ Fixed left column with width:
 ```js { "props": { "data-example": "fixed left column with width" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true} width={150}>
-    <Image source="yammer-logo.png" description="" fullWidth={true} />
+    <Image source="logo.png" description="" fullWidth={true} />
   </FixedGridColumn>
   <FixedGridColumn>
     <p>
@@ -25,7 +25,7 @@ Fixed left column without width:
 ```js { "props": { "data-example": "fixed left column without width" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true}>
-    <Image source="smiley.png" description="" width={100} />
+    <Image source={user.imageUrl} description="" width={100} />
   </FixedGridColumn>
   <FixedGridColumn>
     <p>
@@ -51,7 +51,7 @@ Fixed right column with width:
     </p>
   </FixedGridColumn>
   <FixedGridColumn fixed={true} width={150}>
-    <Image source="yammer-logo.png" description="" fullWidth={true} />
+    <Image source="logo.png" description="" fullWidth={true} />
   </FixedGridColumn>
 </FixedGridRow>
 ```
@@ -69,7 +69,7 @@ Fixed right column without width:
     </p>
   </FixedGridColumn>
   <FixedGridColumn fixed={true}>
-    <Image source="smiley.png" description="" width={100} />
+    <Image source={user.imageUrl} description="" width={100} />
   </FixedGridColumn>
 </FixedGridRow>
 ```
@@ -79,13 +79,13 @@ Two fixed columns:
 ```js { "props": { "data-example": "two fixed columns" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true} width={100}>
-    <Image source="yammer-logo.png" description="" fullWidth={true} />
+    <Image source="logo.png" description="" fullWidth={true} />
   </FixedGridColumn>
   <FixedGridColumn>
     This example has three columns. The left and right are both fixed, while the center column will grow or shrink to fit the grid's container.
   </FixedGridColumn>
   <FixedGridColumn fixed={true}>
-    <Image source="yammer-logo.png" description="" width={100} />
+    <Image source="logo.png" description="" width={100} />
   </FixedGridColumn>
 </FixedGridRow>
 ```
@@ -98,7 +98,7 @@ const { GutterSize } = require('.');
 <div>
   <FixedGridRow gutterSize={GutterSize.XXLARGE} bottomSpacing={GutterSize.XXLARGE}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: XXLARGE</strong> and <strong>bottomSpacing: XXLARGE</strong>.
@@ -107,7 +107,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.XLARGE} bottomSpacing={GutterSize.XLARGE}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: XLARGE</strong> and <strong>bottomSpacing: XLARGE</strong>.
@@ -116,7 +116,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.LARGE} bottomSpacing={GutterSize.LARGE}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: LARGE</strong> and <strong>bottomSpacing: LARGE</strong>.
@@ -125,7 +125,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.MEDIUM} bottomSpacing={GutterSize.MEDIUM}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: MEDIUM</strong> and <strong>bottomSpacing: MEDIUM</strong>.
@@ -134,7 +134,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: SMALL</strong> and <strong>bottomSpacing: SMALL</strong>.
@@ -143,7 +143,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.XSMALL} bottomSpacing={GutterSize.XSMALL}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: XSMALL</strong> and <strong>bottomSpacing: XSMALL</strong>.
@@ -152,7 +152,7 @@ const { GutterSize } = require('.');
 
   <FixedGridRow gutterSize={GutterSize.XSMALL}>
     <FixedGridColumn fixed={true} width={100}>
-      <Image source="yammer-logo.png" description="" fullWidth={true} />
+      <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
       This is an example with <strong>gutterSize: XSMALL</strong> and no bottomSpacing.

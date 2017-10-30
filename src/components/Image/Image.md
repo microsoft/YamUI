@@ -9,7 +9,7 @@ If an image is used as a supplemental icon, or screenreaders should not read it 
 Basic:
 
 ```js { "props": { "data-example": "basic" } }
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <Image source={yammerLogo} description={yammerLogoDescription} width={250} height={140} />
@@ -20,7 +20,7 @@ Fit cover:
 ```js { "props": { "data-example": "fit cover" } }
 const { ImageFit } = require('.');
 
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
@@ -42,7 +42,7 @@ Fit contain:
 ```js { "props": { "data-example": "fit contain" } }
 const { ImageFit } = require('.');
 
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
@@ -64,7 +64,7 @@ Fit center:
 ```js { "props": { "data-example": "fit center" } }
 const { ImageFit } = require('.');
 
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
@@ -84,7 +84,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 Fit not provided:
 
 ```js { "props": { "data-example": "fit not provided" } }
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
@@ -100,7 +100,7 @@ Fit none:
 ```js { "props": { "data-example": "fit none" } }
 const { ImageFit } = require('.');
 
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
@@ -123,7 +123,7 @@ Full width:
 const { GutterSize } = require('../FixedGrid');
 const { ImageFit } = require('.');
 
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 const fullWidthImage = (
@@ -158,7 +158,7 @@ Handling load state:
 const { ImageFit, ImageLoadState } = require('.');
 
 const badImage = '404.png';
-const yammerLogo = 'yammer-logo.png';
+const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 class StateChangeDemo extends React.PureComponent {

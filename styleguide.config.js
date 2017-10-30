@@ -11,37 +11,46 @@ const getComponentPathLine = (componentPath) => {
   return `import ${name} from '${dir}';`;
 };
 
-const context = {
-  action: path.resolve(__dirname, 'config/styleguide/context/action'),
-};
-
-const baseStyles = path.resolve(__dirname, 'src/css/index.css');
-const assetsDir = path.resolve(__dirname, 'config/styleguide/assets');
-const componentGlob = 'src/components/**/*.{ts,tsx}';
-const ignoredGlobs = [
-  '**/index.ts',
-  '**/index.tsx',
-  '**/enums.ts',
-  '**/*.test.ts',
-  '**/*.test.tsx',
-  '**/*.spec.ts',
-  '**/*.spec.tsx',
-  '**/components/Fabric/*',
-  '**/components/Icon/icons/*',
-];
-
 module.exports = {
   title: 'YamUI',
-  components: componentGlob,
-  ignore: ignoredGlobs,
+  sections: [
+    {
+      name: 'Components',
+      content: 'src/components/README.md',
+      components: 'src/components/**/*.{ts,tsx}',
+    },
+    {
+      name: 'Demos',
+      content: 'src/demos/README.md',
+      components: 'src/demos/**/*.{ts,tsx}',
+    },
+  ],
+  ignore: [
+    '**/index.ts',
+    '**/index.tsx',
+    '**/enums.ts',
+    '**/*.test.ts',
+    '**/*.test.tsx',
+    '**/*.spec.ts',
+    '**/*.spec.tsx',
+    '**/components/Fabric/*',
+    '**/components/Icon/icons/*',
+  ],
   skipComponentsWithoutExample: true,
   resolver: docgen.resolver.findAllComponentDefinitions,
   propsParser: docgenParser.parse,
   getComponentPathLine,
   webpackConfig,
-  assetsDir,
-  context,
-  require: [baseStyles],
+  assetsDir: path.resolve(__dirname, 'config/styleguide/assets'),
+  context: {
+    action: path.resolve(__dirname, 'config/styleguide/context/action'),
+    user: path.resolve(__dirname, 'config/styleguide/context/user.json'),
+    group: path.resolve(__dirname, 'config/styleguide/context/group.json'),
+    file: path.resolve(__dirname, 'config/styleguide/context/file.json'),
+  },
+  require: [
+    path.resolve(__dirname, 'src/css/index.css'),
+  ],
   serverPort: 5555,
   styleguideDir: 'build/docs',
   styleguideComponents: {

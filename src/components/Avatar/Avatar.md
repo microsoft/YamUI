@@ -24,19 +24,19 @@ const { AvatarSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Avatar size={AvatarSize.XLARGE} name="Walter White" initials="WW" />
+        <Avatar size={AvatarSize.XLARGE} name={user.name} initials={user.initials} />
       </td>
       <td>
-        <Avatar size={AvatarSize.LARGE} name="Walter White" initials="WW" />
+        <Avatar size={AvatarSize.LARGE} name={user.name} initials={user.initials} />
       </td>
       <td>
-        <Avatar size={AvatarSize.MEDIUM} name="Walter White" initials="WW" />
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} initials={user.initials} />
       </td>
       <td>
-        <Avatar size={AvatarSize.SMALL} name="Walter White" initials="WW" />
+        <Avatar size={AvatarSize.SMALL} name={user.name} initials={user.initials} />
       </td>
       <td>
-        <Avatar size={AvatarSize.XSMALL} name="Walter White" initials="WW" />
+        <Avatar size={AvatarSize.XSMALL} name={user.name} initials={user.initials} />
       </td>
     </tr>
   </tbody>
@@ -61,19 +61,19 @@ const { AvatarSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Avatar size={AvatarSize.XLARGE} name="Walter White" imageUrl="smiley.png" />
+        <Avatar size={AvatarSize.XLARGE} name={user.name} imageUrl={user.imageUrl} />
       </td>
       <td>
-        <Avatar size={AvatarSize.LARGE} name="Walter White" imageUrl="smiley.png" />
+        <Avatar size={AvatarSize.LARGE} name={user.name} imageUrl={user.imageUrl} />
       </td>
       <td>
-        <Avatar size={AvatarSize.MEDIUM} name="Walter White" imageUrl="smiley.png" />
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} imageUrl={user.imageUrl} />
       </td>
       <td>
-        <Avatar size={AvatarSize.SMALL} name="Walter White" imageUrl="smiley.png" />
+        <Avatar size={AvatarSize.SMALL} name={user.name} imageUrl={user.imageUrl} />
       </td>
       <td>
-        <Avatar size={AvatarSize.XSMALL} name="Walter White" imageUrl="smiley.png" />
+        <Avatar size={AvatarSize.XSMALL} name={user.name} imageUrl={user.imageUrl} />
       </td>
     </tr>
   </tbody>
@@ -104,8 +104,8 @@ const badgeContent = (
       <td>
         <Avatar
           size={AvatarSize.XLARGE}
-          name="Walter White"
-          imageUrl="smiley.png"
+          name={user.name}
+          imageUrl={user.imageUrl}
           badgeContent={badgeContent}
           badgeDescription="Admin"
         />
@@ -113,8 +113,8 @@ const badgeContent = (
       <td>
         <Avatar
           size={AvatarSize.LARGE}
-          name="Walter White"
-          imageUrl="smiley.png"
+          name={user.name}
+          imageUrl={user.imageUrl}
           badgeContent={badgeContent}
           badgeDescription="Admin"
         />
@@ -122,8 +122,8 @@ const badgeContent = (
       <td>
         <Avatar
           size={AvatarSize.MEDIUM}
-          name="Walter White"
-          imageUrl="smiley.png"
+          name={user.name}
+          imageUrl={user.imageUrl}
           badgeContent={badgeContent}
           badgeDescription="Admin"
         />
@@ -131,8 +131,8 @@ const badgeContent = (
       <td>
         <Avatar
           size={AvatarSize.SMALL}
-          name="Walter White"
-          imageUrl="smiley.png"
+          name={user.name}
+          imageUrl={user.imageUrl}
           badgeContent={badgeContent}
           badgeDescription="Admin"
         />
@@ -140,8 +140,8 @@ const badgeContent = (
       <td>
         <Avatar
           size={AvatarSize.XSMALL}
-          name="Walter White"
-          imageUrl="smiley.png"
+          name={user.name}
+          imageUrl={user.imageUrl}
           badgeContent={badgeContent}
           badgeDescription="Admin"
         />
@@ -171,40 +171,40 @@ const { AvatarBorderType, AvatarSize } = require('.');
         <td>
           <Avatar
             size={AvatarSize.XLARGE}
-            name="Walter White"
-            imageUrl="yammer-logo.png"
+            name={group.name}
+            imageUrl={group.imageUrl}
             borderType={AvatarBorderType.SOFT}
           />
         </td>
         <td>
           <Avatar
             size={AvatarSize.LARGE}
-            name="Walter White"
-            imageUrl="yammer-logo.png"
+            name={group.name}
+            imageUrl={group.imageUrl}
             borderType={AvatarBorderType.SOFT}
           />
         </td>
         <td>
           <Avatar
             size={AvatarSize.MEDIUM}
-            name="Walter White"
-            imageUrl="yammer-logo.png"
+            name={group.name}
+            imageUrl={group.imageUrl}
             borderType={AvatarBorderType.SOFT}
           />
         </td>
         <td>
           <Avatar
             size={AvatarSize.SMALL}
-            name="Walter White"
-            imageUrl="yammer-logo.png"
+            name={group.name}
+            imageUrl={group.imageUrl}
             borderType={AvatarBorderType.SOFT}
           />
         </td>
         <td>
           <Avatar
             size={AvatarSize.XSMALL}
-            name="Walter White"
-            imageUrl="yammer-logo.png"
+            name={group.name}
+            imageUrl={group.imageUrl}
             borderType={AvatarBorderType.SOFT}
           />
         </td>
