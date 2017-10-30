@@ -57,7 +57,7 @@ Media object with image:
 const { MediaObjectSize } = require('.');
 
 const image = (
-  <Image source="smiley.png" description="" fullWidth={true} />
+  <Image source="smiley.png" description="" fullWidth />
 );
 
 <div>
@@ -123,7 +123,7 @@ const avatar = (size) => (
       <FixedGridColumn>
         <Button text="Follow" size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
       </FixedGridColumn>
-      <FixedGridColumn fixed={true}>
+      <FixedGridColumn fixed>
         <Button text="..." size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
       </FixedGridColumn>
     </FixedGridRow>

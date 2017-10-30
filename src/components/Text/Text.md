@@ -8,7 +8,7 @@ The `Text` component simply renders a `span`. It offers size and color props so 
 
 Basic text:
 
-```js { "props": { "data-description": "basic" } }
+```js { "props": { "data-example": "basic" } }
 <div>
   <p>
     <Text>
@@ -25,7 +25,7 @@ Basic text:
 
 Different text sizes:
 
-```js { "props": { "data-description": "sizes" } }
+```js { "props": { "data-example": "sizes" } }
 const { TextSize } = require('.');
 
 <div>
@@ -60,7 +60,7 @@ const { TextSize } = require('.');
 
 Different text sizes with long text:
 
-```js { "props": { "data-description": "sizes long" } }
+```js { "props": { "data-example": "sizes long" } }
 const { TextSize } = require('.');
 
 <div>

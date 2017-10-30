@@ -8,9 +8,9 @@ If you need to control spacing, you can wrap children in a `Block` component. Yo
 
 ### Examples
 
-Clickable inline text:
+Inline:
 
-```js { "props": { "data-description": "clickable inline" } }
+```js { "props": { "data-example": "inline" } }
 const { GutterSize } = require('../Block')
 const action = (msg) => () => { console.log(msg) };
 
@@ -24,13 +24,13 @@ const action = (msg) => () => { console.log(msg) };
 </div>
 ```
 
-Clickable block:
+Block:
 
-```js { "props": { "data-description": "clickable block" } }
+```js { "props": { "data-example": "block" } }
 const { GutterSize } = require('../Block')
 const action = (msg) => () => { console.log(msg) };
 
-<Clickable block={true} onClick={action('clicked')}>
+<Clickable block onClick={action('clicked')}>
   <Block>
     This is a block of text entirely inside a clickable component. When wrapping an entire component like this be sure to set <strong>block: true</strong>, otherwise the button element might constrict the width of its contents.
   </Block>

@@ -4,7 +4,7 @@ A `Spinner` is an outline of a circle which animates around itself indicating to
 
 Spinners without label:
 
-```js
+```js { "props": { "data-example": "without label" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -51,7 +51,7 @@ const { SpinnerColor, SpinnerSize } = require('.');
 
 Spinners with label:
 
-```js
+```js { "props": { "data-example": "with label" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>

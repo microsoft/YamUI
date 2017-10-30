@@ -12,21 +12,17 @@ Also note that any legacy (non-React) overlays in your app which render at the e
 
 Basic usage:
 
-```html
-<!doctype html>
-<html dir="ltr">
-  <body>
-    <Fabric>
-      Entire application
-    </Fabric>
+```js
+<div>
+  <Fabric>
+    Entire application
+  </Fabric>
 
-    <!-- Legacy lightbox etc. rendering at the end of the body outside our Fabric component would
-         also need its own Fabric wrapper. -->
-    <div id="lightbox">
-      <Fabric>
-        Lightbox content
-      </Fabric>
-    </div>
-  </body>
-</html>
+  <!-- Legacy lightbox etc. rendered outside the main Fabric wrapper -->
+  <div className="lightbox">
+    <Fabric>
+      Lightbox content
+    </Fabric>
+  </div>
+</div>
 ```

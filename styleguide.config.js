@@ -37,4 +37,9 @@ module.exports = {
   webpackConfig,
   assetsDir,
   require: [baseStyles],
+  serverPort: 5555,
+  styleguideDir: 'build/docs',
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'src/components/Fabric'),
+  },
 };

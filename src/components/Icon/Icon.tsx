@@ -11,22 +11,24 @@ export type IconName = keyof typeof icons;
 
 export interface IconProps extends BaseComponentProps {
   /**
-   * Icon classname.
+   * The specific icon graphic to render.
    */
   icon: IconName;
 
   /**
-   * Sets icon style to `display: block`.
+   * Sets icon style to `display: block`, helpful if the inline icon's
+   * line-height is taller than the current line's line-height and creating
+   * extra vertical space.
    */
   block?: boolean;
 
   /**
-   * Override inherited color. Can be any valid CSS color.
+   * Manually override the inherited color. Can be any valid CSS color.
    */
   color?: string;
 
   /**
-   * Optional pre-determined size. Defaults to medium.
+   * Optional pre-determined size, which accounts for font-size and line-height. Defaults to medium.
    */
   size?: IconSize;
 }

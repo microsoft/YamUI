@@ -6,9 +6,9 @@ You must provide either an `imageUrl` property or an `initials` property.
 
 ### Examples
 
-Avatar without image:
+Without image:
 
-```js { "props": { "data-description": "without image" } }
+```js { "props": { "data-example": "without image" } }
 const { AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -43,9 +43,9 @@ const { AvatarSize } = require('.');
 </table>
 ```
 
-Avatar with image:
+With image:
 
-```js { "props": { "data-description": "with image" } }
+```js { "props": { "data-example": "with image" } }
 const { AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -80,13 +80,13 @@ const { AvatarSize } = require('.');
 </table>
 ```
 
-Avatar with image and badge:
+With image and badge:
 
-```js { "props": { "data-description": "with image and badge" } }
+```js { "props": { "data-example": "with image and badge" } }
 const { AvatarSize } = require('.');
 
 const badgeContent = (
-  <Image source="badge.png" description="" fullWidth={true} />
+  <Image source="badge.png" description="" fullWidth />
 );
 
 <table style={{ textAlign: 'center' }}>
@@ -151,9 +151,9 @@ const badgeContent = (
 </table>
 ```
 
-Avatar with image and soft border:
+With image and soft border:
 
-```js { "props": { "data-description": "with image and soft border" } }
+```js { "props": { "data-example": "with image and soft border" } }
 const { AvatarBorderType, AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -215,7 +215,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
 
 Example colors:
 
-```js { "props": { "data-description": "colors" } }
+```js { "props": { "data-example": "colors" } }
 const { GutterSize } = require('../Block');
 const { AvatarSize } = require('.');
 

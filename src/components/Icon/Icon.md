@@ -1,16 +1,14 @@
 This component renders an SVG icon.
 
-## Notes of use
+We're currently not supporting `aria-label` as it is being specified by wrapper components. For example, `Button` adds `aria-label` when it renders its `Icon` component.
 
-There's no need to pass `aria-label`; it's either unnecessary or handled by the parent component. For example, a simple *Follow* button will set the `aria-label` to the translated button text.
-
-The `block` property may be necessary to remove text descenders space.
+The `block` prop may be necessary to remove extra line-height.
 
 ### Examples
 
-Library of icons:
+Icon library:
 
-```js
+```js { "props": { "data-example": "library" } }
 const { IconSize, icons } = require('.');
 
 const iconsLibrary = Object.keys(icons).map((icon, index) => (
@@ -41,9 +39,9 @@ const iconsLibrary = Object.keys(icons).map((icon, index) => (
 </table>
 ```
 
-Icon sizes:
+Sizes:
 
-```js
+```js { "props": { "data-example": "sizes" } }
 const { IconSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -82,9 +80,9 @@ const { IconSize } = require('.');
 </table>
 ```
 
-Inline icon with text:
+Inline with text and color overrides:
 
-```js
+```js { "props": { "data-example": "inline with text and color" } }
 const { IconSize } = require('.');
 
 <div>

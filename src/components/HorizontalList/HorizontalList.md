@@ -4,7 +4,7 @@
 
 List of buttons:
 
-```js
+```js { "props": { "data-example": "buttons" } }
 const { ButtonColor } = require('../Button');
 const { HorizontalListItem } = require('.');
 
@@ -23,7 +23,7 @@ const { HorizontalListItem } = require('.');
 
 List of buttons aligned to the right:
 
-```js
+```js { "props": { "data-example": "buttons aligned right" } }
 const { ButtonColor } = require('../Button');
 const { HorizontalListItem } = require('.');
 

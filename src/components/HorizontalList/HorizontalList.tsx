@@ -5,6 +5,9 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './HorizontalList.css';
 
 export interface HorizontalListProps extends NestableBaseComponentProps {
+  /**
+   * Whether list items should be aligned left or right. Defaults to left.
+   */
   align?: 'left' | 'right';
 }
 

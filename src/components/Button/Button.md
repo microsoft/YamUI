@@ -8,13 +8,13 @@ Also, use concise, specific, self-explanatory text, usually a single word. Shoul
 
 Regular buttons:
 
-```js { "props": { "data-description": "regular" } }
+```js { "props": { "data-example": "regular" } }
 const { ButtonColor, ButtonIconPosition, ButtonSize } = require('.');
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<table style={{ textAlign: 'center' }}>
+<table>
   <thead>
     <tr>
       <th style={{ textAlign: 'right' }} />
@@ -33,7 +33,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled={true} text={sampleText} />
+        <Button disabled text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button icon="plus" size={ButtonSize.REGULAR} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button icon="plus" disabled={true} size={ButtonSize.REGULAR} text={sampleText} />
+        <Button icon="plus" disabled size={ButtonSize.REGULAR} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled={true}
+          disabled
           size={ButtonSize.REGULAR}
           text={sampleText}
         />
@@ -86,7 +86,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button text={sampleText} color={ButtonColor.SECONDARY} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
+        <Button disabled text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ const sampleUrl = 'https://www.yammer.com';
         />
       </td>
       <td>
-        <Button icon="plus" disabled={true} text={sampleText} color={ButtonColor.SECONDARY} />
+        <Button icon="plus" disabled text={sampleText} color={ButtonColor.SECONDARY} />
       </td>
     </tr>
     <tr>
@@ -137,7 +137,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled={true}
+          disabled
           text={sampleText}
           color={ButtonColor.SECONDARY}
         />
@@ -149,13 +149,13 @@ const sampleUrl = 'https://www.yammer.com';
 
 Small buttons:
 
-```js { "props": { "data-description": "small" } }
+```js { "props": { "data-example": "small" } }
 const { ButtonColor, ButtonIconPosition, ButtonSize } = require('.');
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<table style={{ textAlign: 'center' }}>
+<table>
   <thead>
     <tr>
       <th style={{ textAlign: 'right' }} />
@@ -174,7 +174,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button size={ButtonSize.SMALL} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button disabled={true} size={ButtonSize.SMALL} text={sampleText} />
+        <Button disabled size={ButtonSize.SMALL} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -186,7 +186,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button icon="plus" size={ButtonSize.SMALL} text={sampleText} href={sampleUrl} />
       </td>
       <td>
-        <Button icon="plus" disabled={true} size={ButtonSize.SMALL} text={sampleText} />
+        <Button icon="plus" disabled size={ButtonSize.SMALL} text={sampleText} />
       </td>
     </tr>
     <tr>
@@ -212,7 +212,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled={true}
+          disabled
           size={ButtonSize.SMALL}
           text={sampleText}
         />
@@ -233,7 +233,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          disabled={true}
+          disabled
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -262,7 +262,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td>
         <Button
           icon="plus"
-          disabled={true}
+          disabled
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -294,7 +294,7 @@ const sampleUrl = 'https://www.yammer.com';
         <Button
           icon="caretDown"
           iconPosition={ButtonIconPosition.RIGHT}
-          disabled={true}
+          disabled
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -307,7 +307,7 @@ const sampleUrl = 'https://www.yammer.com';
 
 Button with event handler:
 
-```js { "props": { "data-description": "with event handler" } }
+```js { "props": { "data-example": "with event handler" } }
 const action = (msg) => () => { console.log(msg) };
 
 <Button
@@ -322,6 +322,6 @@ const action = (msg) => () => { console.log(msg) };
 
 Link button:
 
-```js { "props": { "data-description": "link" } }
+```js { "props": { "data-example": "link" } }
 <Button text="I am a link" href="https://www.yammer.com" />
 ```

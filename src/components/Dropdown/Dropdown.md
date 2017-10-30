@@ -1,38 +1,10 @@
-A `Dropdown` is a list in which the selected item is always visible, and the others are visible on demand by clicking a drop-down button.
-
-### Notes for use
-
-`Dropdown` can be used as either a [controlled](https://facebook.github.io/react/docs/forms.html#controlled-components) or [uncontrolled](https://facebook.github.io/react/docs/uncontrolled-components.html) component.
+A `Dropdown` is similar to an html `select` tag, allowing a user to choose one of several options. It can be used in a <a href="https://facebook.github.io/react/docs/forms.html#controlled-components" target="_blank">controlled</a> or <a href="https://facebook.github.io/react/docs/uncontrolled-components.html" target="_blank">uncontrolled</a> manner.
 
 ### Examples
 
-Uncontrolled dropdown:
-
-```js { "props": { "data-description": "uncontrolled" } }
-const { GutterSize } = require('../Block')
-const action = (msg) => (...args) => { console.log(msg, ...args) };
-
-const options = [
-  { key: 'A', text: 'Option A' },
-  { key: 'B', text: 'Option B' },
-  { key: 'C', text: 'Option C' },
-];
-
-<div>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the Dropdown is maintained within the component, rather than being set using <em>selectedKey</em>.
-  </Block>
-  <Dropdown
-    placeHolder="Please select..."
-    options={options}
-    onChanged={action('changed')}
-  />
-</div>
-```
-
 Controlled dropdown:
 
-```js { "props": { "data-description": "controlled" } }
+```js { "props": { "data-example": "controlled" } }
 const { GutterSize } = require('../Block')
 const action = (msg) => (...args) => { console.log(msg, ...args) };
 
@@ -45,9 +17,7 @@ const options = [
 class ControlledDropdown extends React.PureComponent {
   constructor() {
     super();
-
     this.state = {};
-
     this.handleChanged = this.handleChanged.bind(this);
   }
 
@@ -78,9 +48,33 @@ class ControlledDropdown extends React.PureComponent {
 </div>
 ```
 
-Dropdown with a label:
+Uncontrolled dropdown:
 
-```js { "props": { "data-description": "with label" } }
+```js { "props": { "data-example": "uncontrolled" } }
+const { GutterSize } = require('../Block')
+const action = (msg) => (...args) => { console.log(msg, ...args) };
+
+const options = [
+  { key: 'A', text: 'Option A' },
+  { key: 'B', text: 'Option B' },
+  { key: 'C', text: 'Option C' },
+];
+
+<div>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    In this example, the visual state of the Dropdown is maintained within the component rather than being set using <em>selectedKey</em>. This might be used when a parent component is listening to the `onChanged` event and doesn't need to manage the dropdown'v visual state, but this is generally not recommended.
+  </Block>
+  <Dropdown
+    placeHolder="Please select..."
+    options={options}
+    onChanged={action('changed')}
+  />
+</div>
+```
+
+With a label:
+
+```js { "props": { "data-example": "with label" } }
 const { GutterSize } = require('../Block')
 const action = (msg) => (...args) => { console.log(msg, ...args) };
 
@@ -103,9 +97,9 @@ const options = [
 </div>
 ```
 
-Dropdown in a grid:
+In a grid:
 
-```js { "props": { "data-description": "in grid" } }
+```js { "props": { "data-example": "in grid" } }
 const { GutterSize } = require('../Block')
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid')
 const action = (msg) => (...args) => { console.log(msg, ...args) };
@@ -118,10 +112,10 @@ const options = [
 
 <div>
   <Block bottomSpacing={GutterSize.LARGE}>
-    To manage the dropdown's width, use a container; it will expand to fill the entire width.
+    Dropdown fills 100% of its container's width. To manage its width, nest it within a layout component.
   </Block>
   <FixedGridRow>
-    <FixedGridColumn fixed={true} width={100}>
+    <FixedGridColumn fixed width={100}>
       <Dropdown
         placeHolder="Prefix"
         options={options}

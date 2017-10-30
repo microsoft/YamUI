@@ -8,7 +8,7 @@ This renders an `<a>` tag for navigation between web pages.
 
 Basic navigation link:
 
-```js { "props": { "data-description": "basic" } }
+```js { "props": { "data-example": "basic" } }
 <div>
   Here is a <NavigationLink href="/404.html"><em>NavigationLink</em> component</NavigationLink> with just an <em>href</em>, its only required property.
 </div>
@@ -16,23 +16,23 @@ Basic navigation link:
 
 Navigation link that opens a new window:
 
-```js { "props": { "data-description": "new window" } }
+```js { "props": { "data-example": "new window" } }
 <div>
-  Here is a <NavigationLink href="/404.html" newWindow={true}><em>NavigationLink</em> component</NavigationLink> that opens its link securely in a new window.
+  Here is a <NavigationLink href="/404.html" newWindow=><em>NavigationLink</em> component</NavigationLink> that opens its link securely in a new window.
 </div>
 ```
 
 Unstyled navigation link:
 
-```js { "props": { "data-description": "unstyled" } }
+```js { "props": { "data-example": "unstyled" } }
 <div>
-  Here is a <NavigationLink href="/404.html" unstyled={true}><em>NavigationLink</em> component</NavigationLink> that removes the link styling and sets color to the primary text color.
+  Here is a <NavigationLink href="/404.html" unstyled><em>NavigationLink</em> component</NavigationLink> that removes the link styling and sets color to the primary text color.
 </div>
 ```
 
 Navigation link wrapping content:
 
-```js { "props": { "data-description": "wrapping" } }
+```js { "props": { "data-example": "wrapping" } }
 <NavigationLink href="/404.html">
   <div>
     This <em>NavigationLink</em> component wraps an entire block of text. By default all text content within a <em>NavigationLink</em> tag will be styled like a link.
@@ -42,17 +42,17 @@ Navigation link wrapping content:
 
 Unstyled navigation link wrapping content:
 
-```js { "props": { "data-description": "unstyled wrapping" } }
+```js { "props": { "data-example": "unstyled wrapping" } }
 const { TextColor } = require('../Text');
 
 <div>
-  <NavigationLink href="/404.html" unstyled={true}>
+  <NavigationLink href="/404.html" unstyled>
     <div>
       This is an unstyled <em>NavigationLink</em> component wrapping an entire block of text.
     </div>
   </NavigationLink>
   <br />
-  <NavigationLink href="/404.html" unstyled={true}>
+  <NavigationLink href="/404.html" unstyled>
     <div>
       <Text color={TextColor.METADATA}>
         This is another unstyled <em>NavigationLink</em> component wrapping a block of text with a different color.

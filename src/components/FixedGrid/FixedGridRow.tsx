@@ -6,7 +6,13 @@ import { GutterSize } from './enums';
 import './FixedGrid.css';
 
 export interface FixedGridRowProps extends NestableBaseComponentProps {
+  /**
+   * Margin added below the row
+   */
   bottomSpacing?: GutterSize;
+  /**
+   * The horizontal gutter space between each column
+   */
   gutterSize?: GutterSize;
 }
 

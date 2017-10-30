@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { addDecorator, StoryDecorator } from '@storybook/react';
-import { Fabric } from '../components/Fabric';
+import Fabric from '../components/Fabric';
 import '../../dist/yamui-base.css';
 import './assets/stories.css';
 
