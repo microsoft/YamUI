@@ -2,7 +2,7 @@
 
 This is the UI component framework for [Yammer.com](https://www.yammer.com/).
 
-It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Storybook](https://github.com/storybooks/storybook), and visual diff regression is done with [BackstopJS](https://garris.github.io/BackstopJS/). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
+It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Styleguidist](https://react-styleguidist.js.org/), and visual diff regression is done with [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [pixelmatch](https://github.com/mapbox/pixelmatch). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
 
 ## Using YamUI in your own app
 
@@ -84,7 +84,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 ### Testing all the things
 
 * `y run test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
-* `npm run report` will open latest results from both Jest unit tests and Backstop visual diff regression tests.
+* `npm run report` will open latest results from both unit tests and visual diff regression tests.
 
 ### Adding icons
 

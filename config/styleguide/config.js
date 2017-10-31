@@ -11,18 +11,20 @@ const getComponentPathLine = (componentPath) => {
   return `import ${name} from '${dir}';`;
 };
 
+const root = path.resolve(__dirname, '../../');
+
 module.exports = {
   title: 'YamUI',
   sections: [
     {
       name: 'Components',
-      content: 'src/components/README.md',
-      components: 'src/components/**/*.{ts,tsx}',
+      content: path.resolve(root, 'src/components/README.md'),
+      components: path.resolve(root, 'src/components/**/*.{ts,tsx}'),
     },
     {
       name: 'Demos',
-      content: 'src/demos/README.md',
-      components: 'src/demos/**/*.{ts,tsx}',
+      content: path.resolve(root, 'src/demos/README.md'),
+      components: path.resolve(root, 'src/demos/**/*.{ts,tsx}'),
     },
   ],
   ignore: [
@@ -41,19 +43,19 @@ module.exports = {
   propsParser: docgenParser.parse,
   getComponentPathLine,
   webpackConfig,
-  assetsDir: path.resolve(__dirname, 'config/styleguide/assets'),
+  assetsDir: path.resolve(__dirname, 'assets'),
   context: {
-    action: path.resolve(__dirname, 'config/styleguide/context/action'),
-    user: path.resolve(__dirname, 'config/styleguide/context/user.json'),
-    group: path.resolve(__dirname, 'config/styleguide/context/group.json'),
-    file: path.resolve(__dirname, 'config/styleguide/context/file.json'),
+    action: path.resolve(__dirname, 'context/action'),
+    user: path.resolve(__dirname, 'context/user.json'),
+    group: path.resolve(__dirname, 'context/group.json'),
+    file: path.resolve(__dirname, 'context/file.json'),
   },
   require: [
-    path.resolve(__dirname, 'src/css/index.css'),
+    path.resolve(root, 'src/css/index.css'),
   ],
   serverPort: 5555,
-  styleguideDir: 'build/docs',
+  styleguideDir: path.resolve(root, 'build/docs'),
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'src/components/Fabric'),
+    Wrapper: path.resolve(root, 'src/components/Fabric'),
   },
 };

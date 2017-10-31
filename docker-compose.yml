@@ -5,8 +5,8 @@ services:
     ports:
       - "5555:5555"
     volumes:
-      - ./build:/usr/src/yamui/build
-      - ./config:/usr/src/yamui/config
-      - ./dist:/usr/src/yamui/dist
-      - ./src:/usr/src/yamui/src
+      - ./build:/home/yamuiuser/yamui/build
+      - ./config:/home/yamuiuser/yamui/config
+      - ./dist:/home/yamuiuser/yamui/dist
+      - ./src:/home/yamuiuser/yamui/src
     command: ["npm", "run", "test"]
