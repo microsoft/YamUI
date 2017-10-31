@@ -3,7 +3,7 @@
 Default hover trigger:
 
 ```js { "props": { "data-example": "default hover trigger" } }
-const { TriggerType } = require('.');
+const { DirectionalHint } = require('.');
 
 const content = (
   <div>
@@ -24,7 +24,12 @@ const handlers = {
 
 <div style={{ minHeight: '200px' }}>
   Hover over this
-  <Callout content={content} startVisible={true} {...handlers} >
+  <Callout
+    content={content}
+    directionalHint={DirectionalHint.bottomLeftEdge}
+    startVisible={true}
+    {...handlers}
+  >
     <FakeLink>callout trigger</FakeLink>
   </Callout>
   .
@@ -34,7 +39,7 @@ const handlers = {
 Click trigger:
 
 ```js { "props": { "data-example": "click trigger" } }
-const { TriggerType } = require('.');
+const { DirectionalHint, TriggerType } = require('.');
 
 const content = (
   <div>
@@ -55,7 +60,13 @@ const handlers = {
 
 <div style={{ minHeight: '200px' }}>
   Click this
-  <Callout content={content} triggerType={TriggerType.CLICK} startVisible={true} {...handlers} >
+  <Callout
+    content={content}
+    directionalHint={DirectionalHint.bottomLeftEdge}
+    startVisible={true}
+    triggerType={TriggerType.CLICK}
+    {...handlers}
+  >
     <FakeLink>callout trigger</FakeLink>
   </Callout>
   .
@@ -65,6 +76,8 @@ const handlers = {
 Callout without beak:
 
 ```js { "props": { "data-example": "without beak" } }
+const { DirectionalHint } = require('.');
+
 const content = (
   <div>
     <CalloutHeader>
@@ -84,7 +97,13 @@ const handlers = {
 
 <div style={{ minHeight: '200px' }}>
   Hover over this
-  <Callout content={content} isBeakVisible={false} startVisible={true} {...handlers} >
+  <Callout
+    content={content}
+    directionalHint={DirectionalHint.bottomLeftEdge}
+    isBeakVisible={false}
+    startVisible={true}
+    {...handlers}
+  >
     <FakeLink>hover trigger</FakeLink>
   </Callout>
   .
@@ -93,7 +112,7 @@ const handlers = {
 
 Callout with different alignments:
 
-```js { "props": { "data-example": "top right" } }
+```js { "props": { "data-example": "alignments" } }
 const { DirectionalHint } = require('.');
 
 const content = (
