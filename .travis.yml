@@ -1,19 +1,21 @@
-sudo: false
-dist: trusty
-language: node_js
-
-node_js:
-  - "8.7.0"
+sudo: required
 
 branches:
   only:
     - master
 
+before_install:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y install docker-ce
+  - docker --version
+
 script:
-  - npm run test
+  - ./yamui-docker run test
 
 after_success:
-  - ./config/travis/build.sh
+  - ./config/travis/build
 
 deploy:
   provider: npm
