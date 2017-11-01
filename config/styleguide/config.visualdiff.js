@@ -5,6 +5,6 @@ const config = require('./config');
 module.exports = Object.assign({}, config, {
   showSidebar: false,
   require: config.require.concat([
-    path.resolve(__dirname, 'assets/animations.css'),
+    path.resolve(__dirname, 'assets/disable-animations.css'),
   ]),
 });
