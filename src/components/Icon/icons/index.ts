@@ -23,9 +23,11 @@ import lock from './Lock';
 import mail from './Mail';
 import minus from './Minus';
 import more from './More';
+import moreV from './MoreV';
 import no from './No';
 import phone from './Phone';
 import plus from './Plus';
+import share from './Share';
 import skype from './Skype';
 import time from './Time';
 
@@ -52,9 +54,11 @@ export default {
   mail,
   minus,
   more,
+  moreV,
   no,
   phone,
   plus,
+  share,
   skype,
   time,
 };
