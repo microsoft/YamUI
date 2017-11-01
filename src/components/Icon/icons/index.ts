@@ -22,8 +22,8 @@ import like from './Like';
 import lock from './Lock';
 import mail from './Mail';
 import minus from './Minus';
-import more from './More';
-import moreV from './MoreV';
+import moreHorizontal from './MoreHorizontal';
+import moreVertical from './MoreVertical';
 import no from './No';
 import phone from './Phone';
 import plus from './Plus';
@@ -53,8 +53,8 @@ export default {
   lock,
   mail,
   minus,
-  more,
-  moreV,
+  moreHorizontal,
+  moreVertical,
   no,
   phone,
   plus,
