@@ -11,15 +11,9 @@ RUN apt-get update \
     && apt-get purge --auto-remove -y curl \
     && rm -rf /src/*.deb
 
-ENV APP_ROOT /home/yamuiuser/yamui
+ENV APP_ROOT /usr/src/yamui
 RUN mkdir -p $APP_ROOT
 WORKDIR $APP_ROOT
-
-# Run as non-privileged
-RUN groupadd -r yamuiuser \
-    && useradd -r -g yamuiuser -G audio,video yamuiuser \
-    && chown -R yamuiuser:yamuiuser /home/yamuiuser
-USER yamuiuser
 
 # Install dependencies before copying the app for caching purposes
 COPY ./package.json $APP_ROOT/package.json
@@ -27,6 +21,6 @@ COPY ./package-lock.json $APP_ROOT/package-lock.json
 RUN npm install --unsafe-perm
 
 # Copy the app
-COPY --chown=yamuiuser:yamuiuser . $APP_ROOT
+COPY . $APP_ROOT
 
 CMD ["npm", "run", "test"]
