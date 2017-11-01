@@ -1,15 +1,18 @@
 sudo: required
 
+services:
+  - docker
+
 branches:
   only:
     - master
 
+env:
+  - DEBUG=react-styleguidist-visual
+
 before_install:
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  - sudo apt-get update
-  - sudo apt-get -y install docker-ce
   - docker --version
+  - docker-compose --version
 
 script:
   - ./yamui-docker run test
@@ -23,5 +26,5 @@ deploy:
   api_key:
     secure: d1MleHtP/AMY2AZCtheaK2ZtDsrWTZDs2CSGQR2RicypMKfzBaxnZ9sha7EaN4hC8vXJgdEf0yYVrFc2JwH763WQ90BmDQokPvQgCVeJ6eiQkGrmnNle5lXq7gDToh4WZKnNzXRSXnFe/bi4TGGNmsLYlA+jbJBSjvD7buTPSSS/ycsPfKoP/fLw0H8v+v9HuEjZPnc1lJ6qaK86n5NAmtuAzvcQDBOorYu9+VdjM0uSW6Q6lrZaexyCtiLYVqYCB/Btr+vX1wARqjhxFtZD4gIVOvvbS73RniFlwiNWVhEN2b4O44CpdNdBKhf2FZGtzvNN2VF7i0MBt6yoCTrm5U5t9wVPv7BwTcy4LUqK7OCNdtkMt82iPmi/TdAff4CXtSjKZMrK+ZNaZ2iL36x/qxQvAk1mSqfAgjkkapQ4dZW5kPGBNOIjXgaOXPDFuboYVrEhRWHF0jXcHWqzwRKflrNQ8MTgnTVPKKZdm50qQqUblFxReIBGLH1eJV+0QnkyUBoYfwpojgH7OMB4EDOBnbAuil7lZCJAltEEOz3Y7cSsowmVDuBJ3I22i+NMMs5Ta/wyOc0lub6sEaiQmIdhZaq6bhvzsrhXOjH8VtEGw1w1zbHYpdycdIhMIr7JHx7rO9Pm93px2P9euEwb1v/H+qWMJwqz+OzAWOdl+YoQ6cg=
   on:
-    tags: true
     repo: Microsoft/YamUI
+    tags: true

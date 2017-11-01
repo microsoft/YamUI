@@ -11,4 +11,5 @@ services:
       - ./src:/usr/src/yamui/src
     environment:
       - CI
+      - DEBUG
     command: ["npm", "run", "test"]
