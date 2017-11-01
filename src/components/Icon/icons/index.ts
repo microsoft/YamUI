@@ -22,10 +22,12 @@ import like from './Like';
 import lock from './Lock';
 import mail from './Mail';
 import minus from './Minus';
-import more from './More';
+import moreHorizontal from './MoreHorizontal';
+import moreVertical from './MoreVertical';
 import no from './No';
 import phone from './Phone';
 import plus from './Plus';
+import share from './Share';
 import skype from './Skype';
 import time from './Time';
 
@@ -51,10 +53,12 @@ export default {
   lock,
   mail,
   minus,
-  more,
+  moreHorizontal,
+  moreVertical,
   no,
   phone,
   plus,
+  share,
   skype,
   time,
 };

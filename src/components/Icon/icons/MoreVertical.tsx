@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 
-const More = function More(props: any) {
+const MoreVertical = function MoreVertical(props: any) {
   return (
     <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
       <path fillRule="evenodd" d="M145 195c0 13.807-11.193 25-25 25s-25-11.193-25-25 11.193-25 25-25 25 11.193 25 25zm0-75c0 13.807-11.193 25-25 25s-25-11.193-25-25 11.193-25 25-25 25 11.193 25 25zm0-75c0 13.807-11.193 25-25 25S95 58.807 95 45s11.193-25 25-25 25 11.193 25 25z" />
@@ -12,4 +12,4 @@ const More = function More(props: any) {
   );
 };
 
-export default More;
+export default MoreVertical;
