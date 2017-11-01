@@ -19,8 +19,8 @@ openssl aes-256-cbc -K $encrypted_77b5e43a6418_key -iv $encrypted_77b5e43a6418_i
 chmod 600 config/travis/deploy.key
 ssh-add config/travis/deploy.key
 
-npm run test:visual:build
-cd build/storybook
+npm run docs
+cd build/docs
 
 git init
 git config user.name "Travis"
