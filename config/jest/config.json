@@ -12,18 +12,17 @@
     "jsx"
   ],
   "moduleNameMapper": {
-    "^.+\\.css$": "identity-obj-proxy",
-    "\\.(svg)$": "<rootDir>/src/util/mocks/svgMock.js"
+    "^.+\\.css$": "identity-obj-proxy"
   },
   "transform": {
-    ".(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    ".(ts|tsx)$": "ts-jest/preprocessor.js"
   },
   "testRegex": ".*\\.test\\.(js|jsx|ts|tsx)$",
   "testPathIgnorePatterns": [
     "/node_modules/"
   ],
   "snapshotSerializers": [
-    "<rootDir>/node_modules/jest-serializer-enzyme"
+    "jest-serializer-enzyme"
   ],
   "collectCoverage": true,
   "mapCoverage": true,

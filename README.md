@@ -2,7 +2,7 @@
 
 This is the UI component framework for [Yammer.com](https://www.yammer.com/).
 
-It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Storybook](https://github.com/storybooks/storybook), and visual diff regression is done with [BackstopJS](https://garris.github.io/BackstopJS/). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
+It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Styleguidist](https://react-styleguidist.js.org/), and visual diff regression is done with [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [pixelmatch](https://github.com/mapbox/pixelmatch). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
 
 ## Using YamUI in your own app
 
@@ -18,9 +18,7 @@ Import `yamui/dist/yamui-base.css` into your app. You could link to it directly 
 
 ### Using components
 
-Each component's source folder has a README which documents the API and provides example use. For example, Button's README is here: [/src/components/Button](https://github.com/Microsoft/YamUI/tree/master/src/components/Button)
-
-You can also view component READMEs through the [Storybook app](https://microsoft.github.io/YamUI/) in the component view bottom pane.
+You can read all documentation for our components in our [living styleguide](https://microsoft.github.io/YamUI/).
 
 Each component is compiled from its TypeScript source into `yamui/dist/components`. This allows you to import the individual components you need and keep your bundle size smaller. Note that each component may import its own CSS and other JS dependencies so you may need to adjust your build process to accommodate.
 
@@ -66,25 +64,21 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 ### Building some components
 
 * Develop components in the `/src/components` directory.
-* Create "stories" for the Storybook app in `/stories`. These stories are important because they document how components should be used and what options/configurations they accept. These stories will also be used in visual diff regression tests to ensure new changes are deliberate and approved before PRs are merged.
-* Include a `README.md` file in your component's directory, and include it in the stories.
-* The dev tasks will copy and compile individual files into the `/dist` directory, then Storybook will pick up those changes and automatically update the app in your browser using Hot Module Replacement.
+* Include a `<ComponentName>.md` file in your component's directory with usage examples. These examples are important because they document how components should be used and what options/configurations they accept. These examples will also be used in visual diff regression tests to ensure new changes are deliberate and approved before PRs are merged.
+* The dev server will pick up any changes you make to components, and automatically update the app in your browser using Hot Module Replacement.
 
 ### Writing unit tests
 
 * `npm run start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
-* `npm run report:unit` will open the latest test coverage report in your browser. The reports let you browse into specific tests and get details about each line, which can be helpful when you're having trouble getting test coverage.
 
 ### Runing visual diff regression tests
 
-* `y run test:visual` will compile the components, build+export a static version of the Storybook app, start a dev server, take screenshots of each Storybook story, and fail if there are visual changes from the last approved screenshots. This will fail on brand new stories because they won't have reference images. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `npm run` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
-* `npm run report:visual` will open the most recent visual test you've run in your browser. This is helpful if you have failing visual tests and want to see exactly what is wrong.
-* `npm run visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its story and you have manually verified that the new visual changes are correct.
+* `y run test:visual` will compile the components, build+export a static version of the styleguide, start a dev server, take screenshots of each example, and fail if there are visual changes from the last approved screenshots. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `npm run` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
+* `npm run test:visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its examples and you have manually verified that the new visual changes are correct.
 
 ### Testing all the things
 
 * `y run test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
-* `npm run report` will open latest results from both Jest unit tests and Backstop visual diff regression tests.
 
 ### Adding icons
 

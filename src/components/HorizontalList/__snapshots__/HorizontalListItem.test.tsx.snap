@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalListItem /> with additional className matches its snapshot 1`] = `
+<li
+  className="y-horizontalList--item TEST_CLASSNAME"
+/>
+`;
+
+exports[`<HorizontalListItem /> with child content matches its snapshot 1`] = `
+<li
+  className="y-horizontalList--item"
+>
+  list item content
+</li>
+`;
+
+exports[`<HorizontalListItem /> without props matches its snapshot 1`] = `
+<li
+  className="y-horizontalList--item"
+/>
+`;
