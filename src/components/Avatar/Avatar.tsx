@@ -57,16 +57,10 @@ export interface BaseAvatarProps extends BaseComponentProps {
 }
 
 export interface ImageAvatarProps extends BaseAvatarProps {
-  /**
-   * Image source URL.
-   */
   imageUrl: string;
 }
 
 export interface InitialsAvatarProps extends BaseAvatarProps {
-  /**
-   * Two letters to be displayed if an `imageUrl` wasn't provided.
-   */
   initials: string;
 }
 
