@@ -20,6 +20,7 @@ chmod 600 config/travis/deploy.key
 ssh-add config/travis/deploy.key
 
 ./yamui-docker run docs
+sudo chown -R $(whoami) build/docs
 cd build/docs
 
 git init
