@@ -1,27 +1,21 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import Avatar, { AvatarBorderType, AvatarSize } from '../../components/Avatar';
+import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
 import {
-  Callout,
   CalloutHeader,
   CalloutBody,
-  DirectionalHint,
-  TriggerType,
 } from '../../components/Callout';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
 import Icon, { IconSize } from '../../components/Icon';
-import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
 const iconMail = <Icon size={IconSize.MEDIUM} icon="mail" block={true} color="#a8b0bd" />;
 const iconPhone = <Icon size={IconSize.MEDIUM} icon="phone" block={true} color="#a8b0bd" />;
 const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block={true} color="#a8b0bd" />;
-const iconPrivate = <Icon size={IconSize.XSMALL} icon="lock" color="#a8b0bd" />;
-const iconExternal = <Icon size={IconSize.XSMALL} icon="external" color="#a8b0bd" />;
 
 const userGroups = (
   <span>
