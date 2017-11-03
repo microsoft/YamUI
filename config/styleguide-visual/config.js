@@ -4,5 +4,17 @@ const path = require('path');
 module.exports = {
   url: `file://${path.resolve(__dirname, '../../build/docs/index.html')}`,
   dir: 'config/styleguide-visual/reference/',
-  sandbox: false,
+  viewports: {
+    desktop: {
+      width: 600,
+      height: 600,
+      deviceScaleFactor: 2,
+    },
+  },
+  launchOptions: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  },
+  navigationOptions: {
+    waitUntil: 'networkidle',
+  },
 };
