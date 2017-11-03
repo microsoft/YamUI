@@ -4,17 +4,13 @@ import Avatar, { AvatarBorderType, AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
 import {
-  Callout,
   CalloutHeader,
   CalloutBody,
-  DirectionalHint,
-  TriggerType,
 } from '../../components/Callout';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
 import Icon, { IconSize } from '../../components/Icon';
-import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
 const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block={true} color="#a8b0bd" />;

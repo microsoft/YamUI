@@ -43,7 +43,7 @@ export interface DropdownProps extends BaseComponentProps {
  */
 export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   render() {
-    const { label, options, placeHolder, selectedKey, onChanged } = this.props;
+    const { label, options, placeHolder, selectedKey } = this.props;
 
     return (
       <div className={this.getClasses()}>

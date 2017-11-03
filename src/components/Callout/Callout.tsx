@@ -231,7 +231,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
     const { onContentDisplay } = this.props;
     const { visible } = this.state;
 
-    if (this.state.visible) {
+    if (visible) {
       return;
     }
 
@@ -246,7 +246,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
     const { onContentDismiss } = this.props;
     const { visible } = this.state;
 
-    if (!this.state.visible) {
+    if (!visible) {
       return;
     }
 
