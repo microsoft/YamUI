@@ -3,7 +3,6 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Icon, { IconProps, IconSize } from '.';
 import ICONS from './icons';
-import * as util from 'util';
 
 describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;

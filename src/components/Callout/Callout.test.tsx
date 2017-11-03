@@ -3,14 +3,13 @@ import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import { Callout as FabricCallout } from 'office-ui-fabric-react/lib/Callout';
 import { Key } from '../../util/enums';
-import ScreenreaderText from '../ScreenreaderText';
-import { Callout, CalloutProps, CalloutState, DirectionalHint, TriggerType } from '.';
+import { Callout, CalloutProps, CalloutState, TriggerType } from '.';
 
 describe('<Callout />', () => {
   jest.useFakeTimers();
 
-  let component: ShallowWrapper<CalloutProps, {}>;
-  let fullComponent: ReactWrapper<CalloutProps, {}>;
+  let component: ShallowWrapper<CalloutProps, CalloutState>;
+  let fullComponent: ReactWrapper<CalloutProps, CalloutState>;
 
   describe('with default options', () => {
     beforeEach(() => {

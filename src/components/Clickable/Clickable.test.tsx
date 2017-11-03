@@ -1,12 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { consoleTestResultHandler } from 'vrsource-tslint-rules/node_modules/tslint/lib/test';
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable, { ClickableProps } from '.';
 
 describe('<Clickable />', () => {
   let component: ShallowWrapper<ClickableProps, {}>;
-  function handleClick(event: any) {}
 
   describe('with default options', () => {
     beforeEach(() => {
