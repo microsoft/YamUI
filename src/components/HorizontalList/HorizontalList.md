@@ -9,13 +9,13 @@ const { ButtonColor } = require('../Button');
 
 <HorizontalList>
   <HorizontalListItem>
-    <Button text="1" color={ButtonColor.SECONDARY} />
+    <Button text="1" />
   </HorizontalListItem>
   <HorizontalListItem>
-    <Button text="2" color={ButtonColor.SECONDARY} />
+    <Button text="2" />
   </HorizontalListItem>
   <HorizontalListItem>
-    <Button text="3" />
+    <Button text="3" color={ButtonColor.PRIMARY} />
   </HorizontalListItem>
 </HorizontalList>
 ```
@@ -27,13 +27,13 @@ const { ButtonColor } = require('../Button');
 
 <HorizontalList align="right">
   <HorizontalListItem>
-    <Button text="1" color={ButtonColor.SECONDARY} />
+    <Button text="1" />
   </HorizontalListItem>
   <HorizontalListItem>
-    <Button text="2" color={ButtonColor.SECONDARY} />
+    <Button text="2" />
   </HorizontalListItem>
   <HorizontalListItem>
-    <Button text="3" />
+    <Button text="3" color={ButtonColor.PRIMARY} />
   </HorizontalListItem>
 </HorizontalList>
 ```

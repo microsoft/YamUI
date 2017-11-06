@@ -3,7 +3,7 @@
 exports[`<Button /> set as disabled matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular y-button__state-disabled"
+  className="y-button y-button__color-secondary y-button__size-regular y-button__state-disabled"
   classNames={Object {}}
   disabled={true}
   split={false}
@@ -16,7 +16,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
 exports[`<Button /> with SMALL size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-small"
+  className="y-button y-button__color-secondary y-button__size-small"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -28,7 +28,7 @@ exports[`<Button /> with SMALL size matches its snapshot 1`] = `
 exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-small"
+  className="y-button y-button__color-secondary y-button__size-small"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -49,7 +49,7 @@ exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
 exports[`<Button /> with additional className matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular TEST_CLASSNAME"
+  className="y-button y-button__color-secondary y-button__size-regular TEST_CLASSNAME"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -61,18 +61,6 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
 exports[`<Button /> with aria label matches its snapshot 1`] = `
 <BaseButton
   ariaLabel="Aria description"
-  baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
-  classNames={Object {}}
-  split={false}
-  styles={Object {}}
->
-  Click Me
-</BaseButton>
-`;
-
-exports[`<Button /> with color set to SECONDARY matches its snapshot 1`] = `
-<BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
@@ -86,7 +74,19 @@ exports[`<Button /> with color set to SECONDARY matches its snapshot 1`] = `
 exports[`<Button /> with default options matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  split={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with fullWidth matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular y-button__fullWidth"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -98,7 +98,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
 exports[`<Button /> with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -119,7 +119,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
   split={false}
   styles={Object {}}
@@ -140,9 +140,21 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 exports[`<Button /> with invalid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
   href="#"
+  split={false}
+  styles={Object {}}
+>
+  Click Me
+</BaseButton>
+`;
+
+exports[`<Button /> with primary color matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-primary y-button__size-regular"
+  classNames={Object {}}
   split={false}
   styles={Object {}}
 >
@@ -153,7 +165,7 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
 exports[`<Button /> with valid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
   href="https://www.yammer.com"
   split={false}

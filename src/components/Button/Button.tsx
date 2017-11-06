@@ -24,9 +24,14 @@ export interface BaseButtonProps extends BaseComponentProps {
 
   /**
    * Color describing the button's intent.
-   * @default ButtonColor.PRIMARY
+   * @default ButtonColor.SECONDARY
    */
   color?: ButtonColor;
+
+  /**
+   * Stretch the button to fill the available horizontal space.
+   */
+  fullWidth?: boolean;
 
   /**
    * Optional icon.
@@ -119,7 +124,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   };
 
   static defaultProps = {
-    color: ButtonColor.PRIMARY,
+    color: ButtonColor.SECONDARY,
     iconPosition: ButtonIconPosition.LEFT,
     size: ButtonSize.REGULAR,
   };
@@ -183,7 +188,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   }
 
   private getClasses() {
-    const { className, color, disabled, size } = this.props;
+    const { className, color, disabled, fullWidth, size } = this.props;
 
     const classes: string[] = [
       'y-button',
@@ -192,6 +197,9 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     ];
     if (disabled) {
       classes.push(`y-button__state-disabled`);
+    }
+    if (fullWidth) {
+      classes.push(`y-button__fullWidth`);
     }
     if (className) {
       classes.push(className);
