@@ -1,34 +1,44 @@
 ### Notes for use
 
-Used to add a click handler to an area that is not styled as a button and is not a link.
+Clickable should be used in place of NavigationLink when you need click interaction without navigation. By default a Clickable is styled like a link, but you can also set it to `unstyled`.
 
-If you need to control spacing, you can wrap children in a `Block` component. You can also wrap text in `Clickable`, making it an inline clickable area.
 
 ### Examples
 
 Inline:
 
 ```js { "props": { "data-example": "inline" } }
-const { GutterSize } = require('../Block');
-
 <div>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    Here is some plain text, followed by text in a <strong>Clickable</strong> component:
-  </Block>
-  <Block>
-    This is some content. <Clickable onClick={action('clickable clicked')}>This part is clickable</Clickable>.
-  </Block>
+  The following Clickable example looks like a link but is actually rendered as a button: <Clickable onClick={action('clickable clicked')}>Click me</Clickable>
 </div>
 ```
 
 Block:
 
 ```js { "props": { "data-example": "block" } }
-const { GutterSize } = require('../Block');
-
 <Clickable block={true} onClick={action('clicked')}>
   <Block>
-    This is a block of text entirely inside a <strong>Clickable</strong> component. When wrapping an entire component like this, be sure to set <strong>block: true</strong>. Otherwise the <em>button</em> element might constrict the width of its contents.
+    Set <strong>block: true</strong> when wrapping block-level child elements to ensure the underlying button element takes up its full horizontal width.
   </Block>
 </Clickable>
+```
+
+Unstyled:
+
+```js { "props": { "data-example": "unstyled" } }
+<div>
+  The following Clickable example has <strong>unstyled: true</strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
+</div>
+```
+
+Unstyled block with FakeLink:
+
+```js { "props": { "data-example": "unstyled block with fakelink" } }
+const FakeLink = require('../FakeLink').default;
+
+<div>
+  <Clickable onClick={action('clickable clicked')} unstyled={true} block={true}>
+    This entire area is a Clickable with <strong>unstyled: true</strong> and <strong>block: true</strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
+  </Clickable>
+</div>
 ```
