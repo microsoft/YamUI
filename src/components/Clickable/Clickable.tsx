@@ -35,7 +35,13 @@ export default class Clickable extends React.PureComponent<ClickableProps, {}> {
     const { ariaLabel, title, onClick, children } = this.props;
 
     return (
-      <button className={this.getClasses()} aria-label={ariaLabel} title={title} onClick={onClick}>
+      <button
+        className={this.getClasses()}
+        aria-label={ariaLabel}
+        title={title}
+        onClick={onClick}
+        type="button"
+      >
         {children}
       </button>
     );
