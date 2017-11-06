@@ -196,10 +196,10 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
       `y-button__size-${size}`,
     ];
     if (disabled) {
-      classes.push(`y-button__state-disabled`);
+      classes.push('y-button__state-disabled');
     }
     if (fullWidth) {
-      classes.push(`y-button__fullWidth`);
+      classes.push('y-button__fullWidth');
     }
     if (className) {
       classes.push(className);
