@@ -7,7 +7,7 @@ const webpackConfig = require('./webpack.config.js');
 const getComponentPathLine = (componentPath) => {
   const ext = path.extname(componentPath);
   const name = path.basename(componentPath, ext);
-  const dir = path.dirname(componentPath).replace(/^src\//, 'yamui/dist/');
+  const dir = path.dirname(componentPath).replace(/.*\/src\//, 'yamui/dist/');
   return `import ${name} from '${dir}';`;
 };
 
