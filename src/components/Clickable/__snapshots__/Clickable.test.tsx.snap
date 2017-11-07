@@ -38,6 +38,7 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
 <button
   className="y-clickable"
+  type="button"
 >
   clickable content
 </button>
