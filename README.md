@@ -71,7 +71,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 * `npm run start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
 
-### Runing visual diff regression tests
+### Running visual diff regression tests
 
 * `y run test:visual` will compile the components, build+export a static version of the styleguide, start a dev server, take screenshots of each example, and fail if there are visual changes from the last approved screenshots. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `npm run` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
 * `npm run test:visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its examples and you have manually verified that the new visual changes are correct.
