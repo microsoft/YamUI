@@ -56,6 +56,6 @@ module.exports = {
   serverPort: 5555,
   styleguideDir: path.resolve(root, 'build/docs'),
   styleguideComponents: {
-    Wrapper: path.resolve(root, 'src/components/Fabric'),
+    Wrapper: path.resolve(root, 'src/demos/ExampleWrapper'),
   },
 };
