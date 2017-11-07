@@ -13,16 +13,6 @@ Inline:
 </div>
 ```
 
-Block:
-
-```js { "props": { "data-example": "block" } }
-<Clickable block={true} onClick={action('clicked')}>
-  <Block>
-    Set <strong>block: true</strong> when wrapping block-level child elements to ensure the underlying button element takes up its full horizontal width.
-  </Block>
-</Clickable>
-```
-
 Unstyled:
 
 ```js { "props": { "data-example": "unstyled" } }
@@ -34,8 +24,6 @@ Unstyled:
 Unstyled block with FakeLink:
 
 ```js { "props": { "data-example": "unstyled block with fakelink" } }
-const FakeLink = require('../FakeLink').default;
-
 <div>
   <Clickable onClick={action('clickable clicked')} unstyled={true} block={true}>
     This entire area is a Clickable with <strong>unstyled: true</strong> and <strong>block: true</strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
