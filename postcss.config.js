@@ -9,6 +9,5 @@ module.exports = () => ({
       path: [''],
     },
     precss: {},
-    autoprefixer: {},
   },
 });
