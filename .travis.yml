@@ -3,10 +3,6 @@ sudo: required
 services:
   - docker
 
-branches:
-  only:
-    - master
-
 env:
   - DEBUG=react-styleguidist-visual
 
