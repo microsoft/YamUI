@@ -80,6 +80,48 @@ const { IconSize } = require('.');
 </table>
 ```
 
+Auto-sized to text:
+
+```js { "props": { "data-example": "autosize" } }
+const { GutterSize, TextSize } = require('../Block');
+
+const longText = (
+  <span>
+    <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="like" />
+  </span>
+);
+
+<div>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` or `Text` component with a valid textSize set. Here are examples of icons inheriting from the current font-size.
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XXLARGE}>
+    XXLARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XLARGE}>
+    XLARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.LARGE}>
+    LARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.MEDIUM}>
+    MEDIUM. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.MEDIUM_SUB}>
+    MEDIUM_SUB. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.SMALL}>
+    SMALL. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XSMALL}>
+    XSMALL. {longText}
+  </Block>
+</div>
+```
+
 Inline with text and color overrides:
 
 ```js { "props": { "data-example": "inline with text and color" } }

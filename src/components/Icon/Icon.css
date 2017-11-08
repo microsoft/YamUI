@@ -1,6 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 .y-icon {
-  display: inline-block;
+  display: inline;
+
+  /* Size and position - defaults for medium and mediumSub text sizes */
+  height: 1.4rem;
+  width: 1.4rem;
+  vertical-align: 0;
+
   /* IE/Edge do not bubble click events up from SVG elements, so allow clicks to pass through */
   pointer-events: none;
   position: relative;
@@ -10,4 +16,37 @@
 
 .y-icon__isBlock {
   display: block;
+}
+
+/**
+  * Overrides for specific font sizes for crisper lines and better vertical spacing.
+  * Relies on the application using YamUI components instead of additional CSS to specify textSize.
+  */
+.y-textSize-xxLarge .y-icon {
+  height: 2.3rem;
+  width: 2.3rem;
+  vertical-align: -0.1rem;
+}
+.y-textSize-xLarge .y-icon {
+  height: 2.1rem;
+  width: 2.1rem;
+  vertical-align: -0.1rem;
+}
+.y-textSize-large .y-icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+/* medium matches the default values */
+.y-textSize-mediumSub .y-icon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.y-textSize-small .y-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.y-textSize-xSmall .y-icon {
+  height: 0.9rem;
+  width: 0.9rem;
+  vertical-align: 0.1rem;
 }

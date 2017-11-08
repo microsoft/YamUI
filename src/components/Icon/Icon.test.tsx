@@ -20,14 +20,6 @@ describe('<Icon />', () => {
       expect(component.hasClass('y-icon')).toBe(true);
     });
 
-    it('is the default height', () => {
-      expect(component.getNode().props.style.height).toBe(IconSize.MEDIUM + 'px');
-    });
-
-    it('is the default width', () => {
-      expect(component.getNode().props.style.width).toBe(IconSize.MEDIUM + 'px');
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });

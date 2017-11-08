@@ -8,7 +8,14 @@ import './Text.css';
 export { TextColor, TextSize };
 
 export interface TextProps extends NestableBaseComponentProps {
+  /**
+   * Text color
+   */
   color?: TextColor;
+  /**
+   * A preset size which determines a font-size + line-height combination
+   * supporting our vertical rhythm.
+   */
   size?: TextSize;
 }
 
@@ -29,7 +36,7 @@ export default class Text extends React.PureComponent<TextProps, {}> {
 
     const classes: string[] = ['y-text'];
     if (size) {
-      classes.push(`y-text__size-${size}`);
+      classes.push(`y-textSize-${size}`);
     }
     if (color) {
       classes.push(`y-text__color-${color}`);

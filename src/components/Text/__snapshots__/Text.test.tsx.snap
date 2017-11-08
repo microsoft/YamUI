@@ -10,7 +10,7 @@ exports[`<Text /> with a valid color matches its snapshot 1`] = `
 
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <span
-  className="y-text y-text__size-xLarge"
+  className="y-text y-textSize-xLarge"
 >
   test content
 </span>

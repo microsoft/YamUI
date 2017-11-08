@@ -1,0 +1,29 @@
+/**
+  * Shared CSS classes. This file should remain very small, and possibly
+  * become unnecessary if we embrace a CSS-in-JS solution.
+  */
+@import "src/css/variables/fonts.css";
+
+
+/* Font sizes */
+.y-textSize-xxLarge {
+  @extend text__xxLarge;
+}
+.y-textSize-xLarge {
+  @extend text__xLarge;
+}
+.y-textSize-large {
+  @extend text__large;
+}
+.y-textSize-medium {
+  @extend text__medium;
+}
+.y-textSize-mediumSub {
+  @extend text__mediumSub;
+}
+.y-textSize-small {
+  @extend text__small;
+}
+.y-textSize-xSmall {
+  @extend text__xSmall;
+}

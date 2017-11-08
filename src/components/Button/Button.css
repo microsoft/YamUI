@@ -23,20 +23,16 @@
 }
 
 .y-button__size-regular {
-  font-size: $fontSize__mediumSub;
-  line-height: $lineHeight__mediumSub;
   padding: 7px 15px;
+}
+
+.y-button__size-small {
+  padding: 4px 9px 6px;
 }
 
 .y-button__fullWidth {
   display: block;
   width: 100%;
-}
-
-.y-button__size-small {
-  font-size: $fontSize__small;
-  line-height: $lineHeight__small;
-  padding: 4px 9px 6px;
 }
 
 .y-button__color-primary,
@@ -75,11 +71,11 @@
   cursor: default;
 }
 
-.y-button__state-loading .y-button--contents {
+.y-button--content__hidden {
   visibility: hidden;
 }
 
-.y-button__state-loading .y-button--spinner {
+.y-button--spinner {
   position: absolute;
   top: 50%;
   left: 50%;
