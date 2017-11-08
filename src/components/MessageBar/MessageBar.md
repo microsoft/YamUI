@@ -7,7 +7,7 @@ Text that is too long for the context will wrap to two or more lines, but you sh
 Informational:
 
 ```js { "props": { "data-example": "basic" } }
-<MessageBar ariaLabel="A sample informational message">
+<MessageBar>
   Something you should know about.
 </MessageBar>
 ```
@@ -17,7 +17,7 @@ Warning:
 ```js { "props": { "data-example": "with type" } }
 const { MessageBarType } = require('.');
 
-<MessageBar ariaLabel="A sample warning message" type={MessageBarType.WARNING}>
+<MessageBar type={MessageBarType.WARNING}>
   Watch out, something unexpected might happen.
 </MessageBar>
 ```
@@ -36,7 +36,7 @@ const icon = (
   </span>
 );
 
-<MessageBar ariaLabel="A sample warning message" actions={icon} type={MessageBarType.WARNING}>
+<MessageBar actions={icon} type={MessageBarType.WARNING}>
   Watch out, something unexpected might happen.
 </MessageBar>
 ```
@@ -48,7 +48,7 @@ const { MessageBarType } = require('.');
 
 const link = <FakeLink>Retry</FakeLink>;
 
-<MessageBar ariaLabel="A sample error message" actions={link} type={MessageBarType.ERROR}>
+<MessageBar actions={link} type={MessageBarType.ERROR}>
   Oh no, something bad happened and we couldn't complete your action!
 </MessageBar>
 ```

@@ -3,6 +3,7 @@
 
 .y-fixedGridRow {
   display: flex;
+  flex-basis: 100%;
 }
 
 .y-fixedGridRow__bottomSpacing-xxLarge {

@@ -3,15 +3,13 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { MessageBarType } from './enums';
+import Block, { TextSize } from '../Block';
+import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import './MessageBar.css';
 
 export { MessageBarType };
 
 export interface MessageBarProps extends NestableBaseComponentProps {
-  /**
-   * Additional label that must be provided for screenreaders.
-   */
-  ariaLabel: string;
 
   /**
    * Type of message being displayed.
@@ -35,34 +33,26 @@ export default class MessageBar extends React.PureComponent<MessageBarProps, {}>
   };
 
   render() {
-    const { ariaLabel, children } = this.props;
+    const { actions, children } = this.props;
 
     return (
-      <div className={this.getClasses()} aria-label={ariaLabel}>
-        <div className="y-message-bar--message">{children}</div>
-        {this.getActions()}
-      </div>
+      <Block textSize={TextSize.SMALL} className={this.getClasses()}>
+        <FixedGridRow gutterSize={GutterSize.XXLARGE}>
+          <FixedGridColumn>{children}</FixedGridColumn>
+          {actions && <FixedGridColumn fixed={true}>{actions}</FixedGridColumn>}
+        </FixedGridRow>
+      </Block>
     );
   }
 
   private getClasses() {
     const { className, type } = this.props;
+    const classes = ['y-message-bar', `y-message-bar__type-${type}`];
 
-    const classes: string[] = ['y-message-bar', `y-message-bar__type-${type}`];
     if (className) {
       classes.push(className);
     }
 
     return classes.join(' ');
-  }
-
-  private getActions() {
-    const { actions } = this.props;
-
-    if (!actions) {
-      return null;
-    }
-
-    return <div className="y-message-bar--actions">{actions}</div>;
   }
 }

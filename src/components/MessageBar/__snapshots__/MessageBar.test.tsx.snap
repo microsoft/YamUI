@@ -1,60 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FakeLink /> with a type matches its snapshot 1`] = `
-<div
-  aria-label="label"
+exports[`<MessageBar /> with a type matches its snapshot 1`] = `
+<Block
   className="y-message-bar y-message-bar__type-warning"
+  textSize="small"
 >
-  <div
-    className="y-message-bar--message"
+  <FixedGridRow
+    gutterSize="xxLarge"
   >
-    content
-  </div>
-</div>
+    <FixedGridColumn>
+      content
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
 `;
 
-exports[`<FakeLink /> with actions matches its snapshot 1`] = `
-<div
-  aria-label="label"
+exports[`<MessageBar /> with actions matches its snapshot 1`] = `
+<Block
   className="y-message-bar y-message-bar__type-info"
+  textSize="small"
 >
-  <div
-    className="y-message-bar--message"
+  <FixedGridRow
+    gutterSize="xxLarge"
   >
-    content
-  </div>
-  <div
-    className="y-message-bar--actions"
-  >
-    <FakeLink>
-      Link
-    </FakeLink>
-  </div>
-</div>
+    <FixedGridColumn>
+      content
+    </FixedGridColumn>
+    <FixedGridColumn
+      fixed={true}
+    >
+      <FakeLink>
+        Link
+      </FakeLink>
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
 `;
 
-exports[`<FakeLink /> with additional className matches its snapshot 1`] = `
-<div
-  aria-label="label"
+exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
+<Block
   className="y-message-bar y-message-bar__type-info TEST_CLASSNAME"
+  textSize="small"
 >
-  <div
-    className="y-message-bar--message"
+  <FixedGridRow
+    gutterSize="xxLarge"
   >
-    content
-  </div>
-</div>
+    <FixedGridColumn>
+      content
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
 `;
 
-exports[`<FakeLink /> with default options matches its snapshot 1`] = `
-<div
-  aria-label="label"
+exports[`<MessageBar /> with default options matches its snapshot 1`] = `
+<Block
   className="y-message-bar y-message-bar__type-info"
+  textSize="small"
 >
-  <div
-    className="y-message-bar--message"
+  <FixedGridRow
+    gutterSize="xxLarge"
   >
-    content
-  </div>
-</div>
+    <FixedGridColumn>
+      content
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
 `;
