@@ -65,10 +65,10 @@ export default class FileHovercard extends React.PureComponent<FileHovercardProp
 
             <HorizontalList align="right">
               <HorizontalListItem>
-                <Button text="Go To File" color={ButtonColor.SECONDARY} />
+                <Button text="Go To File" />
               </HorizontalListItem>
               <HorizontalListItem>
-                <Button text="Preview" />
+                <Button text="Preview" color={ButtonColor.PRIMARY} />
               </HorizontalListItem>
             </HorizontalList>
           </Block>

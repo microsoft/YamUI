@@ -29,7 +29,7 @@ describe('<Button />', () => {
     });
 
     it('is the default button color', () => {
-      expect(component.hasClass('y-button__color-primary')).toBe(true);
+      expect(component.hasClass('y-button__color-secondary')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -48,6 +48,20 @@ describe('<Button />', () => {
 
     it('still has its base className', () => {
       expect(component.hasClass('y-button')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with fullWidth', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} fullWidth={true} />);
+    });
+
+    it('includes the fullWidth className', () => {
+      expect(component.hasClass('y-button__fullWidth')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -125,13 +139,13 @@ describe('<Button />', () => {
     });
   });
 
-  describe('with color set to SECONDARY', () => {
+  describe('with primary color', () => {
     beforeEach(() => {
-      component = shallow(<Button color={ButtonColor.SECONDARY} text={sampleText} />);
+      component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />);
     });
 
     it('renders the correct color className', () => {
-      expect(component.hasClass('y-button__color-secondary')).toBe(true);
+      expect(component.hasClass('y-button__color-primary')).toBe(true);
     });
 
     it('matches its snapshot', () => {

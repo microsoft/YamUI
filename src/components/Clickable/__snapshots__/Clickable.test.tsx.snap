@@ -6,7 +6,9 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
   className="y-clickable"
   type="button"
 >
-  clickable content
+  <FakeLink>
+    clickable content
+  </FakeLink>
 </button>
 `;
 
@@ -15,7 +17,9 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
   className="y-clickable y-clickable__block"
   type="button"
 >
-  clickable content
+  <FakeLink>
+    clickable content
+  </FakeLink>
 </button>
 `;
 
@@ -23,6 +27,17 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 <button
   className="y-clickable"
   title="extra browser tooltip content"
+  type="button"
+>
+  <FakeLink>
+    clickable content
+  </FakeLink>
+</button>
+`;
+
+exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
+<button
+  className="y-clickable"
   type="button"
 >
   clickable content
@@ -34,7 +49,9 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
   className="y-clickable TEST_CLASSNAME"
   type="button"
 >
-  clickable content
+  <FakeLink>
+    clickable content
+  </FakeLink>
 </button>
 `;
 
@@ -43,6 +60,8 @@ exports[`<Clickable /> with default options matches its snapshot 1`] = `
   className="y-clickable"
   type="button"
 >
-  clickable content
+  <FakeLink>
+    clickable content
+  </FakeLink>
 </button>
 `;

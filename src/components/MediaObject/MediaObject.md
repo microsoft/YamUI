@@ -119,10 +119,10 @@ const avatar = (size) => (
   <Block push={4}>
     <FixedGridRow>
       <FixedGridColumn>
-        <Button text="Follow" size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} icon="plus" />
+        <Button text="Follow" size={ButtonSize.SMALL} icon="plus" />
       </FixedGridColumn>
       <FixedGridColumn fixed={true}>
-        <Button text="..." size={ButtonSize.SMALL} color={ButtonColor.SECONDARY} />
+        <Button text="..." size={ButtonSize.SMALL} />
       </FixedGridColumn>
     </FixedGridRow>
   </Block>

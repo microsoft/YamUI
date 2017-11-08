@@ -70,7 +70,7 @@ export default class UserHovercard extends React.PureComponent<UserHovercardProp
 
             <HorizontalList align="right">
               <HorizontalListItem>
-                <Button text="Send Message" color={ButtonColor.SECONDARY} />
+                <Button text="Send Message" />
               </HorizontalListItem>
               <HorizontalListItem>
                 <Button text="Follow" color={ButtonColor.PRIMARY} icon="plus" />

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable, { ClickableProps } from '.';
+import FakeLink from '../FakeLink';
 
 describe('<Clickable />', () => {
   let component: ShallowWrapper<ClickableProps, {}>;
@@ -11,8 +12,8 @@ describe('<Clickable />', () => {
       component = shallow(<Clickable>clickable content</Clickable>);
     });
 
-    it('renders its given content', () => {
-      expect(component.render().text()).toEqual('clickable content');
+    it('wraps its content in a FakeLink component', () => {
+      expect(component.contains(<FakeLink>clickable content</FakeLink>)).toBe(true);
     });
 
     it('contains its base className', () => {
@@ -34,6 +35,28 @@ describe('<Clickable />', () => {
     });
 
     it('still has its base className', () => {
+      expect(component.hasClass('y-clickable')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when unstyled', () => {
+    beforeEach(() => {
+      component = shallow(<Clickable unstyled={true}>clickable content</Clickable>);
+    });
+
+    it('renders its given content', () => {
+      expect(component.render().text()).toEqual('clickable content');
+    });
+
+    it('does not wrap its content in a FakeLink component', () => {
+      expect(component.find(FakeLink).length).toBe(0);
+    });
+
+    it('contains its base className', () => {
       expect(component.hasClass('y-clickable')).toBe(true);
     });
 

@@ -27,6 +27,11 @@
   padding: 7px 15px;
 }
 
+.y-button__fullWidth {
+  display: block;
+  width: 100%;
+}
+
 .y-button__size-small {
   font-size: $fontSize__small;
   line-height: $lineHeight__small;
