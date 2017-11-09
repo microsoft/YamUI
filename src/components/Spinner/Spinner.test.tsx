@@ -41,7 +41,7 @@ describe('<Spinner />', () => {
   describe('with invisible text', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner text="Loading" showText={false} />,
+        <Spinner text="Loading" hideText={true} />,
       );
     });
 

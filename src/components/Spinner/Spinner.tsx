@@ -39,10 +39,10 @@ export interface SpinnerProps extends BaseComponentProps {
   text: string;
 
   /**
-   * Whether to make the text visible.
-   * @default true
+   * Whether to hide text, and only render it for screenreaders.
+   * @default false
    */
-  showText?: boolean;
+  hideText?: boolean;
 
   /**
    * Color of the spinner.
@@ -63,18 +63,18 @@ export interface SpinnerProps extends BaseComponentProps {
  */
 export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   static defaultProps: Partial<SpinnerProps> = {
-    showText: true,
+    hideText: false,
     color: SpinnerColor.LIGHT,
     size: SpinnerSize.MEDIUM,
   };
 
   render() {
-    const { text, showText } = this.props;
+    const { text, hideText } = this.props;
 
-    const textComponent = showText ? (
-      <Text {...this.getLabelProps()}>{text}</Text>
-    ) : (
+    const textComponent = hideText ? (
       <ScreenreaderText>{text}</ScreenreaderText>
+    ) : (
+      <Text {...this.getLabelProps()}>{text}</Text>
     );
 
     return (
