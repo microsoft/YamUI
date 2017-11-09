@@ -1,8 +1,8 @@
 ### Examples
 
-Without label:
+With visible text:
 
-```js { "props": { "data-example": "without label" } }
+```js { "props": { "data-example": "with visible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -17,39 +17,39 @@ const { SpinnerColor, SpinnerSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Spinner size={SpinnerSize.LARGE} />
+        <Spinner size={SpinnerSize.LARGE} text="Loading" />
       </td>
       <td>
-        <Spinner size={SpinnerSize.MEDIUM} />
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" />
       </td>
       <td>
-        <Spinner size={SpinnerSize.SMALL} />
+        <Spinner size={SpinnerSize.SMALL} text="Loading" />
       </td>
       <td>
-        <Spinner size={SpinnerSize.XSMALL} />
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" />
       </td>
     </tr>
     <tr style={{ backgroundColor: '#386cbb' }}>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" />
       </td>
     </tr>
   </tbody>
 </table>
 ```
 
-With label:
+With invisible text:
 
-```js { "props": { "data-example": "with label" } }
+```js { "props": { "data-example": "with invisible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -64,30 +64,30 @@ const { SpinnerColor, SpinnerSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Spinner size={SpinnerSize.LARGE} label="Loading" />
+        <Spinner size={SpinnerSize.LARGE} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.MEDIUM} label="Loading" />
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.SMALL} label="Loading" />
+        <Spinner size={SpinnerSize.SMALL} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.XSMALL} label="Loading" />
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" hideText={true} />
       </td>
     </tr>
     <tr style={{ backgroundColor: '#386cbb' }}>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} label="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} label="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} label="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" hideText={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} label="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" hideText={true} />
       </td>
     </tr>
   </tbody>

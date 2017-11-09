@@ -8,6 +8,7 @@ import {
 } from 'office-ui-fabric-react/lib/Spinner';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Text, { TextProps, TextColor, TextSize } from '../Text';
+import ScreenreaderText from '../ScreenreaderText';
 import { SpinnerSize } from './enums';
 import './Spinner.css';
 
@@ -33,26 +34,21 @@ export enum SpinnerColor {
 
 export interface SpinnerProps extends BaseComponentProps {
   /**
-   * Additional label that can be provided for screenreaders.
+   * Text displayed besides/below the spinner.
    */
-  ariaLabel?: string;
+  text: string;
 
   /**
-   * Politeness for label update announcement.
-   * @default 'polite'
+   * Whether to hide text, and only render it for screenreaders.
+   * @default false
    */
-  ariaLive?: FabricSpinnerProps['ariaLive'];
+  hideText?: boolean;
 
   /**
    * Color of the spinner.
    * @default SpinnerColor.LIGHT
    */
   color?: SpinnerColor;
-
-  /**
-   * Label displayed besides/below the spinner.
-   */
-  label?: string;
 
   /**
    * Size of the spinner.
@@ -67,18 +63,24 @@ export interface SpinnerProps extends BaseComponentProps {
  */
 export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   static defaultProps: Partial<SpinnerProps> = {
-    ariaLive: 'polite',
+    hideText: false,
     color: SpinnerColor.LIGHT,
     size: SpinnerSize.MEDIUM,
   };
 
   render() {
-    const { label } = this.props;
+    const { text, hideText } = this.props;
+
+    const textComponent = hideText ? (
+      <ScreenreaderText>{text}</ScreenreaderText>
+    ) : (
+      <Text {...this.getLabelProps()}>{text}</Text>
+    );
 
     return (
       <div className={this.getClasses()}>
         <FabricSpinner {...this.getSpinnerProps()} />
-        {label && <Text {...this.getLabelProps()}>{label}</Text>}
+        {textComponent}
       </div>
     );
   }
@@ -86,11 +88,7 @@ export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   private getClasses() {
     const { className, color, size } = this.props;
 
-    const classes: string[] = [
-      'y-spinner',
-      `y-spinner__color-${color}`,
-      `y-spinner__size-${size}`,
-    ];
+    const classes: string[] = ['y-spinner', `y-spinner__color-${color}`, `y-spinner__size-${size}`];
     if (className) {
       classes.push(className);
     }
@@ -99,11 +97,9 @@ export default class Spinner extends React.PureComponent<SpinnerProps, {}> {
   }
 
   private getSpinnerProps(): FabricSpinnerProps {
-    const { ariaLabel, ariaLive, label, size } = this.props;
+    const { size } = this.props;
 
     return {
-      ariaLive,
-      ariaLabel: ariaLabel || label,
       className: 'y-spinner--circle',
       size: SizeMap[size as string],
     };

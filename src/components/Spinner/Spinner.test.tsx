@@ -6,26 +6,10 @@ import Spinner, { SpinnerProps, SpinnerColor, SpinnerSize } from '.';
 describe('<Spinner />', () => {
   let component: ShallowWrapper<SpinnerProps, {}>;
 
-  describe('with default options', () => {
-    beforeEach(() => {
-      component = shallow(
-        <Spinner />,
-      );
-    });
-
-    it('has its correct base class', () => {
-      expect(component.hasClass('y-spinner')).toBe(true);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner className="TEST_CLASSNAME" />,
+        <Spinner className="TEST_CLASSNAME" text="Loading" />,
       );
     });
 
@@ -42,10 +26,10 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with an aria-label', () => {
+  describe('with visible text', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner ariaLabel="Loading" />,
+        <Spinner text="Loading" />,
       );
     });
 
@@ -54,22 +38,10 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with an aria-live', () => {
+  describe('with invisible text', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner ariaLabel="Loading" ariaLive="assertive" />,
-      );
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with a label', () => {
-    beforeEach(() => {
-      component = shallow(
-        <Spinner label="Loading" />,
+        <Spinner text="Loading" hideText={true} />,
       );
     });
 
@@ -81,7 +53,7 @@ describe('<Spinner />', () => {
   describe('with a color', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner label="Loading" color={SpinnerColor.DARK} />,
+        <Spinner text="Loading" color={SpinnerColor.DARK} />,
       );
     });
 
@@ -93,7 +65,7 @@ describe('<Spinner />', () => {
   describe('with a size', () => {
     beforeEach(() => {
       component = shallow(
-        <Spinner label="Loading" size={SpinnerSize.XSMALL} />,
+        <Spinner text="Loading" size={SpinnerSize.XSMALL} />,
       );
     });
 
