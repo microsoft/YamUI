@@ -4,10 +4,11 @@ import * as React from 'react';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Icon, { IconSize, IconProps, IconName } from '../Icon';
-import { ButtonColor, ButtonIconPosition, ButtonSize } from './enums';
+import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
+import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from './enums';
 import './Button.css';
 
-export { ButtonColor, ButtonIconPosition, ButtonSize };
+export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize };
 
 const hrefBlacklist = ['', '#', 'javascript://'];
 
@@ -23,15 +24,15 @@ export interface BaseButtonProps extends BaseComponentProps {
   ariaLabel?: string;
 
   /**
+   * Stretch the button to fill the available horizontal space.
+   */
+  fullWidth?: boolean;
+
+  /**
    * Color describing the button's intent.
    * @default ButtonColor.SECONDARY
    */
   color?: ButtonColor;
-
-  /**
-   * Stretch the button to fill the available horizontal space.
-   */
-  fullWidth?: boolean;
 
   /**
    * Optional icon.
@@ -83,9 +84,19 @@ export interface RegularButtonProps extends BaseButtonProps {
   href?: void;
 
   /**
-   * Whether this button should be disabled or not.
+   * Status of this button.
    */
-  disabled?: boolean;
+  status?: ButtonStatus;
+
+  /**
+   * Screenreader text for loading state.
+   */
+  loadingText?: string;
+}
+
+export interface LoadingButtonProps extends RegularButtonProps {
+  status: ButtonStatus.LOADING;
+  loadingText: string;
 }
 
 export interface LinkButtonProps extends BaseButtonProps {
@@ -96,12 +107,12 @@ export interface LinkButtonProps extends BaseButtonProps {
   href: string;
 
   /**
-   * Links cannot be disabled.
+   * Links cannot be disabled nor loading.
    */
-  disabled?: void;
+  status?: void;
 }
 
-export type ButtonProps = RegularButtonProps | LinkButtonProps;
+export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonProps;
 
 /**
  * A `Button` allows a user to take an action.
@@ -130,20 +141,33 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   };
 
   render() {
-    const {
-      text,
-      ariaLabel,
-      icon,
-      iconPosition,
-      onClick,
-      onFocus,
-      onBlur,
-      onMouseEnter,
-      onMouseLeave,
-    } = this.props;
+    const { ariaLabel, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
 
-    const disabled = (this.props as RegularButtonProps).disabled;
     const href = (this.props as LinkButtonProps).href;
+    const status = (this.props as RegularButtonProps).status;
+    const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
+    const isLoading = status === ButtonStatus.LOADING;
+
+    return (
+      <BaseButton
+        ariaLabel={ariaLabel}
+        className={this.getClasses()}
+        disabled={isDisabled}
+        href={href}
+        onBlur={onBlur}
+        onClick={onClick}
+        onFocus={onFocus}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        {this.getContents()}
+        {isLoading && this.getSpinner()}
+      </BaseButton>
+    );
+  }
+
+  private getContents() {
+    const { text, icon, iconPosition } = this.props;
 
     const leftIcon = icon &&
       iconPosition === ButtonIconPosition.LEFT && (
@@ -159,21 +183,26 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
       );
 
     return (
-      <BaseButton
-        ariaLabel={ariaLabel}
-        className={this.getClasses()}
-        disabled={disabled}
-        href={href}
-        onBlur={onBlur}
-        onClick={onClick}
-        onFocus={onFocus}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
+      <span className="y-button--contents">
         {leftIcon}
         {text}
         {rightIcon}
-      </BaseButton>
+      </span>
+    );
+  }
+
+  private getSpinner() {
+    const { color, size } = this.props;
+
+    const loadingText = (this.props as LoadingButtonProps).loadingText;
+
+    const spinnerColor = color === ButtonColor.PRIMARY ? SpinnerColor.DARK : SpinnerColor.LIGHT;
+    const spinnerSize = size === ButtonSize.SMALL ? SpinnerSize.XSMALL : SpinnerSize.SMALL;
+
+    return (
+      <span className="y-button--spinner">
+        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} />
+      </span>
     );
   }
 
@@ -188,15 +217,18 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
   }
 
   private getClasses() {
-    const { className, color, disabled, fullWidth, size } = this.props;
+    const { className, color, status, size, fullWidth } = this.props;
 
     const classes: string[] = [
       'y-button',
       `y-button__color-${color}`,
       `y-button__size-${size}`,
     ];
-    if (disabled) {
-      classes.push('y-button__state-disabled');
+    if (status === ButtonStatus.DISABLED) {
+      classes.push(`y-button__state-disabled`);
+    }
+    if (status === ButtonStatus.LOADING) {
+      classes.push(`y-button__state-loading`);
     }
     if (fullWidth) {
       classes.push('y-button__fullWidth');

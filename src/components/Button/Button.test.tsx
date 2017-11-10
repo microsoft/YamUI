@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { BaseButton } from 'office-ui-fabric-react/lib/Button';
 import Icon, { IconSize } from '../Icon';
-import Button, { ButtonProps, ButtonColor, ButtonIconPosition, ButtonSize } from '.';
+import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -55,6 +55,20 @@ describe('<Button />', () => {
     });
   });
 
+  describe('with aria label', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} ariaLabel={sampleAriaLabel} />);
+    });
+
+    it('prop is set', () => {
+      expect(component.find(BaseButton).prop('ariaLabel')).toEqual(sampleAriaLabel);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with fullWidth', () => {
     beforeEach(() => {
       component = shallow(<Button text={sampleText} fullWidth={true} />);
@@ -62,6 +76,34 @@ describe('<Button />', () => {
 
     it('includes the fullWidth className', () => {
       expect(component.hasClass('y-button__fullWidth')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('set as disabled', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} status={ButtonStatus.DISABLED} />);
+    });
+
+    it('is disabled', () => {
+      expect(component.find(BaseButton).prop('disabled')).toEqual(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('set as loading', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} status={ButtonStatus.LOADING} />);
+    });
+
+    it('is disabled', () => {
+      expect(component.find(BaseButton).prop('disabled')).toEqual(true);
     });
 
     it('matches its snapshot', () => {
@@ -107,7 +149,33 @@ describe('<Button />', () => {
     });
   });
 
-  describe('with SMALL size', () => {
+  describe('with primary color', () => {
+    beforeEach(() => {
+      component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />);
+    });
+
+    it('renders the correct color className', () => {
+      expect(component.hasClass('y-button__color-primary')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+
+    describe('set as loading', () => {
+      beforeEach(() => {
+        component = shallow(
+          <Button color={ButtonColor.PRIMARY} text={sampleText} status={ButtonStatus.LOADING} />,
+        );
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('with small size', () => {
     beforeEach(() => {
       component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} />);
     });
@@ -137,47 +205,17 @@ describe('<Button />', () => {
         expect(component).toMatchSnapshot();
       });
     });
-  });
 
-  describe('with primary color', () => {
-    beforeEach(() => {
-      component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />);
-    });
+    describe('set as loading', () => {
+      beforeEach(() => {
+        component = shallow(
+          <Button size={ButtonSize.SMALL} text={sampleText} status={ButtonStatus.LOADING} />,
+        );
+      });
 
-    it('renders the correct color className', () => {
-      expect(component.hasClass('y-button__color-primary')).toBe(true);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('set as disabled', () => {
-    beforeEach(() => {
-      component = shallow(<Button text={sampleText} disabled={true} />);
-    });
-
-    it('prop is set', () => {
-      expect(component.find(BaseButton).prop('disabled')).toEqual(true);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with aria label', () => {
-    beforeEach(() => {
-      component = shallow(<Button text={sampleText} ariaLabel={sampleAriaLabel} />);
-    });
-
-    it('prop is set', () => {
-      expect(component.find(BaseButton).prop('ariaLabel')).toEqual(sampleAriaLabel);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 

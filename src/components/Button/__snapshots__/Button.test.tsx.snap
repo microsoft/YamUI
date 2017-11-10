@@ -9,40 +9,37 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
-exports[`<Button /> with SMALL size matches its snapshot 1`] = `
+exports[`<Button /> set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
+  className="y-button y-button__color-secondary y-button__size-regular y-button__state-loading"
   classNames={Object {}}
-  split={false}
-  styles={Object {}}
->
-  Click Me
-</BaseButton>
-`;
-
-exports[`<Button /> with SMALL size with icon matches its snapshot 1`] = `
-<BaseButton
-  baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
-  classNames={Object {}}
+  disabled={true}
   split={false}
   styles={Object {}}
 >
   <span
-    className="y-button--icon-wrapper-left"
+    className="y-button--contents"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="12"
+    Click Me
+  </span>
+  <span
+    className="y-button--spinner"
+  >
+    <Spinner
+      color="light"
+      hideText={true}
+      size="small"
     />
   </span>
-  Click Me
 </BaseButton>
 `;
 
@@ -51,10 +48,15 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular TEST_CLASSNAME"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -64,10 +66,15 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -76,10 +83,15 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -88,10 +100,15 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular y-button__fullWidth"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -100,19 +117,24 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
   <span
-    className="y-button--icon-wrapper-left"
+    className="y-button--contents"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="14"
-    />
+    <span
+      className="y-button--icon-wrapper-left"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+        size="14"
+      />
+    </span>
+    Click Me
   </span>
-  Click Me
 </BaseButton>
 `;
 
@@ -121,18 +143,23 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
   <span
-    className="y-button--icon-wrapper-right"
+    className="y-button--contents"
   >
-    <Icon
-      className="y-button--icon"
-      icon="plus"
-      size="14"
-    />
+    Click Me
+    <span
+      className="y-button--icon-wrapper-right"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+        size="14"
+      />
+    </span>
   </span>
 </BaseButton>
 `;
@@ -142,11 +169,16 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   href="#"
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -155,10 +187,110 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-primary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
+</BaseButton>
+`;
+
+exports[`<Button /> with primary color set as loading matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-primary y-button__size-regular y-button__state-loading"
+  classNames={Object {}}
+  disabled={true}
+  split={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
+  <span
+    className="y-button--spinner"
+  >
+    <Spinner
+      color="dark"
+      hideText={true}
+      size="small"
+    />
+  </span>
+</BaseButton>
+`;
+
+exports[`<Button /> with small size matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-small"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
+</BaseButton>
+`;
+
+exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-small y-button__state-loading"
+  classNames={Object {}}
+  disabled={true}
+  split={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
+  <span
+    className="y-button--spinner"
+  >
+    <Spinner
+      color="light"
+      hideText={true}
+      size="xSmall"
+    />
+  </span>
+</BaseButton>
+`;
+
+exports[`<Button /> with small size with icon matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-small"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+>
+  <span
+    className="y-button--contents"
+  >
+    <span
+      className="y-button--icon-wrapper-left"
+    >
+      <Icon
+        className="y-button--icon"
+        icon="plus"
+        size="12"
+      />
+    </span>
+    Click Me
+  </span>
 </BaseButton>
 `;
 
@@ -167,10 +299,15 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
   classNames={Object {}}
+  disabled={false}
   href="https://www.yammer.com"
   split={false}
   styles={Object {}}
 >
-  Click Me
+  <span
+    className="y-button--contents"
+  >
+    Click Me
+  </span>
 </BaseButton>
 `;
