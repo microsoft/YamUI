@@ -75,11 +75,11 @@
   cursor: default;
 }
 
-.y-button__state-loading .y-button--contents {
+.y-button--contents__hidden {
   visibility: hidden;
 }
 
-.y-button__state-loading .y-button--spinner {
+.y-button--spinner {
   position: absolute;
   top: 50%;
   left: 50%;

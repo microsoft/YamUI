@@ -183,7 +183,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
       );
 
     return (
-      <span className="y-button--contents">
+      <span className={this.getContentClasses()}>
         {leftIcon}
         {text}
         {rightIcon}
@@ -235,6 +235,18 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     }
     if (className) {
       classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+
+  private getContentClasses() {
+    const status = (this.props as RegularButtonProps).status;
+    const isLoading = status === ButtonStatus.LOADING;
+
+    const classes: string[] = ['y-button--contents'];
+    if (isLoading) {
+      classes.push('y-button--contents__hidden');
     }
 
     return classes.join(' ');
