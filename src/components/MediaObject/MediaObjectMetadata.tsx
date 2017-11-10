@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import Block, { TextSize } from '../Block';
+import Block, { GutterSize, TextSize } from '../Block';
 import Text, { TextColor } from '../Text';
 import { MediaObjectSize } from './enums';
 
@@ -26,6 +26,7 @@ export default class MediaObjectMetadata extends React.PureComponent<MediaObject
       <Block
         className="y-media-object--metadata"
         textSize={TextSize.SMALL}
+        bottomSpacing={GutterSize.XSMALL}
         push={BlockPushMap[size]}
       >
         <Text color={TextColor.METADATA}>{children}</Text>

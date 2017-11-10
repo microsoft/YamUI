@@ -13,7 +13,7 @@ export default class MediaObjectExtra extends React.PureComponent<MediaObjectExt
     const { children } = this.props;
 
     return (
-      <Block className="y-media-object--extra" textSize={TextSize.SMALL} push={4}>
+      <Block className="y-media-object--extra" textSize={TextSize.SMALL}>
         <Text color={TextColor.METADATA}>{children}</Text>
       </Block>
     );
