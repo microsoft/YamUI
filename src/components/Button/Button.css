@@ -5,6 +5,7 @@
 .y-button {
   text-align: center;
   vertical-align: bottom;
+  position: relative;
   display: inline-block;
   cursor: pointer;
   white-space: nowrap;
@@ -65,10 +66,24 @@
   color: $color__river;
 }
 
-.y-button:disabled,
 .y-button__state-disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+.y-button__state-loading {
+  cursor: default;
+}
+
+.y-button__state-loading .y-button--contents {
+  visibility: hidden;
+}
+
+.y-button__state-loading .y-button--spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .y-button--icon-wrapper-left {

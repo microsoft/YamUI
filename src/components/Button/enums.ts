@@ -10,6 +10,12 @@ export enum ButtonColor {
   SECONDARY = 'secondary',
 }
 
+export enum ButtonStatus {
+  ENABLED = 'enabled',
+  DISABLED = 'disabled',
+  LOADING = 'loading',
+}
+
 export enum ButtonIconPosition {
   LEFT = 'left',
   RIGHT = 'right',
