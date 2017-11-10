@@ -20,8 +20,9 @@ export interface BlockProps extends NestableBaseComponentProps {
   padding?: GutterSize;
 
   /**
-   * Number of pixels to finely adjust the gutter spacing above this block. Positive pushes the
-   * component down, negative pulls it up. Only use this to adjust for vertical rhythm in text.
+   * Number of pixels to finely adjust the gutter spacing above this block, between `-3` and `3`.
+   * Positive pushes the component down, negative pulls it up. Only use this to adjust for
+   * vertical rhythm in text.
    */
   push?: number;
 
@@ -48,6 +49,19 @@ interface BlockStyles {
  * providing enumerated options for the supported `font-size`/`line-height` combinations.
  */
 export default class Block extends React.PureComponent<BlockProps, {}> {
+  static propTypes = {
+    // We need to do a runtime validation to check that the value is in range.
+    push(props: BlockProps, propName: string, componentName: string) {
+      const push = props.push;
+      if (push && (push < -3 || push > 3)) {
+        return new Error(
+          `Invalid value for prop ${propName} supplied to ${componentName}: "${push}".
+          Please use push for minor adjustments between -3 and 3 to adjust vertical rhythm.`,
+        );
+      }
+    },
+  };
+
   render() {
     const { children } = this.props;
 

@@ -6,6 +6,8 @@ You should generally use a `Block` component instead of a `div` for layouts. By 
 
 In general UI components should fill their parent container's width. They should also not set their own vertical spacing (outer margin) to make it easier to be rendered in any context. Layout components would generally manage spacing and gutters. You can make it a little easier to achieve consistent spacing if you try to use bottom spacing instead of top spacing whenever possible.
 
+Components should generally only manage their bottom spacing and rely on the component above them to do the same. You should only ever need to provide a `push` value for minor adjustments between *-3* and *3*, and you should only need to deal with `push` to reset the vertical rhythm (an imaginary *4px* grid).
+
 ### Examples
 
 Without props:

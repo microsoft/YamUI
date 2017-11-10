@@ -145,4 +145,24 @@ describe('<Block />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('with invalid positive push', () => {
+    beforeEach(() => {
+      component = shallow(<Block push={4}>block content</Block>);
+    });
+
+    it('complains via proptypes but does not throw an error', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with invalid negative push', () => {
+    beforeEach(() => {
+      component = shallow(<Block push={-4}>block content</Block>);
+    });
+
+    it('complains via proptypes but does not throw an error', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

@@ -26,6 +26,40 @@ exports[`<Block /> with default options matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with invalid negative push complains via proptypes but does not throw an error 1`] = `
+<div
+  className="y-block"
+  style={
+    Object {
+      "marginTop": "-0.4rem",
+    }
+  }
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with invalid positive push complains via proptypes but does not throw an error 1`] = `
+<div
+  className="y-block"
+  style={
+    Object {
+      "paddingTop": "0.4rem",
+    }
+  }
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with negative push matches its snapshot 1`] = `
 <div
   className="y-block"
