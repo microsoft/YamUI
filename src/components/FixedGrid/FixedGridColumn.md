@@ -160,3 +160,22 @@ const { GutterSize } = require('.');
   </FixedGridRow>
 </div>
 ```
+
+With vertical alignment:
+
+```js { "props": { "data-example": "with vertical alignment" } }
+<FixedGridRow>
+  <FixedGridColumn fixed={true} width={100}>
+    This example is showing the different vertical align options for each individual grid columns.
+  </FixedGridColumn>
+  <FixedGridColumn verticalAlign="top">
+    This is vertical align 'top', the default prop
+  </FixedGridColumn>
+  <FixedGridColumn verticalAlign="middle">
+    This is vertical align 'middle'
+  </FixedGridColumn>
+  <FixedGridColumn verticalAlign="bottom">
+    This is vertical align 'bottom'
+  </FixedGridColumn>
+</FixedGridRow>
+```

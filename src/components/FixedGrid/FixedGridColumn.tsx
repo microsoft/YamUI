@@ -15,6 +15,12 @@ export interface FixedGridColumnProps extends NestableBaseComponentProps {
    * The number of pixels wide this column should be. Ignored if `fixed` is not set to true.
   */
   width?: number;
+
+  /**
+   * The vertical alignment of the column's content
+   * @default 'top'
+  */
+  verticalAlign?: 'top' | 'middle' | 'bottom';
 }
 
 interface ColumnStyles {
@@ -27,11 +33,16 @@ interface ColumnStyles {
  */
 export default class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
   render() {
-    const { children } = this.props;
+    const { children, verticalAlign } = this.props;
+
+    const hasVerticalAlign = verticalAlign && verticalAlign !== 'top';
+    const content = !hasVerticalAlign ? children : (
+      <div className={`y-fixedGridColumn--inner__${verticalAlign}`}>{children}</div>
+    );
 
     return (
       <div className={this.getClasses()} style={this.getStyle()}>
-        {children}
+        {content}
       </div>
     );
   }

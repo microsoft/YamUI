@@ -113,4 +113,18 @@ describe('<FixedGridColumn />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('with vertical align middle', () => {
+    beforeEach(() => {
+      component = shallow(<FixedGridColumn verticalAlign="middle">grid content</FixedGridColumn>);
+    });
+
+    it('has the vertical align inner div', () => {
+      expect(component.find('.y-fixedGridColumn--inner__middle').length).toBe(1);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });
