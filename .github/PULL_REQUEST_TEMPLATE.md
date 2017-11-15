@@ -1,6 +1,4 @@
-# *Pull request subject*
-
-*Describe the change you are making.*
+*Describe the change you are making*
 
 ## Pull request checklist
 
