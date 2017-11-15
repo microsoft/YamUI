@@ -17,7 +17,7 @@ export interface FixedGridColumnProps extends NestableBaseComponentProps {
   width?: number;
 
   /**
-   * The vertical alignment of the column's content
+   * The vertical alignment of the column's content.
    * @default 'top'
   */
   verticalAlign?: 'top' | 'middle' | 'bottom';
