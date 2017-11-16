@@ -13,7 +13,7 @@ describe('<Heading />', () => {
     });
 
     it('renders its given content', () => {
-      expect(component.text()).toEqual('test content');
+      expect(component.render().text()).toEqual('test content');
     });
 
     it('renders the correct tag', () => {
@@ -22,10 +22,6 @@ describe('<Heading />', () => {
 
     it('contains its base className', () => {
       expect(component.hasClass('y-heading')).toBe(true);
-    });
-
-    it('contains the correct textSize utility className', () => {
-      expect(component.hasClass('y-textSize-xxLarge')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -44,10 +40,6 @@ describe('<Heading />', () => {
 
     it('renders the correct size className', () => {
       expect(component.hasClass('y-heading__size-3')).toBe(true);
-    });
-
-    it('renders the correct textSize utility className', () => {
-      expect(component.hasClass('y-textSize-large')).toBe(true);
     });
 
     it('has its base className', () => {
@@ -70,10 +62,6 @@ describe('<Heading />', () => {
 
     it('renders the size "none" className', () => {
       expect(component.hasClass('y-heading__size-none')).toBe(true);
-    });
-
-    it('does not render a fontSize utility class', () => {
-      expect(component.prop('className')).not.toContain('y-textSize-');
     });
 
     it('matches its snapshot', () => {

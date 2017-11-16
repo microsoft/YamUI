@@ -2,25 +2,40 @@
 
 exports[`<Heading /> with a level matches its snapshot 1`] = `
 <h1
-  className="y-heading y-textSize-xxLarge"
+  className="y-heading"
 >
-  test content
+  <Block
+    bottomSpacing="small"
+    textSize="xxLarge"
+  >
+    test content
+  </Block>
 </h1>
 `;
 
 exports[`<Heading /> with a size matches its snapshot 1`] = `
 <h2
-  className="y-heading y-heading__size-3 y-textSize-large"
+  className="y-heading y-heading__size-3"
 >
-  test content
+  <Block
+    bottomSpacing="medium"
+    textSize="large"
+  >
+    test content
+  </Block>
 </h2>
 `;
 
 exports[`<Heading /> with additional className matches its snapshot 1`] = `
 <h4
-  className="y-heading TEST_CLASSNAME y-textSize-large"
+  className="y-heading TEST_CLASSNAME"
 >
-  test content
+  <Block
+    bottomSpacing="medium"
+    textSize="large"
+  >
+    test content
+  </Block>
 </h4>
 `;
 

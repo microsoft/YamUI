@@ -2,17 +2,36 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import Block, { TextSize, GutterSize } from '../Block';
 import { HeadingLevel, HeadingSize } from './enums';
 import './Heading.css';
 
 
-const textSizes = {
-  1: 'y-textSize-xxLarge',
-  2: 'y-textSize-xLarge',
-  3: 'y-textSize-large',
-  4: 'y-textSize-large',
-  5: 'y-textSize-medium',
-  6: 'y-textSize-mediumSub',
+const blockPropsMap = {
+  1: {
+    textSize: TextSize.XXLARGE,
+    bottomSpacing: GutterSize.SMALL,
+  },
+  2: {
+    textSize: TextSize.XLARGE,
+    bottomSpacing: GutterSize.SMALL,
+  },
+  3: {
+    textSize: TextSize.LARGE,
+    bottomSpacing: GutterSize.MEDIUM,
+  },
+  4: {
+    textSize: TextSize.LARGE,
+    bottomSpacing: GutterSize.MEDIUM,
+  },
+  5: {
+    textSize: TextSize.MEDIUM,
+    bottomSpacing: GutterSize.MEDIUM,
+  },
+  6: {
+    textSize: TextSize.MEDIUM_SUB,
+    bottomSpacing: GutterSize.SMALL,
+  },
 };
 
 export { HeadingLevel, HeadingSize };
@@ -36,26 +55,23 @@ export interface HeadingProps extends NestableBaseComponentProps {
  */
 export default class Heading extends React.PureComponent<HeadingProps, {}> {
   render() {
-    const { children, level } = this.props;
-    const TagName = `h${level}`;
+    const TagName = `h${this.props.level}`;
 
-    return <TagName className={this.getClasses()}>{children}</TagName>;
+    return <TagName className={this.getClasses()}>{this.getSizedContent()}</TagName>;
   }
 
-  // Add corresponding utility textSize class so nested Icons will scale
-  private getTextClass() {
-    const { level, size } = this.props;
+  private getSizedContent() {
+    const { children, level, size } = this.props;
     if (size === 'none') {
-      return '';
+      return children;
     }
 
-    const textSize = size || level;
-    return textSizes[textSize];
+    const visualSize = size || level;
+    return <Block {...blockPropsMap[visualSize]}>{children}</Block>;
   }
 
   private getClasses() {
     const { className, size } = this.props;
-    const textClass = this.getTextClass();
 
     const classes = ['y-heading'];
     if (size) {
@@ -63,9 +79,6 @@ export default class Heading extends React.PureComponent<HeadingProps, {}> {
     }
     if (className) {
       classes.push(className);
-    }
-    if (textClass) {
-      classes.push(textClass);
     }
 
     return classes.join(' ');
