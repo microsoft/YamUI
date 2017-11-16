@@ -43,6 +43,7 @@ exports[`<Icon /> with passed size value matches its snapshot 1`] = `
   style={
     Object {
       "height": "32px",
+      "verticalAlign": "0",
       "width": "32px",
     }
   }
