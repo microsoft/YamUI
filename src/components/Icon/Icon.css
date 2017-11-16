@@ -1,17 +1,15 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 .y-icon {
   display: inline;
-
-  /* Size and position - defaults for medium and mediumSub text sizes */
+  position: relative;
+  top: 0.2rem;
   height: 1.4rem;
   width: 1.4rem;
   vertical-align: 0;
+  fill: currentColor;
 
   /* IE/Edge do not bubble click events up from SVG elements, so allow clicks to pass through */
   pointer-events: none;
-  position: relative;
-  top: 2px;
-  fill: currentColor;
 }
 
 .y-icon__isBlock {
@@ -36,11 +34,7 @@
   height: 1.6rem;
   width: 1.6rem;
 }
-.y-textSize-medium .y-icon {
-  height: 1.6rem;
-  width: 1.6rem;
-  vertical-align: -0.1rem;
-}
+.y-textSize-medium .y-icon,
 .y-textSize-mediumSub .y-icon {
   height: 1.6rem;
   width: 1.6rem;
