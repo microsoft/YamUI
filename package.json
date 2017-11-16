@@ -1,5 +1,6 @@
 {
   "name": "yamui",
+  "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
   "version": "1.0.0",
   "style": "dist/yamui-base.css",
