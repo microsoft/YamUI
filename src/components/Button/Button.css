@@ -4,7 +4,6 @@
 
 .y-button {
   text-align: center;
-  vertical-align: bottom;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -24,8 +23,8 @@
 
 .y-button__size-regular {
   font-size: $fontSize__mediumSub;
-  line-height: $lineHeight__mediumSub;
-  padding: 7px 15px;
+  line-height: 3.4rem;
+  padding: 0 1.5rem;
 }
 
 .y-button__fullWidth {
@@ -35,8 +34,8 @@
 
 .y-button__size-small {
   font-size: $fontSize__small;
-  line-height: $lineHeight__small;
-  padding: 4px 9px 6px;
+  line-height: 2.6rem;
+  padding: 0 .9rem;
 }
 
 .y-button__color-primary,

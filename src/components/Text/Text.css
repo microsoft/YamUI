@@ -3,11 +3,7 @@
 @import "src/css/variables/fonts.css";
 
 .y-text {
-  /**
-    * Inline-block allows line-height to be smaller than the nearest block-level
-    * element's line-height. Might also need to support textSize on <Block> component.
-    */
-  display: inline-block;
+  display: inline;
 }
 
 .y-text__size-xxLarge {
