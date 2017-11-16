@@ -1,0 +1,17 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+.y-nav-list-item-notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(0);
+}
+
+.y-nav-list-item-notification__avatars {
+  position: relative;
+}
+
+.y-nav-list-item-notification__badge {
+  z-index: 1;
+}

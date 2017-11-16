@@ -1,0 +1,41 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/colors.css';
+
+.y-nav-list-item-badge {
+  display: inline-block;
+  position: relative;
+  background-color: $color__river;
+  color: $color__white;
+}
+
+.y-nav-list-item-badge::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-color: transparent;
+  border-right-color: $color__river;
+  border-width: 3px;
+  margin-top: -3px;
+}
+
+.y-nav-list-item-badge__container {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.y-nav-list-item-badge__values {
+  position: absolute;
+  bottom: 0;
+}
+
+.y-nav-list-item-badge__value {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+}
