@@ -24,6 +24,10 @@ describe('<Heading />', () => {
       expect(component.hasClass('y-heading')).toBe(true);
     });
 
+    it('contains the correct textSize utility className', () => {
+      expect(component.hasClass('y-textSize-xxLarge')).toBe(true);
+    });
+
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -34,16 +38,42 @@ describe('<Heading />', () => {
       component = shallow(<Heading level="2" size="3">test content</Heading>);
     });
 
+    it('renders the correct tag level', () => {
+      expect(component.find('h2').length).toBe(1);
+    });
+
     it('renders the correct size className', () => {
       expect(component.hasClass('y-heading__size-3')).toBe(true);
     });
 
-    it('still has its base className', () => {
+    it('renders the correct textSize utility className', () => {
+      expect(component.hasClass('y-textSize-large')).toBe(true);
+    });
+
+    it('has its base className', () => {
       expect(component.hasClass('y-heading')).toBe(true);
     });
 
-    it('still renders the correct tag level', () => {
-      expect(component.find('h2').length).toBe(1);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with size "none"', () => {
+    beforeEach(() => {
+      component = shallow(<Heading level="5" size="none">test content</Heading>);
+    });
+
+    it('renders the correct tag level', () => {
+      expect(component.find('h5').length).toBe(1);
+    });
+
+    it('renders the size "none" className', () => {
+      expect(component.hasClass('y-heading__size-none')).toBe(true);
+    });
+
+    it('does not render a fontSize utility class', () => {
+      expect(component.prop('className')).not.toContain('y-textSize-');
     });
 
     it('matches its snapshot', () => {
