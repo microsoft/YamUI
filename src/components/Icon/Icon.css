@@ -39,14 +39,17 @@
 .y-textSize-medium .y-icon {
   height: 1.6rem;
   width: 1.6rem;
+  vertical-align: -0.1rem;
 }
 .y-textSize-mediumSub .y-icon {
   height: 1.6rem;
   width: 1.6rem;
+  vertical-align: -0.1rem;
 }
 .y-textSize-small .y-icon {
   height: 1.4rem;
   width: 1.4rem;
+  vertical-align: -0.1rem;
 }
 .y-textSize-xSmall .y-icon {
   height: 1.2em;
