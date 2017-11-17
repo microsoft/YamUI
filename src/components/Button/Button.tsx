@@ -86,6 +86,7 @@ export interface RegularButtonProps extends BaseButtonProps {
 
   /**
    * Status of this button.
+   * @default ButtonStatus.ENABLED
    */
   status?: ButtonStatus;
 
