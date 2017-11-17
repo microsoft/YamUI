@@ -6,19 +6,19 @@ width.
 
 ### Examples
 
-Zero Percent:
+zero percent:
 
 ```js { "props": { "data-example": "zero percent" } }
 <ProgressIndicator percentComplete={0} ariaValueText="Zero percent" />
 ```
 
-Thirty Percent:
+thirty percent:
 
 ```js { "props": { "data-example": "thirty percent" } }
 <ProgressIndicator percentComplete={0.3} ariaValueText="Thirty percent" />
 ```
 
-One Hundred Percent:
+one hundred percent:
 
 ```js { "props": { "data-example": "one hundred percent" } }
 <ProgressIndicator percentComplete={1} ariaValueText="One hundred percent" />
