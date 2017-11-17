@@ -20,31 +20,31 @@
 .y-textSize-xxLarge .y-icon {
   height: 2.4rem;
   width: 2.4rem;
-  vertical-align: -0.2rem;
+  vertical-align: 0;
 }
 .y-textSize-xLarge .y-icon {
-  height: 2.4rem;
-  width: 2.4rem;
-  vertical-align: -0.2rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  vertical-align: 0;
 }
 .y-textSize-large .y-icon {
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 1.5rem;
+  width: 1.5rem;
   vertical-align: 0;
 }
 .y-textSize-medium .y-icon,
 .y-textSize-mediumSub .y-icon {
-  height: 1.6rem;
-  width: 1.6rem;
-  vertical-align: -0.1rem;
-}
-.y-textSize-small .y-icon {
   height: 1.4rem;
   width: 1.4rem;
-  vertical-align: -0.1rem;
+  vertical-align: 0;
+}
+.y-textSize-small .y-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  vertical-align: 0;
 }
 .y-textSize-xSmall .y-icon {
-  height: 1.2em;
-  width: 1.2rem;
+  height: 1em;
+  width: 1rem;
   vertical-align: 0;
 }
