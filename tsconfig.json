@@ -13,5 +13,8 @@
     "experimentalDecorators": true,
     "rootDir": "./src",
     "outDir": "./dist"
-  }
+  },
+  "exclude": [
+    "./config"
+  ]
 }

@@ -16,6 +16,7 @@ RUN mkdir -p $APP_ROOT
 WORKDIR $APP_ROOT
 
 # Install dependencies before copying the app for caching purposes
+COPY ./config/yo/generator-component/package.json $APP_ROOT/config/yo/generator-component/package.json
 COPY ./package.json $APP_ROOT/package.json
 COPY ./package-lock.json $APP_ROOT/package-lock.json
 RUN npm install --unsafe-perm
