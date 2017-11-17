@@ -99,6 +99,16 @@ const { GutterSize } = require('.');
 </div>
 ```
 
+With ellipsis:
+
+```js { "props": { "data-example": "with ellipsis" } }
+<div>
+  <Block ellipsis={true}>
+    This example has <strong>ellipsis: true</strong>. Its text content will be limited to a single line, and any additional content will be hidden while displaying an ellipsis character at the end of the line.
+  </Block>
+</div>
+```
+
 Text sizes:
 
 ```js { "props": { "data-example": "text sizes" } }

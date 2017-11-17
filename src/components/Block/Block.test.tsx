@@ -90,6 +90,20 @@ describe('<Block />', () => {
     });
   });
 
+  describe('with ellipsis', () => {
+    beforeEach(() => {
+      component = shallow(<Block ellipsis={true}>block content</Block>);
+    });
+
+    it('inner element contains the ellipsis className', () => {
+      expect(component.find('.y-block--inner').hasClass('y-ellipsis')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with spacing', () => {
     beforeEach(() => {
       component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);

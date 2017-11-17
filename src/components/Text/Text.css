@@ -19,3 +19,11 @@
 .y-text__color-white {
   color: $textColor__white;
 }
+
+.y-text__bold {
+  font-weight: $fontWeight__bold;
+}
+
+.y-text__uppercase {
+  text-transform: uppercase;
+}
