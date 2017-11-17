@@ -4,7 +4,7 @@
   border-radius: 1px;
 }
 
-.y-progress-indicator .ms-ProgressIndicator-progressBar {
+.y-progress-indicator__incomplete .ms-ProgressIndicator-progressBar {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }

@@ -1,30 +1,44 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import {
-  ProgressIndicator as OfficeFabricProgressIndicator,
-} from 'office-ui-fabric-react/lib/ProgressIndicator';
 import ProgressIndicator, { ProgressIndicatorProps } from '.';
 
 describe('<ProgressIndicator />', () => {
   let component: ShallowWrapper<ProgressIndicatorProps, {}>;
+  const percentComplete = 0.5;
 
   describe('when rendered', () => {
     beforeEach(() => {
-      component = shallow(<ProgressIndicator ariaValueText="50% complete" percentComplete={50} />);
+      component = shallow(
+        <ProgressIndicator ariaValueText="50% complete" percentComplete={percentComplete} />,
+      );
     });
 
-    it('renders <OfficeFabricProgressIndicator />', () => {
-      expect(component.find(OfficeFabricProgressIndicator).length).toEqual(1);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with additional className', () => {
+    const additionalClassname = 'additionalClassname';
+    const baseClassname = 'y-progress-indicator';
+
+    beforeEach(() => {
+      component = shallow(
+        <ProgressIndicator
+          ariaValueText="50% complete" 
+          percentComplete={percentComplete} 
+          className={additionalClassname} 
+        />,
+      );
     });
 
-    it('passes its percentComplete prop to <OfficeFabricProgressIndicator />', () => {
-      expect(component.find(OfficeFabricProgressIndicator).prop('percentComplete')).toEqual(50);
+    it('includes that className', () => {
+      expect(component.hasClass(additionalClassname)).toBe(true);
     });
 
-    it('passes a translated ariaTextValue to <OfficeFabricProgressIndicator />', () => {
-      expect(component.find(OfficeFabricProgressIndicator).prop('ariaValueText')).
-        toEqual('translated equivalent');
+    it('still includes its base className', () => {
+      expect(component.hasClass(baseClassname)).toBe(true);
     });
 
     it('matches its snapshot', () => {
