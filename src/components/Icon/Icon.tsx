@@ -38,7 +38,6 @@ interface IconStyles {
   height?: string;
   width?: string;
   color?: string;
-  verticalAlign?: string;
 }
 
 /**
@@ -81,7 +80,6 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
       const length = size + 'px';
       styles.height = length;
       styles.width = length;
-      styles.verticalAlign = '0';
     }
     if (color) {
       styles.color = color;
