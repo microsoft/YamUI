@@ -34,6 +34,11 @@ export interface BlockProps extends NestableBaseComponentProps {
    * Text size (`font-size` and `line-height`) within this block.
    */
   textSize?: TextSize;
+
+  /**
+   * Limits text content to a single line, hidding additional text with an ellipsis.
+   */
+  ellipsis?: boolean;
 }
 
 interface BlockStyles {
@@ -79,9 +84,12 @@ export default class Block extends React.PureComponent<BlockProps, {}> {
   }
 
   private getInnerClasses() {
-    const { padding } = this.props;
+    const { ellipsis, padding } = this.props;
 
-    const classes: string[] = ['y-block--inner'];
+    const classes = ['y-block--inner'];
+    if (ellipsis) {
+      classes.push('y-ellipsis');
+    }
     if (padding) {
       classes.push(`y-block--inner__padding-${padding}`);
     }

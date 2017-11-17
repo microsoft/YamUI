@@ -30,10 +30,16 @@
 .y-fixedGridColumn {
   flex-grow: 1;
   flex-shrink: 1;
+
+  /* Flexible (non-fixed) flex children must have a min-width to allow them to shrink narrower than the
+     possible width of their text content. This is required for ellipsis to work within FixedGridColumn.
+     https://css-tricks.com/flexbox-truncated-text/ */
+  min-width: 0;
 }
 /* Fixed columns do not grow, only shrink to fit their content */
 .y-fixedGridColumn__isFixed {
   flex-grow: 0;
+  min-width: auto;
 }
 /* Fixed columns with a specified width also do not shrink, just remain their fixed pixel width */
 .y-fixedGridColumn__isFixed.y-fixedGridColumn__hasWidth {
