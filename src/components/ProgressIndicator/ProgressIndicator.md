@@ -9,8 +9,20 @@ pass a translated string as `ProgressIndicator` will not be able to do it for yo
 
 ### Examples
 
-Basic:
+Zero Percent:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-example": "zero percent" } }
+<ProgressIndicator percentComplete={0} ariaValueText="Zero percent" />
+```
+
+Thirty Percent:
+
+```js { "props": { "data-example": "thirty percent" } }
 <ProgressIndicator percentComplete={0.3} ariaValueText="Thirty percent" />
+```
+
+One Hundred Percent:
+
+```js { "props": { "data-example": "one hundred percent" } }
+<ProgressIndicator percentComplete={1} ariaValueText="One hundred percent" />
 ```
