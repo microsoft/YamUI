@@ -1,4 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
 .y-progress-indicator .ms-ProgressIndicator-progressTrack,
 .y-progress-indicator .ms-ProgressIndicator-progressBar {
   height: 4px;
@@ -8,4 +10,12 @@
 .y-progress-indicator__incomplete .ms-ProgressIndicator-progressBar {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.ms-ProgressIndicator-progressTrack {
+  background-color: $color__indieRock;  
+}
+
+.ms-ProgressIndicator-progressBar {
+  background-color: $color__river;
 }
