@@ -3,9 +3,10 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Icon, { IconSize, IconProps, IconName } from '../Icon';
+import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from './enums';
+import Icon, { IconName } from '../Icon';
 import './Button.css';
 
 export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize };
@@ -85,6 +86,7 @@ export interface RegularButtonProps extends BaseButtonProps {
 
   /**
    * Status of this button.
+   * @default ButtonStatus.ENABLED
    */
   status?: ButtonStatus;
 
@@ -138,6 +140,7 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     color: ButtonColor.SECONDARY,
     iconPosition: ButtonIconPosition.LEFT,
     size: ButtonSize.REGULAR,
+    status: ButtonStatus.ENABLED,
   };
 
   render() {
@@ -146,7 +149,6 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
     const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
-    const isLoading = status === ButtonStatus.LOADING;
 
     return (
       <BaseButton
@@ -161,33 +163,30 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
         onMouseLeave={onMouseLeave}
       >
         {this.getContents()}
-        {isLoading && this.getSpinner()}
+        {this.isLoading() && this.getSpinner()}
       </BaseButton>
     );
   }
 
   private getContents() {
-    const { text, icon, iconPosition } = this.props;
+    const { icon, iconPosition, size, text } = this.props;
 
-    const leftIcon = icon &&
-      iconPosition === ButtonIconPosition.LEFT && (
-        <span className="y-button--icon-wrapper-left">
-          <Icon {...this.getIconProps()} />
-        </span>
-      );
-    const rightIcon = icon &&
-      iconPosition === ButtonIconPosition.RIGHT && (
-        <span className="y-button--icon-wrapper-right">
-          <Icon {...this.getIconProps()} />
-        </span>
-      );
+    const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
+
+    const buttonIcon = icon && (
+      <span className={`y-button--icon-wrapper-${iconPosition}`}>
+        <Icon className="y-button--icon" icon={icon} />
+      </span>
+    );
+
+    const className = this.isLoading() ? 'y-button--content__hidden' : '';
 
     return (
-      <span className="y-button--contents">
-        {leftIcon}
+      <Block textSize={textSize} className={className}>
+        {iconPosition === 'left' && buttonIcon}
         {text}
-        {rightIcon}
-      </span>
+        {iconPosition === 'right' && buttonIcon}
+      </Block>
     );
   }
 
@@ -206,16 +205,6 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     );
   }
 
-  private getIconProps(): IconProps {
-    const { icon, size } = this.props;
-
-    return {
-      className: 'y-button--icon',
-      icon: icon as IconName,
-      size: size === ButtonSize.SMALL ? IconSize.XSMALL : IconSize.SMALL,
-    };
-  }
-
   private getClasses() {
     const { className, color, status, size, fullWidth } = this.props;
 
@@ -224,11 +213,8 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
       `y-button__color-${color}`,
       `y-button__size-${size}`,
     ];
-    if (status === ButtonStatus.DISABLED) {
-      classes.push(`y-button__state-disabled`);
-    }
-    if (status === ButtonStatus.LOADING) {
-      classes.push(`y-button__state-loading`);
+    if (status !== ButtonStatus.ENABLED) {
+      classes.push(`y-button__state-${status}`);
     }
     if (fullWidth) {
       classes.push('y-button__fullWidth');
@@ -238,5 +224,9 @@ export default class Button extends React.PureComponent<ButtonProps, {}> {
     }
 
     return classes.join(' ');
+  }
+
+  private isLoading() {
+    return this.props.status === ButtonStatus.LOADING;
   }
 }

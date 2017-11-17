@@ -2,34 +2,9 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
-.y-text {
-  /**
-    * Inline-block allows line-height to be smaller than the nearest block-level
-    * element's line-height. Might also need to support textSize on <Block> component.
-    */
-  display: inline-block;
-}
 
-.y-text__size-xxLarge {
-  @extend text__xxLarge;
-}
-.y-text__size-xLarge {
-  @extend text__xLarge;
-}
-.y-text__size-large {
-  @extend text__large;
-}
-.y-text__size-medium {
-  @extend text__medium;
-}
-.y-text__size-mediumSub {
-  @extend text__mediumSub;
-}
-.y-text__size-small {
-  @extend text__small;
-}
-.y-text__size-xSmall {
-  @extend text__xSmall;
+.y-text {
+  display: inline-block;
 }
 
 .y-text__color-primary {
@@ -43,4 +18,12 @@
 }
 .y-text__color-white {
   color: $textColor__white;
+}
+
+.y-text__bold {
+  font-weight: $fontWeight__bold;
+}
+
+.y-text__uppercase {
+  text-transform: uppercase;
 }

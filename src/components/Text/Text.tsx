@@ -8,8 +8,32 @@ import './Text.css';
 export { TextColor, TextSize };
 
 export interface TextProps extends NestableBaseComponentProps {
+  /**
+   * Text color
+   */
   color?: TextColor;
+
+  /**
+   * A preset size which determines a font-size + line-height combination
+   * supporting our vertical rhythm.
+   */
   size?: TextSize;
+
+  /**
+   * Sets a max-width on the Text content, hiding the overflow with an ellipsis character.
+   * You should generally use a px value, or 100%.
+   */
+  maxWidth?: string;
+
+  /**
+   * Sets font-weight: bold.
+   */
+  bold?: boolean;
+
+  /**
+   * Sets text to uppercase.
+   */
+  uppercase?: boolean;
 }
 
 /**
@@ -21,23 +45,37 @@ export default class Text extends React.PureComponent<TextProps, {}> {
   render() {
     const { children } = this.props;
 
-    return <span className={this.getClasses()}>{children}</span>;
+    return <span className={this.getClasses()} style={this.getStyles()}>{children}</span>;
   }
 
   private getClasses() {
-    const { className, color, size } = this.props;
+    const { bold, className, color, maxWidth, size, uppercase } = this.props;
 
-    const classes: string[] = ['y-text'];
-    if (size) {
-      classes.push(`y-text__size-${size}`);
+    const classes = ['y-text'];
+    if (bold) {
+      classes.push('y-text__bold');
     }
     if (color) {
       classes.push(`y-text__color-${color}`);
+    }
+    if (uppercase) {
+      classes.push('y-text__uppercase');
+    }
+    if (maxWidth) {
+      classes.push('y-ellipsis');
+    }
+    if (size) {
+      classes.push(`y-textSize-${size}`);
     }
     if (className) {
       classes.push(className);
     }
 
     return classes.join(' ');
+  }
+
+  private getStyles() {
+    const { maxWidth } = this.props;
+    return maxWidth ? { maxWidth } : {};
   }
 }

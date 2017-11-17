@@ -28,15 +28,15 @@ export interface IconProps extends BaseComponentProps {
   color?: string;
 
   /**
-   * Icon size, which also accounts for `font-size` and `line-height`.
-   * @default IconSize.MEDIUM
+   * Icon size, which also accounts for `font-size` and `line-height`. If not set, size will
+   * match the nearest <Block> or <Text> parent with textSize specified.
    */
   size?: IconSize;
 }
 
 interface IconStyles {
-  height: string;
-  width: string;
+  height?: string;
+  width?: string;
   color?: string;
 }
 
@@ -44,10 +44,6 @@ interface IconStyles {
  * An `Icon` renders an SVG icon.
  */
 export default class Icon extends React.PureComponent<IconProps, {}> {
-  static defaultProps = {
-    size: IconSize.MEDIUM,
-  };
-
   public render() {
     const { icon } = this.props;
     const CurrentIcon = icons[icon];
@@ -77,12 +73,14 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
 
   private getInlineStyles() {
     const { color, size } = this.props;
-    const length = size + 'px';
-    const styles: IconStyles = {
-      height: length,
-      width: length,
-    };
+    
+    const styles: IconStyles = {};
 
+    if (size) {
+      const length = size + 'px';
+      styles.height = length;
+      styles.width = length;
+    }
     if (color) {
       styles.color = color;
     }

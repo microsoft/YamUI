@@ -4,12 +4,7 @@ exports[`<Icon /> with additional className matches its snapshot 1`] = `
 <Attach
   className="y-icon TEST_CLASSNAME"
   data-icon="attach"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  style={Object {}}
 />
 `;
 
@@ -17,12 +12,7 @@ exports[`<Icon /> with block matches its snapshot 1`] = `
 <Attach
   className="y-icon y-icon__isBlock"
   data-icon="attach"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  style={Object {}}
 />
 `;
 
@@ -33,8 +23,6 @@ exports[`<Icon /> with color matches its snapshot 1`] = `
   style={
     Object {
       "color": "blue",
-      "height": "16px",
-      "width": "16px",
     }
   }
 />
@@ -44,12 +32,7 @@ exports[`<Icon /> with minimal options matches its snapshot 1`] = `
 <Attach
   className="y-icon"
   data-icon="attach"
-  style={
-    Object {
-      "height": "16px",
-      "width": "16px",
-    }
-  }
+  style={Object {}}
 />
 `;
 

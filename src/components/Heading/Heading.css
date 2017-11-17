@@ -1,0 +1,23 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/fonts.css";
+
+.y-heading {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+}
+.y-heading__size-1,
+.y-heading__size-2,
+.y-heading__size-3,
+.y-heading__size-5,
+.y-heading__size-6 {
+  font-weight: $fontWeight__bold;
+}
+.y-heading__size-4 {
+  font-weight: $fontWeight__normal;
+}
+
+.y-heading__size-none {
+  margin-bottom: 0;
+  font-weight: inherit;
+}

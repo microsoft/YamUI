@@ -49,11 +49,57 @@ describe('<Text />', () => {
     });
 
     it('renders the correct size className', () => {
-      expect(component.hasClass('y-text__size-xLarge')).toBe(true);
+      expect(component.hasClass('y-textSize-xLarge')).toBe(true);
     });
 
     it('still has its base className', () => {
       expect(component.hasClass('y-text')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with bold', () => {
+    beforeEach(() => {
+      component = shallow(<Text bold={true}>test content</Text>);
+    });
+
+    it('renders the bold className', () => {
+      expect(component.hasClass('y-text__bold')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with uppercase', () => {
+    beforeEach(() => {
+      component = shallow(<Text uppercase={true}>test content</Text>);
+    });
+
+    it('renders the uppercase className', () => {
+      expect(component.hasClass('y-text__uppercase')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with maxWidth', () => {
+    beforeEach(() => {
+      component = shallow(<Text maxWidth="500px">test content</Text>);
+    });
+
+    it('renders the ellipsis className', () => {
+      expect(component.hasClass('y-ellipsis')).toBe(true);
+    });
+
+    it('has the given max-width in its style attribute', () => {
+      expect(component.getNode().props.style.maxWidth).toBe('500px');
     });
 
     it('matches its snapshot', () => {

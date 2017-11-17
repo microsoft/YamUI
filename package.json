@@ -1,5 +1,6 @@
 {
   "name": "yamui",
+  "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
   "version": "1.0.0",
   "style": "dist/yamui-base.css",
@@ -27,6 +28,7 @@
     "eslint-plugin-jsx-a11y": "=5.1.1",
     "eslint-plugin-react": "=7.4.0",
     "file-loader": "=0.11.1",
+    "generator-component": "./config/yo/generator-component",
     "identity-obj-proxy": "=3.0.0",
     "jest": "=20.0.4",
     "jest-serializer-enzyme": "=1.0.0",
@@ -57,7 +59,8 @@
     "tslint-config-airbnb": "=5.2.1",
     "tslint-react": "=3.2.0",
     "typescript": "=2.5.2",
-    "webpack": "=3.8.1"
+    "webpack": "=3.8.1",
+    "yo": "=2.0.0"
   },
   "peerDependencies": {
     "react": "^15.0.0",
@@ -92,6 +95,7 @@
     "svg": "run-s clean:icons svg:*",
     "docs:build": "styleguidist build --config config/styleguide/config.js",
     "docs": "run-s clean:docs docs:*",
+    "create:component": "yo component",
     "prepublishOnly": "npm run build"
   }
 }
