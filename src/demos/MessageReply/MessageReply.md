@@ -2,7 +2,6 @@
 const { AvatarSize } = require('../../components/Avatar');
 const { FixedGridRow, FixedGridColumn } = require('../../components/FixedGrid');
 const { GutterSize } = require('../../components/Block');
-const { IconSize } = require('../../components/Icon');
 const { TextColor, TextSize } = require('../../components/Text');
 
 
@@ -31,13 +30,13 @@ const user2 = {
     <Block textSize={TextSize.SMALL} className="actions">
       <HorizontalList>
         <HorizontalListItem>
-          <Clickable><Icon icon="like" size={IconSize.XSMALL} /> Like</Clickable>
+          <Clickable><Icon icon="like" /> Like</Clickable>
         </HorizontalListItem>
         <HorizontalListItem>
-          <Clickable><Icon icon="edit" size={IconSize.XSMALL} /> Reply</Clickable>
+          <Clickable><Icon icon="edit" /> Reply</Clickable>
         </HorizontalListItem>
         <HorizontalListItem>
-          <Clickable><Icon icon="share" size={IconSize.XSMALL} /> Share</Clickable>
+          <Clickable><Icon icon="share" /> Share</Clickable>
         </HorizontalListItem>
         <HorizontalListItem>
           <Clickable>...</Clickable>
