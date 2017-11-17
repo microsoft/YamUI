@@ -99,6 +99,49 @@ const { GutterSize } = require('.');
 </div>
 ```
 
+With ellipsis:
+
+```js { "props": { "data-example": "with ellipsis" } }
+<div>
+  <Block ellipsis={true}>
+    This example has <strong>ellipsis: true</strong>. Its text content will be limited to a single line, and any additional content will be hidden while displaying an ellipsis character at the end of the line.
+  </Block>
+</div>
+```
+
+Text sizes:
+
+```js { "props": { "data-example": "text sizes" } }
+const { GutterSize, TextSize } = require('.');
+
+<div>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    This is text without a size specified. It will inherit size and line-height via CSS from its parent.
+  </Block>
+  <Block textSize={TextSize.XXLARGE} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: XXLARGE</strong>.
+  </Block>
+  <Block textSize={TextSize.XLARGE} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: XLARGE</strong>.
+  </Block>
+  <Block textSize={TextSize.LARGE} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: LARGE</strong>.
+  </Block>
+  <Block textSize={TextSize.MEDIUM} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: MEDIUM</strong>.
+  </Block>
+  <Block textSize={TextSize.MEDIUM_SUB} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: MEDIUM_SUB</strong>.
+  </Block>
+  <Block textSize={TextSize.SMALL} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>size: SMALL</strong>.
+  </Block>
+  <Block textSize={TextSize.XSMALL}>
+    This example has <strong>size: XSMALL</strong>.
+  </Block>
+</div>
+```
+
 With positive push:
 
 ```js { "props": { "data-example": "with positive push" } }

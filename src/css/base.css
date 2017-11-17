@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
-@import "src/css/variables/gutters.css";
 @import "src/css/variables/links.css";
 
 
@@ -20,34 +19,22 @@ body {
 
 /* Headings */
 h1 {
-  @extend text__xxLarge;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
+  @extend heading__1;
 }
 h2 {
-  @extend text__xLarge;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
+  @extend heading__2;
 }
 h3 {
-  @extend text__large;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__medium;
+  @extend heading__3;
 }
 h4 {
-  @extend text__large;
-  font-weight: $fontWeight__normal;
-  margin-bottom: $gutterWidth__medium;
+  @extend heading__4;
 }
 h5 {
-  @extend text__medium;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__medium;
+  @extend heading__5;
 }
 h6 {
-  @extend text__mediumSub;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
+  @extend heading__6;
 }
 
 /* Text elements */
