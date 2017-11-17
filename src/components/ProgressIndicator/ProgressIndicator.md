@@ -12,5 +12,5 @@ pass a translated string as `ProgressIndicator` will not be able to do it for yo
 Basic:
 
 ```js { "props": { "data-example": "basic" } }
-<ProgressIndicator percentComplete={0.5} ariaValueText="Twenty percent" />
+<ProgressIndicator percentComplete={0.3} ariaValueText="Thirty percent" />
 ```

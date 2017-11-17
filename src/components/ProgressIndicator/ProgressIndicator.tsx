@@ -3,6 +3,7 @@ import * as React from 'react';
 import { 
   ProgressIndicator as OfficeFabricProgressIndicator, 
 } from 'office-ui-fabric-react/lib/ProgressIndicator';
+import './ProgressIndicator.css';
 
 export interface ProgressIndicatorProps {
   /**
@@ -26,10 +27,12 @@ export default class ProgressIndicator extends React.PureComponent<ProgressIndic
   render() {
     const { ariaValueText, percentComplete } = this.props;
     return (
-      <OfficeFabricProgressIndicator
-        ariaValueText={ariaValueText}
-        percentComplete={percentComplete}
-      />
+      <div className="y-progress-indicator">
+        <OfficeFabricProgressIndicator
+          ariaValueText={ariaValueText}
+          percentComplete={percentComplete}
+        />
+      </div>
     );
   }
 }

@@ -1,0 +1,10 @@
+.y-progress-indicator .ms-ProgressIndicator-progressTrack,
+.y-progress-indicator .ms-ProgressIndicator-progressBar {
+  height: 4px;
+  border-radius: 1px;
+}
+
+.y-progress-indicator .ms-ProgressIndicator-progressBar {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
