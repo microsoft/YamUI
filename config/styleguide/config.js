@@ -3,6 +3,7 @@ const path = require('path');
 const docgen = require('react-docgen');
 const docgenParser = require('react-docgen-typescript');
 const webpackConfig = require('./webpack.config.js');
+const pkg = require('../../package.json');
 
 const getComponentPathLine = (componentPath) => {
   const ext = path.extname(componentPath);
@@ -14,7 +15,7 @@ const getComponentPathLine = (componentPath) => {
 const root = path.resolve(__dirname, '../../');
 
 module.exports = {
-  title: 'YamUI',
+  title: `${pkg.productName} v${pkg.version}`,
   sections: [
     {
       name: 'Components',
