@@ -26,6 +26,19 @@ exports[`<Block /> with default options matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with ellipsis matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner y-ellipsis"
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with negative push matches its snapshot 1`] = `
 <div
   className="y-block"
@@ -101,7 +114,7 @@ exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 
 exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
 <div
-  className="y-block y-block__textSize-xLarge"
+  className="y-block y-textSize-xLarge"
   style={Object {}}
 >
   <div

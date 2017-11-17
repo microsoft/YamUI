@@ -21,6 +21,67 @@ Basic text:
 </div>
 ```
 
+Bold:
+
+```js { "props": { "data-example": "bold" } }
+<div>
+  <Text bold={true}>
+    This example has <strong>bold: true</strong>.
+  </Text>
+</div>
+```
+
+Uppercase:
+
+```js { "props": { "data-example": "uppercase" } }
+<div>
+  <Text uppercase={true}>
+    This example has <strong>uppercase: true</strong>.
+  </Text>
+</div>
+```
+
+Max width with ellipsis:
+
+```js { "props": { "data-example": "max width with ellipsis" } }
+<div>
+  <Text maxWidth={200}>
+    This has maxWidth: 200px and all extra text will be hidden.
+  </Text>
+  <Text maxWidth={300}>
+    This text has a maxWidth of 300px, all extra text will also be hidden.
+  </Text>
+</div>
+```
+
+Different text colors:
+
+```js { "props": { "data-example": "colors" } }
+const { TextColor } = require('.');
+
+<div>
+  <p>
+    <Text>
+      This is text without a color specified. It will inherit its color from its parent.
+    </Text>
+  </p>
+  <p>
+    <Text color={TextColor.PRIMARY}>This example has <strong>color: PRIMARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.SECONDARY}>This example has <strong>color: SECONDARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
+  </p>
+  <p style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
+    <Text color={TextColor.WHITE}>
+      This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
+    </Text>
+  </p>
+</div>
+```
+
 Different text sizes:
 
 ```js { "props": { "data-example": "sizes" } }
@@ -100,34 +161,6 @@ const { TextSize } = require('.');
   <p>
     <Text size={TextSize.XSMALL}>
       This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>.
-    </Text>
-  </p>
-</div>
-```
-
-Different text colors:
-
-```js { "props": { "data-example": "colors" } }
-const { TextColor } = require('.');
-
-<div>
-  <p>
-    <Text>
-      This is text without a color specified. It will inherit its color from its parent.
-    </Text>
-  </p>
-  <p>
-    <Text color={TextColor.PRIMARY}>This example has <strong>color: PRIMARY</strong>.</Text>
-  </p>
-  <p>
-    <Text color={TextColor.SECONDARY}>This example has <strong>color: SECONDARY</strong>.</Text>
-  </p>
-  <p>
-    <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
-  </p>
-  <p style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
-    <Text color={TextColor.WHITE}>
-      This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
     </Text>
   </p>
 </div>
