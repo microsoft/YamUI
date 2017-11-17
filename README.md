@@ -63,8 +63,8 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Building some components
 
-* Develop components in the `/src/components` directory.
-* Include a `<ComponentName>.md` file in your component's directory with usage examples. These examples are important because they document how components should be used and what options/configurations they accept. These examples will also be used in visual diff regression tests to ensure new changes are deliberate and approved before PRs are merged.
+* `npm run create:component` and provide the necessary information.
+* Tweak `<ComponentName>.md` file in your component's directory with usage examples. These examples are important because they document how components should be used and what options/configurations they accept. These examples will also be used in visual diff regression tests to ensure new changes are deliberate and approved before PRs are merged.
 * The dev server will pick up any changes you make to components, and automatically update the app in your browser using Hot Module Replacement.
 
 ### Writing unit tests
