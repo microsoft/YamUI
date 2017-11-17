@@ -66,7 +66,7 @@ export default class Block extends React.PureComponent<BlockProps, {}> {
       classes.push(`y-block__bottomSpacing-${bottomSpacing}`);
     }
     if (textSize) {
-      classes.push(`y-block__textSize-${textSize}`);
+      classes.push(`y-textSize-${textSize}`);
     }
     if (textAlign === 'center' || textAlign === 'right') {
       classes.push(`y-block__textAlign-${textAlign}`);

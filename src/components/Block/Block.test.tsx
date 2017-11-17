@@ -48,7 +48,7 @@ describe('<Block />', () => {
     });
 
     it('includes the xLarge className', () => {
-      expect(component.hasClass('y-block__textSize-xLarge')).toBe(true);
+      expect(component.hasClass('y-textSize-xLarge')).toBe(true);
     });
 
     it('still has its base className', () => {

@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { BaseButton } from 'office-ui-fabric-react/lib/Button';
-import Icon, { IconSize } from '../Icon';
 import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
+import Icon from '../Icon';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -124,10 +124,6 @@ describe('<Button />', () => {
       expect(component.find('.y-button--icon-wrapper-left').length).toBe(1);
     });
 
-    it('renders the correct icon size', () => {
-      expect(component.find(Icon).props().size).toEqual(IconSize.SMALL);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -195,10 +191,6 @@ describe('<Button />', () => {
     describe('with icon', () => {
       beforeEach(() => {
         component = shallow(<Button icon="plus" size={ButtonSize.SMALL} text={sampleText} />);
-      });
-
-      it('renders the correct icon size', () => {
-        expect(component.find(Icon).props().size).toEqual(IconSize.XSMALL);
       });
 
       it('matches its snapshot', () => {

@@ -45,28 +45,6 @@
   padding: $gutterWidth__xSmall;
 }
 
-.y-block__textSize-xxLarge {
-  @extend text__xxLarge;
-}
-.y-block__textSize-xLarge {
-  @extend text__xLarge;
-}
-.y-block__textSize-large {
-  @extend text__large;
-}
-.y-block__textSize-medium {
-  @extend text__medium;
-}
-.y-block__textSize-mediumSub {
-  @extend text__mediumSub;
-}
-.y-block__textSize-small {
-  @extend text__small;
-}
-.y-block__textSize-xSmall {
-  @extend text__xSmall;
-}
-
 .y-block__textAlign-right {
   text-align: right;
 }

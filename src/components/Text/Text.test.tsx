@@ -49,7 +49,7 @@ describe('<Text />', () => {
     });
 
     it('renders the correct size className', () => {
-      expect(component.hasClass('y-text__size-xLarge')).toBe(true);
+      expect(component.hasClass('y-textSize-xLarge')).toBe(true);
     });
 
     it('still has its base className', () => {
