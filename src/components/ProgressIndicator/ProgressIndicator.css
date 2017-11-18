@@ -12,10 +12,10 @@
   border-bottom-right-radius: 0;
 }
 
-.ms-ProgressIndicator-progressTrack {
+.y-progress-indicator .ms-ProgressIndicator-progressTrack {
   background-color: $color__indieRock;  
 }
 
-.ms-ProgressIndicator-progressBar {
+.y-progress-indicator .ms-ProgressIndicator-progressBar {
   background-color: $color__river;
 }
