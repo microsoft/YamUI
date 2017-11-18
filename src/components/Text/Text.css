@@ -27,3 +27,30 @@
 .y-text__uppercase {
   text-transform: uppercase;
 }
+
+.y-text__ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.y-text__ellipsis.y-textSize-xSmall {
+  vertical-align: -.4rem;
+}
+.y-text__ellipsis.y-textSize-small {
+  vertical-align: -.3rem;
+}
+.y-text__ellipsis.y-textSize-mediumSub {
+  vertical-align: -.5rem;
+}
+.y-text__ellipsis.y-textSize-medium {
+  vertical-align: -.4rem;
+}
+.y-text__ellipsis.y-textSize-large {
+  vertical-align: -.5rem;
+}
+.y-text__ellipsis.y-textSize-xLarge {
+  vertical-align: -.5rem;
+}
+.y-text__ellipsis.y-textSize-xxLarge {
+  vertical-align: -.4rem;
+}
