@@ -33,6 +33,10 @@ export default class NavListItem extends React.PureComponent<NavListItemProps, N
     };
   }
 
+  componentDidMount() {
+    this.updateEverything();
+  }
+
   componentDidUpdate(prevProps: NavListItemProps) {
     if (prevProps === this.props || this.isAnimating()) {
       return;
@@ -80,7 +84,7 @@ export default class NavListItem extends React.PureComponent<NavListItemProps, N
   private hasCountIncreased() {
     const { count } = this.props;
     const { previousCount } = this.state;
-    return previousCount != null && previousCount < count;
+    return previousCount && previousCount < count;
   }
 
   private isAnimating() {
