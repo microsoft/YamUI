@@ -50,6 +50,7 @@ export default class Slide extends React.PureComponent<SlideProps, {}> {
       },
       entered: {
         transition: `transform ${duration}ms ${showAfter}ms`,
+        transform: 'translateX(0%)',
       },
       exited: {
         transform: 'translateX(130%)',
