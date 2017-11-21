@@ -2,7 +2,6 @@
 @import 'src/css/variables/colors.css';
 
 .y-nav-list-item-badge {
-  display: inline-block;
   position: relative;
   background-color: $color__river;
   color: $color__white;
