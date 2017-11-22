@@ -4,6 +4,7 @@ import autobind from 'core-decorators/lib/autobind';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { Fade, SlideInLeft, NavListItemBadge, NavListItemAvatars } from './NavListItem';
 import './NavListItemNotification.css';
+import { NavListItemAvatarsProps } from './NavListItemAvatars';
 
 export interface NavListItemNotificationProps {
   avatars: string[];
@@ -16,6 +17,9 @@ export interface NavListItemNotificationState {
   previousCount?: number;
 }
 
+const maxBadgeCount = 20;
+const maxAvatars = 5;
+
 export default class NavListItemNotification extends React.PureComponent<
   NavListItemNotificationProps,
   NavListItemNotificationState
@@ -24,8 +28,8 @@ export default class NavListItemNotification extends React.PureComponent<
     super(props);
 
     this.state = {
-      avatars: props.avatars,
-      count: props.count,
+      avatars: this.getLimitedAvatars(props.avatars),
+      count: this.getLimitedBadgeCount(props.count),
     };
   }
 
@@ -35,8 +39,10 @@ export default class NavListItemNotification extends React.PureComponent<
     this.updateEverything();
   }
 
-  componentDidUpdate() {
-    if (this.isAnimating()) {
+  componentDidUpdate(prevProps: NavListItemAvatarsProps) {
+    // Check that props did not change to avoid infinitely updating state
+    const didPropsChange = this.props !== prevProps;
+    if (!didPropsChange || this.isAnimating()) {
       return;
     }
 
@@ -74,7 +80,7 @@ export default class NavListItemNotification extends React.PureComponent<
                 </FixedGridColumn>
                 <FixedGridColumn fixed={true}>
                   <div className="y-nav-list-item-notification__badge">
-                    <NavListItemBadge value={count} previousValue={previousCount} />
+                    <NavListItemBadge value={count} previousValue={previousCount || undefined} />
                   </div>
                 </FixedGridColumn>
               </FixedGridRow>
@@ -92,7 +98,7 @@ export default class NavListItemNotification extends React.PureComponent<
   private hasCountIncreased() {
     const { count } = this.props;
     const { previousCount } = this.state;
-    return previousCount !== undefined && previousCount < count;
+    return previousCount !== undefined && previousCount < this.getLimitedBadgeCount(count);
   }
 
   private isAnimating() {
@@ -100,20 +106,28 @@ export default class NavListItemNotification extends React.PureComponent<
     return previousCount !== undefined && count !== previousCount;
   }
 
+  private getLimitedAvatars(avatars: string[]) {
+    return avatars.slice(0, maxAvatars);
+  }
+
+  private getLimitedBadgeCount(count: number) {
+    return Math.min(count, maxBadgeCount);
+  }
+
   @autobind
   private updateAvatarsAndCount() {
     this.setState({
-      avatars: this.props.avatars,
-      count: this.props.count,
+      avatars: this.getLimitedAvatars(this.props.avatars),
+      count: this.getLimitedBadgeCount(this.props.count),
     });
   }
 
   @autobind
   private updateEverything() {
     this.setState({
-      avatars: this.props.avatars,
-      count: this.props.count,
-      previousCount: this.props.count,
+      avatars: this.getLimitedAvatars(this.props.avatars),
+      count: this.getLimitedBadgeCount(this.props.count),
+      previousCount: this.getLimitedBadgeCount(this.props.count),
     });
   }
 }
