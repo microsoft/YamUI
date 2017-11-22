@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
-import { Fade, Slide, NavListItemBadge, NavListItemAvatars } from './NavListItem';
+import { Fade, SlideInLeft, NavListItemBadge, NavListItemAvatars } from './NavListItem';
 import './NavListItemNotification.css';
 
 export interface NavListItemNotificationProps {
@@ -25,9 +25,9 @@ export default class NavListItemNotification extends React.PureComponent<
             <FixedGridRow>
               <FixedGridColumn>
                 <div className="y-nav-list-item-notification__avatars">
-                  <Slide showAfter={1000} duration={500} hideAfter={4000}>
+                  <SlideInLeft showAfter={1000} duration={500} hideAfter={4000} translateX="130">
                     <NavListItemAvatars avatars={avatars} />
-                  </Slide>
+                  </SlideInLeft>
                 </div>
               </FixedGridColumn>
               <FixedGridColumn fixed={true}>

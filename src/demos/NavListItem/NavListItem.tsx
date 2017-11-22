@@ -7,6 +7,7 @@ import NavListItemNotification from './NavListItemNotification';
 
 export { default as Fade } from './Fade';
 export { default as Slide } from './Slide';
+export { default as SlideInLeft } from './SlideInLeft';
 export { default as NavListItemAvatars } from './NavListItemAvatars';
 export { default as NavListItemBadge } from './NavListItemBadge';
 export { default as NavListItemNotification } from './NavListItemNotification';
@@ -84,12 +85,12 @@ export default class NavListItem extends React.PureComponent<NavListItemProps, N
   private hasCountIncreased() {
     const { count } = this.props;
     const { previousCount } = this.state;
-    return previousCount && previousCount < count;
+    return previousCount !== undefined && previousCount < count;
   }
 
   private isAnimating() {
     const { count, previousCount } = this.state;
-    return previousCount && count !== previousCount;
+    return previousCount !== undefined && count !== previousCount;
   }
 
   @autobind

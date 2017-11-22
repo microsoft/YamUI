@@ -65,6 +65,7 @@ Full item:
 
 ```js
 const avatars = [
+  'https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg',
   'https://s3.amazonaws.com/uifaces/faces/twitter/rem/128.jpg',
   'https://s3.amazonaws.com/uifaces/faces/twitter/abinav_t/128.jpg',
   'https://s3.amazonaws.com/uifaces/faces/twitter/ashleyford/128.jpg',
@@ -73,6 +74,6 @@ const avatars = [
 ];
 
 <div style={{ position: 'relative', width: '250px', overflow: 'hidden', backgroundColor: '#eee' }}>
-  <NavListItem group="Yammer Frontend Team" count={10} avatars={avatars} />
+  <NavListItem group="Yammer Frontend Team" count={0} avatars={avatars} />
 </div>
 ```

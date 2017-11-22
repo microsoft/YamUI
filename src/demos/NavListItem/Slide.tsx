@@ -23,6 +23,11 @@ export interface SlideProps {
    * Animation end callback handler.
    */
   onAnimationEnd?: () => void;
+
+  /**
+   * percentage to translateX. By default slides in Left.
+   */
+  translateX?: React.CSSPercentage;
 }
 
 const defaultStyles: React.CSSProperties = {
@@ -32,6 +37,10 @@ const defaultStyles: React.CSSProperties = {
 };
 
 export default class Slide extends React.PureComponent<SlideProps, {}> {
+  static defaultProps = {
+    translateX: '100',
+  };
+
   render() {
     return (
       <TimedTransition {...this.props} getStyle={this.getStyle}>
@@ -42,18 +51,18 @@ export default class Slide extends React.PureComponent<SlideProps, {}> {
 
   @autobind
   private getStyle(state: string) {
-    const { showAfter, duration } = this.props;
+    const { showAfter, duration, translateX } = this.props;
 
     const transitionStyles: TransitionStyles = {
       entering: {
-        transform: 'translateX(130%)',
+        transform: `translateX(${translateX}%)`,
       },
       entered: {
         transition: `transform ${duration}ms ${showAfter}ms`,
         transform: 'translateX(0%)',
       },
       exited: {
-        transform: 'translateX(130%)',
+        transform: `translateX(${translateX}%)`,
         transition: `transform ${duration}ms ${showAfter}ms`,
       },
     };
