@@ -26,6 +26,10 @@ export interface FadeProps {
 }
 
 export default class Fade extends React.PureComponent<FadeProps, {}> {
+  static defaultProps = {
+    showAfter: 0,
+  };
+
   render() {
     return (
       <TimedTransition {...this.props} getStyle={this.getStyle}>

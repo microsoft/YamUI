@@ -1,6 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import autobind from 'core-decorators/lib/autobind';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import Text, { TextSize } from '../../components/Text';
 import NavListItemNotification from './NavListItemNotification';
@@ -18,50 +17,9 @@ export interface NavListItemProps {
   count: number;
 }
 
-export interface NavListItemState {
-  avatars: string[];
-  count: number;
-  previousCount?: number;
-}
-
-export default class NavListItem extends React.PureComponent<NavListItemProps, NavListItemState> {
-  constructor(props: NavListItemProps) {
-    super(props);
-
-    this.state = {
-      avatars: props.avatars,
-      count: props.count,
-    };
-  }
-
-  componentDidMount() {
-    this.updateEverything();
-  }
-
-  componentDidUpdate(prevProps: NavListItemProps) {
-    if (prevProps === this.props || this.isAnimating()) {
-      return;
-    }
-
-    if (this.hasCountIncreased()) {
-      this.updateAvatarsAndCount();
-    } else {
-      this.updateEverything();
-    }
-  }
-
+export default class NavListItem extends React.PureComponent<NavListItemProps, {}> {
   render() {
-    const { group } = this.props;
-    const { avatars, count, previousCount } = this.state;
-
-    const notification = this.shouldShowNotification() && (
-      <NavListItemNotification
-        avatars={avatars}
-        count={count}
-        previousCount={previousCount}
-        onAnimationEnd={this.updateEverything}
-      />
-    );
+    const { group, avatars, count } = this.props;
 
     return (
       <div>
@@ -73,40 +31,8 @@ export default class NavListItem extends React.PureComponent<NavListItemProps, N
             <Text size={TextSize.XSMALL}>{count}</Text>
           </FixedGridColumn>
         </FixedGridRow>
-        {notification}
+        <NavListItemNotification avatars={avatars} count={count} />
       </div>
     );
-  }
-
-  private shouldShowNotification() {
-    return this.hasCountIncreased() || this.isAnimating();
-  }
-
-  private hasCountIncreased() {
-    const { count } = this.props;
-    const { previousCount } = this.state;
-    return previousCount !== undefined && previousCount < count;
-  }
-
-  private isAnimating() {
-    const { count, previousCount } = this.state;
-    return previousCount !== undefined && count !== previousCount;
-  }
-
-  @autobind
-  private updateAvatarsAndCount() {
-    this.setState({
-      avatars: this.props.avatars,
-      count: this.props.count,
-    });
-  }
-
-  @autobind
-  private updateEverything() {
-    this.setState({
-      avatars: this.props.avatars,
-      count: this.props.count,
-      previousCount: this.props.count,
-    });
   }
 }
