@@ -5,13 +5,32 @@ import ProgressIndicator, { ProgressIndicatorProps } from '.';
 
 describe('<ProgressIndicator />', () => {
   let component: ShallowWrapper<ProgressIndicatorProps, {}>;
-  const percentComplete = 0.5;
 
-  describe('when rendered', () => {
+  describe('when incomplete', () => {
     beforeEach(() => {
       component = shallow(
-        <ProgressIndicator ariaValueText="50% complete" percentComplete={percentComplete} />,
+        <ProgressIndicator ariaValueText="50% complete" percentComplete={0.5} />,
       );
+    });
+
+    it('includes the incomplete classname (for square progress bar corners)', () => {
+      expect(component.hasClass('y-progress-indicator__incomplete')).toBe(true);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when complete', () => {
+    beforeEach(() => {
+      component = shallow(
+        <ProgressIndicator ariaValueText="100% complete" percentComplete={1} />,
+      );
+    });
+
+    it('does not include the incomplete classname', () => {
+      expect(component.hasClass('y-progress-indicator__incomplete')).toBe(false);
     });
 
     it('matches its snapshot', () => {
@@ -20,25 +39,22 @@ describe('<ProgressIndicator />', () => {
   });
 
   describe('with additional className', () => {
-    const additionalClassname = 'additionalClassname';
-    const baseClassname = 'y-progress-indicator';
-
     beforeEach(() => {
       component = shallow(
         <ProgressIndicator
-          ariaValueText="50% complete" 
-          percentComplete={percentComplete} 
-          className={additionalClassname} 
+          ariaValueText="50% complete"
+          percentComplete={0.5}
+          className="TEST_CLASS"
         />,
       );
     });
 
     it('includes that className', () => {
-      expect(component.hasClass(additionalClassname)).toBe(true);
+      expect(component.hasClass('TEST_CLASS')).toBe(true);
     });
 
     it('still includes its base className', () => {
-      expect(component.hasClass(baseClassname)).toBe(true);
+      expect(component.hasClass('y-progress-indicator')).toBe(true);
     });
 
     it('matches its snapshot', () => {

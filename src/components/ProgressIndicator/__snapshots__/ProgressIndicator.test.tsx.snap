@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProgressIndicator /> when rendered matches its snapshot 1`] = `
+exports[`<ProgressIndicator /> when complete matches its snapshot 1`] = `
+<ProgressIndicator
+  ariaValueText="100% complete"
+  className="y-progress-indicator"
+  description=""
+  label=""
+  percentComplete={1}
+  width={180}
+/>
+`;
+
+exports[`<ProgressIndicator /> when incomplete matches its snapshot 1`] = `
 <ProgressIndicator
   ariaValueText="50% complete"
   className="y-progress-indicator y-progress-indicator__incomplete"
@@ -14,7 +25,7 @@ exports[`<ProgressIndicator /> when rendered matches its snapshot 1`] = `
 exports[`<ProgressIndicator /> with additional className matches its snapshot 1`] = `
 <ProgressIndicator
   ariaValueText="50% complete"
-  className="y-progress-indicator y-progress-indicator__incomplete additionalClassname"
+  className="y-progress-indicator y-progress-indicator__incomplete TEST_CLASS"
   description=""
   label=""
   percentComplete={0.5}
