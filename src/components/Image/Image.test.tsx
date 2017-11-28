@@ -37,6 +37,10 @@ describe('<Image />', () => {
       expect(component.find(FabricImage).props().imageFit).toEqual(undefined);
     });
 
+    it('does not fade in', () => {
+      expect(component.find(FabricImage).props().shouldFadeIn).toEqual(false);
+    });
+
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -109,6 +113,22 @@ describe('<Image />', () => {
 
     it('does not pass an image height', () => {
       expect(component.find(FabricImage).props().height).toEqual(undefined);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with shouldFadeIn', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Image source="image.png" description="description" shouldFadeIn={true} />,
+      );
+    });
+
+    it('tells the Fabric Image to fade in', () => {
+      expect(component.find(FabricImage).props().shouldFadeIn).toEqual(true);
     });
 
     it('matches its snapshot', () => {

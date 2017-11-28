@@ -46,6 +46,12 @@ export interface ImageProps extends BaseComponentProps {
   imageFit?: ImageFit;
 
   /**
+   * Will hide the image until it has loaded, then fade it in.
+   * @default false
+   */
+  shouldFadeIn?: boolean;
+
+  /**
    * Callback to be invoked when the image's loading state changes.
    */
   onLoadingStateChange?: (loadState: ImageLoadState) => void;
@@ -60,10 +66,12 @@ export interface ImageProps extends BaseComponentProps {
 export default class Image extends React.PureComponent<ImageProps, {}> {
   static defaultProps: Partial<ImageProps> = {
     fullWidth: false,
+    shouldFadeIn: false,
   };
 
   render() {
-    const { description, fullWidth, imageFit, source, onLoadingStateChange } = this.props;
+    const { description, fullWidth, imageFit, source, shouldFadeIn, onLoadingStateChange }
+      = this.props;
 
     let height = this.props.height;
     let width: number | string | undefined = this.props.width;
@@ -82,6 +90,7 @@ export default class Image extends React.PureComponent<ImageProps, {}> {
         width={width}
         src={source}
         onLoadingStateChange={onLoadingStateChange}
+        shouldFadeIn={shouldFadeIn}
       />
     );
   }
