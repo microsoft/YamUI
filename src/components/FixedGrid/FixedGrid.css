@@ -69,3 +69,22 @@
 .y-fixedGridRow > .y-fixedGridColumn:first-child {
   margin-left: 0;
 }
+
+.y-fixedGridColumn--inner__top,
+.y-fixedGridColumn--inner__middle,
+.y-fixedGridColumn--inner__bottom {
+  height: 100%;
+  display: flex;
+}
+
+.y-fixedGridColumn--inner__middle {
+  align-items: flex-start;
+}
+
+.y-fixedGridColumn--inner__middle {
+  align-items: center;
+}
+
+.y-fixedGridColumn--inner__bottom {
+  align-items: flex-end;
+}
