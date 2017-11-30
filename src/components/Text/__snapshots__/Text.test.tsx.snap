@@ -3,6 +3,7 @@
 exports[`<Text /> with a valid color matches its snapshot 1`] = `
 <span
   className="y-text y-text__color-secondary"
+  style={Object {}}
 >
   test content
 </span>
@@ -10,7 +11,8 @@ exports[`<Text /> with a valid color matches its snapshot 1`] = `
 
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <span
-  className="y-text y-text__size-xLarge"
+  className="y-text y-textSize-xLarge"
+  style={Object {}}
 >
   test content
 </span>
@@ -19,6 +21,16 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
 exports[`<Text /> with additional className matches its snapshot 1`] = `
 <span
   className="y-text TEST_CLASSNAME"
+  style={Object {}}
+>
+  test content
+</span>
+`;
+
+exports[`<Text /> with bold matches its snapshot 1`] = `
+<span
+  className="y-text y-text__bold"
+  style={Object {}}
 >
   test content
 </span>
@@ -27,6 +39,29 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
 exports[`<Text /> with default options matches its snapshot 1`] = `
 <span
   className="y-text"
+  style={Object {}}
+>
+  test content
+</span>
+`;
+
+exports[`<Text /> with maxWidth matches its snapshot 1`] = `
+<span
+  className="y-text y-ellipsis"
+  style={
+    Object {
+      "maxWidth": "500px",
+    }
+  }
+>
+  test content
+</span>
+`;
+
+exports[`<Text /> with uppercase matches its snapshot 1`] = `
+<span
+  className="y-text y-text__uppercase"
+  style={Object {}}
 >
   test content
 </span>

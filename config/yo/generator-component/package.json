@@ -1,0 +1,11 @@
+{
+  "name": "generator-component",
+  "version": "0.0.0",
+  "description": "Generate a new YamUI component.",
+  "main": "generators/index.js",
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "gulp-rename": "=1.2.2",
+    "yeoman-generator": "=2.0.1"
+  }
+}

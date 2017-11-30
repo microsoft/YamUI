@@ -4,7 +4,7 @@ import * as React from 'react';
 import autobind from 'core-decorators/lib/autobind';
 import { IDropdownOption, Dropdown as FabricDropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Icon from '../Icon';
+import Icon, { IconSize } from '../Icon';
 import './Dropdown.css';
 
 export type DropdownOptionKey = string | number;
@@ -71,7 +71,7 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   }
 
   private getIcon() {
-    return <Icon className="y-dropdown__caretDown" icon="caretDown" />;
+    return <Icon className="y-dropdown__caretDown" icon="caretDown" size={IconSize.MEDIUM} />;
   }
 
   @autobind

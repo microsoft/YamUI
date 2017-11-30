@@ -13,7 +13,7 @@ describe('<Heading />', () => {
     });
 
     it('renders its given content', () => {
-      expect(component.text()).toEqual('test content');
+      expect(component.render().text()).toEqual('test content');
     });
 
     it('renders the correct tag', () => {
@@ -34,16 +34,34 @@ describe('<Heading />', () => {
       component = shallow(<Heading level="2" size="3">test content</Heading>);
     });
 
+    it('renders the correct tag level', () => {
+      expect(component.find('h2').length).toBe(1);
+    });
+
     it('renders the correct size className', () => {
       expect(component.hasClass('y-heading__size-3')).toBe(true);
     });
 
-    it('still has its base className', () => {
+    it('has its base className', () => {
       expect(component.hasClass('y-heading')).toBe(true);
     });
 
-    it('still renders the correct tag level', () => {
-      expect(component.find('h2').length).toBe(1);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with size "none"', () => {
+    beforeEach(() => {
+      component = shallow(<Heading level="5" size="none">test content</Heading>);
+    });
+
+    it('renders the correct tag level', () => {
+      expect(component.find('h5').length).toBe(1);
+    });
+
+    it('renders the size "none" className', () => {
+      expect(component.hasClass('y-heading__size-none')).toBe(true);
     });
 
     it('matches its snapshot', () => {

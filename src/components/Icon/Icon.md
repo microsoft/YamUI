@@ -80,6 +80,87 @@ const { IconSize } = require('.');
 </table>
 ```
 
+Auto-sized to text:
+
+```js { "props": { "data-example": "autosized to text" } }
+const { GutterSize, TextSize } = require('../Block');
+
+const longText = (
+  <span>
+    <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="like" />
+  </span>
+);
+
+<div>
+  <Block bottomSpacing={GutterSize.XLARGE}>
+    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` or `Text` component with a valid textSize:
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XXLARGE}>
+    XXLARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XLARGE}>
+    XLARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.LARGE}>
+    LARGE. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.MEDIUM}>
+    MEDIUM. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.MEDIUM_SUB}>
+    MEDIUM_SUB. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.SMALL}>
+    SMALL. {longText}
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE} textSize={TextSize.XSMALL}>
+    XSMALL. {longText}
+  </Block>
+</div>
+```
+
+Auto-sized to headings:
+
+```js { "props": { "data-example": "autosized to headings" } }
+const { GutterSize } = require('../Block');
+
+const longText = (
+  <span>
+    <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="like" />
+  </span>
+);
+
+<div>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    Icons also scale to match a Heading (h1-h6):
+  </Block>
+  <Heading level="1">
+    H1. {longText}
+  </Heading>
+  <Heading level="2">
+    H2. {longText}
+  </Heading>
+  <Heading level="3">
+    H3. {longText}
+  </Heading>
+  <Heading level="4">
+    H4. {longText}
+  </Heading>
+  <Heading level="5">
+    H5. {longText}
+  </Heading>
+  <Heading level="6">
+    H6. {longText}
+  </Heading>
+</div>
+```
+
 Inline with text and color overrides:
 
 ```js { "props": { "data-example": "inline with text and color" } }
