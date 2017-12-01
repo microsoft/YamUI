@@ -10,11 +10,11 @@ import './Avatar.css';
 export { AvatarBorderType, AvatarSize };
 
 const SizeMap = {
-  [AvatarSize.XLARGE]: PersonaSize.large,
-  [AvatarSize.LARGE]: PersonaSize.regular,
-  [AvatarSize.MEDIUM]: PersonaSize.small,
-  [AvatarSize.SMALL]: PersonaSize.extraSmall,
-  [AvatarSize.XSMALL]: PersonaSize.extraExtraSmall,
+  [AvatarSize.XLARGE]: PersonaSize.size72,
+  [AvatarSize.LARGE]: PersonaSize.size48,
+  [AvatarSize.MEDIUM]: PersonaSize.size40,
+  [AvatarSize.SMALL]: PersonaSize.size32,
+  [AvatarSize.XSMALL]: PersonaSize.size24,
 };
 
 export interface BaseAvatarProps extends BaseComponentProps {
