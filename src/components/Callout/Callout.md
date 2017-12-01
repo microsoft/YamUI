@@ -3,7 +3,6 @@
 Default hover trigger:
 
 ```js { "props": { "data-example": "default hover trigger" } }
-const { DirectionalHint } = require('.');
 
 const content = (
   <div>
@@ -26,7 +25,7 @@ const handlers = {
   Hover over this
   <Callout
     content={content}
-    directionalHint={DirectionalHint.bottomLeftEdge}
+    directionalHint={4}
     startVisible={true}
     {...handlers}
   >
@@ -62,7 +61,7 @@ const handlers = {
   Click this
   <Callout
     content={content}
-    directionalHint={DirectionalHint.bottomLeftEdge}
+    directionalHint={4}
     startVisible={true}
     triggerType={TriggerType.CLICK}
     {...handlers}
@@ -76,7 +75,7 @@ const handlers = {
 Callout without beak:
 
 ```js { "props": { "data-example": "without beak" } }
-const { DirectionalHint } = require('.');
+
 
 const content = (
   <div>
@@ -99,7 +98,7 @@ const handlers = {
   Hover over this
   <Callout
     content={content}
-    directionalHint={DirectionalHint.bottomLeftEdge}
+    directionalHint={4}
     isBeakVisible={false}
     startVisible={true}
     {...handlers}
@@ -113,7 +112,7 @@ const handlers = {
 Callout with different alignments:
 
 ```js { "props": { "data-example": "alignments" } }
-const { DirectionalHint } = require('.');
+
 
 const content = (
   <div>
@@ -146,38 +145,38 @@ const HintedPositionCallout = (props) => (
   <div>
     <FixedGridRow>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.topRightEdge} align="left" label="Top right" />
+        <HintedPositionCallout hint={2} align="left" label="Top right" />
       </FixedGridColumn>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.topCenter} align="center" label="Top center" />
+        <HintedPositionCallout hint={1} align="center" label="Top center" />
       </FixedGridColumn>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.topLeftEdge} align="right" label="Top left" />
-      </FixedGridColumn>
-    </FixedGridRow>
-  </div>
-  <div>
-    <FixedGridRow>
-      <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.leftCenter} align="left" label="Left center" />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.rightCenter} align="right" label="Right center" />
+        <HintedPositionCallout hint={0} align="right" label="Top left" />
       </FixedGridColumn>
     </FixedGridRow>
   </div>
   <div>
     <FixedGridRow>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.bottomRightEdge} align="left" label="Bottom right" />
+        <HintedPositionCallout hint={9} align="left" label="Left center" />
       </FixedGridColumn>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.bottomCenter} align="center" label="Bottom center" />
       </FixedGridColumn>
       <FixedGridColumn fixed={true} width={100}>
-        <HintedPositionCallout hint={DirectionalHint.bottomLeftEdge} align="right" label="Bottom left" />
+        <HintedPositionCallout hint={12} align="right" label="Right center" />
+      </FixedGridColumn>
+    </FixedGridRow>
+  </div>
+  <div>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={6} align="left" label="Bottom right" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={5} align="center" label="Bottom center" />
+      </FixedGridColumn>
+      <FixedGridColumn fixed={true} width={100}>
+        <HintedPositionCallout hint={4} align="right" label="Bottom left" />
       </FixedGridColumn>
     </FixedGridRow>
   </div>
