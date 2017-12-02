@@ -28,7 +28,7 @@ describe('<Avatar />', () => {
     });
 
     it('defaults to medium size', () => {
-      expect(component.find(Persona).prop('size')).toEqual(PersonaSize.small);
+      expect(component.find(Persona).prop('size')).toEqual(PersonaSize.size40);
     });
 
     it('matches its snapshot', () => {
@@ -146,7 +146,7 @@ describe('<Avatar />', () => {
     });
 
     it('renders a Persona component with the correct size', () => {
-      expect(component.find(Persona).prop('size')).toEqual(PersonaSize.large);
+      expect(component.find(Persona).prop('size')).toEqual(PersonaSize.size72);
     });
 
     it('matches its snapshot', () => {

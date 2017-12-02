@@ -10,7 +10,7 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME - BADGE
@@ -28,7 +28,7 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
@@ -46,7 +46,7 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
@@ -64,7 +64,7 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={1}
+    size={10}
   />
   <div
     className="y-avatar--badge y-avatar__size-xSmall--badge"
@@ -89,7 +89,7 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
@@ -107,7 +107,7 @@ exports[`<Avatar /> with initials matches its snapshot 1`] = `
     imageInitials="AB"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
@@ -125,7 +125,7 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={5}
+    size={14}
   />
   <ScreenreaderText>
     NAME
@@ -143,7 +143,7 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
@@ -161,7 +161,7 @@ exports[`<Avatar /> with too many characters and size XSMALL matches its snapsho
     imageInitials="A"
     presence={0}
     primaryText="NAME"
-    size={1}
+    size={10}
   />
   <ScreenreaderText>
     NAME
@@ -179,7 +179,7 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
     imageInitials="AB"
     presence={0}
     primaryText="NAME"
-    size={3}
+    size={12}
   />
   <ScreenreaderText>
     NAME
