@@ -26,7 +26,6 @@ const iconsLibrary = Object.keys(icons).map((icon, index) => (
 <div>
   {iconsLibrary}
   <br style={{ clear: 'both' }} />
-  { /* TODO: Replace this grid when we add MediaGrid */ }
 </div>
 ```
 
