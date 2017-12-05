@@ -239,14 +239,14 @@ const { AvatarSize } = require('.');
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="E" initials="DR" />
     </FixedGridColumn>
-  </FixedGridRow>
-  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="F" initials="LG" />
     </FixedGridColumn>
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="G" initials="LB" />
     </FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="H" initials="LP" />
     </FixedGridColumn>
@@ -256,8 +256,6 @@ const { AvatarSize } = require('.');
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="J" initials="DG" />
     </FixedGridColumn>
-  </FixedGridRow>
-  <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="K" initials="PI" />
     </FixedGridColumn>
@@ -269,9 +267,6 @@ const { AvatarSize } = require('.');
     </FixedGridColumn>
     <FixedGridColumn>
       <Avatar size={AvatarSize.MEDIUM} name="N" initials="BL" />
-    </FixedGridColumn>
-    <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="O" initials="TE" />
     </FixedGridColumn>
   </FixedGridRow>
 </div>
