@@ -10,33 +10,24 @@ Icon library:
 
 ```js { "props": { "data-example": "library" } }
 const { IconSize, icons } = require('.');
+const { GutterSize, TextSize } = require('../Block');
 
 const iconsLibrary = Object.keys(icons).map((icon, index) => (
-  <tr key={index}>
-    <td style={{ textAlign: 'right' }}>
+  <div style={{ float: 'left', width: '75px', textAlign: 'center' }}>
+    <Block textSize={TextSize.XLARGE}>
+      <Icon icon={icon} />
+    </Block>
+    <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE}>
       {icon}
-    </td>
-    <td>
-      <Icon size={IconSize.LARGE} icon={icon} />
-    </td>
-    <td>
-      <Icon size={IconSize.LARGE} icon={icon} color="teal" />
-    </td>
-  </tr>
+    </Block>
+  </div>
 ));
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th style={{ textAlign: 'right' }}>Label</th>
-      <th>Inherit color</th>
-      <th>Override color</th>
-    </tr>
-  </thead>
-  <tbody>
-    {iconsLibrary}
-  </tbody>
-</table>
+<div>
+  {iconsLibrary}
+  <br style={{ clear: 'both' }} />
+  { /* TODO: Replace this grid when we add MediaGrid */ }
+</div>
 ```
 
 Sizes:
