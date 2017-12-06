@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import NavigationLink, { NavigationLinkProps } from '.';
-import * as secureOpener from '../../util/secureOpener';
 
 describe('<NavigationLink />', () => {
   let component: ShallowWrapper<NavigationLinkProps, {}>;
@@ -13,7 +12,7 @@ describe('<NavigationLink />', () => {
     });
 
     it('renders its given content', () => {
-      expect(component.text()).toEqual('link content');
+      expect(component.text()).toBe('link content');
     });
 
     it('contains its base className', () => {
@@ -21,23 +20,11 @@ describe('<NavigationLink />', () => {
     });
 
     it('uses the given href', () => {
-      expect(component.getNode().props.href).toEqual('test.html');
+      expect(component.getNode().props.href).toBe('test.html');
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
-    });
-
-    describe('when clicked', () => {
-      let spy: jest.SpyInstance<{}>;
-      beforeEach(() => {
-        spy = jest.spyOn(secureOpener, 'secureOpen');
-      });
-
-      it('does not open in a new window', () => {
-        component.simulate('click');
-        expect(spy).not.toHaveBeenCalled();
-      });
     });
   });
 
@@ -73,7 +60,7 @@ describe('<NavigationLink />', () => {
     });
 
     it('contains the given title', () => {
-      expect(component.getNode().props.title).toEqual('TITLE CONTENT');
+      expect(component.getNode().props.title).toBe('TITLE CONTENT');
     });
 
     it('matches its snapshot', () => {
@@ -90,24 +77,12 @@ describe('<NavigationLink />', () => {
       );
     });
 
-    it('contains its newWindow className', () => {
-      expect(component.hasClass('y-navigationLink__newWindow')).toBe(true);
+    it('contains the correct rel attribute', () => {
+      expect(component.getNode().props.rel).toBe('nofollow noreferrer');
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
-    });
-
-    describe('when clicked', () => {
-      let spy: jest.SpyInstance<{}>;
-      beforeEach(() => {
-        spy = jest.spyOn(secureOpener, 'secureOpen');
-      });
-
-      it('opens in a new window', () => {
-        component.simulate('click', { preventDefault: () => undefined });
-        expect(spy).toHaveBeenCalled();
-      });
     });
   });
 
