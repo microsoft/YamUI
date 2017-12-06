@@ -1,10 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import autobind from 'core-decorators/lib/autobind';
 import classNames = require('classnames');
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { secureOpen } from '../../util/secureOpener';
 import './NavigationLink.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
@@ -46,7 +44,6 @@ export default class NavigationLink extends React.PureComponent<NavigationLinkPr
         rel={rel}
         target={target}
         title={title}
-        onClick={this.handleClick}
       >
         {children}
       </a>
@@ -54,12 +51,9 @@ export default class NavigationLink extends React.PureComponent<NavigationLinkPr
   }
 
   private getClasses() {
-    const { className, newWindow, unstyled } = this.props;
+    const { className, unstyled } = this.props;
 
     const classes: string[] = ['y-navigationLink'];
-    if (newWindow) {
-      classes.push('y-navigationLink__newWindow');
-    }
     if (unstyled) {
       classes.push('y-navigationLink__unstyled');
     }
@@ -68,17 +62,5 @@ export default class NavigationLink extends React.PureComponent<NavigationLinkPr
     }
 
     return classNames(classes);
-  }
-
-  @autobind
-  private handleClick(event: React.SyntheticEvent<HTMLAnchorElement>) {
-    const { href, newWindow } = this.props;
-
-    if (!newWindow) {
-      return;
-    }
-
-    event.preventDefault();
-    secureOpen(href);
   }
 }
