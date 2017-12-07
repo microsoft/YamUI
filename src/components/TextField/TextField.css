@@ -1,0 +1,69 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
+
+.y-text-field .ms-Label {
+  @extend text__mediumSub;
+  font-weight: $fontWeight__bold;
+  color: $textColor__secondary;
+  padding-bottom: 4px;
+}
+
+.y-text-field .ms-TextField-fieldGroup {
+  line-height: 3.3rem;
+  height: 36px;
+  min-height: 36px;
+}
+
+.y-text-field .ms-TextField-wrapper .ms-TextField-fieldGroup {
+  min-height: 36px;
+}
+
+.y-text-field.ms-TextField--multiline .ms-TextField-field {
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+
+.y-text-field.ms-TextField--underlined .ms-TextField-field {
+  padding-left: 0px;
+}
+
+.y-text-field .ms-TextField-field {
+  @extend text__mediumSub;
+  color: $textColor;
+  padding: 0 8px;
+}
+
+.y-text-field--with-prefix.ms-TextField--underlined .ms-TextField-field,
+.y-text-field--with-prefix .ms-TextField-field {
+  padding-left: 4px;
+}
+
+.y-text-field--with-suffix.ms-TextField--underlined .ms-TextField-field,
+.y-text-field--with-suffix .ms-TextField-field {
+  padding-right: 4px;
+}
+
+.y-text-field .ms-TextField-prefix,
+.y-text-field .ms-TextField-suffix {
+  padding: 0 8px;
+}
+
+.y-text-field.is-disabled .ms-TextField-field {
+  color: $textColor__disabled;
+}
+
+.y-text-field .ms-TextField-description {
+  @extend text__small;
+  color: $textColor__metadata;
+}
+
+.y-text-field .ms-TextField-errorMessage {
+  @extend text__small;
+  color: $textColor__error;
+}
+
+/* Hide the asterisk that comes with required=true */
+.y-text-field .ms-TextField-fieldGroup::after {
+  display: none;
+}

@@ -13,6 +13,12 @@ const fontStyles: IRawStyle = {
 
 // NOTE: Would be handy to have access to our CSS variable values in JS...
 loadTheme({
+  palette: {
+    themePrimary: '#6c98d9',
+    neutralSecondary: '#646d7a',
+    neutralTertiary: '#dde0e6',
+    neutralLighter: '#f3f5f8',
+  },
   fonts: {
     tiny: fontStyles,
     xSmall: {

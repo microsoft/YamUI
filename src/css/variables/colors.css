@@ -16,6 +16,8 @@ $textColor: $color__blackMetal;
 $textColor__secondary: $color__deathMetal;
 $textColor__metadata: $color__heavyMetal;
 $textColor__white: $color__white;
+$textColor__error: $color__dracula;
+$textColor__disabled: $color__punkRock;
 
 $linkColor: $color__river;
 $linkColor__active: $color__bay;
