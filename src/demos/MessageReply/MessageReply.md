@@ -19,7 +19,7 @@ const user2 = {
     <Avatar imageUrl={user1.image} name={user1.name} size={AvatarSize.SMALL} />
   </FixedGridColumn>
   <FixedGridColumn>
-    <Block bottomSpacing={GutterSize.XSMALL} className="byline">
+    <Block bottomSpacing={GutterSize.XSMALL} className="byline" textSize={TextSize.MEDIUM}>
       <Text maxWidth="100%">
         <Text bold={true}>{user1.name}</Text> <Text color={TextColor.METADATA} size={TextSize.MEDIUM_SUB}>in reply to</Text> <Text bold={true}>{user2.name}</Text>
       </Text> <Text color={TextColor.METADATA} size={TextSize.MEDIUM_SUB}> - 5 hours ago from Desktop</Text>

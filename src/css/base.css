@@ -113,7 +113,6 @@ td,
 th {
   @extend text__mediumSub;
   padding: 6px 10px 6px 0;
-  vertical-align: top;
 }
 th {
   padding-bottom: 2px;

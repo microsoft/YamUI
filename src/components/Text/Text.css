@@ -33,24 +33,53 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.y-text__ellipsis.y-textSize-xSmall {
+
+/**
+ * Inline-block elements shift vertical-align from baselin to bottom when we set
+ * overflow:hidden for ellipsis. This ensures ellipsis Text, at each size and nested
+ * under each Block's textSize, maintains correct vertical alignment. Increased specificity
+ * to handle the nested block case :(
+ */
+.y-block.y-textSize-xSmall .y-text__ellipsis {
   vertical-align: -.4rem;
 }
-.y-text__ellipsis.y-textSize-small {
+.y-block.y-textSize-small .y-text__ellipsis {
   vertical-align: -.3rem;
 }
-.y-text__ellipsis.y-textSize-mediumSub {
+.y-block.y-textSize-mediumSub .y-text__ellipsis {
   vertical-align: -.5rem;
 }
-.y-text__ellipsis.y-textSize-medium {
+.y-block.y-textSize-medium .y-text__ellipsis {
   vertical-align: -.4rem;
 }
-.y-text__ellipsis.y-textSize-large {
+.y-block.y-textSize-large .y-text__ellipsis {
   vertical-align: -.5rem;
 }
-.y-text__ellipsis.y-textSize-xLarge {
+.y-block.y-textSize-xLarge .y-text__ellipsis {
   vertical-align: -.5rem;
 }
-.y-text__ellipsis.y-textSize-xxLarge {
+.y-block.y-textSize-xxLarge .y-text__ellipsis {
+  vertical-align: -.4rem;
+}
+
+.y-text.y-text__ellipsis.y-textSize-xSmall {
+  vertical-align: -.4rem;
+}
+.y-text.y-text__ellipsis.y-textSize-small {
+  vertical-align: -.3rem;
+}
+.y-text.y-text__ellipsis.y-textSize-mediumSub {
+  vertical-align: -.5rem;
+}
+.y-text.y-text__ellipsis.y-textSize-medium {
+  vertical-align: -.4rem;
+}
+.y-text.y-text__ellipsis.y-textSize-large {
+  vertical-align: -.5rem;
+}
+.y-text.y-text__ellipsis.y-textSize-xLarge {
+  vertical-align: -.5rem;
+}
+.y-text.y-text__ellipsis.y-textSize-xxLarge {
   vertical-align: -.4rem;
 }
