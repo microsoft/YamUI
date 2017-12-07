@@ -71,7 +71,7 @@ export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
   }
 
   private getIcon() {
-    return <Icon className="y-dropdown__caretDown" icon="caretDown" size={IconSize.MEDIUM} />;
+    return <Icon className="y-dropdown__caretDown" icon="chevronDownMed" size={IconSize.MEDIUM} />;
   }
 
   @autobind

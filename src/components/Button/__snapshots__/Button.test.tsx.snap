@@ -136,7 +136,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
     >
       <Icon
         className="y-button--icon"
-        icon="plus"
+        icon="add"
       />
     </span>
     Click Me
@@ -163,7 +163,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
     >
       <Icon
         className="y-button--icon"
-        icon="plus"
+        icon="add"
       />
     </span>
   </Block>
@@ -297,7 +297,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
     >
       <Icon
         className="y-button--icon"
-        icon="plus"
+        icon="add"
       />
     </span>
     Click Me

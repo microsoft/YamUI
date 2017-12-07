@@ -98,7 +98,7 @@ export default class GroupHovercard extends React.PureComponent<GroupHovercardPr
 
             <HorizontalList align="right">
               <HorizontalListItem>
-                <Button text="Join" color={ButtonColor.PRIMARY} icon="plus" />
+                <Button text="Join" color={ButtonColor.PRIMARY} icon="add" />
               </HorizontalListItem>
             </HorizontalList>
           </Block>

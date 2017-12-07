@@ -33,7 +33,7 @@ const user2 = {
           <Clickable><Icon icon="like" /> Like</Clickable>
         </HorizontalListItem>
         <HorizontalListItem>
-          <Clickable><Icon icon="edit" /> Reply</Clickable>
+          <Clickable><Icon icon="reply" /> Reply</Clickable>
         </HorizontalListItem>
         <HorizontalListItem>
           <Clickable><Icon icon="share" /> Share</Clickable>

@@ -59,7 +59,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.REGULAR}
           text={sampleText}
           color={ButtonColor.PRIMARY}
@@ -67,7 +67,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.REGULAR}
           text={sampleText}
           href={sampleUrl}
@@ -76,7 +76,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.DISABLED}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -85,7 +85,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.LOADING}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -97,7 +97,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -106,7 +106,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -116,7 +116,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.DISABLED}
           size={ButtonSize.REGULAR}
@@ -126,7 +126,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretDown"
+          icon="chevronDownMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.LOADING}
           size={ButtonSize.REGULAR}
@@ -165,7 +165,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.REGULAR}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -173,7 +173,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.REGULAR}
           text={sampleText}
           href={sampleUrl}
@@ -182,7 +182,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.DISABLED}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -190,7 +190,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.LOADING}
           text={sampleText}
           color={ButtonColor.SECONDARY}
@@ -201,7 +201,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -210,7 +210,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.REGULAR}
           text={sampleText}
@@ -220,7 +220,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.DISABLED}
           text={sampleText}
@@ -229,7 +229,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretDown"
+          icon="chevronDownMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.LOADING}
           text={sampleText}
@@ -297,7 +297,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.SMALL}
           text={sampleText}
           color={ButtonColor.PRIMARY}
@@ -305,7 +305,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.SMALL}
           text={sampleText}
           href={sampleUrl}
@@ -313,7 +313,7 @@ const sampleUrl = 'https://www.yammer.com';
         />
       </td>
       <td>
-        <Button icon="plus"
+        <Button icon="add"
           status={ButtonStatus.DISABLED}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -322,7 +322,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.LOADING}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -334,7 +334,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -343,7 +343,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -353,7 +353,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.DISABLED}
           size={ButtonSize.SMALL}
@@ -363,7 +363,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretDown"
+          icon="chevronDownMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.LOADING}
           size={ButtonSize.SMALL}
@@ -406,14 +406,14 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.SMALL}
           text={sampleText}
         />
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           size={ButtonSize.SMALL}
           text={sampleText}
           href={sampleUrl}
@@ -421,7 +421,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.DISABLED}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -429,7 +429,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="plus"
+          icon="add"
           status={ButtonStatus.LOADING}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -440,7 +440,7 @@ const sampleUrl = 'https://www.yammer.com';
       <td />
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -448,7 +448,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           size={ButtonSize.SMALL}
           text={sampleText}
@@ -457,7 +457,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretRight"
+          icon="chevronRightMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.DISABLED}
           size={ButtonSize.SMALL}
@@ -466,7 +466,7 @@ const sampleUrl = 'https://www.yammer.com';
       </td>
       <td>
         <Button
-          icon="caretDown"
+          icon="chevronDownMed"
           iconPosition={ButtonIconPosition.RIGHT}
           status={ButtonStatus.LOADING}
           size={ButtonSize.SMALL}

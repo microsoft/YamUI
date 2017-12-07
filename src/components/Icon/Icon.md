@@ -13,7 +13,7 @@ const { IconSize, icons } = require('.');
 const { GutterSize, TextSize } = require('../Block');
 
 const iconsLibrary = Object.keys(icons).map((icon, index) => (
-  <div style={{ float: 'left', width: '75px', textAlign: 'center' }}>
+  <div style={{ float: 'left', width: '100px', textAlign: 'center' }}>
     <Block textSize={TextSize.XLARGE}>
       <Icon icon={icon} />
     </Block>
@@ -78,7 +78,7 @@ const { GutterSize, TextSize } = require('../Block');
 const longText = (
   <span>
     <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="checkMark" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="like" />
   </span>
@@ -120,8 +120,7 @@ const { GutterSize } = require('../Block');
 const longText = (
   <span>
     <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="check" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="checkMark" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="like" />
   </span>
 );
@@ -158,13 +157,13 @@ const { IconSize } = require('.');
 
 <div>
   <p>
-    This is a line of text with a <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
+    This is a line of text with a <Icon size={IconSize.SMALL} icon="add" /> inline icon.
   </p>
   <p style={{ color: 'blue' }}>
-    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="plus" /> inline icon.
+    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="add" /> inline icon.
   </p>
   <p>
-    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="plus" color="red" /> inline icon that overrides its color.
+    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="add" color="red" /> inline icon that overrides its color.
   </p>
 </div>
 ```

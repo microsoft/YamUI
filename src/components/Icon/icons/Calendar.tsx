@@ -1,0 +1,15 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+/* tslint:disable:max-line-length */
+// This file was auto-generated -- do not edit
+
+import * as React from 'react';
+
+const Calendar = function Calendar(props: any) {
+  return (
+    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
+      <path fillRule="evenodd" d="M90 90h15v15H90V90zm45 90h15v15h-15v-15zm45-90h15v15h-15V90zm-45 0h15v15h-15V90zm-45 30h15v15H90v-15zm-45 0h15v15H45v-15zm135 0h15v15h-15v-15zm-45 0h15v15h-15v-15zm-45 30h15v15H90v-15zm-45 0h15v15H45v-15zm135 0h15v15h-15v-15zm-45 0h15v15h-15v-15zm-45 30h15v15H90v-15zm-45 0h15v15H45v-15zM240 15v210H0V15h45V0h15v15h120V0h15v15h45zM15 30v30h210V30h-30v15h-15V30H60v15H45V30H15zm210 180V75H15v135h210z" />
+    </svg>
+  );
+};
+
+export default Calendar;
