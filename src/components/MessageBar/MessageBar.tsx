@@ -39,7 +39,7 @@ export default class MessageBar extends React.PureComponent<MessageBarProps, {}>
       <Block textSize={TextSize.SMALL} className={this.getClasses()}>
         <FixedGridRow gutterSize={GutterSize.XXLARGE}>
           <FixedGridColumn>{children}</FixedGridColumn>
-          {actions && <FixedGridColumn fixed={true}>{actions}</FixedGridColumn>}
+          {actions && <FixedGridColumn fixed={true}><span className='y-message-bar__nowrap'>{actions}</span></FixedGridColumn>}
         </FixedGridRow>
       </Block>
     );

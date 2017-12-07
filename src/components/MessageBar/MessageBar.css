@@ -7,7 +7,15 @@
   border-radius: 1px;
   border-left-width: 4px;
   color: $textColor;
-  padding: 7px 12px 7px;
+  padding: 7px 12px 8px;
+}
+
+.y-message-bar__nowrap {
+  white-space: nowrap;
+}
+
+.y-message-bar__nowrap svg {
+  margin-right: .1rem;
 }
 
 .y-message-bar__type-warning {
