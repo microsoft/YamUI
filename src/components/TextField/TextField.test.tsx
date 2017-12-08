@@ -33,6 +33,8 @@ describe('<TextField />', () => {
           suffix="SUFFIX"
           required={true}
           rows={2}
+          onChange={jest.fn()}
+          onChangeDebounceTime={500}
           autoAdjustHeight={false}
         />);
     });

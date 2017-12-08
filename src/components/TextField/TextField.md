@@ -25,7 +25,7 @@ One Line:
 ```js
 <TextField
   value="Error"
-  getErrorMessage={() => "Error hint goes here"}
+  errorMessage="Error hint goes here"
 />
 ```
 
@@ -82,7 +82,7 @@ Underlined Variation
 
 ```js
 <TextField
-  getErrorMessage={() => "Error hint goes here"}
+  errorMessage="Error hint goes here"
   placeHolder="Textfield Error"
   underlined
 />
@@ -95,17 +95,17 @@ Required:
 />
 ```
 
-With Simulated API Validation:
+onChange:
 ```js
 <TextField
-  label="US Airport Code"
-  getErrorMessage={(value) => {
-	  return new Promise((resolve) => {
-      setTimeout(() => {
-        if (value.length <= 3) { resolve(''); }
-        resolve(`The length of the input value should less than 3, actual is ${value.length}.`);
-      }, 200);
-    });
-  }}
+  onChange={() => {console.log('change from onChange example')}}
+/>
+```
+
+onChange with debounce:
+```js
+<TextField
+  onChangeDebounceTime={700}
+  onChange={() => {console.log('change from onChange with debounce example')}}
 />
 ```

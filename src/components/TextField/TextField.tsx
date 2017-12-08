@@ -3,9 +3,8 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { Async } from 'office-ui-fabric-react/lib/Utilities';
 import './TextField.css';
-
-const deferredValidationTime = 700;
 
 export interface TextFieldProps extends BaseComponentProps {
   /**
@@ -19,18 +18,9 @@ export interface TextFieldProps extends BaseComponentProps {
   placeHolder?: string;
 
   /**
-   * This method is used to get the validation error message and determine whether the input
-   * value is valid or not.
-   *
-   * When it returns string:
-   *   - If valid, it returns empty string.
-   *   - If invalid, it returns the error message string and the text field will show a red
-   *     border and show an error message below the text field.
-   * When it returns Promise<string>:
-   *   - The resolved value is displayed as an error message.
-   *   - If rejected, the value is thrown away.
+   * Error message string.
    */
-  getErrorMessage?: (value: string) => string;
+  errorMessage?: string;
 
   /**
    * Disabled state of the textfield.
@@ -80,7 +70,13 @@ export interface TextFieldProps extends BaseComponentProps {
   /**
    * Callback for the onChanged event.
    */
-  onChanged?: (newValue: any) => void;
+  onChange?: (newValue: any) => void;
+
+  /**
+   * Textfield will trigger onChange after users stop typing for `onChangeDebounceTime`
+   * milliseconds.
+   */
+  onChangeDebounceTime?: number;
 }
 
 /**
@@ -89,6 +85,8 @@ export interface TextFieldProps extends BaseComponentProps {
  * displays on the screen in a simple, uniform format.
  */
 export default class TextField extends React.PureComponent<TextFieldProps, {}> {
+  private async: Async;
+
   render() {
     return (
       <FabricTextField
@@ -100,17 +98,24 @@ export default class TextField extends React.PureComponent<TextFieldProps, {}> {
         suffix={this.props.suffix}
         disabled={this.props.disabled}
         required={this.props.required}
+        errorMessage={this.props.errorMessage}
         placeholder={this.props.placeHolder}
         multiline={!!this.props.autoAdjustHeight || !!this.props.rows && (this.props.rows > 1)}
         rows={this.props.rows}
-        onGetErrorMessage={this.props.getErrorMessage}
-        deferredValidationTime={deferredValidationTime}
         resizable={false}
         autoAdjustHeight={this.props.autoAdjustHeight}
         underlined={this.props.underlined}
-        onChanged={this.props.onChanged}
+        onChanged={this.getOnChange()}
       />
     );
+  }
+
+  private getOnChange() {
+    this.async = this.async || new Async(this);
+    if (this.props.onChangeDebounceTime && this.props.onChange) {
+      return this.async.debounce(this.props.onChange, this.props.onChangeDebounceTime);
+    }
+    return this.props.onChange;
   }
 
   private getClasses() {
