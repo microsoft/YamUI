@@ -2,8 +2,6 @@
 
 `Avatar` takes care of setting the alt text for you when you pass the one required attribute, `name`.
 
-You must provide either an `imageUrl` property or an `initials` property.
-
 ### Examples
 
 Without image:
@@ -24,19 +22,19 @@ const { AvatarSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Avatar size={AvatarSize.XLARGE} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.XLARGE} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.LARGE} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.LARGE} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.MEDIUM} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.SMALL} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.SMALL} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.XSMALL} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.XSMALL} name={user.name} />
       </td>
     </tr>
   </tbody>
@@ -225,48 +223,48 @@ const { AvatarSize } = require('.');
   </Block>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="A" initials="TE" />
+      <Avatar size={AvatarSize.MEDIUM} name="A" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="B" initials="LB" />
+      <Avatar size={AvatarSize.MEDIUM} name="B" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="C" initials="DB" />
+      <Avatar size={AvatarSize.MEDIUM} name="C" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="D" initials="OR" />
+      <Avatar size={AvatarSize.MEDIUM} name="D" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="E" initials="DR" />
+      <Avatar size={AvatarSize.MEDIUM} name="E" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="F" initials="LG" />
+      <Avatar size={AvatarSize.MEDIUM} name="F" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="G" initials="LB" />
+      <Avatar size={AvatarSize.MEDIUM} name="G" />
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="H" initials="LP" />
+      <Avatar size={AvatarSize.MEDIUM} name="H" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="I" initials="GR" />
+      <Avatar size={AvatarSize.MEDIUM} name="I" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="J" initials="DG" />
+      <Avatar size={AvatarSize.MEDIUM} name="J" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="K" initials="PI" />
+      <Avatar size={AvatarSize.MEDIUM} name="K" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="L" initials="MA" />
+      <Avatar size={AvatarSize.MEDIUM} name="L" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="M" initials="PU" />
+      <Avatar size={AvatarSize.MEDIUM} name="M" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="N" initials="BL" />
+      <Avatar size={AvatarSize.MEDIUM} name="N" />
     </FixedGridColumn>
   </FixedGridRow>
 </div>

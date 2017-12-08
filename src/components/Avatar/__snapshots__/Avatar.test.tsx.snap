@@ -97,24 +97,6 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> with initials matches its snapshot 1`] = `
-<div
-  className="y-avatar y-avatar__size-medium"
->
-  <Persona
-    hidePersonaDetails={true}
-    imageAlt=""
-    imageInitials="AB"
-    presence={0}
-    primaryText="NAME"
-    size={12}
-  />
-  <ScreenreaderText>
-    NAME
-  </ScreenreaderText>
-</div>
-`;
-
 exports[`<Avatar /> with size matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-xLarge"
@@ -151,24 +133,6 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> with too many characters and size XSMALL matches its snapshot 1`] = `
-<div
-  className="y-avatar y-avatar__size-xSmall"
->
-  <Persona
-    hidePersonaDetails={true}
-    imageAlt=""
-    imageInitials="A"
-    presence={0}
-    primaryText="NAME"
-    size={10}
-  />
-  <ScreenreaderText>
-    NAME
-  </ScreenreaderText>
-</div>
-`;
-
 exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-medium"
@@ -176,13 +140,12 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
-    imageInitials="AB"
     presence={0}
-    primaryText="NAME"
+    primaryText="First Last"
     size={12}
   />
   <ScreenreaderText>
-    NAME
+    First Last
   </ScreenreaderText>
 </div>
 `;
