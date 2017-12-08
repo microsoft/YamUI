@@ -98,7 +98,7 @@ Required:
 onChange:
 ```js
 <TextField
-  onChange={() => {console.log('change from onChange example')}}
+  onChange={action('change from `onChange` example')}
 />
 ```
 
@@ -106,6 +106,6 @@ onChange with debounce:
 ```js
 <TextField
   onChangeDebounceTime={700}
-  onChange={() => {console.log('change from onChange with debounce example')}}
+  onChange={action('change from `onChange with debounce` example')}
 />
 ```
