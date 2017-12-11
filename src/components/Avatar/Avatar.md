@@ -223,48 +223,48 @@ const { AvatarSize } = require('.');
   </Block>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="A" />
+      <Avatar size={AvatarSize.MEDIUM} name="Richie Black" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="B" />
+      <Avatar size={AvatarSize.MEDIUM} name="Sara Michaels" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="C" />
+      <Avatar size={AvatarSize.MEDIUM} name="Charles Blue" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="D" />
+      <Avatar size={AvatarSize.MEDIUM} name="Billy Jean" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="E" />
+      <Avatar size={AvatarSize.MEDIUM} name="James Woods" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="F" />
+      <Avatar size={AvatarSize.MEDIUM} name="John Babcock" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="G" />
+      <Avatar size={AvatarSize.MEDIUM} name="Perry McDouglas" />
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="H" />
+      <Avatar size={AvatarSize.MEDIUM} name="Monte Luther" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="I" />
+      <Avatar size={AvatarSize.MEDIUM} name="Zoe Reynolds" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="J" />
+      <Avatar size={AvatarSize.MEDIUM} name="Jose Monahan" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="K" />
+      <Avatar size={AvatarSize.MEDIUM} name="Sean Johnson" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="L" />
+      <Avatar size={AvatarSize.MEDIUM} name="Toby Edward" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="M" />
+      <Avatar size={AvatarSize.MEDIUM} name="Willie Nelson" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="N" />
+      <Avatar size={AvatarSize.MEDIUM} name="Joe Johnson" />
     </FixedGridColumn>
   </FixedGridRow>
 </div>
