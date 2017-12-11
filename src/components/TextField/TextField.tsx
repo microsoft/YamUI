@@ -53,16 +53,6 @@ export interface TextFieldProps extends BaseComponentProps {
   required?: boolean;
 
   /**
-   * Height of the field, in number of rows.
-  **/
-  rows?: number;
-
-  /**
-   * Whether or not to auto adjust textField height.
-  **/
-  autoAdjustHeight?: boolean;
-
-  /**
    * Whether or not the textfield is underlined.
   **/
   underlined?: boolean;
@@ -86,6 +76,27 @@ export interface TextFieldProps extends BaseComponentProps {
  */
 export default class TextField extends React.PureComponent<TextFieldProps, {}> {
   private async: Async;
+  private onChange: (newValue: string) => void;
+
+  constructor(props: TextFieldProps) {
+    super();
+    this.async = new Async(this);
+    if (props.onChangeDebounceTime && props.onChange) {
+      this.onChange = this.async.debounce(props.onChange, props.onChangeDebounceTime);
+    }
+  }
+
+  componentWillUpdate(nextProps: TextFieldProps) {
+    if (nextProps.onChangeDebounceTime && nextProps.onChange
+      && (nextProps.onChangeDebounceTime !== this.props.onChangeDebounceTime
+        || nextProps.onChange !== this.props.onChange)) {
+      this.onChange = this.async.debounce(nextProps.onChange, nextProps.onChangeDebounceTime);
+    }
+  }
+
+  componentWillUnmount() {
+    this.async.dispose();
+  }
 
   render() {
     return (
@@ -100,22 +111,10 @@ export default class TextField extends React.PureComponent<TextFieldProps, {}> {
         required={this.props.required}
         errorMessage={this.props.errorMessage}
         placeholder={this.props.placeHolder}
-        multiline={!!this.props.autoAdjustHeight || !!this.props.rows && (this.props.rows > 1)}
-        rows={this.props.rows}
-        resizable={false}
-        autoAdjustHeight={this.props.autoAdjustHeight}
         underlined={this.props.underlined}
-        onChanged={this.getOnChange()}
+        onChanged={this.onChange}
       />
     );
-  }
-
-  private getOnChange() {
-    this.async = this.async || new Async(this);
-    if (this.props.onChangeDebounceTime && this.props.onChange) {
-      return this.async.debounce(this.props.onChange, this.props.onChangeDebounceTime);
-    }
-    return this.props.onChange;
   }
 
   private getClasses() {

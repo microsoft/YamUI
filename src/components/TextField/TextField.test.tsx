@@ -1,7 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
+import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
 describe('<TextField />', () => {
   let component: ShallowWrapper<TextFieldProps, {}>;
@@ -32,15 +34,42 @@ describe('<TextField />', () => {
           prefix="PREFIX"
           suffix="SUFFIX"
           required={true}
-          rows={2}
           onChange={jest.fn()}
           onChangeDebounceTime={500}
-          autoAdjustHeight={false}
         />);
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+
+    describe('update onChangeDebounceTime', () => {
+      beforeEach(() => {
+        component.setProps({ onChangeDebounceTime: 1000 });
+      });
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('update value', () => {
+      beforeEach(() => {
+        component.setProps({ value: 'VALUE2' });
+      });
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('unmount', () => {
+      let disposeSpy: jest.SpyInstance<() => void>;
+      beforeEach(() => {
+        disposeSpy = jest.spyOn(Async.prototype, 'dispose');
+        component.unmount();
+      });
+      it('calls async dispose', () => {
+        expect(disposeSpy).toHaveBeenCalled();
+      });
     });
   });
 

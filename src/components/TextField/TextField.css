@@ -2,6 +2,7 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
+// work is in progress to set styling/theme options for all Fabric label instances
 .y-text-field .ms-Label {
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
@@ -12,11 +13,6 @@
 .y-text-field .ms-TextField-fieldGroup {
   line-height: 3.3rem;
   height: 36px;
-  min-height: 36px;
-}
-
-.y-text-field .ms-TextField-wrapper .ms-TextField-fieldGroup {
-  min-height: 36px;
 }
 
 .y-text-field.ms-TextField--multiline .ms-TextField-field {
