@@ -38,7 +38,7 @@ export interface IconStyles {
  * An `Icon` renders an SVG icon.
  */
 export default class Icon extends React.Component<IconProps, {}> {
-  protected getClasses() {
+  protected getClassName() {
     const { block, className } = this.props;
   
     const classes = ['y-icon'];
@@ -52,7 +52,7 @@ export default class Icon extends React.Component<IconProps, {}> {
     return classes.join(' ');
   }
   
-  protected getStyles() {
+  protected getStyle() {
     const { color, size } = this.props;
   
     const styles: IconStyles = {};
