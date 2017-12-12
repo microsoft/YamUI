@@ -3,33 +3,33 @@ import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import { Callout as FabricCallout } from 'office-ui-fabric-react/lib/Callout';
 import { Key } from '../../util/enums';
-import { Callout, CalloutProps, CalloutState, TriggerType } from '.';
+import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
-describe('<Callout />', () => {
+describe('<Hovercard />', () => {
   jest.useFakeTimers();
 
-  let component: ShallowWrapper<CalloutProps, CalloutState>;
-  let fullComponent: ReactWrapper<CalloutProps, CalloutState>;
+  let component: ShallowWrapper<HovercardProps, HovercardState>;
+  let fullComponent: ReactWrapper<HovercardProps, HovercardState>;
 
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
     });
 
     describe('at initial render', () => {
       it('renders its trigger content', () => {
-        expect(component.find('.y-callout--trigger').text()).toEqual('Trigger');
+        expect(component.find('.y-hovercard--trigger').text()).toEqual('Trigger');
       });
 
       it('contains its base className', () => {
-        expect(component.hasClass('y-callout')).toBe(true);
+        expect(component.hasClass('y-hovercard')).toBe(true);
       });
 
-      it('does not show the callout', () => {
+      it('does not show the hovercard', () => {
         expect(component.find(FabricCallout).length).toBe(0);
       });
 
@@ -42,9 +42,9 @@ describe('<Callout />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout content={<div>Callout content</div>} className="TEST_CLASSNAME">
+        <Hovercard content={<div>Hovercard content</div>} className="TEST_CLASSNAME">
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
     });
 
@@ -53,7 +53,7 @@ describe('<Callout />', () => {
     });
 
     it('still has its base className', () => {
-      expect(component.hasClass('y-callout')).toBe(true);
+      expect(component.hasClass('y-hovercard')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -64,19 +64,19 @@ describe('<Callout />', () => {
   describe('with screenreaderTitle', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout
-          content={<div>Callout content</div>}
+        <Hovercard
+          content={<div>Hovercard content</div>}
           screenreaderTitle="HIDDEN TITLE"
           triggerType={TriggerType.CLICK}
         >
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('click');
+      component.find('.y-hovercard--trigger').simulate('click');
     });
 
     it('renders the hidden title', () => {
-      expect(component.find('.y-callout--modal-container ScreenreaderText h1').text()).toEqual(
+      expect(component.find('.y-hovercard--modal-container ScreenreaderText h1').text()).toEqual(
         'HIDDEN TITLE',
       );
     });
@@ -86,76 +86,76 @@ describe('<Callout />', () => {
     });
   });
 
-  describe('callout gets displayed', () => {
+  describe('hovercard gets displayed', () => {
     it('via click', () => {
       component = shallow(
-        <Callout content={<div>Callout content</div>} triggerType={TriggerType.CLICK}>
+        <Hovercard content={<div>Hovercard content</div>} triggerType={TriggerType.CLICK}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('click');
-      expect(component.find('.y-callout--modal-container').length).toBe(1);
+      component.find('.y-hovercard--trigger').simulate('click');
+      expect(component.find('.y-hovercard--modal-container').length).toBe(1);
     });
 
     it('via hover after delay', () => {
       component = shallow(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('mouseEnter');
+      component.find('.y-hovercard--trigger').simulate('mouseEnter');
       jest.runTimersToTime(750);
-      expect(component.find('.y-callout--modal-container').length).toBe(1);
+      expect(component.find('.y-hovercard--modal-container').length).toBe(1);
     });
   });
 
-  describe('callout properly does not display', () => {
+  describe('hovercard properly does not display', () => {
     it('when clicking a hover trigger', () => {
       component = shallow(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('click');
+      component.find('.y-hovercard--trigger').simulate('click');
       jest.runTimersToTime(750);
-      expect(component.find('.y-callout--modal-container').length).toBe(0);
+      expect(component.find('.y-hovercard--modal-container').length).toBe(0);
     });
 
     it('when hovering over a click trigger', () => {
       component = shallow(
-        <Callout content={<div>Callout content</div>} triggerType={TriggerType.CLICK}>
+        <Hovercard content={<div>Hovercard content</div>} triggerType={TriggerType.CLICK}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('mouseEnter');
+      component.find('.y-hovercard--trigger').simulate('mouseEnter');
       jest.runTimersToTime(750);
-      expect(component.find('.y-callout--modal-container').length).toBe(0);
+      expect(component.find('.y-hovercard--modal-container').length).toBe(0);
     });
   });
 
   describe('mousing over the trigger', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('mouseEnter');
+      component.find('.y-hovercard--trigger').simulate('mouseEnter');
       jest.runTimersToTime(250);
     });
 
-    it('does not show the callout before the show timeout completes', () => {
-      expect(component.find('.y-callout--modal-container').length).toBe(0);
+    it('does not show the hovercard before the show timeout completes', () => {
+      expect(component.find('.y-hovercard--modal-container').length).toBe(0);
     });
 
-    describe('then mousing back out before the callout is displayed', () => {
+    describe('then mousing back out before the hovercard is displayed', () => {
       beforeEach(() => {
-        component.find('.y-callout--trigger').simulate('mouseLeave');
+        component.find('.y-hovercard--trigger').simulate('mouseLeave');
       });
 
-      it('cancels the callout from being displayed', () => {
+      it('cancels the hovercard from being displayed', () => {
         jest.runAllTimers();
-        expect(component.find('.y-callout--modal-container').length).toBe(0);
+        expect(component.find('.y-hovercard--modal-container').length).toBe(0);
       });
     });
   });
@@ -163,24 +163,24 @@ describe('<Callout />', () => {
   describe('when visible', () => {
     beforeEach(() => {
       component = shallow(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
-      component.find('.y-callout--trigger').simulate('mouseEnter');
+      component.find('.y-hovercard--trigger').simulate('mouseEnter');
       jest.runTimersToTime(750);
     });
 
     it('is visible', () => {
-      expect(component.find('.y-callout--modal-container').length).toBe(1);
+      expect(component.find('.y-hovercard--modal-container').length).toBe(1);
     });
 
     describe('and the mouse hovers out of the trigger', () => {
       beforeEach(() => {
-        component.find('.y-callout--trigger').simulate('mouseLeave');
+        component.find('.y-hovercard--trigger').simulate('mouseLeave');
       });
 
-      it('the Callout closes after a delay', () => {
+      it('the Hovercard closes after a delay', () => {
         jest.runTimersToTime(500);
         expect(component.find(FabricCallout).length).toBe(0);
       });
@@ -188,20 +188,20 @@ describe('<Callout />', () => {
       describe('mousing back in', () => {
         beforeEach(() => {
           jest.runTimersToTime(250);
-          component.find('.y-callout--trigger').simulate('mouseEnter');
+          component.find('.y-hovercard--trigger').simulate('mouseEnter');
         });
 
-        it('prevents the callout from closing', () => {
+        it('prevents the hovercard from closing', () => {
           jest.runTimersToTime(500);
           expect(component.find(FabricCallout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
           beforeEach(() => {
-            component.find('.y-callout--trigger').simulate('mouseLeave');
+            component.find('.y-hovercard--trigger').simulate('mouseLeave');
           });
 
-          it('allows the Callout to close', () => {
+          it('allows the Hovercard to close', () => {
             jest.runTimersToTime(500);
             expect(component.find(FabricCallout).length).toBe(0);
           });
@@ -211,26 +211,26 @@ describe('<Callout />', () => {
 
     describe('and the mouse hovers out of the modal body', () => {
       beforeEach(() => {
-        component.find('.y-callout--modal-container').simulate('mouseLeave');
+        component.find('.y-hovercard--modal-container').simulate('mouseLeave');
       });
 
       describe('mousing back in', () => {
         beforeEach(() => {
           jest.runTimersToTime(250);
-          component.find('.y-callout--modal-container').simulate('mouseEnter');
+          component.find('.y-hovercard--modal-container').simulate('mouseEnter');
         });
 
-        it('prevents the callout from closing', () => {
+        it('prevents the hovercard from closing', () => {
           jest.runTimersToTime(500);
           expect(component.find(FabricCallout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
           beforeEach(() => {
-            component.find('.y-callout--modal-container').simulate('mouseLeave');
+            component.find('.y-hovercard--modal-container').simulate('mouseLeave');
           });
 
-          it('allows the Callout to close', () => {
+          it('allows the Hovercard to close', () => {
             jest.runTimersToTime(500);
             expect(component.find(FabricCallout).length).toBe(0);
           });
@@ -244,7 +244,7 @@ describe('<Callout />', () => {
         document.dispatchEvent(event);
       });
 
-      it('the Callout closes immediately', () => {
+      it('the Hovercard closes immediately', () => {
         expect(component.find(FabricCallout).length).toBe(0);
       });
     });
@@ -255,7 +255,7 @@ describe('<Callout />', () => {
         document.dispatchEvent(event);
       });
 
-      it('the Callout remains open', () => {
+      it('the Hovercard remains open', () => {
         expect(component.find(FabricCallout).length).toBe(1);
       });
     });
@@ -265,13 +265,13 @@ describe('<Callout />', () => {
     beforeEach(() => {
       // Need to fully render to fire off componentDidMount
       fullComponent = mount(
-        <Callout content={<div>Callout content</div>}>
+        <Hovercard content={<div>Hovercard content</div>}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
     });
 
-    it('renders the Callout', () => {
+    it('renders the Hovercard', () => {
       expect(fullComponent.find(FabricCallout).length).toBe(0);
     });
   });
@@ -280,19 +280,19 @@ describe('<Callout />', () => {
     beforeEach(() => {
       // Need to fully render to fire off componentDidMount
       fullComponent = mount(
-        <Callout content={<div>Callout content</div>} startVisible={true}>
+        <Hovercard content={<div>Hovercard content</div>} startVisible={true}>
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
     });
 
-    it('renders the Callout', () => {
+    it('renders the Hovercard', () => {
       expect(fullComponent.find(FabricCallout).length).toBe(1);
     });
 
     describe('when a hover out triggers its close timeout', () => {
       beforeEach(() => {
-        fullComponent.find('.y-callout--trigger').simulate('mouseLeave');
+        fullComponent.find('.y-hovercard--trigger').simulate('mouseLeave');
       });
 
       describe('and the component is unmounted before the timeout completes', () => {
@@ -303,7 +303,7 @@ describe('<Callout />', () => {
 
         it('the timeout has been cleared without throwing an error', () => {
           jest.runTimersToTime(500);
-          expect(fullComponent.find('.y-callout--trigger').length).toEqual(0);
+          expect(fullComponent.find('.y-hovercard--trigger').length).toEqual(0);
         });
       });
     });
@@ -319,27 +319,27 @@ describe('<Callout />', () => {
       onShow = jest.fn();
       onHide = jest.fn();
       component = shallow(
-        <Callout
-          content={<div>Callout content</div>}
+        <Hovercard
+          content={<div>Hovercard content</div>}
           onTriggerHover={onHover}
           onContentDisplay={onShow}
           onContentDismiss={onHide}
         >
           <span>Trigger</span>
-        </Callout>,
+        </Hovercard>,
       );
     });
 
     describe('when trigger content is hovered', () => {
       beforeEach(() => {
-        component.find('.y-callout--trigger').simulate('mouseEnter');
+        component.find('.y-hovercard--trigger').simulate('mouseEnter');
       });
 
       it('onTriggerHover() is called', () => {
         expect(onHover.mock.calls.length).toBe(1);
       });
 
-      describe('when Callout content pops up', () => {
+      describe('when Hovercard content pops up', () => {
         beforeEach(() => {
           jest.runAllTimers();
         });
@@ -348,9 +348,9 @@ describe('<Callout />', () => {
           expect(onShow.mock.calls.length).toBe(1);
         });
 
-        describe('when Callout content is removed', () => {
+        describe('when Hovercard content is removed', () => {
           beforeEach(() => {
-            component.find('.y-callout--trigger').simulate('mouseLeave');
+            component.find('.y-hovercard--trigger').simulate('mouseLeave');
             jest.runAllTimers();
           });
 

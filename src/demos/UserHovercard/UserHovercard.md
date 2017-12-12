@@ -1,12 +1,12 @@
 ```js
 
 <div style={{ height: '375px' }}>
-  <Callout
+  <Hovercard
     content={<UserHovercard user={user} />}
     directionalHint={4}
     startVisible={true}
   >
     <FakeLink>{user.name}</FakeLink>
-  </Callout>
+  </Hovercard>
 </div>
 ```
