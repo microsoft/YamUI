@@ -1,3 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-export { default } from './Icon';
-export * from './Icon';
+export * from './enums';
+export * from './icons';
+export { IconProps } from './BaseIcon';

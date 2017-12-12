@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { BaseButton } from 'office-ui-fabric-react/lib/Button';
 import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
-import Icon from '../Icon';
+import { Accounts as AccountsIcon } from '../Icon';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -113,11 +113,11 @@ describe('<Button />', () => {
 
   describe('with icon', () => {
     beforeEach(() => {
-      component = shallow(<Button icon="add" text={sampleText} />);
+      component = shallow(<Button icon={<AccountsIcon />} text={sampleText} />);
     });
 
     it('adds icon with class name to button', () => {
-      expect(component.find(Icon).hasClass('y-button--icon')).toBe(true);
+      expect(component.find(AccountsIcon).hasClass('y-button--icon')).toBe(true);
     });
 
     it('renders the icon on the left', () => {
@@ -131,7 +131,7 @@ describe('<Button />', () => {
     describe('on the right', () => {
       beforeEach(() => {
         component = shallow(
-          <Button icon="add" text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
+          <Button icon={<AccountsIcon />} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
         );
       });
 
@@ -190,7 +190,7 @@ describe('<Button />', () => {
 
     describe('with icon', () => {
       beforeEach(() => {
-        component = shallow(<Button icon="add" size={ButtonSize.SMALL} text={sampleText} />);
+        component = shallow(<Button icon={<AccountsIcon />} size={ButtonSize.SMALL} text={sampleText} />);
       });
 
       it('matches its snapshot', () => {
