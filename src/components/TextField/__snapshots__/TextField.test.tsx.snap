@@ -67,3 +67,23 @@ exports[`<TextField /> with default options matches its snapshot 1`] = `
   validateOnLoad={true}
 />
 `;
+
+exports[`<TextField /> with error message and description matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-text-field"
+  deferredValidationTime={200}
+  errorMessage="ERROR"
+  multiline={false}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={true}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;

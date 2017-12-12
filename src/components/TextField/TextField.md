@@ -28,6 +28,14 @@
 />
 ```
 
+```js  { "props": { "data-example": "with error and description" } }
+<TextField
+  value="Error"
+  errorMessage="Error hint goes here"
+  description="This should not be shown"
+/>
+```
+
 ```js  { "props": { "data-example": "with loading spinner" } }
 <TextField
   value="TODO: Spinner"

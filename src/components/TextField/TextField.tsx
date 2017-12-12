@@ -116,7 +116,7 @@ export default class TextField extends React.PureComponent<TextFieldProps, {}> {
         value={this.props.value}
         className={this.getClasses()}
         label={this.props.label}
-        description={this.props.description}
+        description={this.props.errorMessage ? undefined : this.props.description}
         prefix={this.props.prefix}
         suffix={this.props.suffix}
         disabled={this.props.disabled}

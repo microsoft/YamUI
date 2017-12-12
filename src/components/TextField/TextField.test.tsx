@@ -59,6 +59,20 @@ describe('<TextField />', () => {
     });
   });
 
+  describe('with error message and description', () => {
+    beforeEach(() => {
+      component = shallow(
+        <TextField
+          description="DESCRIPTION"
+          errorMessage="ERROR"
+        />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<TextField className="TEST_CLASSNAME" />);
