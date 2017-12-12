@@ -8,7 +8,6 @@ exports[`<MediaObject /> with additional className matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -25,7 +24,6 @@ exports[`<MediaObject /> with arbitrary children matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -48,7 +46,6 @@ exports[`<MediaObject /> with extra content at extra large size matches its snap
     gutterSize="xLarge"
   >
     <FixedGridColumn
-      className="y-media-object__size-xLarge--image"
       fixed={true}
       width={72}
     />
@@ -73,7 +70,6 @@ exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -90,7 +86,6 @@ exports[`<MediaObject /> with image content matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     >
@@ -112,7 +107,6 @@ exports[`<MediaObject /> with metadata content at extra small size matches its s
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-xSmall--image"
       fixed={true}
       width={24}
     />
@@ -129,7 +123,6 @@ exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -156,7 +149,6 @@ exports[`<MediaObject /> with minimal options matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -173,7 +165,6 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
     gutterSize="medium"
   >
     <FixedGridColumn
-      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />

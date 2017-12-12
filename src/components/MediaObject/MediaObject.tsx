@@ -68,7 +68,6 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
     } = this.props;
 
     const gutterSize = this.getGutterSize();
-    const imageColumnClass = `y-media-object__size-${size}--image`;
 
     const titleContentChild = titleContent && (
       <MediaObjectTitle size={size}>{titleContent}</MediaObjectTitle>
@@ -83,7 +82,7 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
     return (
       <div className={this.getClasses()}>
         <FixedGridRow gutterSize={gutterSize}>
-          <FixedGridColumn width={ImageWidthMap[size]} fixed={true} className={imageColumnClass}>
+          <FixedGridColumn width={ImageWidthMap[size]} fixed={true}>
             {imageContent}
           </FixedGridColumn>
           <FixedGridColumn>
