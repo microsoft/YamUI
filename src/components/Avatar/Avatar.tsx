@@ -17,7 +17,7 @@ const SizeMap = {
   [AvatarSize.XSMALL]: PersonaSize.size24,
 };
 
-export interface BaseAvatarProps extends BaseComponentProps {
+export interface AvatarProps extends BaseComponentProps {
   /**
    * Name of the person or object being represented. Will be used as accessible alt text.
    */
@@ -44,10 +44,6 @@ export interface BaseAvatarProps extends BaseComponentProps {
    */
   imageUrl?: string;
 
-  /**
-   * Two letters to be displayed if an `imageUrl` wasn't provided.
-   */
-  initials?: string;
 
   /**
    * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px.
@@ -56,21 +52,10 @@ export interface BaseAvatarProps extends BaseComponentProps {
   size?: AvatarSize;
 }
 
-export interface ImageAvatarProps extends BaseAvatarProps {
-  imageUrl: string;
-}
-
-export interface InitialsAvatarProps extends BaseAvatarProps {
-  initials: string;
-}
-
-// `AvatarProps` requires either `imageUrl` OR `initials`.
-export type AvatarProps = ImageAvatarProps | InitialsAvatarProps;
-
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
-export default class Avatar extends React.PureComponent<AvatarProps, {}> {
+export default class Avatar extends React.Component<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
     borderType: AvatarBorderType.ROUND,
     size: AvatarSize.MEDIUM,
@@ -90,7 +75,6 @@ export default class Avatar extends React.PureComponent<AvatarProps, {}> {
       <div className={this.getClasses()}>
         <Persona
           imageUrl={imageUrl}
-          imageInitials={this.getInitials()}
           size={personaSize}
           hidePersonaDetails={true}
           primaryText={name}
@@ -99,16 +83,6 @@ export default class Avatar extends React.PureComponent<AvatarProps, {}> {
         <ScreenreaderText>{this.getAccessibleText()}</ScreenreaderText>
       </div>
     );
-  }
-
-  private getInitials() {
-    const { initials, size } = this.props;
-
-    if (!initials) {
-      return;
-    }
-
-    return initials.substring(0, size === AvatarSize.XSMALL ? 1 : 2);
   }
 
   private getAccessibleText() {

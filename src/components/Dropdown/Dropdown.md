@@ -15,7 +15,7 @@ const options = [
   { key: 'C', text: 'Option C' },
 ];
 
-class ControlledDropdown extends React.PureComponent {
+class ControlledDropdown extends React.Component {
   constructor() {
     super();
 

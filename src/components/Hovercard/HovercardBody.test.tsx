@@ -1,14 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import CalloutBody, { CalloutBodyProps } from './CalloutBody';
+import HovercardBody, { HovercardBodyProps } from './HovercardBody';
 
-describe('<CalloutBody />', () => {
-  let component: ShallowWrapper<CalloutBodyProps, {}>;
+describe('<HovercardBody />', () => {
+  let component: ShallowWrapper<HovercardBodyProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<CalloutBody>body content</CalloutBody>);
+      component = shallow(<HovercardBody>body content</HovercardBody>);
     });
 
     it('renders its given content', () => {
@@ -16,7 +16,7 @@ describe('<CalloutBody />', () => {
     });
 
     it('contains its base className', () => {
-      expect(component.hasClass('y-callout--body')).toBe(true);
+      expect(component.hasClass('y-hovercard--body')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -26,7 +26,7 @@ describe('<CalloutBody />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<CalloutBody className="TEST_CLASSNAME">body content</CalloutBody>);
+      component = shallow(<HovercardBody className="TEST_CLASSNAME">body content</HovercardBody>);
     });
 
     it('includes that className', () => {
@@ -34,7 +34,7 @@ describe('<CalloutBody />', () => {
     });
 
     it('still has its base className', () => {
-      expect(component.hasClass('y-callout--body')).toBe(true);
+      expect(component.hasClass('y-hovercard--body')).toBe(true);
     });
 
     it('matches its snapshot', () => {

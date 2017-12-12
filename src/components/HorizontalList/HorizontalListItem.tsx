@@ -11,7 +11,7 @@ export { HorizontalListItemProps };
 /**
  * Each of the items nested within a `HorizontalList` component.
  */
-export default class HorizontalListItem extends React.PureComponent<HorizontalListItemProps, {}> {
+export default class HorizontalListItem extends React.Component<HorizontalListItemProps, {}> {
   render() {
     const { children } = this.props;
 

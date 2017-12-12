@@ -4,9 +4,9 @@ import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
 import {
-  CalloutHeader,
-  CalloutBody,
-} from '../../components/Callout';
+  HovercardHeader,
+  HovercardBody,
+} from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
@@ -29,7 +29,7 @@ export interface UserHovercardProps {
   user: any;
 }
 
-export default class UserHovercard extends React.PureComponent<UserHovercardProps, {}> {
+export default class UserHovercard extends React.Component<UserHovercardProps, {}> {
   render() {
     const { user } = this.props;
 
@@ -38,15 +38,15 @@ export default class UserHovercard extends React.PureComponent<UserHovercardProp
 
     return (
       <div>
-        <CalloutHeader>
+        <HovercardHeader>
           <MediaObject
             size={MediaObjectSize.LARGE}
             imageContent={userAvatar}
             titleContent={user.name}
             metadataContent={user.jobTitle}
           />
-        </CalloutHeader>
-        <CalloutBody>
+        </HovercardHeader>
+        <HovercardBody>
           <Block textSize={TextSize.MEDIUM_SUB}>
             <Block bottomSpacing={GutterSize.LARGE}>
               <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.XSMALL}>
@@ -77,7 +77,7 @@ export default class UserHovercard extends React.PureComponent<UserHovercardProp
               </HorizontalListItem>
             </HorizontalList>
           </Block>
-        </CalloutBody>
+        </HovercardBody>
       </div>
     );
   }
