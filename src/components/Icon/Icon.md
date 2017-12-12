@@ -80,7 +80,8 @@ const longText = (
     <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="checkMark" /> The quick brown fox jumps over the lazy dog.
     <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="like" />
+    <Icon icon="add" /> The quick brown fox jumps over the lazy dog.
+    <Icon icon="like" /> LIKE
   </span>
 );
 
@@ -157,13 +158,13 @@ const { IconSize } = require('.');
 
 <div>
   <p>
-    This is a line of text with a <Icon size={IconSize.SMALL} icon="add" /> inline icon.
+    This is a line of text with a <Icon size={IconSize.MEDIUM} icon="add" /> inline icon.
   </p>
   <p style={{ color: 'blue' }}>
-    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="add" /> inline icon.
+    This is a line of colored text with a <Icon size={IconSize.MEDIUM} icon="add" /> inline icon.
   </p>
   <p>
-    This is a line of colored text with a <Icon size={IconSize.SMALL} icon="add" color="red" /> inline icon that overrides its color.
+    This is a line of colored text with a <Icon size={IconSize.MEDIUM} icon="add" color="red" /> inline icon that overrides its color.
   </p>
 </div>
 ```

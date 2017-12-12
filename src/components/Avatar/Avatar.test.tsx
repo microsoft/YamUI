@@ -36,28 +36,9 @@ describe('<Avatar />', () => {
     });
   });
 
-  describe('with initials', () => {
-    beforeEach(() => {
-      component = shallow(<Avatar name="NAME" initials="AB" />);
-    });
-
-    it('renders the initials', () => {
-      expect(
-        component
-          .find(Persona)
-          .render()
-          .text(),
-      ).toEqual('AB');
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
   describe('with too many characters', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" initials="ABCD" />);
+      component = shallow(<Avatar name="First Last" />);
     });
 
     it('only renders 2 letters', () => {
@@ -66,26 +47,7 @@ describe('<Avatar />', () => {
           .find(Persona)
           .render()
           .text(),
-      ).toEqual('AB');
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with too many characters and size XSMALL', () => {
-    beforeEach(() => {
-      component = shallow(<Avatar name="NAME" initials="ABCD" size={AvatarSize.XSMALL} />);
-    });
-
-    it('only renders 1 letter', () => {
-      expect(
-        component
-          .find(Persona)
-          .render()
-          .text(),
-      ).toEqual('A');
+      ).toEqual('FL');
     });
 
     it('matches its snapshot', () => {
