@@ -10,12 +10,8 @@
   padding: 7px 12px 8px;
 }
 
-.y-message-bar__nowrap {
+.y-message-bar--actions {
   white-space: nowrap;
-}
-
-.y-message-bar__nowrap svg {
-  margin-right: .1rem;
 }
 
 .y-message-bar__type-warning {

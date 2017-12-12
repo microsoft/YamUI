@@ -27,6 +27,7 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
       content
     </FixedGridColumn>
     <FixedGridColumn
+      className="y-message-bar--actions"
       fixed={true}
     >
       <FakeLink>
