@@ -10,6 +10,7 @@ Regular buttons:
 
 ```js { "props": { "data-example": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
+const { Add, ChevronRightMed, ChevronDownMed } = require('../Icon');
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';

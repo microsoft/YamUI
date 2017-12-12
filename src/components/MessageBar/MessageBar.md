@@ -25,18 +25,18 @@ const { MessageBarType } = require('.');
 Warning with an icon action:
 
 ```js { "props": { "data-example": "with icon action" } }
-const { IconSize } = require('../Icon');
+const { IconSize, Lock } = require('../Icon');
 const { TextSize } = require('../Text');
 const { MessageBarType } = require('.');
 
-const icon = (
+const action = (
   <span>
-    <Icon icon="lock" size={IconSize.XSMALL} />
+    <Lock size={IconSize.XSMALL} />
     <Text size={TextSize.SMALL}>+1</Text>
   </span>
 );
 
-<MessageBar actions={icon} type={MessageBarType.WARNING}>
+<MessageBar actions={action} type={MessageBarType.WARNING}>
   Watch out, something unexpected might happen.
 </MessageBar>
 ```
@@ -44,18 +44,18 @@ const icon = (
 Warning with an icon action and multiple lines:
 
 ```js { "props": { "data-example": "with icon action" } }
-const { IconSize } = require('../Icon');
+const { IconSize, Lock } = require('../Icon');
 const { TextSize } = require('../Text');
 const { MessageBarType } = require('.');
 
-const icon = (
+const action = (
   <span>
-    <Icon icon="lock" size={IconSize.XSMALL} />
+    <Lock size={IconSize.XSMALL} />
     <Text size={TextSize.SMALL}>+1</Text>
   </span>
 );
 
-<MessageBar actions={icon} type={MessageBarType.WARNING}>
+<MessageBar actions={action} type={MessageBarType.WARNING}>
   Watch out, something unexpected might happen. This is an example on how a pretty long copy is going to scale. As you can see it keeps the proper margin between the main copy text and the icon on the right.
 </MessageBar>
 ```

@@ -6,7 +6,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from './enums';
-import Icon, { IconName } from '../Icon';
+import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
 
 export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize };
@@ -38,7 +38,7 @@ export interface BaseButtonProps extends BaseComponentProps {
   /**
    * Optional icon.
    */
-  icon?: IconName;
+  icon?: typeof BaseIcon;
 
   /**
    * Icon position.
@@ -169,13 +169,13 @@ export default class Button extends React.Component<ButtonProps, {}> {
   }
 
   private getContents() {
-    const { icon, iconPosition, size, text } = this.props;
+    const { icon: Icon, iconPosition, size, text } = this.props;
 
     const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
 
-    const buttonIcon = icon && (
+    const buttonIcon = Icon && (
       <span className={`y-button--icon-wrapper-${iconPosition}`}>
-        <Icon className="y-button--icon" icon={icon} />
+        <Icon />
       </span>
     );
 

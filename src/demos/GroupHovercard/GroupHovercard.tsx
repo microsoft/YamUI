@@ -10,11 +10,11 @@ import {
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
-import Icon, { IconSize } from '../../components/Icon';
+import { Add, Group, Lock, IconSize } from '../../components/Icon';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
-const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block={true} color="#a8b0bd" />;
-const iconPrivate = <Icon size={IconSize.XSMALL} icon="lock" color="#a8b0bd" />;
+const iconGroup = <Group size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
+const iconPrivate = <Lock size={IconSize.XSMALL} color="#a8b0bd" />;
 
 const memberImage = 'user.png';
 const memberAvatar1 = (
@@ -98,7 +98,7 @@ export default class GroupHovercard extends React.Component<GroupHovercardProps,
 
             <HorizontalList align="right">
               <HorizontalListItem>
-                <Button text="Join" color={ButtonColor.PRIMARY} icon="add" />
+                <Button text="Join" color={ButtonColor.PRIMARY} icon={Add} />
               </HorizontalListItem>
             </HorizontalList>
           </Block>

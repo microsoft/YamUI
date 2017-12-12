@@ -27,8 +27,7 @@
   "collectCoverage": true,
   "mapCoverage": true,
   "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/components/Icon/icons/*.{tsx}"
+    "src/**/*.{js,jsx,ts,tsx}"
   ],
   "coverageDirectory": "build/jest/coverage",
   "coverageReporters": [
