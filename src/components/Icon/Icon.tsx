@@ -43,7 +43,7 @@ interface IconStyles {
 /**
  * An `Icon` renders an SVG icon.
  */
-export default class Icon extends React.PureComponent<IconProps, {}> {
+export default class Icon extends React.Component<IconProps, {}> {
   public render() {
     const { icon } = this.props;
     const CurrentIcon = icons[icon];
@@ -73,7 +73,7 @@ export default class Icon extends React.PureComponent<IconProps, {}> {
 
   private getInlineStyles() {
     const { color, size } = this.props;
-    
+
     const styles: IconStyles = {};
 
     if (size) {

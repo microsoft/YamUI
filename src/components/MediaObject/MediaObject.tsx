@@ -56,7 +56,7 @@ const ImageWidthMap = {
  * image area, and pieces of text content, are passed in as props, with size and layout determined
  * by the `size` prop.
  */
-export default class MediaObject extends React.PureComponent<MediaObjectProps, {}> {
+export default class MediaObject extends React.Component<MediaObjectProps, {}> {
   render() {
     const {
       size,

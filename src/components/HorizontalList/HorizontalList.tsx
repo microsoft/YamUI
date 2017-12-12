@@ -15,7 +15,7 @@ export interface HorizontalListProps extends NestableBaseComponentProps {
 /**
  * A `HorizontalList` displays a horizontal list of evenly spaced items.
  */
-export default class HorizontalList extends React.PureComponent<HorizontalListProps, {}> {
+export default class HorizontalList extends React.Component<HorizontalListProps, {}> {
   static defaultProps = {
     align: 'left',
   };

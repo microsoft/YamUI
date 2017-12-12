@@ -63,7 +63,7 @@ export interface ImageProps extends BaseComponentProps {
  * applied to the wrapper `div`, and the image will get scaled/positioned within the wrapper
  * depending on which props you provide.
  */
-export default class Image extends React.PureComponent<ImageProps, {}> {
+export default class Image extends React.Component<ImageProps, {}> {
   static defaultProps: Partial<ImageProps> = {
     fullWidth: false,
     shouldFadeIn: false,
