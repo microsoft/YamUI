@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Callout /> with additional className matches its snapshot 1`] = `
+exports[`<Hovercard /> with additional className matches its snapshot 1`] = `
 <span
-  className="y-callout TEST_CLASSNAME"
+  className="y-hovercard TEST_CLASSNAME"
 >
   <span
-    className="y-callout--trigger"
+    className="y-hovercard--trigger"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -17,12 +17,12 @@ exports[`<Callout /> with additional className matches its snapshot 1`] = `
 </span>
 `;
 
-exports[`<Callout /> with default options at initial render matches its snapshot 1`] = `
+exports[`<Hovercard /> with default options at initial render matches its snapshot 1`] = `
 <span
-  className="y-callout"
+  className="y-hovercard"
 >
   <span
-    className="y-callout--trigger"
+    className="y-hovercard--trigger"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -34,12 +34,12 @@ exports[`<Callout /> with default options at initial render matches its snapshot
 </span>
 `;
 
-exports[`<Callout /> with screenreaderTitle matches its snapshot 1`] = `
+exports[`<Hovercard /> with screenreaderTitle matches its snapshot 1`] = `
 <span
-  className="y-callout"
+  className="y-hovercard"
 >
   <span
-    className="y-callout--trigger"
+    className="y-hovercard--trigger"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -55,7 +55,7 @@ exports[`<Callout /> with screenreaderTitle matches its snapshot 1`] = `
     preventDismissOnScroll={false}
   >
     <div
-      className="y-callout--modal-container"
+      className="y-hovercard--modal-container"
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
@@ -65,7 +65,7 @@ exports[`<Callout /> with screenreaderTitle matches its snapshot 1`] = `
         </h1>
       </ScreenreaderText>
       <div>
-        Callout content
+        Hovercard content
       </div>
     </div>
   </Callout>

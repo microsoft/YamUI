@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HovercardBody /> with additional className matches its snapshot 1`] = `
+<div
+  className="y-hovercard--body TEST_CLASSNAME"
+>
+  <Block
+    padding="xLarge"
+  >
+    body content
+  </Block>
+</div>
+`;
+
+exports[`<HovercardBody /> with default options matches its snapshot 1`] = `
+<div
+  className="y-hovercard--body"
+>
+  <Block
+    padding="xLarge"
+  >
+    body content
+  </Block>
+</div>
+`;

@@ -12,10 +12,10 @@ export { FakeLinkProps };
  * component). It is meant to be nested within unstyled `NavigationLink` or `Clickable`
  * components, allowing an entire block of content to be an accessible tabbable element while
  * still showing individual nested "links" for sighted users.
- * 
+ *
  * NOTE: If you are looking for click interaction please see [Clickable](#clickable).
  */
-export default class FakeLink extends React.PureComponent<FakeLinkProps, {}> {
+export default class FakeLink extends React.Component<FakeLinkProps, {}> {
   render() {
     const { className, children } = this.props;
 

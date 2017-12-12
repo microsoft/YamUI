@@ -55,7 +55,7 @@ export interface AvatarProps extends BaseComponentProps {
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
-export default class Avatar extends React.PureComponent<AvatarProps, {}> {
+export default class Avatar extends React.Component<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
     borderType: AvatarBorderType.ROUND,
     size: AvatarSize.MEDIUM,

@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 
-export default class MessageReply extends React.PureComponent<{}, {}> {
+export default class MessageReply extends React.Component<{}, {}> {
   render() {
     return (
       <div>

@@ -38,7 +38,7 @@ export interface ClickableProps extends NestableBaseComponentProps {
  * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
  * content in a `button` element.
  */
-export default class Clickable extends React.PureComponent<ClickableProps, {}> {
+export default class Clickable extends React.Component<ClickableProps, {}> {
   render() {
     const { ariaLabel, title, unstyled, onClick, children } = this.props;
 

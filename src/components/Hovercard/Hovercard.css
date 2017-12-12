@@ -2,11 +2,11 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
-.y-callout--modal-container {
+.y-hovercard--modal-container {
   @extend text__medium;
   width: 340px;
 }
-.y-callout--header {
+.y-hovercard--header {
   border-bottom: 2px solid $borderColor__tertiary;
 }
 

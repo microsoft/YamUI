@@ -14,7 +14,7 @@ export { ScreenreaderTextProps };
  * Use this component whenever a screenreader should be able to read aloud additional context for
  * your UI features.
  */
-export default class ScreenreaderText extends React.PureComponent<ScreenreaderTextProps, {}> {
+export default class ScreenreaderText extends React.Component<ScreenreaderTextProps, {}> {
   render() {
     const { className, children } = this.props;
 

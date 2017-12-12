@@ -27,7 +27,7 @@ export interface MessageBarProps extends NestableBaseComponentProps {
  * A `MessageBar` displays relevant status information. You can use a `MessageBar` to tell the user
  * about a situation, and optionally provide actions for them to take.
  */
-export default class MessageBar extends React.PureComponent<MessageBarProps, {}> {
+export default class MessageBar extends React.Component<MessageBarProps, {}> {
   static defaultProps = {
     type: MessageBarType.INFO,
   };
