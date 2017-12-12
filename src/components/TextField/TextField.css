@@ -12,12 +12,7 @@
 
 .y-text-field .ms-TextField-fieldGroup {
   line-height: 3.3rem;
-  height: 36px;
-}
-
-.y-text-field.ms-TextField--multiline .ms-TextField-field {
-  padding-top: 10px;
-  padding-bottom: 7px;
+  height: 3.6rem;
 }
 
 .y-text-field.ms-TextField--underlined .ms-TextField-field {
@@ -27,22 +22,22 @@
 .y-text-field .ms-TextField-field {
   @extend text__mediumSub;
   color: $textColor;
-  padding: 0 8px;
+  padding: 0 .8rem;
 }
 
 .y-text-field--with-prefix.ms-TextField--underlined .ms-TextField-field,
 .y-text-field--with-prefix .ms-TextField-field {
-  padding-left: 4px;
+  padding-left: .4rem;
 }
 
 .y-text-field--with-suffix.ms-TextField--underlined .ms-TextField-field,
 .y-text-field--with-suffix .ms-TextField-field {
-  padding-right: 4px;
+  padding-right: .4rem;
 }
 
 .y-text-field .ms-TextField-prefix,
 .y-text-field .ms-TextField-suffix {
-  padding: 0 8px;
+  padding: 0 .8rem;
 }
 
 .y-text-field.is-disabled .ms-TextField-field {
