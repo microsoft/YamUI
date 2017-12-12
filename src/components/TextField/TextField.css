@@ -55,6 +55,7 @@
 }
 
 /* Hide the asterisk that comes with required=true */
+.y-text-field .ms-Label::after,
 .y-text-field .ms-TextField-fieldGroup::after {
   display: none;
 }
