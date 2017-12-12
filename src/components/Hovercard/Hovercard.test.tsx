@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import { Callout as FabricCallout } from 'office-ui-fabric-react/lib/Callout';
+import Callout from '../Callout';
 import { Key } from '../../util/enums';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
@@ -30,7 +30,7 @@ describe('<Hovercard />', () => {
       });
 
       it('does not show the hovercard', () => {
-        expect(component.find(FabricCallout).length).toBe(0);
+        expect(component.find(Callout).length).toBe(0);
       });
 
       it('matches its snapshot', () => {
@@ -182,7 +182,7 @@ describe('<Hovercard />', () => {
 
       it('the Hovercard closes after a delay', () => {
         jest.runTimersToTime(500);
-        expect(component.find(FabricCallout).length).toBe(0);
+        expect(component.find(Callout).length).toBe(0);
       });
 
       describe('mousing back in', () => {
@@ -193,7 +193,7 @@ describe('<Hovercard />', () => {
 
         it('prevents the hovercard from closing', () => {
           jest.runTimersToTime(500);
-          expect(component.find(FabricCallout).length).toBe(1);
+          expect(component.find(Callout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
@@ -203,7 +203,7 @@ describe('<Hovercard />', () => {
 
           it('allows the Hovercard to close', () => {
             jest.runTimersToTime(500);
-            expect(component.find(FabricCallout).length).toBe(0);
+            expect(component.find(Callout).length).toBe(0);
           });
         });
       });
@@ -222,7 +222,7 @@ describe('<Hovercard />', () => {
 
         it('prevents the hovercard from closing', () => {
           jest.runTimersToTime(500);
-          expect(component.find(FabricCallout).length).toBe(1);
+          expect(component.find(Callout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
@@ -232,7 +232,7 @@ describe('<Hovercard />', () => {
 
           it('allows the Hovercard to close', () => {
             jest.runTimersToTime(500);
-            expect(component.find(FabricCallout).length).toBe(0);
+            expect(component.find(Callout).length).toBe(0);
           });
         });
       });
@@ -245,7 +245,7 @@ describe('<Hovercard />', () => {
       });
 
       it('the Hovercard closes immediately', () => {
-        expect(component.find(FabricCallout).length).toBe(0);
+        expect(component.find(Callout).length).toBe(0);
       });
     });
 
@@ -256,7 +256,7 @@ describe('<Hovercard />', () => {
       });
 
       it('the Hovercard remains open', () => {
-        expect(component.find(FabricCallout).length).toBe(1);
+        expect(component.find(Callout).length).toBe(1);
       });
     });
   });
@@ -272,7 +272,7 @@ describe('<Hovercard />', () => {
     });
 
     it('renders the Hovercard', () => {
-      expect(fullComponent.find(FabricCallout).length).toBe(0);
+      expect(fullComponent.find(Callout).length).toBe(0);
     });
   });
 
@@ -287,7 +287,7 @@ describe('<Hovercard />', () => {
     });
 
     it('renders the Hovercard', () => {
-      expect(fullComponent.find(FabricCallout).length).toBe(1);
+      expect(fullComponent.find(Callout).length).toBe(1);
     });
 
     describe('when a hover out triggers its close timeout', () => {
