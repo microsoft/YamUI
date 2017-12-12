@@ -7,7 +7,7 @@
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
-  padding-bottom: 4px;
+  padding-bottom: .4rem;
 }
 
 .y-text-field .ms-TextField-fieldGroup {
