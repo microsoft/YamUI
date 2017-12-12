@@ -131,7 +131,11 @@ describe('<Button />', () => {
     describe('on the right', () => {
       beforeEach(() => {
         component = shallow(
-          <Button icon={<AccountsIcon />} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
+          <Button
+            icon={<AccountsIcon />}
+            text={sampleText}
+            iconPosition={ButtonIconPosition.RIGHT}
+          />,
         );
       });
 
@@ -190,7 +194,9 @@ describe('<Button />', () => {
 
     describe('with icon', () => {
       beforeEach(() => {
-        component = shallow(<Button icon={<AccountsIcon />} size={ButtonSize.SMALL} text={sampleText} />);
+        component = shallow(
+          <Button icon={<AccountsIcon />} size={ButtonSize.SMALL} text={sampleText} />,
+        );
       });
 
       it('matches its snapshot', () => {

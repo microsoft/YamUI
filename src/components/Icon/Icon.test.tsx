@@ -96,20 +96,13 @@ describe('<Icon />', () => {
   });
 
   describe('each Icon', () => {
+    // TODO: LOOP
     beforeEach(() => {
       component = shallow(<Accounts />);
     });
 
     it('has the correct viewBox', () => {
       expect(component.getNode().props.viewBox).toBe('0 0 240 240');
-    });
-
-    it('has the correct height', () => {
-      expect(component.getNode().props.height).toBe('240');
-    });
-
-    it('has the correct width', () => {
-      expect(component.getNode().props.width).toBe('240');
     });
   });
 });
