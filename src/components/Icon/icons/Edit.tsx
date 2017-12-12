@@ -5,7 +5,7 @@
 import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
-export default class edit extends BaseIcon {
+export default class Edit extends BaseIcon {
   render() {
     return (
       <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
