@@ -13,7 +13,8 @@ const svgoConfig = require('./config.json');
 
 const sourceIconsPath = path.resolve(__dirname, '../../assets/icons');
 const destIconsPath = path.resolve(__dirname, '../../src/components/Icon/icons');
-const templatePath = path.resolve(__dirname, 'template.ejs');
+const indexTemplatePath = path.resolve(__dirname, 'indexTemplate.ejs');
+const iconTemplatePath = path.resolve(__dirname, 'iconTemplate.ejs');
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -21,6 +22,15 @@ const globFiles = util.promisify(glob);
 
 const optimizer = new SVGO(svgoConfig);
 const converter = new HTMLtoJSX({ createClass: false });
+
+async function generateIndex(icons, indexTemplate) {
+  const iconNames = icons.map(icon => path.basename(icon, path.extname(icon)));
+  const indexContents = template(indexTemplate)({ icons: iconNames });
+
+  const destIndexPath = path.resolve(destIconsPath, 'index.ts');
+  console.log(`Writing index to ${destIndexPath}`);
+  await writeFile(destIndexPath, indexContents, 'utf8');
+}
 
 async function convertIcon(icon, iconTemplate) {
   try {
@@ -43,8 +53,10 @@ async function convertIcon(icon, iconTemplate) {
 }
 
 (async () => {
-  const iconTemplate = await readFile(templatePath);
+  const indexTemplate = await readFile(indexTemplatePath);
+  const iconTemplate = await readFile(iconTemplatePath);
   const icons = await globFiles(`${sourceIconsPath}/*.svg`, {});
+  await generateIndex(icons, indexTemplate);
   icons.forEach((icon) => {
     convertIcon(icon, iconTemplate);
   });
