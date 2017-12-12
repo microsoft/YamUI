@@ -3,13 +3,14 @@
 // This file was auto-generated -- do not edit
 
 import * as React from 'react';
+import BaseIcon from '../BaseIcon';
 
-const ForwardAlt = function ForwardAlt(props: any) {
-  return (
-    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path fillRule="evenodd" d="M26.953 105v15H196.29l-47.11 47.227 10.548 10.546L225 112.5l-65.273-65.273-10.547 10.546L196.29 105z" />
-    </svg>
-  );
-};
-
-export default ForwardAlt;
+export default class ForwardAlt extends BaseIcon {
+  render() {
+    return (
+      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+        <path fillRule="evenodd" d="M26.953 105v15H196.29l-47.11 47.227 10.548 10.546L225 112.5l-65.273-65.273-10.547 10.546L196.29 105z" />
+      </svg>
+    );
+  }
+}

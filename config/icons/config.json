@@ -3,8 +3,6 @@
     { "mergePaths": true },
     { "transformsWithOnePath": true },
     { "removeTitle": true },
-    { "removeXMLNS": true },
-    { "removeDimensions": true },
     { "sortAttrs": true },
     { "removeStyleElement": true },
     { "removeScriptElement": true },

@@ -3,13 +3,14 @@
 // This file was auto-generated -- do not edit
 
 import * as React from 'react';
+import BaseIcon from '../BaseIcon';
 
-const CheckboxComposite = function CheckboxComposite(props: any) {
-  return (
-    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path fillRule="evenodd" d="M240 0v240H0V0h240zm-15 15H15v210h210V15zM90 190.664l-50.273-50.39 10.546-10.547L90 169.336l99.727-99.61 10.546 10.547L90 190.664z" />
-    </svg>
-  );
-};
-
-export default CheckboxComposite;
+export default class CheckboxComposite extends BaseIcon {
+  render() {
+    return (
+      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+        <path fillRule="evenodd" d="M240 0v240H0V0h240zm-15 15H15v210h210V15zM90 190.664l-50.273-50.39 10.546-10.547L90 169.336l99.727-99.61 10.546 10.547L90 190.664z" />
+      </svg>
+    );
+  }
+}

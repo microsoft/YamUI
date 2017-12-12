@@ -3,13 +3,14 @@
 // This file was auto-generated -- do not edit
 
 import * as React from 'react';
+import BaseIcon from '../BaseIcon';
 
-const SortUp = function SortUp(props: any) {
-  return (
-    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path fillRule="evenodd" d="M177.547 58.773L167 69.32l-39.61-39.492-.117 210.469h-15l.118-210.82L72.547 69.32 62 58.773 119.773 1z" />
-    </svg>
-  );
-};
-
-export default SortUp;
+export default class SortUp extends BaseIcon {
+  render() {
+    return (
+      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+        <path fillRule="evenodd" d="M177.547 58.773L167 69.32l-39.61-39.492-.117 210.469h-15l.118-210.82L72.547 69.32 62 58.773 119.773 1z" />
+      </svg>
+    );
+  }
+}

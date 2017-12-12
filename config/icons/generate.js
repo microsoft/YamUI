@@ -5,9 +5,10 @@ const fs = require('fs');
 const path = require('path');
 const util = require('util');
 const glob = require('glob');
-const { template } = require('lodash');
-const HTMLtoJSX = require('htmltojsx');
 const SVGO = require('svgo');
+const { JSDOM } = require('jsdom');
+const HTMLtoJSX = require('htmltojsx');
+const { template } = require('lodash');
 const svgoConfig = require('./config.json');
 
 const sourceIconsPath = path.resolve(__dirname, '../../assets/icons');
@@ -26,8 +27,11 @@ async function convertIcon(icon, iconTemplate) {
     const iconContents = await readFile(icon, 'utf8');
     const optimizedIconContents = await optimizer.optimize(iconContents.toString());
 
+    const { window } = new JSDOM(optimizedIconContents.data);
+    const { innerHTML } = window.document.querySelector('svg');
+
     const name = path.basename(icon, path.extname(icon));
-    const jsx = converter.convert(optimizedIconContents.data).trim();
+    const jsx = converter.convert(innerHTML).trim();
     const classContents = template(iconTemplate)({ name, jsx });
 
     const destIconPath = path.resolve(destIconsPath, `${name}.tsx`);

@@ -3,13 +3,14 @@
 // This file was auto-generated -- do not edit
 
 import * as React from 'react';
+import BaseIcon from '../BaseIcon';
 
-const ChevronUpMed = function ChevronUpMed(props: any) {
-  return (
-    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path fillRule="evenodd" d="M197.168 162.803L120 85.635l-77.168 77.168-10.635-10.635L120 64.365l87.803 87.803z" />
-    </svg>
-  );
-};
-
-export default ChevronUpMed;
+export default class ChevronUpMed extends BaseIcon {
+  render() {
+    return (
+      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+        <path fillRule="evenodd" d="M197.168 162.803L120 85.635l-77.168 77.168-10.635-10.635L120 64.365l87.803 87.803z" />
+      </svg>
+    );
+  }
+}

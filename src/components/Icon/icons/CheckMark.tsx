@@ -3,13 +3,14 @@
 // This file was auto-generated -- do not edit
 
 import * as React from 'react';
+import BaseIcon from '../BaseIcon';
 
-const CheckMark = function CheckMark(props: any) {
-  return (
-    <svg viewBox="0 0 240 240" width={240} height={240} {...props}>
-      <path fillRule="evenodd" d="M215.273 65.273L90 190.664l-65.273-65.39 10.546-10.547L90 169.336l114.727-114.61z" />
-    </svg>
-  );
-};
-
-export default CheckMark;
+export default class CheckMark extends BaseIcon {
+  render() {
+    return (
+      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+        <path fillRule="evenodd" d="M215.273 65.273L90 190.664l-65.273-65.39 10.546-10.547L90 169.336l114.727-114.61z" />
+      </svg>
+    );
+  }
+}
