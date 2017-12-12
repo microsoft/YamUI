@@ -1,5 +1,6 @@
 ### Examples
 
+Basic
 ```js { "props": { "data-example": "basic" } }
 <TextField
   label="First Name"
@@ -8,27 +9,31 @@
 />
 ```
 
-```js  { "props": { "data-example": "disabled" } }
+Disabled
+```js { "props": { "data-example": "disabled" } }
 <TextField
   value="Disabled"
   disabled
 />
 ```
 
-```js  { "props": { "data-example": "with placeholder" } }
+With Placeholder
+```js { "props": { "data-example": "with placeholder" } }
 <TextField
   placeHolder="Textfield Placeholder..."
 />
 ```
 
-```js  { "props": { "data-example": "with error" } }
+With Error Message
+```js { "props": { "data-example": "with error" } }
 <TextField
   value="Error"
   errorMessage="Error hint goes here"
 />
 ```
 
-```js  { "props": { "data-example": "with error and description" } }
+With Error Message and Description.  (NOTE: The description is hidden.)
+```js { "props": { "data-example": "with error and description" } }
 <TextField
   value="Error"
   errorMessage="Error hint goes here"
@@ -36,67 +41,47 @@
 />
 ```
 
-```js  { "props": { "data-example": "with loading spinner" } }
-<TextField
-  value="TODO: Spinner"
-/>
-```
-
-```js  { "props": { "data-example": "with prefix" } }
+With Prefix
+```js { "props": { "data-example": "with prefix" } }
 <TextField
   placeHolder="your-website.com"
   prefix="http://"
 />
 ```
 
-```js  { "props": { "data-example": "with suffix" } }
+With Suffix
+```js { "props": { "data-example": "with suffix" } }
 <TextField
   placeHolder="your e-mail"
   suffix="@contoso.com"
 />
 ```
 
-Underlined Variation
-```js  { "props": { "data-example": "basic underlined" } }
-<TextField
-  placeHolder="Textfield Placeholder..."
-  underlined
-/>
-```
-
-```js  { "props": { "data-example": "underlined with error" } }
-<TextField
-  errorMessage="Error hint goes here"
-  placeHolder="Textfield Error"
-  underlined
-/>
-```
-
 Required:
-```js  { "props": { "data-example": "required" } }
-<TextField
-  label={"Required Field"}
-  required
-/>
-```
-
-Required without a label:
-```js  { "props": { "data-example": "required" } }
+```js { "props": { "data-example": "required" } }
 <TextField
   placeHolder="Required Field"
   required
 />
 ```
 
+Required with Label:
+```js { "props": { "data-example": "required with label" } }
+<TextField
+  label={"Required Field"}
+  required
+/>
+```
+
 onChange:
-```js
+```js { "props": { "data-example": "onChange" } }
 <TextField
   onChange={action('change from `onChange` example')}
 />
 ```
 
 Controlled onChange with debounce:
-```js
+```js { "props": { "data-example": "controlled onChange with debounce" } }
 class ControlledTextField extends React.PureComponent {
   constructor() {
     super();
@@ -121,4 +106,29 @@ class ControlledTextField extends React.PureComponent {
 }
 
 <ControlledTextField />
+```
+
+Beside Button
+```js { "props": { "data-example": "beside button" } }
+<FixedGridRow>
+  <FixedGridColumn><TextField/></FixedGridColumn>
+  <FixedGridColumn><Button text="Submit" /></FixedGridColumn>
+</FixedGridRow>
+```
+
+Underlined Variation
+```js { "props": { "data-example": "basic underlined" } }
+<TextField
+  placeHolder="Textfield Placeholder..."
+  underlined
+/>
+```
+
+Underlined Variation With Error
+```js { "props": { "data-example": "underlined with error" } }
+<TextField
+  errorMessage="Error hint goes here"
+  placeHolder="Textfield Error"
+  underlined
+/>
 ```
