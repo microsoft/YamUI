@@ -2,20 +2,20 @@
 import '../../yamui';
 import * as React from 'react';
 import classNames = require('classnames');
-import { NestableBaseComponentProps as CalloutBodyProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps as HovercardHeaderProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
 
-export { CalloutBodyProps };
+export { HovercardHeaderProps };
 
 /**
- * Body of a `Callout` component. Used to maintain a consistent layout.
+ * Header of a `Hovercard` component. Used to maintain a consistent layout.
  */
-export default class CalloutBody extends React.PureComponent<CalloutBodyProps, {}> {
+export default class HovercardHeader extends React.PureComponent<HovercardHeaderProps, {}> {
   render() {
     const { className, children } = this.props;
 
     return (
-      <div className={classNames('y-callout--body', className)}>
+      <div className={classNames('y-hovercard--header', className)}>
         <Block padding={GutterSize.XLARGE}>{children}</Block>
       </div>
     );

@@ -7,7 +7,7 @@ import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-reac
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
-import './Callout.css';
+import './Hovercard.css';
 
 const hideDelay = 500;
 const showDelay = 750;
@@ -17,21 +17,21 @@ export enum TriggerType {
   HOVER = 'hover',
 }
 
-export interface CalloutProps extends NestableBaseComponentProps {
+export interface HovercardProps extends NestableBaseComponentProps {
   /**
-   * The content to populate the callout's popup area.
+   * The content to populate the Hovercard's popup area.
    */
   content: React.ReactNode;
 
   /**
-   * Direction to place the callout in relationship to its visible trigger content. Note that this
+   * Direction to place the Hovercard in relationship to its visible trigger content. Note that this
    * is a hint, and the popup position will adjust to available screen real estate.
    * @default DirectionalHint.bottomCenter
    */
   directionalHint?: DirectionalHint;
 
   /**
-   * Whether to display the callout's arrow/beak.
+   * Whether to display the Hovercard's arrow/beak.
    * @default true
    */
   isBeakVisible?: boolean;
@@ -42,48 +42,48 @@ export interface CalloutProps extends NestableBaseComponentProps {
   screenreaderTitle?: string;
 
   /**
-   * Whether the callout should start visible. Note that it will wait until `componentDidMount` to
-   * ensure it can properly position itself in relation to the trigger.
+   * Whether the Hovercard should start visible. Note that it will wait until `componentDidMount` to
+   * ensure it can properly position itself in relation to the trigger. Only exposed for testing.
    * @default false
    */
   startVisible?: boolean;
 
   /**
-   * Whether a mouse click or hover should trigger the callout.
+   * Whether a mouse click or hover should trigger the Hovercard.
    * @default TriggerType.HOVER
    */
   triggerType?: TriggerType;
 
   /**
-   * Callback to be fired when the callout content is removed.
+   * Callback to be fired when the Hovercard content is removed.
    */
   onContentDismiss?: () => void;
 
   /**
-   * Callback to be fired when the callout content is displayed.
+   * Callback to be fired when the Hovercard content is displayed.
    */
   onContentDisplay?: () => void;
 
   /**
-   * Callback to be fired on trigger hover. Can be used to preload content early before the callout
-   * content is actually displayed.
+   * Callback to be fired on trigger hover. Can be used to preload content early before the
+   * Hovercard content is actually displayed.
    */
   onTriggerHover?: () => void;
 }
 
-export interface CalloutState {
+export interface HovercardState {
   visible: boolean;
 }
 
 export { DirectionalHint };
 
 /**
- * A `Callout` is a small popover overlay, to be used for hovercards. `Callout` opens on click or
- * mouse enter, and closes on mouse out and `ESC`. It should be used with `CalloutHeader` and
- * `CalloutBody` components for consistent layouts.
+ * A `Hovercard` is a small popover overlay. It opens on click or
+ * mouse enter, and closes on mouse out and `ESC`. It should be used with `HovercardHeader` and
+ * `HovercardBody` components for consistent internal padding.
  */
-export default class Callout extends React.PureComponent<CalloutProps, CalloutState> {
-  static defaultProps: Partial<CalloutProps> = {
+export default class Hovercard extends React.Component<HovercardProps, HovercardState> {
+  static defaultProps: Partial<HovercardProps> = {
     directionalHint: DirectionalHint.bottomCenter,
     isBeakVisible: true,
     startVisible: false,
@@ -94,7 +94,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
   private showTimeout: number;
   private hideTimeout: number;
 
-  constructor(props: CalloutProps) {
+  constructor(props: HovercardProps) {
     super(props);
 
     this.state = {
@@ -117,7 +117,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
         <h1>{screenreaderTitle}</h1>
       </ScreenreaderText>
     );
-    const callout = this.state.visible && (
+    const hovercard = this.state.visible && (
       <FabricCallout
         isBeakVisible={isBeakVisible}
         directionalHint={directionalHint}
@@ -126,7 +126,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
         preventDismissOnScroll={false}
       >
         <div
-          className="y-callout--modal-container"
+          className="y-hovercard--modal-container"
           onMouseEnter={this.handleBodyHover}
           onMouseLeave={this.beginHide}
         >
@@ -137,9 +137,9 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
     );
 
     return (
-      <span className={classNames('y-callout', className)}>
+      <span className={classNames('y-hovercard', className)}>
         <span
-          className="y-callout--trigger"
+          className="y-hovercard--trigger"
           ref={(node: HTMLSpanElement) => (this.triggerElement = node)}
           onClick={this.handleTriggerClick}
           onMouseEnter={this.handleTriggerHover}
@@ -147,7 +147,7 @@ export default class Callout extends React.PureComponent<CalloutProps, CalloutSt
         >
           {children}
         </span>
-        {callout}
+        {hovercard}
       </span>
     );
   }

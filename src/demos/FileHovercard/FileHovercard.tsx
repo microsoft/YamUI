@@ -4,9 +4,9 @@ import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
 import {
-  CalloutHeader,
-  CalloutBody,
-} from '../../components/Callout';
+  HovercardHeader,
+  HovercardBody,
+} from '../../components/Hovercard';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
 import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
@@ -42,15 +42,15 @@ export default class FileHovercard extends React.PureComponent<FileHovercardProp
 
     return (
       <div>
-        <CalloutHeader>
+        <HovercardHeader>
           <MediaObject
             size={MediaObjectSize.LARGE}
             imageContent={fileImage}
             titleContent={file.name}
             metadataContent={file.location}
           />
-        </CalloutHeader>
-        <CalloutBody>
+        </HovercardHeader>
+        <HovercardBody>
           <Block textSize={TextSize.MEDIUM_SUB}>
             <Block bottomSpacing={GutterSize.XXLARGE}>
               <Block bottomSpacing={GutterSize.XSMALL}>72 followers</Block>
@@ -72,7 +72,7 @@ export default class FileHovercard extends React.PureComponent<FileHovercardProp
               </HorizontalListItem>
             </HorizontalList>
           </Block>
-        </CalloutBody>
+        </HovercardBody>
       </div>
     );
   }
