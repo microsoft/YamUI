@@ -31,7 +31,7 @@ interface ColumnStyles {
  * A `FixedGridColumn` represents each column inside a `FixedGrid`. It should be wrapped in a
  * `FixedGridRow`.
  */
-export default class FixedGridColumn extends React.PureComponent<FixedGridColumnProps, {}> {
+export default class FixedGridColumn extends React.Component<FixedGridColumnProps, {}> {
   render() {
     const { children, verticalAlign } = this.props;
 

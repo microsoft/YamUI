@@ -161,7 +161,7 @@ const badImage = 'logoNotFound.png';
 const yammerLogo = 'logoFallback.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
-class StateChangeDemo extends React.PureComponent {
+class StateChangeDemo extends React.Component {
   constructor() {
     super();
 

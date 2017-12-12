@@ -32,7 +32,7 @@ export interface FileHovercardProps {
   file: any;
 }
 
-export default class FileHovercard extends React.PureComponent<FileHovercardProps, {}> {
+export default class FileHovercard extends React.Component<FileHovercardProps, {}> {
   render() {
     const { file } = this.props;
 

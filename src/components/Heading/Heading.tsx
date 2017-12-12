@@ -53,7 +53,7 @@ export interface HeadingProps extends NestableBaseComponentProps {
  * override its visual styling to match a different level with `size`. Set `size="none"`
  * to render the heading as unstyled inline text.
  */
-export default class Heading extends React.PureComponent<HeadingProps, {}> {
+export default class Heading extends React.Component<HeadingProps, {}> {
   render() {
     const TagName = `h${this.props.level}`;
 

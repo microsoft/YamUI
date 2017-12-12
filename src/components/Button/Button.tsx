@@ -119,7 +119,7 @@ export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonPr
 /**
  * A `Button` allows a user to take an action.
  */
-export default class Button extends React.PureComponent<ButtonProps, {}> {
+export default class Button extends React.Component<ButtonProps, {}> {
   static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {

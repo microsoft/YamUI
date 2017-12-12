@@ -31,7 +31,7 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
 /**
  * A `NavigationLink` renders an `a` tag for navigation between web pages.
  */
-export default class NavigationLink extends React.PureComponent<NavigationLinkProps, {}> {
+export default class NavigationLink extends React.Component<NavigationLinkProps, {}> {
   render() {
     const { href, newWindow, title, children } = this.props;
     const target = newWindow ? '_blank' : undefined;

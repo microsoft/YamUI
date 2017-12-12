@@ -18,7 +18,7 @@ export interface MediaObjectMetadataProps {
   size: MediaObjectSize;
 }
 
-export default class MediaObjectMetadata extends React.PureComponent<MediaObjectMetadataProps, {}> {
+export default class MediaObjectMetadata extends React.Component<MediaObjectMetadataProps, {}> {
   render() {
     const { size, children } = this.props;
 

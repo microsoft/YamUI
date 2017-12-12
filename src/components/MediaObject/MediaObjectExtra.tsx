@@ -8,7 +8,7 @@ import Text, { TextColor } from '../Text';
 
 export { MediaObjectExtraProps };
 
-export default class MediaObjectExtra extends React.PureComponent<MediaObjectExtraProps, {}> {
+export default class MediaObjectExtra extends React.Component<MediaObjectExtraProps, {}> {
   render() {
     const { children } = this.props;
 

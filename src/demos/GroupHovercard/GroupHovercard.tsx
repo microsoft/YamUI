@@ -43,7 +43,7 @@ export interface GroupHovercardProps {
   group: any;
 }
 
-export default class GroupHovercard extends React.PureComponent<GroupHovercardProps, {}> {
+export default class GroupHovercard extends React.Component<GroupHovercardProps, {}> {
   render() {
     const { group } = this.props;
 

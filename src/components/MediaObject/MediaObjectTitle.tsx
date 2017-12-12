@@ -25,7 +25,7 @@ export interface MediaObjectTitleProps {
   size: MediaObjectSize;
 }
 
-export default class MediaObjectTitle extends React.PureComponent<MediaObjectTitleProps, {}> {
+export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps, {}> {
   render() {
     const { size, children } = this.props;
 

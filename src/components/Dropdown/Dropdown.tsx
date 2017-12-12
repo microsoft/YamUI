@@ -41,7 +41,7 @@ export interface DropdownProps extends BaseComponentProps {
  * A `Dropdown` is a list in which the selected item is always visible, and the others are visible
  * on demand by clicking a button.
  */
-export default class Dropdown extends React.PureComponent<DropdownProps, {}> {
+export default class Dropdown extends React.Component<DropdownProps, {}> {
   render() {
     const { label, options, placeHolder, selectedKey } = this.props;
 

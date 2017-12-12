@@ -6,7 +6,7 @@ export interface ExampleWrapperState {
   visible: boolean;
 }
 
-export default class ExampleWrapper extends React.PureComponent<{}, ExampleWrapperState> {
+export default class ExampleWrapper extends React.Component<{}, ExampleWrapperState> {
   private observer: IntersectionObserver;
 
   constructor() {

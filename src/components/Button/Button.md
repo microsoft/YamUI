@@ -489,7 +489,7 @@ Loading button:
 ```js { "props": { "data-example": "loading" } }
 const { ButtonStatus } = require('.');
 
-class LoadingButton extends React.PureComponent {
+class LoadingButton extends React.Component {
   constructor(props) {
     super(props);
 

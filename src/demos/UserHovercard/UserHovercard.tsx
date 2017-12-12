@@ -29,7 +29,7 @@ export interface UserHovercardProps {
   user: any;
 }
 
-export default class UserHovercard extends React.PureComponent<UserHovercardProps, {}> {
+export default class UserHovercard extends React.Component<UserHovercardProps, {}> {
   render() {
     const { user } = this.props;
 
