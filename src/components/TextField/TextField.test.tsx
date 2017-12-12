@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
+import { TextField as FabricTextField,
+  ITextFieldProps } from 'office-ui-fabric-react/lib/TextField';
 import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
 describe('<TextField />', () => {
@@ -43,30 +45,14 @@ describe('<TextField />', () => {
       expect(component).toMatchSnapshot();
     });
 
-    describe('update onChangeDebounceTime', () => {
-      beforeEach(() => {
-        component.setProps({ onChangeDebounceTime: 1000 });
-      });
-      it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
-      });
-    });
-
-    describe('update value', () => {
-      beforeEach(() => {
-        component.setProps({ value: 'VALUE2' });
-      });
-      it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
-      });
-    });
-
     describe('unmount', () => {
       let disposeSpy: jest.SpyInstance<() => void>;
+
       beforeEach(() => {
         disposeSpy = jest.spyOn(Async.prototype, 'dispose');
         component.unmount();
       });
+
       it('calls async dispose', () => {
         expect(disposeSpy).toHaveBeenCalled();
       });
@@ -99,10 +85,6 @@ describe('<TextField />', () => {
     it('includes prefix className', () => {
       expect(component.hasClass('y-text-field--with-prefix')).toBe(true);
     });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
   });
 
   describe('with suffix', () => {
@@ -113,27 +95,89 @@ describe('<TextField />', () => {
     it('includes suffix className', () => {
       expect(component.hasClass('y-text-field--with-suffix')).toBe(true);
     });
+  });
 
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+  describe('with event callbacks', () => {
+    let onMouseEnter: jest.Mock<{}>;
+    let onMouseLeave: jest.Mock<{}>;
+    let onFocus: jest.Mock<{}>;
+    let onBlur: jest.Mock<{}>;
+
+    beforeEach(() => {
+      onMouseEnter = jest.fn();
+      onMouseLeave = jest.fn();
+      onFocus = jest.fn();
+      onBlur = jest.fn();
+      component = shallow(
+        <TextField
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onFocus={onFocus}
+          onBlur={onBlur}
+        />,
+      );
+    });
+
+    describe('when hovered', () => {
+      beforeEach(() => {
+        component.simulate('mouseEnter');
+      });
+
+      it('triggers its onMouseEnter callback', () => {
+        expect(onMouseEnter).toHaveBeenCalled();
+      });
+    });
+
+    describe('when hovered out', () => {
+      beforeEach(() => {
+        component.simulate('mouseLeave');
+      });
+
+      it('triggers its onMouseLeave callback', () => {
+        expect(onMouseLeave).toHaveBeenCalled();
+      });
+    });
+
+    describe('when focused', () => {
+      beforeEach(() => {
+        component.simulate('focus');
+      });
+
+      it('triggers its onFocus callback', () => {
+        expect(onFocus).toHaveBeenCalled();
+      });
+    });
+
+    describe('when blurred', () => {
+      beforeEach(() => {
+        component.simulate('blur');
+      });
+
+      it('triggers its onBlur callback', () => {
+        expect(onBlur).toHaveBeenCalled();
+      });
     });
   });
 
-  describe('with prefix and suffix', () => {
+  describe('with onChange handler', () => {
+    let callback: jest.Mock<{}>;
+
     beforeEach(() => {
-      component = shallow(<TextField prefix="PREFIX" suffix="SUFFIX" />);
+      callback = jest.fn();
+      component = shallow(<TextField onChange={callback} />);
     });
 
-    it('includes prefix className', () => {
-      expect(component.hasClass('y-text-field--with-prefix')).toBe(true);
-    });
+    describe('when a change in made', () => {
+      let fabricTextField: ShallowWrapper<ITextFieldProps, {}>;
 
-    it('includes suffix className', () => {
-      expect(component.hasClass('y-text-field--with-suffix')).toBe(true);
-    });
+      beforeEach(() => {
+        fabricTextField = component.find(FabricTextField);
+        fabricTextField.prop<Function>('onChanged')('a');
+      });
 
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      it('triggers the onChange callback', () => {
+        expect(callback).toHaveBeenCalledWith('a');
+      });
     });
   });
 });

@@ -63,10 +63,30 @@ export interface TextFieldProps extends BaseComponentProps {
   onChange?: (newValue: any) => void;
 
   /**
-   * Textfield will trigger onChange after users stop typing for `onChangeDebounceTime`
+   * Textfield will trigger `onChange` after users stop typing for `onChangeDebounceTime`
    * milliseconds.
    */
   onChangeDebounceTime?: number;
+
+  /**
+   * Focus callback handler.
+   */
+  onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+
+  /**
+   * Blur callback handler.
+   */
+  onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+
+  /**
+   * Mouse enter callback handler.
+   */
+  onMouseEnter?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+
+  /**
+   * Mouse leave callback handler.
+   */
+  onMouseLeave?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 /**
@@ -76,21 +96,13 @@ export interface TextFieldProps extends BaseComponentProps {
  */
 export default class TextField extends React.PureComponent<TextFieldProps, {}> {
   private async: Async;
-  private onChange: (newValue: string) => void;
+  private debouncedOnChange: (newValue: string) => void;
 
   constructor(props: TextFieldProps) {
     super();
-    this.async = new Async(this);
     if (props.onChangeDebounceTime && props.onChange) {
-      this.onChange = this.async.debounce(props.onChange, props.onChangeDebounceTime);
-    }
-  }
-
-  componentWillUpdate(nextProps: TextFieldProps) {
-    if (nextProps.onChangeDebounceTime && nextProps.onChange
-      && (nextProps.onChangeDebounceTime !== this.props.onChangeDebounceTime
-        || nextProps.onChange !== this.props.onChange)) {
-      this.onChange = this.async.debounce(nextProps.onChange, nextProps.onChangeDebounceTime);
+      this.async = new Async(this);
+      this.debouncedOnChange = this.async.debounce(props.onChange, props.onChangeDebounceTime);
     }
   }
 
@@ -112,7 +124,11 @@ export default class TextField extends React.PureComponent<TextFieldProps, {}> {
         errorMessage={this.props.errorMessage}
         placeholder={this.props.placeHolder}
         underlined={this.props.underlined}
-        onChanged={this.onChange}
+        onChanged={this.debouncedOnChange || this.props.onChange}
+        onFocus={this.props.onFocus}
+        onBlur={this.props.onBlur}
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}
       />
     );
   }

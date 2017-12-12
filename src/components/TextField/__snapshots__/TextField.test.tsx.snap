@@ -48,62 +48,6 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
 />
 `;
 
-exports[`<TextField /> with all options update onChangeDebounceTime matches its snapshot 1`] = `
-<TextField
-  autoAdjustHeight={false}
-  borderless={false}
-  className="y-text-field y-text-field--with-prefix y-text-field--with-suffix"
-  deferredValidationTime={200}
-  description="DESCRIPTION"
-  disabled={false}
-  errorMessage=""
-  label="LABEL"
-  multiline={false}
-  onBeforeChange={[Function]}
-  onChanged={[Function]}
-  onGetErrorMessage={[Function]}
-  onNotifyValidationResult={[Function]}
-  placeholder="PLACEHOLDER"
-  prefix="PREFIX"
-  required={true}
-  resizable={true}
-  suffix="SUFFIX"
-  underlined={false}
-  validateOnFocusIn={false}
-  validateOnFocusOut={false}
-  validateOnLoad={true}
-  value="VALUE"
-/>
-`;
-
-exports[`<TextField /> with all options update value matches its snapshot 1`] = `
-<TextField
-  autoAdjustHeight={false}
-  borderless={false}
-  className="y-text-field y-text-field--with-prefix y-text-field--with-suffix"
-  deferredValidationTime={200}
-  description="DESCRIPTION"
-  disabled={false}
-  errorMessage=""
-  label="LABEL"
-  multiline={false}
-  onBeforeChange={[Function]}
-  onChanged={[Function]}
-  onGetErrorMessage={[Function]}
-  onNotifyValidationResult={[Function]}
-  placeholder="PLACEHOLDER"
-  prefix="PREFIX"
-  required={true}
-  resizable={true}
-  suffix="SUFFIX"
-  underlined={false}
-  validateOnFocusIn={false}
-  validateOnFocusOut={false}
-  validateOnLoad={true}
-  value="VALUE2"
-/>
-`;
-
 exports[`<TextField /> with default options matches its snapshot 1`] = `
 <TextField
   autoAdjustHeight={false}
@@ -117,70 +61,6 @@ exports[`<TextField /> with default options matches its snapshot 1`] = `
   onGetErrorMessage={[Function]}
   onNotifyValidationResult={[Function]}
   resizable={true}
-  underlined={false}
-  validateOnFocusIn={false}
-  validateOnFocusOut={false}
-  validateOnLoad={true}
-/>
-`;
-
-exports[`<TextField /> with prefix and suffix matches its snapshot 1`] = `
-<TextField
-  autoAdjustHeight={false}
-  borderless={false}
-  className="y-text-field y-text-field--with-prefix y-text-field--with-suffix"
-  deferredValidationTime={200}
-  errorMessage=""
-  multiline={false}
-  onBeforeChange={[Function]}
-  onChanged={[Function]}
-  onGetErrorMessage={[Function]}
-  onNotifyValidationResult={[Function]}
-  prefix="PREFIX"
-  resizable={true}
-  suffix="SUFFIX"
-  underlined={false}
-  validateOnFocusIn={false}
-  validateOnFocusOut={false}
-  validateOnLoad={true}
-/>
-`;
-
-exports[`<TextField /> with prefix matches its snapshot 1`] = `
-<TextField
-  autoAdjustHeight={false}
-  borderless={false}
-  className="y-text-field y-text-field--with-prefix"
-  deferredValidationTime={200}
-  errorMessage=""
-  multiline={false}
-  onBeforeChange={[Function]}
-  onChanged={[Function]}
-  onGetErrorMessage={[Function]}
-  onNotifyValidationResult={[Function]}
-  prefix="PREFIX"
-  resizable={true}
-  underlined={false}
-  validateOnFocusIn={false}
-  validateOnFocusOut={false}
-  validateOnLoad={true}
-/>
-`;
-
-exports[`<TextField /> with suffix matches its snapshot 1`] = `
-<TextField
-  autoAdjustHeight={false}
-  borderless={false}
-  className="y-text-field y-text-field--with-suffix"
-  deferredValidationTime={200}
-  errorMessage=""
-  multiline={false}
-  onBeforeChange={[Function]}
-  onChanged={[Function]}
-  onGetErrorMessage={[Function]}
-  onNotifyValidationResult={[Function]}
-  resizable={true}
-  suffix="SUFFIX"
   underlined={false}
   validateOnFocusIn={false}
   validateOnFocusOut={false}

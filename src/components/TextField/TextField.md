@@ -1,6 +1,5 @@
 ### Examples
 
-One Line:
 ```js { "props": { "data-example": "basic" } }
 <TextField
   label="First Name"
@@ -52,7 +51,6 @@ One Line:
 Underlined Variation
 ```js  { "props": { "data-example": "basic underlined" } }
 <TextField
-  prefix="hello"
   placeHolder="Textfield Placeholder..."
   underlined
 />
