@@ -2,8 +2,6 @@
 
 `Avatar` takes care of setting the alt text for you when you pass the one required attribute, `name`.
 
-You must provide either an `imageUrl` property or an `initials` property.
-
 ### Examples
 
 Without image:
@@ -24,19 +22,19 @@ const { AvatarSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Avatar size={AvatarSize.XLARGE} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.XLARGE} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.LARGE} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.LARGE} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.MEDIUM} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.SMALL} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.SMALL} name={user.name} />
       </td>
       <td>
-        <Avatar size={AvatarSize.XSMALL} name={user.name} initials={user.initials} />
+        <Avatar size={AvatarSize.XSMALL} name={user.name} />
       </td>
     </tr>
   </tbody>
@@ -225,48 +223,48 @@ const { AvatarSize } = require('.');
   </Block>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="A" initials="TE" />
+      <Avatar size={AvatarSize.MEDIUM} name="Richie Black" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="B" initials="LB" />
+      <Avatar size={AvatarSize.MEDIUM} name="Sara Michaels" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="C" initials="DB" />
+      <Avatar size={AvatarSize.MEDIUM} name="Charles Blue" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="D" initials="OR" />
+      <Avatar size={AvatarSize.MEDIUM} name="Billy Jean" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="E" initials="DR" />
+      <Avatar size={AvatarSize.MEDIUM} name="James Woods" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="F" initials="LG" />
+      <Avatar size={AvatarSize.MEDIUM} name="John Babcock" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="G" initials="LB" />
+      <Avatar size={AvatarSize.MEDIUM} name="Perry McDouglas" />
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="H" initials="LP" />
+      <Avatar size={AvatarSize.MEDIUM} name="Monte Luther" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="I" initials="GR" />
+      <Avatar size={AvatarSize.MEDIUM} name="Zoe Reynolds" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="J" initials="DG" />
+      <Avatar size={AvatarSize.MEDIUM} name="Jose Monahan" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="K" initials="PI" />
+      <Avatar size={AvatarSize.MEDIUM} name="Sean Johnson" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="L" initials="MA" />
+      <Avatar size={AvatarSize.MEDIUM} name="Toby Edward" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="M" initials="PU" />
+      <Avatar size={AvatarSize.MEDIUM} name="Willie Nelson" />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Avatar size={AvatarSize.MEDIUM} name="N" initials="BL" />
+      <Avatar size={AvatarSize.MEDIUM} name="Joe Johnson" />
     </FixedGridColumn>
   </FixedGridRow>
 </div>
