@@ -8,7 +8,7 @@ env:
 
 branches:
   only:
-    - master
+  - master
 
 before_install:
   - docker --version
