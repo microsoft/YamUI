@@ -1,65 +1,114 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
-// Let's try to keep these alphabetized
-import arrowDown from './ArrowDown';
-import arrowLeft from './ArrowLeft';
-import arrowRight from './ArrowRight';
-import arrowUp from './ArrowUp';
-import attach from './Attach';
-import caretDown from './CaretDown';
-import caretLeft from './CaretLeft';
-import caretRight from './CaretRight';
-import caretUp from './CaretUp';
-import check from './Check';
-import cross from './Cross';
-import dynamicGroup from './DynamicGroup';
-import edit from './Edit';
-import external from './External';
-import group from './Group';
-import info from './Info';
-import leave from './Leave';
-import like from './Like';
-import lock from './Lock';
-import mail from './Mail';
-import minus from './Minus';
-import moreHorizontal from './MoreHorizontal';
-import moreVertical from './MoreVertical';
-import no from './No';
-import phone from './Phone';
-import plus from './Plus';
-import share from './Share';
-import skype from './Skype';
-import time from './Time';
-
-export default {
-  arrowDown,
-  arrowLeft,
-  arrowRight,
-  arrowUp,
-  attach,
-  caretDown,
-  caretLeft,
-  caretRight,
-  caretUp,
-  check,
-  cross,
-  dynamicGroup,
-  edit,
-  external,
-  group,
-  info,
-  leave,
-  like,
-  lock,
-  mail,
-  minus,
-  moreHorizontal,
-  moreVertical,
-  no,
-  phone,
-  plus,
-  share,
-  skype,
-  time,
-};
-
+export { default as Accounts } from './Accounts';
+export { default as ActivityFeed } from './ActivityFeed';
+export { default as Add } from './Add';
+export { default as AddFavorite } from './AddFavorite';
+export { default as AddFriend } from './AddFriend';
+export { default as Asterisk } from './Asterisk';
+export { default as Attach } from './Attach';
+export { default as Back } from './Back';
+export { default as BadgeAdmin } from './BadgeAdmin';
+export { default as BadgeFlexternal } from './BadgeFlexternal';
+export { default as BadgeNew } from './BadgeNew';
+export { default as BarChart4 } from './BarChart4';
+export { default as BarChartHorizontal } from './BarChartHorizontal';
+export { default as Blocked } from './Blocked';
+export { default as BulletedList } from './BulletedList';
+export { default as Calendar } from './Calendar';
+export { default as Camera } from './Camera';
+export { default as Cancel } from './Cancel';
+export { default as CannedChat } from './CannedChat';
+export { default as CellPhone } from './CellPhone';
+export { default as Checkbox } from './Checkbox';
+export { default as CheckboxComposite } from './CheckboxComposite';
+export { default as CheckMark } from './CheckMark';
+export { default as CheckMarkEmpty } from './CheckMarkEmpty';
+export { default as ChevronDownMed } from './ChevronDownMed';
+export { default as ChevronLeftMed } from './ChevronLeftMed';
+export { default as ChevronRightMed } from './ChevronRightMed';
+export { default as ChevronUpMed } from './ChevronUpMed';
+export { default as CircleCheck } from './CircleCheck';
+export { default as CircleFill } from './CircleFill';
+export { default as CircleRing } from './CircleRing';
+export { default as Clock } from './Clock';
+export { default as Code } from './Code';
+export { default as Connectors } from './Connectors';
+export { default as Contact } from './Contact';
+export { default as Delete } from './Delete';
+export { default as DietPlanNotebook } from './DietPlanNotebook';
+export { default as Down } from './Down';
+export { default as Download } from './Download';
+export { default as DynamicGroup } from './DynamicGroup';
+export { default as Edit } from './Edit';
+export { default as Embed } from './Embed';
+export { default as EMI } from './EMI';
+export { default as FabricFolder } from './FabricFolder';
+export { default as FavoriteStar } from './FavoriteStar';
+export { default as FavoriteStarFill } from './FavoriteStarFill';
+export { default as FavoriteStartRemove } from './FavoriteStartRemove';
+export { default as Flag } from './Flag';
+export { default as Forward } from './Forward';
+export { default as ForwardAlt } from './ForwardAlt';
+export { default as GIF } from './GIF';
+export { default as Globe } from './Globe';
+export { default as Group } from './Group';
+export { default as Hashtag } from './Hashtag';
+export { default as Home } from './Home';
+export { default as Info } from './Info';
+export { default as Like } from './Like';
+export { default as Link } from './Link';
+export { default as LocationDot } from './LocationDot';
+export { default as Lock } from './Lock';
+export { default as Mail } from './Mail';
+export { default as Megaphone } from './Megaphone';
+export { default as More } from './More';
+export { default as MoreVertical } from './MoreVertical';
+export { default as NavigateExternalInline } from './NavigateExternalInline';
+export { default as NumberedList } from './NumberedList';
+export { default as OneDrive } from './OneDrive';
+export { default as OneNoteLogoInverse } from './OneNoteLogoInverse';
+export { default as People } from './People';
+export { default as Phone } from './Phone';
+export { default as Pinned } from './Pinned';
+export { default as PlannerLogo } from './PlannerLogo';
+export { default as Puzzle } from './Puzzle';
+export { default as Refresh } from './Refresh';
+export { default as Remove } from './Remove';
+export { default as RemoveLink } from './RemoveLink';
+export { default as Reply } from './Reply';
+export { default as Ringer } from './Ringer';
+export { default as ScaleUp } from './ScaleUp';
+export { default as ScrollUpDown } from './ScrollUpDown';
+export { default as Search } from './Search';
+export { default as SemiBoldWeight } from './SemiBoldWeight';
+export { default as Settings } from './Settings';
+export { default as Share } from './Share';
+export { default as SharePointLogoInverse } from './SharePointLogoInverse';
+export { default as Shield } from './Shield';
+export { default as SignOut } from './SignOut';
+export { default as SingleBookmark } from './SingleBookmark';
+export { default as SkypeCircleCheck } from './SkypeCircleCheck';
+export { default as SkypeCircleClock } from './SkypeCircleClock';
+export { default as SkypeCircleMinus } from './SkypeCircleMinus';
+export { default as SkypeForBusinessLogo } from './SkypeForBusinessLogo';
+export { default as SortDown } from './SortDown';
+export { default as SortUp } from './SortUp';
+export { default as Spam } from './Spam';
+export { default as Strikethrough } from './Strikethrough';
+export { default as Tag } from './Tag';
+export { default as Trophy2 } from './Trophy2';
+export { default as Underline } from './Underline';
+export { default as Undo } from './Undo';
+export { default as Unknown } from './Unknown';
+export { default as Up } from './Up';
+export { default as Upload } from './Upload';
+export { default as UserFollowed } from './UserFollowed';
+export { default as UserRemove } from './UserRemove';
+export { default as Video } from './Video';
+export { default as View } from './View';
+export { default as Warning } from './Warning';
+export { default as Work } from './Work';
+export { default as World } from './World';
+export { default as Yammer } from './Yammer';
+export { default as ZoomIn } from './ZoomIn';

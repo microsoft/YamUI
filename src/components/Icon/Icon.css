@@ -38,8 +38,10 @@
 .y-textSize-small .y-icon {
   height: 1.2rem;
   width: 1.2rem;
+  top: 0.1rem;
 }
 .y-textSize-xSmall .y-icon {
   height: 1em;
   width: 1rem;
+  top: 0.1rem;
 }

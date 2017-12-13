@@ -10,6 +10,10 @@
   padding: 7px 12px 8px;
 }
 
+.y-message-bar--actions {
+  white-space: nowrap;
+}
+
 .y-message-bar__type-warning {
   border-color: $alertColor__warning;
 }

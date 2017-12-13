@@ -34,12 +34,14 @@ export default class MessageBar extends React.Component<MessageBarProps, {}> {
 
   render() {
     const { actions, children } = this.props;
+    const actionsColumn = actions &&
+      <FixedGridColumn fixed={true} className="y-message-bar--actions">{actions}</FixedGridColumn>;
 
     return (
       <Block textSize={TextSize.SMALL} className={this.getClasses()}>
         <FixedGridRow gutterSize={GutterSize.XXLARGE}>
           <FixedGridColumn>{children}</FixedGridColumn>
-          {actions && <FixedGridColumn fixed={true}>{actions}</FixedGridColumn>}
+          {actionsColumn}
         </FixedGridRow>
       </Block>
     );
