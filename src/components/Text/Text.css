@@ -36,11 +36,12 @@
 }
 
 /**
- * Inline-block elements shift vertical-align from baselin to bottom when we set
- * overflow:hidden for ellipsis. This ensures ellipsis Text, at each size and nested
+ * Inline-block elements shift vertical-align from baseline to bottom when we set
+ * overflow:hidden for ellipsis. These rules ensure ellipsis Text, at each size and nested
  * under each Block's textSize, maintains correct vertical alignment. Increased specificity
  * to handle the nested block case :(
  */
+ /* Nested under sized Block */
 .y-block.y-textSize-xSmall .y-text__ellipsis {
   vertical-align: -.4rem;
 }
@@ -63,6 +64,7 @@
   vertical-align: -.4rem;
 }
 
+/* Sized text with ellipsis (takes precedence over nested Block rules) */
 .y-text.y-text__ellipsis.y-textSize-xSmall {
   vertical-align: -.4rem;
   height: 1.6rem;
