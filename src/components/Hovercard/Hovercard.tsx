@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import autobind from 'core-decorators/lib/autobind';
 import classNames = require('classnames');
-import { Callout as FabricCallout, DirectionalHint } from 'office-ui-fabric-react/lib/Callout';
+import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { Key } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
@@ -90,7 +90,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
     triggerType: TriggerType.HOVER,
   };
 
-  private triggerElement: HTMLSpanElement;
+  private triggerElement: HTMLSpanElement | null;
   private showTimeout: number;
   private hideTimeout: number;
 
@@ -118,7 +118,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
       </ScreenreaderText>
     );
     const hovercard = this.state.visible && (
-      <FabricCallout
+      <Callout
         isBeakVisible={isBeakVisible}
         directionalHint={directionalHint}
         target={this.triggerElement}
@@ -133,14 +133,14 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
           {screenreaderTitleChild}
           {content}
         </div>
-      </FabricCallout>
+      </Callout>
     );
 
     return (
       <span className={classNames('y-hovercard', className)}>
         <span
           className="y-hovercard--trigger"
-          ref={(node: HTMLSpanElement) => (this.triggerElement = node)}
+          ref={node => (this.triggerElement = node)}
           onClick={this.handleTriggerClick}
           onMouseEnter={this.handleTriggerHover}
           onMouseLeave={this.handleTriggerHoverLeave}

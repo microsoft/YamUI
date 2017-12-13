@@ -1,0 +1,8 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+
+/* Fabric Callout box-shadow override */
+.ms-Callout {
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2)  !important;
+  border: none;
+  border-radius: 1px;
+}

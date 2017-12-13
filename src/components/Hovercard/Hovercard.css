@@ -9,10 +9,3 @@
 .y-hovercard--header {
   border-bottom: 2px solid $borderColor__tertiary;
 }
-
-/* Fabric Callout box-shadow override */
-.ms-Callout {
-  box-shadow: 0 0 12px rgba(0, 0, 0, .2)  !important;
-  border: none;
-  border-radius: 1px;
-}
