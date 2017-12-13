@@ -20,22 +20,8 @@ describe('<Hovercard />', () => {
       );
     });
 
-    describe('at initial render', () => {
-      it('renders its trigger content', () => {
-        expect(component.find('.y-hovercard--trigger').text()).toEqual('Trigger');
-      });
-
-      it('contains its base className', () => {
-        expect(component.hasClass('y-hovercard')).toBe(true);
-      });
-
-      it('does not show the hovercard', () => {
-        expect(component.find(Callout).length).toBe(0);
-      });
-
-      it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
-      });
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
   });
 
@@ -46,14 +32,6 @@ describe('<Hovercard />', () => {
           <span>Trigger</span>
         </Hovercard>,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-hovercard')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -73,12 +51,6 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('click');
-    });
-
-    it('renders the hidden title', () => {
-      expect(component.find('.y-hovercard--modal-container ScreenreaderText h1').text()).toEqual(
-        'HIDDEN TITLE',
-      );
     });
 
     it('matches its snapshot', () => {

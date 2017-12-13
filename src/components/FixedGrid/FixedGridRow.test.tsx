@@ -11,18 +11,6 @@ describe('<FixedGridRow />', () => {
       component = shallow(<FixedGridRow>grid content</FixedGridRow>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('grid content');
-    });
-
-    it('defaults to SMALL gutter size (8px)', () => {
-      expect(component.hasClass('y-fixedGridRow__gutter-small')).toBe(true);
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-fixedGridRow')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -31,14 +19,6 @@ describe('<FixedGridRow />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<FixedGridRow className="TEST_CLASSNAME">grid content</FixedGridRow>);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridRow')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -51,14 +31,6 @@ describe('<FixedGridRow />', () => {
       component = shallow(<FixedGridRow gutterSize={GutterSize.LARGE}>grid content</FixedGridRow>);
     });
 
-    it('includes the gutter size class name', () => {
-      expect(component.hasClass('y-fixedGridRow__gutter-large')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridRow')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -69,14 +41,6 @@ describe('<FixedGridRow />', () => {
       component = shallow(
         <FixedGridRow bottomSpacing={GutterSize.XLARGE}>grid content</FixedGridRow>,
       );
-    });
-
-    it('includes the gutter size class name', () => {
-      expect(component.hasClass('y-fixedGridRow__bottomSpacing-xLarge')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridRow')).toBe(true);
     });
 
     it('matches its snapshot', () => {

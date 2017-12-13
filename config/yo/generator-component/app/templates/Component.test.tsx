@@ -11,10 +11,6 @@ describe('<<%= name %> />', () => {
       component = shallow(<<%= name %> />);
     });
 
-    it('has its correct base class', () => {
-      expect(component.hasClass('<%= className %>')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -25,14 +21,6 @@ describe('<<%= name %> />', () => {
       component = shallow(
         <<%= name %> className="TEST_CLASSNAME" />,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('<%= className %>')).toBe(true);
     });
 
     it('matches its snapshot', () => {
