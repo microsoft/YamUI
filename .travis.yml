@@ -6,6 +6,10 @@ services:
 env:
   - DEBUG=react-styleguidist-visual
 
+branches:
+  only:
+    - master
+
 before_install:
   - docker --version
   - docker-compose --version
