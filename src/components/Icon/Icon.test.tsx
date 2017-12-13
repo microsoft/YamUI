@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { Accounts, IconSize, IconProps, BaseIcon } from '.';
+import { Accounts, IconSize, IconProps } from '.';
 import * as allExportedIcons from './icons';
 
 describe('<Icon />', () => {
@@ -96,11 +96,11 @@ describe('<Icon />', () => {
   });
 
   describe('each Icon', () => {
-    let Icon: typeof BaseIcon;
+    let Icon: any;
+
     Object.keys(allExportedIcons).forEach((name) => {
       beforeEach(() => {
-        // TODO: FIX THIS TYPESCRIPT ERROR
-        Icon = (allExportedIcons[name] as typeof BaseIcon);
+        Icon = (allExportedIcons as any)[name];
         component = shallow(<Icon />);
       });
 
