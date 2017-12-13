@@ -8,14 +8,10 @@ describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
 
   describe('an Icon', () => {
-      
+
     describe('with minimal options', () => {
       beforeEach(() => {
         component = shallow(<Accounts />);
-      });
-
-      it('contains its base className', () => {
-        expect(component.hasClass('y-icon')).toBe(true);
       });
 
       it('matches its snapshot', () => {
@@ -28,9 +24,6 @@ describe('<Icon />', () => {
         component = shallow(<Accounts color="blue" />);
       });
 
-      it('contains the given color style', () => {
-        expect(component.getNode().props.style.color).toEqual('blue');
-      });
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
@@ -40,10 +33,6 @@ describe('<Icon />', () => {
     describe('with block', () => {
       beforeEach(() => {
         component = shallow(<Accounts block={true} />);
-      });
-
-      it('contains its block className', () => {
-        expect(component.hasClass('y-icon__isBlock')).toBe(true);
       });
 
       it('matches its snapshot', () => {
@@ -56,14 +45,6 @@ describe('<Icon />', () => {
         component = shallow(<Accounts size={IconSize.XXLARGE} />);
       });
 
-      it('is the correct height', () => {
-        expect(component.getNode().props.style.height).toBe(IconSize.XXLARGE + 'px');
-      });
-
-      it('is the correct width', () => {
-        expect(component.getNode().props.style.width).toBe(IconSize.XXLARGE + 'px');
-      });
-
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
       });
@@ -72,14 +53,6 @@ describe('<Icon />', () => {
     describe('with additional className', () => {
       beforeEach(() => {
         component = shallow(<Accounts className="TEST_CLASSNAME" />);
-      });
-
-      it('includes that className', () => {
-        expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-      });
-
-      it('still includes its base className', () => {
-        expect(component.hasClass('y-icon')).toBe(true);
       });
 
       it('matches its snapshot', () => {

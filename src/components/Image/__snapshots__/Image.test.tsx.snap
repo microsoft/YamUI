@@ -28,7 +28,7 @@ exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 />
 `;
 
-exports[`<Image /> with height and width matches its snapshot 1`] = `
+exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 <Image
   alt="description"
   className="y-image"
@@ -39,7 +39,7 @@ exports[`<Image /> with height and width matches its snapshot 1`] = `
 />
 `;
 
-exports[`<Image /> with imageFit matches its snapshot 1`] = `
+exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 <Image
   alt="description"
   className="y-image"

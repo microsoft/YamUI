@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> with a valid color matches its snapshot 1`] = `
-<span
-  className="y-text y-text__color-secondary"
-  style={Object {}}
->
-  test content
-</span>
-`;
-
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <span
   className="y-text y-textSize-xLarge"
@@ -30,6 +21,15 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
 exports[`<Text /> with bold matches its snapshot 1`] = `
 <span
   className="y-text y-text__bold"
+  style={Object {}}
+>
+  test content
+</span>
+`;
+
+exports[`<Text /> with color secondary matches its snapshot 1`] = `
+<span
+  className="y-text y-text__color-secondary"
   style={Object {}}
 >
   test content
