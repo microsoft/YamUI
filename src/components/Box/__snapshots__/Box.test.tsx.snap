@@ -1,57 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Box /> with additional className matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-small TEST_CLASSNAME"
-/>
-`;
-
-exports[`<Box /> with border type round matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-round y-box__padding-small"
-/>
-`;
-
-exports[`<Box /> with border type soft matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-soft y-box__padding-small"
-/>
-`;
-
-exports[`<Box /> with border type square matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-small"
+<Block
+  className="y-box TEST_CLASSNAME"
+  padding="small"
 />
 `;
 
 exports[`<Box /> with children passed matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-small"
->
-  child test
-</div>
+<Block
+  className="y-box"
+  padding="small"
+/>
 `;
 
 exports[`<Box /> with default options matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-small"
-/>
-`;
-
-exports[`<Box /> with padding large matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-large"
-/>
-`;
-
-exports[`<Box /> with padding medium matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-medium"
-/>
-`;
-
-exports[`<Box /> with padding small matches its snapshot 1`] = `
-<div
-  className="y-box y-box__borderType-square y-box__padding-small"
+<Block
+  className="y-box"
+  padding="small"
 />
 `;

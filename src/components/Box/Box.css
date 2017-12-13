@@ -2,30 +2,8 @@
 @import "src/css/variables/colors.css";
 
 .y-box {
+  position: relative;
   padding: 8px;
-  border: 1px solid $color__indieRock;
-}
-
-.y-box__borderType-round {
   border-radius: 2px;
-}
-
-.y-box__borderType-soft {
-  border-radius: 1px;
-}
-
-.y-box__borderType-square {
-  border-radius: 0px;
-}
-
-.y-box__padding-large {
-  padding: 16px;
-}
-
-.y-box__padding-medium {
-  padding: 12px;
-}
-
-.y-box__padding-small {
-  padding: 8px;
+  border: 1px solid $color__indieRock;
 }

@@ -1,44 +1,30 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { BoxBorderType, BoxPaddingSize } from './enums';
+import {
+  NestableBaseComponentProps as BoxProps,
+} from '../../util/BaseComponent/props';
+import Block, { GutterSize } from '../Block';
 import './Box.css';
 
-export { BoxBorderType, BoxPaddingSize };
-
-export interface BoxProps extends BaseComponentProps {
-  /**
-   * Describe what this property does. This will also appear as part of this component's
-   * documentation.
-   */
-  borderType?: BoxBorderType;
-  padding?: BoxPaddingSize;
-}
-
+export { BoxProps };
 /**
- * Describe what `Box` does. This will also appear as part of this component's
- * documentation.
+ * A Block component with a border. Usually used as a container component
  */
 export default class Box extends React.Component<BoxProps, {}> {
-  static defaultProps = {
-    borderType: BoxBorderType.SQUARE,
-    padding: BoxPaddingSize.SMALL,
-  };
-
   render() {
     const { children } = this.props;
 
     return (
-      <div className={this.getClasses()}>
+      <Block className={this.getClasses()} padding={GutterSize.SMALL}>
         {children}
-      </div>
+      </Block>
     );
   }
 
   private getClasses() {
-    const { className, borderType, padding } = this.props;
-    const classes = ['y-box', `y-box__borderType-${borderType}`, `y-box__padding-${padding}`];
+    const { className } = this.props;
+    const classes = ['y-box'];
 
     if (className) {
       classes.push(className);
