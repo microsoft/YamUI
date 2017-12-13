@@ -11,14 +11,6 @@ describe('<HorizontalListItem />', () => {
       component = shallow(<HorizontalListItem />);
     });
 
-    it('renders an li element', () => {
-      expect(component.find('li').length).toBe(1);
-    });
-
-    it('renders its base className', () => {
-      expect(component.hasClass('y-horizontalList--item')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -29,14 +21,6 @@ describe('<HorizontalListItem />', () => {
       component = shallow(<HorizontalListItem className="TEST_CLASSNAME" />);
     });
 
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-horizontalList--item')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -45,10 +29,6 @@ describe('<HorizontalListItem />', () => {
   describe('with child content', () => {
     beforeEach(() => {
       component = shallow(<HorizontalListItem>list item content</HorizontalListItem>);
-    });
-
-    it('renders the child content', () => {
-      expect(component.text()).toBe('list item content');
     });
 
     it('matches its snapshot', () => {

@@ -11,14 +11,6 @@ describe('<FixedGridColumn />', () => {
       component = shallow(<FixedGridColumn>grid content</FixedGridColumn>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('grid content');
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-fixedGridColumn')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -31,14 +23,6 @@ describe('<FixedGridColumn />', () => {
       );
     });
 
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridColumn')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -47,14 +31,6 @@ describe('<FixedGridColumn />', () => {
   describe('when set to fixed', () => {
     beforeEach(() => {
       component = shallow(<FixedGridColumn fixed={true}>grid content</FixedGridColumn>);
-    });
-
-    it('includes the fixed class name', () => {
-      expect(component.hasClass('y-fixedGridColumn__isFixed')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridColumn')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -71,22 +47,6 @@ describe('<FixedGridColumn />', () => {
       );
     });
 
-    it('includes the fixed class name', () => {
-      expect(component.hasClass('y-fixedGridColumn__isFixed')).toBe(true);
-    });
-
-    it('includes the hasWidth class name', () => {
-      expect(component.hasClass('y-fixedGridColumn__hasWidth')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fixedGridColumn')).toBe(true);
-    });
-
-    it('has a width set in pixels', () => {
-      expect(component.first().getNode().props.style.width).toEqual('150px');
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -97,18 +57,6 @@ describe('<FixedGridColumn />', () => {
       component = shallow(<FixedGridColumn width={150}>grid content</FixedGridColumn>);
     });
 
-    it('does not include the fixed class name', () => {
-      expect(component.hasClass('y-fixedGridColumn__isFixed')).not.toBe(true);
-    });
-
-    it('includes the hasWidth class name', () => {
-      expect(component.hasClass('y-fixedGridColumn__hasWidth')).toBe(true);
-    });
-
-    it('does not have a width set', () => {
-      expect(component.first().getNode().props.style).toEqual({});
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -117,10 +65,6 @@ describe('<FixedGridColumn />', () => {
   describe('with vertical align middle', () => {
     beforeEach(() => {
       component = shallow(<FixedGridColumn verticalAlign="middle">grid content</FixedGridColumn>);
-    });
-
-    it('has the vertical align inner div', () => {
-      expect(component.find('.y-fixedGridColumn--inner__middle').length).toBe(1);
     });
 
     it('matches its snapshot', () => {
