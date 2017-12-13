@@ -1,0 +1,23 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-suggestions-list {
+  width: 280px;
+}
+
+.y-suggestions-list--with-status .y-suggestions-list--loading {
+  height: 52px;
+}
+
+.y-suggestions-list--with-status.y-suggestions-list--with-results .y-suggestions-list--loading {
+  height: 48px;
+}
+
+.y-suggestions-list--results {
+  padding: 4px 0;
+}
+
+.y-suggestions-list--with-status .y-suggestions-list--results {
+  padding: 4px 0 0 0;
+  border-bottom: 1px solid $borderColor__tertiary;
+}
