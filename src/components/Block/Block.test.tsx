@@ -95,10 +95,6 @@ describe('<Block />', () => {
       component = shallow(<Block ellipsis={true}>block content</Block>);
     });
 
-    it('inner element contains the ellipsis className', () => {
-      expect(component.find('.y-block--inner').hasClass('y-ellipsis')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });

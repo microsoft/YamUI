@@ -27,12 +27,3 @@
 .y-textSize-xSmall {
   @extend text__xSmall;
 }
-
-.y-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  
-  /* overflow: hidden changes the baseline of inline-block elements, this fixes it */
-  vertical-align: bottom;
-}

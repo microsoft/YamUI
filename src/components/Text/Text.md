@@ -41,7 +41,9 @@ Uppercase:
 </div>
 ```
 
-Max width with ellipsis:
+Max width with ellipsis.
+
+NOTE: Text with maxWidth will add an extra 1px of height to the bottom of its containing element, an unfortunate side-effect of overflow-hidden on the inline-block Text element. To maintain perfect vertical rhythm in the next block of text, give the next container -1px top margin or simply use `<Block push={-1} />`.
 
 ```js { "props": { "data-example": "max width with ellipsis" } }
 <div>
@@ -74,11 +76,11 @@ const { TextColor } = require('.');
   <p>
     <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
   </p>
-  <p style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
+  <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
     <Text color={TextColor.WHITE}>
       This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
     </Text>
-  </p>
+  </div>
 </div>
 ```
 
