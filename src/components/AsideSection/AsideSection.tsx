@@ -21,8 +21,7 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 }
 
 /**
- * Describe what `AsideSection` does. This will also appear as part of this component's
- * documentation.
+ * A section component to be used primarily for sidebar modules
  */
 export default class AsideSection extends React.Component<AsideSectionProps, {}> {
   render() {

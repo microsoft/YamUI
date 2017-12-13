@@ -1,7 +1,3 @@
-### Notes for use
-
-Add here any notes on how to use the component, or delete this section.
-
 ### Examples
 
 Basic usage:
@@ -12,7 +8,7 @@ Basic usage:
 </AsideSection>
 ```
 
-Basic usage with action:
+With an action:
 
 ```js
 const action = <Clickable>Add</Clickable>;
