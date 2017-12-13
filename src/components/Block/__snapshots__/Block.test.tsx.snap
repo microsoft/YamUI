@@ -32,7 +32,7 @@ exports[`<Block /> with ellipsis matches its snapshot 1`] = `
   style={Object {}}
 >
   <div
-    className="y-block--inner y-ellipsis"
+    className="y-block--inner y-block__ellipsis"
   >
     block content
   </div>

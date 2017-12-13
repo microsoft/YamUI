@@ -45,9 +45,9 @@ exports[`<Text /> with default options matches its snapshot 1`] = `
 </span>
 `;
 
-exports[`<Text /> with maxWidth matches its snapshot 1`] = `
+exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 <span
-  className="y-text y-ellipsis"
+  className="y-text y-text__ellipsis"
   style={
     Object {
       "maxWidth": "500px",
