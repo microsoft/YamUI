@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
+import Clickable from '../Clickable';
 import AsideSection, { AsideSectionProps } from './index';
 
 describe('<AsideSection />', () => {
@@ -18,7 +19,7 @@ describe('<AsideSection />', () => {
 
   describe('with action prop', () => {
     beforeEach(() => {
-      const action = React.createElement('span');
+      const action = <Clickable>Add</Clickable>;
       component = shallow(<AsideSection title="Test title" action={action}/>);
     });
 
@@ -31,10 +32,9 @@ describe('<AsideSection />', () => {
 
   describe('with children', () => {
     beforeEach(() => {
-      const action = React.createElement('span');
       component = shallow(
-        <AsideSection title="Test title" action={action}>
-          <div>content</div>
+        <AsideSection title="Test title">
+          <div>Child Content</div>
         </AsideSection>,
       );
     });

@@ -4,75 +4,29 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <FixedGridRow
-    gutterSize="small"
+  <Block
+    textSize="small"
   >
-    <FixedGridColumn>
-      <Heading
-        level="2"
-        size="6"
-      >
-        <Text
-          uppercase={true}
-        >
-          Test title
-        </Text>
-      </Heading>
-    </FixedGridColumn>
-  </FixedGridRow>
-  <div />
-</div>
-`;
-
-exports[`<AsideSection /> when passed in an action renders correctly 1`] = `
-<div
-  className="y-aside-section"
->
-  <FixedGridRow
-    gutterSize="small"
-  >
-    <FixedGridColumn>
-      <Heading
-        level="2"
-        size="6"
-      >
-        <Text
-          uppercase={true}
-        >
-          Test title
-        </Text>
-      </Heading>
-    </FixedGridColumn>
-    <FixedGridColumn
-      fixed={true}
+    <FixedGridRow
+      bottomSpacing="xSmall"
+      className="y-aside-section--header"
+      gutterSize="small"
     >
-      <span />
-    </FixedGridColumn>
-  </FixedGridRow>
-  <div />
-</div>
-`;
-
-exports[`<AsideSection /> when passed in title renders correctly 1`] = `
-<div
-  className="y-aside-section"
->
-  <FixedGridRow
-    gutterSize="small"
-  >
-    <FixedGridColumn>
-      <Heading
-        level="2"
-        size="6"
-      >
-        <Text
-          uppercase={true}
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
         >
-          Test title
-        </Text>
-      </Heading>
-    </FixedGridColumn>
-  </FixedGridRow>
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
   <div />
 </div>
 `;
@@ -81,27 +35,36 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
 <div
   className="y-aside-section"
 >
-  <FixedGridRow
-    gutterSize="small"
+  <Block
+    textSize="small"
   >
-    <FixedGridColumn>
-      <Heading
-        level="2"
-        size="6"
-      >
-        <Text
-          uppercase={true}
-        >
-          Test title
-        </Text>
-      </Heading>
-    </FixedGridColumn>
-    <FixedGridColumn
-      fixed={true}
+    <FixedGridRow
+      bottomSpacing="xSmall"
+      className="y-aside-section--header"
+      gutterSize="small"
     >
-      <span />
-    </FixedGridColumn>
-  </FixedGridRow>
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
+        >
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <Clickable>
+          Add
+        </Clickable>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
   <div />
 </div>
 `;
@@ -110,30 +73,32 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <FixedGridRow
-    gutterSize="small"
+  <Block
+    textSize="small"
   >
-    <FixedGridColumn>
-      <Heading
-        level="2"
-        size="6"
-      >
-        <Text
-          uppercase={true}
-        >
-          Test title
-        </Text>
-      </Heading>
-    </FixedGridColumn>
-    <FixedGridColumn
-      fixed={true}
+    <FixedGridRow
+      bottomSpacing="xSmall"
+      className="y-aside-section--header"
+      gutterSize="small"
     >
-      <span />
-    </FixedGridColumn>
-  </FixedGridRow>
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
+        >
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
   <div>
     <div>
-      content
+      Child Content
     </div>
   </div>
 </div>
