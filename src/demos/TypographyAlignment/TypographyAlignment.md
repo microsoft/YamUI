@@ -15,7 +15,7 @@ const { TextSize } = require('../../components/Text');
 <Block>
   <Block>Text components of different sizes with maxWidth+ellipsis will share a common baseline:</Block>
   <Block>
-    <Text>Unstyled</Text> <Text maxWidth="30px" size={TextSize.XSMALL}>xsmall</Text> <Text maxWidth="30px" size={TextSize.SMALL}>small</Text> <Text maxWidth="30px" size={TextSize.MEDIUM_SUB}>mediumsub</Text> <Text maxWidth="30px" size={TextSize.MEDIUM}>medium</Text> <Text maxWidth="30px" size={TextSize.LARGE}>large</Text> <Text maxWidth="30px" size={TextSize.XLARGE}>xlarge</Text> <Text maxWidth="30px" size={TextSize.XXLARGE}>xxlarge</Text>
+    <Text>Unstyled</Text> <Text maxWidth="20px">unstyled</Text> <Text maxWidth="20px" size={TextSize.XSMALL}>xsmall</Text> <Text maxWidth="30px" size={TextSize.SMALL}>small</Text> <Text maxWidth="30px" size={TextSize.MEDIUM_SUB}>mediumsub</Text> <Text maxWidth="30px" size={TextSize.MEDIUM}>medium</Text> <Text maxWidth="30px" size={TextSize.LARGE}>large</Text> <Text maxWidth="30px" size={TextSize.XLARGE}>xlarge</Text> <Text maxWidth="30px" size={TextSize.XXLARGE}>xxlarge</Text>
   </Block>
 </Block>
 ```
@@ -64,42 +64,42 @@ const textSample = (
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>small</b>
     <Block textSize={TextSize.SMALL}>
       {textSample}
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>mediumSub</b>
     <Block textSize={TextSize.MEDIUM_SUB}>
       {textSample}
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>medium</b>
     <Block textSize={TextSize.MEDIUM}>
       {textSample}
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>large</b>
     <Block textSize={TextSize.LARGE}>
       {textSample}
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>xLarge</b>
     <Block textSize={TextSize.XLARGE}>
       {textSample}
     </Block>
   </Block>
 
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
     <b>xxLarge</b>
     <Block textSize={TextSize.XXLARGE}>
       {textSample}

@@ -32,6 +32,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  vertical-align: -.4rem;
 }
 
 /**
@@ -64,22 +65,29 @@
 
 .y-text.y-text__ellipsis.y-textSize-xSmall {
   vertical-align: -.4rem;
+  height: 1.6rem;
 }
 .y-text.y-text__ellipsis.y-textSize-small {
   vertical-align: -.3rem;
+  height: 1.6rem;
 }
 .y-text.y-text__ellipsis.y-textSize-mediumSub {
   vertical-align: -.5rem;
+  height: 2rem;
 }
 .y-text.y-text__ellipsis.y-textSize-medium {
   vertical-align: -.4rem;
+  height: 2rem;
 }
 .y-text.y-text__ellipsis.y-textSize-large {
   vertical-align: -.5rem;
+  height: 2.4rem;
 }
 .y-text.y-text__ellipsis.y-textSize-xLarge {
   vertical-align: -.5rem;
+  height: 2.8rem;
 }
 .y-text.y-text__ellipsis.y-textSize-xxLarge {
   vertical-align: -.4rem;
+  height: 2.8rem;
 }
