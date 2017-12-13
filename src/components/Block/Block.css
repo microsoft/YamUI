@@ -51,3 +51,9 @@
 .y-block__textAlign-center {
   text-align: center;
 }
+
+.y-block__ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

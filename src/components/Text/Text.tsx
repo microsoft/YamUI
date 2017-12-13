@@ -62,7 +62,7 @@ export default class Text extends React.Component<TextProps, {}> {
       classes.push('y-text__uppercase');
     }
     if (maxWidth) {
-      classes.push('y-ellipsis');
+      classes.push('y-text__ellipsis');
     }
     if (size) {
       classes.push(`y-textSize-${size}`);

@@ -13,10 +13,6 @@ describe('<ProgressIndicator />', () => {
       );
     });
 
-    it('includes the incomplete classname (for square progress bar corners)', () => {
-      expect(component.hasClass('y-progress-indicator__incomplete')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -27,10 +23,6 @@ describe('<ProgressIndicator />', () => {
       component = shallow(
         <ProgressIndicator ariaValueText="100% complete" percentComplete={1} />,
       );
-    });
-
-    it('does not include the incomplete classname', () => {
-      expect(component.hasClass('y-progress-indicator__incomplete')).toBe(false);
     });
 
     it('matches its snapshot', () => {
@@ -47,14 +39,6 @@ describe('<ProgressIndicator />', () => {
           className="TEST_CLASS"
         />,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASS')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-progress-indicator')).toBe(true);
     });
 
     it('matches its snapshot', () => {
