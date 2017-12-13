@@ -10,12 +10,12 @@ import {
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
-import Icon, { IconSize } from '../../components/Icon';
+import { Add, Mail, Phone, Group, IconSize } from '../../components/Icon';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
-const iconMail = <Icon size={IconSize.MEDIUM} icon="mail" block={true} color="#a8b0bd" />;
-const iconPhone = <Icon size={IconSize.MEDIUM} icon="phone" block={true} color="#a8b0bd" />;
-const iconGroup = <Icon size={IconSize.MEDIUM} icon="group" block={true} color="#a8b0bd" />;
+const iconMail = <Mail size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
+const iconGroup = <Group size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
+const iconPhone = <Phone size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
 
 const userGroups = (
   <span>
@@ -73,7 +73,7 @@ export default class UserHovercard extends React.Component<UserHovercardProps, {
                 <Button text="Send Message" />
               </HorizontalListItem>
               <HorizontalListItem>
-                <Button text="Follow" color={ButtonColor.PRIMARY} icon="plus" />
+                <Button text="Follow" color={ButtonColor.PRIMARY} icon={Add} />
               </HorizontalListItem>
             </HorizontalList>
           </Block>

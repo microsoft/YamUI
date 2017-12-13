@@ -103,6 +103,7 @@ With additional arbitrary UI:
 const { AvatarSize } = require('../Avatar');
 const { ButtonColor, ButtonSize } = require('../Button');
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');
+const { Add } = require('../Icon');
 const { MediaObjectSize } = require('.');
 
 const avatar = (size) => (
@@ -119,7 +120,7 @@ const avatar = (size) => (
   <Block push={4}>
     <FixedGridRow>
       <FixedGridColumn>
-        <Button text="Follow" size={ButtonSize.SMALL} icon="plus" />
+        <Button text="Follow" size={ButtonSize.SMALL} icon={Add} />
       </FixedGridColumn>
       <FixedGridColumn fixed={true}>
         <Button text="..." size={ButtonSize.SMALL} />

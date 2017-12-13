@@ -1,0 +1,3 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 240v-75h45v75H0zm60 0V105h45v135H60zm120-135h45v135h-45V105zm-60 135V45h45v195h-45z" fill-rule="evenodd"/>
+</svg>

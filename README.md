@@ -83,8 +83,6 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 ### Adding icons
 
 * Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/Icons).
-* Export new React SVG from `src/components/Icon/icons/index.ts` using the filename as the label.
-* Use the icon via its label `<Icon icon="plus" />`.
 
 ## Releasing a new version
 

@@ -20,7 +20,12 @@ module.exports = {
     {
       name: 'Components',
       content: path.resolve(root, 'src/components/README.md'),
-      components: path.resolve(root, 'src/components/**/*.{ts,tsx}'),
+      components: path.resolve(root, 'src/components/*/*.{ts,tsx}'),
+    },
+    {
+      name: 'Graphics',
+      content: path.resolve(root, 'src/components/README.md'),
+      components: path.resolve(root, 'src/components/Icon/docs/Icons.tsx'),
     },
     {
       name: 'Demos',
