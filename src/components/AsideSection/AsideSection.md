@@ -2,7 +2,7 @@
 
 Basic usage:
 
-```js
+```js { "props": { "data-example": "basic" } }
 <AsideSection title="Example title">
   <div>Child Content</div>
 </AsideSection>
@@ -10,7 +10,7 @@ Basic usage:
 
 With an action:
 
-```js
+```js { "props": { "data-example": "with-action" } }
 const action = <Clickable>Add</Clickable>;
 
 <AsideSection title="Example title" action={action}>
