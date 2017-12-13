@@ -112,7 +112,7 @@ Beside Button
 ```js { "props": { "data-example": "beside button" } }
 <FixedGridRow>
   <FixedGridColumn><TextField/></FixedGridColumn>
-  <FixedGridColumn><Button text="Submit" /></FixedGridColumn>
+  <FixedGridColumn fixed={true}><Button text="Submit" /></FixedGridColumn>
 </FixedGridRow>
 ```
 
