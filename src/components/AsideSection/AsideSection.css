@@ -3,6 +3,6 @@
 @import "src/css/variables/gutters.css";
 
 .y-aside-section--header {
-  box-shadow: inset 0 -1px 0 0 $borderColor;
+  border-bottom: 1px solid $borderColor;
   padding-bottom: $gutterWidth__xSmall;
 }

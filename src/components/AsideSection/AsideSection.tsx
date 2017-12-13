@@ -2,8 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import Heading from '../Heading';
+import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
+import Heading from '../Heading';
 import Text, { TextSize } from '../Text';
 import './AsideSection.css';
 
@@ -27,14 +28,16 @@ export default class AsideSection extends React.Component<AsideSectionProps, {}>
   render() {
     return (
       <div className="y-aside-section">
-        <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.XSMALL}>
-          <FixedGridColumn>
-            <Heading level="2" size="none">
-              <Text uppercase={true} size={TextSize.SMALL} bold={true}>{this.props.title}</Text>
-            </Heading>
-          </FixedGridColumn>
-          {this.getActionColumn()}
-        </FixedGridRow>
+        <Block textSize={TextSize.SMALL}>
+          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.XSMALL}>
+            <FixedGridColumn>
+              <Heading level="2" size="none">
+                <Text uppercase={true} bold={true}>{this.props.title}</Text>
+              </Heading>
+            </FixedGridColumn>
+            {this.getActionColumn()}
+          </FixedGridRow>
+        </Block>
         <div>
           {this.props.children}
         </div>
