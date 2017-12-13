@@ -37,7 +37,7 @@ export interface IconStyles {
 /**
  * An `Icon` renders an SVG icon.
  */
-export default class Icon extends React.Component<IconProps, {}> {
+export default class BaseIcon extends React.Component<IconProps, {}> {
   protected getClassName() {
     const { block, className } = this.props;
   

@@ -113,15 +113,15 @@ describe('<Button />', () => {
 
   describe('with icon', () => {
     beforeEach(() => {
-      component = shallow(<Button icon={<AccountsIcon />} text={sampleText} />);
-    });
-
-    it('adds icon with class name to button', () => {
-      expect(component.find(AccountsIcon).hasClass('y-button--icon')).toBe(true);
+      component = shallow(<Button icon={AccountsIcon} text={sampleText} />);
     });
 
     it('renders the icon on the left', () => {
       expect(component.find('.y-button--icon-wrapper-left').length).toBe(1);
+    });
+
+    it('renders the actual Icon', () => {
+      expect(component.find(AccountsIcon).length).toBe(1);
     });
 
     it('matches its snapshot', () => {
@@ -132,7 +132,7 @@ describe('<Button />', () => {
       beforeEach(() => {
         component = shallow(
           <Button
-            icon={<AccountsIcon />}
+            icon={AccountsIcon}
             text={sampleText}
             iconPosition={ButtonIconPosition.RIGHT}
           />,
@@ -195,7 +195,7 @@ describe('<Button />', () => {
     describe('with icon', () => {
       beforeEach(() => {
         component = shallow(
-          <Button icon={<AccountsIcon />} size={ButtonSize.SMALL} text={sampleText} />,
+          <Button icon={AccountsIcon} size={ButtonSize.SMALL} text={sampleText} />,
         );
       });
 

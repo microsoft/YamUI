@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { Accounts, IconSize, IconProps } from '.';
+import { Accounts, IconSize, IconProps, BaseIcon } from '.';
 import * as allExportedIcons from './icons';
 
 describe('<Icon />', () => {
@@ -91,18 +91,22 @@ describe('<Icon />', () => {
   describe('total number of Icons', () => {
     const totalIcons = Object.keys(allExportedIcons).length;
     it('is correct', () => {
-      expect(totalIcons).toBe(1);
+      expect(totalIcons).toBe(112);
     });
   });
 
   describe('each Icon', () => {
-    // TODO: LOOP
-    beforeEach(() => {
-      component = shallow(<Accounts />);
-    });
+    let Icon: typeof BaseIcon;
+    Object.keys(allExportedIcons).forEach((name) => {
+      beforeEach(() => {
+        // TODO: FIX THIS TYPESCRIPT ERROR
+        Icon = (allExportedIcons[name] as typeof BaseIcon);
+        component = shallow(<Icon />);
+      });
 
-    it('has the correct viewBox', () => {
-      expect(component.getNode().props.viewBox).toBe('0 0 240 240');
+      it('has a 240x240 viewbox', () => {
+        expect(component.getNode().props.viewBox).toBe('0 0 240 240');
+      });
     });
   });
 });

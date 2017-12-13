@@ -9,16 +9,17 @@ The `block` prop may be necessary to remove extra `line-height`.
 Icon library:
 
 ```js { "props": { "data-example": "library" } }
-const { IconSize, icons } = require('.');
+const { IconSize } = require('../index');
+const allIcons = require('.');
 const { GutterSize, TextSize } = require('../Block');
 
-const iconsLibrary = Object.keys(icons).map((icon, index) => (
+const iconsLibrary = Object.keys(allIcons).map((Icon, index) => (
   <div style={{ float: 'left', width: '100px', textAlign: 'center' }}>
     <Block textSize={TextSize.XLARGE}>
-      <Icon icon={icon} />
+      <Icon />
     </Block>
     <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE}>
-      {icon}
+      {Icon.constructor.displayName}
     </Block>
   </div>
 ));
@@ -32,7 +33,7 @@ const iconsLibrary = Object.keys(icons).map((icon, index) => (
 Sizes:
 
 ```js { "props": { "data-example": "sizes" } }
-const { IconSize } = require('.');
+const { Attach, IconSize } = require('../index');
 
 <table style={{ textAlign: 'center' }}>
   <thead>
@@ -48,22 +49,22 @@ const { IconSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Icon size={IconSize.XXLARGE} icon="attach" />
+        <Attach size={IconSize.XXLARGE} />
       </td>
       <td>
-        <Icon size={IconSize.XLARGE} icon="attach" />
+        <Attach size={IconSize.XLARGE} />
       </td>
       <td>
-        <Icon size={IconSize.LARGE} icon="attach" />
+        <Attach size={IconSize.LARGE} />
       </td>
       <td>
-        <Icon size={IconSize.MEDIUM} icon="attach" />
+        <Attach size={IconSize.MEDIUM} />
       </td>
       <td>
-        <Icon size={IconSize.SMALL} icon="attach" />
+        <Attach size={IconSize.SMALL} />
       </td>
       <td>
-        <Icon size={IconSize.XSMALL} icon="attach" />
+        <Attach size={IconSize.XSMALL} />
       </td>
     </tr>
   </tbody>
@@ -74,14 +75,15 @@ Auto-sized to text:
 
 ```js { "props": { "data-example": "autosized to text" } }
 const { GutterSize, TextSize } = require('../Block');
+const { Attach, CheckMark, Group, Add, Like } = '.';
 
 const longText = (
   <span>
-    <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="checkMark" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="group" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="add" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="like" /> LIKE
+    <Attach /> The quick brown fox jumps over the lazy dog.
+    <CheckMark /> The quick brown fox jumps over the lazy dog.
+    <Group /> The quick brown fox jumps over the lazy dog.
+    <Add /> The quick brown fox jumps over the lazy dog.
+    <Like /> LIKE
   </span>
 );
 
@@ -117,12 +119,13 @@ Auto-sized to headings:
 
 ```js { "props": { "data-example": "autosized to headings" } }
 const { GutterSize } = require('../Block');
+const { Attach, CheckMark, Like } = '.';
 
 const longText = (
   <span>
-    <Icon icon="attach" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="checkMark" /> The quick brown fox jumps over the lazy dog.
-    <Icon icon="like" />
+    <Attach /> The quick brown fox jumps over the lazy dog.
+    <CheckMark /> The quick brown fox jumps over the lazy dog.
+    <Like />
   </span>
 );
 
@@ -154,17 +157,17 @@ const longText = (
 Inline with text and color overrides:
 
 ```js { "props": { "data-example": "inline with text and color" } }
-const { IconSize } = require('.');
+const { Add, IconSize } = require('../index');
 
 <div>
   <p>
-    This is a line of text with a <Icon size={IconSize.MEDIUM} icon="add" /> inline icon.
+    This is a line of text with a <Add size={IconSize.MEDIUM} /> inline icon.
   </p>
   <p style={{ color: 'blue' }}>
-    This is a line of colored text with a <Icon size={IconSize.MEDIUM} icon="add" /> inline icon.
+    This is a line of colored text with a <Add size={IconSize.MEDIUM} /> inline icon.
   </p>
   <p>
-    This is a line of colored text with a <Icon size={IconSize.MEDIUM} icon="add" color="red" /> inline icon that overrides its color.
+    This is a line of colored text with a <Add size={IconSize.MEDIUM} color="red" /> inline icon that overrides its color.
   </p>
 </div>
 ```
