@@ -50,7 +50,7 @@ const { GutterSize } = require('../../components/Block');
 const { TextSize } = require('../../components/Text');
 const textSample = (
   <span>
-    <Button text="Reg" /> <Button size={ButtonSize.SMALL} text="Sm" /> <Text>n/a</Text> <Text size={TextSize.XSMALL}>xsmall</Text> <Text size={TextSize.MEDIUM}>medium</Text> <Text size={TextSize.XXLARGE}>xxlarge</Text> <NavigationLink href="https://www.yammer.com">Link</NavigationLink> <Clickable>Clickable</Clickable> <Text maxWidth="30px">inherited size</Text> <Text maxWidth="25px" size={TextSize.XSMALL}>xsmall</Text> <Text maxWidth="25px" size={TextSize.SMALL}>small</Text> <Text maxWidth="30px" size={TextSize.MEDIUM_SUB}>mediumsub</Text> <Text maxWidth="30px" size={TextSize.MEDIUM}>medium</Text> <Text maxWidth="30px" size={TextSize.LARGE}>large</Text> <Text maxWidth="30px" size={TextSize.XLARGE}>xlarge</Text> <Text maxWidth="30px" size={TextSize.XXLARGE}>xxlarge</Text>
+    <Button text="R" /> <Button size={ButtonSize.SMALL} text="S" /> <Text>n/a</Text> <Text size={TextSize.XSMALL}>xsm</Text> <Text size={TextSize.MEDIUM}>med</Text> <Text size={TextSize.XXLARGE}>xxl</Text> <Clickable>C</Clickable> <Text maxWidth="30px">inherited size</Text> <Text maxWidth="25px" size={TextSize.XSMALL}>xsmall</Text> <Text maxWidth="25px" size={TextSize.SMALL}>small</Text> <Text maxWidth="30px" size={TextSize.MEDIUM_SUB}>mediumsub</Text> <Text maxWidth="30px" size={TextSize.MEDIUM}>medium</Text> <Text maxWidth="30px" size={TextSize.LARGE}>large</Text> <Text maxWidth="30px" size={TextSize.XLARGE}>xlarge</Text> <Text maxWidth="30px" size={TextSize.XXLARGE}>xxlarge</Text>
   </span>
 );
 
