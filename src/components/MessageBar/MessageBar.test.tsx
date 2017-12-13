@@ -12,10 +12,6 @@ describe('<MessageBar />', () => {
       component = shallow(<MessageBar>content</MessageBar>);
     });
 
-    it('has its correct base class', () => {
-      expect(component.hasClass('y-message-bar')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -28,14 +24,6 @@ describe('<MessageBar />', () => {
           content
         </MessageBar>,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-message-bar')).toBe(true);
     });
 
     it('matches its snapshot', () => {

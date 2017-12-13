@@ -11,14 +11,6 @@ describe('<FakeLink />', () => {
       component = shallow(<FakeLink>link content</FakeLink>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('link content');
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-fakeLink')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -27,14 +19,6 @@ describe('<FakeLink />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<FakeLink className="TEST_CLASSNAME">test content</FakeLink>);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-fakeLink')).toBe(true);
     });
 
     it('matches its snapshot', () => {
