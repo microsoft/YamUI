@@ -10,14 +10,10 @@ import Dropdown, { DropdownProps } from '.';
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;
   let fullComponent: ReactWrapper<DropdownProps, {}>;
-  
+
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(<Dropdown options={[]} />);
-    });
-
-    it('has its correct base class', () => {
-      expect(component.hasClass('y-dropdown')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -28,14 +24,6 @@ describe('<Dropdown />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<Dropdown options={[]} className="TEST_CLASSNAME" />);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-dropdown')).toBe(true);
     });
 
     it('matches its snapshot', () => {

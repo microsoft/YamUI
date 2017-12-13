@@ -11,14 +11,6 @@ describe('<Block />', () => {
       component = shallow(<Block>block content</Block>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('block content');
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-block')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -27,14 +19,6 @@ describe('<Block />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<Block className="TEST_CLASSNAME">block content</Block>);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-block')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -47,14 +31,6 @@ describe('<Block />', () => {
       component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
-    it('includes the xLarge className', () => {
-      expect(component.hasClass('y-textSize-xLarge')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-block')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -64,14 +40,6 @@ describe('<Block />', () => {
     describe('right', () => {
       beforeEach(() => {
         component = shallow(<Block textAlign="right">block content</Block>);
-      });
-
-      it('includes the aligned right className', () => {
-        expect(component.hasClass('y-block__textAlign-right')).toBe(true);
-      });
-
-      it('still has its base className', () => {
-        expect(component.hasClass('y-block')).toBe(true);
       });
 
       it('matches its snapshot', () => {
@@ -105,10 +73,6 @@ describe('<Block />', () => {
       component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
 
-    it('contains the bottomSpacing className', () => {
-      expect(component.hasClass('y-block__bottomSpacing-xLarge')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -117,10 +81,6 @@ describe('<Block />', () => {
   describe('with padding', () => {
     beforeEach(() => {
       component = shallow(<Block padding={GutterSize.SMALL}>block content</Block>);
-    });
-
-    it('contains the padding className', () => {
-      expect(component.find('.y-block--inner__padding-small').length).toEqual(1);
     });
 
     it('matches its snapshot', () => {
@@ -133,10 +93,6 @@ describe('<Block />', () => {
       component = shallow(<Block push={3}>block content</Block>);
     });
 
-    it('adds top outer padding', () => {
-      expect(component.first().getNode().props.style.paddingTop).toEqual('0.3rem');
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -145,10 +101,6 @@ describe('<Block />', () => {
   describe('with negative push', () => {
     beforeEach(() => {
       component = shallow(<Block push={-2}>block content</Block>);
-    });
-
-    it('adds a negative top margin', () => {
-      expect(component.first().getNode().props.style.marginTop).toEqual('-0.2rem');
     });
 
     it('matches its snapshot', () => {

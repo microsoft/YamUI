@@ -12,14 +12,6 @@ describe('<Text />', () => {
       component = shallow(<Text>test content</Text>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('test content');
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-text')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -28,14 +20,6 @@ describe('<Text />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(<Text className="TEST_CLASSNAME">test content</Text>);
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-text')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -48,14 +32,6 @@ describe('<Text />', () => {
       component = shallow(<Text size={TextSize.XLARGE}>test content</Text>);
     });
 
-    it('renders the correct size className', () => {
-      expect(component.hasClass('y-textSize-xLarge')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-text')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -66,10 +42,6 @@ describe('<Text />', () => {
       component = shallow(<Text bold={true}>test content</Text>);
     });
 
-    it('renders the bold className', () => {
-      expect(component.hasClass('y-text__bold')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -78,10 +50,6 @@ describe('<Text />', () => {
   describe('with uppercase', () => {
     beforeEach(() => {
       component = shallow(<Text uppercase={true}>test content</Text>);
-    });
-
-    it('renders the uppercase className', () => {
-      expect(component.hasClass('y-text__uppercase')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -99,13 +67,9 @@ describe('<Text />', () => {
     });
   });
 
-  describe('with a valid color', () => {
+  describe('with color secondary', () => {
     beforeEach(() => {
       component = shallow(<Text color={TextColor.SECONDARY}>test content</Text>);
-    });
-
-    it('renders the correct color className', () => {
-      expect(component.hasClass('y-text__color-secondary')).toBe(true);
     });
 
     it('matches its snapshot', () => {
