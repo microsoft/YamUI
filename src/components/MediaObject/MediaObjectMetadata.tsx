@@ -10,7 +10,7 @@ const BlockPushMap = {
   [MediaObjectSize.XLARGE]: -1,
   [MediaObjectSize.LARGE]: 3,
   [MediaObjectSize.MEDIUM]: 3,
-  [MediaObjectSize.SMALL]: 0,
+  [MediaObjectSize.SMALL]: -2,
   [MediaObjectSize.XSMALL]: 0,
 };
 
