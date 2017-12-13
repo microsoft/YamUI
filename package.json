@@ -84,7 +84,7 @@
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
     "test:eslint": "run-p test:eslint:*",
     "test:tslint": "tslint --type-check --project tsconfig.json",
-    "test:mdlint": "markdownlint README.md assets/README.md assets/Icons/README.md",
+    "test:mdlint": "markdownlint README.md assets/README.md assets/icons/README.md",
     "test:unit": "jest --config config/jest/config.json",
     "test:visual:build": "styleguidist build --config config/styleguide/config.visualdiff.js",
     "test:visual:run": "styleguidist-visual test --config config/styleguide-visual/config.js",

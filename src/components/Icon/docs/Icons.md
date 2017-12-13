@@ -1,7 +1,5 @@
 ### Notes for use
 
-Adding an `aria-label` to the icon is not supported, as it is being specified by wrapper components. For example, `Button` adds `aria-label` when it renders its `Icon` component.
-
 The `block` prop may be necessary to remove extra `line-height`.
 
 ### Examples
@@ -10,19 +8,22 @@ Icon library:
 
 ```js { "props": { "data-example": "library" } }
 const { IconSize } = require('../index');
-const allIcons = require('.');
-const { GutterSize, TextSize } = require('../Block');
+const allIcons = require('../icons');
+const { GutterSize, TextSize } = require('../../Block');
 
-const iconsLibrary = Object.keys(allIcons).map((Icon, index) => (
-  <div style={{ float: 'left', width: '100px', textAlign: 'center' }}>
-    <Block textSize={TextSize.XLARGE}>
-      <Icon />
-    </Block>
-    <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE}>
-      {Icon.constructor.displayName}
-    </Block>
-  </div>
-));
+const iconsLibrary = Object.keys(allIcons).map((icon, index) => {
+  const Icon = allIcons[icon];
+  return (
+    <div style={{ float: 'left', width: '100px', textAlign: 'center' }} key={icon}>
+      <Block textSize={TextSize.XLARGE}>
+        <Icon />
+      </Block>
+      <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE}>
+        {icon}
+      </Block>
+    </div>
+  );
+});
 
 <div>
   {iconsLibrary}
@@ -74,8 +75,8 @@ const { Attach, IconSize } = require('../index');
 Auto-sized to text:
 
 ```js { "props": { "data-example": "autosized to text" } }
-const { GutterSize, TextSize } = require('../Block');
-const { Attach, CheckMark, Group, Add, Like } = '.';
+const { GutterSize, TextSize } = require('../../Block');
+const { Attach, CheckMark, Group, Add, Like } = require('../icons');
 
 const longText = (
   <span>
@@ -118,8 +119,8 @@ const longText = (
 Auto-sized to headings:
 
 ```js { "props": { "data-example": "autosized to headings" } }
-const { GutterSize } = require('../Block');
-const { Attach, CheckMark, Like } = '.';
+const { GutterSize } = require('../../Block');
+const { Attach, CheckMark, Like } = require('../icons');
 
 const longText = (
   <span>
