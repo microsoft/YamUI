@@ -35,3 +35,6 @@ $alertColor__error: $color__angel;
 
 $spinnerColor__light: $color__river;
 $spinnerColor__dark: $color__white;
+
+$suggestionsListItemBackgroundColor__mouseHover: $color__popRock;
+$suggestionsListItemBackgroundColor__keyboardNavigate: $color__altRock;
