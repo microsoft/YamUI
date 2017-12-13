@@ -2,7 +2,7 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/gutters.css";
 
-.y-aside-section--content {
-  border-top: 1px solid $borderColor;
-  padding-top: $gutterWidth__xSmall;
+.y-aside-section--header {
+  box-shadow: inset 0 -1px 0 0 $borderColor;
+  padding-bottom: $gutterWidth__xSmall;
 }

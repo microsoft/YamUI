@@ -35,7 +35,7 @@ export default class AsideSection extends React.Component<AsideSectionProps, {}>
           </FixedGridColumn>
           {this.getActionColumn()}
         </FixedGridRow>
-        <div className="y-aside-section--content">
+        <div>
           {this.props.children}
         </div>
       </div>
