@@ -3,87 +3,55 @@
 exports[`<Box /> with additional className matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-small TEST_CLASSNAME"
->
-  Box of type 
-  square
-  : 
-  small
-</div>
+/>
 `;
 
 exports[`<Box /> with border type round matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-round y-box__padding-small"
->
-  Box of type 
-  round
-  : 
-  small
-</div>
+/>
 `;
 
 exports[`<Box /> with border type soft matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-soft y-box__padding-small"
->
-  Box of type 
-  soft
-  : 
-  small
-</div>
+/>
 `;
 
 exports[`<Box /> with border type square matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-small"
+/>
+`;
+
+exports[`<Box /> with children passed matches its snapshot 1`] = `
+<div
+  className="y-box y-box__borderType-square y-box__padding-small"
 >
-  Box of type 
-  square
-  : 
-  small
+  child test
 </div>
 `;
 
 exports[`<Box /> with default options matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-small"
->
-  Box of type 
-  square
-  : 
-  small
-</div>
+/>
 `;
 
 exports[`<Box /> with padding large matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-large"
->
-  Box of type 
-  square
-  : 
-  large
-</div>
+/>
 `;
 
 exports[`<Box /> with padding medium matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-medium"
->
-  Box of type 
-  square
-  : 
-  medium
-</div>
+/>
 `;
 
 exports[`<Box /> with padding small matches its snapshot 1`] = `
 <div
   className="y-box y-box__borderType-square y-box__padding-small"
->
-  Box of type 
-  square
-  : 
-  small
-</div>
+/>
 `;

@@ -137,4 +137,19 @@ describe('<Box />', () => {
       });
     });
   });
+
+  describe('with children passed', () => {
+    const child = 'child test';
+    beforeEach(() => {
+      component = shallow(<Box>{child}</Box>);
+    });
+
+    it('renders the correct child', () => {
+      expect(component.text()).toEqual('child test');
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

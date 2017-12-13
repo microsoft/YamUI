@@ -27,11 +27,11 @@ export default class Box extends React.Component<BoxProps, {}> {
   };
 
   render() {
-    const { borderType, padding } = this.props;
+    const { children } = this.props;
 
     return (
       <div className={this.getClasses()}>
-        Box of type {borderType}: {padding}
+        {children}
       </div>
     );
   }
