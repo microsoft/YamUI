@@ -3,7 +3,6 @@
 
 .y-box {
   position: relative;
-  padding: 8px;
   border-radius: 2px;
   border: 1px solid $color__indieRock;
 }
