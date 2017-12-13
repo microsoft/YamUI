@@ -89,17 +89,9 @@ describe('<Text />', () => {
     });
   });
 
-  describe('with maxWidth', () => {
+  describe('with maxWidth 500px', () => {
     beforeEach(() => {
       component = shallow(<Text maxWidth="500px">test content</Text>);
-    });
-
-    it('renders the ellipsis className', () => {
-      expect(component.hasClass('y-ellipsis')).toBe(true);
-    });
-
-    it('has the given max-width in its style attribute', () => {
-      expect(component.getNode().props.style.maxWidth).toBe('500px');
     });
 
     it('matches its snapshot', () => {
