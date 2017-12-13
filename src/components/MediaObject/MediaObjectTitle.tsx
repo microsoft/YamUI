@@ -10,15 +10,15 @@ const TextSizeMap = {
   [MediaObjectSize.XLARGE]: TextSize.MEDIUM,
   [MediaObjectSize.LARGE]: TextSize.MEDIUM,
   [MediaObjectSize.MEDIUM]: TextSize.MEDIUM,
-  [MediaObjectSize.SMALL]: TextSize.SMALL,
+  [MediaObjectSize.SMALL]: TextSize.MEDIUM_SUB,
   [MediaObjectSize.XSMALL]: TextSize.MEDIUM_SUB,
 };
 const BlockPushMap = {
   [MediaObjectSize.XLARGE]: 2,
   [MediaObjectSize.LARGE]: 2,
   [MediaObjectSize.MEDIUM]: 0,
-  [MediaObjectSize.SMALL]: 0,
-  [MediaObjectSize.XSMALL]: 0,
+  [MediaObjectSize.SMALL]: 1,
+  [MediaObjectSize.XSMALL]: 1,
 };
 
 export interface MediaObjectTitleProps {
