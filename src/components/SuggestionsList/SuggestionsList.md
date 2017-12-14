@@ -3,37 +3,37 @@
 With no results:
 
 ```js { "props": { "data-example": "No Results" } }
-const WithTarget = require('../../demos/CalloutTrigger');
+const CalloutTrigger = require('../../demos/CalloutTrigger');
 
 <div style={{ minHeight: '75px' }}>
-  <WithTarget>
+  <CalloutTrigger>
     <SuggestionsList noResultsText="No results found" />
-  </WithTarget>
+  </CalloutTrigger>
 </div>
 ```
 
 When loading:
 
 ```js { "props": { "data-example": "When Loading" } }
-const WithTarget = require('../../demos/CalloutTrigger');
+const CalloutTrigger = require('../../demos/CalloutTrigger');
 
 <div style={{ minHeight: '75px' }}>
-  <WithTarget>
+  <CalloutTrigger>
     <SuggestionsList
       isLoading={true}
       loadingText={'Searching for \'Cris\''}
     />
-  </WithTarget>
+  </CalloutTrigger>
 </div>
 ```
 
 With results:
 
 ```js { "props": { "data-example": "When Results" } }
-const WithTarget = require('../../demos/CalloutTrigger');
+const CalloutTrigger = require('../../demos/CalloutTrigger');
 
 <div style={{ minHeight: '275px' }}>
-  <WithTarget>
+  <CalloutTrigger>
     <SuggestionsList
       searchText="Cris"
       loadingText={'Searching for \'Cris\''}
@@ -71,17 +71,17 @@ const WithTarget = require('../../demos/CalloutTrigger');
       ]}
       selectedId={2}
     />
-  </WithTarget>
+  </CalloutTrigger>
 </div>
 ```
 
 With results, when loading:
 
 ```js { "props": { "data-example": "When Results" } }
-const WithTarget = require('../../demos/CalloutTrigger');
+const CalloutTrigger = require('../../demos/CalloutTrigger');
 
 <div style={{ minHeight: '320px' }}>
-  <WithTarget>
+  <CalloutTrigger>
     <SuggestionsList
       isLoading={true}
       searchText="Cris"
@@ -120,7 +120,7 @@ const WithTarget = require('../../demos/CalloutTrigger');
       ]}
       selectedId={2}
     />
-  </WithTarget>
+  </CalloutTrigger>
 </div>
 ```
 

@@ -5,7 +5,7 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
-import Callout from '../Callout';
+import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
 
@@ -80,7 +80,7 @@ export default class SuggestionsList
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
 
-    const classNames = ['y-suggestions-list'];
+    const classNames = [];
     if (status) {
       classNames.push(withStatusClass);
     }
@@ -90,7 +90,10 @@ export default class SuggestionsList
 
     return (
       <Callout
+        calloutWidth={280}
         doNotLayer={true}
+        directionalHint={DirectionalHint.bottomLeftEdge}
+        directionalHintFixed={true}
         target={this.props.target}
         className={classNames.join(' ')}
         isBeakVisible={false}
