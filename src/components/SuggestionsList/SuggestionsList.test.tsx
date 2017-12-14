@@ -4,44 +4,49 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import {
   default as SuggestionsList,
   SuggestionsListProps,
-  SuggestionItemGroupProps,
   SuggestionsListState,
 } from './SuggestionsList';
 
 describe('<SuggestionsList />', () => {
   let rendered: ShallowWrapper<SuggestionsListProps, SuggestionsListState>;
   let onItemSelected: jest.Mock<{}>;
-  let isLoading: boolean;
-  let groupedItems: SuggestionItemGroupProps[];
-  const target = document.createElement('div');
+  let options: Partial<SuggestionsListProps>;
 
-  const getProps = () => {
-    return {
-      target,
-      isLoading,
-      groupedItems,
+  const getProps = (overrides: Partial<SuggestionsListProps>) => {
+    onItemSelected = jest.fn();
+
+    const defaultProps = {
       onItemSelected,
+      target: document.createElement('div'),
+      searchText: 'searchText',
       loadingText: 'loadingText',
       noResultsText: 'noResultsText',
+      isLoading: false,
+      groupedItems: [],
       selectedId: 2,
-      searchText: 'searchText',
+    };
+
+    return {
+      ...defaultProps,
+      ...overrides,
     };
   };
 
   beforeEach(() => {
-    onItemSelected = jest.fn();
-    groupedItems = [];
-    isLoading = false;
+    options = {};
   });
 
   describe('when isLoading=true', () => {
     beforeEach(() => {
-      isLoading = true;
+      options = {
+        ...options,
+        isLoading: true,
+      };
     });
 
     describe('without results', () => {
       beforeEach(() => {
-        rendered = shallow(<SuggestionsList {...getProps()} />);
+        rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
       it('renders as expected', () => {
@@ -51,16 +56,19 @@ describe('<SuggestionsList />', () => {
 
     describe('with results', () => {
       beforeEach(() => {
-        groupedItems = [{
-          title: 'groupTitle',
-          items: [{
-            id: 'id',
-            imageUrl: 'imageUrl',
-            name: 'name',
-            description: 'description',
+        options = {
+          ...options,
+          groupedItems: [{
+            title: 'groupTitle',
+            items: [{
+              id: 'id',
+              imageUrl: 'imageUrl',
+              name: 'name',
+              description: 'description',
+            }],
           }],
-        }];
-        rendered = shallow(<SuggestionsList {...getProps()} />);
+        };
+        rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
       it('renders as expected', () => {
@@ -101,12 +109,15 @@ describe('<SuggestionsList />', () => {
 
   describe('when isLoading=false', () => {
     beforeEach(() => {
-      isLoading = false;
+      options = {
+        ...options,
+        isLoading: false,
+      };
     });
 
     describe('without results', () => {
       beforeEach(() => {
-        rendered = shallow(<SuggestionsList {...getProps()} />);
+        rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
       it('renders as expected', () => {
@@ -116,16 +127,19 @@ describe('<SuggestionsList />', () => {
 
     describe('with results', () => {
       beforeEach(() => {
-        groupedItems = [{
-          title: 'groupTitle',
-          items: [{
-            id: 'id',
-            imageUrl: 'imageUrl',
-            name: 'name',
-            description: 'description',
+        options = {
+          ...options,
+          groupedItems: [{
+            title: 'groupTitle',
+            items: [{
+              id: 'id',
+              imageUrl: 'imageUrl',
+              name: 'name',
+              description: 'description',
+            }],
           }],
-        }];
-        rendered = shallow(<SuggestionsList {...getProps()} />);
+        };
+        rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
       it('renders as expected', () => {
