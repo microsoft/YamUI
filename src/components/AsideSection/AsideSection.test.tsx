@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable from '../Clickable';
-import AsideSection, { AsideSectionProps } from './index';
+import AsideSection, { AsideSectionProps } from '.';
 
 describe('<AsideSection />', () => {
   let component: ShallowWrapper<AsideSectionProps, {}>;
@@ -26,8 +26,6 @@ describe('<AsideSection />', () => {
     it('renders the action in its own FixedGridColumn', () => {
       expect(component).toMatchSnapshot();
     });
-
-    
   });
 
   describe('with children', () => {
