@@ -4,7 +4,7 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=false rend
 <div
   className="y-suggestions-list-item"
   onMouseDown={[Function]}
-  onMouseOver={[Function]}
+  onMouseEnter={[Function]}
 >
   <MediaObject
     imageContent={
@@ -38,7 +38,7 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=true rende
 <div
   className="y-suggestions-list-item y-suggestions-list-item--selected"
   onMouseDown={[Function]}
-  onMouseOver={[Function]}
+  onMouseEnter={[Function]}
 >
   <MediaObject
     imageContent={
@@ -72,7 +72,7 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=false rende
 <div
   className="y-suggestions-list-item y-suggestions-list-item--hover"
   onMouseDown={[Function]}
-  onMouseOver={[Function]}
+  onMouseEnter={[Function]}
 >
   <MediaObject
     imageContent={
@@ -106,7 +106,7 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=true render
 <div
   className="y-suggestions-list-item y-suggestions-list-item--hover"
   onMouseDown={[Function]}
-  onMouseOver={[Function]}
+  onMouseEnter={[Function]}
 >
   <MediaObject
     imageContent={

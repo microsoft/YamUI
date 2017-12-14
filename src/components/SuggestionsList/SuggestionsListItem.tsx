@@ -47,7 +47,7 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     return (
       <div
         onMouseDown={this.onMouseDown}
-        onMouseOver={this.onMouseOver}
+        onMouseEnter={this.onMouseEnter}
         className={className}
       >
         <MediaObject
@@ -64,5 +64,5 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     this.props.onSelect(item);
   }
 
-  private onMouseOver = () => this.props.onHover(this.props.id);
+  private onMouseEnter = () => this.props.onHover(this.props.id);
 }
