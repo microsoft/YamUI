@@ -4,5 +4,5 @@
 .y-box {
   position: relative;
   border-radius: 2px;
-  border: 1px solid $color__indieRock;
+  border: 1px solid $borderColor;
 }
