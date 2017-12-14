@@ -73,11 +73,6 @@ export default class SuggestionsList
 
   public state: SuggestionsListState = { hoveredId: null };
 
-  constructor(props: SuggestionsListProps) {
-    super(props);
-    this.onHover = this.onHover.bind(this);
-  }
-
   public render() {
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
@@ -154,9 +149,7 @@ export default class SuggestionsList
       </Block>);
   }
 
-  private onHover(hoveredId: string | number) {
-    this.setState({ hoveredId });
-  }
+  private onHover = (hoveredId: string | number) => this.setState({ hoveredId });
 
   private onMouseOut = () => this.setState({ hoveredId: null });
 }
