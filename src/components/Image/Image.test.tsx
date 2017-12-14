@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import { Image as FabricImage } from 'office-ui-fabric-react/lib/Image';
 import Image, { ImageProps, ImageFit, ImageLoadState } from '.';
 
 describe('<Image />', () => {
@@ -11,34 +10,6 @@ describe('<Image />', () => {
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(<Image source="image.png" description="description" />);
-    });
-
-    it('has its correct base class', () => {
-      expect(component.hasClass('y-image')).toBe(true);
-    });
-
-    it('uses the source as img src', () => {
-      expect(component.find(FabricImage).props().src).toEqual('image.png');
-    });
-
-    it('uses the description as img alt text', () => {
-      expect(component.find(FabricImage).props().alt).toEqual('description');
-    });
-
-    it('does not set a height', () => {
-      expect(component.find(FabricImage).props().height).toEqual(undefined);
-    });
-
-    it('does not set a width', () => {
-      expect(component.find(FabricImage).props().width).toEqual(undefined);
-    });
-
-    it('does not set an imageFit', () => {
-      expect(component.find(FabricImage).props().imageFit).toEqual(undefined);
-    });
-
-    it('does not fade in', () => {
-      expect(component.find(FabricImage).props().shouldFadeIn).toEqual(false);
     });
 
     it('matches its snapshot', () => {
@@ -53,44 +24,28 @@ describe('<Image />', () => {
       );
     });
 
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe('with height and width', () => {
+  describe('with height 50 and width 100', () => {
     beforeEach(() => {
       component = shallow(
         <Image source="image.png" description="description" height={50} width={100} />,
       );
     });
 
-    it('uses the given height', () => {
-      expect(component.find(FabricImage).props().height).toEqual(50);
-    });
-
-    it('uses the given width', () => {
-      expect(component.find(FabricImage).props().width).toEqual(100);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
   });
 
-  describe('with imageFit', () => {
+  describe('with imageFit cover', () => {
     beforeEach(() => {
       component = shallow(
         <Image source="image.png" description="description" imageFit={ImageFit.cover} />,
       );
-    });
-
-    it('uses the given imageFit', () => {
-      expect(component.find(FabricImage).props().imageFit).toEqual(ImageFit.cover);
     });
 
     it('matches its snapshot', () => {
@@ -103,18 +58,6 @@ describe('<Image />', () => {
       component = shallow(<Image source="image.png" description="description" fullWidth={true} />);
     });
 
-    it('renders the fullWidth class', () => {
-      expect(component.hasClass('y-image__fullWidth')).toBe(true);
-    });
-
-    it('uses width 100%', () => {
-      expect(component.find(FabricImage).props().width).toEqual('100%');
-    });
-
-    it('does not pass an image height', () => {
-      expect(component.find(FabricImage).props().height).toEqual(undefined);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -125,10 +68,6 @@ describe('<Image />', () => {
       component = shallow(
         <Image source="image.png" description="description" shouldFadeIn={true} />,
       );
-    });
-
-    it('tells the Fabric Image to fade in', () => {
-      expect(component.find(FabricImage).props().shouldFadeIn).toEqual(true);
     });
 
     it('matches its snapshot', () => {

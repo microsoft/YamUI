@@ -11,14 +11,6 @@ describe('<ScreenreaderText />', () => {
       component = shallow(<ScreenreaderText>text content</ScreenreaderText>);
     });
 
-    it('renders its given content', () => {
-      expect(component.text()).toEqual('text content');
-    });
-
-    it('contains its base className', () => {
-      expect(component.hasClass('y-screenreaderText')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -29,14 +21,6 @@ describe('<ScreenreaderText />', () => {
       component = shallow(
         <ScreenreaderText className="TEST_CLASSNAME">test content</ScreenreaderText>,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-screenreaderText')).toBe(true);
     });
 
     it('matches its snapshot', () => {
