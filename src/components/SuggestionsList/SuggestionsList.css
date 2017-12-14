@@ -2,22 +2,22 @@
 @import "src/css/variables/colors.css";
 
 .y-suggestions-list {
-  width: 280px;
+  width: 28rem;
 }
 
 .y-suggestions-list--with-status .y-suggestions-list--loading {
-  height: 52px;
+  height: 5.2rem;
 }
 
 .y-suggestions-list--with-status.y-suggestions-list--with-results .y-suggestions-list--loading {
-  height: 47px;
+  height: 4.7rem;
 }
 
 .y-suggestions-list--results {
-  padding: 4px 0;
+  padding: 0.4rem 0;
 }
 
 .y-suggestions-list--with-status .y-suggestions-list--results {
-  padding: 4px 0 0 0;
-  border-bottom: 1px solid $borderColor__tertiary;
+  padding: 0.4rem 0 0 0;
+  border-bottom: 0.1rem solid $borderColor__tertiary;
 }

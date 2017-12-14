@@ -11,10 +11,13 @@ import './SuggestionsList.css';
 
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
-   * Flag to indicate that a search is in flight
-   * @default false
+   * The target that the Callout should try to position itself based on.
    */
-  isLoading?: boolean;
+  target: HTMLElement;
+  /**
+   * The active search that produced the current state.
+   */
+  searchText: string;
   /**
    * Text to show next to the loading spinner.
    */
@@ -24,6 +27,11 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
    */
   noResultsText: string;
   /**
+   * Flag to indicate that a search is in flight
+   * @default false
+   */
+  isLoading?: boolean;
+  /**
    * The groups of items to render.
    */
   groupedItems?: SuggestionItemGroupProps[];
@@ -32,17 +40,9 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
    */
   selectedId?: string | number;
   /**
-   * The active search that produced the current state.
-   */
-  searchText: string;
-  /**
    * Called when an item in a group is selected by clicking.
    */
   onItemSelected(item: SuggestionItem): void;
-  /**
-   * The target that the Callout should try to position itself based on.
-   */
-  target: HTMLElement;
 }
 
 interface SuggestionsListWithResultsProps extends SuggestionsListProps {
@@ -71,7 +71,10 @@ const withStatusClass = 'y-suggestions-list--with-status';
 export default class SuggestionsList
   extends React.PureComponent<SuggestionsListProps, SuggestionsListState> {
 
-  public state: SuggestionsListState = { hoveredId: null };
+  constructor() {
+    super();
+    this.state = { hoveredId: null };
+  }
 
   public render() {
     const status = this.getSearchStatus();
