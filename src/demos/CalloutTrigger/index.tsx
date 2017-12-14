@@ -7,16 +7,12 @@ module.exports = class WithTarget extends React.PureComponent<{}, { showing: boo
   constructor () {
     super();
     this.state = {
-      showing: false,
+      showing: true,
     };
   }
 
-  private saveRef(ref: HTMLElement | null) {
-    this.target = ref;
-  }
-
-  private onClick = () => {
-    this.setState(({ showing }) => ({ showing: !showing }));
+  public componentDidMount() {
+    this.forceUpdate();
   }
 
   public render() {
@@ -33,5 +29,13 @@ module.exports = class WithTarget extends React.PureComponent<{}, { showing: boo
         {content}
       </span>
     );
+  }
+
+  private saveRef(ref: HTMLElement | null) {
+    this.target = ref;
+  }
+
+  private onClick = () => {
+    this.setState(({ showing }) => ({ showing: !showing }));
   }
 };
