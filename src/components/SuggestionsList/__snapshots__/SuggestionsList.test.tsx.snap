@@ -2,7 +2,9 @@
 
 exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -41,7 +43,9 @@ Object {
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -74,7 +78,9 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -107,7 +113,9 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-status"
+  calloutWidth={280}
+  className="y-suggestions-list--with-status"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -128,7 +136,9 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
 
 exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -174,7 +184,9 @@ Object {
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -214,7 +226,9 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}
@@ -254,7 +268,9 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
 <Callout
-  className="y-suggestions-list y-suggestions-list--with-status"
+  calloutWidth={280}
+  className="y-suggestions-list--with-status"
+  directionalHint={4}
   doNotLayer={true}
   isBeakVisible={false}
   target={<div />}

@@ -93,7 +93,6 @@ export default class SuggestionsList
         calloutWidth={280}
         doNotLayer={true}
         directionalHint={DirectionalHint.bottomLeftEdge}
-        directionalHintFixed={true}
         target={this.props.target}
         className={classNames.join(' ')}
         isBeakVisible={false}
