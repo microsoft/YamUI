@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
-import { Accounts as AccountsIcon } from '../Icon';
+import AccountsIcon from '../Icon/icons/Accounts';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';

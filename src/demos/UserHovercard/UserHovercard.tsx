@@ -10,7 +10,11 @@ import {
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
-import { Add, Mail, Phone, Group, IconSize } from '../../components/Icon';
+import { IconSize } from '../../components/Icon';
+import Add from '../../components/Icon/icons/Add';
+import Group from '../../components/Icon/icons/Group';
+import Mail from '../../components/Icon/icons/Mail';
+import Phone from '../../components/Icon/icons/Phone';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
 const iconMail = <Mail size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;

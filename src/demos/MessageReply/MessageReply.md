@@ -3,7 +3,9 @@ const { AvatarSize } = require('../../components/Avatar');
 const { FixedGridRow, FixedGridColumn } = require('../../components/FixedGrid');
 const { GutterSize } = require('../../components/Block');
 const { TextColor, TextSize } = require('../../components/Text');
-const { Like, Reply, Share } = require('../../components/Icon');
+const Like = require('../../components/Icon/icons/Like').default;
+const Reply = require('../../components/Icon/icons/Reply').default;
+const Share = require('../../components/Icon/icons/Share').default;
 
 const user1 = {
   image: 'user.png',
