@@ -3,7 +3,7 @@
 
 .y-suggestions-list-item {
   cursor: pointer;
-  padding: 4px 12px 8px;
+  padding: 0.4rem 1.2rem 0.8rem 1.2rem;
 }
 
 .y-suggestions-list-item--selected {
