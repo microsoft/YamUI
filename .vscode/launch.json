@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Jest Tests",
+      "program": "${workspaceRoot}/node_modules/.bin/jest",
+      "args": [
+        "${file}",
+        "--runInBand",
+        "--config",
+        "config/jest/config.json"
+      ]
+    }
+  ]
+}
