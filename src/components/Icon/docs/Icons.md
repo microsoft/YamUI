@@ -1,5 +1,11 @@
 ### Notes for use
 
+Because current bundlers do not always tree-shake properly, icons are exported individually, so you'll need to import each icon you need like this:
+
+```js static
+import Mail from 'yamui/dist/components/Icon/icons/Mail';
+```
+
 The `block` prop may be necessary to remove extra `line-height`.
 
 ### Examples
