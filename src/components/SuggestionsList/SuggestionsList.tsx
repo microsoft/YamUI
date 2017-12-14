@@ -89,7 +89,12 @@ export default class SuggestionsList
     }
 
     return (
-      <Callout target={this.props.target} className={classNames.join(' ')} isBeakVisible={false}>
+      <Callout
+        doNotLayer={true}
+        target={this.props.target}
+        className={classNames.join(' ')}
+        isBeakVisible={false}
+      >
         {results}
         {status}
       </Callout>);
