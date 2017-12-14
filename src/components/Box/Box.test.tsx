@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Box, { BoxProps } from './index';
-import Block from '../Block';
 
 describe('<Box />', () => {
   let component: ShallowWrapper<BoxProps, {}>;
@@ -44,10 +43,6 @@ describe('<Box />', () => {
   describe('with children passed', () => {
     beforeEach(() => {
       component = shallow(<Box/>);
-    });
-
-    it('renders the correct child', () => {
-      expect(component.find(Block).length).toEqual(1);
     });
 
     it('matches its snapshot', () => {
