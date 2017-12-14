@@ -88,7 +88,7 @@ describe('<SuggestionsListItem />', () => {
   describe('when hovering', () => {
     beforeEach(() => {
       rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      rendered.simulate('mouseOver');
+      rendered.simulate('mouseEnter');
     });
 
     it('calls props.onHover', () => {
