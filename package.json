@@ -91,7 +91,6 @@
     "test:visual:approve": "styleguidist-visual approve --config config/styleguide-visual/config.js",
     "test:visual": "run-s clean:docs test:visual:build test:visual:run",
     "test": "run-s build test:*",
-    "test:watch": "jest --config config/jest/config.json --watch",
     "start:dev": "styleguidist server --config config/styleguide/config.js",
     "start:test": "jest --config config/jest/config.json --watchAll",
     "svg:generate": "node config/icons/generate",
