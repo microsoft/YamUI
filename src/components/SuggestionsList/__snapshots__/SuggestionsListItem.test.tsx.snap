@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SuggestionsListItem /> when isHovered=false when isSelected=false renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item"
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="round"
+        imageUrl="imageUrl"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span />,
+        <span
+          className="y-suggestions-list-item--highlight"
+      >
+          Joh
+      </span>,
+        <span>
+          n Smith
+      </span>,
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItem /> when isHovered=false when isSelected=true renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item y-suggestions-list-item--selected"
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="round"
+        imageUrl="imageUrl"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span />,
+        <span
+          className="y-suggestions-list-item--highlight"
+      >
+          Joh
+      </span>,
+        <span>
+          n Smith
+      </span>,
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItem /> when isHovered=true when isSelected=false renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item y-suggestions-list-item--hover"
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="round"
+        imageUrl="imageUrl"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span />,
+        <span
+          className="y-suggestions-list-item--highlight"
+      >
+          Joh
+      </span>,
+        <span>
+          n Smith
+      </span>,
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItem /> when isHovered=true when isSelected=true renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item y-suggestions-list-item--hover"
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="round"
+        imageUrl="imageUrl"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span />,
+        <span
+          className="y-suggestions-list-item--highlight"
+      >
+          Joh
+      </span>,
+        <span>
+          n Smith
+      </span>,
+      ]
+    }
+  />
+</div>
+`;
