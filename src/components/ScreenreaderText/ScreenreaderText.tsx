@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import classNames = require('classnames');
+import { join } from '../../util/classNames';
 import {
   NestableBaseComponentProps as ScreenreaderTextProps,
 } from '../../util/BaseComponent/props';
@@ -18,6 +18,6 @@ export default class ScreenreaderText extends React.Component<ScreenreaderTextPr
   render() {
     const { className, children } = this.props;
 
-    return <span className={classNames('y-screenreaderText', className)}>{children}</span>;
+    return <span className={join(['y-screenreaderText', className])}>{children}</span>;
   }
 }
