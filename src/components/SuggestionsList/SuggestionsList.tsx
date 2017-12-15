@@ -152,8 +152,8 @@ export default class SuggestionsList
       return null;
     }
     return (
-      <Block textAlign="center" padding={GutterSize.LARGE}>
-        <Text size={TextSize.SMALL} color={TextColor.METADATA}>
+      <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
+        <Text color={TextColor.METADATA}>
           {this.props.noResultsText}
         </Text>
       </Block>);
