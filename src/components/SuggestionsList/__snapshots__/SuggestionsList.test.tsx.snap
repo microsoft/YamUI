@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={false}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `
+Object {
+  "hoveredId": "1",
+}
+`;
+
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={true}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={false}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-status"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <Block
+    padding="large"
+    textAlign="center"
+    textSize="small"
+  >
+    <Text
+      color="metadata"
+    >
+      noResultsText
+    </Text>
+  </Block>
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={false}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Spinner
+    className="y-suggestions-list--loading"
+    color="light"
+    hideText={false}
+    size="medium"
+    text="loadingText"
+  />
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `
+Object {
+  "hoveredId": "1",
+}
+`;
+
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={true}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Spinner
+    className="y-suggestions-list--loading"
+    color="light"
+    hideText={false}
+    size="medium"
+    text="loadingText"
+  />
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-status y-suggestions-list--with-results"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li>
+      <ul
+        onMouseOut={[Function]}
+      >
+        <li>
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isHovered={false}
+            isSelected={false}
+            name="name"
+            onHover={[Function]}
+            onSelect={[Function]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Spinner
+    className="y-suggestions-list--loading"
+    color="light"
+    hideText={false}
+    size="medium"
+    text="loadingText"
+  />
+</Callout>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
+<Callout
+  calloutWidth={280}
+  className="y-suggestions-list--with-status"
+  directionalHint={4}
+  doNotLayer={true}
+  isBeakVisible={false}
+  target={<div />}
+>
+  <Spinner
+    className="y-suggestions-list--loading"
+    color="light"
+    hideText={false}
+    size="medium"
+    text="loadingText"
+  />
+</Callout>
+`;

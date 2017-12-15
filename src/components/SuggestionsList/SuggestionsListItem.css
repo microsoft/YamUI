@@ -1,0 +1,19 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-suggestions-list-item {
+  cursor: pointer;
+  padding: 0.4rem 1.2rem 0.8rem 1.2rem;
+}
+
+.y-suggestions-list-item--selected {
+  background-color: $suggestionsListItemBackgroundColor__keyboardNavigate;
+}
+
+.y-suggestions-list-item--hover {
+  background-color: $suggestionsListItemBackgroundColor__mouseHover;
+}
+
+.y-suggestions-list-item--highlight {
+  text-decoration: underline;
+}
