@@ -1,0 +1,19 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-suggestions-list--with-status .y-suggestions-list--loading {
+  height: 5.2rem;
+}
+
+.y-suggestions-list--with-status.y-suggestions-list--with-results .y-suggestions-list--loading {
+  height: 4.7rem;
+}
+
+.y-suggestions-list--results {
+  padding: 0.4rem 0;
+}
+
+.y-suggestions-list--with-status .y-suggestions-list--results {
+  padding: 0.4rem 0 0 0;
+  border-bottom: 0.1rem solid $borderColor__tertiary;
+}

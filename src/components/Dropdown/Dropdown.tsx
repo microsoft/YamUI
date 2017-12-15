@@ -4,7 +4,8 @@ import * as React from 'react';
 import autobind from 'core-decorators/lib/autobind';
 import { IDropdownOption, Dropdown as FabricDropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { ChevronDownMed, IconSize } from '../Icon';
+import { IconSize } from '../Icon';
+import ChevronDownMed from '../Icon/icons/ChevronDownMed';
 import './Dropdown.css';
 
 export type DropdownOptionKey = string | number;
