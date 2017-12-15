@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import classNames = require('classnames');
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './NavigationLink.css';
 
@@ -61,6 +61,6 @@ export default class NavigationLink extends React.Component<NavigationLinkProps,
       classes.push(className);
     }
 
-    return classNames(classes);
+    return join(classes);
   }
 }
