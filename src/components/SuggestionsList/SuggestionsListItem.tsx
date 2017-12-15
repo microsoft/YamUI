@@ -29,34 +29,30 @@ const highlightedClass = `y-suggestions-list-item--highlight`;
 const getHighlightedName = (name: string, search: string) => {
   return name.split(new RegExp(`(${search})`, 'gi')).map((item: string, index: number) => {
     const className = search.toLowerCase() === item.toLowerCase() ? highlightedClass : undefined;
-    return <span key={index} className={className}>{item}</span>;
+    return (
+      <span key={index} className={className}>
+        {item}
+      </span>
+    );
   });
 };
 
 export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
   public render() {
     const { isSelected, isHovered, name, searchText, imageUrl, description } = this.props;
-    const avatar = (
-      <Avatar
-        imageUrl={imageUrl}
-        name={name}
-        size={AvatarSize.SMALL}
-      />);
+    const avatar = <Avatar imageUrl={imageUrl} name={name} size={AvatarSize.SMALL} />;
     const className = isHovered ? hoveredClass : isSelected ? selectedClass : baseClass;
     const title = getHighlightedName(name, searchText);
     return (
-      <div
-        onMouseDown={this.onMouseDown}
-        onMouseEnter={this.onMouseEnter}
-        className={className}
-      >
+      <div onMouseDown={this.onMouseDown} onMouseEnter={this.onMouseEnter} className={className}>
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}
           titleContent={title}
           metadataContent={description}
         />
-      </div>);
+      </div>
+    );
   }
 
   private onMouseDown = () => {

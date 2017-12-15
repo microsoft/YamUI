@@ -123,10 +123,10 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
   <Block
     padding="large"
     textAlign="center"
+    textSize="small"
   >
     <Text
       color="metadata"
-      size="small"
     >
       noResultsText
     </Text>
