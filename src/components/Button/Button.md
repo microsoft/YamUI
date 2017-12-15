@@ -10,7 +10,9 @@ Regular buttons:
 
 ```js { "props": { "data-example": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
-const { Add, ChevronRightMed, ChevronDownMed } = require('../Icon');
+const Add = require('../Icon/icons/Add').default;
+const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
+const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
@@ -246,7 +248,9 @@ Small buttons:
 
 ```js { "props": { "data-example": "small" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
-const { Add, ChevronRightMed, ChevronDownMed } = require('../Icon');
+const Add = require('../Icon/icons/Add').default;
+const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
+const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
