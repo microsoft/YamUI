@@ -5,9 +5,14 @@ const docgenParser = require('react-docgen-typescript');
 const webpackConfig = require('./webpack.config.js');
 const pkg = require('../../package.json');
 
+const componentsWithoutPathLine = ['Icons'];
+
 const getComponentPathLine = (componentPath) => {
   const ext = path.extname(componentPath);
   const name = path.basename(componentPath, ext);
+  if (componentsWithoutPathLine.indexOf(name) >= 0) {
+    return '';
+  }
   const dir = path.dirname(componentPath).replace(/.*\/src\//, 'yamui/dist/');
   return `import ${name} from '${dir}';`;
 };
@@ -56,9 +61,7 @@ module.exports = {
     group: path.resolve(__dirname, 'context/group.json'),
     file: path.resolve(__dirname, 'context/file.json'),
   },
-  require: [
-    path.resolve(root, 'src/css/index.css'),
-  ],
+  require: [path.resolve(root, 'src/css/index.css')],
   serverPort: 5555,
   styleguideDir: path.resolve(root, 'build/docs'),
   styleguideComponents: {
