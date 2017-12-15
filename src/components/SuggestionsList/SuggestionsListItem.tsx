@@ -18,7 +18,7 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
   isHovered: boolean;
   isSelected: boolean;
   onHover(id: string | number): void;
-  onSelect(item: SuggestionItem): void;
+  onSelect(id: string | number): void;
 }
 
 const baseClass = 'y-suggestions-list-item';
@@ -61,7 +61,7 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
 
   private onMouseDown = () => {
     const { onSelect, children, className, ...item } = this.props;
-    this.props.onSelect(item);
+    this.props.onSelect(item.id);
   }
 
   private onMouseEnter = () => this.props.onHover(this.props.id);

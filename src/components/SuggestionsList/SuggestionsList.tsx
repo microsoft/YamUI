@@ -42,7 +42,7 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * Called when an item in a group is selected by clicking.
    */
-  onItemSelected(item: SuggestionItem): void;
+  onItemSelected(id: string | number): void;
 }
 
 interface SuggestionsListWithResultsProps extends SuggestionsListProps {
