@@ -58,15 +58,19 @@ describe('<SuggestionsList />', () => {
       beforeEach(() => {
         options = {
           ...options,
-          groupedItems: [{
-            title: 'groupTitle',
-            items: [{
-              id: 'id',
-              imageUrl: 'imageUrl',
-              name: 'name',
-              description: 'description',
-            }],
-          }],
+          groupedItems: [
+            {
+              title: 'groupTitle',
+              items: [
+                {
+                  id: 'id',
+                  imageUrl: 'imageUrl',
+                  name: 'name',
+                  description: 'description',
+                },
+              ],
+            },
+          ],
         };
         rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
@@ -96,7 +100,10 @@ describe('<SuggestionsList />', () => {
 
         describe('when the mouse leaves', () => {
           beforeEach(() => {
-            rendered.find('ul').at(1).simulate('mouseOut');
+            rendered
+              .find('ul')
+              .at(1)
+              .simulate('mouseOut');
           });
 
           it('renders as expected', () => {
@@ -129,15 +136,19 @@ describe('<SuggestionsList />', () => {
       beforeEach(() => {
         options = {
           ...options,
-          groupedItems: [{
-            title: 'groupTitle',
-            items: [{
-              id: 'id',
-              imageUrl: 'imageUrl',
-              name: 'name',
-              description: 'description',
-            }],
-          }],
+          groupedItems: [
+            {
+              title: 'groupTitle',
+              items: [
+                {
+                  id: 'id',
+                  imageUrl: 'imageUrl',
+                  name: 'name',
+                  description: 'description',
+                },
+              ],
+            },
+          ],
         };
         rendered = shallow(<SuggestionsList {...getProps(options)} />);
       });
@@ -167,7 +178,10 @@ describe('<SuggestionsList />', () => {
 
         describe('when the mouse leaves', () => {
           beforeEach(() => {
-            rendered.find('ul').at(1).simulate('mouseOut');
+            rendered
+              .find('ul')
+              .at(1)
+              .simulate('mouseOut');
           });
 
           it('renders as expected', () => {

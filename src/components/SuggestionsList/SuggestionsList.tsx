@@ -68,9 +68,10 @@ const withStatusClass = 'y-suggestions-list--with-status';
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
-export default class SuggestionsList
-  extends React.PureComponent<SuggestionsListProps, SuggestionsListState> {
-
+export default class SuggestionsList extends React.PureComponent<
+  SuggestionsListProps,
+  SuggestionsListState
+> {
   constructor() {
     super();
     this.state = { hoveredId: null };
@@ -99,7 +100,8 @@ export default class SuggestionsList
       >
         {results}
         {status}
-      </Callout>);
+      </Callout>
+    );
   }
 
   private getGroupedResults() {
@@ -109,17 +111,17 @@ export default class SuggestionsList
     return (
       <ul className="y-suggestions-list--results">
         {this.props.groupedItems.map(this.getGroupResults)}
-      </ul>);
+      </ul>
+    );
   }
 
   private getGroupResults = (group: SuggestionItemGroupProps) => {
     const items = group.items.map(this.getResultItem);
     return (
       <li key={group.title}>
-        <ul onMouseOut={this.onMouseOut}>
-          {items}
-        </ul>
-      </li>);
+        <ul onMouseOut={this.onMouseOut}>{items}</ul>
+      </li>
+    );
   }
 
   private getResultItem = (item: SuggestionItem) => {
@@ -136,7 +138,8 @@ export default class SuggestionsList
           onSelect={onItemSelected}
           {...item}
         />
-      </li>);
+      </li>
+    );
   }
 
   private getSearchStatus() {
@@ -153,10 +156,9 @@ export default class SuggestionsList
     }
     return (
       <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
-        <Text color={TextColor.METADATA}>
-          {this.props.noResultsText}
-        </Text>
-      </Block>);
+        <Text color={TextColor.METADATA}>{this.props.noResultsText}</Text>
+      </Block>
+    );
   }
 
   private onHover = (hoveredId: string | number) => this.setState({ hoveredId });
