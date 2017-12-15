@@ -11,10 +11,6 @@ describe('<Box />', () => {
       component = shallow(<Box />);
     });
 
-    it('has its correct base class', () => {
-      expect(component.hasClass('y-box')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -25,14 +21,6 @@ describe('<Box />', () => {
       component = shallow(
         <Box className="TEST_CLASSNAME" />,
       );
-    });
-
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still includes its base className', () => {
-      expect(component.hasClass('y-box')).toBe(true);
     });
 
     it('matches its snapshot', () => {

@@ -13,7 +13,7 @@ Basic usage:
 
 Box with MediaObject child:
 
-```js { "props": { "data-example": "Box with MediaObject child" } }
+```js { "props": { "data-example": "with-mediaobject-child" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('../MediaObject');
 const avatar = (size) => (
