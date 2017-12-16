@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
+<div
+  className="y-aside-section"
+>
+  <Block
+    textSize="small"
+  >
+    <FixedGridRow
+      bottomSpacing="small"
+      className="y-aside-section--header"
+      gutterSize="small"
+    >
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
+        >
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+  <div />
+</div>
+`;
+
+exports[`<AsideSection /> with action prop renders the action in its own FixedGridColumn 1`] = `
+<div
+  className="y-aside-section"
+>
+  <Block
+    textSize="small"
+  >
+    <FixedGridRow
+      bottomSpacing="small"
+      className="y-aside-section--header"
+      gutterSize="small"
+    >
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
+        >
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <Clickable>
+          Add
+        </Clickable>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+  <div />
+</div>
+`;
+
+exports[`<AsideSection /> with children matches the snapshot 1`] = `
+<div
+  className="y-aside-section"
+>
+  <Block
+    textSize="small"
+  >
+    <FixedGridRow
+      bottomSpacing="small"
+      className="y-aside-section--header"
+      gutterSize="small"
+    >
+      <FixedGridColumn>
+        <Heading
+          level="2"
+          size="none"
+        >
+          <Text
+            bold={true}
+            uppercase={true}
+          >
+            Test title
+          </Text>
+        </Heading>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+  <div>
+    <div>
+      Child Content
+    </div>
+  </div>
+</div>
+`;
