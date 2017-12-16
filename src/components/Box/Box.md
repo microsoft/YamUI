@@ -1,7 +1,6 @@
 ### Notes for use
 
-A Box component can be used with any number of children and all of them will be inside the box.
-Use it in cases where you would consider using a Block but need a border.
+A Box is simply a div with a border and fixed padding. It also has `display: relative` so you can absolutely-position elements like a close button. Boxes will primarily be used for card views.
 
 ### Examples
 
@@ -11,7 +10,7 @@ Basic usage:
 <Box>This is a Box</Box>
 ```
 
-Box with MediaObject child:
+With MediaObject child:
 
 ```js { "props": { "data-example": "with-mediaobject-child" } }
 const { AvatarSize } = require('../Avatar');
@@ -28,5 +27,34 @@ const avatar = (size) => (
     metadataContent={user.jobTitle}
     extraContent={user.status}
   />
+</Box>
+```
+
+With absolutely-positioned children:
+
+```js { "props": { "data-example": "with-absolutely-positioned-children" } }
+const { IconSize } = require('../Icon');
+const CancelIcon = require('../Icon/icons/Cancel').default;
+const { GutterSize } = require('../Block');
+const { MediaObjectSize } = require('../MediaObject');
+const image = <Image source="file.png" description="Excel file icon" fullWidth={true} />;
+
+<Box>
+  <Block bottomSpacing={GutterSize.XSMALL}>
+    <MediaObject
+      size={MediaObjectSize.MEDIUM}
+      imageContent={image}
+      titleContent="Uploaded file"
+      metadataContent="3.4 MB"
+    />
+    <span style={{ position: 'absolute', top: '10px', right: '10px' }}>
+      <Clickable block={true} onClick={action('Close button clicked!')}>
+        <CancelIcon size={IconSize.XSMALL} color="#646d7a" block={true} />
+      </Clickable>
+    </span>
+    <span style={{ position: 'absolute', bottom: '-1px', right: '-1px', left: '-1px' }}>
+      <ProgressIndicator percentComplete={.68} ariaValueText="68% complete" />
+    </span>
+  </Block>
 </Box>
 ```
