@@ -20,6 +20,16 @@ export { DropdownMenuItemType };
 
 export interface DropdownOption {
   /**
+   * Unique identifier for the given option.
+   */
+  key: DropdownOptionKey;
+
+  /**
+   * The visible option text.
+   */
+  text: string;
+
+  /**
    * An optional YamUI Icon to be rendered on the left.
    */
   icon?: typeof BaseIcon;
@@ -28,16 +38,6 @@ export interface DropdownOption {
    * Optional bold text to be displayed before the main text.
    */
   label?: string;
-
-  /**
-   * The visible option text.
-   */
-  text: string;
-
-  /**
-   * Unique identifier for the given option.
-   */
-  key: DropdownOptionKey;
 
   /**
    * Type of menu item. Specify this for headers or dividers, leave blank for standard options.

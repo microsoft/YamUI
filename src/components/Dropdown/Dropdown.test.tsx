@@ -51,42 +51,6 @@ describe('<Dropdown />', () => {
     });
   });
 
-  xdescribe('with section header', () => {
-    beforeEach(() => {
-      const options = [
-        { key: 'sectionHeader', text: 'section header', itemType: DropdownMenuItemType.Header },
-      ];
-      fullComponent = mount(
-        <Dropdown
-          options={options}
-        />,
-      );
-      fullComponent.find('.ms-Dropdown').simulate('click');
-    });
-
-    it('matches its snapshot', () => {
-      expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
-    });
-  });
-
-  xdescribe('with divider', () => {
-    beforeEach(() => {
-      const options = [
-        { key: 'divider', text: 'divider', itemType: DropdownMenuItemType.Divider },
-      ];
-      fullComponent = mount(
-        <Dropdown
-          options={options}
-        />,
-      );
-      fullComponent.find('.ms-Dropdown').simulate('click');
-    });
-
-    it('matches its snapshot', () => {
-      expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
-    });
-  });
-
   describe('option templates', () => {
     describe('with icon', () => {
       beforeEach(() => {
