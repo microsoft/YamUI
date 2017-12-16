@@ -5,7 +5,7 @@ import {
   Dropdown as FabricDropdown,
   IDropdownProps,
 } from 'office-ui-fabric-react/lib/components/Dropdown';
-import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
+import Dropdown, { DropdownProps } from '.';
 import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
