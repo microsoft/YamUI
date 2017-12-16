@@ -1,7 +1,3 @@
-### Notes for use
-
-A Box is simply a div with a border and fixed padding. It also has `display: relative` so you can absolutely-position elements like a close button. Boxes will primarily be used for card views.
-
 ### Examples
 
 Basic usage:

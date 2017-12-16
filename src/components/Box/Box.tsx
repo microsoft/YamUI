@@ -10,7 +10,8 @@ import './Box.css';
 
 export { BoxProps };
 /**
- * A Block component with a border. Usually used as a container component
+ * A Box is simply a div with a border and fixed padding. It also has `display: relative` so you can
+ * absolutely-position elements like a close button. Boxes will primarily be used for card views.
  */
 export default class Box extends React.Component<BoxProps, {}> {
   render() {
