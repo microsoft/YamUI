@@ -103,7 +103,7 @@ With additional arbitrary UI:
 const { AvatarSize } = require('../Avatar');
 const { ButtonColor, ButtonSize } = require('../Button');
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');
-const { Add } = require('../Icon');
+const Add = require('../Icon/icons/Add').default;
 const { MediaObjectSize } = require('.');
 
 const avatar = (size) => (

@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import autobind from 'core-decorators/lib/autobind';
-import classNames = require('classnames');
+import { join } from '../../util/classNames';
 import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { Key } from '../../util/enums';
@@ -137,7 +137,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
     );
 
     return (
-      <span className={classNames('y-hovercard', className)}>
+      <span className={join(['y-hovercard', className])}>
         <span
           className="y-hovercard--trigger"
           ref={node => (this.triggerElement = node)}
