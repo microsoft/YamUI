@@ -4,6 +4,7 @@ import * as React from 'react';
 import {
   NestableBaseComponentProps as BoxProps,
 } from '../../util/BaseComponent/props';
+import { join } from '../../util/classNames';
 import Block, { GutterSize } from '../Block';
 import './Box.css';
 
@@ -13,23 +14,12 @@ export { BoxProps };
  */
 export default class Box extends React.Component<BoxProps, {}> {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
 
     return (
-      <Block className={this.getClasses()} padding={GutterSize.SMALL}>
+      <Block className={join(['y-box', className])} padding={GutterSize.SMALL}>
         {children}
       </Block>
     );
-  }
-
-  private getClasses() {
-    const { className } = this.props;
-    const classes = ['y-box'];
-
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 }
