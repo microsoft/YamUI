@@ -5,7 +5,8 @@ import {
   Dropdown as FabricDropdown,
   IDropdownProps,
 } from 'office-ui-fabric-react/lib/components/Dropdown';
-import Dropdown, { DropdownProps } from '.';
+import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
+import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;
@@ -47,6 +48,80 @@ describe('<Dropdown />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  xdescribe('with section header', () => {
+    beforeEach(() => {
+      const options = [
+        { key: 'sectionHeader', text: 'section header', itemType: DropdownMenuItemType.Header },
+      ];
+      fullComponent = mount(
+        <Dropdown
+          options={options}
+        />,
+      );
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+    });
+  });
+
+  xdescribe('with divider', () => {
+    beforeEach(() => {
+      const options = [
+        { key: 'divider', text: 'divider', itemType: DropdownMenuItemType.Divider },
+      ];
+      fullComponent = mount(
+        <Dropdown
+          options={options}
+        />,
+      );
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+    });
+  });
+
+  describe('option templates', () => {
+    describe('with icon', () => {
+      beforeEach(() => {
+        const options = [
+          { key: 'A', text: 'with icon', icon: AddIcon },
+        ];
+        fullComponent = mount(
+          <Dropdown
+            options={options}
+          />,
+        );
+        fullComponent.find('.ms-Dropdown').simulate('click');
+      });
+
+      it('matches its snapshot', () => {
+        expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+      });
+    });
+
+    describe('with label', () => {
+      beforeEach(() => {
+        const options = [
+          { key: 'A', text: 'with icon', label: 'label' },
+        ];
+        fullComponent = mount(
+          <Dropdown
+            options={options}
+          />,
+        );
+        fullComponent.find('.ms-Dropdown').simulate('click');
+      });
+
+      it('matches its snapshot', () => {
+        expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+      });
     });
   });
 

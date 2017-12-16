@@ -1,12 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
+<span
+  className="y-dropdown--item"
+>
+  <span
+    className="y-dropdown--icon"
+  >
+    <Add
+      size="16"
+    >
+      <svg
+        className="y-icon"
+        style={
+          Object {
+            "height": "16px",
+            "width": "16px",
+          }
+        }
+        viewBox="0 0 240 240"
+      >
+        <path
+          d="M240 112.5v15H127.5V240h-15V127.5H0v-15h112.5V0h15v112.5z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </Add>
+  </span>
+  <span>
+    with icon
+  </span>
+</span>
+`;
+
+exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
+<span
+  className="y-dropdown--item"
+>
+  <span>
+    <Text
+      bold={true}
+    >
+      <span
+        className="y-text y-text__bold"
+        style={Object {}}
+      >
+        label
+        :
+      </span>
+    </Text>
+     
+    with icon
+  </span>
+</span>
+`;
+
 exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderTitle={[Function]}
     options={Array []}
   />
 </div>
@@ -17,16 +81,35 @@ exports[`<Dropdown /> with all props matches its snapshot 1`] = `
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     label="TEST_LABEL"
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderTitle={[Function]}
     options={
       Array [
         Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
           "key": "A",
           "text": "Option a",
         },
         Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
           "key": "B",
           "text": "Option b",
         },
@@ -43,9 +126,84 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
   className="y-dropdown"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderTitle={[Function]}
     options={Array []}
+  />
+</div>
+`;
+
+exports[`<Dropdown /> with divider matches its snapshot 1`] = `
+<div
+  className="y-dropdown"
+>
+  <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
+    onChanged={[Function]}
+    onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderTitle={[Function]}
+    options={
+      Array [
+        Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": 1,
+          "key": "divider",
+          "text": "divider",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<Dropdown /> with section header matches its snapshot 1`] = `
+<div
+  className="y-dropdown"
+>
+  <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
+    onChanged={[Function]}
+    onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderTitle={[Function]}
+    options={
+      Array [
+        Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": 2,
+          "key": "sectionHeader",
+          "text": "section header",
+        },
+      ]
+    }
   />
 </div>
 `;

@@ -98,6 +98,42 @@ const options = [
 </div>
 ```
 
+With option templates, dividers and headers:
+
+```js { "props": { "data-example": "with templates dividers headers" } }
+const { GutterSize } = require('../Block');
+const { DropdownMenuItemType } = require('.');
+const AttachIcon = require('../Icon/icons/Attach').default;
+const AddIcon = require('../Icon/icons/Add').default;
+const GroupIcon = require('../Icon/icons/Group').default;
+const LockIcon = require('../Icon/icons/Lock').default;
+const PhoneIcon = require('../Icon/icons/Phone').default;
+
+const options = [
+  { key: 'section1', text: 'Section', itemType: DropdownMenuItemType.Header},
+  { key: 'A', icon: GroupIcon, label: 'Group', text: 'Option A' },
+  { key: 'B', icon: PhoneIcon, label: 'Phone', text: 'Option B' },
+  { key: 'C', icon: AttachIcon, label: 'Attachment', text: 'Option C' },
+  { key: 'D', icon: AddIcon, label: 'Follow', text: 'Option D' },
+  { key: 'divider1', text: 'Section', itemType: DropdownMenuItemType.Divider},
+  { key: 'section2', text: 'Section', itemType: DropdownMenuItemType.Header},
+  { key: 'E', icon: LockIcon, label: 'Secure', text: 'Option E' },
+  { key: 'F', icon: GroupIcon, label: 'Group', text: 'Option F' },
+];
+
+<div>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    This <strong>Dropdown</strong> renders section headers and dividers, and uses icons and labels in options.
+  </Block>
+  <Dropdown
+    label="Please choose from the following options:"
+    placeHolder="Please select..."
+    options={options}
+    onChanged={action('dropdown changed')}
+  />
+</div>
+```
+
 In a grid:
 
 ```js { "props": { "data-example": "in grid" } }
