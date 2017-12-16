@@ -5,5 +5,4 @@
 .y-aside-section--header {
   border-bottom: 1px solid $borderColor;
   padding-bottom: $gutterWidth__xSmall;
-  margin-bottom: 8px;
 }

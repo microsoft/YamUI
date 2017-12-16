@@ -8,7 +8,7 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
     textSize="small"
   >
     <FixedGridRow
-      bottomSpacing="xSmall"
+      bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >
@@ -39,7 +39,7 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
     textSize="small"
   >
     <FixedGridRow
-      bottomSpacing="xSmall"
+      bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >
@@ -77,7 +77,7 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
     textSize="small"
   >
     <FixedGridRow
-      bottomSpacing="xSmall"
+      bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >

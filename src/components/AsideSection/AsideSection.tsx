@@ -28,7 +28,7 @@ export default class AsideSection extends React.Component<AsideSectionProps, {}>
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>
-          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.XSMALL}>
+          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
             <FixedGridColumn>
               <Heading level="2" size="none">
                 <Text uppercase={true} bold={true}>{this.props.title}</Text>
