@@ -1,0 +1,40 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/gutters.css";
+
+/* Bullet point styles */
+.y-list {
+  margin: 0;
+  padding: 0 0 0 3.5rem;
+  list-style-position: outside;
+}
+.y-list__unordered {
+  list-style-type: disc;
+}
+.y-list__ordered {
+  padding: 0 0 0 2.8rem;
+}
+
+/* Bottom gutters */
+.y-list,
+.y-textSize-xxLarge .y-list,
+.y-textSize-xLarge .y-list,
+.y-textSize-large .y-list,
+.y-textSize-medium .y-list {
+  margin-bottom: $gutterWidth__xLarge;
+}
+.y-textSize-mediumSub .y-list,
+.y-textSize-small .y-list {
+  margin-bottom: $gutterWidth__large;
+}
+.y-textSize-xSmall .y-list {
+  margin-bottom: $gutterWidth__medium;
+}
+
+/* List items have 4px bottom padding in all cases */
+.y-list--item {
+  padding: 0 0 $gutterWidth__xSmall 0;
+}
+.y-list__ordered > .y-list--item {
+  padding-left: .7rem;
+}
+

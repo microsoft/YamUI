@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LayoutListListItem /> with additional className matches its snapshot 1`] = `
+exports[`<LayoutListItem /> with additional className matches its snapshot 1`] = `
 <li
   className="y-layoutList--item TEST_CLASSNAME"
 />
 `;
 
-exports[`<LayoutListListItem /> with child content matches its snapshot 1`] = `
+exports[`<LayoutListItem /> with child content matches its snapshot 1`] = `
 <li
   className="y-layoutList--item"
 >
@@ -14,7 +14,7 @@ exports[`<LayoutListListItem /> with child content matches its snapshot 1`] = `
 </li>
 `;
 
-exports[`<LayoutListListItem /> without props matches its snapshot 1`] = `
+exports[`<LayoutListItem /> without props matches its snapshot 1`] = `
 <li
   className="y-layoutList--item"
 />
