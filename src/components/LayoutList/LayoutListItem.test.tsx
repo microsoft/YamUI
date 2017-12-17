@@ -1,14 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { HorizontalListItem, HorizontalListItemProps } from '.';
+import { LayoutListItem, LayoutListItemProps } from '.';
 
-describe('<HorizontalListItem />', () => {
-  let component: ShallowWrapper<HorizontalListItemProps, {}>;
+describe('<LayoutListListItem />', () => {
+  let component: ShallowWrapper<LayoutListItemProps, {}>;
 
   describe('without props', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalListItem />);
+      component = shallow(<LayoutListItem />);
     });
 
     it('matches its snapshot', () => {
@@ -18,7 +18,7 @@ describe('<HorizontalListItem />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalListItem className="TEST_CLASSNAME" />);
+      component = shallow(<LayoutListItem className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -28,7 +28,7 @@ describe('<HorizontalListItem />', () => {
 
   describe('with child content', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalListItem>list item content</HorizontalListItem>);
+      component = shallow(<LayoutListItem>list item content</LayoutListItem>);
     });
 
     it('matches its snapshot', () => {

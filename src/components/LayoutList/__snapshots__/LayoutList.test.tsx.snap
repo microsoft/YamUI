@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LayoutList /> as horizontal list with additional className matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__horizontal TEST_CLASSNAME"
+/>
+`;
+
+exports[`<LayoutList /> as horizontal list with align "right" matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__horizontal y-layoutList__align-right"
+/>
+`;
+
+exports[`<LayoutList /> as horizontal list with child content matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__horizontal"
+>
+  list content
+</ul>
+`;
+
+exports[`<LayoutList /> as horizontal list without props matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__horizontal"
+/>
+`;
+
+exports[`<LayoutList /> as vertical list with additional className matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__vertical TEST_CLASSNAME"
+/>
+`;
+
+exports[`<LayoutList /> as vertical list with child content matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__vertical"
+>
+  list content
+</ul>
+`;
+
+exports[`<LayoutList /> as vertical list without props matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__vertical"
+/>
+`;
