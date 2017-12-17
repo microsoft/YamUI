@@ -118,7 +118,7 @@ const text = 'The quick brown fox jumps over the lazy dog.';
 
 Extra small size:
 
-```js { "props": { "data-example": "text size small" } }
+```js { "props": { "data-example": "text size xsmall" } }
 const { GutterSize, TextSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 
