@@ -12,13 +12,12 @@
   @extend text__small;
   color: $textColor__white;
 }
-
-.y-tooltip--callout > .ms-Callout-beakCurtain {
-  border-radius: 2px;
-}
-
 .y-tooltip--callout > .ms-Callout-main,
 .y-tooltip--callout > .ms-Callout-beak,
 .y-tooltip--callout > .ms-Callout-beakCurtain {
   background-color: $textColor;
+}
+
+.y-tooltip--callout > .ms-Callout-beakCurtain {
+  border-radius: 2px;
 }
