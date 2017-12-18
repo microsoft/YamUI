@@ -4,6 +4,8 @@ While buttons can technically be used to navigate a user to another part of the 
 
 Also, use concise, specific, self-explanatory text, usually a single word. They should include a verb. If acting on something, their text should include the noun they're acting on, e.g. *"Create Group"*.
 
+Use type='submit' for submitting forms.  Doing this will trigger the onClick action when the user presses the enter key within certain form fields.
+
 ### Examples
 
 Regular buttons:
