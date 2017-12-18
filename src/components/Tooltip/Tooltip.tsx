@@ -33,7 +33,7 @@ export default class Tooltip extends React.Component<TooltipProps, {}> {
         content={text}
         directionalHint={directionalHint}
         delay={TooltipDelay.medium}
-        calloutProps={{ doNotLayer: true, preventDismissOnScroll: true }}
+        calloutProps={{ doNotLayer: true, preventDismissOnScroll: true, beakWidth: 8 }}
         hostClassName={join(['y-tooltip', className])}
         className="y-tooltip--callout"
       >

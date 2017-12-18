@@ -4,6 +4,7 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
 <TooltipHost
   calloutProps={
     Object {
+      "beakWidth": 8,
       "doNotLayer": true,
       "preventDismissOnScroll": true,
     }
@@ -19,6 +20,7 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
 <TooltipHost
   calloutProps={
     Object {
+      "beakWidth": 8,
       "doNotLayer": true,
       "preventDismissOnScroll": true,
     }
@@ -36,6 +38,7 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
 <TooltipHost
   calloutProps={
     Object {
+      "beakWidth": 8,
       "doNotLayer": true,
       "preventDismissOnScroll": true,
     }
