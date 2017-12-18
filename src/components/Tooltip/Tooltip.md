@@ -1,5 +1,5 @@
 ### Notes for use
-
+You should always wrap Tooltip around a tabbable element, ensuring keyboard navigation can focus on a nested element to trigger the tooltip.
 
 ### Examples
 
