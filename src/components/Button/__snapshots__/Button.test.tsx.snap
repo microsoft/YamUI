@@ -86,6 +86,25 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 </BaseButton>
 `;
 
+exports[`<Button /> with button type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="button"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
 exports[`<Button /> with default options matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
@@ -239,6 +258,25 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 </BaseButton>
 `;
 
+exports[`<Button /> with reset type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="reset"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
 exports[`<Button /> with small size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
@@ -305,6 +343,25 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
     >
       <Accounts />
     </span>
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
+exports[`<Button /> with submit type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="submit"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
     Click Me
   </Block>
 </BaseButton>
