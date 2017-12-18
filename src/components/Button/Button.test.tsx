@@ -1,8 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Button,
-  { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
+import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
 import AccountsIcon from '../Icon/icons/Accounts';
 
 const sampleText = 'Click Me';
@@ -33,7 +32,7 @@ describe('<Button />', () => {
 
   describe('with submit type', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT}/>);
+      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT} />);
     });
 
     it('matches its snapshot', () => {

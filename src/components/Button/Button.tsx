@@ -101,6 +101,8 @@ export interface RegularButtonProps extends BaseButtonProps {
    * Screenreader text for loading state.
    */
   loadingText?: string;
+
+
 }
 
 export interface LoadingButtonProps extends RegularButtonProps {
@@ -119,6 +121,11 @@ export interface LinkButtonProps extends BaseButtonProps {
    * Links cannot be disabled nor loading.
    */
   status?: void;
+
+  /**
+  * Links cannot have a type.
+  */
+  type?: undefined;
 }
 
 export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonProps;
@@ -148,15 +155,15 @@ export default class Button extends React.Component<ButtonProps, {}> {
     iconPosition: ButtonIconPosition.LEFT,
     size: ButtonSize.REGULAR,
     status: ButtonStatus.ENABLED,
+    type: ButtonType.BUTTON,
   };
 
   render() {
-    const { ariaLabel, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
+    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
     const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
-    const type = this.props.type || ButtonType.BUTTON;
 
     return (
       <BaseButton
