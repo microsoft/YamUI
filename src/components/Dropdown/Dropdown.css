@@ -30,7 +30,9 @@
 }
 
 .y-dropdown--icon {
-  padding-right: .6rem;
+  position: relative;
+  top: 1px;
+  padding-right: .8rem;
 }
 
 .y-dropdown .y-dropdown__caretDown {
@@ -53,13 +55,13 @@
 }
 
 .y-dropdown .ms-Dropdown-items {
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .y-dropdown .ms-Dropdown-item {
   @extend text__mediumSub;
   padding: 0 1.1rem;
-  color: $textColor;
+  color: $textColor__secondary;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,
@@ -75,6 +77,17 @@
 .y-dropdown .ms-Dropdown-header {
   color: $textColor;
   font-size: $fontSize__small;
+  padding: 0 12px; 
+}
+
+.y-dropdown .y-dropdown--item {
+  position: relative;
+  top: -1px;
+}
+
+.y-dropdown .ms-Dropdown-divider {
+  background-color: $borderColor__secondary;
+  margin-bottom: -1px;
 }
 
 /* Non-layered callout styling */
