@@ -24,7 +24,7 @@
 }
 .y-textSize-mediumSub .y-list,
 .y-textSize-small .y-list {
-  margin-bottom: $gutterWidth__large;
+  margin-bottom: $gutterWidth__medium;
 }
 .y-textSize-xSmall .y-list {
   margin-bottom: $gutterWidth__medium;
@@ -37,4 +37,3 @@
 .y-list__ordered > .y-list--item {
   padding-left: .7rem;
 }
-
