@@ -171,7 +171,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
         className={this.getClasses()}
         disabled={isDisabled}
         href={href}
-        type={href ? '' : type}
+        type={type}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}
