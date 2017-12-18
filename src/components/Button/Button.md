@@ -490,6 +490,12 @@ Link button:
 <Button text="I am a link" href="https://www.yammer.com" />
 ```
 
+Submit button:
+
+```js { "props": { "data-example": "submit button" } }
+<Button text="Submit" type="submit" />
+```
+
 Loading button:
 
 ```js { "props": { "data-example": "loading" } }

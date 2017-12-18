@@ -1,18 +1,19 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { Button as FabricButton } from 'office-ui-fabric-react/lib/components/Button/Button';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
-import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from './enums';
+import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
 import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
 
-export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize };
+export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType };
 
 const hrefBlacklist = ['', '#', 'javascript://'];
-
+export type FabricButtonType = HTMLAnchorElement | HTMLButtonElement | BaseButton | FabricButton;
 export interface BaseButtonProps extends BaseComponentProps {
   /**
    * Visible button text.
@@ -53,29 +54,35 @@ export interface BaseButtonProps extends BaseComponentProps {
   size?: ButtonSize;
 
   /**
+   * Button type.
+   * @default ButtonType.BUTTON
+   */
+  type?: ButtonType;
+
+  /**
    * Click callback handler.
    */
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
+  onClick?: React.MouseEventHandler<FabricButtonType>;
 
   /**
    * Focus callback handler.
    */
-  onFocus?: (event: React.FocusEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
+  onFocus?: React.FocusEventHandler<FabricButtonType>;
 
   /**
    * Blur callback handler.
    */
-  onBlur?: (event: React.FocusEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
+  onBlur?: React.FocusEventHandler<FabricButtonType>;
 
   /**
    * Mouse enter callback handler.
    */
-  onMouseEnter?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
+  onMouseEnter?: React.MouseEventHandler<FabricButtonType>;
 
   /**
    * Mouse leave callback handler.
    */
-  onMouseLeave?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
+  onMouseLeave?: React.MouseEventHandler<FabricButtonType>;
 }
 
 export interface RegularButtonProps extends BaseButtonProps {
@@ -149,6 +156,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
     const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
+    const type = this.props.type || ButtonType.BUTTON;
 
     return (
       <BaseButton
@@ -156,6 +164,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
         className={this.getClasses()}
         disabled={isDisabled}
         href={href}
+        type={href ? '' : type}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}
