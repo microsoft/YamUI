@@ -5,8 +5,8 @@
 .y-tooltip--callout {
   box-shadow: none !important;
   padding: .7rem 1.2rem .8rem;
+  min-height: 3.2rem;
   z-index: 1000;
-  min-height: 32px;
 }
 
 .y-tooltip .ms-Tooltip-content {
