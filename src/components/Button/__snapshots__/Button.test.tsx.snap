@@ -8,6 +8,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   disabled={true}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -26,6 +27,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
   disabled={true}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className="y-button--content__hidden"
@@ -53,6 +55,7 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -72,6 +75,26 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
+exports[`<Button /> with button type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -90,6 +113,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -108,6 +132,7 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -126,6 +151,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -149,6 +175,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -173,6 +200,7 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   href="#"
   split={false}
   styles={Object {}}
+  type=""
 >
   <Block
     className=""
@@ -191,6 +219,7 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -209,6 +238,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
   disabled={true}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className="y-button--content__hidden"
@@ -228,6 +258,25 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 </BaseButton>
 `;
 
+exports[`<Button /> with reset type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="reset"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
 exports[`<Button /> with small size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
@@ -236,6 +285,7 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -254,6 +304,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
   disabled={true}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className="y-button--content__hidden"
@@ -281,6 +332,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
   disabled={false}
   split={false}
   styles={Object {}}
+  type="button"
 >
   <Block
     className=""
@@ -296,6 +348,25 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 </BaseButton>
 `;
 
+exports[`<Button /> with submit type matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button y-button__color-secondary y-button__size-regular"
+  classNames={Object {}}
+  disabled={false}
+  split={false}
+  styles={Object {}}
+  type="submit"
+>
+  <Block
+    className=""
+    textSize="mediumSub"
+  >
+    Click Me
+  </Block>
+</BaseButton>
+`;
+
 exports[`<Button /> with valid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
@@ -305,6 +376,7 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   href="https://www.yammer.com"
   split={false}
   styles={Object {}}
+  type=""
 >
   <Block
     className=""
