@@ -31,20 +31,20 @@ const user2 = {
       hey that's a great idea! let's discuss this further at the monthly offsite next week
     </Block>
     <Block textSize={TextSize.SMALL} push={-1} className="actions">
-      <HorizontalList>
-        <HorizontalListItem>
+      <LayoutList direction="horizontal">
+        <LayoutListItem>
           <Clickable><Like /> Like</Clickable>
-        </HorizontalListItem>
-        <HorizontalListItem>
+        </LayoutListItem>
+        <LayoutListItem>
           <Clickable><Reply /> Reply</Clickable>
-        </HorizontalListItem>
-        <HorizontalListItem>
+        </LayoutListItem>
+        <LayoutListItem>
           <Clickable><Share /> Share</Clickable>
-        </HorizontalListItem>
-        <HorizontalListItem>
+        </LayoutListItem>
+        <LayoutListItem>
           <Clickable>...</Clickable>
-        </HorizontalListItem>
-      </HorizontalList>
+        </LayoutListItem>
+      </LayoutList>
     </Block>
   </FixedGridColumn>
 </FixedGridRow>
