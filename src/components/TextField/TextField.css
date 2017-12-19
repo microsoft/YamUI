@@ -24,6 +24,10 @@
   padding-left: 0px;
 }
 
+.y-text-field.ms-TextField--underlined.is-active .ms-TextField-wrapper {
+  border-color: $borderColor__focused;
+}
+
 .y-text-field .ms-TextField-field {
   @extend text__mediumSub;
   color: $textColor;
