@@ -10,7 +10,10 @@ import {
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
-import { Add, Group, Lock, IconSize } from '../../components/Icon';
+import { IconSize } from '../../components/Icon';
+import Add from '../../components/Icon/icons/Add';
+import Group from '../../components/Icon/icons/Group';
+import Lock from '../../components/Icon/icons/Lock';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
 const iconGroup = <Group size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;

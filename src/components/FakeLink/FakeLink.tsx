@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import classNames = require('classnames');
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps as FakeLinkProps } from '../../util/BaseComponent/props';
 import './FakeLink.css';
 
@@ -19,6 +19,6 @@ export default class FakeLink extends React.Component<FakeLinkProps, {}> {
   render() {
     const { className, children } = this.props;
 
-    return <span className={classNames('y-fakeLink', className)}>{children}</span>;
+    return <span className={join(['y-fakeLink', className])}>{children}</span>;
   }
 }

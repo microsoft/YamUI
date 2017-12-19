@@ -4,13 +4,17 @@ While buttons can technically be used to navigate a user to another part of the 
 
 Also, use concise, specific, self-explanatory text, usually a single word. They should include a verb. If acting on something, their text should include the noun they're acting on, e.g. *"Create Group"*.
 
+Use `type='submit'` for submitting forms. Doing this will trigger the onClick action when the user presses the enter key within certain form fields.
+
 ### Examples
 
 Regular buttons:
 
 ```js { "props": { "data-example": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
-const { Add, ChevronRightMed, ChevronDownMed } = require('../Icon');
+const Add = require('../Icon/icons/Add').default;
+const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
+const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
@@ -246,7 +250,9 @@ Small buttons:
 
 ```js { "props": { "data-example": "small" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
-const { Add, ChevronRightMed, ChevronDownMed } = require('../Icon');
+const Add = require('../Icon/icons/Add').default;
+const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
+const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
 const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
@@ -484,6 +490,12 @@ Link button:
 
 ```js { "props": { "data-example": "link" } }
 <Button text="I am a link" href="https://www.yammer.com" />
+```
+
+Submit button:
+
+```js { "props": { "data-example": "submit button" } }
+<Button text="Submit" type="submit" />
 ```
 
 Loading button:

@@ -25,7 +25,8 @@ const { MessageBarType } = require('.');
 Warning with an icon action:
 
 ```js { "props": { "data-example": "with icon action" } }
-const { IconSize, Lock } = require('../Icon');
+const { IconSize } = require('../Icon');
+const Lock = require('../Icon/icons/Lock').default;
 const { TextSize } = require('../Text');
 const { MessageBarType } = require('.');
 
@@ -44,7 +45,8 @@ const action = (
 Warning with an icon action and multiple lines:
 
 ```js { "props": { "data-example": "with icon action" } }
-const { IconSize, Lock } = require('../Icon');
+const { IconSize } = require('../Icon');
+const Lock = require('../Icon/icons/Lock').default;
 const { TextSize } = require('../Text');
 const { MessageBarType } = require('.');
 

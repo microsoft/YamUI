@@ -88,7 +88,7 @@ export default class Block extends React.Component<BlockProps, {}> {
 
     const classes = ['y-block--inner'];
     if (ellipsis) {
-      classes.push('y-ellipsis');
+      classes.push('y-block__ellipsis');
     }
     if (padding) {
       classes.push(`y-block--inner__padding-${padding}`);

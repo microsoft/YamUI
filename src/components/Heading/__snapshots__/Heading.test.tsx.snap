@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Heading /> with a level matches its snapshot 1`] = `
+exports[`<Heading /> with additional className matches its snapshot 1`] = `
+<h4
+  className="y-heading TEST_CLASSNAME"
+>
+  <Block
+    bottomSpacing="medium"
+    textSize="large"
+  >
+    test content
+  </Block>
+</h4>
+`;
+
+exports[`<Heading /> with level 1 matches its snapshot 1`] = `
 <h1
   className="y-heading"
 >
@@ -13,7 +26,7 @@ exports[`<Heading /> with a level matches its snapshot 1`] = `
 </h1>
 `;
 
-exports[`<Heading /> with a size matches its snapshot 1`] = `
+exports[`<Heading /> with level 2 and size 3 matches its snapshot 1`] = `
 <h2
   className="y-heading y-heading__size-3"
 >
@@ -24,19 +37,6 @@ exports[`<Heading /> with a size matches its snapshot 1`] = `
     test content
   </Block>
 </h2>
-`;
-
-exports[`<Heading /> with additional className matches its snapshot 1`] = `
-<h4
-  className="y-heading TEST_CLASSNAME"
->
-  <Block
-    bottomSpacing="medium"
-    textSize="large"
-  >
-    test content
-  </Block>
-</h4>
 `;
 
 exports[`<Heading /> with size "none" matches its snapshot 1`] = `

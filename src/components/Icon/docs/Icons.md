@@ -1,5 +1,11 @@
 ### Notes for use
 
+Because current bundlers do not always tree-shake properly, icons are exported individually, so you'll need to import each icon you need like this:
+
+```js static
+import Mail from 'yamui/dist/components/Icon/icons/Mail';
+```
+
 The `block` prop may be necessary to remove extra `line-height`.
 
 ### Examples
@@ -34,7 +40,8 @@ const iconsLibrary = Object.keys(allIcons).map((icon, index) => {
 Sizes:
 
 ```js { "props": { "data-example": "sizes" } }
-const { Attach, IconSize } = require('../index');
+const { IconSize } = require('../index');
+const Attach = require('../icons/Attach').default;
 
 <table style={{ textAlign: 'center' }}>
   <thead>
@@ -76,7 +83,11 @@ Auto-sized to text:
 
 ```js { "props": { "data-example": "autosized to text" } }
 const { GutterSize, TextSize } = require('../../Block');
-const { Attach, CheckMark, Group, Add, Like } = require('../icons');
+const Attach = require('../icons/Attach').default;
+const CheckMark = require('../icons/CheckMark').default;
+const Group = require('../icons/Group').default;
+const Add = require('../icons/Add').default;
+const Like = require('../icons/Like').default;
 
 const longText = (
   <span>
@@ -120,7 +131,9 @@ Auto-sized to headings:
 
 ```js { "props": { "data-example": "autosized to headings" } }
 const { GutterSize } = require('../../Block');
-const { Attach, CheckMark, Like } = require('../icons');
+const Attach = require('../icons/Attach').default;
+const CheckMark = require('../icons/CheckMark').default;
+const Like = require('../icons/Like').default;
 
 const longText = (
   <span>
@@ -158,7 +171,8 @@ const longText = (
 Inline with text and color overrides:
 
 ```js { "props": { "data-example": "inline with text and color" } }
-const { Add, IconSize } = require('../index');
+const { IconSize } = require('../index');
+const Add = require('../icons/Add').default;
 
 <div>
   <p>

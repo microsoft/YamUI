@@ -57,7 +57,9 @@ exports[`<FixedGridColumn /> with vertical align middle matches its snapshot 1`]
   <div
     className="y-fixedGridColumn--inner__middle"
   >
-    grid content
+    <div>
+      grid content
+    </div>
   </div>
 </div>
 `;

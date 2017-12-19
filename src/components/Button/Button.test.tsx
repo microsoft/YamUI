@@ -1,9 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { BaseButton } from 'office-ui-fabric-react/lib/Button';
-import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
-import { Accounts as AccountsIcon } from '../Icon';
+import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
+import AccountsIcon from '../Icon/icons/Accounts';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -16,20 +15,34 @@ describe('<Button />', () => {
       component = shallow(<Button text={sampleText} />);
     });
 
-    it('renders a Fabric BaseButton', () => {
-      expect(component.find(BaseButton).length).toBe(1);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with button type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.BUTTON} />);
     });
 
-    it('contains its base className', () => {
-      expect(component.hasClass('y-button')).toBe(true);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with submit type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT} />);
     });
 
-    it('is the default button size', () => {
-      expect(component.hasClass('y-button__size-regular')).toBe(true);
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
+  });
 
-    it('is the default button color', () => {
-      expect(component.hasClass('y-button__color-secondary')).toBe(true);
+  describe('with reset type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.RESET} />);
     });
 
     it('matches its snapshot', () => {
@@ -42,14 +55,6 @@ describe('<Button />', () => {
       component = shallow(<Button text={sampleText} className="TEST_CLASSNAME" />);
     });
 
-    it('includes that className', () => {
-      expect(component.hasClass('TEST_CLASSNAME')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-button')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -58,10 +63,6 @@ describe('<Button />', () => {
   describe('with aria label', () => {
     beforeEach(() => {
       component = shallow(<Button text={sampleText} ariaLabel={sampleAriaLabel} />);
-    });
-
-    it('prop is set', () => {
-      expect(component.find(BaseButton).prop('ariaLabel')).toEqual(sampleAriaLabel);
     });
 
     it('matches its snapshot', () => {
@@ -74,10 +75,6 @@ describe('<Button />', () => {
       component = shallow(<Button text={sampleText} fullWidth={true} />);
     });
 
-    it('includes the fullWidth className', () => {
-      expect(component.hasClass('y-button__fullWidth')).toBe(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -86,10 +83,6 @@ describe('<Button />', () => {
   describe('set as disabled', () => {
     beforeEach(() => {
       component = shallow(<Button text={sampleText} status={ButtonStatus.DISABLED} />);
-    });
-
-    it('is disabled', () => {
-      expect(component.find(BaseButton).prop('disabled')).toEqual(true);
     });
 
     it('matches its snapshot', () => {
@@ -102,10 +95,6 @@ describe('<Button />', () => {
       component = shallow(<Button text={sampleText} status={ButtonStatus.LOADING} />);
     });
 
-    it('is disabled', () => {
-      expect(component.find(BaseButton).prop('disabled')).toEqual(true);
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -114,14 +103,6 @@ describe('<Button />', () => {
   describe('with icon', () => {
     beforeEach(() => {
       component = shallow(<Button icon={AccountsIcon} text={sampleText} />);
-    });
-
-    it('renders the icon on the left', () => {
-      expect(component.find('.y-button--icon-wrapper-left').length).toBe(1);
-    });
-
-    it('renders the actual Icon', () => {
-      expect(component.find(AccountsIcon).length).toBe(1);
     });
 
     it('matches its snapshot', () => {
@@ -139,10 +120,6 @@ describe('<Button />', () => {
         );
       });
 
-      it('renders the icon on the right', () => {
-        expect(component.find('.y-button--icon-wrapper-right').length).toBe(1);
-      });
-
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
       });
@@ -152,10 +129,6 @@ describe('<Button />', () => {
   describe('with primary color', () => {
     beforeEach(() => {
       component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />);
-    });
-
-    it('renders the correct color className', () => {
-      expect(component.hasClass('y-button__color-primary')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -178,14 +151,6 @@ describe('<Button />', () => {
   describe('with small size', () => {
     beforeEach(() => {
       component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} />);
-    });
-
-    it('renders the correct size className', () => {
-      expect(component.hasClass('y-button__size-small')).toBe(true);
-    });
-
-    it('still has its base className', () => {
-      expect(component.hasClass('y-button')).toBe(true);
     });
 
     it('matches its snapshot', () => {
@@ -222,15 +187,6 @@ describe('<Button />', () => {
       component = shallow(<Button text={sampleText} href="https://www.yammer.com" />);
     });
 
-    it('renders a link instead of a button', () => {
-      expect(
-        component
-          .render()
-          .find('a.y-button')
-          .attr('href'),
-      ).toBe('https://www.yammer.com');
-    });
-
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
@@ -239,15 +195,6 @@ describe('<Button />', () => {
   describe('with invalid href', () => {
     beforeEach(() => {
       component = shallow(<Button text={sampleText} href="#" />);
-    });
-
-    it('complains via proptypes but does not throw an error', () => {
-      expect(
-        component
-          .render()
-          .find('a.y-button')
-          .attr('href'),
-      ).toBe('#');
     });
 
     it('matches its snapshot', () => {
