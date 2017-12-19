@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } from '.';
+import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
 import AccountsIcon from '../Icon/icons/Accounts';
 
 const sampleText = 'Click Me';
@@ -13,6 +13,36 @@ describe('<Button />', () => {
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(<Button text={sampleText} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with button type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.BUTTON} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with submit type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with reset type', () => {
+    beforeEach(() => {
+      component = shallow(<Button text={sampleText} type={ButtonType.RESET} />);
     });
 
     it('matches its snapshot', () => {
