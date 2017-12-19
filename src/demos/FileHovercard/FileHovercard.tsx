@@ -7,7 +7,7 @@ import {
   HovercardHeader,
   HovercardBody,
 } from '../../components/Hovercard';
-import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
+import { LayoutList, LayoutListItem } from '../../components/LayoutList';
 import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
@@ -54,23 +54,23 @@ export default class FileHovercard extends React.Component<FileHovercardProps, {
           <Block textSize={TextSize.MEDIUM_SUB}>
             <Block bottomSpacing={GutterSize.XXLARGE}>
               <Block bottomSpacing={GutterSize.XSMALL}>72 followers</Block>
-              <HorizontalList>
-              <HorizontalListItem>{memberAvatar1}</HorizontalListItem>
-              <HorizontalListItem>{memberAvatar2}</HorizontalListItem>
-              <HorizontalListItem>{memberAvatar3}</HorizontalListItem>
-              <HorizontalListItem>{memberAvatar4}</HorizontalListItem>
-              <HorizontalListItem>{memberAvatar5}</HorizontalListItem>
-              </HorizontalList>
+              <LayoutList direction="horizontal">
+                <LayoutListItem>{memberAvatar1}</LayoutListItem>
+                <LayoutListItem>{memberAvatar2}</LayoutListItem>
+                <LayoutListItem>{memberAvatar3}</LayoutListItem>
+                <LayoutListItem>{memberAvatar4}</LayoutListItem>
+                <LayoutListItem>{memberAvatar5}</LayoutListItem>
+              </LayoutList>
             </Block>
 
-            <HorizontalList align="right">
-              <HorizontalListItem>
+            <LayoutList direction="horizontal" align="right">
+              <LayoutListItem>
                 <Button text="Go To File" />
-              </HorizontalListItem>
-              <HorizontalListItem>
+              </LayoutListItem>
+              <LayoutListItem>
                 <Button text="Preview" color={ButtonColor.PRIMARY} />
-              </HorizontalListItem>
-            </HorizontalList>
+              </LayoutListItem>
+            </LayoutList>
           </Block>
         </HovercardBody>
       </div>

@@ -1,0 +1,35 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/gutters.css";
+
+.y-layoutList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Horizontal */
+.y-layoutList__horizontal {
+  margin: 0 -$gutterWidth__xSmall 0 0;  
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.y-layoutList__align-right {
+  justify-content: flex-end;
+}
+
+.y-layoutList__horizontal > .y-layoutList--item {
+  padding: 0;
+  margin: 0 $gutterWidth__xSmall 0 0;
+}
+
+/* Vertical */
+.y-layoutList__vertical {
+  display: block;
+}
+
+.y-layoutList__vertical > .y-layoutList--item {
+  display: block;
+  padding: 0;
+  margin: 0;
+}

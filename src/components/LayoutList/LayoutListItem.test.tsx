@@ -1,24 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { HorizontalList, HorizontalListProps } from '.';
+import { LayoutListItem, LayoutListItemProps } from '.';
 
-describe('<HorizontalList />', () => {
-  let component: ShallowWrapper<HorizontalListProps, {}>;
+describe('<LayoutListItem />', () => {
+  let component: ShallowWrapper<LayoutListItemProps, {}>;
 
   describe('without props', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalList />);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with align "right"', () => {
-    beforeEach(() => {
-      component = shallow(<HorizontalList align="right" />);
+      component = shallow(<LayoutListItem />);
     });
 
     it('matches its snapshot', () => {
@@ -28,7 +18,7 @@ describe('<HorizontalList />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalList className="TEST_CLASSNAME" />);
+      component = shallow(<LayoutListItem className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -38,7 +28,7 @@ describe('<HorizontalList />', () => {
 
   describe('with child content', () => {
     beforeEach(() => {
-      component = shallow(<HorizontalList>list content</HorizontalList>);
+      component = shallow(<LayoutListItem>list item content</LayoutListItem>);
     });
 
     it('matches its snapshot', () => {
