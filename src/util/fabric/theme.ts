@@ -18,6 +18,7 @@ loadTheme({
     neutralSecondary: '#646d7a',
     neutralTertiary: '#dde0e6',
     neutralLighter: '#f3f5f8',
+    neutralDark: '#dde0e6',
     redDark: '#d1423b',
   },
   fonts: {
