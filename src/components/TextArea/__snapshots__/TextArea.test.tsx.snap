@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea /> with all options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={true}
+  borderless={false}
+  className="y-text-field CLASS"
+  deferredValidationTime={200}
+  description="DESCRIPTION"
+  disabled={false}
+  errorMessage=""
+  label="LABEL"
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  placeholder="PLACEHOLDER"
+  required={true}
+  resizable={false}
+  rows={2}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+  value="VALUE"
+/>
+`;
+
+exports[`<TextArea /> with default options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-text-field"
+  deferredValidationTime={200}
+  errorMessage=""
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;
+
+exports[`<TextArea /> with error message and description matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-text-field"
+  deferredValidationTime={200}
+  errorMessage="ERROR"
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;
