@@ -13,6 +13,7 @@
 .y-text-field .ms-TextField-fieldGroup {
   line-height: 3.3rem;
   height: 3.6rem;
+  border-radius: 1px;
 }
 
 .y-text-field .ms-TextField-field {
@@ -33,11 +34,14 @@
 .y-text-field .ms-TextField-description {
   @extend text__small;
   color: $textColor__metadata;
+  position: relative;
+  top: -1px;
 }
 
 .y-text-field .ms-TextField-errorMessage {
   @extend text__small;
   color: $textColor__error;
+  padding-top: 2px;
 }
 
 /* Hide the asterisk that comes with required=true */

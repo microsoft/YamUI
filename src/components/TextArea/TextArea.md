@@ -8,6 +8,15 @@ Basic
 />
 ```
 
+With a description
+```js { "props": { "data-example": "basic" } }
+<TextArea
+  value="This multiline has fixed height so scrollbars may appear."
+  rows={3} 
+  description="Small hint goes here"
+/>
+```
+
 Auto-adjust Height
 ```js { "props": { "data-example": "autoAdjustHeight" } }
 <TextArea
