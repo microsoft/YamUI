@@ -9,7 +9,7 @@ import {
 } from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
-import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
+import { LayoutList, LayoutListItem } from '../../components/LayoutList';
 import { IconSize } from '../../components/Icon';
 import Add from '../../components/Icon/icons/Add';
 import Group from '../../components/Icon/icons/Group';
@@ -72,14 +72,14 @@ export default class UserHovercard extends React.Component<UserHovercardProps, {
               <FixedGridColumn>{userGroups}</FixedGridColumn>
             </FixedGridRow>
 
-            <HorizontalList align="right">
-              <HorizontalListItem>
+            <LayoutList direction="horizontal" align="right">
+              <LayoutListItem>
                 <Button text="Send Message" />
-              </HorizontalListItem>
-              <HorizontalListItem>
+              </LayoutListItem>
+              <LayoutListItem>
                 <Button text="Follow" color={ButtonColor.PRIMARY} icon={Add} />
-              </HorizontalListItem>
-            </HorizontalList>
+              </LayoutListItem>
+            </LayoutList>
           </Block>
         </HovercardBody>
       </div>
