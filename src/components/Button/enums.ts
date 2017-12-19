@@ -25,3 +25,9 @@ export enum ButtonSize {
   REGULAR = 'regular',
   SMALL = 'small',
 }
+
+export enum ButtonType {
+  BUTTON = 'button',
+  SUBMIT = 'submit',
+  RESET = 'reset',
+}
