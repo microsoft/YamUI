@@ -1,0 +1,8 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-box {
+  position: relative;
+  border-radius: 1px;
+  border: 1px solid $borderColor;
+}
