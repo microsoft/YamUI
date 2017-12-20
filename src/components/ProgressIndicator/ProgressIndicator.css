@@ -1,6 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import "src/css/variables/colors.css";
 
+/* Remove extra whitespace from Fabric's extra visual options */
+.y-progress-indicator .ms-ProgressIndicator-itemName {
+  display: none;
+}
+.y-progress-indicator .ms-ProgressIndicator-itemProgress {
+  padding: 0;
+}
+
 .y-progress-indicator .ms-ProgressIndicator-progressTrack,
 .y-progress-indicator .ms-ProgressIndicator-progressBar {
   height: 4px;

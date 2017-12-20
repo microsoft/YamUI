@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> with additional className matches its snapshot 1`] = `
+<Block
+  className="y-box TEST_CLASSNAME"
+  padding="small"
+/>
+`;
+
+exports[`<Box /> with children passed matches its snapshot 1`] = `
+<Block
+  className="y-box"
+  padding="small"
+/>
+`;
+
+exports[`<Box /> with default options matches its snapshot 1`] = `
+<Block
+  className="y-box"
+  padding="small"
+/>
+`;
