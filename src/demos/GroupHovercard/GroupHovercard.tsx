@@ -9,7 +9,7 @@ import {
 } from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
-import { HorizontalList, HorizontalListItem } from '../../components/HorizontalList';
+import { LayoutList, LayoutListItem } from '../../components/LayoutList';
 import { IconSize } from '../../components/Icon';
 import Add from '../../components/Icon/icons/Add';
 import Group from '../../components/Icon/icons/Group';
@@ -85,13 +85,13 @@ export default class GroupHovercard extends React.Component<GroupHovercardProps,
 
             <Block bottomSpacing={GutterSize.LARGE}>
               <Block bottomSpacing={GutterSize.XSMALL}>102 members</Block>
-              <HorizontalList>
-                <HorizontalListItem>{memberAvatar1}</HorizontalListItem>
-                <HorizontalListItem>{memberAvatar2}</HorizontalListItem>
-                <HorizontalListItem>{memberAvatar3}</HorizontalListItem>
-                <HorizontalListItem>{memberAvatar4}</HorizontalListItem>
-                <HorizontalListItem>{memberAvatar5}</HorizontalListItem>
-              </HorizontalList>
+              <LayoutList direction="horizontal">
+                <LayoutListItem>{memberAvatar1}</LayoutListItem>
+                <LayoutListItem>{memberAvatar2}</LayoutListItem>
+                <LayoutListItem>{memberAvatar3}</LayoutListItem>
+                <LayoutListItem>{memberAvatar4}</LayoutListItem>
+                <LayoutListItem>{memberAvatar5}</LayoutListItem>
+              </LayoutList>
             </Block>
 
             <FixedGridRow bottomSpacing={GutterSize.XXLARGE} gutterSize={GutterSize.SMALL}>
@@ -99,11 +99,9 @@ export default class GroupHovercard extends React.Component<GroupHovercardProps,
               <FixedGridColumn>{relatedGroups}</FixedGridColumn>
             </FixedGridRow>
 
-            <HorizontalList align="right">
-              <HorizontalListItem>
-                <Button text="Join" color={ButtonColor.PRIMARY} icon={Add} />
-              </HorizontalListItem>
-            </HorizontalList>
+            <Block textAlign="right">
+              <Button text="Join" color={ButtonColor.PRIMARY} icon={Add} />
+            </Block>
           </Block>
         </HovercardBody>
       </div>

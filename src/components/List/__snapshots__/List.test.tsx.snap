@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> ordered with additional className matches its snapshot 1`] = `
+<ol
+  className="y-list y-list__ordered TEST_CLASSNAME"
+/>
+`;
+
+exports[`<List /> ordered with textSize matches its snapshot 1`] = `
+<Block
+  textSize="small"
+>
+  <ol
+    className="y-list y-list__ordered"
+  />
+</Block>
+`;
+
+exports[`<List /> ordered without textSize matches its snapshot 1`] = `
+<ol
+  className="y-list y-list__ordered"
+/>
+`;
+
+exports[`<List /> unordered with additional className matches its snapshot 1`] = `
+<ul
+  className="y-list y-list__unordered TEST_CLASSNAME"
+/>
+`;
+
+exports[`<List /> unordered with textSize matches its snapshot 1`] = `
+<Block
+  textSize="small"
+>
+  <ul
+    className="y-list y-list__unordered"
+  />
+</Block>
+`;
+
+exports[`<List /> unordered without textSize matches its snapshot 1`] = `
+<ul
+  className="y-list y-list__unordered"
+/>
+`;
