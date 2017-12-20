@@ -11,7 +11,9 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
 import { IconSize, BaseIcon } from '../Icon';
 import ChevronDownMed from '../Icon/icons/ChevronDownMed';
-import Text from '../Text';
+import Block from '../Block';
+import Text, { TextSize } from '../Text';
+import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import './Dropdown.css';
 
 export type DropdownOptionKey = string | number;
@@ -96,6 +98,7 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
           onRenderCaretDown={this.getChevronIcon}
           onRenderOption={this.getOption}
           onRenderTitle={this.getSelectedOption}
+          onRenderPlaceHolder={this.getPlaceholder}
           calloutProps={calloutProps}
         />
       </div>
@@ -113,28 +116,59 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
     return <span>{text}</span>;
   }
 
+  private getOptionContent(item: IDropdownOption) {
+    const label = item.data && item.data.label;
+    const Icon = item.data && item.data.icon;
+    const iconNode = Icon && <Icon size={IconSize.MEDIUM} block={true} />;
+    const textContent = this.getOptionText(label, item.text);
+
+    if (iconNode) {
+      return (
+        <FixedGridRow gutterSize={GutterSize.SMALL}>
+          <FixedGridColumn fixed={true}>{iconNode}</FixedGridColumn>
+          <FixedGridColumn className="y-dropdown--ellipsed-title">{textContent}</FixedGridColumn>
+        </FixedGridRow>
+      );
+    }
+    
+    return <div className="y-dropdown--ellipsed-title">{textContent}</div>;
+  }
+
+  @autobind
+  private getPlaceholder() {
+    return (
+      <Block textSize={TextSize.MEDIUM_SUB}>
+        {this.props.placeHolder}
+      </Block>
+    );
+  }
+
   @autobind
   private getOption(item?: IDropdownOption) {
     if (!item) {
-      return <span />;
+      return null;
     }
 
-    const label = item.data && item.data.label;
-    const Icon = item.data && item.data.icon;
-    const iconNode = Icon && (
-      <span className="y-dropdown--icon"><Icon size={IconSize.MEDIUM} /></span>
-    );
+    const isHeader = item.itemType === DropdownMenuItemType.Header;
+
+    if (isHeader) {
+      return (
+        <Block className="y-dropdown--item y-dropdown--header" textSize={TextSize.SMALL}>
+          {item.text}
+        </Block>
+      );
+    }
 
     return (
-      <span className="y-dropdown--item">
-        {iconNode}{this.getOptionText(label, item.text)}
-      </span>
+      <Block className="y-dropdown--item" textSize={TextSize.MEDIUM_SUB}>
+        {this.getOptionContent(item)}
+      </Block>
     );
   }
 
   @autobind
   // Fabric Dropdown can support multiple selection. Even though we're not supporting it, TypeScript
-  // requires we handle these cases. So some branches cannot actually be reached/tested.
+  // requires we handle these cases. So some branches cannot actually be reached/tested. RIP 100% coverage :(
   private getSelectedOption(item?: IDropdownOption | IDropdownOption[]) {
     if (Array.isArray(item)) {
       return item.length > 0 ? this.getOption(item[0]) : this.getOption();

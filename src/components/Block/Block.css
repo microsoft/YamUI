@@ -53,7 +53,5 @@
 }
 
 .y-block__ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @extend ellipsis
 }

@@ -5,7 +5,7 @@ import {
   Dropdown as FabricDropdown,
   IDropdownProps,
 } from 'office-ui-fabric-react/lib/components/Dropdown';
-import Dropdown, { DropdownProps } from '.';
+import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
 import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
@@ -66,7 +66,7 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
       });
     });
 
@@ -84,8 +84,44 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
       });
+    });
+  });
+
+  describe('with divider', () => {
+    beforeEach(() => {
+      const options = [
+        { key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider },
+      ];
+      fullComponent = mount(
+        <Dropdown
+          options={options}
+        />,
+      );
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+    });
+  });
+
+  describe('with section header', () => {
+    beforeEach(() => {
+      const options = [
+        { key: 'header', text: 'header1', itemType: DropdownMenuItemType.Header },
+      ];
+      fullComponent = mount(
+        <Dropdown
+          options={options}
+        />,
+      );
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
     });
   });
 

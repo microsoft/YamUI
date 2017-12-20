@@ -2,6 +2,7 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
+/* Label element above the Dropdown */
 .y-dropdown .ms-Dropdown-label {
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
@@ -9,59 +10,26 @@
   padding-bottom: .4rem;
 }
 
-.y-dropdown .ms-Dropdown-title {
-  line-height: 3.3rem;
-  height: 3.6rem;
-  color: $textColor;
-  border-color: $borderColor;
-  border-radius: 1px;
-  padding: 0 3.3rem 0 1.1rem;
-}
 
-.y-dropdown .ms-Dropdown-titleIsPlaceHolder {
-  color: $textColor__metadata;
-}
-
+/* Chevron Icon */
 .y-dropdown .ms-Dropdown-caretDownWrapper {
-  top: 0;
-  right: 10;
-  display: inline-flex;
-  align-items: center;
+  top: .2rem;
+  right: 1.1rem;
+  height: 3.2rem;
+  line-height: 3.4rem;
 }
-
-.y-dropdown--icon {
-  position: relative;
-  top: 1px;
-  padding-right: .8rem;
-}
-
 .y-dropdown .y-dropdown__caretDown {
   color: $linkColor;
 }
 
-.y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
-.y-dropdown .ms-Dropdown:active .ms-Dropdown-title,
-.y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
-  border-color: $borderColor;
-}
 
-.y-dropdown .ms-Dropdown:active .ms-Dropdown-title {
-  border-color: $borderColor__focused;
-}
-
-.y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
-.y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
-  border-color: $borderColor__focused;
-}
-
+/* Dropdown options */
 .y-dropdown .ms-Dropdown-items {
-  padding-bottom: 4px;
+  padding-bottom: .4px;
 }
 
 .y-dropdown .ms-Dropdown-item {
-  @extend text__mediumSub;
-  padding: 0 1.1rem;
-  color: $textColor__secondary;
+  padding: .4rem 1.1rem .6rem;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,
@@ -69,26 +37,48 @@
 .y-dropdown .ms-Dropdown-item:focus {
   background-color: $dropdownOptionBackgroundColor__focused;
 }
-
 .y-dropdown .ms-Dropdown-item.is-selected {
   background-color: $dropdownOptionBackgroundColor__selected;
 }
 
+/* Nested option content */
+.y-dropdown--item {
+  color: $textColor__secondary;
+}
+
+/* Section headers and dividers */
 .y-dropdown .ms-Dropdown-header {
   color: $textColor;
-  font-size: $fontSize__small;
-  padding: 0 12px; 
+  padding: .7rem 1.2rem .9rem;
+  margin: 0;
 }
-
-.y-dropdown .y-dropdown--item {
-  position: relative;
-  top: -1px;
-}
-
 .y-dropdown .ms-Dropdown-divider {
   background-color: $borderColor__secondary;
   margin-bottom: -1px;
 }
+
+
+/* The selected option in the visible field area */
+.y-dropdown .ms-Dropdown-title {
+  color: $textColor;
+  border-color: $borderColor;
+  border-radius: 1px;
+  height: 3.6rem;
+  padding: .7rem 2.4rem .7rem 1.1rem;
+}
+.y-dropdown .ms-Dropdown-titleIsPlaceHolder {
+  color: $textColor__metadata;
+}
+.y-dropdown .ms-Dropdown:active .ms-Dropdown-title,
+.y-dropdown .ms-Dropdown:hover .ms-Dropdown-title,
+.y-dropdown .ms-Dropdown:focus .ms-Dropdown-title {
+  border-color: $borderColor__focused;
+}
+
+.y-dropdown .ms-Dropdown-title .y-dropdown--ellipsed-title {
+  @extend ellipsis;
+}
+
 
 /* Non-layered callout styling */
 .y-dropdown .ms-Callout-container {
