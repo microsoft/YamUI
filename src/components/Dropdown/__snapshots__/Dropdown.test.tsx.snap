@@ -15,10 +15,11 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
         className="y-fixedGridRow y-fixedGridRow__gutter-small"
       >
         <FixedGridColumn
+          className="y-dropdown--option-icon"
           fixed={true}
         >
           <div
-            className="y-fixedGridColumn y-fixedGridColumn__isFixed"
+            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
             style={Object {}}
           >
             <Add

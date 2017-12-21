@@ -125,7 +125,7 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
     if (iconNode) {
       return (
         <FixedGridRow gutterSize={GutterSize.SMALL}>
-          <FixedGridColumn fixed={true}>{iconNode}</FixedGridColumn>
+          <FixedGridColumn fixed={true} className="y-dropdown--option-icon">{iconNode}</FixedGridColumn>
           <FixedGridColumn className="y-dropdown--ellipsed-title">{textContent}</FixedGridColumn>
         </FixedGridRow>
       );

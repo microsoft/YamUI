@@ -13,7 +13,7 @@
 
 /* Chevron Icon */
 .y-dropdown .ms-Dropdown-caretDownWrapper {
-  top: .3rem;
+  top: .2rem;
   right: 1.1rem;
   height: 3.2rem;
   line-height: 3.4rem;
@@ -57,6 +57,10 @@
 .y-dropdown .ms-Dropdown-divider {
   background-color: $borderColor__secondary;
   margin-bottom: -1px;
+}
+
+.y-dropdown--option-icon {
+  padding-top: .1rem;
 }
 
 
