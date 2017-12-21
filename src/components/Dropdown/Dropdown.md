@@ -98,6 +98,48 @@ const options = [
 </div>
 ```
 
+With option templates, dividers and headers:
+
+```js { "props": { "data-example": "with templates dividers headers" } }
+const { GutterSize } = require('../Block');
+const { DropdownMenuItemType } = require('.');
+const AttachIcon = require('../Icon/icons/Attach').default;
+const GroupIcon = require('../Icon/icons/Group').default;
+const FlagIcon = require('../Icon/icons/Flag').default;
+const LockIcon = require('../Icon/icons/Lock').default;
+const PhoneIcon = require('../Icon/icons/Phone').default;
+const text = 'The quick brown fox jumped over the lazy dog.';
+
+const options = [
+  { key: 'section1', text: 'Icon, Label and Text', itemType: DropdownMenuItemType.Header},
+  { key: 'A', icon: GroupIcon, label: 'Group', text: 'Option A' },
+  { key: 'B', icon: PhoneIcon, label: 'Phone', text: 'Option B' },
+  { key: 'C', icon: AttachIcon, label: 'Attachment', text: `${text} ${text} ${text} ${text}` },
+  { key: 'divider1', text: 'Section', itemType: DropdownMenuItemType.Divider},
+  { key: 'section2', text: 'Label and Text', itemType: DropdownMenuItemType.Header},
+  { key: 'D', label: 'Group', text: 'Option D' },
+  { key: 'E', label: 'Group', text: 'Option E' },
+  { key: 'F', label: 'Group', text: `${text} ${text} ${text} ${text}` },
+  { key: 'divider2', text: 'Section', itemType: DropdownMenuItemType.Divider},
+  { key: 'section3', text: 'Plain Text', itemType: DropdownMenuItemType.Header},
+  { key: 'G', text: 'Option G' },
+  { key: 'H', text: 'Option H' },
+  { key: 'I', text: `${text} ${text} ${text} ${text}` },
+];
+
+<div>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    This <strong>Dropdown</strong> renders section headers and dividers, and uses icons and labels in options.
+  </Block>
+  <Dropdown
+    label="Please choose from the following options:"
+    placeHolder="Please select..."
+    options={options}
+    onChanged={action('dropdown changed')}
+  />
+</div>
+```
+
 In a grid:
 
 ```js { "props": { "data-example": "in grid" } }

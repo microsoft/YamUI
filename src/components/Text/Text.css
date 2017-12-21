@@ -29,9 +29,7 @@
 }
 
 .y-text__ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @extend ellipsis;
   vertical-align: -.4rem;
 }
 
