@@ -93,6 +93,19 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
+<Block
+  className="y-dropdown--item y-dropdown--header"
+  textSize="small"
+>
+  foo
+</Block>
+`;
+
+exports[`<Dropdown /> when onRenderTitle is called with an empty array renders as expected 1`] = `null`;
+
+exports[`<Dropdown /> when onRenderTitle is called with null returns the expected value 1`] = `null`;
+
 exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"

@@ -54,14 +54,8 @@ describe('<Dropdown />', () => {
   describe('option templates', () => {
     describe('with icon', () => {
       beforeEach(() => {
-        const options = [
-          { key: 'A', text: 'with icon', icon: AddIcon },
-        ];
-        fullComponent = mount(
-          <Dropdown
-            options={options}
-          />,
-        );
+        const options = [{ key: 'A', text: 'with icon', icon: AddIcon }];
+        fullComponent = mount(<Dropdown options={options} />);
         fullComponent.find('.ms-Dropdown').simulate('click');
       });
 
@@ -72,14 +66,8 @@ describe('<Dropdown />', () => {
 
     describe('with label', () => {
       beforeEach(() => {
-        const options = [
-          { key: 'A', text: 'with icon', label: 'label' },
-        ];
-        fullComponent = mount(
-          <Dropdown
-            options={options}
-          />,
-        );
+        const options = [{ key: 'A', text: 'with icon', label: 'label' }];
+        fullComponent = mount(<Dropdown options={options} />);
         fullComponent.find('.ms-Dropdown').simulate('click');
       });
 
@@ -94,11 +82,7 @@ describe('<Dropdown />', () => {
       const options = [
         { key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider },
       ];
-      fullComponent = mount(
-        <Dropdown
-          options={options}
-        />,
-      );
+      fullComponent = mount(<Dropdown options={options} />);
       fullComponent.find('.ms-Dropdown').simulate('click');
     });
 
@@ -109,14 +93,8 @@ describe('<Dropdown />', () => {
 
   describe('with section header', () => {
     beforeEach(() => {
-      const options = [
-        { key: 'header', text: 'header1', itemType: DropdownMenuItemType.Header },
-      ];
-      fullComponent = mount(
-        <Dropdown
-          options={options}
-        />,
-      );
+      const options = [{ key: 'header', text: 'header1', itemType: DropdownMenuItemType.Header }];
+      fullComponent = mount(<Dropdown options={options} />);
       fullComponent.find('.ms-Dropdown').simulate('click');
     });
 
@@ -149,12 +127,63 @@ describe('<Dropdown />', () => {
 
       beforeEach(() => {
         fabricDropdown = component.find(FabricDropdown);
-        fabricDropdown.prop<Function>('onChanged')(options[1]);
+        fabricDropdown.simulate('changed', options[1]);
       });
 
       it('triggers the onChanged callback with key', () => {
         expect(callback).toHaveBeenCalledWith(options[1].key);
       });
+    });
+  });
+
+  describe('when onRenderTitle is called with null', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle(undefined);
+      }
+    });
+
+    it('returns the expected value', () => {
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('when onRenderTitle is called with an empty array', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle([]);
+      }
+    });
+
+    it('renders as expected', () => {
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('when onRenderTitle is called with an array of items', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle([
+          { itemType: DropdownMenuItemType.Header, key: '1', text: 'foo' },
+          { key: '2', text: 'bar' },
+        ]);
+      }
+    });
+
+    it('renders as expected', () => {
+      expect(result).toMatchSnapshot();
     });
   });
 });
