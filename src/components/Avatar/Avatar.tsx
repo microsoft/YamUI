@@ -44,12 +44,17 @@ export interface AvatarProps extends BaseComponentProps {
    */
   imageUrl?: string;
 
-
   /**
    * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px.
    * @default AvatarSize.MEDIUM
    */
   size?: AvatarSize;
+
+  /**
+   * Will hide the image until it has loaded, then fade it in.
+   * @default false
+   */
+  imageShouldFadeIn?: boolean;
 }
 
 /**
@@ -62,7 +67,7 @@ export default class Avatar extends React.Component<AvatarProps, {}> {
   };
 
   render() {
-    const { badgeContent, imageUrl, name, size } = this.props;
+    const { badgeContent, imageUrl, name, size, imageShouldFadeIn } = this.props;
     const personaSize = SizeMap[size as string];
 
     const badge = badgeContent && (
@@ -78,6 +83,7 @@ export default class Avatar extends React.Component<AvatarProps, {}> {
           size={personaSize}
           hidePersonaDetails={true}
           primaryText={name}
+          imageShouldFadeIn={imageShouldFadeIn}
         />
         {badge}
         <ScreenreaderText>{this.getAccessibleText()}</ScreenreaderText>
