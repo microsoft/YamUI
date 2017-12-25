@@ -1,8 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import {
-  NestableBaseComponentProps as MediaObjectExtraProps,
-} from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps as MediaObjectExtraProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Text, { TextColor } from '../Text';
 
@@ -13,7 +11,7 @@ export default class MediaObjectExtra extends React.Component<MediaObjectExtraPr
     const { children } = this.props;
 
     return (
-      <Block className="y-media-object--extra" textSize={TextSize.SMALL} push={4}>
+      <Block className="y-media-object--extra" textSize={TextSize.SMALL} push={4} ellipsis={true}>
         <Text color={TextColor.METADATA}>{children}</Text>
       </Block>
     );

@@ -27,6 +27,7 @@ export default class MediaObjectMetadata extends React.Component<MediaObjectMeta
         className="y-media-object--metadata"
         textSize={TextSize.SMALL}
         push={BlockPushMap[size]}
+        ellipsis={true}
       >
         <Text color={TextColor.METADATA}>{children}</Text>
       </Block>
