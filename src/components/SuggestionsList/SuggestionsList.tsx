@@ -8,12 +8,13 @@ import Text, { TextSize, TextColor } from '../Text';
 import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
+import { IPoint } from 'office-ui-fabric-react/lib/utilities/positioning';
 
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * The target that the Callout should try to position itself based on.
    */
-  target: HTMLElement;
+  target:  HTMLElement | IPoint;
   /**
    * The active search that produced the current state.
    */
