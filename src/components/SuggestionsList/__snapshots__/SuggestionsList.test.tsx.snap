@@ -14,7 +14,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem
@@ -55,7 +55,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem
@@ -90,7 +90,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem
@@ -148,7 +148,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem
@@ -196,7 +196,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem
@@ -238,7 +238,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
   >
     <li>
       <ul
-        onMouseOut={[Function]}
+        onMouseLeave={[Function]}
       >
         <li>
           <SuggestionsListItem

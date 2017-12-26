@@ -120,7 +120,7 @@ export default class SuggestionsList extends React.PureComponent<
     const items = group.items.map(this.getResultItem);
     return (
       <li key={group.title}>
-        <ul onMouseOut={this.onMouseOut}>{items}</ul>
+        <ul onMouseLeave={this.onMouseLeave}>{items}</ul>
       </li>
     );
   }
@@ -164,5 +164,5 @@ export default class SuggestionsList extends React.PureComponent<
 
   private onHover = (hoveredId: string | number) => this.setState({ hoveredId });
 
-  private onMouseOut = () => this.setState({ hoveredId: null });
+  private onMouseLeave = () => this.setState({ hoveredId: null });
 }
