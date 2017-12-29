@@ -49,6 +49,59 @@ const avatar = (size) => (
 </div>
 ```
 
+With long text:
+
+```js { "props": { "data-example": "with long text" } }
+const { AvatarSize } = require('../Avatar');
+const { MediaObjectSize } = require('.');
+
+const name = 'Hubert Blaine Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz';
+const title = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt';
+const status = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque';
+
+const avatar = (size) => (
+  <Avatar imageUrl={user.imageUrl} name={user.name} size={size} />
+);
+
+<div>
+  <MediaObject
+    size={MediaObjectSize.XLARGE}
+    imageContent={avatar(AvatarSize.XLARGE)}
+    titleContent={name}
+    metadataContent={title}
+    extraContent={status}
+  />
+  <MediaObject
+    size={MediaObjectSize.LARGE}
+    imageContent={avatar(AvatarSize.LARGE)}
+    titleContent={name}
+    metadataContent={title}
+    extraContent={status}
+  />
+  <MediaObject
+    size={MediaObjectSize.MEDIUM}
+    imageContent={avatar(AvatarSize.MEDIUM)}
+    titleContent={name}
+    metadataContent={title}
+    extraContent={status}
+  />
+  <MediaObject
+    size={MediaObjectSize.SMALL}
+    imageContent={avatar(AvatarSize.SMALL)}
+    titleContent={name}
+    metadataContent={title}
+    extraContent={status}
+  />
+  <MediaObject
+    size={MediaObjectSize.XSMALL}
+    imageContent={avatar(AvatarSize.XSMALL)}
+    titleContent={name}
+    metadataContent={title}
+    extraContent={status}
+  />
+</div>
+```
+
 With image:
 
 ```js { "props": { "data-example": "with image" } }
