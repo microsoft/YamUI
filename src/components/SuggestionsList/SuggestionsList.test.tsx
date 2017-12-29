@@ -99,7 +99,7 @@ describe('<SuggestionsList />', () => {
             rendered
               .find('ul')
               .at(1)
-              .simulate('mouseOut');
+              .simulate('mouseLeave');
           });
 
           it('renders as expected', () => {
@@ -177,7 +177,7 @@ describe('<SuggestionsList />', () => {
             rendered
               .find('ul')
               .at(1)
-              .simulate('mouseOut');
+              .simulate('mouseLeave');
           });
 
           it('renders as expected', () => {

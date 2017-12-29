@@ -8,12 +8,13 @@ import Text, { TextSize, TextColor } from '../Text';
 import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
+import { IPoint } from 'office-ui-fabric-react/lib/utilities/positioning';
 
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * The target that the Callout should try to position itself based on.
    */
-  target: HTMLElement;
+  target:  HTMLElement | IPoint;
   /**
    * The active search that produced the current state.
    */
@@ -119,7 +120,7 @@ export default class SuggestionsList extends React.PureComponent<
     const items = group.items.map(this.getResultItem);
     return (
       <li key={group.title}>
-        <ul onMouseOut={this.onMouseOut}>{items}</ul>
+        <ul onMouseLeave={this.onMouseLeave}>{items}</ul>
       </li>
     );
   }
@@ -163,5 +164,5 @@ export default class SuggestionsList extends React.PureComponent<
 
   private onHover = (hoveredId: string | number) => this.setState({ hoveredId });
 
-  private onMouseOut = () => this.setState({ hoveredId: null });
+  private onMouseLeave = () => this.setState({ hoveredId: null });
 }
