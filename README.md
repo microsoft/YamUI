@@ -59,7 +59,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Starting up the dev server
 
-* `npm run start:dev` and visit [localhost:5555](http://localhost:5555/)
+* `npm run start` and visit [localhost:5555](http://localhost:5555/)
 
 ### Building some components
 
@@ -69,7 +69,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Writing unit tests
 
-* `npm run start:test` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
+* `npm run watch:jest` will start Jest in watch mode, showing passing status and a coverage report. The CLI task remains active and will re-test automatically as you make changes.
 
 ### Running visual diff regression tests
 
