@@ -2,27 +2,33 @@
 
 exports[`<LayoutList /> as horizontal list with additional className matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal TEST_CLASSNAME"
+  className="y-layoutList y-layoutList__horizontal TEST_CLASSNAME y-layoutList__align-left y-layoutList__gutterSize-xSmall"
 />
 `;
 
 exports[`<LayoutList /> as horizontal list with align "right" matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal y-layoutList__align-right"
+  className="y-layoutList y-layoutList__horizontal y-layoutList__align-right y-layoutList__gutterSize-xSmall"
 />
 `;
 
 exports[`<LayoutList /> as horizontal list with child content matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal"
+  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-xSmall"
 >
   list content
 </ul>
 `;
 
+exports[`<LayoutList /> as horizontal list with gutterSize matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-large"
+/>
+`;
+
 exports[`<LayoutList /> as horizontal list without props matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal"
+  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-xSmall"
 />
 `;
 

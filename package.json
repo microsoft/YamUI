@@ -2,7 +2,7 @@
   "name": "yamui",
   "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "dependencies": {
@@ -31,7 +31,7 @@
     "glob": "=7.1.2",
     "htmltojsx": "=0.3.0",
     "identity-obj-proxy": "=3.0.0",
-    "jest": "=20.0.4",
+    "jest": "=22.0.4",
     "jest-serializer-enzyme": "=1.0.0",
     "jsdom": "=11.5.1",
     "lodash": "=4.17.4",
