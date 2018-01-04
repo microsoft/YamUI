@@ -68,7 +68,17 @@ describe('<Block />', () => {
     });
   });
 
-  describe('with spacing', () => {
+  describe('with top spacing', () => {
+    beforeEach(() => {
+      component = shallow(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with bottom spacing', () => {
     beforeEach(() => {
       component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
