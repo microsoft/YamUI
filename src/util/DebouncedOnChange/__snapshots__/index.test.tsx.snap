@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BaseTextField /> with default options matches its snapshot 1`] = `
+<class_1
+  debouncedOnChangeTime={700}
+>
+  <TestComponent
+    debouncedOnChangeTime={700}
+    unifiedOnChange={[Function]}
+  >
+    <InnerComponent
+      onChange={[Function]}
+    >
+      <input
+        onChange={[Function]}
+      />
+    </InnerComponent>
+  </TestComponent>
+</class_1>
+`;

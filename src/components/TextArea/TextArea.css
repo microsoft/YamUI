@@ -1,51 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
-@import "src/css/variables/fonts.css";
-
-// work is in progress to set styling/theme options for all Fabric label instances
-.y-text-field .ms-Label {
-  @extend text__mediumSub;
-  font-weight: $fontWeight__bold;
-  color: $textColor__secondary;
-  padding-bottom: .4rem;
-}
-
-.y-text-field .ms-TextField-fieldGroup {
-  line-height: 3.3rem;
-  height: 3.6rem;
-  border-radius: 1px;
-}
-
-.y-text-field .ms-TextField-field {
-  @extend text__mediumSub;
-  color: $textColor;
-  padding: 0 .8rem;
-}
+@import "src/css/base-text-field.css";
 
 .y-text-field.ms-TextField--multiline .ms-TextField-field {
-  padding-top: 10px;
-  padding-bottom: 7px;
-}
-
-.y-text-field.is-disabled .ms-TextField-field {
-  color: $textColor__disabled;
-}
-
-.y-text-field .ms-TextField-description {
-  @extend text__small;
-  color: $textColor__metadata;
-  position: relative;
-  top: -1px;
-}
-
-.y-text-field .ms-TextField-errorMessage {
-  @extend text__small;
-  color: $textColor__error;
-  padding-top: 2px;
-}
-
-/* Hide the asterisk that comes with required=true */
-.y-text-field .ms-Label::after,
-.y-text-field .ms-TextField-fieldGroup::after {
-  display: none;
+  padding-top: 1.0rem;
+  padding-bottom: .7rem;
 }
