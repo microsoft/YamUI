@@ -25,7 +25,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
@@ -66,7 +66,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
@@ -101,7 +101,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
@@ -159,7 +159,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
@@ -207,7 +207,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
@@ -249,7 +249,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
             isSelected={false}
             name="name"
             onHover={[Function]}
-            onSelect={[Function]}
+            onSelect={[MockFunction]}
             searchText="searchText"
           />
         </li>
