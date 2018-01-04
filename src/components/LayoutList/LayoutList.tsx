@@ -3,7 +3,10 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
+import { GutterSize } from '../FixedGrid';
 import './LayoutList.css';
+
+export { GutterSize };
 
 export interface BaseLayoutListProps extends NestableBaseComponentProps {
   /**
@@ -18,6 +21,12 @@ export interface HorizontalListProps extends BaseLayoutListProps {
    * @default 'left'
    */
   align?: 'left' | 'right';
+
+  /**
+   * Amount of spacing between horizontal list items. Defaults to 4px.
+   * @default GutterSize.XSMALL
+   */
+  gutterSize?: GutterSize;
 
   direction: 'horizontal';
 }
@@ -37,8 +46,11 @@ export default class LayoutList extends React.Component<LayoutListProps, {}> {
   private getClasses() {
     const { className, direction } = this.props;
     const classes = ['y-layoutList', `y-layoutList__${direction}`, className];
-    if ((this.props as HorizontalListProps).align === 'right') {
-      classes.push('y-layoutList__align-right');
+
+    if (direction === 'horizontal') {
+      const { align = 'left', gutterSize = GutterSize.XSMALL } = this.props as HorizontalListProps;
+      classes.push(`y-layoutList__align-${align}`);
+      classes.push(`y-layoutList__gutterSize-${gutterSize}`);
     }
 
     return join(classes);
