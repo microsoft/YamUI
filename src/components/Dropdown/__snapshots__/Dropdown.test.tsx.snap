@@ -1,12 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
+<div
+  className="y-block y-textSize-mediumSub y-dropdown--item"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    <FixedGridRow
+      gutterSize="small"
+    >
+      <div
+        className="y-fixedGridRow y-fixedGridRow__gutter-small"
+      >
+        <FixedGridColumn
+          className="y-dropdown--option-icon"
+          fixed={true}
+        >
+          <div
+            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
+            style={Object {}}
+          >
+            <Add
+              block={true}
+              size="16"
+            >
+              <svg
+                className="y-icon y-icon__isBlock"
+                style={
+                  Object {
+                    "height": "16px",
+                    "width": "16px",
+                  }
+                }
+                viewBox="0 0 240 240"
+              >
+                <path
+                  d="M240 112.5v15H127.5V240h-15V127.5H0v-15h112.5V0h15v112.5z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Add>
+          </div>
+        </FixedGridColumn>
+        <FixedGridColumn
+          className="y-dropdown--ellipsed-title"
+        >
+          <div
+            className="y-fixedGridColumn y-dropdown--ellipsed-title"
+            style={Object {}}
+          >
+            <span>
+              with icon
+            </span>
+          </div>
+        </FixedGridColumn>
+      </div>
+    </FixedGridRow>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
+<div
+  className="y-block y-textSize-mediumSub y-dropdown--item"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    <div
+      className="y-dropdown--ellipsed-title"
+    >
+      <span>
+        <Text
+          bold={true}
+        >
+          <span
+            className="y-text y-text__bold"
+            style={Object {}}
+          >
+            label
+            :
+          </span>
+        </Text>
+         
+        with icon
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
+<Block
+  className="y-dropdown--item y-dropdown--header"
+  textSize="small"
+>
+  foo
+</Block>
+`;
+
+exports[`<Dropdown /> when onRenderTitle is called with an empty array renders as expected 1`] = `null`;
+
+exports[`<Dropdown /> when onRenderTitle is called with null returns the expected value 1`] = `null`;
+
 exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderPlaceHolder={[Function]}
+    onRenderTitle={[Function]}
     options={Array []}
   />
 </div>
@@ -17,16 +133,36 @@ exports[`<Dropdown /> with all props matches its snapshot 1`] = `
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     label="TEST_LABEL"
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderPlaceHolder={[Function]}
+    onRenderTitle={[Function]}
     options={
       Array [
         Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
           "key": "A",
           "text": "Option a",
         },
         Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
           "key": "B",
           "text": "Option b",
         },
@@ -43,9 +179,34 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
   className="y-dropdown"
 >
   <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
     onChanged={[Function]}
     onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderPlaceHolder={[Function]}
+    onRenderTitle={[Function]}
     options={Array []}
   />
+</div>
+`;
+
+exports[`<Dropdown /> with divider matches its snapshot 1`] = `null`;
+
+exports[`<Dropdown /> with section header matches its snapshot 1`] = `
+<div
+  className="y-block y-textSize-small y-dropdown--item y-dropdown--header"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    header1
+  </div>
 </div>
 `;

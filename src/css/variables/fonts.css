@@ -98,3 +98,9 @@ $fontWeight__bold: 600;
   font-weight: $fontWeight__bold;
   margin-bottom: $gutterWidth__small;
 }
+
+@define-extend ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

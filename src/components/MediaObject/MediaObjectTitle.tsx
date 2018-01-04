@@ -34,6 +34,7 @@ export default class MediaObjectTitle extends React.Component<MediaObjectTitlePr
         className="y-media-object--title"
         push={BlockPushMap[size]}
         textSize={TextSizeMap[size] as TextSize}
+        ellipsis={true}
       >
         <Text color={TextColor.PRIMARY}>{children}</Text>
       </Block>

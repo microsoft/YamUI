@@ -65,7 +65,7 @@ describe('<Icon />', () => {
   describe('total number of Icons', () => {
     const totalIcons = Object.keys(allExportedIcons).length;
     it('is correct', () => {
-      expect(totalIcons).toBe(112);
+      expect(totalIcons).toBe(113);
     });
   });
 

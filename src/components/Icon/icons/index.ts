@@ -43,6 +43,7 @@ export { default as DynamicGroup } from './DynamicGroup';
 export { default as Edit } from './Edit';
 export { default as Embed } from './Embed';
 export { default as EMI } from './EMI';
+export { default as EngineeringGroup } from './EngineeringGroup';
 export { default as FabricFolder } from './FabricFolder';
 export { default as FavoriteStar } from './FavoriteStar';
 export { default as FavoriteStarFill } from './FavoriteStarFill';

@@ -5,7 +5,8 @@ import {
   Dropdown as FabricDropdown,
   IDropdownProps,
 } from 'office-ui-fabric-react/lib/components/Dropdown';
-import Dropdown, { DropdownProps } from '.';
+import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
+import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
   let component: ShallowWrapper<DropdownProps, {}>;
@@ -50,6 +51,58 @@ describe('<Dropdown />', () => {
     });
   });
 
+  describe('option templates', () => {
+    describe('with icon', () => {
+      beforeEach(() => {
+        const options = [{ key: 'A', text: 'with icon', icon: AddIcon }];
+        fullComponent = mount(<Dropdown options={options} />);
+        fullComponent.find('.ms-Dropdown').simulate('click');
+      });
+
+      it('matches its snapshot', () => {
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+      });
+    });
+
+    describe('with label', () => {
+      beforeEach(() => {
+        const options = [{ key: 'A', text: 'with icon', label: 'label' }];
+        fullComponent = mount(<Dropdown options={options} />);
+        fullComponent.find('.ms-Dropdown').simulate('click');
+      });
+
+      it('matches its snapshot', () => {
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('with divider', () => {
+    beforeEach(() => {
+      const options = [
+        { key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider },
+      ];
+      fullComponent = mount(<Dropdown options={options} />);
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+    });
+  });
+
+  describe('with section header', () => {
+    beforeEach(() => {
+      const options = [{ key: 'header', text: 'header1', itemType: DropdownMenuItemType.Header }];
+      fullComponent = mount(<Dropdown options={options} />);
+      fullComponent.find('.ms-Dropdown').simulate('click');
+    });
+
+    it('matches its snapshot', () => {
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+    });
+  });
+
   describe('when fully rendered', () => {
     beforeEach(() => {
       fullComponent = mount(<Dropdown options={[]} />);
@@ -74,12 +127,63 @@ describe('<Dropdown />', () => {
 
       beforeEach(() => {
         fabricDropdown = component.find(FabricDropdown);
-        fabricDropdown.prop<Function>('onChanged')(options[1]);
+        fabricDropdown.simulate('changed', options[1]);
       });
 
       it('triggers the onChanged callback with key', () => {
         expect(callback).toHaveBeenCalledWith(options[1].key);
       });
+    });
+  });
+
+  describe('when onRenderTitle is called with null', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle(undefined);
+      }
+    });
+
+    it('returns the expected value', () => {
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('when onRenderTitle is called with an empty array', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle([]);
+      }
+    });
+
+    it('renders as expected', () => {
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('when onRenderTitle is called with an array of items', () => {
+    let result: React.ReactNode | null;
+
+    beforeEach(() => {
+      const fabricDropdown = component.find(FabricDropdown);
+      const onRenderTitle = fabricDropdown.prop('onRenderTitle');
+      if (onRenderTitle) {
+        result = onRenderTitle([
+          { itemType: DropdownMenuItemType.Header, key: '1', text: 'foo' },
+          { key: '2', text: 'bar' },
+        ]);
+      }
+    });
+
+    it('renders as expected', () => {
+      expect(result).toMatchSnapshot();
     });
   });
 });

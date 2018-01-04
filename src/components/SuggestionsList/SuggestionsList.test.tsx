@@ -1,11 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import {
-  default as SuggestionsList,
-  SuggestionsListProps,
-  SuggestionsListState,
-} from './SuggestionsList';
+import { default as SuggestionsList, SuggestionsListProps, SuggestionsListState } from '.';
 
 describe('<SuggestionsList />', () => {
   let rendered: ShallowWrapper<SuggestionsListProps, SuggestionsListState>;
@@ -103,7 +99,7 @@ describe('<SuggestionsList />', () => {
             rendered
               .find('ul')
               .at(1)
-              .simulate('mouseOut');
+              .simulate('mouseLeave');
           });
 
           it('renders as expected', () => {
@@ -181,7 +177,7 @@ describe('<SuggestionsList />', () => {
             rendered
               .find('ul')
               .at(1)
-              .simulate('mouseOut');
+              .simulate('mouseLeave');
           });
 
           it('renders as expected', () => {
