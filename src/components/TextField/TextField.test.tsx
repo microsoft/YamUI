@@ -31,10 +31,10 @@ describe('<TextField />', () => {
           required={true}
           errorMessage="ERROR MESSAGE"
           placeHolder="PLACEHOLDER"
-          onFocus={jest.fn(_ => 'onFocus')}
-          onBlur={jest.fn()}
-          onMouseEnter={jest.fn()}
-          onMouseLeave={jest.fn()}
+          onFocus={jest.fn().mockName('onFocus')}
+          onBlur={jest.fn().mockName('onBlur')}
+          onMouseEnter={jest.fn().mockName('onMouseEnter')}
+          onMouseLeave={jest.fn().mockName('onMouseLeave')}
         />,
       ).dive().dive();
     });
