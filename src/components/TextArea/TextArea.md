@@ -9,7 +9,7 @@ Basic
 ```
 
 With a description
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-example": "withDescription" } }
 <TextArea
   value="This multiline has fixed height so scrollbars may appear."
   rows={3}

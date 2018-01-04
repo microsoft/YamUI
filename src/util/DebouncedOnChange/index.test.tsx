@@ -69,7 +69,7 @@ describe('<BaseTextField />', () => {
       );
     });
 
-    describe('when a change in made', () => {
+    describe('when a change is made', () => {
       beforeEach(() => {
         const innerComponentWrapper = component.find('input');
         innerComponentWrapper.prop<Function>('onChange')('new value');
