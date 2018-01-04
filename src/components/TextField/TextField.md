@@ -92,9 +92,10 @@ class ControlledTextField extends React.Component {
   render() {
     return (
       <TextField
-        value = {this.state.value}
+        value={this.state.value}
+        debouncedOnChange={(value) => action('textfield changed (debounced)')(value)}
         debouncedOnChangeTime={700}
-        debouncedOnChange={this.handleChange}
+        onChange={this.handleChange}
       />
     );
   }
