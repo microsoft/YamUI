@@ -41,6 +41,62 @@ const { ButtonColor } = require('../Button');
 </LayoutList>
 ```
 
+Horizontal list with different gutter sizes:
+
+```js { "props": { "data-example": "horizontal-guttersizes" } }
+const { ButtonColor } = require('../Button');
+const { GutterSize } = require('.');
+
+const items = [1, 2, 3].map((num) =>
+  <LayoutListItem><Button text={num} key={num} /></LayoutListItem>
+);
+
+<div>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    None
+    <LayoutList direction="horizontal" gutterSize={GutterSize.NONE}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    XSmall (default)
+    <LayoutList direction="horizontal" gutterSize={GutterSize.XSMALL}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    Small
+    <LayoutList direction="horizontal" gutterSize={GutterSize.SMALL}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    Medium
+    <LayoutList direction="horizontal" gutterSize={GutterSize.MEDIUM}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    Large
+    <LayoutList direction="horizontal" gutterSize={GutterSize.LARGE}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    XLarge
+    <LayoutList direction="horizontal" gutterSize={GutterSize.XLARGE}>
+      {items}
+    </LayoutList>
+  </Block>
+  <Block bottomSpacing={GutterSize.LARGE}>
+    XXLarge
+    <LayoutList direction="horizontal" gutterSize={GutterSize.XXLARGE}>
+      {items}
+    </LayoutList>
+  </Block>
+</div>
+```
+
 Vertical list of users:
 
 ```js { "props": { "data-example": "vertical" } }
