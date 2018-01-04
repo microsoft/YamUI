@@ -22,12 +22,12 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=false rend
         <span />,
         <span
           className="y-suggestions-list-item--highlight"
-      >
+        >
           Joh
-      </span>,
+        </span>,
         <span>
           n Smith
-      </span>,
+        </span>,
       ]
     }
   />
@@ -56,12 +56,12 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=true rende
         <span />,
         <span
           className="y-suggestions-list-item--highlight"
-      >
+        >
           Joh
-      </span>,
+        </span>,
         <span>
           n Smith
-      </span>,
+        </span>,
       ]
     }
   />
@@ -90,12 +90,12 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=false rende
         <span />,
         <span
           className="y-suggestions-list-item--highlight"
-      >
+        >
           Joh
-      </span>,
+        </span>,
         <span>
           n Smith
-      </span>,
+        </span>,
       ]
     }
   />
@@ -124,12 +124,12 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=true render
         <span />,
         <span
           className="y-suggestions-list-item--highlight"
-      >
+        >
           Joh
-      </span>,
+        </span>,
         <span>
           n Smith
-      </span>,
+        </span>,
       ]
     }
   />
