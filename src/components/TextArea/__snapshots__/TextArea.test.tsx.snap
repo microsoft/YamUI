@@ -1,7 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextArea /> with all options matches its snapshot 1`] = `"<div class=\\"ms-TextField root_39f73b2a y-base-text-field y-text-area CLASS is-required rootIsRequiredLabel_39f73b2a is-disabled rootIsDisabled_39f73b2a ms-TextField--multiline rootIsMultiline_39f73b2a\\"><div class=\\"ms-TextField-wrapper wrapper_39f73b2a\\"><label for=\\"TextField2\\" class=\\"ms-Label root-33\\">LABEL</label><div class=\\"ms-TextField-fieldGroup fieldGroup_39f73b2a invalid_39f73b2a\\"><textarea id=\\"TextField2\\" class=\\"ms-TextField-field ms-TextField-field--unresizable field_39f73b2a fieldIsUnresizable_39f73b2a\\" rows=\\"2\\" disabled=\\"\\" required=\\"\\" placeholder=\\"PLACEHOLDER\\" aria-describedby=\\"TextFieldDescription3\\" aria-invalid=\\"false\\" style=\\"height: 2px;\\">VALUE</textarea></div></div><span id=\\"TextFieldDescription3\\"><div><!-- react-empty: 8 --></div></span></div>"`;
+exports[`<TextArea /> with all options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={true}
+  borderless={false}
+  className="y-base-text-field y-text-area CLASS"
+  deferredValidationTime={200}
+  disabled={true}
+  errorMessage="ERROR MESSAGE"
+  label="LABEL"
+  multiline={true}
+  onBeforeChange={[Function]}
+  onBlur={[Function]}
+  onChanged={[Function]}
+  onFocus={[Function]}
+  onGetErrorMessage={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNotifyValidationResult={[Function]}
+  placeholder="PLACEHOLDER"
+  required={true}
+  resizable={false}
+  rows={2}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+  value="VALUE"
+/>
+`;
 
-exports[`<TextArea /> with default options matches its snapshot 1`] = `"<div class=\\"ms-TextField root_39f73b2a y-base-text-field y-text-area ms-TextField--multiline rootIsMultiline_39f73b2a\\"><div class=\\"ms-TextField-wrapper wrapper_39f73b2a\\"><div class=\\"ms-TextField-fieldGroup fieldGroup_39f73b2a\\"><textarea id=\\"TextField0\\" class=\\"ms-TextField-field ms-TextField-field--unresizable field_39f73b2a fieldIsUnresizable_39f73b2a\\" aria-invalid=\\"false\\"></textarea></div></div></div>"`;
+exports[`<TextArea /> with default options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-base-text-field y-text-area"
+  deferredValidationTime={200}
+  errorMessage=""
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;
 
-exports[`<TextArea /> with description and no error matches its snapshot 1`] = `"<div class=\\"ms-TextField root_39f73b2a y-base-text-field y-text-area ms-TextField--multiline rootIsMultiline_39f73b2a\\"><div class=\\"ms-TextField-wrapper wrapper_39f73b2a\\"><div class=\\"ms-TextField-fieldGroup fieldGroup_39f73b2a\\"><textarea id=\\"TextField4\\" class=\\"ms-TextField-field ms-TextField-field--unresizable field_39f73b2a fieldIsUnresizable_39f73b2a\\" aria-describedby=\\"TextFieldDescription5\\" aria-invalid=\\"false\\"></textarea></div></div><span id=\\"TextFieldDescription5\\"><span class=\\"ms-TextField-description description_39f73b2a\\">DESCRIPTION</span><!-- react-text: 7 --><!-- /react-text --></span></div>"`;
+exports[`<TextArea /> with description and no error matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-base-text-field y-text-area"
+  deferredValidationTime={200}
+  description="DESCRIPTION"
+  errorMessage=""
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;

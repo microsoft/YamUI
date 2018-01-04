@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField /> with all options matches its snapshot 1`] = `"<div class=\\"ms-TextField root_39f73b2a y-base-text-field y-text-field CLASS y-text-field--with-prefix y-text-field--with-suffix is-required rootIsRequiredLabel_39f73b2a is-disabled rootIsDisabled_39f73b2a ms-TextField--underlined rootIsUnderlined_39f73b2a\\"><div class=\\"ms-TextField-wrapper wrapper_39f73b2a invalid_39f73b2a\\"><label for=\\"TextField2\\" class=\\"ms-Label root-33\\">LABEL</label><div class=\\"ms-TextField-fieldGroup fieldGroup_39f73b2a invalid_39f73b2a\\"><div class=\\"ms-TextField-prefix fieldPrefixSuffix_39f73b2a\\"><span style=\\"padding-bottom: 1px;\\">PREFIX</span></div><input type=\\"text\\" id=\\"TextField2\\" class=\\"ms-TextField-field field_39f73b2a\\" value=\\"VALUE\\" disabled=\\"\\" required=\\"\\" placeholder=\\"PLACEHOLDER\\" aria-describedby=\\"TextFieldDescription3\\" aria-invalid=\\"false\\"><div class=\\"ms-TextField-suffix fieldPrefixSuffix_39f73b2a\\"><span style=\\"padding-bottom: 1px;\\">SUFFIX</span></div></div></div><span id=\\"TextFieldDescription3\\"><div><!-- react-empty: 12 --></div></span></div>"`;
+exports[`<TextField /> with all options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-base-text-field y-text-field CLASS y-text-field--with-prefix y-text-field--with-suffix"
+  deferredValidationTime={200}
+  disabled={true}
+  errorMessage="ERROR MESSAGE"
+  label="LABEL"
+  multiline={false}
+  onBeforeChange={[Function]}
+  onBlur={[Function]}
+  onChanged={[Function]}
+  onFocus={[Function]}
+  onGetErrorMessage={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onNotifyValidationResult={[Function]}
+  placeholder="PLACEHOLDER"
+  prefix="PREFIX"
+  required={true}
+  resizable={true}
+  suffix="SUFFIX"
+  underlined={true}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+  value="VALUE"
+/>
+`;
 
-exports[`<TextField /> with default options matches its snapshot 1`] = `"<div class=\\"ms-TextField root_39f73b2a y-base-text-field y-text-field\\"><div class=\\"ms-TextField-wrapper wrapper_39f73b2a\\"><div class=\\"ms-TextField-fieldGroup fieldGroup_39f73b2a\\"><input type=\\"text\\" id=\\"TextField0\\" class=\\"ms-TextField-field field_39f73b2a\\" value=\\"\\" aria-invalid=\\"false\\"></div></div></div>"`;
+exports[`<TextField /> with default options matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-base-text-field y-text-field"
+  deferredValidationTime={200}
+  errorMessage=""
+  multiline={false}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={true}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;

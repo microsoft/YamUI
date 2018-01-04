@@ -1,24 +1,24 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { mount } from 'enzyme';
-import TextArea from '.';
+import { shallow, ShallowWrapper } from 'enzyme';
+import TextArea, { TextAreaProps } from '.';
 
 describe('<TextArea />', () => {
-  let componentHtml: string;
+  let component: ShallowWrapper<TextAreaProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      componentHtml = mount(<TextArea />).html();
+      component = shallow(<TextArea />).dive().dive();
     });
 
     it('matches its snapshot', () => {
-      expect(componentHtml).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with all options', () => {
     beforeEach(() => {
-      componentHtml = mount(
+      component = shallow(
         <TextArea
           rows={2}
           autoAdjustHeight={true}
@@ -35,25 +35,25 @@ describe('<TextArea />', () => {
           onMouseEnter={jest.fn()}
           onMouseLeave={jest.fn()}
         />,
-      ).html();
+      ).dive().dive();
     });
 
     it('matches its snapshot', () => {
-      expect(componentHtml).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with description and no error', () => {
     beforeEach(() => {
-      componentHtml = mount(
+      component = shallow(
         <TextArea
           description="DESCRIPTION"
         />,
-      ).html();
+      ).dive().dive();
     });
 
     it('matches its snapshot', () => {
-      expect(componentHtml).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 });

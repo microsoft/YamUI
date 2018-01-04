@@ -1,24 +1,24 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { mount } from 'enzyme';
-import TextField from '.';
+import { shallow, ShallowWrapper } from 'enzyme';
+import TextField, { TextFieldProps } from '.';
 
 describe('<TextField />', () => {
-  let componentHtml: string;
+  let component: ShallowWrapper<TextFieldProps, {}>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      componentHtml = mount(<TextField />).html();
+      component = shallow(<TextField />).dive().dive();
     });
 
     it('matches its snapshot', () => {
-      expect(componentHtml).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with all options', () => {
     beforeEach(() => {
-      componentHtml = mount(
+      component = shallow(
         <TextField
           prefix="PREFIX"
           suffix="SUFFIX"
@@ -31,16 +31,16 @@ describe('<TextField />', () => {
           required={true}
           errorMessage="ERROR MESSAGE"
           placeHolder="PLACEHOLDER"
-          onFocus={jest.fn()}
+          onFocus={jest.fn(_ => 'onFocus')}
           onBlur={jest.fn()}
           onMouseEnter={jest.fn()}
           onMouseLeave={jest.fn()}
         />,
-      ).html();
+      ).dive().dive();
     });
 
     it('matches its snapshot', () => {
-      expect(componentHtml).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 });
