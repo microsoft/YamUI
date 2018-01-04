@@ -9,7 +9,7 @@
   z-index: 1000;
 }
 
-.y-tooltip .ms-Tooltip-content {
+.y-tooltip--callout .ms-Tooltip-content {
   @extend text__small;
   color: $textColor__white;
 }

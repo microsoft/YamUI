@@ -5,8 +5,6 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
-      "doNotLayer": true,
-      "preventDismissOnScroll": true,
     }
   }
   className="y-tooltip--callout"
@@ -21,8 +19,6 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
-      "doNotLayer": true,
-      "preventDismissOnScroll": true,
     }
   }
   className="y-tooltip--callout"
@@ -39,8 +35,6 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
-      "doNotLayer": true,
-      "preventDismissOnScroll": true,
     }
   }
   className="y-tooltip--callout"
