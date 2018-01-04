@@ -3,7 +3,7 @@
 Basic
 ```js { "props": { "data-example": "basic" } }
 <TextArea
-  value="This multiline has fixed height so scrollbars may appear."
+  value="This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear."
   rows={3}
 />
 ```
@@ -12,7 +12,7 @@ With a description
 ```js { "props": { "data-example": "basic" } }
 <TextArea
   value="This multiline has fixed height so scrollbars may appear."
-  rows={3} 
+  rows={3}
   description="Small hint goes here"
 />
 ```
@@ -20,7 +20,7 @@ With a description
 Auto-adjust Height
 ```js { "props": { "data-example": "autoAdjustHeight" } }
 <TextArea
-  value="This multiline auto grows."
+  value="This multiline auto grows. This multiline auto grows.  This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows."
   autoAdjustHeight={true}
   rows={1}
 />

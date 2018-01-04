@@ -20,9 +20,9 @@ describe('<TextArea />', () => {
     beforeEach(() => {
       componentHtml = mount(
         <TextArea
-          className="CLASS"
           rows={2}
           autoAdjustHeight={true}
+          className="CLASS"
           value="VALUE"
           label="LABEL"
           description="DESCRIPTION"
