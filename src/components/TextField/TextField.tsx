@@ -2,12 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../../util/BaseTextField';
-import DebouncedOnChange, { Async, DebouncedOnChangeProps } from '../../util/DebouncedOnChange';
+import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import '../../css/base-text-field.css';
 import './TextField.css';
-
-export { Async };
 
 export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
@@ -30,7 +28,7 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps> {
+class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
   render() {
     return (
       <FabricTextField
@@ -64,4 +62,6 @@ class TextField extends React.Component<TextFieldProps> {
   }
 }
 
-export default DebouncedOnChange<TextFieldProps>(TextField);
+export default (props: TextFieldProps) => {
+  return <DebouncedOnChange {...props} component={TextField} />;
+};

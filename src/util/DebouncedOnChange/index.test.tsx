@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
-import DebouncedOnChange, { DebouncedOnChangeProps } from '.';
+import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '.';
 import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
 interface InnerComponentProps extends DebouncedOnChangeProps {
@@ -9,11 +9,12 @@ interface InnerComponentProps extends DebouncedOnChangeProps {
 }
 
 const InnerComponent: React.StatelessComponent<InnerComponentProps> = props => <input {...props} />;
-const TestComponent: React.StatelessComponent<InnerComponentProps> = props => (
+const TestComponent: React.StatelessComponent<InnerComponentProps & DebouncedOnChangePrivateProps> = props => (
   <InnerComponent onChange={props.unifiedOnChange} />
 );
-const DebouncedOnChangeTestComponent = DebouncedOnChange<DebouncedOnChangeProps>(TestComponent);
-
+const DebouncedOnChangeTestComponent = (props: InnerComponentProps) => {
+  return <DebouncedOnChange {...props} component={TestComponent} />;
+};
 describe('<BaseTextField />', () => {
   let component: ReactWrapper<DebouncedOnChangeProps, {}>;
 

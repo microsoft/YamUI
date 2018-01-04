@@ -1,12 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getBaseTextFieldProps, BaseTextFieldProps }  from '../../util/BaseTextField';
-import DebouncedOnChange, { Async, DebouncedOnChangeProps } from '../../util/DebouncedOnChange';
+import { getBaseTextFieldProps, BaseTextFieldProps } from '../../util/BaseTextField';
+import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import './TextArea.css';
-
-export { Async };
 
 export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
@@ -24,7 +22,7 @@ export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProp
  * The TextArea component enables a user to type text into an app. The text
  * displays on the screen in a simple, uniform format.
  */
-class TextArea extends React.Component<TextAreaProps> {
+class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateProps> {
   render() {
     return (
       <FabricTextField
@@ -51,4 +49,6 @@ class TextArea extends React.Component<TextAreaProps> {
   }
 }
 
-export default DebouncedOnChange<TextAreaProps>(TextArea);
+export default (props: TextAreaProps) => {
+  return <DebouncedOnChange {...props} component={TextArea} />;
+};

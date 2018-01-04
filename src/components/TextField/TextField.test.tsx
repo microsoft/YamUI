@@ -35,7 +35,6 @@ describe('<TextField />', () => {
           onBlur={jest.fn()}
           onMouseEnter={jest.fn()}
           onMouseLeave={jest.fn()}
-          unifiedOnChange={jest.fn()}
         />,
       ).html();
     });

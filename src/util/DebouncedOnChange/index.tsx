@@ -2,74 +2,75 @@
 import * as React from 'react';
 import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
-export { Async };
-
 export interface DebouncedOnChangeProps {
   /**
-   * Callback for the onChanged event.
+   * Callback for the onChange event.
    */
   onChange?: (newValue: any) => void;
 
   /**
-   * Callback for the onChanged event.
+   * Debounced callback for the onChange event.
    */
   debouncedOnChange?: (newValue: any) => void;
 
   /**
-   * Textfield will trigger `onChange` after users stop typing for `onChangeDebounceTime`
+   * Component will trigger `onChange` after users stop typing for `debouncedOnChangeTime`
    * milliseconds.
    */
   debouncedOnChangeTime?: number;
+}
 
+export interface DebouncedOnChangePrivateProps {
   /**
-   * Private: Used to pass both onChange and debouncedOnChange to the contained component.
+   * Used to pass both onChange and debouncedOnChange to the contained component.
    */
   unifiedOnChange?: (newValue: any) => void;
 }
 
-const DebouncedOnChange = <T extends DebouncedOnChangeProps>(
-  ComposedComponent: React.ComponentClass | React.StatelessComponent<T>) =>
-  class extends React.Component<T> {
-    async: Async;
-    debouncedOnChange: (newValue: string) => void;
+export interface NestedComponentProps {
+  component: any;
+}
 
-    static defaultProps = {
-      debouncedOnChangeTime: 700,
-    };
+export default class DebouncedOnChangeComponent extends React.Component<
+  DebouncedOnChangeProps & NestedComponentProps
+> {
+  private async: Async;
+  private debouncedOnChange: (newValue: string) => void;
 
-    constructor(props: T) {
-      super();
-      if (props.debouncedOnChange) {
-        this.async = new Async(this);
-        this.debouncedOnChange = this.async.debounce(props.debouncedOnChange, props.debouncedOnChangeTime);
-      }
-      this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(newValue: string) {
-      if (this.props.onChange) {
-        this.props.onChange(newValue);
-      }
-
-      if (this.props.debouncedOnChange) {
-        this.debouncedOnChange(newValue);
-      }
-    }
-
-    render() {
-      return (
-        <ComposedComponent
-          {...this.props}
-          unifiedOnChange={this.handleChange}
-        />
-      );
-    }
-
-    componentWillUnmount() {
-      if (this.async) {
-        this.async.dispose();
-      }
-    }
+  static defaultProps = {
+    debouncedOnChangeTime: 700,
   };
 
-export default DebouncedOnChange;
+  constructor(props: DebouncedOnChangeProps) {
+    super();
+    if (props.debouncedOnChange) {
+      this.async = new Async(this);
+      this.debouncedOnChange = this.async.debounce(
+        props.debouncedOnChange,
+        props.debouncedOnChangeTime,
+      );
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(newValue: string) {
+    if (this.props.onChange) {
+      this.props.onChange(newValue);
+    }
+
+    if (this.props.debouncedOnChange) {
+      this.debouncedOnChange(newValue);
+    }
+  }
+
+  render() {
+    const { component: ComposedComponent } = this.props;
+    return <ComposedComponent {...this.props} unifiedOnChange={this.handleChange} />;
+  }
+
+  componentWillUnmount() {
+    if (this.async) {
+      this.async.dispose();
+    }
+  }
+}
