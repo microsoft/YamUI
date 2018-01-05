@@ -28,7 +28,9 @@ export interface DebouncedOnChangePrivateProps {
 }
 
 export interface NestedComponentProps {
-  component: React.Component | React.StatelessComponent;
+  component:
+    | React.ComponentClass<DebouncedOnChangePrivateProps>
+    | React.StatelessComponent<DebouncedOnChangePrivateProps>;
 }
 
 export default class DebouncedOnChangeComponent extends React.Component<
