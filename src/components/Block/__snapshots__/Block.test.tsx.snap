@@ -13,6 +13,19 @@ exports[`<Block /> with additional className matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
+<div
+  className="y-block y-block__bottomSpacing-xLarge"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with default options matches its snapshot 1`] = `
 <div
   className="y-block"
@@ -86,9 +99,9 @@ exports[`<Block /> with positive push matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Block /> with spacing matches its snapshot 1`] = `
+exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 <div
-  className="y-block y-block__bottomSpacing-xLarge"
+  className="y-block y-block__textAlign-right"
   style={Object {}}
 >
   <div
@@ -99,9 +112,9 @@ exports[`<Block /> with spacing matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Block /> with textAlign right matches its snapshot 1`] = `
+exports[`<Block /> with top spacing matches its snapshot 1`] = `
 <div
-  className="y-block y-block__textAlign-right"
+  className="y-block y-block__topSpacing-small"
   style={Object {}}
 >
   <div

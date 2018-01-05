@@ -51,6 +51,36 @@ const { GutterSize } = require('.');
 </div>
 ```
 
+With top gutter spacing:
+
+```js { "props": { "data-example": "with top gutter spacing" } }
+const { GutterSize } = require('.');
+
+<div>
+  <Block topSpacing={GutterSize.XXLARGE}>
+    This example has <strong>topSpacing: XXLARGE</strong>.
+  </Block>
+  <Block topSpacing={GutterSize.XLARGE}>
+    This example has <strong>topSpacing: XLARGE</strong>.
+  </Block>
+  <Block topSpacing={GutterSize.LARGE}>
+    This example has <strong>topSpacing: LARGE</strong>.
+  </Block>
+  <Block topSpacing={GutterSize.MEDIUM}>
+    This example has <strong>topSpacing: MEDIUM</strong>.
+  </Block>
+  <Block topSpacing={GutterSize.SMALL}>
+    This example has <strong>topSpacing: SMALL</strong>.
+  </Block>
+  <Block topSpacing={GutterSize.XSMALL}>
+    This example has <strong>topSpacing: XSMALL</strong>.
+  </Block>
+  <Block>
+    This example has no spacing specified.
+  </Block>
+</div>
+```
+
 With bottom gutter spacing:
 
 ```js { "props": { "data-example": "with bottom gutter spacing" } }
