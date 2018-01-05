@@ -52,6 +52,19 @@ exports[`<Block /> with ellipsis matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner y-block--inner__horizontalPadding-medium"
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with negative push matches its snapshot 1`] = `
 <div
   className="y-block"
@@ -119,6 +132,19 @@ exports[`<Block /> with top spacing matches its snapshot 1`] = `
 >
   <div
     className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with vertical padding matches its snapshot 1`] = `
+<div
+  className="y-block"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner y-block--inner__verticalPadding-xLarge"
   >
     block content
   </div>
