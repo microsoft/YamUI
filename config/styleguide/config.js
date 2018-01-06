@@ -158,6 +158,15 @@ module.exports = {
         ...clearedStyles,
       },
     },
+    Pathline: {
+      pathline: {
+        ...clearedStyles,
+        fontSize: '1.5rem',
+        lineHeight: '2rem',
+        color: '#646d7a',
+        fontFamily: '"andale mono", "monotype.com", "lucida console", monospace',
+      },
+    },
     SectionHeading: {
       sectionName: {
         ...clearedStyles,
@@ -165,6 +174,9 @@ module.exports = {
       wrapper: {
         ...clearedStyles,
       },
+    },
+    StyleGuide: {
+      isolate: false,
     },
     Table: {
       table: {
@@ -178,15 +190,6 @@ module.exports = {
       },
       cell: {
         ...clearedStyles,
-      },
-    },
-    Pathline: {
-      pathline: {
-        ...clearedStyles,
-        fontSize: '1.5rem',
-        lineHeight: '2rem',
-        color: '#646d7a',
-        fontFamily: '"andale mono", "monotype.com", "lucida console", monospace',
       },
     },
   },
