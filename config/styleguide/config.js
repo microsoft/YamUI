@@ -7,6 +7,7 @@ const pkg = require('../../package.json');
 
 const componentsWithoutPathLine = ['Icons'];
 
+// prettier-ignore
 const getComponentPathLine = (componentPath) => {
   const ext = path.extname(componentPath);
   const name = path.basename(componentPath, ext);
@@ -18,6 +19,30 @@ const getComponentPathLine = (componentPath) => {
 };
 
 const root = path.resolve(__dirname, '../../');
+
+const clearedStyles = {
+  isolate: false,
+  border: null,
+  borderCollapse: null,
+  color: null,
+  fontFamily: null,
+  fontSize: null,
+  fontWeight: null,
+  lineHeight: null,
+  margin: null,
+  marginTop: null,
+  marginBottom: null,
+  marginLeft: null,
+  marginRight: null,
+  padding: null,
+  paddingTop: null,
+  paddingBottom: null,
+  paddingLeft: null,
+  paddingRight: null,
+  textAlign: null,
+  whitespace: null,
+  width: null,
+};
 
 module.exports = {
   title: `${pkg.productName} v${pkg.version}`,
@@ -66,5 +91,103 @@ module.exports = {
   styleguideDir: path.resolve(root, 'build/docs'),
   styleguideComponents: {
     Wrapper: path.resolve(root, 'src/demos/ExampleWrapper'),
+  },
+  styles: {
+    Markdown: {
+      base: {
+        ...clearedStyles,
+      },
+      article: {
+        ...clearedStyles,
+      },
+      h1: {
+        ...clearedStyles,
+      },
+      a: {
+        ...clearedStyles,
+      },
+      h2: {
+        ...clearedStyles,
+      },
+      h3: {
+        ...clearedStyles,
+      },
+      h4: {
+        ...clearedStyles,
+      },
+      h5: {
+        ...clearedStyles,
+      },
+      h6: {
+        ...clearedStyles,
+      },
+      p: {
+        ...clearedStyles,
+      },
+    },
+    Examples: {
+      root: {
+        ...clearedStyles,
+      },
+    },
+    Heading: {
+      heading: {
+        ...clearedStyles,
+      },
+      heading1: {
+        ...clearedStyles,
+      },
+      heading2: {
+        ...clearedStyles,
+      },
+      heading3: {
+        ...clearedStyles,
+      },
+      heading4: {
+        ...clearedStyles,
+      },
+      heading5: {
+        ...clearedStyles,
+      },
+      heading6: {
+        ...clearedStyles,
+      },
+    },
+    Para: {
+      para: {
+        ...clearedStyles,
+      },
+    },
+    SectionHeading: {
+      sectionName: {
+        ...clearedStyles,
+      },
+      wrapper: {
+        ...clearedStyles,
+      },
+    },
+    Table: {
+      table: {
+        ...clearedStyles,
+      },
+      tableHead: {
+        ...clearedStyles,
+      },
+      cellHeading: {
+        ...clearedStyles,
+      },
+      cell: {
+        ...clearedStyles,
+      },
+    },
+    Pathline: {
+      pathline: {
+        ...clearedStyles,
+        fontSize: '1.5rem',
+        lineHeight: '2rem',
+        color: '#646d7a',
+        fontFamily: '"andale mono", "monotype.com", "lucida console", monospace',
+      },
+    },
   },
 };

@@ -39,7 +39,7 @@ h6 {
 
 /* Text elements */
 p {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.6rem;
   line-height: inherit;
 }
 
@@ -51,7 +51,7 @@ ul {
 }
 ol {
   list-style-type: decimal;
-  margin: 0 1.5rem;
+  margin: 0 1.6rem;
 }
 
 abbr,
@@ -60,12 +60,12 @@ acronym {
 }
 
 address {
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
   font-style: italic;
 }
 
 blockquote {
-  margin: 1.5rem;
+  margin: 1.6rem;
   color: $textColor__secondary;
   font-style: italic;
 }
@@ -99,9 +99,9 @@ pre,
 code {
   font-size: 1rem;
   font-family: 'andale mono', 'monotype.com', 'lucida console', monospace;
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
   white-space: pre;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Tables, layout */
@@ -125,7 +125,7 @@ table thead th {
 
 hr {
   clear: both;
-  margin: 15px auto;
+  margin: 16px auto;
   width: 80%;
   height: 0;
   border-top: 1px solid $borderColor__secondary;
