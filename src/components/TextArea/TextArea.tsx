@@ -1,11 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getBaseTextFieldProps, BaseTextFieldProps } from '../../util/BaseTextField';
+import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import { join } from '../../util/classNames';
-import '../../css/base-text-field.css';
+import '../BaseTextField/BaseTextField.css';
 import './TextArea.css';
 
 export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
