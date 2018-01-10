@@ -34,20 +34,26 @@ exports[`<LayoutList /> as horizontal list without props matches its snapshot 1`
 
 exports[`<LayoutList /> as vertical list with additional className matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical TEST_CLASSNAME"
+  className="y-layoutList y-layoutList__vertical TEST_CLASSNAME y-layoutList__gutterSize-none"
 />
 `;
 
 exports[`<LayoutList /> as vertical list with child content matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical"
+  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-none"
 >
   list content
 </ul>
 `;
 
+exports[`<LayoutList /> as vertical list with gutterSize matches its snapshot 1`] = `
+<ul
+  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-small"
+/>
+`;
+
 exports[`<LayoutList /> as vertical list without props matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical"
+  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-none"
 />
 `;

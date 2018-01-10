@@ -8,30 +8,33 @@ import './LayoutList.css';
 
 export { GutterSize };
 
-export interface BaseLayoutListProps extends NestableBaseComponentProps {
-  /**
-   * Horizontal or vertical alignment of items.
-   */
-  direction: 'horizontal' | 'vertical';
-}
+export interface HorizontalListProps extends NestableBaseComponentProps {
+  direction: 'horizontal';
 
-export interface HorizontalListProps extends BaseLayoutListProps {
+  /**
+   * Amount of spacing between list items. Defaults to 4px.
+   * @default GutterSize.XSMALL
+   */
+  gutterSize?: GutterSize;
+
   /**
    * Align the horizontal list items to the left or right of the list's container.
    * @default 'left'
    */
   align?: 'left' | 'right';
-
-  /**
-   * Amount of spacing between horizontal list items. Defaults to 4px.
-   * @default GutterSize.XSMALL
-   */
-  gutterSize?: GutterSize;
-
-  direction: 'horizontal';
 }
 
-export type LayoutListProps = BaseLayoutListProps | HorizontalListProps;
+export interface VerticalListProps extends NestableBaseComponentProps {
+  direction: 'vertical';
+
+  /**
+   * Amount of spacing between list items. Defaults to none.
+   * @default GutterSize.NONE;
+   */
+  gutterSize?: GutterSize;
+}
+
+export type LayoutListProps = HorizontalListProps | VerticalListProps;
 
 /**
  * A `LayoutList` displays a list of items either horizontally or vertical. Horizontal list items
@@ -44,14 +47,17 @@ export default class LayoutList extends React.Component<LayoutListProps, {}> {
   }
 
   private getClasses() {
-    const { className, direction } = this.props;
+    const { className, direction, gutterSize } = this.props;
+    const defaultGutterSize = direction === 'horizontal' ? GutterSize.XSMALL : GutterSize.NONE;
+
     const classes = ['y-layoutList', `y-layoutList__${direction}`, className];
 
     if (direction === 'horizontal') {
-      const { align = 'left', gutterSize = GutterSize.XSMALL } = this.props as HorizontalListProps;
+      const { align = 'left' } = this.props as HorizontalListProps;
       classes.push(`y-layoutList__align-${align}`);
-      classes.push(`y-layoutList__gutterSize-${gutterSize}`);
     }
+
+    classes.push(`y-layoutList__gutterSize-${gutterSize || defaultGutterSize}`);
 
     return join(classes);
   }

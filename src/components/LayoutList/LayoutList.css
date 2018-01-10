@@ -9,7 +9,7 @@
 
 /* Horizontal */
 .y-layoutList__horizontal {
-  margin: 0 -$gutterWidth__xSmall 0 0;  
+  margin: 0;  
   display: flex;
   flex-flow: row wrap;
 }
@@ -23,23 +23,27 @@
   margin: 0;
 }
 
-.y-layoutList__gutterSize-xxLarge > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-xxLarge > .y-layoutList--item {
   margin-right: $gutterWidth__xxLarge;
 }
-.y-layoutList__gutterSize-xLarge > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-xLarge > .y-layoutList--item {
   margin-right: $gutterWidth__xLarge;
 }
-.y-layoutList__gutterSize-large > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-large > .y-layoutList--item {
   margin-right: $gutterWidth__large;
 }
-.y-layoutList__gutterSize-medium > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-medium > .y-layoutList--item {
   margin-right: $gutterWidth__medium;
 }
-.y-layoutList__gutterSize-small > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-small > .y-layoutList--item {
   margin-right: $gutterWidth__small;
 }
-.y-layoutList__gutterSize-xSmall > .y-layoutList--item {
+.y-layoutList__horizontal.y-layoutList__gutterSize-xSmall > .y-layoutList--item {
   margin-right: $gutterWidth__xSmall;
+}
+
+.y-layoutList__horizontal > .y-layoutList--item:last-child {
+  margin-right: 0 !important;
 }
 
 
@@ -52,4 +56,27 @@
   display: block;
   padding: 0;
   margin: 0;
+}
+
+.y-layoutList__vertical.y-layoutList__gutterSize-xxLarge > .y-layoutList--item {
+  margin-bottom: $gutterWidth__xxLarge;
+}
+.y-layoutList__vertical.y-layoutList__gutterSize-xLarge > .y-layoutList--item {
+  margin-bottom: $gutterWidth__xLarge;
+}
+.y-layoutList__vertical.y-layoutList__gutterSize-large > .y-layoutList--item {
+  margin-bottom: $gutterWidth__large;
+}
+.y-layoutList__vertical.y-layoutList__gutterSize-medium > .y-layoutList--item {
+  margin-bottom: $gutterWidth__medium;
+}
+.y-layoutList__vertical.y-layoutList__gutterSize-small > .y-layoutList--item {
+  margin-bottom: $gutterWidth__small;
+}
+.y-layoutList__vertical.y-layoutList__gutterSize-xSmall > .y-layoutList--item {
+  margin-bottom: $gutterWidth__xSmall;
+}
+
+.y-layoutList__vertical > .y-layoutList--item:last-child {
+  margin-bottom: 0 !important;
 }
