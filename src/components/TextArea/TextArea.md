@@ -11,9 +11,9 @@ Basic
 With a description
 ```js { "props": { "data-example": "withDescription" } }
 <TextArea
-  value="This multiline has fixed height so scrollbars may appear."
+  value="This Textarea has a description."
   rows={3}
-  description="Small hint goes here"
+  description="This is the Textarea's description"
 />
 ```
 
