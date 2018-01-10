@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Block, { BlockProps, GutterSize, TextSize } from '.';
+import Block, { BlockProps, GutterSize, TextColor, TextSize } from '.';
 
 describe('<Block />', () => {
   let component: ShallowWrapper<BlockProps, {}>;
@@ -29,6 +29,16 @@ describe('<Block />', () => {
   describe('with xLarge text size', () => {
     beforeEach(() => {
       component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with secondary textColor', () => {
+    beforeEach(() => {
+      component = shallow(<Block textColor={TextColor.SECONDARY}>block content</Block>);
     });
 
     it('matches its snapshot', () => {

@@ -112,6 +112,19 @@ exports[`<Block /> with positive push matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
+<div
+  className="y-block y-block__textColor-secondary"
+  style={Object {}}
+>
+  <div
+    className="y-block--inner"
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 <div
   className="y-block y-block__textAlign-right"
