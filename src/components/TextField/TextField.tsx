@@ -47,7 +47,7 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
 
   getClasses() {
     const { className, prefix, suffix } = this.props;
-    const classes = ['y-base-text-field y-text-field'];
+    const classes = ['y-base-text-field', 'y-text-field'];
 
     if (className) {
       classes.push(className);

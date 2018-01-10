@@ -4,6 +4,7 @@ import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../../util/BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { join } from '../../util/classNames';
 import '../../css/base-text-field.css';
 import './TextArea.css';
 
@@ -27,7 +28,7 @@ class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateP
   render() {
     return (
       <FabricTextField
-        className={this.getClasses()}
+        className={join(['y-base-text-field', 'y-text-area', this.props.className])}
         rows={this.props.rows}
         autoAdjustHeight={this.props.autoAdjustHeight}
         multiline={true}
@@ -38,16 +39,7 @@ class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateP
     );
   }
 
-  getClasses() {
-    const { className } = this.props;
-    const classes = ['y-base-text-field y-text-area'];
 
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
-  }
 }
 
 export default (props: TextAreaProps) => {
