@@ -10,6 +10,11 @@ export { GutterSize, TextSize };
 
 export interface BlockProps extends NestableBaseComponentProps {
   /**
+   * Gutter spacing to be added above this block.
+   */
+  topSpacing?: GutterSize;
+
+  /**
    * Gutter spacing to be added below this block.
    */
   bottomSpacing?: GutterSize;
@@ -64,9 +69,12 @@ export default class Block extends React.Component<BlockProps, {}> {
   }
 
   private getClasses() {
-    const { bottomSpacing, textSize, textAlign, className } = this.props;
+    const { topSpacing, bottomSpacing, textSize, textAlign, className } = this.props;
 
     const classes: string[] = ['y-block'];
+    if (topSpacing) {
+      classes.push(`y-block__topSpacing-${topSpacing}`);
+    }
     if (bottomSpacing) {
       classes.push(`y-block__bottomSpacing-${bottomSpacing}`);
     }
