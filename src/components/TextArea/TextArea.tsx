@@ -4,6 +4,7 @@ import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../../util/BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import '../../css/base-text-field.css';
 import './TextArea.css';
 
 export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
