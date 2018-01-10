@@ -82,7 +82,7 @@ onChange:
 
 Controlled onChange with debounce:
 ```js { "props": { "data-example": "controlled onChange with debounce" } }
-class ControlledTextField extends React.PureComponent {
+class ControlledTextField extends React.Component {
   constructor() {
     super();
     this.state = {};
@@ -92,8 +92,9 @@ class ControlledTextField extends React.PureComponent {
   render() {
     return (
       <TextField
-        value = {this.state.value}
-        onChangeDebounceTime={700}
+        value={this.state.value}
+        debouncedOnChange={(value) => action('textfield changed (debounced)')(value)}
+        debouncedOnChangeTime={700}
         onChange={this.handleChange}
       />
     );

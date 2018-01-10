@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField /> with all options matches its snapshot 1`] = `
+exports[`<TextArea /> with all options matches its snapshot 1`] = `
 <TextField
-  autoAdjustHeight={false}
+  autoAdjustHeight={true}
   borderless={false}
-  className="y-base-text-field y-text-field CLASS y-text-field--with-prefix y-text-field--with-suffix"
+  className="y-base-text-field y-text-area CLASS"
   deferredValidationTime={200}
   disabled={true}
   errorMessage="ERROR MESSAGE"
   label="LABEL"
-  multiline={false}
+  multiline={true}
   onBeforeChange={[Function]}
   onBlur={[MockFunction onBlur]}
   onChanged={[Function]}
@@ -19,11 +19,10 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
   onMouseLeave={[MockFunction onMouseLeave]}
   onNotifyValidationResult={[Function]}
   placeholder="PLACEHOLDER"
-  prefix="PREFIX"
   required={true}
-  resizable={true}
-  suffix="SUFFIX"
-  underlined={true}
+  resizable={false}
+  rows={2}
+  underlined={false}
   validateOnFocusIn={false}
   validateOnFocusOut={false}
   validateOnLoad={true}
@@ -31,19 +30,40 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
 />
 `;
 
-exports[`<TextField /> with default options matches its snapshot 1`] = `
+exports[`<TextArea /> with default options matches its snapshot 1`] = `
 <TextField
   autoAdjustHeight={false}
   borderless={false}
-  className="y-base-text-field y-text-field"
+  className="y-base-text-field y-text-area"
   deferredValidationTime={200}
   errorMessage=""
-  multiline={false}
+  multiline={true}
   onBeforeChange={[Function]}
   onChanged={[Function]}
   onGetErrorMessage={[Function]}
   onNotifyValidationResult={[Function]}
-  resizable={true}
+  resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
+/>
+`;
+
+exports[`<TextArea /> with description and no error matches its snapshot 1`] = `
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
+  className="y-base-text-field y-text-area"
+  deferredValidationTime={200}
+  description="DESCRIPTION"
+  errorMessage=""
+  multiline={true}
+  onBeforeChange={[Function]}
+  onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
+  resizable={false}
   underlined={false}
   validateOnFocusIn={false}
   validateOnFocusOut={false}
