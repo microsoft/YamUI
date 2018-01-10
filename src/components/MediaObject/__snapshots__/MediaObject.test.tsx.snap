@@ -53,7 +53,9 @@ exports[`<MediaObject /> with extra content at extra large size matches its snap
       width={72}
     />
     <FixedGridColumn>
-      <MediaObjectExtra>
+      <MediaObjectExtra
+        ellipsis={true}
+      >
         <div
           className="EXTRA"
         >
@@ -78,6 +80,33 @@ exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
       width={40}
     />
     <FixedGridColumn />
+  </FixedGridRow>
+</div>
+`;
+
+exports[`<MediaObject /> with extra content with allowTextWrap matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-xLarge"
+>
+  <FixedGridRow
+    gutterSize="xLarge"
+  >
+    <FixedGridColumn
+      className="y-media-object__size-xLarge--image"
+      fixed={true}
+      width={72}
+    />
+    <FixedGridColumn>
+      <MediaObjectExtra
+        ellipsis={false}
+      >
+        <div
+          className="EXTRA"
+        >
+          EXTRA CONTENT
+        </div>
+      </MediaObjectExtra>
+    </FixedGridColumn>
   </FixedGridRow>
 </div>
 `;
@@ -135,6 +164,35 @@ exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
     />
     <FixedGridColumn>
       <MediaObjectMetadata
+        ellipsis={true}
+        size="medium"
+      >
+        <div
+          className="METADATA"
+        >
+          METADATA CONTENT
+        </div>
+      </MediaObjectMetadata>
+    </FixedGridColumn>
+  </FixedGridRow>
+</div>
+`;
+
+exports[`<MediaObject /> with metadata content with allowTextWrap matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <FixedGridRow
+    gutterSize="medium"
+  >
+    <FixedGridColumn
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <FixedGridColumn>
+      <MediaObjectMetadata
+        ellipsis={false}
         size="medium"
       >
         <div
@@ -179,6 +237,35 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
     />
     <FixedGridColumn>
       <MediaObjectTitle
+        ellipsis={true}
+        size="medium"
+      >
+        <div
+          className="TITLE"
+        >
+          TITLE CONTENT
+        </div>
+      </MediaObjectTitle>
+    </FixedGridColumn>
+  </FixedGridRow>
+</div>
+`;
+
+exports[`<MediaObject /> with title content with allowTextWrap matches its snapshot 1`] = `
+<div
+  className="y-media-object y-media-object__size-medium"
+>
+  <FixedGridRow
+    gutterSize="medium"
+  >
+    <FixedGridColumn
+      className="y-media-object__size-medium--image"
+      fixed={true}
+      width={40}
+    />
+    <FixedGridColumn>
+      <MediaObjectTitle
+        ellipsis={false}
         size="medium"
       >
         <div
