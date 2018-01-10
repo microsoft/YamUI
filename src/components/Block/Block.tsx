@@ -25,6 +25,16 @@ export interface BlockProps extends NestableBaseComponentProps {
   padding?: GutterSize;
 
   /**
+   * Padding to be added to the left and right. Will override a "padding" value.
+   */
+  horizontalPadding?: GutterSize;
+
+  /**
+   * Padding to be added to the top and bottom. Will override a "padding" value.
+   */
+  verticalPadding?: GutterSize;
+
+  /**
    * Number of pixels to finely adjust the gutter spacing above this block. Positive pushes the
    * component down, negative pulls it up. Only use this to adjust for vertical rhythm in text.
    */
@@ -100,7 +110,7 @@ export default class Block extends React.Component<BlockProps, {}> {
   }
 
   private getInnerClasses() {
-    const { ellipsis, padding } = this.props;
+    const { ellipsis, padding, horizontalPadding, verticalPadding } = this.props;
 
     const classes = ['y-block--inner'];
     if (ellipsis) {
@@ -108,6 +118,12 @@ export default class Block extends React.Component<BlockProps, {}> {
     }
     if (padding) {
       classes.push(`y-block--inner__padding-${padding}`);
+    }
+    if (horizontalPadding) {
+      classes.push(`y-block--inner__horizontalPadding-${horizontalPadding}`);
+    }
+    if (verticalPadding) {
+      classes.push(`y-block--inner__verticalPadding-${verticalPadding}`);
     }
 
     return classes.join(' ');

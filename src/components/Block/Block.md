@@ -51,6 +51,66 @@ const { GutterSize } = require('.');
 </div>
 ```
 
+Block can also have separate vertical and horizontal padding. With horizontal padding:
+
+```js { "props": { "data-example": "with horizontal padding" } }
+const { GutterSize } = require('.');
+
+<div>
+  <Block horizontalPadding={GutterSize.XXLARGE}>
+    This example has <strong>horizontalPadding: XXLARGE</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.XLARGE}>
+    This example has <strong>horizontalPadding: XLARGE</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.LARGE}>
+    This example has <strong>horizontalPadding: LARGE</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.MEDIUM}>
+    This example has <strong>horizontalPadding: MEDIUM</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.SMALL}>
+    This example has <strong>horizontalPadding: SMALL</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.XSMALL}>
+    This example has <strong>horizontalPadding: XSMALL</strong>.
+  </Block>
+  <Block>
+    This example has no padding specified.
+  </Block>
+</div>
+```
+
+With vertical padding:
+
+```js { "props": { "data-example": "with vertical padding" } }
+const { GutterSize } = require('.');
+
+<div>
+  <Block verticalPadding={GutterSize.XXLARGE}>
+    This example has <strong>verticalPadding: XXLARGE</strong>.
+  </Block>
+  <Block verticalPadding={GutterSize.XLARGE}>
+    This example has <strong>verticalPadding: XLARGE</strong>.
+  </Block>
+  <Block verticalPadding={GutterSize.LARGE}>
+    This example has <strong>verticalPadding: LARGE</strong>.
+  </Block>
+  <Block verticalPadding={GutterSize.MEDIUM}>
+    This example has <strong>verticalPadding: MEDIUM</strong>.
+  </Block>
+  <Block verticalPadding={GutterSize.SMALL}>
+    This example has <strong>verticalPadding: SMALL</strong>.
+  </Block>
+  <Block verticalPadding={GutterSize.XSMALL}>
+    This example has <strong>verticalPadding: XSMALL</strong>.
+  </Block>
+  <Block>
+    This example has no padding specified.
+  </Block>
+</div>
+```
+
 With top gutter spacing:
 
 ```js { "props": { "data-example": "with top gutter spacing" } }

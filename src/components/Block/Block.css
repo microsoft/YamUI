@@ -68,6 +68,58 @@
   padding: $gutterWidth__xSmall;
 }
 
+/* Horizontal padding */
+.y-block--inner__horizontalPadding-xxLarge {
+  padding-left: $gutterWidth__xxLarge;
+  padding-right: $gutterWidth__xxLarge;
+}
+.y-block--inner__horizontalPadding-xLarge {
+  padding-left: $gutterWidth__xLarge;
+  padding-right: $gutterWidth__xLarge;
+}
+.y-block--inner__horizontalPadding-large {
+  padding-left: $gutterWidth__large;
+  padding-right: $gutterWidth__large;
+}
+.y-block--inner__horizontalPadding-medium {
+  padding-left: $gutterWidth__medium;
+  padding-right: $gutterWidth__medium;
+}
+.y-block--inner__horizontalPadding-small {
+  padding-left: $gutterWidth__small;
+  padding-right: $gutterWidth__small;
+}
+.y-block--inner__horizontalPadding-xSmall {
+  padding-left: $gutterWidth__xSmall;
+  padding-right: $gutterWidth__xSmall;
+}
+
+/* Vertical padding */
+.y-block--inner__verticalPadding-xxLarge {
+  padding-top: $gutterWidth__xxLarge;
+  padding-bottom: $gutterWidth__xxLarge;
+}
+.y-block--inner__verticalPadding-xLarge {
+  padding-top: $gutterWidth__xLarge;
+  padding-bottom: $gutterWidth__xLarge;
+}
+.y-block--inner__verticalPadding-large {
+  padding-top: $gutterWidth__large;
+  padding-bottom: $gutterWidth__large;
+}
+.y-block--inner__verticalPadding-medium {
+  padding-top: $gutterWidth__medium;
+  padding-bottom: $gutterWidth__medium;
+}
+.y-block--inner__verticalPadding-small {
+  padding-top: $gutterWidth__small;
+  padding-bottom: $gutterWidth__small;
+}
+.y-block--inner__verticalPadding-xSmall {
+  padding-top: $gutterWidth__xSmall;
+  padding-bottom: $gutterWidth__xSmall;
+}
+
 /* Text alignment */
 .y-block__textAlign-right {
   text-align: right;

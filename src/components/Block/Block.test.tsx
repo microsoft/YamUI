@@ -108,6 +108,26 @@ describe('<Block />', () => {
     });
   });
 
+  describe('with horizontal padding', () => {
+    beforeEach(() => {
+      component = shallow(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with vertical padding', () => {
+    beforeEach(() => {
+      component = shallow(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with positive push', () => {
     beforeEach(() => {
       component = shallow(<Block push={3}>block content</Block>);
