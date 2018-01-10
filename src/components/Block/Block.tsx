@@ -3,10 +3,10 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../FixedGrid/enums';
-import { TextSize } from '../Text/enums';
+import { TextColor, TextSize } from '../Text/enums';
 import './Block.css';
 
-export { GutterSize, TextSize };
+export { GutterSize, TextColor, TextSize };
 
 export interface BlockProps extends NestableBaseComponentProps {
   /**
@@ -34,6 +34,11 @@ export interface BlockProps extends NestableBaseComponentProps {
    * Text alignment within this block.
    */
   textAlign?: 'left' | 'right' | 'center';
+
+  /**
+   * Text color within this block.
+   */
+  textColor?: TextColor;
 
   /**
    * Text size (`font-size` and `line-height`) within this block.
@@ -69,7 +74,7 @@ export default class Block extends React.Component<BlockProps, {}> {
   }
 
   private getClasses() {
-    const { topSpacing, bottomSpacing, textSize, textAlign, className } = this.props;
+    const { topSpacing, bottomSpacing, textSize, textColor, textAlign, className } = this.props;
 
     const classes: string[] = ['y-block'];
     if (topSpacing) {
@@ -77,6 +82,9 @@ export default class Block extends React.Component<BlockProps, {}> {
     }
     if (bottomSpacing) {
       classes.push(`y-block__bottomSpacing-${bottomSpacing}`);
+    }
+    if (textColor) {
+      classes.push(`y-block__textColor-${textColor}`);
     }
     if (textSize) {
       classes.push(`y-textSize-${textSize}`);

@@ -139,6 +139,29 @@ With ellipsis:
 </div>
 ```
 
+Text colors:
+
+```js { "props": { "data-example": "text colors" } }
+const { GutterSize, TextColor } = require('.');
+
+<div>
+  <Block textColor={TextColor.PRIMARY} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>textColor: PRIMARY</strong>.
+  </Block>
+  <Block textColor={TextColor.SECONDARY} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>textColor: SECONDARY</strong>.
+  </Block>
+  <Block textColor={TextColor.METADATA} bottomSpacing={GutterSize.MEDIUM}>
+    This example has <strong>textColor: METADATA</strong>.
+  </Block>
+  <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
+    <Block textColor={TextColor.WHITE}>
+      This example has <strong>textColor: WHITE</strong>. It should be used where the background is a darker color.
+    </Block>
+  </div>
+</div>
+```
+
 Text sizes:
 
 ```js { "props": { "data-example": "text sizes" } }
