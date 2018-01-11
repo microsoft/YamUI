@@ -1,18 +1,27 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { NestableBaseComponentProps as MediaObjectExtraProps } from '../../util/BaseComponent/props';
-import Block, { TextSize } from '../Block';
-import Text, { TextColor } from '../Text';
+import Block, { TextColor, TextSize } from '../Block';
 
-export { MediaObjectExtraProps };
+export interface MediaObjectExtraProps {
+  /**
+   * Limits text content to a single line, hiding additional text with an ellipsis.
+   */
+  ellipsis?: boolean;
+}
 
 export default class MediaObjectExtra extends React.Component<MediaObjectExtraProps, {}> {
   render() {
-    const { children } = this.props;
+    const { children, ellipsis } = this.props;
 
     return (
-      <Block className="y-media-object--extra" textSize={TextSize.SMALL} push={4} ellipsis={true}>
-        <Text color={TextColor.METADATA}>{children}</Text>
+      <Block
+        className="y-media-object--extra"
+        textColor={TextColor.METADATA}
+        textSize={TextSize.SMALL}
+        push={4}
+        ellipsis={ellipsis}
+      >
+        {children}
       </Block>
     );
   }

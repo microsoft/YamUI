@@ -48,6 +48,10 @@
   margin-bottom: $gutterWidth__xSmall;
 }
 
+.y-block--inner {
+  overflow-wrap: break-word;
+}
+
 /* Padding */
 .y-block--inner__padding-xxLarge {
   padding: $gutterWidth__xxLarge;
