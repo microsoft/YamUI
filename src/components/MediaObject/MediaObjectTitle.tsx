@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import Block, { TextSize } from '../Block';
-import Text, { TextColor } from '../Text';
+import Block, { TextColor, TextSize } from '../Block';
 import { MediaObjectSize } from './enums';
 
 export { MediaObjectSize };
@@ -23,20 +22,26 @@ const BlockPushMap = {
 
 export interface MediaObjectTitleProps {
   size: MediaObjectSize;
+
+  /**
+   * Limits text content to a single line, hiding additional text with an ellipsis.
+   */
+  ellipsis?: boolean;
 }
 
 export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps, {}> {
   render() {
-    const { size, children } = this.props;
+    const { size, children, ellipsis } = this.props;
 
     return (
       <Block
         className="y-media-object--title"
         push={BlockPushMap[size]}
+        textColor={TextColor.PRIMARY}
         textSize={TextSizeMap[size] as TextSize}
-        ellipsis={true}
+        ellipsis={ellipsis}
       >
-        <Text color={TextColor.PRIMARY}>{children}</Text>
+        {children}
       </Block>
     );
   }

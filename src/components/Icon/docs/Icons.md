@@ -24,7 +24,7 @@ const iconsLibrary = Object.keys(allIcons).map((icon, index) => {
       <Block textSize={TextSize.XLARGE}>
         <Icon />
       </Block>
-      <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE}>
+      <Block textSize={TextSize.XSMALL} bottomSpacing={GutterSize.XLARGE} ellipsis={true}>
         {icon}
       </Block>
     </div>

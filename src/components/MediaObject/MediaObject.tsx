@@ -41,6 +41,12 @@ export interface MediaObjectProps extends NestableBaseComponentProps {
    * content like buttons or other elements, pass those in as children instead of here.
    */
   extraContent?: React.ReactNode;
+
+  /**
+   * If true, wraps text to the next line, preventing truncation.
+   * If false or undefined, limits text content to a single line, hiding additional text with an ellipsis.
+   */
+  allowTextWrap?: boolean;
 }
 
 const ImageWidthMap = {
@@ -65,19 +71,20 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
       metadataContent,
       extraContent,
       children,
+      allowTextWrap,
     } = this.props;
 
     const gutterSize = this.getGutterSize();
     const imageColumnClass = `y-media-object__size-${size}--image`;
 
     const titleContentChild = titleContent && (
-      <MediaObjectTitle size={size}>{titleContent}</MediaObjectTitle>
+      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>{titleContent}</MediaObjectTitle>
     );
     const metadataContentChild = this.showMetadata() && (
-      <MediaObjectMetadata size={size}>{metadataContent}</MediaObjectMetadata>
+      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>{metadataContent}</MediaObjectMetadata>
     );
     const extraContentChild = this.showExtra() && (
-      <MediaObjectExtra>{extraContent}</MediaObjectExtra>
+      <MediaObjectExtra ellipsis={!allowTextWrap}>{extraContent}</MediaObjectExtra>
     );
 
     return (

@@ -52,6 +52,18 @@ describe('<MediaObject />', () => {
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
+
+    describe('with allowTextWrap', () => {
+      beforeEach(() => {
+        component = shallow(
+          <MediaObject allowTextWrap={true} size={MediaObjectSize.MEDIUM} titleContent={title} />,
+        );
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
   });
 
   describe('with metadata content', () => {
@@ -75,6 +87,18 @@ describe('<MediaObject />', () => {
         expect(component).toMatchSnapshot();
       });
     });
+
+    describe('with allowTextWrap', () => {
+      beforeEach(() => {
+        component = shallow(
+          <MediaObject allowTextWrap={true} size={MediaObjectSize.MEDIUM} metadataContent={metadata} />,
+        );
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
   });
 
   describe('with extra content', () => {
@@ -90,6 +114,18 @@ describe('<MediaObject />', () => {
       beforeEach(() => {
         component = shallow(<MediaObject size={MediaObjectSize.XLARGE} extraContent={extra} />);
         component.render();
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('with allowTextWrap', () => {
+      beforeEach(() => {
+        component = shallow(
+          <MediaObject allowTextWrap={true} size={MediaObjectSize.XLARGE} extraContent={extra} />,
+        );
       });
 
       it('matches its snapshot', () => {
