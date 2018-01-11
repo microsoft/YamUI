@@ -1,7 +1,7 @@
 ### Notes for use
-Note that spacing between horizontal list items is standardized at `4px` and is not adjustable. There is no spacing between vertical list items.
+Note that spacing between list items uses standard `GutterSize` values. Horizontal list items default to `4px` gutters, while vertical list items default to no gutters. 
 
-If you're looking for typography-based ordered and unordered lists, please see the List component.
+If you're looking for typography-based ordered and unordered lists, please see the `List` component.
 
 ### Examples
 
@@ -48,52 +48,54 @@ const { ButtonColor } = require('../Button');
 const { GutterSize } = require('.');
 
 const items = [1, 2, 3].map((num) =>
-  <LayoutListItem><Button text={num} key={num} /></LayoutListItem>
+  <LayoutListItem key={num}><Button text={num} /></LayoutListItem>
 );
 
 <div>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    None
-    <LayoutList direction="horizontal" gutterSize={GutterSize.NONE}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    XSmall (default)
-    <LayoutList direction="horizontal" gutterSize={GutterSize.XSMALL}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    Small
-    <LayoutList direction="horizontal" gutterSize={GutterSize.SMALL}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    Medium
-    <LayoutList direction="horizontal" gutterSize={GutterSize.MEDIUM}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    Large
-    <LayoutList direction="horizontal" gutterSize={GutterSize.LARGE}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    XLarge
-    <LayoutList direction="horizontal" gutterSize={GutterSize.XLARGE}>
-      {items}
-    </LayoutList>
-  </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    XXLarge
-    <LayoutList direction="horizontal" gutterSize={GutterSize.XXLARGE}>
-      {items}
-    </LayoutList>
-  </Block>
+  <LayoutList direction="vertical" gutterSize={GutterSize.LARGE}>
+    <LayoutListItem>
+      <Heading level="4">None</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.NONE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XSmall (default)</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.XSMALL}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Small</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.SMALL}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Medium</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.MEDIUM}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Large</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.LARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XLarge</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.XLARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XXLarge</Heading>
+      <LayoutList direction="horizontal" gutterSize={GutterSize.XXLARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
 </div>
 ```
 
@@ -140,4 +142,62 @@ const people = [
     )
   })}
 </LayoutList>
+```
+
+Vertical list with different gutter sizes:
+
+```js { "props": { "data-example": "vertical-guttersizes" } }
+const { ButtonColor } = require('../Button');
+const { GutterSize } = require('.');
+
+const items = [1, 2, 3].map((num) =>
+  <LayoutListItem key={num}><Button text={num} /></LayoutListItem>
+);
+
+<div>
+  <LayoutList direction="vertical" gutterSize={GutterSize.LARGE}>
+    <LayoutListItem>
+      <Heading level="4">None (default)</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.NONE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XSmall</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.XSMALL}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Small</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.SMALL}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Medium</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.MEDIUM}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">Large</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.LARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XLarge</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.XLARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+    <LayoutListItem>
+      <Heading level="4">XXLarge</Heading>
+      <LayoutList direction="vertical" gutterSize={GutterSize.XXLARGE}>
+        {items}
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
+</div>
 ```

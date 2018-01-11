@@ -69,6 +69,16 @@ describe('<LayoutList />', () => {
       });
     });
 
+    describe('with gutterSize', () => {
+      beforeEach(() => {
+        component = shallow(<LayoutList direction="vertical" gutterSize={GutterSize.SMALL} />);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+
     describe('with additional className', () => {
       beforeEach(() => {
         component = shallow(<LayoutList direction="vertical" className="TEST_CLASSNAME" />);
