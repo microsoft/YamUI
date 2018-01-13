@@ -52,19 +52,18 @@ export default class Text extends React.Component<TextProps, {}> {
   render() {
     const { children, screenreaderText } = this.props;
 
-    const content =
-      screenreaderText === undefined ? (
-        children
-      ) : (
-        <span>
-          <span aria-hidden={true}>{children}</span>
-          <ScreenReaderText>{screenreaderText}</ScreenReaderText>
+    if (screenreaderText === undefined) {
+      return (
+        <span className={this.getClasses()} style={this.getStyles()}>
+          {children}
         </span>
       );
+    }
 
     return (
       <span className={this.getClasses()} style={this.getStyles()}>
-        {content}
+        <span aria-hidden={true}>{children}</span>
+        <ScreenReaderText>{screenreaderText}</ScreenReaderText>
       </span>
     );
   }

@@ -63,14 +63,12 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
   className="y-text"
   style={Object {}}
 >
-  <span>
-    <span
-      aria-hidden={true}
-    >
-      test content
-    </span>
-    <ScreenreaderText />
+  <span
+    aria-hidden={true}
+  >
+    test content
   </span>
+  <ScreenreaderText />
 </span>
 `;
 
@@ -79,16 +77,14 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
   className="y-text"
   style={Object {}}
 >
-  <span>
-    <span
-      aria-hidden={true}
-    >
-      test content
-    </span>
-    <ScreenreaderText>
-      SCREENREADER TEXT
-    </ScreenreaderText>
+  <span
+    aria-hidden={true}
+  >
+    test content
   </span>
+  <ScreenreaderText>
+    SCREENREADER TEXT
+  </ScreenreaderText>
 </span>
 `;
 
