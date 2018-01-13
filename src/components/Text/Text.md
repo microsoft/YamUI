@@ -21,6 +21,23 @@ Basic text:
 </div>
 ```
 
+With screenreaderText:
+
+```js { "props": { "data-example": "with screenreaderText" } }
+<div>
+  <p>
+    <Text>
+      This `Text` component does not have a `screenreaderText` value provided.
+    </Text>
+  </p>
+  <p>
+    <Text screenreaderText="This text is available to screenreaders">
+      This `Text` component has `screenreaderText` provided. This visible text is hidden from screenreaders while the screenreaderText value is made available to them.
+    </Text>
+  </p>
+</div>
+```
+
 Bold:
 
 ```js { "props": { "data-example": "bold" } }

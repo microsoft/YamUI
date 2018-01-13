@@ -3,6 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './enums';
+import ScreenReaderText from '../ScreenreaderText';
 import './Text.css';
 
 export { TextColor, TextSize };
@@ -34,6 +35,12 @@ export interface TextProps extends NestableBaseComponentProps {
    * Sets text to uppercase.
    */
   uppercase?: boolean;
+
+  /**
+   * If provided, will hide child content from screenreaders using aria-hidden while making
+   * the given screenreaderText available to screenreaders.
+   */
+  screenreaderText?: string;
 }
 
 /**
@@ -43,9 +50,23 @@ export interface TextProps extends NestableBaseComponentProps {
  */
 export default class Text extends React.Component<TextProps, {}> {
   render() {
-    const { children } = this.props;
+    const { children, screenreaderText } = this.props;
 
-    return <span className={this.getClasses()} style={this.getStyles()}>{children}</span>;
+    const content =
+      screenreaderText === undefined ? (
+        children
+      ) : (
+        <span>
+          <span aria-hidden={true}>{children}</span>
+          <ScreenReaderText>{screenreaderText}</ScreenReaderText>
+        </span>
+      );
+
+    return (
+      <span className={this.getClasses()} style={this.getStyles()}>
+        {content}
+      </span>
+    );
   }
 
   private getClasses() {

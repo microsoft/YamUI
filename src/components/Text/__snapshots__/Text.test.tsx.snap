@@ -58,6 +58,40 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 </span>
 `;
 
+exports[`<Text /> with screenreader text empty string matches its snapshot 1`] = `
+<span
+  className="y-text"
+  style={Object {}}
+>
+  <span>
+    <span
+      aria-hidden={true}
+    >
+      test content
+    </span>
+    <ScreenreaderText />
+  </span>
+</span>
+`;
+
+exports[`<Text /> with screenreader text matches its snapshot 1`] = `
+<span
+  className="y-text"
+  style={Object {}}
+>
+  <span>
+    <span
+      aria-hidden={true}
+    >
+      test content
+    </span>
+    <ScreenreaderText>
+      SCREENREADER TEXT
+    </ScreenreaderText>
+  </span>
+</span>
+`;
+
 exports[`<Text /> with uppercase matches its snapshot 1`] = `
 <span
   className="y-text y-text__uppercase"
