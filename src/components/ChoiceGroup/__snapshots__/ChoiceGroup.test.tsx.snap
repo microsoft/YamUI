@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChoiceGroup /> with all props matches its snapshot 1`] = `
+<ChoiceGroup
+  className="y-choice-group TEST_CLASSNAME"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "key": "A",
+        "text": "Option a",
+      },
+      Object {
+        "key": "B",
+        "text": "Option b",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`<ChoiceGroup /> with default options matches its snapshot 1`] = `
+<ChoiceGroup
+  className="y-choice-group"
+  onChange={[Function]}
+  options={Array []}
+/>
+`;
