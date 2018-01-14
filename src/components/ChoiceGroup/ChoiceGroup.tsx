@@ -38,7 +38,9 @@ export interface ChoiceGroupProps extends BaseComponentProps {
 }
 
 /**
- * TODO
+ * The ChoiceGroup component, also known as radio buttons, let users select one
+ * option from two or more choices. Each option is represented by one ChoiceGroup
+ * button; a user can select only one ChoiceGroup in a button group.
  */
 export default class ChoiceGroup extends React.Component<ChoiceGroupProps, {}> {
   render() {

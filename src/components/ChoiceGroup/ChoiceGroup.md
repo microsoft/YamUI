@@ -1,6 +1,6 @@
 ### Examples
-Basic usage:
 
+Controlled:
 ```js { "props": { "data-example": "controlled" } }
 const { GutterSize } = require('../Block');
 
@@ -37,10 +37,43 @@ class ControlledChoiceGroup extends React.Component {
   }
 }
 
-<div>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the <strong>ChoiceGroup</strong> is controlled by the parent component using the <strong>selectedKey</strong> and <strong>onChange</strong> props.
-  </Block>
-  <ControlledChoiceGroup />
-</div>
+<ControlledChoiceGroup />
+```
+
+Custom Labels:
+```js { "props": { "data-example": "customLabels" } }
+const { GutterSize } = require('../Block');
+
+const options = [
+  {
+    key: 'A',
+    onRenderField: (props, render) => {
+      return (
+        <Block>
+          { render(props) }
+          <Text>
+            <strong>Label Bolded:</strong> some extra information goes here
+          </Text>
+        </Block>
+      );
+    }
+  },
+  {
+    key: 'B',
+    onRenderField: (props, render) => {
+      return (
+        <Block>
+          { render(props) }
+          <Text>
+            <strong>Other Label Bolded:</strong> some extra information goes here
+          </Text>
+        </Block>
+      );
+    }
+  },
+];
+
+<ChoiceGroup
+  options={options}
+/>
 ```
