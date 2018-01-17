@@ -20,6 +20,7 @@ class ControlledChoiceGroup extends React.Component {
 
     return (
       <ChoiceGroup
+        label="Basic Choice Group"
         options={options}
         selectedKey={selectedKey}
         onChange={this.handleChanged}
