@@ -78,6 +78,7 @@ export default class ChoiceGroup extends React.Component<ChoiceGroupProps, {}> {
         className={join(['y-choice-group', this.props.className])}
         options={this.props.options}
         onChange={this.handleChange}
+        selectedKey={this.props.selectedKey}
       />
     );
   }
