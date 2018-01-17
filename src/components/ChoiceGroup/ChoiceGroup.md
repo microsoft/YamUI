@@ -77,14 +77,14 @@ With Images:
 const options = [
   {
     key: 'A',
-    text: 'A',
+    text: 'Logo',
     imageSrc: 'logo.png',
     selectedImageSrc: 'logo.png',
     imageSize: { width: 32, height: 32 },
   },
   {
     key: 'B',
-    text: 'B',
+    text: 'User',
     imageSrc: 'user.png',
     selectedImageSrc: 'user.png',
     imageSize: { width: 32, height: 32 },

@@ -7,15 +7,40 @@ import {
   ChoiceGroup as FabricChoiceGroup,
   IChoiceGroupOption,
 } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { IRenderFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { join } from '../../util/classNames';
 import './ChoiceGroup.css';
 
 export interface ChoiceGroupOption extends React.HTMLAttributes<HTMLElement | HTMLInputElement> {
+  /**
+   * A required key to uniquely identify the option.
+   */
   key: string;
+
+  /**
+   * The text string for the option.
+   */
   text: string;
-  imageSrc: string;
-  selecededImageSrc: string;
-  imageSize: { width: number, height: number };
+
+  /**
+   * The src of image for choice field.
+   */
+  imageSrc?: string;
+
+  /**
+   * The src of image for choice field which is selected.
+   */
+  selecededImageSrc?: string;
+
+  /**
+   * The width and height of the image in px for choice field.
+   */
+  imageSize?: { width: number; height: number };
+
+  /**
+   * Optional override of option render
+   */
+  onRenderField?: IRenderFunction<ChoiceGroupOption>;
 }
 
 export interface ChoiceGroupProps extends BaseComponentProps {
@@ -49,6 +74,7 @@ export default class ChoiceGroup extends React.Component<ChoiceGroupProps, {}> {
   render() {
     return (
       <FabricChoiceGroup
+        label={this.props.label}
         className={join(['y-choice-group', this.props.className])}
         options={this.props.options}
         onChange={this.handleChange}
