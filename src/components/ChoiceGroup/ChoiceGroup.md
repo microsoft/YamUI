@@ -2,8 +2,6 @@
 
 Controlled:
 ```js { "props": { "data-example": "controlled" } }
-const { GutterSize } = require('../Block');
-
 const options = [
   { key: 'A', text: 'Option A' },
   { key: 'B', text: 'Option B' },
@@ -13,9 +11,7 @@ const options = [
 class ControlledChoiceGroup extends React.Component {
   constructor() {
     super();
-
     this.state = {};
-
     this.handleChanged = this.handleChanged.bind(this);
   }
 
@@ -42,8 +38,6 @@ class ControlledChoiceGroup extends React.Component {
 
 Custom Labels:
 ```js { "props": { "data-example": "customLabels" } }
-const { GutterSize } = require('../Block');
-
 const options = [
   {
     key: 'A',
@@ -70,6 +64,30 @@ const options = [
         </Block>
       );
     }
+  },
+];
+
+<ChoiceGroup
+  options={options}
+/>
+```
+
+With Images:
+```js { "props": { "data-example": "withImages" } }
+const options = [
+  {
+    key: 'A',
+    text: 'A',
+    imageSrc: 'logo.png',
+    selectedImageSrc: 'logo.png',
+    imageSize: { width: 32, height: 32 },
+  },
+  {
+    key: 'B',
+    text: 'B',
+    imageSrc: 'user.png',
+    selectedImageSrc: 'user.png',
+    imageSize: { width: 32, height: 32 },
   },
 ];
 

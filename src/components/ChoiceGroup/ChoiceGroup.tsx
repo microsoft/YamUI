@@ -13,6 +13,9 @@ import './ChoiceGroup.css';
 export interface ChoiceGroupOption extends React.HTMLAttributes<HTMLElement | HTMLInputElement> {
   key: string;
   text: string;
+  imageSrc: string;
+  selecededImageSrc: string;
+  imageSize: { width: number, height: number };
 }
 
 export interface ChoiceGroupProps extends BaseComponentProps {
