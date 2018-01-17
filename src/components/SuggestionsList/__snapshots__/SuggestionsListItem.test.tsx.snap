@@ -10,6 +10,7 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=false rend
     imageContent={
       <Avatar
         borderType="round"
+        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
@@ -44,6 +45,7 @@ exports[`<SuggestionsListItem /> when isHovered=false when isSelected=true rende
     imageContent={
       <Avatar
         borderType="round"
+        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
@@ -78,6 +80,7 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=false rende
     imageContent={
       <Avatar
         borderType="round"
+        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
@@ -112,6 +115,7 @@ exports[`<SuggestionsListItem /> when isHovered=true when isSelected=true render
     imageContent={
       <Avatar
         borderType="round"
+        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
