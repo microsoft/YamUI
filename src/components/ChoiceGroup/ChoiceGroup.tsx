@@ -7,7 +7,6 @@ import {
   ChoiceGroup as FabricChoiceGroup,
   IChoiceGroupOption,
 } from 'office-ui-fabric-react/lib/ChoiceGroup';
-import { IRenderFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { join } from '../../util/classNames';
 import './ChoiceGroup.css';
 
@@ -40,7 +39,7 @@ export interface ChoiceGroupOption extends React.HTMLAttributes<HTMLElement | HT
   /**
    * Optional override of option render
    */
-  onRenderField?: IRenderFunction<ChoiceGroupOption>;
+  onRenderLabel?: (option: IChoiceGroupOption) => JSX.Element;
 }
 
 export interface ChoiceGroupProps extends BaseComponentProps {

@@ -44,28 +44,24 @@ class ControlledChoiceGroup extends React.Component {
       label="Custom Labels"
       options={[
         {
-          key: 'A',
-          onRenderField: (props, render) => {
+          key: "A",
+          text: "Label Bolded: some extra information goes here",
+          onRenderLabel: () => {
             return (
-              <Block>
-                { render(props) }
-                <Text>
-                  <strong>Label Bolded:</strong> some extra information goes here
-                </Text>
-              </Block>
+              <span className="ms-Label">
+                <strong>Label Bolded:</strong> some extra information goes here
+              </span>
             );
           }
         },
         {
           key: 'B',
-          onRenderField: (props, render) => {
+          text: "Other Label Bolded: some extra information goes here",
+          onRenderLabel: () => {
             return (
-              <Block>
-                { render(props) }
-                <Text>
-                  <strong>Other Label Bolded:</strong> some extra information goes here
-                </Text>
-              </Block>
+              <span className="ms-Label">
+                <strong>Other Label Bolded:</strong> some extra information goes here
+              </span>
             );
           }
         },
