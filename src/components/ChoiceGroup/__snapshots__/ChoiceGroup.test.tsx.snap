@@ -3,6 +3,7 @@
 exports[`<ChoiceGroup /> with all props matches its snapshot 1`] = `
 <ChoiceGroup
   className="y-choice-group TEST_CLASSNAME"
+  label="TEST_LABEL"
   onChange={[Function]}
   options={
     Array [
@@ -16,6 +17,7 @@ exports[`<ChoiceGroup /> with all props matches its snapshot 1`] = `
       },
     ]
   }
+  selectedKey="A"
 />
 `;
 
