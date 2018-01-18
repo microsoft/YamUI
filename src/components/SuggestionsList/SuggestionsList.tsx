@@ -14,7 +14,7 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * The target that the Callout should try to position itself based on.
    */
-  target:  HTMLElement | IPoint;
+  target: HTMLElement | IPoint;
   /**
    * The active search that produced the current state.
    */
@@ -55,10 +55,6 @@ export interface SuggestionItemGroupProps {
   items: SuggestionItem[];
 }
 
-export interface SuggestionsListState {
-  hoveredId: string | number | null;
-}
-
 const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
   return !!props.groupedItems && props.groupedItems.length > 0;
 };
@@ -69,10 +65,7 @@ const withStatusClass = 'y-suggestions-list--with-status';
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
-export default class SuggestionsList extends React.PureComponent<
-  SuggestionsListProps,
-  SuggestionsListState
-> {
+export default class SuggestionsList extends React.PureComponent<SuggestionsListProps, {}> {
   constructor() {
     super();
     this.state = { hoveredId: null };
@@ -120,22 +113,19 @@ export default class SuggestionsList extends React.PureComponent<
     const items = group.items.map(this.getResultItem);
     return (
       <li key={group.title}>
-        <ul onMouseLeave={this.onMouseLeave}>{items}</ul>
+        <ul>{items}</ul>
       </li>
     );
   }
 
   private getResultItem = (item: SuggestionItem) => {
     const { searchText, selectedId, onItemSelected } = this.props;
-    const isHovered = item.id === this.state.hoveredId;
     const isSelected = item.id === selectedId;
     return (
       <li key={item.id}>
         <SuggestionsListItem
           searchText={searchText}
-          isHovered={isHovered}
           isSelected={isSelected}
-          onHover={this.onHover}
           onSelect={onItemSelected}
           {...item}
         />
@@ -161,8 +151,4 @@ export default class SuggestionsList extends React.PureComponent<
       </Block>
     );
   }
-
-  private onHover = (hoveredId: string | number) => this.setState({ hoveredId });
-
-  private onMouseLeave = () => this.setState({ hoveredId: null });
 }

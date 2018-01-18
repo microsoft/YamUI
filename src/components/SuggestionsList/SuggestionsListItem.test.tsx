@@ -7,12 +7,10 @@ describe('<SuggestionsListItem />', () => {
   let rendered: ShallowWrapper<SuggestionsListItemProps, {}>;
   let onHover: jest.Mock<{}>;
   let onSelect: jest.Mock<{}>;
-  let isHovered: boolean;
   let isSelected: boolean;
 
   const getProps = () => {
     return {
-      isHovered,
       isSelected,
       onHover,
       onSelect,
@@ -29,70 +27,48 @@ describe('<SuggestionsListItem />', () => {
     onSelect = jest.fn();
   });
 
-  describe('when isHovered=true', () => {
-    beforeEach(() => {
-      isHovered = true;
-    });
-
-    describe('when isSelected=true', () => {
-      beforeEach(() => {
-        isSelected = true;
-        rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      });
-
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-    });
-
-    describe('when isSelected=false', () => {
-      beforeEach(() => {
-        isSelected = false;
-        rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      });
-
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-    });
-  });
-
-  describe('when isHovered=false', () => {
-    beforeEach(() => {
-      isHovered = false;
-    });
-
-    describe('when isSelected=true', () => {
-      beforeEach(() => {
-        isSelected = true;
-        rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      });
-
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-    });
-
-    describe('when isSelected=false', () => {
-      beforeEach(() => {
-        isSelected = false;
-        rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      });
-
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-    });
-  });
-
   describe('when hovering', () => {
     beforeEach(() => {
       rendered = shallow(<SuggestionsListItem {...getProps()} />);
       rendered.simulate('mouseEnter');
     });
 
-    it('calls props.onHover', () => {
-      expect(onHover).toBeCalled();
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('when unhovering', () => {
+    beforeEach(() => {
+      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+      rendered.setState({ isHovered: true });
+      rendered.simulate('mouseLeave');
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('when isSelected=true', () => {
+    beforeEach(() => {
+      isSelected = true;
+      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('when isSelected=false', () => {
+    beforeEach(() => {
+      isSelected = false;
+      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
     });
   });
 
