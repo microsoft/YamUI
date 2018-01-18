@@ -3,7 +3,6 @@
 
 .y-fixedGridRow {
   display: flex;
-  flex-basis: 100%;
 }
 
 .y-fixedGridRow__bottomSpacing-xxLarge {
@@ -33,12 +32,15 @@
 
   /* Flexible (non-fixed) flex children must have a min-width to allow them to shrink narrower than the
      possible width of their text content. This is required for ellipsis to work within FixedGridColumn.
+     Setting flex-basis: 100% for non-fixed columns also makes sure this works in IE11.
      https://css-tricks.com/flexbox-truncated-text/ */
+  flex-basis: 100%;
   min-width: 0;
 }
 /* Fixed columns do not grow, only shrink to fit their content */
 .y-fixedGridColumn__isFixed {
   flex-grow: 0;
+  flex-basis: auto;
   min-width: auto;
 }
 /* Fixed columns with a specified width also do not shrink, just remain their fixed pixel width */
