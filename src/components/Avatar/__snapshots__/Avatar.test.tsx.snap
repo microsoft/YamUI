@@ -7,6 +7,7 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -25,6 +26,7 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -43,6 +45,7 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -61,6 +64,7 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -86,6 +90,7 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -104,6 +109,7 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -122,6 +128,7 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     imageUrl="test.jpg"
     presence={0}
     primaryText="NAME"
@@ -140,6 +147,7 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
   <Persona
     hidePersonaDetails={true}
     imageAlt=""
+    imageShouldFadeIn={false}
     presence={0}
     primaryText="First Last"
     size={12}

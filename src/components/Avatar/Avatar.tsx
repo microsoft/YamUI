@@ -64,6 +64,7 @@ export default class Avatar extends React.Component<AvatarProps, {}> {
   static defaultProps: Partial<AvatarProps> = {
     borderType: AvatarBorderType.ROUND,
     size: AvatarSize.MEDIUM,
+    imageShouldFadeIn: false,
   };
 
   render() {
