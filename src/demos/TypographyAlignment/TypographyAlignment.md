@@ -126,3 +126,46 @@ const { ButtonSize } = require('../../components/Button');
   </FixedGridRow>
 </Block>
 ```
+
+```js { "props": { "data-example": "ellipsis block within fixed grid" } }
+const { GutterSize } = require('../../components/Block');
+const longText = 'The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.';
+
+<LayoutList direction="vertical" gutterSize={GutterSize.XLARGE}>
+  <LayoutListItem>
+    <Heading level="6">Short text in fixed column</Heading>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true}>
+        Short text
+      </FixedGridColumn>
+      <FixedGridColumn>
+        <Block ellipsis={true}>{longText}</Block>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </LayoutListItem>
+
+  <LayoutListItem>
+    <Heading level="6">Short text in fixed column with width</Heading>
+    <FixedGridRow>
+      <FixedGridColumn fixed={true} width={200}>
+        Short text
+      </FixedGridColumn>
+      <FixedGridColumn>
+        <Block ellipsis={true}>{longText}</Block>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </LayoutListItem>
+
+  <LayoutListItem>
+    <Heading level="6">No fixed columns</Heading>
+    <FixedGridRow>
+      <FixedGridColumn>
+        <Block ellipsis={true}>{longText}</Block>
+      </FixedGridColumn>
+      <FixedGridColumn>
+        <Block ellipsis={true}>{longText}</Block>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </LayoutListItem>
+</LayoutList>
+```
