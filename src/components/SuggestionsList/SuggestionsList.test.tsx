@@ -1,10 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { default as SuggestionsList, SuggestionsListProps, SuggestionsListState } from '.';
+import { default as SuggestionsList, SuggestionsListProps } from '.';
 
 describe('<SuggestionsList />', () => {
-  let rendered: ShallowWrapper<SuggestionsListProps, SuggestionsListState>;
+  let rendered: ShallowWrapper<SuggestionsListProps, {}>;
   let onItemSelected: jest.Mock<{}>;
   let options: Partial<SuggestionsListProps>;
 

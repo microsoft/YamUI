@@ -13,18 +13,14 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={false}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -37,7 +33,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
 
 exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `
 Object {
-  "hoveredId": "1",
+  "hoveredId": null,
 }
 `;
 
@@ -54,18 +50,14 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={true}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -89,18 +81,14 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={false}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -147,18 +135,14 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={false}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -178,7 +162,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
 
 exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `
 Object {
-  "hoveredId": "1",
+  "hoveredId": null,
 }
 `;
 
@@ -195,18 +179,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={true}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -237,18 +217,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
     className="y-suggestions-list--results"
   >
     <li>
-      <ul
-        onMouseLeave={[Function]}
-      >
+      <ul>
         <li>
           <SuggestionsListItem
             description="description"
             id="id"
             imageUrl="imageUrl"
-            isHovered={false}
             isSelected={false}
             name="name"
-            onHover={[Function]}
             onSelect={[MockFunction]}
             searchText="searchText"
           />

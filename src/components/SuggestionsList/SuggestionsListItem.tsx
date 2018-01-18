@@ -15,10 +15,12 @@ export interface SuggestionItem {
 
 export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseComponentProps {
   searchText: string;
-  isHovered: boolean;
   isSelected: boolean;
-  onHover(id: string | number): void;
   onSelect(id: string | number): void;
+}
+
+export interface SuggestionsListItemState {
+  isHovered: boolean;
 }
 
 const baseClass = 'y-suggestions-list-item';
@@ -37,14 +39,30 @@ const getHighlightedName = (name: string, search: string) => {
   });
 };
 
-export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
+export default class SuggestionsListItem extends React.PureComponent<
+  SuggestionsListItemProps,
+  SuggestionsListItemState
+> {
+  constructor() {
+    super();
+    this.state = {
+      isHovered: false,
+    };
+  }
+
   public render() {
-    const { isSelected, isHovered, name, searchText, imageUrl, description } = this.props;
+    const { isSelected, name, searchText, imageUrl, description } = this.props;
+    const { isHovered } = this.state;
     const avatar = <Avatar imageUrl={imageUrl} name={name} size={AvatarSize.SMALL} />;
     const className = isHovered ? hoveredClass : isSelected ? selectedClass : baseClass;
     const title = getHighlightedName(name, searchText);
     return (
-      <div onMouseDown={this.onMouseDown} onMouseEnter={this.onMouseEnter} className={className}>
+      <div
+        onMouseDown={this.onMouseDown}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+        className={className}
+      >
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}
@@ -60,5 +78,7 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     this.props.onSelect(item.id);
   }
 
-  private onMouseEnter = () => this.props.onHover(this.props.id);
+  private onMouseEnter = () => this.setState({ isHovered: true });
+
+  private onMouseLeave = () => this.setState({ isHovered: false });
 }
