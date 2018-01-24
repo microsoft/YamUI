@@ -24,25 +24,24 @@ Without props:
 With padding:
 
 ```js { "props": { "data-example": "with padding" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block padding={GutterSize.XXLARGE}>
+  <Block padding={6}>
     This example has <strong>padding: XXLARGE</strong>.
   </Block>
-  <Block padding={GutterSize.XLARGE}>
+  <Block padding={5}>
     This example has <strong>padding: XLARGE</strong>.
   </Block>
-  <Block padding={GutterSize.LARGE}>
+  <Block padding={4}>
     This example has <strong>padding: LARGE</strong>.
   </Block>
-  <Block padding={GutterSize.MEDIUM}>
+  <Block padding={3}>
     This example has <strong>padding: MEDIUM</strong>.
   </Block>
-  <Block padding={GutterSize.SMALL}>
+  <Block padding={2}>
     This example has <strong>padding: SMALL</strong>.
   </Block>
-  <Block padding={GutterSize.XSMALL}>
+  <Block padding={1}>
     This example has <strong>padding: XSMALL</strong>.
   </Block>
   <Block>
@@ -54,25 +53,24 @@ const { GutterSize } = require('.');
 Block can also have separate vertical and horizontal padding. With horizontal padding:
 
 ```js { "props": { "data-example": "with horizontal padding" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block horizontalPadding={GutterSize.XXLARGE}>
+  <Block horizontalPadding={6}>
     This example has <strong>horizontalPadding: XXLARGE</strong>.
   </Block>
-  <Block horizontalPadding={GutterSize.XLARGE}>
+  <Block horizontalPadding={5}>
     This example has <strong>horizontalPadding: XLARGE</strong>.
   </Block>
-  <Block horizontalPadding={GutterSize.LARGE}>
+  <Block horizontalPadding={4}>
     This example has <strong>horizontalPadding: LARGE</strong>.
   </Block>
-  <Block horizontalPadding={GutterSize.MEDIUM}>
+  <Block horizontalPadding={3}>
     This example has <strong>horizontalPadding: MEDIUM</strong>.
   </Block>
-  <Block horizontalPadding={GutterSize.SMALL}>
+  <Block horizontalPadding={2}>
     This example has <strong>horizontalPadding: SMALL</strong>.
   </Block>
-  <Block horizontalPadding={GutterSize.XSMALL}>
+  <Block horizontalPadding={1}>
     This example has <strong>horizontalPadding: XSMALL</strong>.
   </Block>
   <Block>
@@ -84,25 +82,24 @@ const { GutterSize } = require('.');
 With vertical padding:
 
 ```js { "props": { "data-example": "with vertical padding" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block verticalPadding={GutterSize.XXLARGE}>
+  <Block verticalPadding={6}>
     This example has <strong>verticalPadding: XXLARGE</strong>.
   </Block>
-  <Block verticalPadding={GutterSize.XLARGE}>
+  <Block verticalPadding={5}>
     This example has <strong>verticalPadding: XLARGE</strong>.
   </Block>
-  <Block verticalPadding={GutterSize.LARGE}>
+  <Block verticalPadding={4}>
     This example has <strong>verticalPadding: LARGE</strong>.
   </Block>
-  <Block verticalPadding={GutterSize.MEDIUM}>
+  <Block verticalPadding={3}>
     This example has <strong>verticalPadding: MEDIUM</strong>.
   </Block>
-  <Block verticalPadding={GutterSize.SMALL}>
+  <Block verticalPadding={2}>
     This example has <strong>verticalPadding: SMALL</strong>.
   </Block>
-  <Block verticalPadding={GutterSize.XSMALL}>
+  <Block verticalPadding={1}>
     This example has <strong>verticalPadding: XSMALL</strong>.
   </Block>
   <Block>
@@ -114,25 +111,24 @@ const { GutterSize } = require('.');
 With top gutter spacing:
 
 ```js { "props": { "data-example": "with top gutter spacing" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block topSpacing={GutterSize.XXLARGE}>
+  <Block topSpacing={6}>
     This example has <strong>topSpacing: XXLARGE</strong>.
   </Block>
-  <Block topSpacing={GutterSize.XLARGE}>
+  <Block topSpacing={5}>
     This example has <strong>topSpacing: XLARGE</strong>.
   </Block>
-  <Block topSpacing={GutterSize.LARGE}>
+  <Block topSpacing={4}>
     This example has <strong>topSpacing: LARGE</strong>.
   </Block>
-  <Block topSpacing={GutterSize.MEDIUM}>
+  <Block topSpacing={3}>
     This example has <strong>topSpacing: MEDIUM</strong>.
   </Block>
-  <Block topSpacing={GutterSize.SMALL}>
+  <Block topSpacing={2}>
     This example has <strong>topSpacing: SMALL</strong>.
   </Block>
-  <Block topSpacing={GutterSize.XSMALL}>
+  <Block topSpacing={1}>
     This example has <strong>topSpacing: XSMALL</strong>.
   </Block>
   <Block>
@@ -144,25 +140,24 @@ const { GutterSize } = require('.');
 With bottom gutter spacing:
 
 ```js { "props": { "data-example": "with bottom gutter spacing" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block bottomSpacing={GutterSize.XXLARGE}>
+  <Block bottomSpacing={6}>
     This example has <strong>bottomSpacing: XXLARGE</strong>.
   </Block>
-  <Block bottomSpacing={GutterSize.XLARGE}>
+  <Block bottomSpacing={5}>
     This example has <strong>bottomSpacing: XLARGE</strong>.
   </Block>
-  <Block bottomSpacing={GutterSize.LARGE}>
+  <Block bottomSpacing={4}>
     This example has <strong>bottomSpacing: LARGE</strong>.
   </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={3}>
     This example has <strong>bottomSpacing: MEDIUM</strong>.
   </Block>
-  <Block bottomSpacing={GutterSize.SMALL}>
+  <Block bottomSpacing={2}>
     This example has <strong>bottomSpacing: SMALL</strong>.
   </Block>
-  <Block bottomSpacing={GutterSize.XSMALL}>
+  <Block bottomSpacing={1}>
     This example has <strong>bottomSpacing: XSMALL</strong>.
   </Block>
   <Block>
@@ -174,16 +169,15 @@ const { GutterSize } = require('.');
 With text alignment:
 
 ```js { "props": { "data-example": "with text alignment" } }
-const { GutterSize } = require('.');
 
 <div>
-  <Block textAlign="left" bottomSpacing={GutterSize.XXLARGE}>
+  <Block textAlign="left" bottomSpacing={6}>
     This example has <strong>textAlign: "left"</strong>.
   </Block>
-  <Block textAlign="center" bottomSpacing={GutterSize.XXLARGE}>
+  <Block textAlign="center" bottomSpacing={6}>
     This example has <strong>textAlign: "center"</strong>.
   </Block>
-  <Block textAlign="right" bottomSpacing={GutterSize.XXLARGE}>
+  <Block textAlign="right" bottomSpacing={6}>
     This example has <strong>textAlign: "right"</strong>.
   </Block>
 </div>
@@ -202,16 +196,16 @@ With ellipsis:
 Text colors:
 
 ```js { "props": { "data-example": "text colors" } }
-const { GutterSize, TextColor } = require('.');
+const { TextColor } = require('.');
 
 <div>
-  <Block textColor={TextColor.PRIMARY} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textColor={TextColor.PRIMARY} bottomSpacing={3}>
     This example has <strong>textColor: PRIMARY</strong>.
   </Block>
-  <Block textColor={TextColor.SECONDARY} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textColor={TextColor.SECONDARY} bottomSpacing={3}>
     This example has <strong>textColor: SECONDARY</strong>.
   </Block>
-  <Block textColor={TextColor.METADATA} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textColor={TextColor.METADATA} bottomSpacing={3}>
     This example has <strong>textColor: METADATA</strong>.
   </Block>
   <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
@@ -225,28 +219,28 @@ const { GutterSize, TextColor } = require('.');
 Text sizes:
 
 ```js { "props": { "data-example": "text sizes" } }
-const { GutterSize, TextSize } = require('.');
+const { TextSize } = require('.');
 
 <div>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
+  <Block bottomSpacing={3}>
     This is text without a size specified. It will inherit size and line-height via CSS from its parent.
   </Block>
-  <Block textSize={TextSize.XXLARGE} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.XXLARGE} bottomSpacing={3}>
     This example has <strong>size: XXLARGE</strong>.
   </Block>
-  <Block textSize={TextSize.XLARGE} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.XLARGE} bottomSpacing={3}>
     This example has <strong>size: XLARGE</strong>.
   </Block>
-  <Block textSize={TextSize.LARGE} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.LARGE} bottomSpacing={3}>
     This example has <strong>size: LARGE</strong>.
   </Block>
-  <Block textSize={TextSize.MEDIUM} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.MEDIUM} bottomSpacing={3}>
     This example has <strong>size: MEDIUM</strong>.
   </Block>
-  <Block textSize={TextSize.MEDIUM_SUB} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.MEDIUM_SUB} bottomSpacing={3}>
     This example has <strong>size: MEDIUM_SUB</strong>.
   </Block>
-  <Block textSize={TextSize.SMALL} bottomSpacing={GutterSize.MEDIUM}>
+  <Block textSize={TextSize.SMALL} bottomSpacing={3}>
     This example has <strong>size: SMALL</strong>.
   </Block>
   <Block textSize={TextSize.XSMALL}>
@@ -258,21 +252,20 @@ const { GutterSize, TextSize } = require('.');
 With positive push:
 
 ```js { "props": { "data-example": "with positive push" } }
-const { GutterSize } = require('.');
 const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{children}</div>;
 
 <MarginWrapper>
   <Block push={3}>
-    <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Block bottomSpacing={3}>
       The <strong>Block</strong> component accepts a <strong>push</strong> prop, a number of pixels to adjust the component's top spacing. A positive value will push the component down, a negative value will pull it up. This is handy when a feature requires manual pixel adjustment between blocks of content to maintain our vertical rhythm.
     </Block>
-    <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Block bottomSpacing={3}>
       This example shows a <strong>Block</strong> below an existing <em>20px</em> of margin. It specifies <strong>push: 3</strong>, which pushes it down an additional <em>3px</em> and creates a total top spacing of <em>23px</em>.
     </Block>
-    <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Block bottomSpacing={3}>
       Components should generally only manage their bottom spacing and rely on the component above them to do the same. You should only ever need to provide a <strong>push</strong> value for minor adjustments between <em>-3</em> and <em>3</em>, and you should only need to deal with <strong>push</strong> to reset the vertical rhythm (an imaginary <em>4px</em> grid).
     </Block>
-    <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Block bottomSpacing={3}>
       Note that YamUI actually uses <em>rem</em> instead of <em>px</em> for its font-related units, and converts the push pixel value to <em>rem</em>. YamUI has set <em>0.1rem</em> equal to <em>1px</em>.
     </Block>
   </Block>

@@ -2,35 +2,34 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import Block, { TextSize, GutterSize } from '../Block';
+import Block, { TextSize } from '../Block';
 import { HeadingLevel, HeadingSize } from './enums';
 import './Heading.css';
-
 
 const blockPropsMap = {
   1: {
     textSize: TextSize.XXLARGE,
-    bottomSpacing: GutterSize.SMALL,
+    bottomSpacing: 2,
   },
   2: {
     textSize: TextSize.XLARGE,
-    bottomSpacing: GutterSize.SMALL,
+    bottomSpacing: 2,
   },
   3: {
     textSize: TextSize.LARGE,
-    bottomSpacing: GutterSize.MEDIUM,
+    bottomSpacing: 3,
   },
   4: {
     textSize: TextSize.LARGE,
-    bottomSpacing: GutterSize.MEDIUM,
+    bottomSpacing: 3,
   },
   5: {
     textSize: TextSize.MEDIUM,
-    bottomSpacing: GutterSize.MEDIUM,
+    bottomSpacing: 3,
   },
   6: {
     textSize: TextSize.MEDIUM_SUB,
-    bottomSpacing: GutterSize.SMALL,
+    bottomSpacing: 2,
   },
 };
 
