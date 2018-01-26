@@ -4,7 +4,7 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
   className="y-navigationLink"
   href="test.html"
-  rel="nofollow noreferrer"
+  rel="nofollow noopener noreferrer"
   target="_blank"
 >
   link content

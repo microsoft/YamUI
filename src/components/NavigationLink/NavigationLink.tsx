@@ -35,7 +35,7 @@ export default class NavigationLink extends React.Component<NavigationLinkProps,
   render() {
     const { href, newWindow, title, children } = this.props;
     const target = newWindow ? '_blank' : undefined;
-    const rel = newWindow ? 'nofollow noreferrer' : undefined;
+    const rel = newWindow ? 'nofollow noopener noreferrer' : undefined;
 
     return (
       <a
