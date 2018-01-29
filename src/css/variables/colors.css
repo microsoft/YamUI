@@ -38,3 +38,6 @@ $spinnerColor__dark: $color__white;
 
 $suggestionsListItemBackgroundColor__mouseHover: $color__popRock;
 $suggestionsListItemBackgroundColor__keyboardNavigate: $color__altRock;
+
+$choiceGroupBackgroundColor: $color__white;
+$choiceGroupRadioButtonCheck: $color__river;

@@ -20,6 +20,7 @@ loadTheme({
     neutralLighter: '#f3f5f8',
     neutralDark: '#dde0e6',
     redDark: '#d1423b',
+    themeDark: '#6c98d9',
   },
   fonts: {
     tiny: fontStyles,
