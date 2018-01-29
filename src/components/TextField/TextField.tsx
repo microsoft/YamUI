@@ -1,12 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
+import { getBaseTextFieldProps, BaseTextFieldProps, ITextField } from '../BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react/lib/TextField';
 
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
+
+export { ITextField };
 
 export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
@@ -47,6 +49,8 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
         onChanged={this.props.unifiedOnChange}
         componentRef={this.setRef}
         {...getBaseTextFieldProps(this.props)}
+        componentRef={this.props.componentRef}
+        maxLength={this.props.maxLength}
       />
     );
   }

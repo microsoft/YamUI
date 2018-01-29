@@ -2,7 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
-import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
+import DebouncedOnChange, {
+  DebouncedOnChangeProps,
+  DebouncedOnChangePrivateProps,
+} from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import { join } from '../../util/classNames';
 import '../BaseTextField/BaseTextField.css';

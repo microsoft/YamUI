@@ -20,11 +20,11 @@ export interface <%= name %>Props extends BaseComponentProps {
  * documentation.
  */
 export default class <%= name %> extends React.Component<<%= name %>Props> {
-  static defaultProps = {
+  public static defaultProps = {
     type: <%= name %>Type.BLACK,
   };
 
-  render() {
+  public render() {
     const { type } = this.props;
 
     return (

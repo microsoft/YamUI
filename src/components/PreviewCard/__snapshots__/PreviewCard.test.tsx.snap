@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
+<Box
+  className="y-previewCard TEST_CLASSNAME"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with default options matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;

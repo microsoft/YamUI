@@ -12,6 +12,7 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
   disabled={true}
   errorMessage="ERROR MESSAGE"
   label="LABEL"
+  maxLength={100}
   multiline={false}
   onBeforeChange={[Function]}
   onBlur={[MockFunction onBlur]}
