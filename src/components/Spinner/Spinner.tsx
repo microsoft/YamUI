@@ -27,6 +27,10 @@ export enum SpinnerColor {
    */
   LIGHT = 'light',
   /**
+   * Light theme spinner color with gray text.
+   */
+  METADATA = 'metadata',
+  /**
    * Dark theme.
    */
   DARK = 'dark',
@@ -55,6 +59,11 @@ export interface SpinnerProps extends BaseComponentProps {
    * @default SpinnerSize.MEDIUM
    */
   size?: SpinnerSize;
+
+  /**
+   * Will center the Spinner horizontally within its container.
+   */
+  centered?: boolean;
 }
 
 /**
@@ -62,13 +71,13 @@ export interface SpinnerProps extends BaseComponentProps {
  * things are processing. It is shown when we're unsure how long a task will take.
  */
 export default class Spinner extends React.Component<SpinnerProps, {}> {
-  static defaultProps: Partial<SpinnerProps> = {
+  public static defaultProps: Partial<SpinnerProps> = {
     hideText: false,
     color: SpinnerColor.LIGHT,
     size: SpinnerSize.MEDIUM,
   };
 
-  render() {
+  public render() {
     const { text, hideText } = this.props;
 
     const textComponent = hideText ? (
@@ -86,9 +95,14 @@ export default class Spinner extends React.Component<SpinnerProps, {}> {
   }
 
   private getClasses() {
-    const { className, color, size } = this.props;
+    const { centered, className, color, size } = this.props;
 
     const classes: string[] = ['y-spinner', `y-spinner__color-${color}`, `y-spinner__size-${size}`];
+
+    if (centered) {
+      classes.push('y-spinner__centered');
+    }
+
     if (className) {
       classes.push(className);
     }
@@ -107,9 +121,15 @@ export default class Spinner extends React.Component<SpinnerProps, {}> {
 
   private getLabelProps(): TextProps {
     const { color, size } = this.props;
+    let textColor = TextColor.PRIMARY;
+    if (color === SpinnerColor.DARK) {
+      textColor = TextColor.WHITE;
+    } else if (color === SpinnerColor.METADATA) {
+      textColor = TextColor.METADATA;
+    }
 
     return {
-      color: color === SpinnerColor.DARK ? TextColor.WHITE : TextColor.PRIMARY,
+      color: textColor,
       size: size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB,
       className: 'y-spinner--label',
     };

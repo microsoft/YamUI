@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
+import { getBaseTextFieldProps, BaseTextFieldProps, ITextField } from '../BaseTextField';
 import DebouncedOnChange, {
   DebouncedOnChangeProps,
   DebouncedOnChangePrivateProps,
@@ -9,6 +9,8 @@ import DebouncedOnChange, {
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
+
+export { ITextField };
 
 export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
@@ -23,7 +25,7 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
 
   /**
    * Whether or not the textfield is underlined.
-   **/
+   */
   underlined?: boolean;
 }
 
@@ -32,7 +34,9 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
 class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
-  render() {
+  private textFieldRef: ITextField;
+
+  public render() {
     return (
       <FabricTextField
         className={this.getClasses()}
@@ -41,11 +45,22 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
         underlined={this.props.underlined}
         onChanged={this.props.unifiedOnChange}
         {...getBaseTextFieldProps(this.props)}
+        componentRef={this.setRef}
+        maxLength={this.props.maxLength}
       />
     );
   }
 
-  getClasses() {
+  public focus() {
+    this.textFieldRef && this.textFieldRef.focus && this.textFieldRef.focus();
+  }
+
+  private setRef = (component: ITextField) => {
+    this.textFieldRef = component;
+    this.props.componentRef && this.props.componentRef(component);
+  };
+
+  private getClasses() {
     const { className, prefix, suffix } = this.props;
     const classes = ['y-base-text-field', 'y-text-field'];
 

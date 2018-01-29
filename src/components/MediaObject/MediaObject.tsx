@@ -78,12 +78,16 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
     const imageColumnClass = `y-media-object__size-${size}--image`;
 
     const titleContentChild = titleContent && (
-      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>{titleContent}</MediaObjectTitle>
+      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>
+        {titleContent}
+      </MediaObjectTitle>
     );
     const metadataContentChild = this.showMetadata() && (
-      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>{metadataContent}</MediaObjectMetadata>
+      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>
+        {metadataContent}
+      </MediaObjectMetadata>
     );
-    const extraContentChild = this.showExtra() && (
+    const extraContentChild = extraContent && (
       <MediaObjectExtra ellipsis={!allowTextWrap}>{extraContent}</MediaObjectExtra>
     );
 
@@ -131,15 +135,5 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
       return false;
     }
     return true;
-  }
-
-  private showExtra() {
-    const { extraContent, size } = this.props;
-
-    if (!extraContent) {
-      return false;
-    }
-
-    return size === MediaObjectSize.XLARGE;
   }
 }

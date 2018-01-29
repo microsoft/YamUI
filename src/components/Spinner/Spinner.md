@@ -93,3 +93,8 @@ const { SpinnerColor, SpinnerSize } = require('.');
   </tbody>
 </table>
 ```
+
+Centered within its container:
+
+```js { "props": { "data-example": "centered" } }
+<Spinner text="Loading" centered={true} />
