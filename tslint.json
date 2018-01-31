@@ -4,16 +4,17 @@
     "tslint-react"
   ],
   "rules": {
+    "max-line-length": [
+      true,
+      120
+    ],
+    "file-header": [true, "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "],
     "import-name": false,
     "variable-name": [
       true,
       "check-format",
       "allow-pascal-case"
     ],
-    "max-line-length": [
-      true,
-      120
-    ],
-    "file-header": [true, "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "]
+    "semicolon": [true, "always", "ignore-bound-class-methods"]
   }
 }
