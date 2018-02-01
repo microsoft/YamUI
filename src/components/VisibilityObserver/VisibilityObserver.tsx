@@ -4,7 +4,7 @@ import * as React from 'react';
 import Observer from 'react-intersection-observer';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 
-export interface VisibleRenderProps extends BaseComponentProps {
+export interface VisibilityObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the component is scrolled into view.
    */
@@ -16,14 +16,14 @@ export interface VisibleRenderProps extends BaseComponentProps {
   onLeave?: () => void;
 
   /**
-   * Render prop to return child content when the component is visible.
+   * Render prop to return child content when the component is visible in the viewport.
    */
-  whenInView?: () => React.ReactNode;
+  renderInView?: () => React.ReactNode;
 
   /**
-   * Render prop to return child content when the component is visible.
+   * Render prop to return child content when the component is not visible in the viewport.
    */
-  whenOutOfView?: () => React.ReactNode;
+  renderOutOfView?: () => React.ReactNode;
 
   /**
    * Wrapper element tag name.
@@ -43,9 +43,9 @@ export interface VisibleRenderProps extends BaseComponentProps {
 }
 
 /**
- * VisibleRender allows for conditional child rendering and callbacks when scrolled in or out of view.
+ * IntersectionObserver allows for conditional child rendering and callbacks when scrolled in or out of view.
  */
-export default class VisibleRenderer extends React.Component<VisibleRenderProps> {
+export default class VisibilityObserver extends React.Component<VisibilityObserverProps> {
   public render() {
     const { rootMargin, tag } = this.props;
 
@@ -60,13 +60,13 @@ export default class VisibleRenderer extends React.Component<VisibleRenderProps>
   }
 
   private getObserverChildren = (isVisible: boolean) => {
-    const { whenInView, whenOutOfView } = this.props;
-    if (isVisible && whenInView) {
-      return whenInView();
+    const { renderInView, renderOutOfView } = this.props;
+    if (isVisible && renderInView) {
+      return renderInView();
     }
 
-    if (!isVisible && whenOutOfView) {
-      return whenOutOfView();
+    if (!isVisible && renderOutOfView) {
+      return renderOutOfView();
     }
 
     return null;

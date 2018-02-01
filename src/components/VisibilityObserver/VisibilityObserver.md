@@ -21,9 +21,10 @@ const renderOutOfView = (inView) => {
   );
 };
 
-<VisibleRender 
-  whenInView={renderInView}
-  whenOutOfView={renderOutOfView}
+
+<VisibilityObserver 
+  renderInView={renderInView}
+  renderOutOfView={renderOutOfView}
   onEnter={action('scrolled into view')}
   onLeave={action('scrolled out of view')}
 />

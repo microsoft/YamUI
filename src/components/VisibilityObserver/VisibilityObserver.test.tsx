@@ -2,13 +2,13 @@
 import * as React from 'react';
 import Observer from 'react-intersection-observer';
 import { shallow, ShallowWrapper } from 'enzyme';
-import VisibleRender, { VisibleRenderProps } from './index';
+import VisibilityObserver, { VisibilityObserverProps } from './index';
 
 type CallbackProp = ((inView: boolean) => void);
 type RenderProp = ((inView: boolean) => React.ReactNode);
 
-describe('<VisibleRender />', () => {
-  let component: ShallowWrapper<VisibleRenderProps, {}>;
+describe('<VisibilityObserver />', () => {
+  let component: ShallowWrapper<VisibilityObserverProps, {}>;
   const renderInView = () => <span>IN VIEW</span>;
   const renderOutOfView = () => <span>OUT OF VIEW</span>;
   let onEnterCallback: jest.Mock<{}>;
@@ -18,7 +18,7 @@ describe('<VisibleRender />', () => {
 
   describe('with minimal options', () => {
     beforeEach(() => {
-      component = shallow(<VisibleRender />);
+      component = shallow(<VisibilityObserver />);
       renderProp = component.find(Observer).prop('render') as RenderProp;
     });
 
@@ -37,9 +37,9 @@ describe('<VisibleRender />', () => {
       onLeaveCallback = jest.fn();
 
       component = shallow(
-        <VisibleRender
-          whenInView={renderInView}
-          whenOutOfView={renderOutOfView}
+        <VisibilityObserver
+          renderInView={renderInView}
+          renderOutOfView={renderOutOfView}
           onEnter={onEnterCallback}
           onLeave={onLeaveCallback}
           rootMargin="100px"

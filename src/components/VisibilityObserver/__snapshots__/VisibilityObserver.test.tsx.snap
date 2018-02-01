@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VisibilityObserver /> with all options Observer rendering in view render matches its snapshot 1`] = `
+<span>
+  IN VIEW
+</span>
+`;
+
+exports[`<VisibilityObserver /> with all options Observer rendering out of view render matches its snapshot 1`] = `
+<span>
+  OUT OF VIEW
+</span>
+`;
+
+exports[`<VisibilityObserver /> with all options matches its snapshot 1`] = `
+<Observer
+  onChange={[Function]}
+  render={[Function]}
+  rootMargin="100px"
+  tag="span"
+  threshold={0}
+  triggerOnce={false}
+/>
+`;
+
+exports[`<VisibilityObserver /> with minimal options matches its snapshot 1`] = `
+<Observer
+  onChange={[Function]}
+  render={[Function]}
+  tag="div"
+  threshold={0}
+  triggerOnce={false}
+/>
+`;
+
+exports[`<VisibilityObserver /> with minimal options renders empty content 1`] = `null`;
