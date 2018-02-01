@@ -5,7 +5,7 @@ import autobind from 'core-decorators/lib/autobind';
 import { join } from '../../util/classNames';
 import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { Key } from '../../util/enums';
+import { KeyCodes } from '../../util/enums';
 import ScreenreaderText from '../ScreenreaderText';
 import './Hovercard.css';
 
@@ -202,10 +202,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   @autobind
   private beginShow() {
-    this.showTimeout = window.setTimeout(
-      () => { this.show(); },
-      showDelay,
-    );
+    this.showTimeout = window.setTimeout(() => {
+      this.show();
+    }, showDelay);
   }
 
   @autobind
@@ -215,10 +214,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   @autobind
   private beginHide() {
-    this.hideTimeout = window.setTimeout(
-      () => { this.hide(); },
-      hideDelay,
-    );
+    this.hideTimeout = window.setTimeout(() => {
+      this.hide();
+    }, hideDelay);
   }
 
   @autobind
@@ -258,7 +256,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   @autobind
   private handleKeyDown(e: KeyboardEvent) {
-    if (e.keyCode === Key.Escape) {
+    if (e.keyCode === KeyCodes.escape) {
       this.hide();
     }
   }
