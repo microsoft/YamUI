@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KeyboardNavigationObserver /> in keyboard mode when mounted and mode is switched to mouse matches its snapshot 1`] = `
+<KeyboardNavigationObserver
+  onEnterKeyboardMode={[MockFunction]}
+  onEnterMouseMode={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  renderInKeyboardMode={[Function]}
+  renderInMouseMode={[Function]}
+>
+  <span>
+    MOUSE
+  </span>
+</KeyboardNavigationObserver>
+`;
+
+exports[`<KeyboardNavigationObserver /> in keyboard mode with all options matches its snapshot 1`] = `
+<span>
+  KEYBOARD
+</span>
+`;
+
+exports[`<KeyboardNavigationObserver /> in mouse mode when mounted and mode is switched to keyboard matches its snapshot 1`] = `
+<KeyboardNavigationObserver
+  onEnterKeyboardMode={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  onEnterMouseMode={[MockFunction]}
+  renderInKeyboardMode={[Function]}
+  renderInMouseMode={[Function]}
+>
+  <span>
+    KEYBOARD
+  </span>
+</KeyboardNavigationObserver>
+`;
+
+exports[`<KeyboardNavigationObserver /> in mouse mode with all options matches its snapshot 1`] = `
+<span>
+  MOUSE
+</span>
+`;
+
+exports[`<KeyboardNavigationObserver /> in mouse mode with minimal options matches its snapshot 1`] = `null`;
