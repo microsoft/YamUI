@@ -105,7 +105,7 @@ describe('<VisibilityObserver />', () => {
           renderOutOfView={renderOutOfView}
           onEnterView={onEnterCallback}
           onLeaveView={onLeaveCallback}
-          persistOnceInView={true}
+          persistAfterInView={true}
         />,
       );
     });

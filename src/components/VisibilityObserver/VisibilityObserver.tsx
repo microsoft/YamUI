@@ -30,7 +30,7 @@ export interface VisibilityObserverProps extends BaseComponentProps {
    * jarring jumps in the UI when your component scrolls out of view.
    * This will not prevent the onEnterView and onLeaveView callbacks from executing.
    */
-  persistOnceInView?: boolean;
+  persistAfterInView?: boolean;
 
   /**
    * Wrapper element tag name.
@@ -81,8 +81,8 @@ export default class VisibilityObserver extends React.Component<
   }
 
   private getObserverChildren = (isVisible: boolean) => {
-    const { persistOnceInView, renderInView, renderOutOfView } = this.props;
-    const forcePersist = this.state.hasBeenInView && persistOnceInView;
+    const { persistAfterInView, renderInView, renderOutOfView } = this.props;
+    const forcePersist = this.state.hasBeenInView && persistAfterInView;
     const shouldRenderInView = isVisible || forcePersist;
 
     if (shouldRenderInView && renderInView) {
