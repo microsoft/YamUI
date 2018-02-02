@@ -15,6 +15,7 @@
       "check-format",
       "allow-pascal-case"
     ],
-    "semicolon": [true, "always", "ignore-bound-class-methods"]
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "align": false
   }
 }
