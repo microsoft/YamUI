@@ -16,6 +16,11 @@ describe('<VisibilityObserver />', () => {
   let renderProp: RenderProp;
   let callbackProp: CallbackProp;
 
+  beforeEach(() => {
+    onEnterCallback = jest.fn();
+    onLeaveCallback = jest.fn();
+  });
+
   describe('with minimal options', () => {
     beforeEach(() => {
       component = shallow(<VisibilityObserver />);
@@ -26,22 +31,19 @@ describe('<VisibilityObserver />', () => {
       expect(component).toMatchSnapshot();
     });
 
-    it('renders empty content', () => {
+    it('renders empty content via its in-view render prop', () => {
       expect(renderProp(true)).toMatchSnapshot();
     });
   });
 
-  describe('with all options', () => {
+  describe('with render, callback, rootMargin and tag options', () => {
     beforeEach(() => {
-      onEnterCallback = jest.fn();
-      onLeaveCallback = jest.fn();
-
       component = shallow(
         <VisibilityObserver
           renderInView={renderInView}
           renderOutOfView={renderOutOfView}
-          onEnter={onEnterCallback}
-          onLeave={onLeaveCallback}
+          onEnterView={onEnterCallback}
+          onLeaveView={onLeaveCallback}
           rootMargin="100px"
           tag="span"
         />,
@@ -90,6 +92,39 @@ describe('<VisibilityObserver />', () => {
 
         it('out of view callback is properly called', () => {
           expect(onLeaveCallback).toHaveBeenCalled();
+        });
+      });
+    });
+  });
+
+  describe('with in-view rendering persisted', () => {
+    beforeEach(() => {
+      component = shallow(
+        <VisibilityObserver
+          renderInView={renderInView}
+          renderOutOfView={renderOutOfView}
+          onEnterView={onEnterCallback}
+          onLeaveView={onLeaveCallback}
+          persistOnceInView={true}
+        />,
+      );
+    });
+
+    describe('once in view', () => {
+      beforeEach(() => {
+        callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+        callbackProp(true);
+      });
+
+      describe('and scrolled back out of view', () => {
+        beforeEach(() => {
+          callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+          callbackProp(false);
+        });
+
+        it('the in-view render prop remains rendered', () => {
+          renderProp = component.find(Observer).prop('render') as RenderProp;
+          expect(renderProp(true)).toMatchSnapshot();
         });
       });
     });

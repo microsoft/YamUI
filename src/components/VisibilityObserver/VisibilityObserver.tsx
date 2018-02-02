@@ -8,12 +8,12 @@ export interface VisibilityObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the component is scrolled into view.
    */
-  onEnter?: () => void;
+  onEnterView?: () => void;
 
   /**
    * A callback which will be triggered when the component is scrolled out of view.
    */
-  onLeave?: () => void;
+  onLeaveView?: () => void;
 
   /**
    * Render prop to return child content when the component is visible in the viewport.
@@ -24,6 +24,13 @@ export interface VisibilityObserverProps extends BaseComponentProps {
    * Render prop to return child content when the component is not visible in the viewport.
    */
   renderOutOfView?: () => React.ReactNode;
+
+  /**
+   * Maintains the rendered content once the component has come into view. Use this to prevent
+   * jarring jumps in the UI when your component scrolls out of view.
+   * This will not prevent the onEnterView and onLeaveView callbacks from executing.
+   */
+  persistOnceInView?: boolean;
 
   /**
    * Wrapper element tag name.
@@ -42,10 +49,24 @@ export interface VisibilityObserverProps extends BaseComponentProps {
   rootMargin?: string;
 }
 
+export interface VisibilityObserverState {
+  hasBeenInView: boolean;
+}
+
 /**
  * IntersectionObserver allows for conditional child rendering and callbacks when scrolled in or out of view.
  */
-export default class VisibilityObserver extends React.Component<VisibilityObserverProps> {
+export default class VisibilityObserver extends React.Component<
+  VisibilityObserverProps,
+  VisibilityObserverState
+> {
+  constructor(props: VisibilityObserverProps) {
+    super(props);
+    this.state = {
+      hasBeenInView: false,
+    };
+  }
+
   public render() {
     const { rootMargin, tag } = this.props;
 
@@ -60,8 +81,11 @@ export default class VisibilityObserver extends React.Component<VisibilityObserv
   }
 
   private getObserverChildren = (isVisible: boolean) => {
-    const { renderInView, renderOutOfView } = this.props;
-    if (isVisible && renderInView) {
+    const { persistOnceInView, renderInView, renderOutOfView } = this.props;
+    const forcePersist = this.state.hasBeenInView && persistOnceInView;
+    const shouldRenderInView = isVisible || forcePersist;
+
+    if (shouldRenderInView && renderInView) {
       return renderInView();
     }
 
@@ -74,9 +98,10 @@ export default class VisibilityObserver extends React.Component<VisibilityObserv
 
   private onVisibilityChange = (isVisible: boolean) => {
     if (isVisible) {
-      this.props.onEnter && this.props.onEnter();
+      this.setState({ hasBeenInView: true });
+      this.props.onEnterView && this.props.onEnterView();
     } else {
-      this.props.onLeave && this.props.onLeave();
+      this.props.onLeaveView && this.props.onLeaveView();
     }
   };
 }

@@ -25,7 +25,7 @@ const renderOutOfView = (inView) => {
 <VisibilityObserver 
   renderInView={renderInView}
   renderOutOfView={renderOutOfView}
-  onEnter={action('scrolled into view')}
-  onLeave={action('scrolled out of view')}
+  onEnterView={action('scrolled into view')}
+  onLeaveView={action('scrolled out of view')}
 />
 ```
