@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Callout from '../Callout';
-import { Key } from '../../util/enums';
+import { KeyCodes } from '../../util/enums';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
 describe('<Hovercard />', () => {
@@ -212,7 +212,7 @@ describe('<Hovercard />', () => {
 
     describe('and the ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', { keyCode: Key.Escape } as any);
+        const event = new KeyboardEvent('keydown', { keyCode: KeyCodes.escape } as any);
         document.dispatchEvent(event);
       });
 
@@ -223,7 +223,7 @@ describe('<Hovercard />', () => {
 
     describe('and a non-ESC key is pressed', () => {
       beforeEach(() => {
-        const event = new KeyboardEvent('keydown', { keyCode: Key.Enter } as any);
+        const event = new KeyboardEvent('keydown', { keyCode: KeyCodes.enter } as any);
         document.dispatchEvent(event);
       });
 

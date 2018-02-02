@@ -12,7 +12,8 @@
   "dependencies": {
     "core-decorators": "=0.20.0",
     "normalize.css": "=6.0.0",
-    "office-ui-fabric-react": "=5.45.1"
+    "office-ui-fabric-react": "=5.45.1",
+    "react-intersection-observer": "=3.0.2"
   },
   "devDependencies": {
     "@types/classnames": "=0.0.32",
@@ -35,6 +36,7 @@
     "glob": "=7.1.2",
     "htmltojsx": "=0.3.0",
     "identity-obj-proxy": "=3.0.0",
+    "intersection-observer": "=0.5.0",
     "jest": "=22.0.4",
     "jest-serializer-enzyme": "=1.0.0",
     "jsdom": "=11.5.1",
