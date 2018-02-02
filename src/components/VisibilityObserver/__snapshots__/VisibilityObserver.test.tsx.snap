@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<VisibilityObserver /> with in-view rendering persisted once in view and scrolled back out of view the in-view render prop remains rendered 1`] = `
-<span>
-  IN VIEW
-</span>
-`;
-
 exports[`<VisibilityObserver /> with minimal options matches its snapshot 1`] = `
 <Observer
   onChange={[Function]}
@@ -17,6 +11,12 @@ exports[`<VisibilityObserver /> with minimal options matches its snapshot 1`] = 
 `;
 
 exports[`<VisibilityObserver /> with minimal options renders empty content via its in-view render prop 1`] = `null`;
+
+exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options Observer callbacks when in view and scrolled back out of view the in-view render prop remains rendered 1`] = `
+<span>
+  IN VIEW
+</span>
+`;
 
 exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options Observer rendering in view render matches its snapshot 1`] = `
 <span>

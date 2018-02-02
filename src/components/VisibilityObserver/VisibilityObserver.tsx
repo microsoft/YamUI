@@ -16,21 +16,15 @@ export interface VisibilityObserverProps extends BaseComponentProps {
   onLeaveView?: () => void;
 
   /**
-   * Render prop to return child content when the component is visible in the viewport.
+   * Render prop to return child content when the component is visible in the viewport. Once the component
+   * has been in view it will always use this render prop, even when scrolled back out of view.
    */
   renderInView?: () => React.ReactNode;
 
   /**
-   * Render prop to return child content when the component is not visible in the viewport.
+   * Render prop to return child content before the component becomes visible in the viewport.
    */
   renderOutOfView?: () => React.ReactNode;
-
-  /**
-   * Maintains the rendered content once the component has come into view. Use this to prevent
-   * jarring jumps in the UI when your component scrolls out of view.
-   * This will not prevent the onEnterView and onLeaveView callbacks from executing.
-   */
-  persistAfterInView?: boolean;
 
   /**
    * Wrapper element tag name.
@@ -54,7 +48,9 @@ export interface VisibilityObserverState {
 }
 
 /**
- * IntersectionObserver allows for conditional child rendering and callbacks when scrolled in or out of view.
+ * VisibilityObserver uses the IntersectionObserver API to allow conditional child rendering and callbacks based
+ * on viewport visibility. It will render the `renderOutOfView` prop until it is scrolled into view, then will
+ * always render the `renderInView` prop instead. Callbacks will always be triggered on visibility changes.
  */
 export default class VisibilityObserver extends React.Component<
   VisibilityObserverProps,
@@ -81,11 +77,10 @@ export default class VisibilityObserver extends React.Component<
   }
 
   private getObserverChildren = (isVisible: boolean) => {
-    const { persistAfterInView, renderInView, renderOutOfView } = this.props;
-    const forcePersist = this.state.hasBeenInView && persistAfterInView;
-    const shouldRenderInView = isVisible || forcePersist;
+    const { renderInView, renderOutOfView } = this.props;
+    const shouldRenderAsInView = isVisible || this.state.hasBeenInView;
 
-    if (shouldRenderInView && renderInView) {
+    if (shouldRenderAsInView && renderInView) {
       return renderInView();
     }
 

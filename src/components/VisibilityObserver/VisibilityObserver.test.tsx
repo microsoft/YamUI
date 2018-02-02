@@ -73,6 +73,7 @@ describe('<VisibilityObserver />', () => {
     describe('Observer callbacks', () => {
       beforeEach(() => {
         callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+        renderProp = component.find(Observer).prop('render') as RenderProp;
       });
 
       describe('when in view', () => {
@@ -83,6 +84,16 @@ describe('<VisibilityObserver />', () => {
         it('in view callback is properly called', () => {
           expect(onEnterCallback).toHaveBeenCalled();
         });
+
+        describe('and scrolled back out of view', () => {
+          beforeEach(() => {
+            callbackProp(false);
+          });
+
+          it('the in-view render prop remains rendered', () => {
+            expect(renderProp(true)).toMatchSnapshot();
+          });
+        });
       });
 
       describe('when out of view', () => {
@@ -92,39 +103,6 @@ describe('<VisibilityObserver />', () => {
 
         it('out of view callback is properly called', () => {
           expect(onLeaveCallback).toHaveBeenCalled();
-        });
-      });
-    });
-  });
-
-  describe('with in-view rendering persisted', () => {
-    beforeEach(() => {
-      component = shallow(
-        <VisibilityObserver
-          renderInView={renderInView}
-          renderOutOfView={renderOutOfView}
-          onEnterView={onEnterCallback}
-          onLeaveView={onLeaveCallback}
-          persistAfterInView={true}
-        />,
-      );
-    });
-
-    describe('once in view', () => {
-      beforeEach(() => {
-        callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
-        callbackProp(true);
-      });
-
-      describe('and scrolled back out of view', () => {
-        beforeEach(() => {
-          callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
-          callbackProp(false);
-        });
-
-        it('the in-view render prop remains rendered', () => {
-          renderProp = component.find(Observer).prop('render') as RenderProp;
-          expect(renderProp(true)).toMatchSnapshot();
         });
       });
     });

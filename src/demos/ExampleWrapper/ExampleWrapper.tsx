@@ -6,7 +6,7 @@ import Fabric from '../../../src/components/Fabric';
 
 export default class ExampleWrapper extends React.Component {
   public render() {
-    return <VisibilityObserver renderInView={this.getExample} persistAfterInView={true} />;
+    return <VisibilityObserver renderInView={this.getExample} />;
   }
 
   private getExample = () => {
