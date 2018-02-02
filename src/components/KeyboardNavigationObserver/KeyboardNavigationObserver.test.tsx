@@ -1,10 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-// jest.mock('../../util/accessibility/keyboardNavigation', () => ({
-//   getMode: () => 'mouse',
-//   subscribe: (callback: any) => callback('mouse'),
-//   unsubscribe: () => 'noop',
-// }));
-
 import * as React from 'react';
 import { mount, shallow, ReactWrapper, ShallowWrapper } from 'enzyme';
 import KeyboardNavigationObserver, {
