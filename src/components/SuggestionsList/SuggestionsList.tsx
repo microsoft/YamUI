@@ -70,7 +70,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
 
-    const classNames = [];
+    const classNames = ['y-suggestions-list'];
     if (status) {
       classNames.push(withStatusClass);
     }
