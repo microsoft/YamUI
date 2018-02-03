@@ -87,6 +87,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         target={this.props.target}
         className={classNames.join(' ')}
         isBeakVisible={false}
+        minPagePadding={-500} /* allow to run past bottom of viewport */
       >
         {results}
         {status}

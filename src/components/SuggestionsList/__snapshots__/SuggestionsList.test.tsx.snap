@@ -8,6 +8,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -42,6 +43,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -74,6 +76,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -106,6 +109,7 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <Block
@@ -130,6 +134,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -171,6 +176,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -210,6 +216,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <ul
@@ -249,6 +256,7 @@ exports[`<SuggestionsList /> when isLoading=true without results renders as expe
   directionalHintFixed={true}
   doNotLayer={true}
   isBeakVisible={false}
+  minPagePadding={-500}
   target={<div />}
 >
   <Spinner
