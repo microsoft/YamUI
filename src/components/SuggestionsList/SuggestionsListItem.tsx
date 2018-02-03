@@ -19,13 +19,8 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
   onSelect(id: string | number): void;
 }
 
-export interface SuggestionsListItemState {
-  isHovered: boolean;
-}
-
 const baseClass = 'y-suggestions-list-item';
 const selectedClass = `${baseClass} y-suggestions-list-item--selected`;
-const hoveredClass = `${baseClass} y-suggestions-list-item--hover`;
 const highlightedClass = `y-suggestions-list-item--highlight`;
 
 const getHighlightedName = (name: string, search: string) => {
@@ -39,30 +34,14 @@ const getHighlightedName = (name: string, search: string) => {
   });
 };
 
-export default class SuggestionsListItem extends React.PureComponent<
-  SuggestionsListItemProps,
-  SuggestionsListItemState
-> {
-  constructor() {
-    super();
-    this.state = {
-      isHovered: false,
-    };
-  }
-
+export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
   public render() {
     const { isSelected, name, searchText, imageUrl, description } = this.props;
-    const { isHovered } = this.state;
     const avatar = <Avatar imageUrl={imageUrl} name={name} size={AvatarSize.SMALL} />;
-    const className = isHovered ? hoveredClass : isSelected ? selectedClass : baseClass;
+    const className = isSelected ? selectedClass : baseClass;
     const title = getHighlightedName(name, searchText);
     return (
-      <div
-        onMouseDown={this.onMouseDown}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        className={className}
-      >
+      <div onMouseDown={this.onMouseDown} className={className}>
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}
@@ -76,9 +55,5 @@ export default class SuggestionsListItem extends React.PureComponent<
   private onMouseDown = () => {
     const { onSelect, children, className, ...item } = this.props;
     this.props.onSelect(item.id);
-  }
-
-  private onMouseEnter = () => this.setState({ isHovered: true });
-
-  private onMouseLeave = () => this.setState({ isHovered: false });
+  };
 }

@@ -32,11 +32,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
 </Callout>
 `;
 
-exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `
-Object {
-  "hoveredId": null,
-}
-`;
+exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `null`;
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
 <Callout
@@ -165,11 +161,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
 </Callout>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `
-Object {
-  "hoveredId": null,
-}
-`;
+exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `null`;
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
 <Callout

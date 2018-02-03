@@ -5,14 +5,12 @@ import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsList
 
 describe('<SuggestionsListItem />', () => {
   let rendered: ShallowWrapper<SuggestionsListItemProps, {}>;
-  let onHover: jest.Mock<{}>;
   let onSelect: jest.Mock<{}>;
   let isSelected: boolean;
 
   const getProps = () => {
     return {
       isSelected,
-      onHover,
       onSelect,
       id: '1',
       imageUrl: 'imageUrl',
@@ -23,31 +21,7 @@ describe('<SuggestionsListItem />', () => {
   };
 
   beforeEach(() => {
-    onHover = jest.fn();
     onSelect = jest.fn();
-  });
-
-  describe('when hovering', () => {
-    beforeEach(() => {
-      rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      rendered.simulate('mouseEnter');
-    });
-
-    it('renders as expected', () => {
-      expect(rendered).toMatchSnapshot();
-    });
-  });
-
-  describe('when unhovering', () => {
-    beforeEach(() => {
-      rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      rendered.setState({ isHovered: true });
-      rendered.simulate('mouseLeave');
-    });
-
-    it('renders as expected', () => {
-      expect(rendered).toMatchSnapshot();
-    });
   });
 
   describe('when isSelected=true', () => {
