@@ -4,6 +4,7 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import Avatar, { AvatarSize } from '../Avatar';
+import Text from '../Text';
 import './SuggestionsListItem.css';
 
 export interface SuggestionItem {
@@ -21,15 +22,14 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
 
 const baseClass = 'y-suggestions-list-item';
 const selectedClass = `${baseClass} y-suggestions-list-item--selected`;
-const highlightedClass = `y-suggestions-list-item--highlight`;
 
 const getHighlightedName = (name: string, search: string) => {
   return name.split(new RegExp(`(${search})`, 'gi')).map((item: string, index: number) => {
-    const className = search.toLowerCase() === item.toLowerCase() ? highlightedClass : undefined;
+    const isBold = search.toLowerCase() === item.toLowerCase();
     return (
-      <span key={index} className={className}>
-        {item}
-      </span>
+      <Text key={index} bold={isBold}>
+        {item.replace(/\s/g, '\u00A0')}
+      </Text>
     );
   });
 };

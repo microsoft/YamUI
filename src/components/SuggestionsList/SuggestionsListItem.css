@@ -13,7 +13,3 @@
 .y-suggestions-list-item--selected {
   background-color: $suggestionsListItemBackgroundColor__keyboardNavigate;
 }
-
-.y-suggestions-list-item--highlight {
-  text-decoration: underline;
-}
