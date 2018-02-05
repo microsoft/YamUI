@@ -17,12 +17,6 @@ describe('<KeyboardNavigationObserver />', () => {
   let onEnterKeyboardModeCallback: jest.Mock<{}>;
   let onEnterMouseModeCallback: jest.Mock<{}>;
 
-  beforeAll(() => {
-    const event = document.createEvent('Event');
-    event.initEvent('DOMContentLoaded', true, true);
-    window.document.dispatchEvent(event);
-  });
-
   beforeEach(() => {
     onEnterKeyboardModeCallback = jest.fn();
     onEnterMouseModeCallback = jest.fn();

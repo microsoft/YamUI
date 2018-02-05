@@ -7,12 +7,6 @@ import { getMode, subscribe, unsubscribe } from './keyboardNavigation';
 describe('keyboardNavigation', () => {
   let callback: jest.Mock<{}>;
 
-  beforeAll(() => {
-    const event = document.createEvent('Event');
-    event.initEvent('DOMContentLoaded', true, true);
-    window.document.dispatchEvent(event);
-  });
-
   beforeEach(() => {
     callback = jest.fn();
   });

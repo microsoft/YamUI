@@ -7,18 +7,24 @@ import KeyboardNavigationEventListener, {
 export { NavigationMode, NavigationModeCallback };
 
 let navListener: KeyboardNavigationEventListener;
-document.addEventListener('DOMContentLoaded', () => {
-  navListener = new KeyboardNavigationEventListener(document.body);
-});
+
+const ensureInit = () => {
+  if (!navListener) {
+    navListener = new KeyboardNavigationEventListener(document.body);
+  }
+};
 
 export const getMode = (): NavigationMode => {
+  ensureInit();
   return navListener.getMode();
 };
 
 export const subscribe = (callback: NavigationModeCallback): void => {
+  ensureInit();
   navListener.subscribe(callback);
 };
 
 export const unsubscribe = (callback: NavigationModeCallback): void => {
+  ensureInit();
   navListener.unsubscribe(callback);
 };
