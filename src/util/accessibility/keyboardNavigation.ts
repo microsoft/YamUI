@@ -6,7 +6,10 @@ import KeyboardNavigationEventListener, {
 
 export { NavigationMode, NavigationModeCallback };
 
-const navListener = new KeyboardNavigationEventListener(document.body);
+let navListener: KeyboardNavigationEventListener;
+document.addEventListener('DOMContentLoaded', () => {
+  navListener = new KeyboardNavigationEventListener(document.body);
+});
 
 export const getMode = (): NavigationMode => {
   return navListener.getMode();
