@@ -66,16 +66,11 @@ const withStatusClass = 'y-suggestions-list--with-status';
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
 export default class SuggestionsList extends React.PureComponent<SuggestionsListProps, {}> {
-  constructor() {
-    super();
-    this.state = { hoveredId: null };
-  }
-
   public render() {
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
 
-    const classNames = [];
+    const classNames = ['y-suggestions-list'];
     if (status) {
       classNames.push(withStatusClass);
     }
@@ -92,6 +87,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         target={this.props.target}
         className={classNames.join(' ')}
         isBeakVisible={false}
+        minPagePadding={-500} /* allow to run past bottom of viewport */
       >
         {results}
         {status}
