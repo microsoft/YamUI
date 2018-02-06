@@ -8,11 +8,7 @@ import Text, { TextSize, TextColor } from '../Text';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
 
-export interface SuggestionsListProps extends NestableBaseComponentProps {
-  /**
-   * The left offset position in pixels
-   */
-  left: number;
+export interface SuggestionsListBaseProps extends NestableBaseComponentProps {
   /**
    * The top offset position in pixels
    */
@@ -48,18 +44,46 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   onItemSelected(id: string | number): void;
 }
 
-interface SuggestionsListWithResultsProps extends SuggestionsListProps {
-  groupedItems: SuggestionItemGroupProps[];
+export interface RTLSuggestionsListProps extends SuggestionsListBaseProps {
+  /**
+   * The left offset position in pixels
+   */
+  right: number;
+  /**
+   * Prevent supplying left
+   */
+  left?: void;
 }
+
+export interface LTRSuggestionsListProps extends SuggestionsListBaseProps {
+  /**
+   * The left offset position in pixels
+   */
+  left: number;
+  /**
+   * Prevent supplying right
+   */
+  right?: void;
+}
+
+const isRTL = (props: SuggestionsListProps): props is RTLSuggestionsListProps => {
+  return props.hasOwnProperty('right');
+};
+
+export type SuggestionsListProps = LTRSuggestionsListProps | RTLSuggestionsListProps;
+
+type SuggestionsListWithResultsProps = SuggestionsListProps & {
+  groupedItems: SuggestionItemGroupProps[];
+};
+
+const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
+  return !!props.groupedItems && props.groupedItems.length > 0;
+};
 
 export interface SuggestionItemGroupProps {
   title: string;
   items: SuggestionItem[];
 }
-
-const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
-  return !!props.groupedItems && props.groupedItems.length > 0;
-};
 
 const withResultsClass = 'y-suggestions-list--with-results';
 const withStatusClass = 'y-suggestions-list--with-status';
@@ -80,10 +104,15 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
       classNames.push(withResultsClass);
     }
 
-    const style = {
+    const style: React.CSSProperties = {
       top: this.props.top,
-      left: this.props.left,
     };
+
+    if (isRTL(this.props)) {
+      style.right = this.props.right;
+    } else {
+      style.left = this.props.left;
+    }
 
     return (
       <div style={style} className={classNames.join(' ')}>

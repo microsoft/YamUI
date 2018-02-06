@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SuggestionsList /> right aligned renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-suggestions-list--with-status"
+  style={
+    Object {
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Block
+    padding="large"
+    textAlign="center"
+    textSize="small"
+  >
+    <Text
+      color="metadata"
+    >
+      noResultsText
+    </Text>
+  </Block>
+</div>
+`;
+
 exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
 <div
   className="y-suggestions-list y-suggestions-list--with-results"
