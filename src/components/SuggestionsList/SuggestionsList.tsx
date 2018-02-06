@@ -5,16 +5,18 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
-import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
-import { IPoint } from 'office-ui-fabric-react/lib/utilities/positioning';
 
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
-   * The target that the Callout should try to position itself based on.
+   * The left offset position in pixels
    */
-  target: HTMLElement | IPoint;
+  left: number;
+  /**
+   * The top offset position in pixels
+   */
+  top: number;
   /**
    * The active search that produced the current state.
    */
@@ -78,20 +80,16 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
       classNames.push(withResultsClass);
     }
 
+    const style = {
+      top: this.props.top,
+      left: this.props.left,
+    };
+
     return (
-      <Callout
-        calloutWidth={280}
-        doNotLayer={true}
-        directionalHint={DirectionalHint.bottomLeftEdge}
-        directionalHintFixed={true}
-        target={this.props.target}
-        className={classNames.join(' ')}
-        isBeakVisible={false}
-        minPagePadding={-500} /* allow to run past bottom of viewport */
-      >
+      <div style={style} className={classNames.join(' ')}>
         {results}
         {status}
-      </Callout>
+      </div>
     );
   }
 
@@ -113,7 +111,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         <ul>{items}</ul>
       </li>
     );
-  }
+  };
 
   private getResultItem = (item: SuggestionItem) => {
     const { searchText, selectedId, onItemSelected } = this.props;
@@ -128,7 +126,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         />
       </li>
     );
-  }
+  };
 
   private getSearchStatus() {
     return this.props.isLoading ? this.getLoading() : this.getNoResults();

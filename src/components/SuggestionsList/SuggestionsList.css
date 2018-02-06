@@ -1,12 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import "src/css/variables/colors.css";
 
-.y-suggestions-list.ms-Callout {
-  animation-name: none;
-}
-
-.y-suggestions-list .ms-Callout-main {
+.y-suggestions-list {
+  position: absolute;
+  width: 280px;
   border-radius: 1px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+  border: none;
 }
 
 .y-suggestions-list--with-status .y-suggestions-list--loading {
