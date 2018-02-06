@@ -5,16 +5,14 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
-import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
-import { IPoint } from 'office-ui-fabric-react/lib/utilities/positioning';
 
-export interface SuggestionsListProps extends NestableBaseComponentProps {
+export interface SuggestionsListBaseProps extends NestableBaseComponentProps {
   /**
-   * The target that the Callout should try to position itself based on.
+   * The top offset position in pixels
    */
-  target: HTMLElement | IPoint;
+  top: number;
   /**
    * The active search that produced the current state.
    */
@@ -46,18 +44,46 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   onItemSelected(id: string | number): void;
 }
 
-interface SuggestionsListWithResultsProps extends SuggestionsListProps {
-  groupedItems: SuggestionItemGroupProps[];
+export interface RTLSuggestionsListProps extends SuggestionsListBaseProps {
+  /**
+   * The left offset position in pixels
+   */
+  right: number;
+  /**
+   * Prevent supplying left
+   */
+  left?: void;
 }
+
+export interface LTRSuggestionsListProps extends SuggestionsListBaseProps {
+  /**
+   * The left offset position in pixels
+   */
+  left: number;
+  /**
+   * Prevent supplying right
+   */
+  right?: void;
+}
+
+const isRTL = (props: SuggestionsListProps): props is RTLSuggestionsListProps => {
+  return props.hasOwnProperty('right');
+};
+
+export type SuggestionsListProps = LTRSuggestionsListProps | RTLSuggestionsListProps;
+
+type SuggestionsListWithResultsProps = SuggestionsListProps & {
+  groupedItems: SuggestionItemGroupProps[];
+};
+
+const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
+  return !!props.groupedItems && props.groupedItems.length > 0;
+};
 
 export interface SuggestionItemGroupProps {
   title: string;
   items: SuggestionItem[];
 }
-
-const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
-  return !!props.groupedItems && props.groupedItems.length > 0;
-};
 
 const withResultsClass = 'y-suggestions-list--with-results';
 const withStatusClass = 'y-suggestions-list--with-status';
@@ -78,20 +104,21 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
       classNames.push(withResultsClass);
     }
 
+    const style: React.CSSProperties = {
+      top: this.props.top,
+    };
+
+    if (isRTL(this.props)) {
+      style.right = this.props.right;
+    } else {
+      style.left = this.props.left;
+    }
+
     return (
-      <Callout
-        calloutWidth={280}
-        doNotLayer={true}
-        directionalHint={DirectionalHint.bottomLeftEdge}
-        directionalHintFixed={true}
-        target={this.props.target}
-        className={classNames.join(' ')}
-        isBeakVisible={false}
-        minPagePadding={-500} /* allow to run past bottom of viewport */
-      >
+      <div style={style} className={classNames.join(' ')}>
         {results}
         {status}
-      </Callout>
+      </div>
     );
   }
 
@@ -113,7 +140,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         <ul>{items}</ul>
       </li>
     );
-  }
+  };
 
   private getResultItem = (item: SuggestionItem) => {
     const { searchText, selectedId, onItemSelected } = this.props;
@@ -128,7 +155,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         />
       </li>
     );
-  }
+  };
 
   private getSearchStatus() {
     return this.props.isLoading ? this.getLoading() : this.getNoResults();

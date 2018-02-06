@@ -1,19 +1,41 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { default as SuggestionsList, SuggestionsListProps } from '.';
+import { default as SuggestionsList, SuggestionsListProps, RTLSuggestionsListProps, LTRSuggestionsListProps } from '.';
 
 describe('<SuggestionsList />', () => {
   let rendered: ShallowWrapper<SuggestionsListProps, {}>;
   let onItemSelected: jest.Mock<{}>;
-  let options: Partial<SuggestionsListProps>;
+  let options: Partial<LTRSuggestionsListProps>;
 
-  const getProps = (overrides: Partial<SuggestionsListProps>) => {
+  const getProps = (overrides?: Partial<LTRSuggestionsListProps>): LTRSuggestionsListProps => {
     onItemSelected = jest.fn();
 
     const defaultProps = {
       onItemSelected,
-      target: document.createElement('div'),
+      left: 0,
+      top: 0,
+      searchText: 'searchText',
+      loadingText: 'loadingText',
+      noResultsText: 'noResultsText',
+      isLoading: false,
+      groupedItems: [],
+      selectedId: 2,
+    };
+
+    return {
+      ...defaultProps,
+      ...overrides,
+    };
+  };
+
+  const getRTLProps = (overrides?: Partial<RTLSuggestionsListProps>): RTLSuggestionsListProps => {
+    onItemSelected = jest.fn();
+
+    const defaultProps = {
+      onItemSelected,
+      right: 0,
+      top: 0,
       searchText: 'searchText',
       loadingText: 'loadingText',
       noResultsText: 'noResultsText',
@@ -30,6 +52,16 @@ describe('<SuggestionsList />', () => {
 
   beforeEach(() => {
     options = {};
+  });
+
+  describe('right aligned', () => {
+    beforeEach(() => {
+      rendered = shallow(<SuggestionsList {...getRTLProps()} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
   });
 
   describe('when isLoading=true', () => {
