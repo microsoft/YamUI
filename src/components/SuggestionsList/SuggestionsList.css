@@ -5,10 +5,6 @@
   animation-name: none;
 }
 
-.y-suggestions-list .ms-Callout-main {
-  border-radius: 1px;
-}
-
 .y-suggestions-list--with-status .y-suggestions-list--loading {
   height: 5.2rem;
 }
