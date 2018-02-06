@@ -86,7 +86,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ## Releasing a new version
 
-Travis is setup to automatically publish tagged releases to the npm registry. So if you want to release a new version of YamUI, just do the following:
+If you want to release a new version of YamUI, do the following to create a release branch:-
 
 ```sh
 git checkout -b awesome-release-branch
@@ -94,7 +94,17 @@ npm version patch -m "Release version %s"
 git push
 ```
 
-Then create a pull request, and once that gets reviewed and merged into master, Travis will publish your new version to npm! This is an alternative to creating releases manually or through GitHub's tools. Learn more about npm versioning [here](https://docs.npmjs.com/cli/version).
+Once this branch's PR is merged to master, do the following to publish the release so it can be consumed from npm:-
+
+```sh
+# requires an npm user with permissions to release
+git checkout master
+git pull
+npm install
+npm publish
+```
+
+Learn more about [SemVer](https://semver.org).
 
 ## Roadmap
 
