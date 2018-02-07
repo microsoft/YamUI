@@ -13,7 +13,6 @@ describe('<SuggestionsList />', () => {
 
     const defaultProps = {
       onItemSelected,
-      target: document.createElement('div'),
       searchText: 'searchText',
       loadingText: 'loadingText',
       noResultsText: 'noResultsText',
