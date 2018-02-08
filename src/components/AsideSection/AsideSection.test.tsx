@@ -6,7 +6,7 @@ import AsideSection, { AsideSectionProps } from '.';
 
 describe('<AsideSection />', () => {
   let component: ShallowWrapper<AsideSectionProps, {}>;
-  
+
   describe('With minimal options', () => {
     beforeEach(() => {
       component = shallow(<AsideSection title="Test title" />);
@@ -20,7 +20,7 @@ describe('<AsideSection />', () => {
   describe('with action prop', () => {
     beforeEach(() => {
       const action = <Clickable>Add</Clickable>;
-      component = shallow(<AsideSection title="Test title" action={action}/>);
+      component = shallow(<AsideSection title="Test title" action={action} />);
     });
 
     it('renders the action in its own FixedGridColumn', () => {
@@ -38,7 +38,7 @@ describe('<AsideSection />', () => {
     });
 
     it('matches the snapshot', () => {
-      expect(component).toMatchSnapshot();      
+      expect(component).toMatchSnapshot();
     });
   });
 });

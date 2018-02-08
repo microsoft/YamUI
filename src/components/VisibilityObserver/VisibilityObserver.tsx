@@ -8,23 +8,23 @@ export interface VisibilityObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the component is scrolled into view.
    */
-  onEnterView?: () => void;
+  onEnterView?: (() => void);
 
   /**
    * A callback which will be triggered when the component is scrolled out of view.
    */
-  onLeaveView?: () => void;
+  onLeaveView?: (() => void);
 
   /**
    * Render prop to return child content when the component is visible in the viewport. Once the component
    * has been in view it will always use this render prop, even when scrolled back out of view.
    */
-  renderInView?: () => React.ReactNode;
+  renderInView?: (() => React.ReactNode);
 
   /**
    * Render prop to return child content before the component becomes visible in the viewport.
    */
-  renderOutOfView?: () => React.ReactNode;
+  renderOutOfView?: (() => React.ReactNode);
 
   /**
    * Wrapper element tag name.
@@ -94,9 +94,13 @@ export default class VisibilityObserver extends React.Component<
   private onVisibilityChange = (isVisible: boolean) => {
     if (isVisible) {
       this.setState({ hasBeenInView: true });
-      this.props.onEnterView && this.props.onEnterView();
+      if (this.props.onEnterView) {
+        this.props.onEnterView();
+      }
     } else {
-      this.props.onLeaveView && this.props.onLeaveView();
+      if (this.props.onLeaveView) {
+        this.props.onLeaveView();
+      }
     }
   };
 }

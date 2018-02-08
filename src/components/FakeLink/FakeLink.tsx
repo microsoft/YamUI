@@ -15,8 +15,8 @@ export { FakeLinkProps };
  *
  * NOTE: If you are looking for click interaction please see [Clickable](#clickable).
  */
-export default class FakeLink extends React.Component<FakeLinkProps, {}> {
-  render() {
+export default class FakeLink extends React.Component<FakeLinkProps> {
+  public render() {
     const { className, children } = this.props;
 
     return <span className={join(['y-fakeLink', className])}>{children}</span>;

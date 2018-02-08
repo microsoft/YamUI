@@ -5,7 +5,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
 import TextField, { ITextField } from '../TextField';
-import { Key } from '../../util/enums';
+import { KeyCodes } from '../../util/enums';
 import './EditableText.css';
 
 export interface EditableTextProps extends BaseComponentProps {
@@ -94,11 +94,11 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
 
   private onKeyDown = (event: any) => {
     switch (event.which) {
-      case Key.Escape:
+      case KeyCodes.escape:
         event.preventDefault();
         this.cancelEdit();
         break;
-      case Key.Enter:
+      case KeyCodes.enter:
         event.preventDefault();
         this.commitEdit();
         break;

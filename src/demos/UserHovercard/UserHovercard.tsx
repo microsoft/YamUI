@@ -3,10 +3,7 @@ import * as React from 'react';
 import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
-import {
-  HovercardHeader,
-  HovercardBody,
-} from '../../components/Hovercard';
+import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { LayoutList, LayoutListItem } from '../../components/LayoutList';
@@ -33,8 +30,8 @@ export interface UserHovercardProps {
   user: any;
 }
 
-export default class UserHovercard extends React.Component<UserHovercardProps, {}> {
-  render() {
+export default class UserHovercard extends React.Component<UserHovercardProps> {
+  public render() {
     const { user } = this.props;
 
     const userEmailLink = <FakeLink>{user.email}</FakeLink>;

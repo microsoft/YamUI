@@ -65,7 +65,7 @@ const withStatusClass = 'y-suggestions-list--with-status';
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
-export default class SuggestionsList extends React.PureComponent<SuggestionsListProps, {}> {
+export default class SuggestionsList extends React.PureComponent<SuggestionsListProps> {
   public render() {
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
@@ -113,7 +113,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         <ul>{items}</ul>
       </li>
     );
-  }
+  };
 
   private getResultItem = (item: SuggestionItem) => {
     const { searchText, selectedId, onItemSelected } = this.props;
@@ -128,14 +128,20 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         />
       </li>
     );
-  }
+  };
 
   private getSearchStatus() {
     return this.props.isLoading ? this.getLoading() : this.getNoResults();
   }
 
   private getLoading() {
-    return <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" />;
+    return (
+      <Spinner
+        text={this.props.loadingText}
+        className="y-suggestions-list--loading"
+        isCentered={true}
+      />
+    );
   }
 
   private getNoResults() {

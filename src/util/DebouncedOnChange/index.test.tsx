@@ -9,9 +9,9 @@ interface InnerComponentProps extends DebouncedOnChangeProps {
 }
 
 const InnerComponent: React.StatelessComponent<InnerComponentProps> = props => <input {...props} />;
-const TestComponent: React.StatelessComponent<InnerComponentProps & DebouncedOnChangePrivateProps> = props => (
-  <InnerComponent onChange={props.unifiedOnChange} />
-);
+const TestComponent: React.StatelessComponent<
+  InnerComponentProps & DebouncedOnChangePrivateProps
+> = props => <InnerComponent onChange={props.unifiedOnChange} />;
 const DebouncedOnChangeTestComponent = (props: InnerComponentProps) => {
   return <DebouncedOnChange {...props} component={TestComponent} />;
 };
@@ -29,7 +29,7 @@ describe('<BaseTextField />', () => {
   });
 
   describe('with onChange handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
 
     beforeEach(() => {
       callback = jest.fn();
@@ -60,7 +60,7 @@ describe('<BaseTextField />', () => {
   });
 
   describe('with debouncedOnChange handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
 
     beforeEach(() => {
       callback = jest.fn();

@@ -29,8 +29,8 @@ export interface MediaObjectTitleProps {
   ellipsis?: boolean;
 }
 
-export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps, {}> {
-  render() {
+export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps> {
+  public render() {
     const { size, children, ellipsis } = this.props;
 
     return (

@@ -14,16 +14,12 @@ export interface BoxProps extends NestableBaseComponentProps {
  * A Box is a div with a border and fixed padding. It also has `display: relative` so you can
  * absolutely-position elements like a close button. Boxes will primarily be used for card views.
  */
-export default class Box extends React.Component<BoxProps, {}> {
+export default class Box extends React.Component<BoxProps> {
   public render() {
     const { children, className, onClick } = this.props;
 
     return (
-      <div
-        className={join(['y-box', className])}
-        onClick={onClick}
-        role={onClick ? 'button' : undefined}
-      >
+      <div className={join(['y-box', className])} onClick={onClick}>
         <Block className="y-box--inner" padding={GutterSize.SMALL}>
           {children}
         </Block>

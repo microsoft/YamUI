@@ -34,8 +34,6 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
 class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
-  private textFieldRef: ITextField;
-
   public render() {
     return (
       <FabricTextField
@@ -45,20 +43,11 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
         underlined={this.props.underlined}
         onChanged={this.props.unifiedOnChange}
         {...getBaseTextFieldProps(this.props)}
-        componentRef={this.setRef}
+        componentRef={this.props.componentRef}
         maxLength={this.props.maxLength}
       />
     );
   }
-
-  public focus() {
-    this.textFieldRef && this.textFieldRef.focus && this.textFieldRef.focus();
-  }
-
-  private setRef = (component: ITextField) => {
-    this.textFieldRef = component;
-    this.props.componentRef && this.props.componentRef(component);
-  };
 
   private getClasses() {
     const { className, prefix, suffix } = this.props;

@@ -80,9 +80,9 @@ describe('<Image />', () => {
     function setLoadState(newLoadState: ImageLoadState) {
       loadState = newLoadState;
     }
-    jest.useFakeTimers();
 
     beforeEach(() => {
+      jest.useFakeTimers();
       loadState = undefined;
       fullComponent = mount(
         <Image source="image.png" description="description" onLoadingStateChange={setLoadState} />,

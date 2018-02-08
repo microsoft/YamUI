@@ -7,7 +7,7 @@
   align-items: center;
   flex-direction: row;
 }
-.y-spinner__centered {
+.y-spinner__isCentered {
   justify-content: center;
 }
 

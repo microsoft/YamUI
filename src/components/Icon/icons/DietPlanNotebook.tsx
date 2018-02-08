@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
 export default class DietPlanNotebook extends BaseIcon {
-  render() {
+  public render() {
     return (
       <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
         <path fillRule="evenodd" d="M195.469 15.117H210V240H30V15.117h14.766V0h15v15.117H90V0h15v15.117h30.234V0h15v15.117h30.235V0h15v15.117zM195 225V30.117H45V225h150zM165 60.117v15H75v-15h90zM75 195.234v-15h90v15H75zm0-60.117v-15h90v15H75z" />

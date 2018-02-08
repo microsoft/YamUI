@@ -57,6 +57,8 @@
       }
     ],
     "typedef": false,
-    "no-unused-expression": [true, "allow-fast-null-checks"]
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-redundant-jsdoc": false,
+    "react-a11y-event-has-role": [false]
   }
 }

@@ -7,5 +7,5 @@ Add here any notes on how to use the component, or delete this section.
 Basic usage:
 
 ```js { "props": { "data-example": "basic" } }
-<EditableText />
+<EditableText text="i am editable..." />
 ```

@@ -41,8 +41,8 @@ export type LayoutListProps = HorizontalListProps | VerticalListProps;
  * are evenly spaced with a fixed margin of 4px, and can be aligned to the right or left. Vertical
  * list items do not have any margin.
  */
-export default class LayoutList extends React.Component<LayoutListProps, {}> {
-  render() {
+export default class LayoutList extends React.Component<LayoutListProps> {
+  public render() {
     return <ul className={this.getClasses()}>{this.props.children}</ul>;
   }
 

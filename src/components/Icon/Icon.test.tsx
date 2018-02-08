@@ -9,7 +9,6 @@ describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
 
   describe('an Icon', () => {
-
     describe('with minimal options', () => {
       beforeEach(() => {
         component = shallow(<Accounts />);
@@ -24,7 +23,6 @@ describe('<Icon />', () => {
       beforeEach(() => {
         component = shallow(<Accounts color="blue" />);
       });
-
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
@@ -72,7 +70,8 @@ describe('<Icon />', () => {
   describe('each Icon', () => {
     let Icon: any;
 
-    Object.keys(allExportedIcons).forEach((name) => {
+    /* tslint:disable:mocha-no-side-effect-code*/
+    Object.keys(allExportedIcons).forEach(name => {
       beforeEach(() => {
         Icon = (allExportedIcons as any)[name];
         component = shallow(<Icon />);

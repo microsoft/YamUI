@@ -16,22 +16,22 @@ export interface KeyboardNavigationObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the user begins navigating via keyboard.
    */
-  onEnterKeyboardMode?: () => void;
+  onEnterKeyboardMode?: (() => void);
 
   /**
    * A callback which will be triggered when the user begins navigating via mouse.
    */
-  onEnterMouseMode?: () => void;
+  onEnterMouseMode?: (() => void);
 
   /**
    * Render prop to return child content when user is navigating via keyboard.
    */
-  renderInKeyboardMode?: () => React.ReactElement<any>;
+  renderInKeyboardMode?: (() => React.ReactElement<any>);
 
   /**
    * Render prop to return child content when user is navigating via mouse.
    */
-  renderInMouseMode?: () => React.ReactElement<any>;
+  renderInMouseMode?: (() => React.ReactElement<any>);
 }
 
 export interface KeyboardNavigationObserverState {

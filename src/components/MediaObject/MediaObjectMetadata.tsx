@@ -22,8 +22,8 @@ export interface MediaObjectMetadataProps {
   ellipsis?: boolean;
 }
 
-export default class MediaObjectMetadata extends React.Component<MediaObjectMetadataProps, {}> {
-  render() {
+export default class MediaObjectMetadata extends React.Component<MediaObjectMetadataProps> {
+  public render() {
     const { size, children, ellipsis } = this.props;
 
     return (

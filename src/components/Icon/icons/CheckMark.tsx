@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
 export default class CheckMark extends BaseIcon {
-  render() {
+  public render() {
     return (
       <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
         <path fillRule="evenodd" d="M215.273 65.273L90 190.664l-65.273-65.39 10.546-10.547L90 169.336l114.727-114.61z" />

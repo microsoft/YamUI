@@ -114,7 +114,7 @@ describe('<Dropdown />', () => {
   });
 
   describe('with onChanged handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
     const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
 
     beforeEach(() => {

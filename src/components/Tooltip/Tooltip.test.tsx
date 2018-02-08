@@ -18,9 +18,7 @@ describe('<Tooltip />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Tooltip text="text content" className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Tooltip text="text content" className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {

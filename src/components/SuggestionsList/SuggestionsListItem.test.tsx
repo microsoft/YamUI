@@ -5,7 +5,7 @@ import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsList
 
 describe('<SuggestionsListItem />', () => {
   let rendered: ShallowWrapper<SuggestionsListItemProps, {}>;
-  let onSelect: jest.Mock<{}>;
+  let onSelect: jest.Mock;
   let isSelected: boolean;
 
   const getProps = () => {

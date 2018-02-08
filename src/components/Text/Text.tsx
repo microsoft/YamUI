@@ -48,8 +48,8 @@ export interface TextProps extends NestableBaseComponentProps {
  * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
  * of supported text colors and `font-size`/`line-height` combinations.
  */
-export default class Text extends React.Component<TextProps, {}> {
-  render() {
+export default class Text extends React.Component<TextProps> {
+  public render() {
     const { children, screenreaderText } = this.props;
 
     if (screenreaderText === undefined) {

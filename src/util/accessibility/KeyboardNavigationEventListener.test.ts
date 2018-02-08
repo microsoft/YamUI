@@ -4,8 +4,8 @@ import KeyboardNavigationEventListener from './KeyboardNavigationEventListener';
 
 describe('KeyboardNavigationEventListener', () => {
   let listener: KeyboardNavigationEventListener;
-  let callback1: jest.Mock<{}>;
-  let callback2: jest.Mock<{}>;
+  let callback1: jest.Mock;
+  let callback2: jest.Mock;
 
   beforeEach(() => {
     listener = new KeyboardNavigationEventListener(document.body);

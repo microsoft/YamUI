@@ -1,7 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
+import Button, {
+  ButtonProps,
+  ButtonColor,
+  ButtonStatus,
+  ButtonIconPosition,
+  ButtonSize,
+  ButtonType,
+} from '.';
 import AccountsIcon from '../Icon/icons/Accounts';
 
 const sampleText = 'Click Me';
@@ -112,11 +119,7 @@ describe('<Button />', () => {
     describe('on the right', () => {
       beforeEach(() => {
         component = shallow(
-          <Button
-            icon={AccountsIcon}
-            text={sampleText}
-            iconPosition={ButtonIconPosition.RIGHT}
-          />,
+          <Button icon={AccountsIcon} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
         );
       });
 
@@ -203,11 +206,11 @@ describe('<Button />', () => {
   });
 
   describe('with event callbacks', () => {
-    let onClick: jest.Mock<{}>;
-    let onMouseEnter: jest.Mock<{}>;
-    let onMouseLeave: jest.Mock<{}>;
-    let onFocus: jest.Mock<{}>;
-    let onBlur: jest.Mock<{}>;
+    let onClick: jest.Mock;
+    let onMouseEnter: jest.Mock;
+    let onMouseLeave: jest.Mock;
+    let onFocus: jest.Mock;
+    let onBlur: jest.Mock;
 
     beforeEach(() => {
       onClick = jest.fn();

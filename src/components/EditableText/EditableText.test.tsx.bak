@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import EditableText, { EditableTextType, EditableTextProps } from './index';
 
 describe('<EditableText />', () => {
-  let component: ShallowWrapper<EditableTextProps, {}>;
+  let component: ShallowWrapper<EditableTextProps>;
 
   describe('with default options', () => {
     beforeEach(() => {

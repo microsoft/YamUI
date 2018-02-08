@@ -13,10 +13,7 @@ import Image from '../Image';
 import MediaObject, { MediaObjectProps, MediaObjectSize } from '../MediaObject';
 import ProgressIndicator from '../ProgressIndicator';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
-import { FileType } from './types';
 import './PreviewCard.css';
-
-export { FileType };
 
 export interface PreviewCardProps extends BaseComponentProps {
   /**
@@ -41,11 +38,6 @@ export interface PreviewCardProps extends BaseComponentProps {
    * The name of the file or entity being represented. This will be displayed as the title.
    */
   name: string;
-  /**
-   * Defines which placeholder icon to display. If not provided, PreviewCard will attempt
-   * to determine the filetype from the file name.
-   */
-  fileType?: FileType;
   /**
    * Will display on the left of the PreviewCard. If not provided the image will be replaced
    * by an icon depending on the file type.

@@ -6,10 +6,12 @@ import { KeyCodes } from '../../util/enums';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
 describe('<Hovercard />', () => {
-  jest.useFakeTimers();
-
   let component: ShallowWrapper<HovercardProps, HovercardState>;
   let fullComponent: ReactWrapper<HovercardProps, HovercardState>;
+
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -282,9 +284,9 @@ describe('<Hovercard />', () => {
   });
 
   describe('callbacks', () => {
-    let onHover: jest.Mock<{}>;
-    let onShow: jest.Mock<{}>;
-    let onHide: jest.Mock<{}>;
+    let onHover: jest.Mock;
+    let onShow: jest.Mock;
+    let onHide: jest.Mock;
 
     beforeEach(() => {
       onHover = jest.fn();
