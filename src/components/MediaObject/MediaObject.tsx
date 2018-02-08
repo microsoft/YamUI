@@ -62,8 +62,8 @@ const ImageWidthMap = {
  * image area, and pieces of text content, are passed in as props, with size and layout determined
  * by the `size` prop.
  */
-export default class MediaObject extends React.Component<MediaObjectProps, {}> {
-  render() {
+export default class MediaObject extends React.Component<MediaObjectProps> {
+  public render() {
     const {
       size,
       imageContent,
@@ -78,10 +78,14 @@ export default class MediaObject extends React.Component<MediaObjectProps, {}> {
     const imageColumnClass = `y-media-object__size-${size}--image`;
 
     const titleContentChild = titleContent && (
-      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>{titleContent}</MediaObjectTitle>
+      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>
+        {titleContent}
+      </MediaObjectTitle>
     );
     const metadataContentChild = this.showMetadata() && (
-      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>{metadataContent}</MediaObjectMetadata>
+      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>
+        {metadataContent}
+      </MediaObjectMetadata>
     );
     const extraContentChild = this.showExtra() && (
       <MediaObjectExtra ellipsis={!allowTextWrap}>{extraContent}</MediaObjectExtra>

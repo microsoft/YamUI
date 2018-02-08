@@ -1,0 +1,23 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-previewCard__hasClick {
+  cursor: pointer;
+}
+
+.y-previewCard--media {
+  padding-bottom: 2px;
+}
+
+.y-previewCard--remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.y-previewCard--progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

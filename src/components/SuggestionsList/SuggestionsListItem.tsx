@@ -34,7 +34,7 @@ const getHighlightedName = (name: string, search: string) => {
   });
 };
 
-export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
+export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps> {
   public render() {
     const { isSelected, name, searchText, imageUrl, description } = this.props;
     const avatar = <Avatar imageUrl={imageUrl} name={name} size={AvatarSize.SMALL} />;

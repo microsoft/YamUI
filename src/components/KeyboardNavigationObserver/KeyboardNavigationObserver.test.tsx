@@ -14,8 +14,8 @@ describe('<KeyboardNavigationObserver />', () => {
   const renderInKeyboardMode = () => <span>KEYBOARD</span>;
   const renderInMouseMode = () => <span>MOUSE</span>;
 
-  let onEnterKeyboardModeCallback: jest.Mock<{}>;
-  let onEnterMouseModeCallback: jest.Mock<{}>;
+  let onEnterKeyboardModeCallback: jest.Mock;
+  let onEnterMouseModeCallback: jest.Mock;
 
   beforeEach(() => {
     onEnterKeyboardModeCallback = jest.fn();

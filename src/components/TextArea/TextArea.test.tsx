@@ -8,7 +8,9 @@ describe('<TextArea />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<TextArea />).dive().dive();
+      component = shallow(<TextArea />)
+        .dive()
+        .dive();
     });
 
     it('matches its snapshot', () => {
@@ -35,7 +37,9 @@ describe('<TextArea />', () => {
           onMouseEnter={jest.fn().mockName('onMouseEnter')}
           onMouseLeave={jest.fn().mockName('onMouseLeave')}
         />,
-      ).dive().dive();
+      )
+        .dive()
+        .dive();
     });
 
     it('matches its snapshot', () => {
@@ -45,11 +49,9 @@ describe('<TextArea />', () => {
 
   describe('with description and no error', () => {
     beforeEach(() => {
-      component = shallow(
-        <TextArea
-          description="DESCRIPTION"
-        />,
-      ).dive().dive();
+      component = shallow(<TextArea description="DESCRIPTION" />)
+        .dive()
+        .dive();
     });
 
     it('matches its snapshot', () => {

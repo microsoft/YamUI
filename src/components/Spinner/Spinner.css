@@ -5,8 +5,10 @@
 .y-spinner {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
+}
+.y-spinner__isCentered {
+  justify-content: center;
 }
 
 .y-spinner--circle > .ms-Spinner-circle {

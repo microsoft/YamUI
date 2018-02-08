@@ -3,10 +3,7 @@ import * as React from 'react';
 import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
-import {
-  HovercardHeader,
-  HovercardBody,
-} from '../../components/Hovercard';
+import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
 import { LayoutList, LayoutListItem } from '../../components/LayoutList';
 import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
@@ -32,8 +29,8 @@ export interface FileHovercardProps {
   file: any;
 }
 
-export default class FileHovercard extends React.Component<FileHovercardProps, {}> {
-  render() {
+export default class FileHovercard extends React.Component<FileHovercardProps> {
+  public render() {
     const { file } = this.props;
 
     const fileImage = (

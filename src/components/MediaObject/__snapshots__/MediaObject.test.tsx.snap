@@ -125,6 +125,7 @@ exports[`<MediaObject /> with image content matches its snapshot 1`] = `
     >
       <img
         alt=""
+        role="presentation"
         src="404.jpg"
       />
     </FixedGridColumn>

@@ -17,30 +17,44 @@ const { SpinnerColor, SpinnerSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Spinner size={SpinnerSize.LARGE} text="Loading" />
+        <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.MEDIUM} text="Loading" />
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.SMALL} text="Loading" />
+        <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.XSMALL} text="Loading" />
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
       </td>
     </tr>
     <tr style={{ backgroundColor: '#386cbb' }}>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" isCentered={true} />
       </td>
     </tr>
   </tbody>
@@ -64,32 +78,48 @@ const { SpinnerColor, SpinnerSize } = require('.');
   <tbody>
     <tr>
       <td>
-        <Spinner size={SpinnerSize.LARGE} text="Loading" hideText={true} />
+        <Spinner size={SpinnerSize.LARGE} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.MEDIUM} text="Loading" hideText={true} />
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.SMALL} text="Loading" hideText={true} />
+        <Spinner size={SpinnerSize.SMALL} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner size={SpinnerSize.XSMALL} text="Loading" hideText={true} />
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" hideText={true} isCentered={true} />
       </td>
     </tr>
     <tr style={{ backgroundColor: '#386cbb' }}>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" hideText={true} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" hideText={true} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" hideText={true} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" hideText={true} isCentered={true} />
       </td>
       <td>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" hideText={true} />
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" hideText={true} isCentered={true} />
       </td>
     </tr>
   </tbody>
 </table>
 ```
+
+With isCentered:
+
+```js { "props": { "data-example": "centered" } }
+
+<div>
+  <div>
+    <p>Default alignment:</p>
+    <Spinner text="Loading" />
+  </div>
+  <br />
+  <div>
+    <p>Centered within its container:</p>
+    <Spinner text="Loading" isCentered={true} />
+  </div>
+</div>

@@ -23,12 +23,12 @@ export { GutterSize };
 /**
  * A `FixedGridRow` represents each row inside a `FixedGrid`. It should wrap `FixedGridColumn`s.
  */
-export default class FixedGridRow extends React.Component<FixedGridRowProps, {}> {
-  static defaultProps = {
+export default class FixedGridRow extends React.Component<FixedGridRowProps> {
+  public static defaultProps = {
     gutterSize: GutterSize.SMALL,
   };
 
-  render() {
+  public render() {
     const { children } = this.props;
 
     return <div className={this.getClasses()}>{children}</div>;

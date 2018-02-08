@@ -3,14 +3,21 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import MediaObject, { MediaObjectSize, MediaObjectProps } from '.';
 
-const image = <img src="404.jpg" alt="" />;
-const title = <div className="TITLE">TITLE CONTENT</div>;
-const metadata = <div className="METADATA">METADATA CONTENT</div>;
-const extra = <div className="EXTRA">EXTRA CONTENT</div>;
-const children = <div className="CHILDREN">CHILDREN CONTENT</div>;
-
 describe('<MediaObject />', () => {
+  let image: React.ReactNode;
+  let title: React.ReactNode;
+  let metadata: React.ReactNode;
+  let extra: React.ReactNode;
+  let children: React.ReactNode;
   let component: ShallowWrapper<MediaObjectProps, {}>;
+
+  beforeEach(() => {
+    image = <img src="404.jpg" alt="" role="presentation" />;
+    title = <div className="TITLE">TITLE CONTENT</div>;
+    metadata = <div className="METADATA">METADATA CONTENT</div>;
+    extra = <div className="EXTRA">EXTRA CONTENT</div>;
+    children = <div className="CHILDREN">CHILDREN CONTENT</div>;
+  });
 
   describe('with minimal options', () => {
     beforeEach(() => {
@@ -91,7 +98,11 @@ describe('<MediaObject />', () => {
     describe('with allowTextWrap', () => {
       beforeEach(() => {
         component = shallow(
-          <MediaObject allowTextWrap={true} size={MediaObjectSize.MEDIUM} metadataContent={metadata} />,
+          <MediaObject
+            allowTextWrap={true}
+            size={MediaObjectSize.MEDIUM}
+            metadataContent={metadata}
+          />,
         );
       });
 

@@ -6,12 +6,12 @@ export interface DebouncedOnChangeProps {
   /**
    * Callback for the onChange event.
    */
-  onChange?: (newValue: any) => void;
+  onChange?: ((newValue: any) => void);
 
   /**
    * Debounced callback for the onChange event.
    */
-  debouncedOnChange?: (newValue: any) => void;
+  debouncedOnChange?: ((newValue: any) => void);
 
   /**
    * Component will trigger `onChange` after users stop typing for `debouncedOnChangeTime`
@@ -24,7 +24,7 @@ export interface DebouncedOnChangePrivateProps {
   /**
    * Used to pass both onChange and debouncedOnChange to the contained component.
    */
-  unifiedOnChange?: (newValue: any) => void;
+  unifiedOnChange?: ((newValue: any) => void);
 }
 
 export interface NestedComponentProps {
@@ -36,12 +36,12 @@ export interface NestedComponentProps {
 export default class DebouncedOnChangeComponent extends React.Component<
   DebouncedOnChangeProps & NestedComponentProps
 > {
-  private async: Async;
-  private debouncedOnChange: (newValue: string) => void;
-
-  static defaultProps = {
+  public static defaultProps = {
     debouncedOnChangeTime: 700,
   };
+
+  private async: Async;
+  private debouncedOnChange: (newValue: string) => void;
 
   constructor(props: DebouncedOnChangeProps) {
     super();
@@ -55,24 +55,24 @@ export default class DebouncedOnChangeComponent extends React.Component<
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(newValue: string) {
+  public render() {
+    const { component: ComposedComponent } = this.props;
+    return <ComposedComponent {...this.props} unifiedOnChange={this.handleChange} />;
+  }
+
+  public componentWillUnmount() {
+    if (this.async) {
+      this.async.dispose();
+    }
+  }
+
+  private handleChange(newValue: string) {
     if (this.props.onChange) {
       this.props.onChange(newValue);
     }
 
     if (this.props.debouncedOnChange) {
       this.debouncedOnChange(newValue);
-    }
-  }
-
-  render() {
-    const { component: ComposedComponent } = this.props;
-    return <ComposedComponent {...this.props} unifiedOnChange={this.handleChange} />;
-  }
-
-  componentWillUnmount() {
-    if (this.async) {
-      this.async.dispose();
     }
   }
 }

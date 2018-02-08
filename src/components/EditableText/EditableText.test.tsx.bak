@@ -1,0 +1,42 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+import * as React from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
+import EditableText, { EditableTextType, EditableTextProps } from './index';
+
+describe('<EditableText />', () => {
+  let component: ShallowWrapper<EditableTextProps>;
+
+  describe('with default options', () => {
+    beforeEach(() => {
+      component = shallow(<EditableText />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with additional className', () => {
+    beforeEach(() => {
+      component = shallow(
+        <EditableText className="TEST_CLASSNAME" />,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with a type', () => {
+    beforeEach(() => {
+      component = shallow(
+        <EditableText type={EditableTextType.WHITE} />,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+});

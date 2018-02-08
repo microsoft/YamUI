@@ -2,7 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
-import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
+import DebouncedOnChange, {
+  DebouncedOnChangeProps,
+  DebouncedOnChangePrivateProps,
+} from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import { join } from '../../util/classNames';
 import '../BaseTextField/BaseTextField.css';
@@ -11,12 +14,12 @@ import './TextArea.css';
 export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
    * Height of the field, in number of rows.
-   **/
+   */
   rows?: number;
 
   /**
    * Whether or not to auto adjust textField height.
-   **/
+   */
   autoAdjustHeight?: boolean;
 }
 
@@ -25,7 +28,7 @@ export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProp
  * displays on the screen in a simple, uniform format.
  */
 class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateProps> {
-  render() {
+  public render() {
     return (
       <FabricTextField
         className={join(['y-base-text-field', 'y-text-area', this.props.className])}
@@ -38,8 +41,6 @@ class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateP
       />
     );
   }
-
-
 }
 
 export default (props: TextAreaProps) => {

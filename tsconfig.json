@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "strict": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
     "pretty": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "experimentalDecorators": true
   },
   "exclude": [
     "./config"

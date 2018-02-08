@@ -72,8 +72,8 @@ interface BlockStyles {
  * the `4px` vertical rhythm. It's also the primary place you should set `textSize` in your UIs,
  * providing enumerated options for the supported `font-size`/`line-height` combinations.
  */
-export default class Block extends React.Component<BlockProps, {}> {
-  render() {
+export default class Block extends React.Component<BlockProps> {
+  public render() {
     const { children } = this.props;
 
     return (

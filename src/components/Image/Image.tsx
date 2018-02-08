@@ -54,7 +54,7 @@ export interface ImageProps extends BaseComponentProps {
   /**
    * Callback to be invoked when the image's loading state changes.
    */
-  onLoadingStateChange?: (loadState: ImageLoadState) => void;
+  onLoadingStateChange?: ((loadState: ImageLoadState) => void);
 }
 
 /**
@@ -63,15 +63,21 @@ export interface ImageProps extends BaseComponentProps {
  * applied to the wrapper `div`, and the image will get scaled/positioned within the wrapper
  * depending on which props you provide.
  */
-export default class Image extends React.Component<ImageProps, {}> {
-  static defaultProps: Partial<ImageProps> = {
+export default class Image extends React.Component<ImageProps> {
+  public static defaultProps: Partial<ImageProps> = {
     fullWidth: false,
     shouldFadeIn: false,
   };
 
-  render() {
-    const { description, fullWidth, imageFit, source, shouldFadeIn, onLoadingStateChange }
-      = this.props;
+  public render() {
+    const {
+      description,
+      fullWidth,
+      imageFit,
+      source,
+      shouldFadeIn,
+      onLoadingStateChange,
+    } = this.props;
 
     let height = this.props.height;
     let width: number | string | undefined = this.props.width;

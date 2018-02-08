@@ -6,7 +6,6 @@ import Block, { TextSize, GutterSize } from '../Block';
 import { HeadingLevel, HeadingSize } from './enums';
 import './Heading.css';
 
-
 const blockPropsMap = {
   1: {
     textSize: TextSize.XXLARGE,
@@ -53,8 +52,8 @@ export interface HeadingProps extends NestableBaseComponentProps {
  * override its visual styling to match a different level with `size`. Set `size="none"`
  * to render the heading as unstyled inline text.
  */
-export default class Heading extends React.Component<HeadingProps, {}> {
-  render() {
+export default class Heading extends React.Component<HeadingProps> {
+  public render() {
     const TagName = `h${this.props.level}`;
 
     return <TagName className={this.getClasses()}>{this.getSizedContent()}</TagName>;

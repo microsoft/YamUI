@@ -8,7 +8,9 @@ describe('<TextField />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<TextField />).dive().dive();
+      component = shallow(<TextField />)
+        .dive()
+        .dive();
     });
 
     it('matches its snapshot', () => {
@@ -36,7 +38,9 @@ describe('<TextField />', () => {
           onMouseEnter={jest.fn().mockName('onMouseEnter')}
           onMouseLeave={jest.fn().mockName('onMouseLeave')}
         />,
-      ).dive().dive();
+      )
+        .dive()
+        .dive();
     });
 
     it('matches its snapshot', () => {

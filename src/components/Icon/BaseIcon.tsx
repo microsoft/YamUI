@@ -5,7 +5,6 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from './enums';
 import './Icon.css';
 
-
 export { IconSize };
 
 export interface IconProps extends BaseComponentProps {
@@ -37,10 +36,10 @@ export interface IconStyles {
 /**
  * An `Icon` renders an SVG icon.
  */
-export default class BaseIcon extends React.Component<IconProps, {}> {
+export default class BaseIcon extends React.Component<IconProps> {
   protected getClassName() {
     const { block, className } = this.props;
-  
+
     const classes = ['y-icon'];
     if (block) {
       classes.push('y-icon__isBlock');
@@ -48,24 +47,24 @@ export default class BaseIcon extends React.Component<IconProps, {}> {
     if (className) {
       classes.push(className);
     }
-  
+
     return classes.join(' ');
   }
-  
+
   protected getStyle() {
     const { color, size } = this.props;
-  
+
     const styles: IconStyles = {};
-  
+
     if (size) {
-      const length = size + 'px';
+      const length = `${size}px`;
       styles.height = length;
       styles.width = length;
     }
     if (color) {
       styles.color = color;
     }
-  
+
     return styles;
   }
 }

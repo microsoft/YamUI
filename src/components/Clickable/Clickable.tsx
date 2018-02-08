@@ -30,7 +30,7 @@ export interface ClickableProps extends NestableBaseComponentProps {
   /**
    * Click callback handler.
    */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
 /**
@@ -38,8 +38,8 @@ export interface ClickableProps extends NestableBaseComponentProps {
  * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
  * content in a `button` element.
  */
-export default class Clickable extends React.Component<ClickableProps, {}> {
-  render() {
+export default class Clickable extends React.Component<ClickableProps> {
+  public render() {
     const { ariaLabel, title, unstyled, onClick, children } = this.props;
 
     return (

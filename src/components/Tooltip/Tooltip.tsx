@@ -6,7 +6,6 @@ import { join } from '../../util/classNames';
 import { DirectionalHint, TooltipDelay, TooltipHost } from 'office-ui-fabric-react/lib/Tooltip';
 import './Tooltip.css';
 
-
 export { DirectionalHint };
 
 export interface TooltipProps extends NestableBaseComponentProps {
@@ -24,8 +23,8 @@ export interface TooltipProps extends NestableBaseComponentProps {
 /**
  * Tooltip wraps other content and provides additional context on hover or keyboard selection.
  */
-export default class Tooltip extends React.Component<TooltipProps, {}> {
-  render() {
+export default class Tooltip extends React.Component<TooltipProps> {
+  public render() {
     const { className, children, directionalHint, text } = this.props;
 
     return (

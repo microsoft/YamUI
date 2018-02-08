@@ -29,9 +29,7 @@ describe('<List />', () => {
 
     describe('with additional className', () => {
       beforeEach(() => {
-        component = shallow(
-          <List type="ordered" className="TEST_CLASSNAME" />,
-        );
+        component = shallow(<List type="ordered" className="TEST_CLASSNAME" />);
       });
 
       it('matches its snapshot', () => {
@@ -63,9 +61,7 @@ describe('<List />', () => {
 
     describe('with additional className', () => {
       beforeEach(() => {
-        component = shallow(
-          <List type="unordered" className="TEST_CLASSNAME" />,
-        );
+        component = shallow(<List type="unordered" className="TEST_CLASSNAME" />);
       });
 
       it('matches its snapshot', () => {

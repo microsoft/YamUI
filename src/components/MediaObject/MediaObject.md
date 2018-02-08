@@ -194,7 +194,6 @@ const avatar = (size) => (
   imageContent={avatar(AvatarSize.SMALL)}
   titleContent={user.name}
   metadataContent={user.jobTitle}
-  extraContent={user.status}
 >
   <Block push={4}>
     <FixedGridRow>

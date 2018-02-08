@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import autobind from 'core-decorators/lib/autobind';
 import { join } from '../../util/classNames';
 import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
@@ -57,18 +56,18 @@ export interface HovercardProps extends NestableBaseComponentProps {
   /**
    * Callback to be fired when the Hovercard content is removed.
    */
-  onContentDismiss?: () => void;
+  onContentDismiss?: (() => void);
 
   /**
    * Callback to be fired when the Hovercard content is displayed.
    */
-  onContentDisplay?: () => void;
+  onContentDisplay?: (() => void);
 
   /**
    * Callback to be fired on trigger hover. Can be used to preload content early before the
    * Hovercard content is actually displayed.
    */
-  onTriggerHover?: () => void;
+  onTriggerHover?: (() => void);
 }
 
 export interface HovercardState {
@@ -83,7 +82,7 @@ export { DirectionalHint };
  * `HovercardBody` components for consistent internal padding.
  */
 export default class Hovercard extends React.Component<HovercardProps, HovercardState> {
-  static defaultProps: Partial<HovercardProps> = {
+  public static defaultProps: Partial<HovercardProps> = {
     directionalHint: DirectionalHint.bottomCenter,
     isBeakVisible: true,
     startVisible: false,
@@ -102,7 +101,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
     };
   }
 
-  render() {
+  public render() {
     const {
       className,
       content,
@@ -140,7 +139,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
       <span className={join(['y-hovercard', className])}>
         <span
           className="y-hovercard--trigger"
-          ref={node => (this.triggerElement = node)}
+          ref={this.setRef}
           onClick={this.handleTriggerClick}
           onMouseEnter={this.handleTriggerHover}
           onMouseLeave={this.handleTriggerHoverLeave}
@@ -153,7 +152,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   }
 
   // Set initial visible state after mount so the trigger ref exists for positioning
-  componentDidMount() {
+  public componentDidMount() {
     const { startVisible } = this.props;
 
     if (startVisible) {
@@ -161,23 +160,25 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
     }
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     window.clearTimeout(this.showTimeout);
     window.clearTimeout(this.hideTimeout);
     this.stopKeyListener();
   }
 
-  @autobind
-  private handleTriggerClick() {
+  private setRef = (node: HTMLSpanElement | null) => {
+    this.triggerElement = node;
+  };
+
+  private handleTriggerClick = () => {
     const { triggerType } = this.props;
 
     if (triggerType === TriggerType.CLICK) {
       this.show();
     }
-  }
+  };
 
-  @autobind
-  private handleTriggerHover() {
+  private handleTriggerHover = () => {
     const { triggerType, onTriggerHover } = this.props;
 
     onTriggerHover && onTriggerHover();
@@ -187,45 +188,38 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
     if (triggerType === TriggerType.HOVER) {
       this.beginShow();
     }
-  }
+  };
 
-  @autobind
-  private handleTriggerHoverLeave() {
+  private handleTriggerHoverLeave = () => {
     this.cancelShow();
     this.beginHide();
-  }
+  };
 
-  @autobind
-  private handleBodyHover() {
+  private handleBodyHover = () => {
     this.cancelHide();
-  }
+  };
 
-  @autobind
-  private beginShow() {
+  private beginShow = () => {
     this.showTimeout = window.setTimeout(() => {
       this.show();
     }, showDelay);
-  }
+  };
 
-  @autobind
-  private cancelShow() {
+  private cancelShow = () => {
     window.clearTimeout(this.showTimeout);
-  }
+  };
 
-  @autobind
-  private beginHide() {
+  private beginHide = () => {
     this.hideTimeout = window.setTimeout(() => {
       this.hide();
     }, hideDelay);
-  }
+  };
 
-  @autobind
-  private cancelHide() {
+  private cancelHide = () => {
     window.clearTimeout(this.hideTimeout);
-  }
+  };
 
-  @autobind
-  private show() {
+  private show = () => {
     const { onContentDisplay } = this.props;
     const { visible } = this.state;
 
@@ -233,14 +227,15 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
       return;
     }
 
-    onContentDisplay && onContentDisplay();
+    if (onContentDisplay) {
+      onContentDisplay();
+    }
 
     this.setState({ visible: true });
     this.startKeyListener();
-  }
+  };
 
-  @autobind
-  private hide() {
+  private hide = () => {
     const { onContentDismiss } = this.props;
     const { visible } = this.state;
 
@@ -252,22 +247,19 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
     this.setState({ visible: false });
     this.stopKeyListener();
-  }
+  };
 
-  @autobind
-  private handleKeyDown(e: KeyboardEvent) {
+  private handleKeyDown = (e: KeyboardEvent) => {
     if (e.keyCode === KeyCodes.escape) {
       this.hide();
     }
-  }
+  };
 
-  @autobind
-  private startKeyListener() {
+  private startKeyListener = () => {
     document.addEventListener('keydown', this.handleKeyDown);
-  }
+  };
 
-  @autobind
-  private stopKeyListener() {
+  private stopKeyListener = () => {
     document.removeEventListener('keydown', this.handleKeyDown);
-  }
+  };
 }

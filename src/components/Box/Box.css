@@ -2,7 +2,11 @@
 @import "src/css/variables/colors.css";
 
 .y-box {
-  position: relative;
   border-radius: 1px;
   border: 1px solid $borderColor;
+}
+
+.y-box--inner {
+  margin: -1px;
+  position: relative;
 }

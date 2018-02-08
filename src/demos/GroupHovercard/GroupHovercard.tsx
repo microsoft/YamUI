@@ -3,10 +3,7 @@ import * as React from 'react';
 import Avatar, { AvatarBorderType, AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
-import {
-  HovercardHeader,
-  HovercardBody,
-} from '../../components/Hovercard';
+import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { LayoutList, LayoutListItem } from '../../components/LayoutList';
@@ -46,8 +43,8 @@ export interface GroupHovercardProps {
   group: any;
 }
 
-export default class GroupHovercard extends React.Component<GroupHovercardProps, {}> {
-  render() {
+export default class GroupHovercard extends React.Component<GroupHovercardProps> {
+  public render() {
     const { group } = this.props;
 
     const groupAvatar = (
@@ -61,9 +58,7 @@ export default class GroupHovercard extends React.Component<GroupHovercardProps,
 
     const groupMetadata = (
       <span>
-        {iconPrivate}
-        {' '}
-        {group.privacy}
+        {iconPrivate} {group.privacy}
       </span>
     );
 
