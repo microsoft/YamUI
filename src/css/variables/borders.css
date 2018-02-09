@@ -1,0 +1,5 @@
+@define-mixin borderStylePopOver {
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2) !important;
+  border: none;
+  border-radius: 1px;
+}

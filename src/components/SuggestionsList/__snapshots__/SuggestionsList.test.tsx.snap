@@ -1,15 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -30,21 +23,14 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
       </ul>
     </li>
   </ul>
-</Callout>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `null`;
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -65,19 +51,12 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
       </ul>
     </li>
   </ul>
-</Callout>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -98,19 +77,12 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
       </ul>
     </li>
   </ul>
-</Callout>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-status"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <Block
     padding="large"
@@ -118,24 +90,18 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
     textSize="small"
   >
     <Text
+      className="y-suggestions-list--no-results"
       color="metadata"
     >
       noResultsText
     </Text>
   </Block>
-</Callout>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -156,28 +122,25 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
       </ul>
     </li>
   </ul>
-  <Spinner
-    className="y-suggestions-list--loading"
-    color="light"
-    hideText={false}
-    size="medium"
-    text="loadingText"
-  />
-</Callout>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `null`;
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -198,26 +161,23 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       </ul>
     </li>
   </ul>
-  <Spinner
-    className="y-suggestions-list--loading"
-    color="light"
-    hideText={false}
-    size="medium"
-    text="loadingText"
-  />
-</Callout>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
   <ul
     className="y-suggestions-list--results"
@@ -238,33 +198,34 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       </ul>
     </li>
   </ul>
-  <Spinner
-    className="y-suggestions-list--loading"
-    color="light"
-    hideText={false}
-    size="medium"
-    text="loadingText"
-  />
-</Callout>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
+</div>
 `;
 
 exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
-<Callout
-  calloutWidth={280}
+<div
   className="y-suggestions-list y-suggestions-list--with-status"
-  directionalHint={4}
-  directionalHintFixed={true}
-  doNotLayer={true}
-  isBeakVisible={false}
-  minPagePadding={-500}
-  target={<div />}
 >
-  <Spinner
-    className="y-suggestions-list--loading"
-    color="light"
-    hideText={false}
-    size="medium"
-    text="loadingText"
-  />
-</Callout>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
+</div>
 `;

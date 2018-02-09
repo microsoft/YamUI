@@ -5,16 +5,10 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
-import Callout, { DirectionalHint } from '../Callout';
 import Block, { GutterSize } from '../Block';
 import './SuggestionsList.css';
-import { IPoint } from 'office-ui-fabric-react/lib/utilities/positioning';
 
 export interface SuggestionsListProps extends NestableBaseComponentProps {
-  /**
-   * The target that the Callout should try to position itself based on.
-   */
-  target: HTMLElement | IPoint;
   /**
    * The active search that produced the current state.
    */
@@ -79,19 +73,10 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     }
 
     return (
-      <Callout
-        calloutWidth={280}
-        doNotLayer={true}
-        directionalHint={DirectionalHint.bottomLeftEdge}
-        directionalHintFixed={true}
-        target={this.props.target}
-        className={classNames.join(' ')}
-        isBeakVisible={false}
-        minPagePadding={-500} /* allow to run past bottom of viewport */
-      >
+      <div className={classNames.join(' ')}>
         {results}
         {status}
-      </Callout>
+      </div>
     );
   }
 
@@ -113,7 +98,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         <ul>{items}</ul>
       </li>
     );
-  }
+  };
 
   private getResultItem = (item: SuggestionItem) => {
     const { searchText, selectedId, onItemSelected } = this.props;
@@ -128,14 +113,17 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
         />
       </li>
     );
-  }
+  };
 
   private getSearchStatus() {
     return this.props.isLoading ? this.getLoading() : this.getNoResults();
   }
 
   private getLoading() {
-    return <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" />;
+    return (
+      <Block push={-2}>
+        <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" />
+      </Block>);
   }
 
   private getNoResults() {
@@ -144,7 +132,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     }
     return (
       <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
-        <Text color={TextColor.METADATA}>{this.props.noResultsText}</Text>
+        <Text color={TextColor.METADATA} className="y-suggestions-list--no-results">{this.props.noResultsText}</Text>
       </Block>
     );
   }
