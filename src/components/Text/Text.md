@@ -21,9 +21,9 @@ Basic text:
 </div>
 ```
 
-With screenreaderText:
+With screenreader text:
 
-```js { "props": { "data-description": "with screenreadertext" } }
+```js { "props": { "data-description": "with screenreader text" } }
 <div>
   <p>
     <Text>
@@ -58,7 +58,7 @@ Uppercase:
 </div>
 ```
 
-Max width with ellipsis.
+Max width with ellipsis:
 
 NOTE: Text with maxWidth will add an extra 1px of height to the bottom of its containing element, an unfortunate side-effect of overflow-hidden on the inline-block Text element. To maintain perfect vertical rhythm in the next block of text, give the next container -1px top margin or simply use `<Block push={-1} />`.
 
