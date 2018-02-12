@@ -2,7 +2,7 @@
 
 Basic example:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <div>
   Here is a <FakeLink><strong>FakeLink</strong> component</FakeLink>. It styles text as if it were a <strong>NavigationLink</strong>. It does not accept any options.
 </div>
@@ -10,7 +10,7 @@ Basic example:
 
 Inside an unstyled `NavigationLink`:
 
-```js { "props": { "data-example": "inside unstyled navigationlink" } }
+```js { "props": { "data-description": "inside unstyled navigationlink" } }
 <NavigationLink href="/404.html" unstyled={true}>
   <Block>
     This unstyled link wraps an entire block of text. Here is a nested <FakeLink>FakeLink component</FakeLink>, which imitates link styles when its parent is hovered, focused or active. This allows screenreaders to understand a linked block of UI while also supporting nice visual styles for sighted users.
@@ -20,7 +20,7 @@ Inside an unstyled `NavigationLink`:
 
 Inside a `Clickable`:
 
-```js { "props": { "data-example": "inside unstyled clickable" } }
+```js { "props": { "data-description": "inside unstyled clickable" } }
 <Clickable unstyled={true} block={true} onClick={action('button clicked')}>
   <Block>
     Here is an example of a <FakeLink>FakeLink component</FakeLink> within a Clickable. <FakeLink>Here's another one</FakeLink>.

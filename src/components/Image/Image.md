@@ -8,7 +8,7 @@ If an image is used as a supplemental icon, or screenreaders should not read it 
 
 Basic:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
@@ -17,7 +17,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Fit cover:
 
-```js { "props": { "data-example": "fit cover" } }
+```js { "props": { "data-description": "fit cover" } }
 const { ImageFit } = require('.');
 
 const yammerLogo = 'logo.png';
@@ -39,7 +39,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Fit contain:
 
-```js { "props": { "data-example": "fit contain" } }
+```js { "props": { "data-description": "fit contain" } }
 const { ImageFit } = require('.');
 
 const yammerLogo = 'logo.png';
@@ -61,7 +61,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Fit center:
 
-```js { "props": { "data-example": "fit center" } }
+```js { "props": { "data-description": "fit center" } }
 const { ImageFit } = require('.');
 
 const yammerLogo = 'logo.png';
@@ -83,7 +83,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Fit not provided:
 
-```js { "props": { "data-example": "fit not provided" } }
+```js { "props": { "data-description": "fit not provided" } }
 const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
@@ -97,7 +97,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Fit none:
 
-```js { "props": { "data-example": "fit none" } }
+```js { "props": { "data-description": "fit none" } }
 const { ImageFit } = require('.');
 
 const yammerLogo = 'logo.png';
@@ -119,7 +119,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 Full width:
 
-```js { "props": { "data-example": "full width" } }
+```js { "props": { "data-description": "full width" } }
 const { GutterSize } = require('../FixedGrid');
 const { ImageFit } = require('.');
 
@@ -154,7 +154,7 @@ const fullWidthImage = (
 
 Handling load state:
 
-```js { "props": { "data-example": "load state" } }
+```js { "props": { "data-description": "load state" } }
 const { ImageFit, ImageLoadState } = require('.');
 
 const badImage = 'logoNotFound.png';

@@ -2,7 +2,7 @@
 
 Basic usage:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 const { GutterSize, TextSize } = require('../Block');
 
 const renderInKeyboardMode = () => {
@@ -21,7 +21,7 @@ const renderInMouseMode = (inView) => {
   );
 };
 
-<KeyboardNavigationObserver 
+<KeyboardNavigationObserver
   renderInKeyboardMode={renderInKeyboardMode}
   renderInMouseMode={renderInMouseMode}
   onEnterKeyboardMode={action('entered keyboard mode')}

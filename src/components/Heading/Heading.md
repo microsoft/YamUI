@@ -2,7 +2,7 @@
 
 Basic examples:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <div>
   <Heading level="1">This text is rendered in an h1 tag</Heading>
   <Heading level="2">This text is rendered in an h2 tag</Heading>
@@ -15,7 +15,7 @@ Basic examples:
 
 Size overrides:
 
-```js { "props": { "data-example": "size overrides" } }
+```js { "props": { "data-description": "size overrides" } }
 <div>
   <Heading level="2" size="1">This h2 is rendered at the size of an h1 tag</Heading>
   <Heading level="2" size="2">This h2 is rendered at the size of an h2 tag</Heading>

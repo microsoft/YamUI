@@ -6,7 +6,7 @@
 
 Without image:
 
-```js { "props": { "data-example": "without image" } }
+```js { "props": { "data-description": "without image" } }
 const { AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -43,7 +43,7 @@ const { AvatarSize } = require('.');
 
 With image:
 
-```js { "props": { "data-example": "with image" } }
+```js { "props": { "data-description": "with image" } }
 const { AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -80,7 +80,7 @@ const { AvatarSize } = require('.');
 
 With image and badge:
 
-```js { "props": { "data-example": "with image and badge" } }
+```js { "props": { "data-description": "with image and badge" } }
 const { AvatarSize } = require('.');
 
 const badgeContent = (
@@ -151,7 +151,7 @@ const badgeContent = (
 
 With image and soft border:
 
-```js { "props": { "data-example": "with image and soft border" } }
+```js { "props": { "data-description": "with image and soft border" } }
 const { AvatarBorderType, AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -213,7 +213,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
 
 Example colors:
 
-```js { "props": { "data-example": "colors" } }
+```js { "props": { "data-description": "colors" } }
 const { GutterSize } = require('../Block');
 const { AvatarSize } = require('.');
 

@@ -10,7 +10,7 @@ Use `type='submit'` for submitting forms. Doing this will trigger the onClick ac
 
 Regular buttons:
 
-```js { "props": { "data-example": "regular" } }
+```js { "props": { "data-description": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
 const Add = require('../Icon/icons/Add').default;
 const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
@@ -248,7 +248,7 @@ const sampleUrl = 'https://www.yammer.com';
 
 Small buttons:
 
-```js { "props": { "data-example": "small" } }
+```js { "props": { "data-description": "small" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
 const Add = require('../Icon/icons/Add').default;
 const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
@@ -488,19 +488,19 @@ const sampleUrl = 'https://www.yammer.com';
 
 Link button:
 
-```js { "props": { "data-example": "link" } }
+```js { "props": { "data-description": "link" } }
 <Button text="I am a link" href="https://www.yammer.com" />
 ```
 
 Submit button:
 
-```js { "props": { "data-example": "submit button" } }
+```js { "props": { "data-description": "submit button" } }
 <Button text="Submit" type="submit" />
 ```
 
 Loading button:
 
-```js { "props": { "data-example": "loading" } }
+```js { "props": { "data-description": "loading" } }
 const { ButtonStatus } = require('.');
 
 class LoadingButton extends React.Component {
@@ -537,7 +537,7 @@ class LoadingButton extends React.Component {
 
 Full width:
 
-```js { "props": { "data-example": "full width" } }
+```js { "props": { "data-description": "full width" } }
 const { ButtonColor } = require('.');
 const { FixedGridRow, FixedGridColumn, GutterSize } = require('../FixedGrid');
 
@@ -557,7 +557,7 @@ const { FixedGridRow, FixedGridColumn, GutterSize } = require('../FixedGrid');
 
 With supported event handlers:
 
-```js { "props": { "data-example": "with event handlers" } }
+```js { "props": { "data-description": "with event handlers" } }
 <Button
   text="Interact with me"
   onClick={action('button clicked')}

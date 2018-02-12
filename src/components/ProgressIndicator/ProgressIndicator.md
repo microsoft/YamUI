@@ -8,18 +8,18 @@ width.
 
 zero percent:
 
-```js { "props": { "data-example": "zero percent" } }
+```js { "props": { "data-description": "zero percent" } }
 <ProgressIndicator percentComplete={0} ariaValueText="Zero percent" />
 ```
 
 thirty percent:
 
-```js { "props": { "data-example": "thirty percent" } }
+```js { "props": { "data-description": "thirty percent" } }
 <ProgressIndicator percentComplete={0.3} ariaValueText="Thirty percent" />
 ```
 
 one hundred percent:
 
-```js { "props": { "data-example": "one hundred percent" } }
+```js { "props": { "data-description": "one hundred percent" } }
 <ProgressIndicator percentComplete={1} ariaValueText="One hundred percent" />
 ```

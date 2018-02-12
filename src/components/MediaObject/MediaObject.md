@@ -2,7 +2,7 @@
 
 With avatar:
 
-```js { "props": { "data-example": "with avatar" } }
+```js { "props": { "data-description": "with avatar" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('.');
 
@@ -51,7 +51,7 @@ const avatar = (size) => (
 
 With long text:
 
-```js { "props": { "data-example": "with long text" } }
+```js { "props": { "data-description": "with long text" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('.');
 
@@ -104,7 +104,7 @@ const avatar = (size) => (
 
 With allow text wrap:
 
-```js { "props": { "data-example": "with allow text wrap" } }
+```js { "props": { "data-description": "with allow text wrap" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('.');
 
@@ -130,7 +130,7 @@ const avatar = (size) => (
 
 With image:
 
-```js { "props": { "data-example": "with image" } }
+```js { "props": { "data-description": "with image" } }
 const { MediaObjectSize } = require('.');
 
 const image = (
@@ -178,7 +178,7 @@ const image = (
 
 With additional arbitrary UI:
 
-```js { "props": { "data-example": "with additional ui" } }
+```js { "props": { "data-description": "with additional ui" } }
 const { AvatarSize } = require('../Avatar');
 const { ButtonColor, ButtonSize } = require('../Button');
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid');

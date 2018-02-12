@@ -2,7 +2,7 @@
 
 Basic usage:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 const { GutterSize, TextSize } = require('../Block');
 
 const renderInView = () => {
@@ -22,7 +22,7 @@ const renderOutOfView = (inView) => {
 };
 
 
-<VisibilityObserver 
+<VisibilityObserver
   renderInView={renderInView}
   renderOutOfView={renderOutOfView}
   onEnterView={action('scrolled into view')}

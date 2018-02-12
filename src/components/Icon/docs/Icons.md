@@ -12,7 +12,7 @@ The `block` prop may be necessary to remove extra `line-height`.
 
 Icon library:
 
-```js { "props": { "data-example": "library" } }
+```js { "props": { "data-description": "library" } }
 const { IconSize } = require('../index');
 const allIcons = require('../icons');
 const { GutterSize, TextSize } = require('../../Block');
@@ -39,7 +39,7 @@ const iconsLibrary = Object.keys(allIcons).map((icon, index) => {
 
 Sizes:
 
-```js { "props": { "data-example": "sizes" } }
+```js { "props": { "data-description": "sizes" } }
 const { IconSize } = require('../index');
 const Attach = require('../icons/Attach').default;
 
@@ -81,7 +81,7 @@ const Attach = require('../icons/Attach').default;
 
 Auto-sized to text:
 
-```js { "props": { "data-example": "autosized to text" } }
+```js { "props": { "data-description": "autosized to text" } }
 const { GutterSize, TextSize } = require('../../Block');
 const Attach = require('../icons/Attach').default;
 const CheckMark = require('../icons/CheckMark').default;
@@ -129,7 +129,7 @@ const longText = (
 
 Auto-sized to headings:
 
-```js { "props": { "data-example": "autosized to headings" } }
+```js { "props": { "data-description": "autosized to headings" } }
 const { GutterSize } = require('../../Block');
 const Attach = require('../icons/Attach').default;
 const CheckMark = require('../icons/CheckMark').default;
@@ -170,7 +170,7 @@ const longText = (
 
 Inline with text and color overrides:
 
-```js { "props": { "data-example": "inline with text and color" } }
+```js { "props": { "data-description": "inline with text and color" } }
 const { IconSize } = require('../index');
 const Add = require('../icons/Add').default;
 
