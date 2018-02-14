@@ -1,7 +1,7 @@
 ### Examples
 
 Basic
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <TextField
   label="First Name"
   value="Textfield filled"
@@ -10,7 +10,7 @@ Basic
 ```
 
 Disabled
-```js { "props": { "data-example": "disabled" } }
+```js { "props": { "data-description": "disabled" } }
 <TextField
   value="Disabled"
   disabled
@@ -18,14 +18,14 @@ Disabled
 ```
 
 With Placeholder
-```js { "props": { "data-example": "with placeholder" } }
+```js { "props": { "data-description": "with placeholder" } }
 <TextField
   placeHolder="Textfield Placeholder..."
 />
 ```
 
 With Error Message
-```js { "props": { "data-example": "with error" } }
+```js { "props": { "data-description": "with error" } }
 <TextField
   value="Error"
   errorMessage="Error hint goes here"
@@ -33,7 +33,7 @@ With Error Message
 ```
 
 With Error Message and Description.  (NOTE: The description is hidden.)
-```js { "props": { "data-example": "with error and description" } }
+```js { "props": { "data-description": "with error and description" } }
 <TextField
   value="Error"
   errorMessage="Error hint goes here"
@@ -42,7 +42,7 @@ With Error Message and Description.  (NOTE: The description is hidden.)
 ```
 
 With Prefix
-```js { "props": { "data-example": "with prefix" } }
+```js { "props": { "data-description": "with prefix" } }
 <TextField
   placeHolder="your-website.com"
   prefix="http://"
@@ -50,7 +50,7 @@ With Prefix
 ```
 
 With Suffix
-```js { "props": { "data-example": "with suffix" } }
+```js { "props": { "data-description": "with suffix" } }
 <TextField
   placeHolder="your e-mail"
   suffix="@contoso.com"
@@ -58,7 +58,7 @@ With Suffix
 ```
 
 Required:
-```js { "props": { "data-example": "required" } }
+```js { "props": { "data-description": "required" } }
 <TextField
   placeHolder="Required Field"
   required
@@ -66,7 +66,7 @@ Required:
 ```
 
 Required with Label:
-```js { "props": { "data-example": "required with label" } }
+```js { "props": { "data-description": "required with label" } }
 <TextField
   label={"Required Field"}
   required
@@ -74,14 +74,14 @@ Required with Label:
 ```
 
 onChange:
-```js { "props": { "data-example": "onChange" } }
+```js { "props": { "data-description": "onChange" } }
 <TextField
   onChange={action('change from `onChange` example')}
 />
 ```
 
 Controlled onChange with debounce:
-```js { "props": { "data-example": "controlled onChange with debounce" } }
+```js { "props": { "data-description": "controlled onChange with debounce" } }
 class ControlledTextField extends React.Component {
   constructor() {
     super();
@@ -110,7 +110,7 @@ class ControlledTextField extends React.Component {
 ```
 
 Beside Button
-```js { "props": { "data-example": "beside button" } }
+```js { "props": { "data-description": "beside button" } }
 <FixedGridRow>
   <FixedGridColumn><TextField/></FixedGridColumn>
   <FixedGridColumn fixed={true}><Button text="Submit" /></FixedGridColumn>
@@ -118,7 +118,7 @@ Beside Button
 ```
 
 Underlined Variation
-```js { "props": { "data-example": "basic underlined" } }
+```js { "props": { "data-description": "basic underlined" } }
 <TextField
   placeHolder="Textfield Placeholder..."
   underlined
@@ -126,7 +126,7 @@ Underlined Variation
 ```
 
 Underlined Variation With Error
-```js { "props": { "data-example": "underlined with error" } }
+```js { "props": { "data-description": "underlined with error" } }
 <TextField
   errorMessage="Error hint goes here"
   placeHolder="Textfield Error"

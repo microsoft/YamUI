@@ -2,13 +2,13 @@
 
 With no results:
 
-```js { "props": { "data-example": "No Results" } }
+```js { "props": { "data-description": "no results" } }
 <SuggestionsList noResultsText="No results found" />
 ```
 
 When loading:
 
-```js { "props": { "data-example": "When Loading" } }
+```js { "props": { "data-description": "when loading" } }
 <SuggestionsList
   isLoading={true}
   loadingText={'Searching for \'Cris\''}
@@ -17,7 +17,7 @@ When loading:
 
 With results:
 
-```js { "props": { "data-example": "With Results" } }
+```js { "props": { "data-description": "with results" } }
 <SuggestionsList
   searchText="Cris"
   loadingText={'Searching for \'Cris\''}
@@ -59,7 +59,7 @@ With results:
 
 With results, when loading:
 
-```js { "props": { "data-example": "With Results, When Loading" } }
+```js { "props": { "data-description": "with results, when loading" } }
 <SuggestionsList
   isLoading={true}
   searchText="Cris"

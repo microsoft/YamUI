@@ -15,6 +15,6 @@ module.exports = {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
   navigationOptions: {
-    waitUntil: 'networkidle',
+    waitUntil: 'networkidle0',
   },
 };

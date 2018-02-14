@@ -1,4 +1,4 @@
-```js { "props": { "data-example": "text" } }
+```js { "props": { "data-description": "text" } }
 const { TextSize } = require('../../components/Text');
 
 <Block>
@@ -9,7 +9,7 @@ const { TextSize } = require('../../components/Text');
 </Block>
 ```
 
-```js { "props": { "data-example": "text" } }
+```js { "props": { "data-description": "text" } }
 const { TextSize } = require('../../components/Text');
 
 <Block>
@@ -20,7 +20,7 @@ const { TextSize } = require('../../components/Text');
 </Block>
 ```
 
-```js { "props": { "data-example": "buttons" } }
+```js { "props": { "data-description": "buttons" } }
 const { TextSize } = require('../../components/Text');
 const { ButtonSize } = require('../../components/Button');
 
@@ -32,7 +32,7 @@ const { ButtonSize } = require('../../components/Button');
 </Block>
 ```
 
-```js { "props": { "data-example": "text and buttons" } }
+```js { "props": { "data-description": "text and buttons" } }
 const { TextSize } = require('../../components/Text');
 const { ButtonSize } = require('../../components/Button');
 
@@ -44,7 +44,7 @@ const { ButtonSize } = require('../../components/Button');
 </Block>
 ```
 
-```js { "props": { "data-example": "inherited text size with ellipsis" } }
+```js { "props": { "data-description": "inherited text size with ellipsis" } }
 const { ButtonSize } = require('../../components/Button');
 const { GutterSize } = require('../../components/Block');
 const { TextSize } = require('../../components/Text');
@@ -108,7 +108,7 @@ const textSample = (
 </Block>
 ```
 
-```js { "props": { "data-example": "across separate fixed grid columns" } }
+```js { "props": { "data-description": "across separate fixed grid columns" } }
 const { TextSize } = require('../../components/Text');
 const { ButtonSize } = require('../../components/Button');
 
@@ -127,7 +127,7 @@ const { ButtonSize } = require('../../components/Button');
 </Block>
 ```
 
-```js { "props": { "data-example": "ellipsis block within fixed grid" } }
+```js { "props": { "data-description": "ellipsis block within fixed grid" } }
 const { GutterSize } = require('../../components/Block');
 const longText = 'The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog. The quick brown fox jumped over the lazy dog.';
 

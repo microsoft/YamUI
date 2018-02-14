@@ -10,7 +10,7 @@ In general UI components should fill their parent container's width. They should
 
 Without props:
 
-```js { "props": { "data-example": "without props" } }
+```js { "props": { "data-description": "without props" } }
 <div>
   <Block>
     The <strong>Block</strong> component renders its children in a <em>div</em>. It's a convenient way to set consistent bottom gutters and padding, and manage pixel-perfect vertical rhythm between components.
@@ -23,7 +23,7 @@ Without props:
 
 With padding:
 
-```js { "props": { "data-example": "with padding" } }
+```js { "props": { "data-description": "with padding" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -53,7 +53,7 @@ const { GutterSize } = require('.');
 
 Block can also have separate vertical and horizontal padding. With horizontal padding:
 
-```js { "props": { "data-example": "with horizontal padding" } }
+```js { "props": { "data-description": "with horizontal padding" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -83,7 +83,7 @@ const { GutterSize } = require('.');
 
 With vertical padding:
 
-```js { "props": { "data-example": "with vertical padding" } }
+```js { "props": { "data-description": "with vertical padding" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -113,7 +113,7 @@ const { GutterSize } = require('.');
 
 With top gutter spacing:
 
-```js { "props": { "data-example": "with top gutter spacing" } }
+```js { "props": { "data-description": "with top gutter spacing" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -143,7 +143,7 @@ const { GutterSize } = require('.');
 
 With bottom gutter spacing:
 
-```js { "props": { "data-example": "with bottom gutter spacing" } }
+```js { "props": { "data-description": "with bottom gutter spacing" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -173,7 +173,7 @@ const { GutterSize } = require('.');
 
 With text alignment:
 
-```js { "props": { "data-example": "with text alignment" } }
+```js { "props": { "data-description": "with text alignment" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -191,7 +191,7 @@ const { GutterSize } = require('.');
 
 With ellipsis:
 
-```js { "props": { "data-example": "with ellipsis" } }
+```js { "props": { "data-description": "with ellipsis" } }
 <div>
   <Block ellipsis={true}>
     This example has <strong>ellipsis: true</strong>. Its text content will be limited to a single line, and any additional content will be hidden while displaying an ellipsis character at the end of the line.
@@ -201,7 +201,7 @@ With ellipsis:
 
 Text colors:
 
-```js { "props": { "data-example": "text colors" } }
+```js { "props": { "data-description": "text colors" } }
 const { GutterSize, TextColor } = require('.');
 
 <div>
@@ -224,7 +224,7 @@ const { GutterSize, TextColor } = require('.');
 
 Text sizes:
 
-```js { "props": { "data-example": "text sizes" } }
+```js { "props": { "data-description": "text sizes" } }
 const { GutterSize, TextSize } = require('.');
 
 <div>
@@ -257,7 +257,7 @@ const { GutterSize, TextSize } = require('.');
 
 With positive push:
 
-```js { "props": { "data-example": "with positive push" } }
+```js { "props": { "data-description": "with positive push" } }
 const { GutterSize } = require('.');
 const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{children}</div>;
 
@@ -281,7 +281,7 @@ const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{chil
 
 With negative push below margin:
 
-```js { "props": { "data-example": "with negative push below margin" } }
+```js { "props": { "data-description": "with negative push below margin" } }
 const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{children}</div>;
 
 <MarginWrapper>
@@ -293,7 +293,7 @@ const MarginWrapper = ({ children }) => <div style={{ marginTop: '2rem' }}>{chil
 
 With negative push below padding:
 
-```js { "props": { "data-example": "with negative push below padding" } }
+```js { "props": { "data-description": "with negative push below padding" } }
 const PaddingWrapper = ({ children }) => <div style={{ paddingTop: '2rem' }}>{children}</div>;
 
 <PaddingWrapper>
@@ -305,7 +305,7 @@ const PaddingWrapper = ({ children }) => <div style={{ paddingTop: '2rem' }}>{ch
 
 With negative push below border:
 
-```js { "props": { "data-example": "with negative push below border" } }
+```js { "props": { "data-description": "with negative push below border" } }
 const BorderWrapper = ({ children }) => <div style={{ paddingTop: '2rem' }}>{children}</div>;
 
 <BorderWrapper>

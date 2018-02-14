@@ -2,13 +2,13 @@
 
 Basic usage:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <Box>This is a Box</Box>
 ```
 
 With MediaObject child:
 
-```js { "props": { "data-example": "with-mediaobject-child" } }
+```js { "props": { "data-description": "with mediaobject child" } }
 const { AvatarSize } = require('../Avatar');
 const { MediaObjectSize } = require('../MediaObject');
 const avatar = (size) => (
@@ -28,7 +28,7 @@ const avatar = (size) => (
 
 With absolutely-positioned children:
 
-```js { "props": { "data-example": "with-absolutely-positioned-children" } }
+```js { "props": { "data-description": "with absolutely positioned children" } }
 const { IconSize } = require('../Icon');
 const CancelIcon = require('../Icon/icons/Cancel').default;
 const { GutterSize } = require('../Block');
