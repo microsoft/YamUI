@@ -40,3 +40,25 @@ exports[`<VisibilityObserver /> with render, callback, rootMargin and tag option
   triggerOnce={false}
 />
 `;
+
+exports[`<VisibilityObserver /> without onEnterView and onLeaveView callbacks when in view and scrolled back out of view renders without throwing an error 1`] = `
+<Observer
+  onChange={[Function]}
+  render={[Function]}
+  rootMargin="100px"
+  tag="span"
+  threshold={0}
+  triggerOnce={false}
+/>
+`;
+
+exports[`<VisibilityObserver /> without onEnterView and onLeaveView callbacks when in view renders without throwing an error 1`] = `
+<Observer
+  onChange={[Function]}
+  render={[Function]}
+  rootMargin="100px"
+  tag="span"
+  threshold={0}
+  triggerOnce={false}
+/>
+`;

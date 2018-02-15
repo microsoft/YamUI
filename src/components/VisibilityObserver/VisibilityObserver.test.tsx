@@ -105,4 +105,38 @@ describe('<VisibilityObserver />', () => {
       });
     });
   });
+
+  describe('without onEnterView and onLeaveView callbacks', () => {
+    beforeEach(() => {
+      component = shallow(
+        <VisibilityObserver
+          renderInView={renderInView}
+          renderOutOfView={renderOutOfView}
+          rootMargin="100px"
+          tag="span"
+        />,
+      );
+      callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+      renderProp = component.find(Observer).prop('render') as RenderProp;
+    });
+    describe('when in view', () => {
+      beforeEach(() => {
+        callbackProp(true);
+      });
+
+      it('renders without throwing an error', () => {
+        expect(component).toMatchSnapshot();
+      });
+
+      describe('and scrolled back out of view', () => {
+        beforeEach(() => {
+          callbackProp(false);
+        });
+
+        it('renders without throwing an error', () => {
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+  });
 });

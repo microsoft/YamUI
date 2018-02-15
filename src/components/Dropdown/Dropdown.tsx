@@ -189,6 +189,8 @@ export default class Dropdown extends React.Component<DropdownProps> {
 
   private handleChanged = (option: IDropdownOption) => {
     const { onChanged } = this.props;
-    onChanged && onChanged(option.key);
+    if (onChanged) {
+      onChanged(option.key);
+    }
   };
 }

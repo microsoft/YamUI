@@ -136,6 +136,27 @@ describe('<Dropdown />', () => {
     });
   });
 
+  describe('when onChanged handler is not passed in', () => {
+    const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
+
+    beforeEach(() => {
+      component = shallow(<Dropdown options={options} />);
+    });
+
+    describe('when an option is selected', () => {
+      let fabricDropdown: ShallowWrapper<IDropdownProps, {}>;
+
+      beforeEach(() => {
+        fabricDropdown = component.find(FabricDropdown);
+        fabricDropdown.simulate('changed', options[1]);
+      });
+
+      it('renders without throwing an error', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('when onRenderTitle is called with null', () => {
     let result: React.ReactNode | null;
 

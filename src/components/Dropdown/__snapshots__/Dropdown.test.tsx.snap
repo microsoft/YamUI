@@ -93,6 +93,49 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Dropdown /> when onChanged handler is not passed in when an option is selected renders without throwing an error 1`] = `
+<div
+  className="y-dropdown"
+>
+  <WithResponsiveMode
+    calloutProps={
+      Object {
+        "directionalHintFixed": false,
+        "doNotLayer": true,
+        "preventDismissOnScroll": true,
+      }
+    }
+    onChanged={[Function]}
+    onRenderCaretDown={[Function]}
+    onRenderOption={[Function]}
+    onRenderPlaceHolder={[Function]}
+    onRenderTitle={[Function]}
+    options={
+      Array [
+        Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
+          "key": "A",
+          "text": "Option a",
+        },
+        Object {
+          "data": Object {
+            "icon": undefined,
+            "label": undefined,
+          },
+          "itemType": undefined,
+          "key": "B",
+          "text": "Option b",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
 exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
 <Block
   className="y-dropdown--item y-dropdown--header"

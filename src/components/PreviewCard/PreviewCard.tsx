@@ -234,7 +234,9 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
 
   private handleRemoveClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    this.props.onRemoveClick && this.props.onRemoveClick();
+    if (this.props.onRemoveClick) {
+      this.props.onRemoveClick();
+    }
   };
 
   private enterEditMode = () => {

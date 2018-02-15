@@ -21,7 +21,7 @@ module.exports = class WithTarget extends React.PureComponent<{}, { showing: boo
       : null;
     return (
       <span>
-        <button ref={ref => this.saveRef(ref)} onClick={this.onClick}>
+        <button ref={this.saveRef} onClick={this.onClick}>
           {this.state.showing ? 'Hide' : 'Show'}
         </button>
         {content}

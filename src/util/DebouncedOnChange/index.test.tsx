@@ -5,7 +5,7 @@ import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProp
 import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
 interface InnerComponentProps extends DebouncedOnChangeProps {
-  onChange?: (newValue: any) => void;
+  onChange?(newValue: any) : void;
 }
 
 const InnerComponent: React.StatelessComponent<InnerComponentProps> = props => <input {...props} />;

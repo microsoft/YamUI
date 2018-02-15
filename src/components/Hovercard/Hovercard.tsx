@@ -181,7 +181,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   private handleTriggerHover = () => {
     const { triggerType, onTriggerHover } = this.props;
 
-    onTriggerHover && onTriggerHover();
+    if (onTriggerHover) {
+      onTriggerHover();
+    }
 
     this.cancelHide();
 
@@ -243,7 +245,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
       return;
     }
 
-    onContentDismiss && onContentDismiss();
+    if (onContentDismiss) {
+      onContentDismiss();
+    }
 
     this.setState({ visible: false });
     this.stopKeyListener();

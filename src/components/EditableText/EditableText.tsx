@@ -116,7 +116,9 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
 
   private setTextFieldFocus() {
     window.setTimeout(() => {
-      this.textFieldRef && this.textFieldRef.focus && this.textFieldRef.focus();
+      if (this.textFieldRef && this.textFieldRef.focus) {
+        this.textFieldRef.focus();
+      }
     }, 0);
   }
 
@@ -124,18 +126,26 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
     event.stopPropagation();
     this.setState(() => ({ isEditing: true, editedValue: this.props.text }));
     this.setTextFieldFocus();
-    this.props.onBeginEditing && this.props.onBeginEditing();
+    if (this.props.onBeginEditing) {
+      this.props.onBeginEditing();
+    }
   };
 
   private cancelEdit = () => {
     this.setState(() => ({ isEditing: false, editedValue: '' }));
-    this.props.onEndEditing && this.props.onEndEditing();
+    if (this.props.onEndEditing) {
+      this.props.onEndEditing();
+    }
   };
 
   private commitEdit = () => {
     const { editedValue } = this.state;
     this.setState(() => ({ isEditing: false, editedValue: '' }));
-    this.props.onUpdate && this.props.onUpdate(editedValue);
-    this.props.onEndEditing && this.props.onEndEditing();
+    if (this.props.onUpdate) {
+      this.props.onUpdate(editedValue);
+    }
+    if (this.props.onEndEditing) {
+      this.props.onEndEditing();
+    }
   };
 }
