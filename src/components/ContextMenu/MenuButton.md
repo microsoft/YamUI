@@ -7,15 +7,24 @@ Context menu should be used as a menu button where you want to provide options t
 Inline:
 
 ```js { "props": { "text": "Hello" } }
+const Reply = require('../Icon/icons/Reply').default;
+const Edit = require('../Icon/icons/Edit').default;
+
 <div>
-  <MenuButton menuItems={[{
-    key: 'reply',
-    name: 'Reply',
-    icon: 'Reply',
-  }, {
-    key: 'edit',
-    name: 'Edit',
-    icon: 'Edit',
-  }]}/>
+  <MenuButton
+    ariaLabel="aria"
+    menuItems={[{
+      key: 'reply',
+      text: 'Reply',
+      icon: Reply,
+      onClick: () => console.log('reply'),
+    }, {
+      key: 'edit',
+      text: 'Edit',
+      icon: Edit,
+      isDisabled: true,
+      onClick: () => console.log('edit'),
+    }]}
+  />
 </div>
 ```

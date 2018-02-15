@@ -1,11 +1,21 @@
-.y-context-menu--item {
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
+
+.y-menu-button--item {
   width: 100%;
 }
 
-.y-context-menu--item-odd {
-  background-color: gray;
+.ms-ContextualMenu-items {
+  padding-bottom: .4rem;
 }
 
-.y-context-menu--item-even {
-  background-color: white;
+.ms-ContextualMenu-item {
+  padding: .4rem 1.1rem .6rem;
+}
+
+.ms-ContextualMenu-item:hover,
+.ms-ContextualMenu-item:active,
+.ms-ContextualMenu-item:focus {
+  background-color: $dropdownOptionBackgroundColor__focused;
 }
