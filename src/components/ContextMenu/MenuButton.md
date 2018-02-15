@@ -17,6 +17,7 @@ const Edit = require('../Icon/icons/Edit').default;
       key: 'reply',
       text: 'Reply',
       icon: Reply,
+      disabled: true,
       onClick: () => console.log('reply'),
     }, {
       key: 'edit',
