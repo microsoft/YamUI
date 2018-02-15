@@ -24,7 +24,7 @@ export interface MenuButtonItem {
   key: string;
   text: string;
   isDisabled?: boolean;
-  icon?: typeof BaseIcon
+  icon?: typeof BaseIcon;
   onClick?: () => void;
   href?: string;
 }
@@ -98,10 +98,14 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     }
 
     return (
-      <Clickable key={item.key} className="y-menu-button--item" onClick={item.onClick} unstyled={true}>
-        <Block textSize={TextSize.MEDIUM_SUB}>
-          {this.getMenuItemContent(item)}
-        </Block>
+      <Clickable
+        key={item.key}
+        className="y-menu-button--item"
+        onClick={item.onClick}
+        unstyled={true}
+        disabled={item.disabled}
+      >
+        <Block textSize={TextSize.MEDIUM_SUB}>{this.getMenuItemContent(item)}</Block>
       </Clickable>
     );
   }
@@ -109,13 +113,15 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
   @autobind
   private getMenuItemContent(item: IContextualMenuItem) {
     const Icon = item && item.yamUiIcon;
-    const iconNode = Icon && <Icon size={IconSize.MEDIUM}/>;
+    const iconNode = Icon && <Icon size={IconSize.MEDIUM} />;
     const textContent = <span>{item.name}</span>;
 
     if (iconNode) {
       return (
         <FixedGridRow gutterSize={GutterSize.SMALL}>
-          <FixedGridColumn fixed={true} className="y-menu-button--item-icon">{iconNode}</FixedGridColumn>
+          <FixedGridColumn fixed={true} className="y-menu-button--item-icon">
+            {iconNode}
+          </FixedGridColumn>
           <FixedGridColumn>{textContent}</FixedGridColumn>
         </FixedGridRow>
       );

@@ -1,4 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
 .y-clickable {
   color: inherit;
   font: inherit;
@@ -16,4 +18,9 @@
 .y-clickable__block {
   display: block;
   width: 100%;
+}
+
+.y-clickable:disabled {
+  color: $textColor__disabled;
+  cursor: auto;
 }
