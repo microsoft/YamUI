@@ -1,0 +1,11 @@
+.y-context-menu--item {
+  width: 100%;
+}
+
+.y-context-menu--item-odd {
+  background-color: gray;
+}
+
+.y-context-menu--item-even {
+  background-color: white;
+}
