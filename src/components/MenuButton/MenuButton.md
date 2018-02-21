@@ -24,6 +24,11 @@ const Edit = require('../Icon/icons/Edit').default;
       text: 'Edit',
       icon: Edit,
       onClick: () => console.log('edit'),
+    },  {
+      key: 'edit',
+      text: 'Edit',
+      icon: Edit,
+      onClick: () => console.log('edit'),
     }]}
   />
 </div>

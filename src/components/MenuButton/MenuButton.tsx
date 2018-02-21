@@ -10,15 +10,18 @@ import {
   IContextualMenuProps,
   IContextualMenuItem,
   IContextualMenuItemProps,
+  ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
+export { ContextualMenuItemType };
 
 const More = require('../Icon/icons/More').default;
 
 export interface IMenuButtonItem {
   key: string;
   text: string;
+  type?: ContextualMenuItemType;
   isDisabled?: boolean;
-  onClick?: () => void;
+  onClick?: (ev?: React.MouseEvent<HTMLElement>) => void;
   href?: string;
   icon?: typeof BaseIcon;
 }
@@ -70,6 +73,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     const menuItems: IContextualMenuItem[] = this.props.menuItems.map(item => ({
       key: item.key,
       name: item.text,
+      itemType: item.type,
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
