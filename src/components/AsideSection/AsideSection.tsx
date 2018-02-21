@@ -5,7 +5,7 @@ import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
-import Text, { TextSize } from '../Text';
+import Text, { TextColor, TextSize } from '../Text';
 import './AsideSection.css';
 
 export interface AsideSectionProps extends NestableBaseComponentProps {
@@ -27,19 +27,19 @@ export default class AsideSection extends React.Component<AsideSectionProps, {}>
   render() {
     return (
       <div className="y-aside-section">
-        <Block textSize={TextSize.SMALL}>
-          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
-            <FixedGridColumn>
+        <Block>
+          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.XSMALL}>
+            <FixedGridColumn fixed={true}>
               <Heading level="2" size="none">
-                <Text uppercase={true} bold={true}>{this.props.title}</Text>
+                <Text size={TextSize.MEDIUM_SUB} color={TextColor.SECONDARY} bold={true}>{this.props.title}</Text>
               </Heading>
             </FixedGridColumn>
             {this.getActionColumn()}
           </FixedGridRow>
         </Block>
-        <div>
+        <Block textSize={TextSize.MEDIUM_SUB}>
           {this.props.children}
-        </div>
+        </Block>
       </div>
     );
   }
@@ -47,8 +47,8 @@ export default class AsideSection extends React.Component<AsideSectionProps, {}>
   private getActionColumn() {
     if (this.props.action) {
       return (
-        <FixedGridColumn fixed={true}>
-          {this.props.action}
+        <FixedGridColumn className="y-aside-section--action">
+          <Text size={TextSize.SMALL}>{this.props.action}</Text>  
         </FixedGridColumn>
       );
     }

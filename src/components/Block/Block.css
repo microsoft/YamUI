@@ -27,6 +27,9 @@
 .y-block__topSpacing-xSmall {
   margin-top: $gutterWidth__xSmall;
 }
+.y-block__topSpacing-xxSmall {
+  margin-top: $gutterWidth__xxSmall;
+}
 
 /* Bottom spacing */
 .y-block__bottomSpacing-xxLarge {
@@ -46,6 +49,9 @@
 }
 .y-block__bottomSpacing-xSmall {
   margin-bottom: $gutterWidth__xSmall;
+}
+.y-block__bottomSpacing-xxSmall {
+  margin-bottom: $gutterWidth__xxSmall;
 }
 
 .y-block--inner {
@@ -70,6 +76,9 @@
 }
 .y-block--inner__padding-xSmall {
   padding: $gutterWidth__xSmall;
+}
+.y-block--inner__padding-xxSmall {
+  padding: $gutterWidth__xxSmall;
 }
 
 /* Horizontal padding */
@@ -97,6 +106,10 @@
   padding-left: $gutterWidth__xSmall;
   padding-right: $gutterWidth__xSmall;
 }
+.y-block--inner__horizontalPadding-xxSmall {
+  padding-left: $gutterWidth__xxSmall;
+  padding-right: $gutterWidth__xxSmall;
+}
 
 /* Vertical padding */
 .y-block--inner__verticalPadding-xxLarge {
@@ -122,6 +135,10 @@
 .y-block--inner__verticalPadding-xSmall {
   padding-top: $gutterWidth__xSmall;
   padding-bottom: $gutterWidth__xSmall;
+}
+.y-block--inner__verticalPadding-xxSmall {
+  padding-top: $gutterWidth__xxSmall;
+  padding-bottom: $gutterWidth__xxSmall;
 }
 
 /* Text alignment */

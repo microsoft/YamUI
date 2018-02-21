@@ -6,5 +6,6 @@ export enum GutterSize {
   MEDIUM = 'medium', // 12px
   SMALL = 'small', // 8px
   XSMALL = 'xSmall', // 4px
+  XXSMALL = 'xxSmall', // 2px
   NONE = 'none', // 0px
 }

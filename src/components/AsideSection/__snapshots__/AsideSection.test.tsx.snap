@@ -4,22 +4,23 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <Block
-    textSize="small"
-  >
+  <Block>
     <FixedGridRow
       bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >
-      <FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
         <Heading
           level="2"
           size="none"
         >
           <Text
             bold={true}
-            uppercase={true}
+            color="secondary"
+            size="mediumSub"
           >
             Test title
           </Text>
@@ -35,33 +36,38 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
 <div
   className="y-aside-section"
 >
-  <Block
-    textSize="small"
-  >
+  <Block>
     <FixedGridRow
       bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >
-      <FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
         <Heading
           level="2"
           size="none"
         >
           <Text
             bold={true}
-            uppercase={true}
+            color="secondary"
+            size="mediumSub"
           >
             Test title
           </Text>
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
-        fixed={true}
+        className="y-aside-section--action"
       >
-        <Clickable>
-          Add
-        </Clickable>
+        <Text
+          size="small"
+        >
+          <Clickable>
+            Add
+          </Clickable>
+        </Text>
       </FixedGridColumn>
     </FixedGridRow>
   </Block>
@@ -73,22 +79,23 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <Block
-    textSize="small"
-  >
+  <Block>
     <FixedGridRow
       bottomSpacing="small"
       className="y-aside-section--header"
       gutterSize="small"
     >
-      <FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
         <Heading
           level="2"
           size="none"
         >
           <Text
             bold={true}
-            uppercase={true}
+            color="secondary"
+            size="mediumSub"
           >
             Test title
           </Text>
