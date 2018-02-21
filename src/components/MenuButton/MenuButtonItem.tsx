@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { IconSize, BaseIcon } from '../Icon';
+import { IconSize } from '../Icon';
 import Block from '../Block';
 import { TextSize } from '../Text';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';

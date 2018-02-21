@@ -5,7 +5,7 @@ import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
-import MenuButtonItem, { MenuButtonItemProps } from './MenuButtonItem';
+import MenuButtonItem from './MenuButtonItem';
 import './MenuButton.css';
 import {
   IContextualMenuProps,
