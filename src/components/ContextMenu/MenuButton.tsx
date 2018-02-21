@@ -3,30 +3,25 @@ import '../../yamui';
 import autobind from 'core-decorators/lib/autobind';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Block from '../Block';
-import Clickable from '../Clickable';
-import { TextSize } from '../Text';
-import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
-import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
+import MenuButtonItem, { MenuButtonItemProps } from './MenuButtonItem';
 import './MenuButton.css';
 import {
   IContextualMenuProps,
   IContextualMenuItem,
+  IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 
 const More = require('../Icon/icons/More').default;
-
-initializeIcons();
 
 export interface MenuButtonItem {
   key: string;
   text: string;
   isDisabled?: boolean;
-  icon?: typeof BaseIcon;
   onClick?: () => void;
   href?: string;
+  icon?: typeof BaseIcon;
 }
 
 export interface MenuButtonProps extends BaseComponentProps {
@@ -52,7 +47,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
         <IconButton
           ariaLabel={this.props.ariaLabel}
           menuProps={this.getMenuProps()}
-          menuIconProps={this.getMenuIconProps()}
           onRenderIcon={this.getIcon}
         />
       </div>
@@ -67,14 +61,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
   }
 
   @autobind
-  private getMenuIconProps() {
-    return {
-      iconName: '',
-      style: { display: 'none' },
-    };
-  }
-
-  @autobind
   private getMenuProps(): IContextualMenuProps {
     const menuItems: IContextualMenuItem[] = this.props.menuItems.map(item => ({
       key: item.key,
@@ -82,51 +68,19 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
-      onRender: this.getMenuItem,
-      yamUiIcon: item.icon,
+      data: {
+        yamUiIcon: item.icon,
+      },
     }));
 
     return {
       items: menuItems,
+      contextualMenuItemAs: this.getMenuItemContent,
     };
   }
 
   @autobind
-  private getMenuItem(item: IContextualMenuItem) {
-    if (!item) {
-      return null;
-    }
-
-    return (
-      <Clickable
-        key={item.key}
-        className="y-menu-button--item"
-        onClick={item.onClick}
-        unstyled={true}
-        disabled={item.disabled}
-      >
-        <Block textSize={TextSize.MEDIUM_SUB}>{this.getMenuItemContent(item)}</Block>
-      </Clickable>
-    );
-  }
-
-  @autobind
-  private getMenuItemContent(item: IContextualMenuItem) {
-    const Icon = item && item.yamUiIcon;
-    const iconNode = Icon && <Icon size={IconSize.MEDIUM} />;
-    const textContent = <span>{item.name}</span>;
-
-    if (iconNode) {
-      return (
-        <FixedGridRow gutterSize={GutterSize.SMALL}>
-          <FixedGridColumn fixed={true} className="y-menu-button--item-icon">
-            {iconNode}
-          </FixedGridColumn>
-          <FixedGridColumn>{textContent}</FixedGridColumn>
-        </FixedGridRow>
-      );
-    }
-
-    return <div>{textContent}</div>;
+  private getMenuItemContent(props: IContextualMenuItemProps) {
+    return <MenuButtonItem {...props} />;
   }
 }
