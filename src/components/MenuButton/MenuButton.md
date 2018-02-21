@@ -9,6 +9,7 @@ Inline:
 ```js { "props": { "text": "Hello" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
+const Share = require('../Icon/icons/Share').default;
 
 <div>
   <MenuButton
@@ -25,10 +26,11 @@ const Edit = require('../Icon/icons/Edit').default;
       icon: Edit,
       onClick: () => console.log('edit'),
     },  {
-      key: 'edit',
-      text: 'Edit',
-      icon: Edit,
-      onClick: () => console.log('edit'),
+      key: 'share',
+      text: 'Share',
+      icon: Share,
+      href: 'http://bing.com',
+      onClick: () => console.log('share'),
     }]}
   />
 </div>

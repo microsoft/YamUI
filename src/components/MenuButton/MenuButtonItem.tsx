@@ -18,11 +18,11 @@ const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
   if (iconNode) {
     return (
       <Block textSize={TextSize.MEDIUM_SUB}>
-        <FixedGridRow gutterSize={GutterSize.SMALL}>
+        <FixedGridRow gutterSize={GutterSize.SMALL} className="y-menu-button--item">
           <FixedGridColumn fixed={true} className="y-menu-button--item-icon">
             {iconNode}
           </FixedGridColumn>
-          <FixedGridColumn>{textContent}</FixedGridColumn>
+          <FixedGridColumn className="y-menu-button--item-text">{textContent}</FixedGridColumn>
         </FixedGridRow>
       </Block>
     );
