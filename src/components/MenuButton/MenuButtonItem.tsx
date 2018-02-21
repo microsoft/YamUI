@@ -10,10 +10,10 @@ import { IContextualMenuItemProps } from 'office-ui-fabric-react/lib/ContextualM
 const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
   props: IContextualMenuItemProps,
 ) => {
-  const { data, text } = props;
+  const { data, name } = props.item;
   const Icon = data && data.yamUiIcon;
-  const iconNode = Icon && <Icon size={IconSize.MEDIUM} />;
-  const textContent = <span>{text}</span>;
+  const iconNode = Icon ? <Icon size={IconSize.MEDIUM} /> : null;
+  const textContent = <span>{name}</span>;
 
   if (iconNode) {
     return (
