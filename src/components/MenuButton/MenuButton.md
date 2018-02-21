@@ -17,13 +17,12 @@ const Edit = require('../Icon/icons/Edit').default;
       key: 'reply',
       text: 'Reply',
       icon: Reply,
-      disabled: true,
+      isDisabled: true,
       onClick: () => console.log('reply'),
     }, {
       key: 'edit',
       text: 'Edit',
       icon: Edit,
-      isDisabled: true,
       onClick: () => console.log('edit'),
     }]}
   />

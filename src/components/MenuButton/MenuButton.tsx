@@ -6,7 +6,6 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MenuButtonItem from './MenuButtonItem';
-import './MenuButton.css';
 import {
   IContextualMenuProps,
   IContextualMenuItem,
@@ -15,7 +14,7 @@ import {
 
 const More = require('../Icon/icons/More').default;
 
-export interface MenuButtonItem {
+export interface IMenuButtonItem {
   key: string;
   text: string;
   isDisabled?: boolean;
@@ -26,7 +25,7 @@ export interface MenuButtonItem {
 
 export interface MenuButtonProps extends BaseComponentProps {
   ariaLabel: string;
-  menuItems: MenuButtonItem[];
+  menuItems: IMenuButtonItem[];
   className?: string;
   icon?: typeof BaseIcon;
   iconSize?: IconSize;
@@ -48,9 +47,15 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
           ariaLabel={this.props.ariaLabel}
           menuProps={this.getMenuProps()}
           onRenderIcon={this.getIcon}
+          onRenderMenuIcon={this.renderMenuIcon}
         />
       </div>
     );
+  }
+
+  @autobind
+  private renderMenuIcon() {
+    return null;
   }
 
   @autobind
