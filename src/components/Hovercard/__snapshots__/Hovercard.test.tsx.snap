@@ -53,6 +53,7 @@ exports[`<Hovercard /> with screenreaderTitle matches its snapshot 1`] = `
     isBeakVisible={true}
     onDismiss={[Function]}
     preventDismissOnScroll={false}
+    target={null}
   >
     <div
       className="y-hovercard--modal-container"
