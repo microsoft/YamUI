@@ -7,22 +7,61 @@ import {
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButtonItem from './MenuButtonItem';
+const Reply = require('../Icon/icons/Reply').default;
 
 describe('<MenuButtonItem />', () => {
   let props: IContextualMenuItemProps;
   let component: ShallowWrapper<IContextualMenuItemProps, {}>;
 
-  beforeEach(() => {
-    props = {
-      item: {
-        key: 'test1',
-        name: 'test',
-      } as IContextualMenuItem,
-    } as IContextualMenuItemProps;
-  });
+  beforeEach(() => {});
 
   describe('with default options', () => {
     beforeEach(() => {
+      props = {
+        item: {
+          key: 'test1',
+          name: 'test',
+        } as IContextualMenuItem,
+      } as IContextualMenuItemProps;
+
+      component = shallow(<MenuButtonItem {...props} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with an icon passed', () => {
+    beforeEach(() => {
+      props = {
+        item: {
+          key: 'test1',
+          name: 'test',
+          data: {
+            yamUiIcon: Reply,
+          },
+        } as IContextualMenuItem,
+      } as IContextualMenuItemProps;
+
+      component = shallow(<MenuButtonItem {...props} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when it is a header type', () => {
+    beforeEach(() => {
+      props = {
+        item: {
+          key: 'test1',
+          name: 'test',
+          itemType: ContextualMenuItemType.Header,
+        } as IContextualMenuItem,
+      } as IContextualMenuItemProps;
+
       component = shallow(<MenuButtonItem {...props} />);
     });
 

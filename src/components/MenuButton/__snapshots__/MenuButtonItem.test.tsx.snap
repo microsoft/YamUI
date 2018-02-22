@@ -1,3 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `undefined`;
+exports[`<MenuButtonItem /> when it is a header type matches its snapshot 1`] = `
+<Block
+  className="y-menu-button--item y-menu-button--header"
+  textSize="small"
+>
+  test
+</Block>
+`;
+
+exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
+<Block
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    className="y-menu-button--item"
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="y-menu-button--item-icon"
+      fixed={true}
+    >
+      <Reply
+        size="16"
+      />
+    </FixedGridColumn>
+    <FixedGridColumn
+      className="y-menu-button--item-text"
+    >
+      <span>
+        test
+      </span>
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `
+<div>
+  <span>
+    test
+  </span>
+</div>
+`;
