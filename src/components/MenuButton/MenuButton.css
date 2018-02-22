@@ -16,3 +16,9 @@
 .ms-ContextualMenu-item:focus {
   background-color: $dropdownOptionBackgroundColor__focused;
 }
+
+/* Divider */
+.ms-ContextualMenu-divider {
+  background-color: $borderColor__secondary;
+  margin-bottom: -1px;
+}
