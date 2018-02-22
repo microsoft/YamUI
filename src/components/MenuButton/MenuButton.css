@@ -12,13 +12,23 @@
   color: $textColor__secondary;
 }
 
-.ms-ContextualMenu-item:hover,
-.ms-ContextualMenu-item:active,
-.ms-ContextualMenu-item:focus {
+.ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
+.ms-ContextualMenu-item:active .ms-ContextualMenu-link,
+.ms-ContextualMenu-item:focus .ms-ContextualMenu-link {
   background-color: $dropdownOptionBackgroundColor__focused;
 }
 
-/* Divider */
+/* Headers and Dividers */
+.ms-ContextualMenu-header {
+  padding: .7rem 1.2rem .9rem;
+  margin: 0;
+  background-color: initial;
+}
+
+.y-menu-button--header {
+  color: $textColor;
+}
+
 .ms-ContextualMenu-divider {
   background-color: $borderColor__secondary;
   margin-bottom: -1px;

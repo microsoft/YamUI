@@ -26,8 +26,9 @@ const Share = require('../Icon/icons/Share').default;
       icon: Edit,
       onClick: () => console.log('edit'),
     }, {
-      key: 'divider',
-      type: 1,
+      key: 'header',
+      text: 'Header',
+      type: 2,
     }, {
       key: 'share',
       text: 'Share',

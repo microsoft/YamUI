@@ -5,15 +5,27 @@ import { IconSize } from '../Icon';
 import Block from '../Block';
 import { TextSize } from '../Text';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
-import { IContextualMenuItemProps } from 'office-ui-fabric-react/lib/ContextualMenu';
+import {
+  IContextualMenuItemProps,
+  ContextualMenuItemType,
+} from 'office-ui-fabric-react/lib/ContextualMenu';
 
 const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
   props: IContextualMenuItemProps,
 ) => {
-  const { data, name } = props.item;
+  const { data, name, itemType } = props.item;
   const Icon = data && data.yamUiIcon;
   const iconNode = Icon ? <Icon size={IconSize.MEDIUM} /> : null;
   const textContent = <span>{name}</span>;
+  const isHeader = itemType === ContextualMenuItemType.Header;
+
+  if (isHeader) {
+    return (
+      <Block className="y-menu-button--item y-menu-button--header" textSize={TextSize.SMALL}>
+        {name}
+      </Block>
+    );
+  }
 
   if (iconNode) {
     return (
