@@ -31,8 +31,6 @@ export interface ClickableProps extends NestableBaseComponentProps {
    * Click callback handler.
    */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-
-  disabled?: boolean;
 }
 
 /**
@@ -42,7 +40,8 @@ export interface ClickableProps extends NestableBaseComponentProps {
  */
 export default class Clickable extends React.Component<ClickableProps, {}> {
   render() {
-    const { ariaLabel, title, unstyled, onClick, children, disabled } = this.props;
+    const { ariaLabel, title, unstyled, onClick, children } = this.props;
+
     return (
       <button
         className={this.getClasses()}
@@ -50,7 +49,6 @@ export default class Clickable extends React.Component<ClickableProps, {}> {
         title={title}
         onClick={onClick}
         type="button"
-        disabled={disabled ? true : false}
       >
         {unstyled ? children : <FakeLink>{children}</FakeLink>}
       </button>
