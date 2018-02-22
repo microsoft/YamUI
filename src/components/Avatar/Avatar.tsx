@@ -69,7 +69,7 @@ export default class Avatar extends React.Component<AvatarProps, {}> {
 
   render() {
     const { badgeContent, imageUrl, name, size, imageShouldFadeIn } = this.props;
-    const personaSize = SizeMap[size as string];
+    const personaSize = SizeMap[size || AvatarSize.MEDIUM];
 
     const badge = badgeContent && (
       <div className={`y-avatar--badge y-avatar__size-${size}--badge`}>

@@ -101,7 +101,7 @@ export default class Spinner extends React.Component<SpinnerProps, {}> {
 
     return {
       className: 'y-spinner--circle',
-      size: SizeMap[size as string],
+      size: SizeMap[size || SpinnerSize.MEDIUM],
     };
   }
 

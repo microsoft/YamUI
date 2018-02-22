@@ -13,7 +13,7 @@ import './Button.css';
 export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType };
 
 const hrefBlacklist = ['', '#', 'javascript://'];
-export type FabricButtonType = HTMLAnchorElement | HTMLButtonElement | BaseButton | FabricButton;
+export type FabricButtonType = HTMLAnchorElement | HTMLDivElement | HTMLButtonElement | BaseButton | FabricButton;
 export interface BaseButtonProps extends BaseComponentProps {
   /**
    * Visible button text.

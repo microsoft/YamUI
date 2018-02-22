@@ -55,7 +55,9 @@ describe('<BaseTextField />', () => {
         component.unmount();
       });
 
-      it('does not error', () => {});
+      it('disposes its async instance', () => {
+        expect(disposeSpy).toHaveBeenCalled();
+      });
     });
   });
 
