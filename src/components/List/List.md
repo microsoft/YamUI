@@ -2,7 +2,7 @@
 
 Default size:
 
-```js { "props": { "data-example": "default size" } }
+```js { "props": { "data-description": "default size" } }
 const { GutterSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 
@@ -31,7 +31,7 @@ const text = 'The quick brown fox jumps over the lazy dog.';
 
 Medium size (identical to default):
 
-```js { "props": { "data-example": "text size medium" } }
+```js { "props": { "data-description": "text size medium" } }
 const { GutterSize, TextSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 
@@ -60,7 +60,7 @@ const text = 'The quick brown fox jumps over the lazy dog.';
 
 MediumSub size:
 
-```js { "props": { "data-example": "text size mediumsub" } }
+```js { "props": { "data-description": "text size mediumsub" } }
 const { GutterSize, TextSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 
@@ -89,7 +89,7 @@ const text = 'The quick brown fox jumps over the lazy dog.';
 
 Small size:
 
-```js { "props": { "data-example": "text size small" } }
+```js { "props": { "data-description": "text size small" } }
 const { GutterSize, TextSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 
@@ -118,7 +118,7 @@ const text = 'The quick brown fox jumps over the lazy dog.';
 
 Extra small size:
 
-```js { "props": { "data-example": "text size xsmall" } }
+```js { "props": { "data-description": "text size xsmall" } }
 const { GutterSize, TextSize } = require('../Block');
 const text = 'The quick brown fox jumps over the lazy dog.';
 

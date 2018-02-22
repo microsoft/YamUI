@@ -36,8 +36,8 @@ export interface NestedComponentProps {
 export default class DebouncedOnChangeComponent extends React.Component<
   DebouncedOnChangeProps & NestedComponentProps
 > {
-  private async: Async;
-  private debouncedOnChange: (newValue: string) => void;
+  private async: Async | undefined;
+  private debouncedOnChange: ((newValue: string) => void) | undefined;
 
   static defaultProps = {
     debouncedOnChangeTime: 700,
@@ -60,7 +60,7 @@ export default class DebouncedOnChangeComponent extends React.Component<
       this.props.onChange(newValue);
     }
 
-    if (this.props.debouncedOnChange) {
+    if (this.props.debouncedOnChange && this.debouncedOnChange) {
       this.debouncedOnChange(newValue);
     }
   }

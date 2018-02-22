@@ -1,7 +1,7 @@
 ### Examples
 
 Basic
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <TextArea
   value="This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear. This multiline has fixed height so scrollbars may appear."
   rows={3}
@@ -9,7 +9,7 @@ Basic
 ```
 
 With a description
-```js { "props": { "data-example": "withDescription" } }
+```js { "props": { "data-description": "with description" } }
 <TextArea
   value="This Textarea has a description."
   rows={3}
@@ -18,7 +18,7 @@ With a description
 ```
 
 Auto-adjust Height
-```js { "props": { "data-example": "autoAdjustHeight" } }
+```js { "props": { "data-description": "auto adjust height" } }
 <TextArea
   value="This multiline auto grows. This multiline auto grows.  This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows. This multiline auto grows."
   autoAdjustHeight={true}
@@ -27,7 +27,7 @@ Auto-adjust Height
 ```
 
 Disabled
-```js { "props": { "data-example": "disabled" } }
+```js { "props": { "data-description": "disabled" } }
 <TextArea
   value="This is disabled."
   disabled={true}
@@ -35,14 +35,14 @@ Disabled
 ```
 
 Placeholder
-```js { "props": { "data-example": "placeHolder" } }
+```js { "props": { "data-description": "placeholder" } }
 <TextArea
   placeHolder="This is a placeholder."
 />
 ```
 
 Error
-```js { "props": { "data-example": "error" } }
+```js { "props": { "data-description": "error" } }
 <TextArea
   value="This value has an error."
   errorMessage="Error Explanation"
