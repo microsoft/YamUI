@@ -38,7 +38,6 @@ export interface MenuButtonProps extends BaseComponentProps {
 export default class MenuButton extends React.Component<MenuButtonProps, {}> {
   static defaultProps: Partial<MenuButtonProps> = {
     className: '',
-    icon: More,
     iconSize: IconSize.SMALL,
   };
 
@@ -64,9 +63,10 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
 
   @autobind
   private getIcon() {
-    const { icon: Icon, iconSize } = this.props;
+    const { icon, iconSize } = this.props;
+    const Icon = icon ? icon : More;
 
-    return Icon ? <Icon size={iconSize} /> : null;
+    return <Icon size={iconSize} />;
   }
 
   @autobind

@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
+<div
+  className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
+  style={
+    Object {
+      "minHeight": "200px",
+    }
+  }
+>
+  <CustomizedIconButton
+    ariaLabel="testAria"
+    menuProps={
+      Object {
+        "contextualMenuItemAs": [Function],
+        "items": Array [
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test1",
+            "name": "test",
+            "onClick": undefined,
+          },
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test2",
+            "name": "test",
+            "onClick": undefined,
+          },
+        ],
+      }
+    }
+    onRenderIcon={[Function]}
+    onRenderMenuIcon={[Function]}
+  />
+</div>
+`;
+
+exports[`<MenuButton /> with all props matches its snapshot 1`] = `
+<div
+  className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
+  style={
+    Object {
+      "minHeight": "200px",
+    }
+  }
+>
+  <CustomizedIconButton
+    ariaLabel="testAria"
+    menuProps={
+      Object {
+        "contextualMenuItemAs": [Function],
+        "items": Array [
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test1",
+            "name": "test",
+            "onClick": undefined,
+          },
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test2",
+            "name": "test",
+            "onClick": undefined,
+          },
+        ],
+      }
+    }
+    onRenderIcon={[Function]}
+    onRenderMenuIcon={[Function]}
+  />
+</div>
+`;
+
+exports[`<MenuButton /> with default options matches its snapshot 1`] = `
+<div
+  className="y-menu-button "
+  style={
+    Object {
+      "minHeight": "200px",
+    }
+  }
+>
+  <CustomizedIconButton
+    ariaLabel="testAria"
+    menuProps={
+      Object {
+        "contextualMenuItemAs": [Function],
+        "items": Array [
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test1",
+            "name": "test",
+            "onClick": undefined,
+          },
+          Object {
+            "data": Object {
+              "yamUiIcon": undefined,
+            },
+            "disabled": undefined,
+            "href": undefined,
+            "itemType": undefined,
+            "key": "test2",
+            "name": "test",
+            "onClick": undefined,
+          },
+        ],
+      }
+    }
+    onRenderIcon={[Function]}
+    onRenderMenuIcon={[Function]}
+  />
+</div>
+`;
