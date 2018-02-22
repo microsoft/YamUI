@@ -1,0 +1,18 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+@import "src/css/variables/fonts.css";
+
+/* Dropdown options */
+.ms-ContextualMenu-item {
+  font-weight: $fontWeight__normal;
+}
+
+.ms-ContextualMenu-item {
+  color: $textColor__secondary;
+}
+
+.ms-ContextualMenu-item:hover,
+.ms-ContextualMenu-item:active,
+.ms-ContextualMenu-item:focus {
+  background-color: $dropdownOptionBackgroundColor__focused;
+}

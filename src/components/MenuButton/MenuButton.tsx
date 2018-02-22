@@ -13,6 +13,7 @@ import {
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 export { ContextualMenuItemType };
+import './MenuButton.css';
 
 const More = require('../Icon/icons/More').default;
 
