@@ -4,6 +4,7 @@
 
 /* Dropdown options */
 .ms-ContextualMenu-item {
+  @extend text__mediumSub;
   font-weight: $fontWeight__normal;
 }
 
