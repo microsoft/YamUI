@@ -2,24 +2,28 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
+.y-menu-button--item-link-override {
+  line-height: 32px;
+}
+
 /* Dropdown options */
-.ms-ContextualMenu-item {
+.y-menu-button .ms-ContextualMenu-item {
   @extend text__mediumSub;
   font-weight: $fontWeight__normal;
 }
 
-.ms-ContextualMenu-item {
+.y-menu-button .ms-ContextualMenu-item {
   color: $textColor__secondary;
 }
 
-.ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
-.ms-ContextualMenu-item:active .ms-ContextualMenu-link,
-.ms-ContextualMenu-item:focus .ms-ContextualMenu-link {
+.y-menu-button .ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
+.y-menu-button .ms-ContextualMenu-item:active .ms-ContextualMenu-link,
+.y-menu-button .ms-ContextualMenu-item:focus .ms-ContextualMenu-link {
   background-color: $dropdownOptionBackgroundColor__focused;
 }
 
 /* Headers and Dividers */
-.ms-ContextualMenu-header {
+.y-menu-button .ms-ContextualMenu-header {
   padding: .7rem 1.2rem .9rem;
   margin: 0;
   background-color: initial;
@@ -29,7 +33,7 @@
   color: $textColor;
 }
 
-.ms-ContextualMenu-divider {
+.y-menu-button .ms-ContextualMenu-divider {
   background-color: $borderColor__secondary;
   margin-bottom: -1px;
 }

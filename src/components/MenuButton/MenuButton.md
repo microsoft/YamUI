@@ -33,6 +33,7 @@ const Share = require('../Icon/icons/Share').default;
       key: 'share',
       text: 'Share',
       icon: Share,
+      href: 'http://bing.com',
       onClick: () => console.log('share'),
     }]}
   />

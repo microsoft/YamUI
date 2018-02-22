@@ -12,15 +12,22 @@ import {
   IContextualMenuItemProps,
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
-export { ContextualMenuItemType };
 import './MenuButton.css';
+
+export { ContextualMenuItemType };
+
+export enum MenuItemType {
+  Normal = ContextualMenuItemType.Normal,
+  Header = ContextualMenuItemType.Header,
+  Divider = ContextualMenuItemType.Divider,
+}
 
 const More = require('../Icon/icons/More').default;
 
 export interface IMenuButtonItem {
   key: string;
   text: string;
-  type?: ContextualMenuItemType;
+  type?: MenuItemType;
   isDisabled?: boolean;
   onClick?: (ev?: React.MouseEvent<HTMLElement>) => void;
   href?: string;
@@ -74,7 +81,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     const menuItems: IContextualMenuItem[] = this.props.menuItems.map(item => ({
       key: item.key,
       name: item.text,
-      itemType: item.type,
+      itemType: item.type as ContextualMenuItemType | undefined,
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
@@ -91,6 +98,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
 
   @autobind
   private getMenuItemContent(props: IContextualMenuItemProps) {
-    return <MenuButtonItem {...props} />;
+    return <MenuButtonItem {...props} className="y-menu-button" />;
   }
 }
