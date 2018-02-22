@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Image /> with additional className matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image TEST_CLASSNAME"
   shouldFadeIn={false}
@@ -10,7 +10,7 @@ exports[`<Image /> with additional className matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with default options matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image"
   shouldFadeIn={false}
@@ -19,7 +19,7 @@ exports[`<Image /> with default options matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with fullWidth matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image y-image__fullWidth"
   shouldFadeIn={false}
@@ -29,7 +29,7 @@ exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image"
   height={50}
@@ -40,7 +40,7 @@ exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image"
   imageFit={2}
@@ -50,7 +50,7 @@ exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with shouldFadeIn matches its snapshot 1`] = `
-<Image
+<Component
   alt="description"
   className="y-image"
   shouldFadeIn={true}

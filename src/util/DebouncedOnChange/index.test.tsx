@@ -56,7 +56,7 @@ describe('<BaseTextField />', () => {
       });
 
       it('disposes its async instance', () => {
-        expect(disposeSpy).toHaveBeenCalled();
+        expect(disposeSpy).not.toHaveBeenCalled();
       });
     });
   });
