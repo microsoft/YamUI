@@ -32,6 +32,24 @@ describe('<MenuButtonItem />', () => {
     });
   });
 
+  describe('with an href', () => {
+    beforeEach(() => {
+      props = {
+        item: {
+          key: 'test1',
+          name: 'test',
+          href: 'http://test.com',
+        } as IContextualMenuItem,
+      } as IContextualMenuItemProps;
+
+      component = shallow(<MenuButtonItem {...props} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with an icon passed', () => {
     beforeEach(() => {
       props = {

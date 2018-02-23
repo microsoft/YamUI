@@ -6,10 +6,8 @@ import {
   IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButton, { MenuButtonProps, IMenuButtonItem } from './MenuButton';
-import MenuButtonItem from './MenuButtonItem';
 import { IconSize } from '../Icon';
 const Reply = require('../Icon/icons/Reply').default;
-const More = require('../Icon/icons/More').default;
 
 describe('<MenuButton />', () => {
   let component: ShallowWrapper<MenuButtonProps, {}>;
@@ -45,7 +43,7 @@ describe('<MenuButton />', () => {
       const onRenderIcon = component
         .find('CustomizedIconButton')
         .prop('onRenderIcon') as () => JSX.Element;
-      expect(onRenderIcon()).toEqual(<More size={IconSize.SMALL} />);
+      expect(onRenderIcon()).toMatchSnapshot();
     });
 
     it('passes a menu icon method to fabric that returns an Icon with the passed size', () => {
@@ -60,9 +58,7 @@ describe('<MenuButton />', () => {
         .find('CustomizedIconButton')
         .prop('menuProps') as IContextualMenuProps;
 
-      expect((menuProps.contextualMenuItemAs as Function)(testProps)).toEqual(
-        <MenuButtonItem {...testProps} />,
-      );
+      expect((menuProps.contextualMenuItemAs as Function)(testProps)).toMatchSnapshot();
     });
   });
 
@@ -94,7 +90,7 @@ describe('<MenuButton />', () => {
         const onRenderIcon = component
           .find('CustomizedIconButton')
           .prop('onRenderIcon') as () => JSX.Element;
-        expect(onRenderIcon()).toEqual(<Reply size={IconSize.SMALL} />);
+        expect(onRenderIcon()).toMatchSnapshot();
       });
     });
 
@@ -114,7 +110,7 @@ describe('<MenuButton />', () => {
         const onRenderIcon = component
           .find('CustomizedIconButton')
           .prop('onRenderIcon') as () => JSX.Element;
-        expect(onRenderIcon()).toEqual(<Reply size={IconSize.XXLARGE} />);
+        expect(onRenderIcon()).toMatchSnapshot();
       });
     });
   });

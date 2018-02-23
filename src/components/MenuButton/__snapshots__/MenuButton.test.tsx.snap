@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<MenuButton /> when an icon is passed with iconSize passes an icon method to fabric that returns an Icon with the passed size 1`] = `
+<Reply
+  size="32"
+/>
+`;
+
+exports[`<MenuButton /> when an icon is passed without iconSize passes an icon method to fabric that returns an Icon with a default size of SMALL 1`] = `
+<Reply
+  size="14"
+/>
+`;
+
 exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 <div
   className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
@@ -13,6 +25,9 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
     ariaLabel="testAria"
     menuProps={
       Object {
+        "calloutProps": Object {
+          "className": "y-menu-button--callout",
+        },
         "contextualMenuItemAs": [Function],
         "items": Array [
           Object {
@@ -59,6 +74,9 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
     ariaLabel="testAria"
     menuProps={
       Object {
+        "calloutProps": Object {
+          "className": "y-menu-button--callout",
+        },
         "contextualMenuItemAs": [Function],
         "items": Array [
           Object {
@@ -105,6 +123,9 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
     ariaLabel="testAria"
     menuProps={
       Object {
+        "calloutProps": Object {
+          "className": "y-menu-button--callout",
+        },
         "contextualMenuItemAs": [Function],
         "items": Array [
           Object {
@@ -136,4 +157,16 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
     onRenderMenuIcon={[Function]}
   />
 </div>
+`;
+
+exports[`<MenuButton /> with default options passes an icon method to fabric that defaults to the More icon with size small 1`] = `
+<More
+  size="14"
+/>
+`;
+
+exports[`<MenuButton /> with default options passes contextualMenuItemAs method to fabric that returns a MenuButtonItem 1`] = `
+<MenuButtonItem
+  className="y-menu-button"
+/>
 `;
