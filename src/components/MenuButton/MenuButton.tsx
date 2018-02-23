@@ -93,6 +93,9 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     return {
       items: menuItems,
       contextualMenuItemAs: this.getMenuItemContent,
+      calloutProps: {
+        className: 'y-menu-button--callout',
+      },
     };
   }
 
