@@ -12,15 +12,8 @@ import {
   IContextualMenuItemProps,
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
+import { MenuItemType } from './enums';
 import './MenuButton.css';
-
-export { ContextualMenuItemType };
-
-export enum MenuItemType {
-  Normal = ContextualMenuItemType.Normal,
-  Header = ContextualMenuItemType.Header,
-  Divider = ContextualMenuItemType.Divider,
-}
 
 const More = require('../Icon/icons/More').default;
 
