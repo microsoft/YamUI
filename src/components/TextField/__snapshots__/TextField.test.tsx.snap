@@ -2,6 +2,7 @@
 
 exports[`<TextField /> with all options matches its snapshot 1`] = `
 <TextField
+  aria-required={true}
   autoAdjustHeight={false}
   borderless={false}
   className="y-base-text-field y-text-field CLASS y-text-field--with-prefix y-text-field--with-suffix"
@@ -20,7 +21,6 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
   onNotifyValidationResult={[Function]}
   placeholder="PLACEHOLDER"
   prefix="PREFIX"
-  required={true}
   resizable={true}
   suffix="SUFFIX"
   underlined={true}

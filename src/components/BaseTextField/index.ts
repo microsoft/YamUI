@@ -72,7 +72,7 @@ export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): F
     label: props.label,
     description: props.errorMessage ? undefined : props.description,
     disabled: props.disabled,
-    required: props.required,
+    'aria-required': props.required,
     errorMessage: props.errorMessage,
     placeholder: props.placeHolder,
     onFocus: props.onFocus,
