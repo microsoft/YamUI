@@ -63,7 +63,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     );
   }
 
-  @autobind
   private renderMenuIcon() {
     return null;
   }
@@ -99,7 +98,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     };
   }
 
-  @autobind
   private getMenuItemContent(props: IContextualMenuItemProps) {
     return <MenuButtonItem {...props} className="y-menu-button" />;
   }
