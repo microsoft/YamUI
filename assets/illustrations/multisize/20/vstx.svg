@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M20,0v20H0V0H20 M21-1h-1H0h-1v1v20v1h1h20h1v-1V0V-1L21-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M19,1v18H1V1H19 M20,0H0v20h20V0L20,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<polygon fill="#FFFFFF" points="16,1 4,1 4,17 6,17 6,19 18,19 18,3 	"/>
+	<g>
+		<path fill="#C8C8C8" d="M11,7H8v3h3V9h1v3.0918c-0.5811,0.2065-1,0.7559-1,1.4082c0,0.8286,0.6714,1.5,1.5,1.5s1.5-0.6714,1.5-1.5
+			c0-0.6523-0.4189-1.2017-1-1.4082V9V8h-1h-1V7L11,7z M9,9V8h1v1H9L9,9z M12.5,14c-0.2759,0-0.5-0.2241-0.5-0.5s0.2241-0.5,0.5-0.5
+			s0.5,0.2241,0.5,0.5S12.7759,14,12.5,14L12.5,14z"/>
+	</g>
+	<polygon fill="#3955A3" points="16,1 4,1 4,4 16,4 16,3 18,5 18,3 	"/>
+	<polygon fill="#949494" points="17,4 17,18 7,18 7,17 16,17 16,4 15,4 15,16 7,16 6,16 5,16 5,4 4,4 4,17 6,17 6,19 18,19 18,5 	
+		"/>
+	<polygon fill="#3955A3" points="2,6 10,5 10,17 2,16 	"/>
+	<g>
+		<rect x="5" y="11" opacity="0.6" fill="#FFFFFF" width="2" height="1"/>
+		<g>
+			<rect x="5" y="13" fill="#FFFFFF" width="2" height="1"/>
+			<rect x="5" y="12" fill="#FFFFFF" width="2" height="1"/>
+			<rect x="4" y="9" fill="#FFFFFF" width="1" height="3"/>
+			<rect x="7" y="9" fill="#FFFFFF" width="1" height="3"/>
+			<rect x="3" y="8" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="4" y="12" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="6" y="10" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="5" y="10" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="3" y="9" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="4" y="8" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="7" y="8" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="8" y="9" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="8" y="8" fill="#FFFFFF" width="1" height="1"/>
+			<rect x="7" y="12" opacity="0.6" fill="#FFFFFF" width="1" height="1"/>
+		</g>
+	</g>
+</g>
+</svg>

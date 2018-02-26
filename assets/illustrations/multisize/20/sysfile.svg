@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M20,0v20H0V0H20 M21-1h-1H0h-1v1v20v1h1h20h1v-1V0V-1L21-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M19,1v18H1V1H19 M20,0H0v20h20V0L20,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<g>
+		<polygon fill="#FFFFFF" points="16,18 4,18 4,2 14,2 16,4 		"/>
+		<path fill="#949494" d="M14,1H3v18h14V4L14,1z M14,2.5L15.5,4H14V2.5z M16,18H4V2h9v3h3V18z"/>
+	</g>
+	<g>
+		<rect x="8" y="6" fill="#EAEAEA" width="1" height="1"/>
+		<rect x="5" y="9" fill="#EAEAEA" width="1" height="1"/>
+		<rect x="11" y="9" fill="#EAEAEA" width="1" height="1"/>
+		<rect x="8" y="12" fill="#EAEAEA" width="1" height="1"/>
+	</g>
+	<g>
+		<rect x="7" y="6" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="8" y="8" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="8" y="10" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="9" y="9" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="7" y="9" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="9" y="6" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="11" y="8" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 20 -3)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="11" y="10" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 22 -1)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="5" y="8" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 14 3)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="6" y="7" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 14 1)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="6" y="11" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 18 5)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="10" y="7" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 18 -3)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="10" y="11" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 22 1)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="5" y="10" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 16 5)" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="7" y="12" fill="#C8C8C8" width="1" height="1"/>
+		<rect x="9" y="12" fill="#C8C8C8" width="1" height="1"/>
+	</g>
+	<rect x="12" y="12" fill="#C8C8C8" width="2" height="1"/>
+	<rect x="12" y="15" fill="#C8C8C8" width="2" height="1"/>
+	<rect x="10.5" y="13.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 25.5 2.5)" fill="#C8C8C8" width="2" height="1"/>
+	<rect x="13.5" y="13.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 28.5 -0.5)" fill="#C8C8C8" width="2" height="1"/>
+</g>
+</svg>

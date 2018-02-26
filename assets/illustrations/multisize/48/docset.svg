@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M48,0v48H0V0H48 M49-1h-1H0h-1v1v48v1h1h48h1v-1V0V-1L49-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M45,3v42H3V3H45 M48,0H0v48h48V0L48,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<polygon fill="#C8C8C8" points="11,3 11,8 5,8 5,32 6,32 6,9 11,9 11,32 12,32 12,4 42,4 42,27 43,27 43,3 	"/>
+	<polygon fill="#A6A6A6" points="3,45 3,32 24,32 29,27 45,27 45,45 	"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="13.3537" y1="23.3122" x2="37.1083" y2="51.6219">
+		<stop  offset="0" style="stop-color:#000000;stop-opacity:0"/>
+		<stop  offset="0.8625" style="stop-color:#000000;stop-opacity:0.1725"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0.2"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_1_)" points="3,45 3,32 24,32 29,27 45,27 45,45 	"/>
+	<polygon opacity="0.15" fill="#FFFFFF" points="3,32 3,33 24.4583,33 30.4583,27 28.9583,27 23.9583,32 	"/>
+	<g>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="5.5" y1="8" x2="5.5" y2="32">
+			<stop  offset="0" style="stop-color:#000000;stop-opacity:0"/>
+			<stop  offset="0.8587" style="stop-color:#000000;stop-opacity:0.1288"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0.15"/>
+		</linearGradient>
+		<rect x="5" y="8" fill="url(#SVGID_2_)" width="1" height="24"/>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="11.5" y1="3" x2="11.5" y2="32">
+			<stop  offset="0" style="stop-color:#000000;stop-opacity:0"/>
+			<stop  offset="0.8587" style="stop-color:#000000;stop-opacity:0.1288"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0.15"/>
+		</linearGradient>
+		<rect x="11" y="3" fill="url(#SVGID_3_)" width="1" height="29"/>
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="42.5" y1="3" x2="42.5" y2="27">
+			<stop  offset="0" style="stop-color:#000000;stop-opacity:0"/>
+			<stop  offset="0.8587" style="stop-color:#000000;stop-opacity:0.1288"/>
+			<stop  offset="1" style="stop-color:#000000;stop-opacity:0.15"/>
+		</linearGradient>
+		<rect x="42" y="3" fill="url(#SVGID_4_)" width="1" height="24"/>
+	</g>
+</g>
+</svg>
