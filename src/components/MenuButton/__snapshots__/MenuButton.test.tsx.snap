@@ -15,11 +15,6 @@ exports[`<MenuButton /> when an icon is passed without iconSize passes an icon m
 exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 <div
   className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
-  style={
-    Object {
-      "minHeight": "200px",
-    }
-  }
 >
   <CustomizedIconButton
     ariaLabel="testAria"
@@ -64,11 +59,6 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 exports[`<MenuButton /> with all props matches its snapshot 1`] = `
 <div
   className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
-  style={
-    Object {
-      "minHeight": "200px",
-    }
-  }
 >
   <CustomizedIconButton
     ariaLabel="testAria"
@@ -113,11 +103,6 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
 exports[`<MenuButton /> with default options matches its snapshot 1`] = `
 <div
   className="y-menu-button "
-  style={
-    Object {
-      "minHeight": "200px",
-    }
-  }
 >
   <CustomizedIconButton
     ariaLabel="testAria"
