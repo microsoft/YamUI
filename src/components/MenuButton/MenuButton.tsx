@@ -45,7 +45,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     const { className } = this.props;
 
     return (
-      <div className={`y-menu-button ${className}`} style={{ minHeight: '200px' }}>
+      <div className={`y-menu-button ${className}`}>
         <IconButton
           ariaLabel={this.props.ariaLabel}
           menuProps={this.getMenuProps()}
