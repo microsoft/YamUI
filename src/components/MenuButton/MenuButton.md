@@ -6,10 +6,11 @@ Context menu should be used as a menu button where you want to provide options t
 
 MenuButton with default Icon, and all applicable children properties
 
-```js { "props": { "data-description": "with deafult icon and children properties" } }
+```js { "props": { "data-description": "with default icon and all menu item types" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
+const enums = require('./enums.ts');
 
 <div>
   <MenuButton
@@ -21,26 +22,26 @@ const Share = require('../Icon/icons/Share').default;
     }, {
       key: 'noIcon',
       text: 'No Icon',
-      onClick: () => console.log('no icon'),
+      onClick: () => action('clicked no icon'),
     }, {
       key: 'disabledIcon',
       text: 'Icon and disabled',
       icon: Reply,
       isDisabled: true,
-      onClick: () => console.log('icon and disabled'),
+      onClick: () => action('clicked icon and disabled'),
     }, {
       key: 'header',
       text: 'Header Type with Divider After',
-      type: 2,
+      type: enums.MenuItemType.Header,
     }, {
       key: 'divider',
-      type: 1,
+      type: enums.MenuItemType.Divider,
     }, {
       key: 'link',
       text: 'Link!',
       icon: Share,
       href: 'http://bing.com',
-      onClick: () => console.log('link'),
+      onClick: () => action('clicked link'),
     }]}
   />
 </div>
@@ -48,7 +49,7 @@ const Share = require('../Icon/icons/Share').default;
 
 MenuButton with specified Icon and basic children
 
-```js { "props": { "data-description": "specified icon and icon size" } }
+```js { "props": { "data-description": "custom icon" } }
 const Home = require('../Icon/icons/Home').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
