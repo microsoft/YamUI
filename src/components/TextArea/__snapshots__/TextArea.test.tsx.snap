@@ -2,6 +2,7 @@
 
 exports[`<TextArea /> with all options matches its snapshot 1`] = `
 <TextField
+  aria-required={true}
   autoAdjustHeight={true}
   borderless={false}
   className="y-base-text-field y-text-area CLASS"
@@ -19,7 +20,6 @@ exports[`<TextArea /> with all options matches its snapshot 1`] = `
   onMouseLeave={[MockFunction onMouseLeave]}
   onNotifyValidationResult={[Function]}
   placeholder="PLACEHOLDER"
-  required={true}
   resizable={false}
   rows={2}
   underlined={false}

@@ -38,9 +38,3 @@
   color: $textColor__error;
   padding-top: .2rem;
 }
-
-/* Hide the asterisk that comes with required=true */
-.y-base-text-field .ms-Label::after,
-.y-base-text-field .ms-TextField-fieldGroup::after {
-  display: none;
-}
