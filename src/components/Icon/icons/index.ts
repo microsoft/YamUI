@@ -58,6 +58,7 @@ export { default as Hashtag } from './Hashtag';
 export { default as Home } from './Home';
 export { default as Info } from './Info';
 export { default as Like } from './Like';
+export { default as LikeFull } from './LikeFull';
 export { default as Link } from './Link';
 export { default as LocationDot } from './LocationDot';
 export { default as Lock } from './Lock';
