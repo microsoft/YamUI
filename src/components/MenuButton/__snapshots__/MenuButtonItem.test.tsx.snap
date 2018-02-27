@@ -64,6 +64,15 @@ exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
     gutterSize="small"
   >
     <FixedGridColumn
+      className="y-menu-button--item-icon"
+      fixed={true}
+    >
+      <Reply
+        block={true}
+        size="16"
+      />
+    </FixedGridColumn>
+    <FixedGridColumn
       className="y-menu-button--item-text"
     >
       test
