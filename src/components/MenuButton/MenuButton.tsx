@@ -16,6 +16,8 @@ import MenuButtonItem from './MenuButtonItem';
 import { MenuItemType } from './enums';
 import './MenuButton.css';
 
+export { MenuItemType } from './enums';
+
 const MoreIcon = require('../Icon/icons/More').default;
 
 const renderEmptyIcon = () => null;

@@ -2,16 +2,26 @@
 
 exports[`<MenuButtonItem /> when it is a header type matches its snapshot 1`] = `
 <Block
-  className="y-menu-button--item y-menu-button--header"
+  className="y-menu-button--item y-menu-button--item-header"
+  textColor="primary"
   textSize="small"
 >
-  test
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="y-menu-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
 </Block>
 `;
 
-exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
+exports[`<MenuButtonItem /> when it is disabled matches its snapshot 1`] = `
 <Block
-  className="y-menu-button--item y-menu-button--item-link-override"
+  className="y-menu-button--item"
+  textColor="disabled"
   textSize="mediumSub"
 >
   <FixedGridRow
@@ -20,9 +30,25 @@ exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
     <FixedGridColumn
       className="y-menu-button--item-text"
     >
-      <span>
-        test
-      </span>
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
+<Block
+  className="y-menu-button--item"
+  textColor="secondary"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="y-menu-button--item-text"
+    >
+      test
     </FixedGridColumn>
   </FixedGridRow>
 </Block>
@@ -30,26 +56,17 @@ exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
 
 exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
 <Block
-  className="y-menu-button--item "
+  className="y-menu-button--item"
+  textColor="secondary"
   textSize="mediumSub"
 >
   <FixedGridRow
     gutterSize="small"
   >
     <FixedGridColumn
-      className="y-menu-button--item-icon"
-      fixed={true}
-    >
-      <Reply
-        size="16"
-      />
-    </FixedGridColumn>
-    <FixedGridColumn
       className="y-menu-button--item-text"
     >
-      <span>
-        test
-      </span>
+      test
     </FixedGridColumn>
   </FixedGridRow>
 </Block>
@@ -57,7 +74,8 @@ exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
 
 exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `
 <Block
-  className="y-menu-button--item "
+  className="y-menu-button--item"
+  textColor="secondary"
   textSize="mediumSub"
 >
   <FixedGridRow
@@ -66,9 +84,7 @@ exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `
     <FixedGridColumn
       className="y-menu-button--item-text"
     >
-      <span>
-        test
-      </span>
+      test
     </FixedGridColumn>
   </FixedGridRow>
 </Block>

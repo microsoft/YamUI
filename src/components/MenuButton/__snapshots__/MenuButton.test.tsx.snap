@@ -2,151 +2,145 @@
 
 exports[`<MenuButton /> when an icon is passed with iconSize passes an icon method to fabric that returns an Icon with the passed size 1`] = `
 <Reply
-  size="32"
+  block={true}
+  size="20"
 />
 `;
 
 exports[`<MenuButton /> when an icon is passed without iconSize passes an icon method to fabric that returns an Icon with a default size of SMALL 1`] = `
 <Reply
-  size="14"
+  block={true}
+  size="20"
 />
 `;
 
 exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
-<div
+<CustomizedIconButton
+  ariaLabel="testAria"
   className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
->
-  <CustomizedIconButton
-    ariaLabel="testAria"
-    menuProps={
-      Object {
-        "calloutProps": Object {
-          "className": "y-menu-button--callout",
+  menuProps={
+    Object {
+      "calloutProps": Object {
+        "className": "y-menu-button--callout",
+      },
+      "contextualMenuItemAs": [Function],
+      "items": Array [
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 0,
+          "key": "test1",
+          "name": "test",
+          "onClick": undefined,
         },
-        "contextualMenuItemAs": [Function],
-        "items": Array [
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test1",
-            "name": "test",
-            "onClick": undefined,
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
           },
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test2",
-            "name": "test",
-            "onClick": undefined,
-          },
-        ],
-      }
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 2,
+          "key": "test2",
+          "name": "test",
+          "onClick": undefined,
+        },
+      ],
     }
-    onRenderIcon={[Function]}
-    onRenderMenuIcon={[Function]}
-  />
-</div>
+  }
+  onRenderIcon={[Function]}
+  onRenderMenuIcon={[Function]}
+/>
 `;
 
 exports[`<MenuButton /> with all props matches its snapshot 1`] = `
-<div
+<CustomizedIconButton
+  ariaLabel="testAria"
   className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
->
-  <CustomizedIconButton
-    ariaLabel="testAria"
-    menuProps={
-      Object {
-        "calloutProps": Object {
-          "className": "y-menu-button--callout",
+  menuProps={
+    Object {
+      "calloutProps": Object {
+        "className": "y-menu-button--callout",
+      },
+      "contextualMenuItemAs": [Function],
+      "items": Array [
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 0,
+          "key": "test1",
+          "name": "test",
+          "onClick": undefined,
         },
-        "contextualMenuItemAs": [Function],
-        "items": Array [
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test1",
-            "name": "test",
-            "onClick": undefined,
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
           },
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test2",
-            "name": "test",
-            "onClick": undefined,
-          },
-        ],
-      }
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 2,
+          "key": "test2",
+          "name": "test",
+          "onClick": undefined,
+        },
+      ],
     }
-    onRenderIcon={[Function]}
-    onRenderMenuIcon={[Function]}
-  />
-</div>
+  }
+  onRenderIcon={[Function]}
+  onRenderMenuIcon={[Function]}
+/>
 `;
 
 exports[`<MenuButton /> with default options matches its snapshot 1`] = `
-<div
-  className="y-menu-button "
->
-  <CustomizedIconButton
-    ariaLabel="testAria"
-    menuProps={
-      Object {
-        "calloutProps": Object {
-          "className": "y-menu-button--callout",
+<CustomizedIconButton
+  ariaLabel="testAria"
+  className="y-menu-button"
+  menuProps={
+    Object {
+      "calloutProps": Object {
+        "className": "y-menu-button--callout",
+      },
+      "contextualMenuItemAs": [Function],
+      "items": Array [
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 0,
+          "key": "test1",
+          "name": "test",
+          "onClick": undefined,
         },
-        "contextualMenuItemAs": [Function],
-        "items": Array [
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test1",
-            "name": "test",
-            "onClick": undefined,
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
           },
-          Object {
-            "data": Object {
-              "yamUiIcon": undefined,
-            },
-            "disabled": undefined,
-            "href": undefined,
-            "itemType": undefined,
-            "key": "test2",
-            "name": "test",
-            "onClick": undefined,
-          },
-        ],
-      }
+          "disabled": undefined,
+          "href": undefined,
+          "itemType": 2,
+          "key": "test2",
+          "name": "test",
+          "onClick": undefined,
+        },
+      ],
     }
-    onRenderIcon={[Function]}
-    onRenderMenuIcon={[Function]}
-  />
-</div>
+  }
+  onRenderIcon={[Function]}
+  onRenderMenuIcon={[Function]}
+/>
 `;
 
-exports[`<MenuButton /> with default options passes an icon method to fabric that defaults to the More icon with size small 1`] = `
+exports[`<MenuButton /> with default options passes an icon method to fabric that defaults to the More icon with size large 1`] = `
 <More
-  size="14"
+  block={true}
+  size="20"
 />
 `;
 

@@ -50,6 +50,24 @@ describe('<MenuButtonItem />', () => {
     });
   });
 
+  describe('when it is disabled', () => {
+    beforeEach(() => {
+      props = {
+        item: {
+          key: 'test1',
+          name: 'test',
+          disabled: true,
+        } as IContextualMenuItem,
+      } as IContextualMenuItemProps;
+
+      component = shallow(<MenuButtonItem {...props} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with an icon passed', () => {
     beforeEach(() => {
       props = {

@@ -5,7 +5,7 @@ import {
   IContextualMenuProps,
   IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
-import MenuButton, { MenuButtonProps, MenuButtonItem } from './MenuButton';
+import MenuButton, { MenuButtonProps, MenuButtonItem, MenuItemType } from '.';
 const Reply = require('../Icon/icons/Reply').default;
 
 describe('<MenuButton />', () => {
@@ -18,10 +18,12 @@ describe('<MenuButton />', () => {
       {
         key: 'test1',
         text: 'test',
+        type: MenuItemType.Normal,
       },
       {
         key: 'test2',
         text: 'test',
+        type: MenuItemType.Header,
       },
     ];
   });
@@ -38,18 +40,11 @@ describe('<MenuButton />', () => {
       expect(component).toMatchSnapshot();
     });
 
-    it('passes an icon method to fabric that defaults to the More icon with size small', () => {
+    it('passes an icon method to fabric that defaults to the More icon with size large', () => {
       const onRenderIcon = component
         .find('CustomizedIconButton')
         .prop('onRenderIcon') as () => JSX.Element;
       expect(onRenderIcon()).toMatchSnapshot();
-    });
-
-    it('passes a menu icon method to fabric that returns an Icon with the passed size', () => {
-      const onRenderMenuIcon = component
-        .find('CustomizedIconButton')
-        .prop('onRenderMenuIcon') as () => JSX.Element;
-      expect(onRenderMenuIcon()).toBeNull();
     });
 
     it('passes contextualMenuItemAs method to fabric that returns a MenuButtonItem', () => {
