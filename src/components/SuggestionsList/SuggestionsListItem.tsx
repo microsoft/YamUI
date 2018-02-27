@@ -20,8 +20,8 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
   onSelect(id: string | number): void;
 }
 
-const baseClass = 'y-suggestions-list-item';
-const selectedClass = `${baseClass} y-suggestions-list-item--selected`;
+const baseClass = 'y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background';
+const selectedClass = `${baseClass} y-suggestions-list-item--selected y-hc-selected`;
 
 const getHighlightedName = (name: string, search: string) => {
   return name.split(new RegExp(`(${search})`, 'gi')).map((item: string, index: number) => {
