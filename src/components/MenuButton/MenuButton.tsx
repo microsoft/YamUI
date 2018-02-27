@@ -1,23 +1,26 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
-import autobind from 'core-decorators/lib/autobind';
 import * as React from 'react';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { IconButton } from 'office-ui-fabric-react/lib/Button';
-import { IconSize, BaseIcon } from '../Icon';
-import MenuButtonItem from './MenuButtonItem';
+import autobind from 'core-decorators/lib/autobind';
 import {
   IContextualMenuProps,
   IContextualMenuItem,
   IContextualMenuItemProps,
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
+import { join } from '../../util/classNames';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { IconButton } from 'office-ui-fabric-react/lib/Button';
+import { IconSize, BaseIcon } from '../Icon';
+import MenuButtonItem from './MenuButtonItem';
 import { MenuItemType } from './enums';
 import './MenuButton.css';
 
-const More = require('../Icon/icons/More').default;
+const MoreIcon = require('../Icon/icons/More').default;
 
-export interface IMenuButtonItem {
+const renderEmptyIcon = () => null;
+
+export interface MenuButtonItem {
   key: string;
   text: string;
   type?: MenuItemType;
@@ -29,43 +32,30 @@ export interface IMenuButtonItem {
 
 export interface MenuButtonProps extends BaseComponentProps {
   ariaLabel: string;
-  menuItems: IMenuButtonItem[];
+  menuItems: MenuButtonItem[];
   className?: string;
   icon?: typeof BaseIcon;
-  iconSize?: IconSize;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps, {}> {
-  static defaultProps: Partial<MenuButtonProps> = {
-    className: '',
-    iconSize: IconSize.SMALL,
-  };
-
   public render() {
-    const { className } = this.props;
-
     return (
-      <div className={`y-menu-button ${className}`}>
-        <IconButton
-          ariaLabel={this.props.ariaLabel}
-          menuProps={this.getMenuProps()}
-          onRenderIcon={this.getIcon}
-          onRenderMenuIcon={this.renderMenuIcon}
-        />
-      </div>
+      <IconButton
+        ariaLabel={this.props.ariaLabel}
+        menuProps={this.getMenuProps()}
+        onRenderIcon={this.getIcon}
+        onRenderMenuIcon={renderEmptyIcon}
+        className={join(['y-menu-button', this.props.className])}
+      />
     );
-  }
-
-  private renderMenuIcon() {
-    return null;
   }
 
   @autobind
   private getIcon() {
-    const { icon, iconSize } = this.props;
-    const Icon = icon ? icon : More;
+    const { icon } = this.props;
+    const Icon = icon || MoreIcon;
 
-    return <Icon size={iconSize} />;
+    return <Icon size={IconSize.LARGE} block={true} />;
   }
 
   @autobind
@@ -78,7 +68,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
       disabled: item.isDisabled,
       href: item.href,
       data: {
-        yamUiIcon: item.icon,
+        yamUIIcon: item.icon,
       },
     }));
 

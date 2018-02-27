@@ -2,14 +2,33 @@
 @import "src/css/variables/colors.css";
 @import "src/css/variables/fonts.css";
 
-/* MenuButton options */
-.y-menu-button--callout .ms-ContextualMenu-item {
-  @extend text__mediumSub;
-  font-weight: $fontWeight__normal;
+.y-menu-button {
+  height: 20px;
+  width: 20px;
+  border: 0;
+  padding: 0;
 }
 
-.y-menu-button--callout .ms-ContextualMenu-item {
-  color: $textColor__secondary;
+.y-menu-button > .ms-Button-flexContainer > .y-icon {
+  top: 0;
+}
+
+/* Overall top/bottom menu padding */
+.y-menu-button--callout .ms-ContextualMenu-list {
+  padding: .4rem 0;
+}
+
+/* Element styling overrides */
+.y-menu-button--callout .ms-ContextualMenu-link,
+.y-menu-button--callout .ms-ContextualMenu-header {
+  padding: 0;
+}
+
+.y-menu-button--item {
+  padding: .4rem 1.2rem .8rem
+}
+.y-menu-button--item-header {
+  padding: .6rem 1.2rem 1rem
 }
 
 .y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
@@ -19,13 +38,7 @@
 }
 
 /* Headers and Dividers */
-.y-menu-button--header {
-  color: $textColor;
-}
-
 .y-menu-button--callout .ms-ContextualMenu-header {
-  padding: .7rem 1.2rem .9rem;
-  margin: 0;
   background-color: initial;
 }
 
@@ -34,10 +47,6 @@
   margin-bottom: -1px;
 }
 
-/* Links - item when you pass an href */
-.y-menu-button--item-link-override {
-  line-height: 32px;
-}
 
 .y-menu-button--callout a:hover {
   text-decoration: none;

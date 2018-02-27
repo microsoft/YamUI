@@ -23,7 +23,7 @@ export interface ListProps extends NestableBaseComponentProps {
 }
 
 /**
- * A typographical list, rendering either a <ul> or <ol> element.
+ * A typographical list, rendering either a `<ul>` or `<ol>` element.
  */
 export default class List extends React.Component<ListProps, {}> {
   render() {

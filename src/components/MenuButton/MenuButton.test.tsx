@@ -5,14 +5,13 @@ import {
   IContextualMenuProps,
   IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
-import MenuButton, { MenuButtonProps, IMenuButtonItem } from './MenuButton';
-import { IconSize } from '../Icon';
+import MenuButton, { MenuButtonProps, MenuButtonItem } from './MenuButton';
 const Reply = require('../Icon/icons/Reply').default;
 
 describe('<MenuButton />', () => {
   let component: ShallowWrapper<MenuButtonProps, {}>;
   const ariaLabel = 'testAria';
-  let menuItems: IMenuButtonItem[];
+  let menuItems: MenuButtonItem[];
 
   beforeEach(() => {
     menuItems = [
@@ -97,12 +96,7 @@ describe('<MenuButton />', () => {
     describe('with iconSize', () => {
       beforeEach(() => {
         component = shallow(
-          <MenuButton
-            ariaLabel={ariaLabel}
-            menuItems={menuItems}
-            icon={Reply}
-            iconSize={IconSize.XXLARGE}
-          />,
+          <MenuButton ariaLabel={ariaLabel} menuItems={menuItems} icon={Reply} />,
         );
       });
 
@@ -123,7 +117,6 @@ describe('<MenuButton />', () => {
           menuItems={menuItems}
           className="TEST-ADDITIONAL-CLASSNAME"
           icon={Reply}
-          iconSize={IconSize.XXLARGE}
         />,
       );
     });

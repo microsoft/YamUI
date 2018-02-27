@@ -46,20 +46,18 @@ const Share = require('../Icon/icons/Share').default;
 </div>
 ```
 
-MenuButton with specified Icon, specified IconSize, and basic children
+MenuButton with specified Icon and basic children
 
 ```js { "props": { "data-description": "specified icon and icon size" } }
 const Home = require('../Icon/icons/Home').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
-const { IconSize } = require('../Icon');
 
 <div>
   <MenuButton
     ariaLabel="aria"
     icon={Home}
-    iconSize={IconSize.XXLARGE}
     menuItems={[{
       key: 'edit',
       icon: Edit,
