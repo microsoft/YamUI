@@ -75,7 +75,7 @@ describe('<MenuButtonItem />', () => {
           key: 'test1',
           name: 'test',
           data: {
-            yamUIuIcon: Reply,
+            yamUIIcon: Reply,
           },
         } as IContextualMenuItem,
       } as IContextualMenuItemProps;
