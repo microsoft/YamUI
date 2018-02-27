@@ -23,19 +23,59 @@ const MoreIcon = require('../Icon/icons/More').default;
 const renderEmptyIcon = () => null;
 
 export interface MenuButtonItem {
+  /**
+   * Unique key for this item.
+   */
   key: string;
+
+  /**
+   * Text to display in the menu item.
+   */
   text: string;
+
+  /**
+   * Type of menu item:
+   *  Normal: Regular item
+   *  Header: Header item
+   *  Divider: Line divider item
+   */
   type?: MenuItemType;
+
+  /**
+   * If item is disabled
+   */
   isDisabled?: boolean;
+
+  /**
+   * On click method for this item.
+   */
   onClick?: (ev?: React.MouseEvent<HTMLElement>) => void;
+
+  /**
+   * Href for a link. This will turn the item into a hyperlink that looks like a regular item.
+   */
   href?: string;
+
+  /**
+   * YamUI Icon to display in the item content. Default is no icon.
+   */
   icon?: typeof BaseIcon;
 }
 
 export interface MenuButtonProps extends BaseComponentProps {
+  /**
+   * Aria label for the MenuButton.
+   */
   ariaLabel: string;
+
+  /**
+   * Menu items to show in the menu.
+   */
   menuItems: MenuButtonItem[];
-  className?: string;
+
+  /**
+   * YamUI Icon to display as the click target. Default is the 'More' icon.
+   */
   icon?: typeof BaseIcon;
 }
 
