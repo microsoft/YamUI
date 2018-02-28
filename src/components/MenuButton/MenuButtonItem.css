@@ -1,5 +1,0 @@
-@import "src/css/variables/colors.css";
-
-.y-menu-button--item-icon {
-  color: $linkColor;
-}

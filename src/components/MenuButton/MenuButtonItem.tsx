@@ -10,7 +10,6 @@ import {
   IContextualMenuItemProps,
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
-import './MenuButtonItem.css';
 
 const getClasses = (isHeader: boolean) => {
   const classes = ['y-menu-button--item'];

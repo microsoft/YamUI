@@ -8,8 +8,8 @@
   padding: 0;
 }
 
-.y-menu-button > .ms-Button-flexContainer > .y-icon {
-  top: 0;
+.y-menu-button--callout {
+  border-radius: 1px;
 }
 
 /* Overall top/bottom menu padding */
@@ -21,6 +21,13 @@
 .y-menu-button--callout .ms-ContextualMenu-link,
 .y-menu-button--callout .ms-ContextualMenu-header {
   padding: 0;
+}
+
+.y-menu-button--item-icon {
+  color: $linkColor;
+}
+.y-menu-button--item-icon > .y-icon {
+  top: .3rem;
 }
 
 .y-menu-button--item {

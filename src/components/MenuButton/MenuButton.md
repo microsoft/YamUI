@@ -31,9 +31,14 @@ const enums = require('./enums.ts');
       onClick: () => action('clicked icon and disabled'),
     }, {
       key: 'header',
-      text: 'Header Type with Divider After',
+      text: 'Header Type',
       type: enums.MenuItemType.Header,
     }, {
+      key: 'anotherRegular',
+      icon: Edit,
+      text: 'Another Icon Item',
+    },
+    {
       key: 'divider',
       type: enums.MenuItemType.Divider,
     }, {
