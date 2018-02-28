@@ -54,7 +54,7 @@ const enums = require('./enums.ts');
 
 MenuButton with multiple headers in children
 
-```js { "props": { "data-description": "custom icon" } }
+```js { "props": { "data-description": "multiple headers" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
