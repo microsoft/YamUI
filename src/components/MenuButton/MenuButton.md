@@ -34,9 +34,9 @@ const enums = require('./enums.ts');
       text: 'Header Type',
       type: enums.MenuItemType.Header,
     }, {
-      key: 'anotherRegular',
+      key: 'longText',
       icon: Edit,
-      text: 'Another Icon Item',
+      text: 'A menu option that has very long text in the item',
     },
     {
       key: 'divider',
