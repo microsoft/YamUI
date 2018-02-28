@@ -19,19 +19,14 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
     size="small"
     titleContent={
       Array [
-        <Text
-          bold={false}
-        />,
-        <Text
-          bold={true}
+        <span
+          className="y-suggestions-list-item--match-highlight"
         >
           Joh
-        </Text>,
-        <Text
-          bold={false}
-        >
-          n Smith
-        </Text>,
+        </span>,
+        <span>
+          n Smith
+        </span>,
       ]
     }
   />
@@ -57,19 +52,14 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
     size="small"
     titleContent={
       Array [
-        <Text
-          bold={false}
-        />,
-        <Text
-          bold={true}
+        <span
+          className="y-suggestions-list-item--match-highlight"
         >
           Joh
-        </Text>,
-        <Text
-          bold={false}
-        >
-          n Smith
-        </Text>,
+        </span>,
+        <span>
+          n Smith
+        </span>,
       ]
     }
   />
