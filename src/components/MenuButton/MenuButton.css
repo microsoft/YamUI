@@ -24,10 +24,10 @@
 }
 
 .y-menu-button--item {
-  padding: .4rem 1.2rem .8rem;
+  padding: .5rem 1.2rem .8rem;
 }
 .y-menu-button--item-header {
-  padding: .6rem 1.2rem 1rem;
+  padding: .7rem 1.2rem 1rem;
 }
 
 .y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
