@@ -52,35 +52,6 @@ const enums = require('./enums.ts');
 </div>
 ```
 
-MenuButton with specified Icon and basic children
-
-```js { "props": { "data-description": "custom icon" } }
-const Home = require('../Icon/icons/Home').default;
-const Reply = require('../Icon/icons/Reply').default;
-const Edit = require('../Icon/icons/Edit').default;
-const Share = require('../Icon/icons/Share').default;
-
-<div>
-  <MenuButton
-    ariaLabel="aria"
-    icon={Home}
-    menuItems={[{
-      key: 'edit',
-      icon: Edit,
-      text: 'Edit',
-    }, {
-      key: 'reply',
-      text: 'Reply',
-      icon: Reply,
-    }, {
-      key: 'share',
-      text: 'Share',
-      icon: Share,
-    }]}
-  />
-</div>
-```
-
 MenuButton with multiple headers in children
 
 ```js { "props": { "data-description": "custom icon" } }
@@ -111,7 +82,7 @@ const enums = require('./enums.ts');
       icon: Share,
     }, {
       key: 'anotherHeader',
-      text: 'Header Type',
+      text: 'Header',
       type: enums.MenuItemType.Header,
     }, {
       key: 'edit1',
@@ -123,8 +94,49 @@ const enums = require('./enums.ts');
       icon: Reply,
     }, {
       key: 'share1',
+      text: 'View',
+      icon: Share,
+    }]}
+  />
+</div>
+```
+
+MenuButton with custom icon and dividers
+
+```js { "props": { "data-description": "with custom icon and dividers" } }
+const Home = require('../Icon/icons/Home').default;
+const Reply = require('../Icon/icons/Reply').default;
+const Edit = require('../Icon/icons/Edit').default;
+const Share = require('../Icon/icons/Share').default;
+const View = require('../Icon/icons/View').default;
+const enums = require('./enums.ts');
+
+<div>
+  <MenuButton
+    ariaLabel="aria"
+    icon={Home}
+    menuItems={[{
+      key: 'edit',
+      icon: Edit,
+      text: 'Edit',
+    }, {
+      key: 'divider',
+      type: enums.MenuItemType.Divider,
+    }, {
+      key: 'reply',
+      text: 'Reply',
+      icon: Reply,
+    }, {
+      key: 'share',
       text: 'Share',
       icon: Share,
+    }, {
+      key: 'divider',
+      type: enums.MenuItemType.Divider,
+    }, {
+      key: 'view',
+      text: 'View',
+      icon: View,
     }]}
   />
 </div>

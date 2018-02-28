@@ -26,6 +26,10 @@
 .y-menu-button--item-icon {
   color: $linkColor;
 }
+.is-disabled .y-menu-button--item-icon {
+  color: $textColor__disabled;
+}
+
 .y-menu-button--item-icon > .y-icon {
   top: .3rem;
 }
