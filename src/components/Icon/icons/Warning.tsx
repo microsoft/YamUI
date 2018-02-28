@@ -8,7 +8,13 @@ import BaseIcon from '../BaseIcon';
 export default class Warning extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
         <path fillRule="evenodd" d="M233 225H8L120.5 0 233 225zM32.258 210h176.484L120.5 33.516 32.258 210zM128 90v75h-15V90h15zm-15 90h15v15h-15v-15z" />
       </svg>
     );

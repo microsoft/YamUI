@@ -8,7 +8,13 @@ import BaseIcon from '../BaseIcon';
 export default class SortDown extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
         <path fillRule="evenodd" d="M167 170.625l10.664 10.547-57.773 57.773L62 181.172l10.664-10.547 39.61 39.61L112.155 0h15l.117 210.352z" />
       </svg>
     );
