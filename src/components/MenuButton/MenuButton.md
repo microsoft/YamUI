@@ -80,3 +80,52 @@ const Share = require('../Icon/icons/Share').default;
   />
 </div>
 ```
+
+MenuButton with multiple headers in children
+
+```js { "props": { "data-description": "custom icon" } }
+const Reply = require('../Icon/icons/Reply').default;
+const Edit = require('../Icon/icons/Edit').default;
+const Share = require('../Icon/icons/Share').default;
+const enums = require('./enums.ts');
+
+<div>
+  <MenuButton
+    ariaLabel="aria"
+    menuItems={[{
+      key: 'header',
+      text: 'Header',
+      type: enums.MenuItemType.Header,
+    },
+    {
+      key: 'edit',
+      icon: Edit,
+      text: 'Edit',
+    }, {
+      key: 'reply',
+      text: 'Reply',
+      icon: Reply,
+    }, {
+      key: 'share',
+      text: 'Share',
+      icon: Share,
+    }, {
+      key: 'anotherHeader',
+      text: 'Header Type',
+      type: enums.MenuItemType.Header,
+    }, {
+      key: 'edit1',
+      icon: Edit,
+      text: 'Edit',
+    }, {
+      key: 'reply1',
+      text: 'Reply',
+      icon: Reply,
+    }, {
+      key: 'share1',
+      text: 'Share',
+      icon: Share,
+    }]}
+  />
+</div>
+```
