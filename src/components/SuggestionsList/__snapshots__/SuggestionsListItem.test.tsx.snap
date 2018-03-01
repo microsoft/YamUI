@@ -4,6 +4,7 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
 <div
   className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
   onMouseDown={[Function]}
+  role="button"
 >
   <MediaObject
     imageContent={
@@ -37,6 +38,7 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
 <div
   className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background y-suggestions-list-item--selected y-hc-selected"
   onMouseDown={[Function]}
+  role="button"
 >
   <MediaObject
     imageContent={
@@ -70,6 +72,7 @@ exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
 <div
   className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
   onMouseDown={[Function]}
+  role="button"
 >
   <MediaObject
     imageContent={
