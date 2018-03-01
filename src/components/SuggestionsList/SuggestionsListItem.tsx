@@ -3,14 +3,18 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
-import Avatar, { AvatarSize } from '../Avatar';
+import Avatar, { AvatarProps, AvatarSize } from '../Avatar';
+
 import './SuggestionsListItem.css';
+
+export type CustomizableAvatarProps = 'badgeContent' | 'badgeDescription' | 'borderType';
 
 export interface SuggestionItem {
   id: string | number;
   imageUrl?: string;
   name: string;
   description?: string;
+  avatarProps?: Pick<AvatarProps, CustomizableAvatarProps>;
 }
 
 export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseComponentProps {
@@ -40,8 +44,8 @@ const getHighlightedName = (name: string, search: string) => {
 
 export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
   public render() {
-    const { isSelected, name, searchText, imageUrl, description } = this.props;
-    const avatar = <Avatar imageUrl={imageUrl} name={name} size={AvatarSize.SMALL} />;
+    const { isSelected, name, searchText, description } = this.props;
+    const avatar = this.getAvatar();
     const className = isSelected ? selectedClass : baseClass;
     const title = getHighlightedName(name, searchText);
     return (
@@ -54,6 +58,17 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
         />
       </div>
     );
+  }
+
+  private getAvatar() {
+    const { avatarProps, name, imageUrl } = this.props;
+    const props = {
+      ...avatarProps,
+      name,
+      imageUrl,
+      size: AvatarSize.SMALL,
+    };
+    return <Avatar {...props} />;
   }
 
   private onMouseDown = () => {

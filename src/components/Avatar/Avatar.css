@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
 .y-avatar {
   position: relative;
-  overflow: hidden;
 }
 
 .y-avatar__size-xLarge {
@@ -49,14 +50,19 @@
   width: 20px;
   bottom: -2px;
   right: -2px;
-  overflow: hidden;
   border-radius: 50%;
   border: solid 2px #fff;
+  background: #fff;
+  color: $color__river;
 }
 .y-avatar__size-small--badge,
 .y-avatar__size-xSmall--badge {
   height: 16px;
   width: 16px;
+}
+
+.y-avatar--badge > * {
+  top: 0 !important;
 }
 
 /* Fabric CSS overrides */
