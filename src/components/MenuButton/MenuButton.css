@@ -11,6 +11,9 @@
 .y-menu-button--callout {
   border-radius: 1px;
 }
+.y-menu-button--callout > .ms-Callout-main {
+  border-radius: 1px;
+}
 
 /* Overall top/bottom menu padding */
 .y-menu-button--callout .ms-ContextualMenu-list {
