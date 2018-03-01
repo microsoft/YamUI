@@ -16,6 +16,11 @@
   opacity: 1;
 }
 
+.y-menu-button.is-expanded {
+  color: $linkColor;
+  opacity: 1;
+}
+
 .y-menu-button--callout {
   border-radius: 1px;
 }
