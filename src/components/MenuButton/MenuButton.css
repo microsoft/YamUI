@@ -26,7 +26,7 @@
 .y-menu-button--item-icon {
   color: $linkColor;
 }
-.is-disabled .y-menu-button--item-icon {
+.y-menu-button--item-icon__disabled {
   color: $textColor__disabled;
 }
 

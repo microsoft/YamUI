@@ -19,18 +19,29 @@ const getClasses = (isHeader: boolean) => {
   return join(classes);
 };
 
-const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
-  props: IContextualMenuItemProps,
-) => {
-  const { data, name, itemType, disabled } = props.item;
+const getIconClasses = (isDisabled: boolean) => {
+  const classes = ['y-menu-button--item-icon'];
+  if (isDisabled) {
+    classes.push('y-menu-button--item-icon__disabled');
+  }
+  return join(classes);
+};
 
+const getIconColumn = (data: any, disabled: boolean) => {
   const Icon = data && data.yamUIIcon;
   const iconColumn = Icon ? (
-    <FixedGridColumn fixed={true} className="y-menu-button--item-icon">
+    <FixedGridColumn fixed={true} className={getIconClasses(disabled)}>
       <Icon size={IconSize.MEDIUM} block={true} />
     </FixedGridColumn>
   ) : null;
 
+  return iconColumn;
+};
+
+const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
+  props: IContextualMenuItemProps,
+) => {
+  const { data, name, itemType, disabled = false } = props.item;
   const isHeader = itemType === ContextualMenuItemType.Header;
 
   let color = TextColor.SECONDARY;
@@ -45,7 +56,7 @@ const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
   return (
     <Block textColor={color} textSize={size} className={getClasses(isHeader)}>
       <FixedGridRow gutterSize={GutterSize.SMALL}>
-        {iconColumn}
+        {getIconColumn(data, disabled)}
         <FixedGridColumn className="y-menu-button--item-text">{name}</FixedGridColumn>
       </FixedGridRow>
     </Block>

@@ -18,7 +18,34 @@ exports[`<MenuButtonItem /> when it is a header type matches its snapshot 1`] = 
 </Block>
 `;
 
-exports[`<MenuButtonItem /> when it is disabled matches its snapshot 1`] = `
+exports[`<MenuButtonItem /> when it is disabled with an icon matches its snapshot 1`] = `
+<Block
+  className="y-menu-button--item"
+  textColor="disabled"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="y-menu-button--item-icon y-menu-button--item-icon__disabled"
+      fixed={true}
+    >
+      <Reply
+        block={true}
+        size="16"
+      />
+    </FixedGridColumn>
+    <FixedGridColumn
+      className="y-menu-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuButtonItem /> when it is disabled without an icon matches its snapshot 1`] = `
 <Block
   className="y-menu-button--item"
   textColor="disabled"

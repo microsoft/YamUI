@@ -51,20 +51,43 @@ describe('<MenuButtonItem />', () => {
   });
 
   describe('when it is disabled', () => {
-    beforeEach(() => {
-      props = {
-        item: {
-          key: 'test1',
-          name: 'test',
-          disabled: true,
-        } as IContextualMenuItem,
-      } as IContextualMenuItemProps;
+    describe('without an icon', () => {
+      beforeEach(() => {
+        props = {
+          item: {
+            key: 'test1',
+            name: 'test',
+            disabled: true,
+          } as IContextualMenuItem,
+        } as IContextualMenuItemProps;
 
-      component = shallow(<MenuButtonItem {...props} />);
+        component = shallow(<MenuButtonItem {...props} />);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
 
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+    describe('with an icon', () => {
+      beforeEach(() => {
+        props = {
+          item: {
+            key: 'test1',
+            name: 'test',
+            disabled: true,
+            data: {
+              yamUIIcon: Reply,
+            },
+          } as IContextualMenuItem,
+        } as IContextualMenuItemProps;
+
+        component = shallow(<MenuButtonItem {...props} />);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 
