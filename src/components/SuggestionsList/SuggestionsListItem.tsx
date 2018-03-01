@@ -4,7 +4,6 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import Avatar, { AvatarSize } from '../Avatar';
-import Text from '../Text';
 import './SuggestionsListItem.css';
 
 export interface SuggestionItem {
@@ -22,16 +21,21 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
 
 const baseClass = 'y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background';
 const selectedClass = `${baseClass} y-suggestions-list-item--selected y-hc-selected`;
+const matchHighlightClass = 'y-suggestions-list-item--match-highlight';
 
 const getHighlightedName = (name: string, search: string) => {
-  return name.split(new RegExp(`(${search})`, 'gi')).map((item: string, index: number) => {
-    const isBold = search.toLowerCase() === item.toLowerCase();
-    return (
-      <Text key={index} bold={isBold}>
-        {item.replace(/\s/g, '\u00A0')}
-      </Text>
-    );
-  });
+  return name
+    .split(new RegExp(`(${search})`, 'gi'))
+    .filter(content => !!content)
+    .map((content, index) => {
+      const className =
+        search.toLowerCase() === content.toLowerCase() ? matchHighlightClass : undefined;
+      return (
+        <span key={index} className={className}>
+          {content}
+        </span>
+      );
+    });
 };
 
 export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
