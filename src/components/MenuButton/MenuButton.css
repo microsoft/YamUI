@@ -57,9 +57,9 @@
   padding: .7rem 1.2rem 1rem;
 }
 
-.y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link,
-.y-menu-button--callout .ms-ContextualMenu-item:active .ms-ContextualMenu-link,
-.y-menu-button--callout .ms-ContextualMenu-item:focus .ms-ContextualMenu-link {
+.y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link:not(.is-disabled),
+.y-menu-button--callout .ms-ContextualMenu-item:active .ms-ContextualMenu-link:not(.is-disabled),
+.y-menu-button--callout .ms-ContextualMenu-item:focus .ms-ContextualMenu-link:not(.is-disabled) {
   background-color: $dropdownOptionBackgroundColor__focused;
 }
 
@@ -76,10 +76,4 @@
 
 .y-menu-button--callout .ms-ContextualMenu-link:hover {
   text-decoration: none;
-}
-
-.y-menu-button--callout .ms-ContextualMenu-link:hover,
-.y-menu-button--callout .ms-ContextualMenu-link:focus,
-.y-menu-button--callout .ms-ContextualMenu-link:active {
-  color: $textColor__secondary;
 }
