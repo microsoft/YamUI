@@ -1,0 +1,79 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import "src/css/variables/colors.css";
+
+.y-menu-button {
+  height: 20px;
+  width: 20px;
+  border: 0;
+  padding: 0;
+  opacity: 0.7;
+  color: $textColor__secondary;
+}
+.y-menu-button:hover,
+.y-menu-button:active,
+.y-menu-button:focus {
+  color: $linkColor;
+  opacity: 1;
+}
+
+.y-menu-button.is-expanded {
+  color: $linkColor;
+  opacity: 1;
+}
+
+.y-menu-button--callout {
+  border-radius: 1px;
+}
+.y-menu-button--callout > .ms-Callout-main {
+  border-radius: 1px;
+}
+
+/* Overall top/bottom menu padding */
+.y-menu-button--callout .ms-ContextualMenu-list {
+  padding: .4rem 0;
+}
+
+/* Element styling overrides */
+.y-menu-button--callout .ms-ContextualMenu-link,
+.y-menu-button--callout .ms-ContextualMenu-header {
+  padding: 0;
+}
+
+.y-menu-button--item-icon {
+  color: $linkColor;
+}
+.y-menu-button--item-icon__disabled {
+  color: $textColor__disabled;
+}
+
+.y-menu-button--item-icon > .y-icon {
+  top: .3rem;
+}
+
+.y-menu-button--item {
+  padding: .5rem 1.2rem .8rem;
+}
+.y-menu-button--item-header {
+  padding: .7rem 1.2rem 1rem;
+}
+
+.y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link:not(.is-disabled),
+.y-menu-button--callout .ms-ContextualMenu-item:active .ms-ContextualMenu-link:not(.is-disabled),
+.y-menu-button--callout .ms-ContextualMenu-item:focus .ms-ContextualMenu-link:not(.is-disabled) {
+  background-color: $dropdownOptionBackgroundColor__focused;
+}
+
+/* Headers and Dividers */
+.y-menu-button--callout .ms-ContextualMenu-header {
+  background-color: initial;
+}
+
+.y-menu-button--callout .ms-ContextualMenu-divider {
+  background-color: $borderColor__secondary;
+  margin-bottom: -1px;
+}
+
+
+.y-menu-button--callout .ms-ContextualMenu-link:hover {
+  text-decoration: none;
+}

@@ -38,7 +38,7 @@ With results:
       }, {
         id: 3,
         imageUrl: '',
-        name: 'Johanna Cristian Lorenz',
+        name: 'Johanna Cristian Rodriguez Hernandez',
         description: 'Information Architecture'
       }, {
         id: 4,

@@ -2,7 +2,7 @@
 
 exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -30,7 +30,7 @@ exports[`<SuggestionsList /> when isLoading=false with results when onHover is c
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -56,7 +56,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -82,7 +82,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-status"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
 >
   <Block
     padding="large"
@@ -101,7 +101,7 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
 
 exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -140,7 +140,7 @@ exports[`<SuggestionsList /> when isLoading=true with results when onHover is ca
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -177,7 +177,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-status y-suggestions-list--with-results"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
 >
   <ul
     className="y-suggestions-list--results"
@@ -214,7 +214,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-suggestions-list--with-status"
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
 >
   <Block
     push={-2}
