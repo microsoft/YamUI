@@ -48,8 +48,13 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     const avatar = this.getAvatar();
     const className = isSelected ? selectedClass : baseClass;
     const title = getHighlightedName(name, searchText);
+    // role=button added so that speech software knows that these are clickable targets.
     return (
-      <div onMouseDown={this.onMouseDown} className={className}>
+      <div
+        onMouseDown={this.onMouseDown}
+        className={className}
+        role="button"
+      >
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}

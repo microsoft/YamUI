@@ -93,6 +93,12 @@ const { TextColor } = require('.');
   <p>
     <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
   </p>
+  <p>
+    <Text color={TextColor.ERROR}>This example has <strong>color: ERROR</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.DISABLED}>This example has <strong>color: DISABLED</strong>.</Text>
+  </p>
   <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
     <Text color={TextColor.WHITE}>
       This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.

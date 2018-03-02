@@ -18,6 +18,12 @@
 .y-text__color-white {
   color: $textColor__white;
 }
+.y-text__color-error {
+  color: $textColor__error;
+}
+.y-text__color-disabled {
+  color: $textColor__disabled;
+}
 
 .y-text__bold {
   font-weight: $fontWeight__bold;
