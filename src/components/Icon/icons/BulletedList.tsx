@@ -8,7 +8,13 @@ import BaseIcon from '../BaseIcon';
 export default class BulletedList extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
         <path fillRule="evenodd" d="M0 150v-15h15v15H0zm0-45V90h15v15H0zm45 0V90h195v15H45zM0 60V45h15v15H0zm45-15h195v15H45V45zm0 105v-15h195v15H45zM0 195v-15h15v15H0zm45 0v-15h195v15H45z" />
       </svg>
     );

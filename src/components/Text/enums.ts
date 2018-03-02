@@ -19,6 +19,16 @@ export enum TextColor {
    * For use on darker backgrounds
    */
   WHITE = 'white',
+
+  /**
+   * For use in error messages.
+   */
+  ERROR = 'error',
+
+  /**
+   * For use in interaction elements which have become disabled.
+   */
+  DISABLED = 'disabled',
 }
 
 export enum TextSize {

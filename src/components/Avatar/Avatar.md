@@ -82,9 +82,10 @@ With image and badge:
 
 ```js { "props": { "data-description": "with image and badge" } }
 const { AvatarSize } = require('.');
+const AdminBadge = require('../Icon/icons/BadgeAdmin').default;
 
 const badgeContent = (
-  <Image source="badge.png" description="" fullWidth={true} />
+  <AdminBadge block={true} />
 );
 
 <table style={{ textAlign: 'center' }}>

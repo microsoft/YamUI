@@ -13,3 +13,7 @@
 .y-suggestions-list-item--selected {
   background-color: $suggestionsListItemBackgroundColor__keyboardNavigate;
 }
+
+.y-suggestions-list-item--match-highlight {
+  font-weight: 600;
+}

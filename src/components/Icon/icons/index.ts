@@ -84,6 +84,7 @@ export { default as ScaleUp } from './ScaleUp';
 export { default as ScrollUpDown } from './ScrollUpDown';
 export { default as Search } from './Search';
 export { default as SemiBoldWeight } from './SemiBoldWeight';
+export { default as Send } from './Send';
 export { default as Settings } from './Settings';
 export { default as Share } from './Share';
 export { default as SharePointLogoInverse } from './SharePointLogoInverse';
