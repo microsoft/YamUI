@@ -6,7 +6,7 @@ A `Dropdown` can be used in a <a href="https://facebook.github.io/react/docs/for
 
 Controlled dropdown:
 
-```js { "props": { "data-example": "controlled" } }
+```js { "props": { "data-description": "controlled" } }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -53,7 +53,7 @@ class ControlledDropdown extends React.Component {
 
 Uncontrolled dropdown:
 
-```js { "props": { "data-example": "uncontrolled" } }
+```js { "props": { "data-description": "uncontrolled" } }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -76,7 +76,7 @@ const options = [
 
 With a label:
 
-```js { "props": { "data-example": "with label" } }
+```js { "props": { "data-description": "with label" } }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -100,7 +100,7 @@ const options = [
 
 With option templates, dividers and headers:
 
-```js { "props": { "data-example": "with templates dividers headers" } }
+```js { "props": { "data-description": "with templates dividers headers" } }
 const { GutterSize } = require('../Block');
 const { DropdownMenuItemType } = require('.');
 const AttachIcon = require('../Icon/icons/Attach').default;
@@ -142,7 +142,7 @@ const options = [
 
 In a grid:
 
-```js { "props": { "data-example": "in grid" } }
+```js { "props": { "data-description": "in grid" } }
 const { GutterSize } = require('../Block')
 const { FixedGridColumn, FixedGridRow } = require('../FixedGrid')
 const action = (msg) => (...args) => { console.log(msg, ...args) };

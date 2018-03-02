@@ -6,7 +6,7 @@
 
 Basic:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <div>
   Here is a <NavigationLink href="/404.html"><strong>NavigationLink</strong> component</NavigationLink> with just an <strong>href</strong>, its only required property.
 </div>
@@ -14,7 +14,7 @@ Basic:
 
 Opens a new window:
 
-```js { "props": { "data-example": "new window" } }
+```js { "props": { "data-description": "new window" } }
 <div>
   Here is a <NavigationLink href="/404.html" newWindow={true}><strong>NavigationLink</strong> component</NavigationLink> which opens its link securely in a new window.
 </div>
@@ -22,7 +22,7 @@ Opens a new window:
 
 Unstyled link:
 
-```js { "props": { "data-example": "unstyled" } }
+```js { "props": { "data-description": "unstyled" } }
 <div>
   Here is a <NavigationLink href="/404.html" unstyled={true}><strong>NavigationLink</strong> component</NavigationLink> which removes the link styling and inherits its parent's color.
 </div>
@@ -30,7 +30,7 @@ Unstyled link:
 
 Link wrapping content:
 
-```js { "props": { "data-example": "wrapping" } }
+```js { "props": { "data-description": "wrapping" } }
 <NavigationLink href="/404.html">
   <div>
     This <strong>NavigationLink</strong> component wraps an entire block of text. By default all text content within a <strong>NavigationLink</strong> tag will be styled like a link.
@@ -40,7 +40,7 @@ Link wrapping content:
 
 Unstyled link wrapping content:
 
-```js { "props": { "data-example": "unstyled wrapping" } }
+```js { "props": { "data-description": "unstyled wrapping" } }
 const { TextColor } = require('../Text');
 
 <div>

@@ -31,6 +31,10 @@
   margin: -1px 0 0 8px;
 }
 
+.y-spinner__size-medium > .y-spinner--label {
+  margin: -2px 0 0 8px;
+}
+
 .y-spinner__size-large {
   flex-direction: column;
 }

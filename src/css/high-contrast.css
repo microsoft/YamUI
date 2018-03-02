@@ -1,0 +1,51 @@
+/**
+  * Helper classes to work with Windows High Contrast mode.
+  */
+
+@media screen and (-ms-high-contrast: active) {
+  /* Add border */
+  .y-hc-border {
+    border: 1px solid WindowText !important;
+  }
+
+  /**
+    * EDGE adds background color to text nodes by default, and
+    * this causes adjacent block elements to clip one another.
+    * We work around this by using the 'adjust' property to
+    * disable the default high contrast processing. We then have
+    * to specify the text color manually.
+    */
+  .y-hc-suppress-text-background * {
+    -ms-high-contrast-adjust: none;
+    color: WindowText !important;
+  }
+
+  /** 
+    * Selection helpers:
+    * y-hc-selected forces the element and descendants to use the
+    *   'selected item' theme colors.
+    * y-hc-select-on-hover is similar, but only applies on mouse hover.
+    */
+  .y-hc-select-on-hover:hover,
+  .y-hc-selected {
+    color: HighlightText !important;
+    border-color: HighlightText !important;
+    background: Highlight !important;
+  }
+
+  /**
+    * not(body) added purely to increase specificify so that we
+    * override an !important rule coming from Fabric's persona component,
+    * which doesn't seem to anticipate that it might be used in a context
+    * where it is selected.
+    *
+    * Background is set only on the parent, and set to none on descendants
+    * to avoid introducing solid backgrounds that were previously not present.
+    */
+  .y-hc-select-on-hover:hover *,
+  .y-hc-selected:not(body) * {
+    color: HighlightText !important;
+    border-color: HighlightText !important;
+    background: none !important;
+  }
+}

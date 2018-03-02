@@ -6,7 +6,7 @@ Text that is too long for the context will wrap to two or more lines, but you sh
 
 Informational:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <MessageBar>
   Something you should know about.
 </MessageBar>
@@ -14,7 +14,7 @@ Informational:
 
 Warning:
 
-```js { "props": { "data-example": "with type" } }
+```js { "props": { "data-description": "with type" } }
 const { MessageBarType } = require('.');
 
 <MessageBar type={MessageBarType.WARNING}>
@@ -24,7 +24,7 @@ const { MessageBarType } = require('.');
 
 Warning with an icon action:
 
-```js { "props": { "data-example": "with icon action" } }
+```js { "props": { "data-description": "with icon action" } }
 const { IconSize } = require('../Icon');
 const Lock = require('../Icon/icons/Lock').default;
 const { TextSize } = require('../Text');
@@ -44,7 +44,7 @@ const action = (
 
 Warning with an icon action and multiple lines:
 
-```js { "props": { "data-example": "with icon action" } }
+```js { "props": { "data-description": "with icon action" } }
 const { IconSize } = require('../Icon');
 const Lock = require('../Icon/icons/Lock').default;
 const { TextSize } = require('../Text');
@@ -64,7 +64,7 @@ const action = (
 
 Error with a link action:
 
-```js { "props": { "data-example": "with link action" } }
+```js { "props": { "data-description": "with link action" } }
 const { MessageBarType } = require('.');
 
 const link = <FakeLink>Retry</FakeLink>;

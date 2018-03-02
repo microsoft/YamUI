@@ -2,7 +2,7 @@
 
 Default hover trigger:
 
-```js { "props": { "data-example": "default hover trigger" } }
+```js { "props": { "data-description": "default hover trigger" } }
 
 const content = (
   <div>
@@ -37,7 +37,7 @@ const handlers = {
 
 Click trigger:
 
-```js { "props": { "data-example": "click trigger" } }
+```js { "props": { "data-description": "click trigger" } }
 const { DirectionalHint, TriggerType } = require('.');
 
 const content = (
@@ -74,7 +74,7 @@ const handlers = {
 
 Hovercard without beak:
 
-```js { "props": { "data-example": "without beak" } }
+```js { "props": { "data-description": "without beak" } }
 
 
 const content = (
@@ -111,7 +111,7 @@ const handlers = {
 
 Hovercard with different alignments:
 
-```js { "props": { "data-example": "alignments" } }
+```js { "props": { "data-description": "alignments" } }
 
 
 const content = (

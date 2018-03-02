@@ -2,7 +2,7 @@
 
 With visible text:
 
-```js { "props": { "data-example": "with visible text" } }
+```js { "props": { "data-description": "with visible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
@@ -49,7 +49,7 @@ const { SpinnerColor, SpinnerSize } = require('.');
 
 With invisible text:
 
-```js { "props": { "data-example": "with invisible text" } }
+```js { "props": { "data-description": "with invisible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>

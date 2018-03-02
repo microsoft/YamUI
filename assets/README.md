@@ -13,13 +13,24 @@ If a component needs to be modified, Yammer UX will update the graphic and indic
 
 * [Avatar](https://zpl.io/a8rX9E2)
 * [Button](https://zpl.io/2yNNDGV)
+* [ChoiceGroup](https://zpl.io/adRRLQ5)
 * [Dropdown](https://zpl.io/bz8nlzE)
+* [List](https://zpl.io/a8EBnQK)
 * [MediaObject](https://zpl.io/bllMzze)
+* [MessageBar](https://zpl.io/bz83GQM)
+* [Pivot](https://zpl.io/bJOjNz9)
+* [ProgressIndicator](https://zpl.io/aMLdkEJ)
+* [SearchBox](https://zpl.io/2jk6vRq)
 * [Spinner](https://zpl.io/ano399n)
 * [TextField](https://zpl.io/a7w8ZzK)
+* [TextArea](https://zpl.io/V0PAADm)
+* [Tooltip](https://zpl.io/Vqy3084)
 
 ## Modules
 
-* [Hovercards](https://zpl.io/2jR9WO2)
+* [AsideSection](https://zpl.io/anokGGJ)
+* [Attachments](https://zpl.io/broq0M5)
+* [ButtonMenu](https://zpl.io/b6JemxN)
+* [Hovercard](https://zpl.io/2jR9WO2)
 * [MediaObjectList](https://zpl.io/amDMggA)
-* [Rightrail](https://zpl.io/anokGGJ)
+* [SuggestionsList](https://zpl.io/VkK947Z)

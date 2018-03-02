@@ -1,5 +1,5 @@
 ### Notes for use
-Note that spacing between list items uses standard `GutterSize` values. Horizontal list items default to `4px` gutters, while vertical list items default to no gutters. 
+Note that spacing between list items uses standard `GutterSize` values. Horizontal list items default to `4px` gutters, while vertical list items default to no gutters.
 
 If you're looking for typography-based ordered and unordered lists, please see the `List` component.
 
@@ -7,7 +7,7 @@ If you're looking for typography-based ordered and unordered lists, please see t
 
 Horizontal list of buttons:
 
-```js { "props": { "data-example": "horizontal-left" } }
+```js { "props": { "data-description": "horizontal left" } }
 const { ButtonColor } = require('../Button');
 
 <LayoutList direction="horizontal">
@@ -25,7 +25,7 @@ const { ButtonColor } = require('../Button');
 
 Horizontal list of buttons aligned to the right:
 
-```js { "props": { "data-example": "horizontal-right" } }
+```js { "props": { "data-description": "horizontal right" } }
 const { ButtonColor } = require('../Button');
 
 <LayoutList direction="horizontal" align="right">
@@ -43,7 +43,7 @@ const { ButtonColor } = require('../Button');
 
 Horizontal list with different gutter sizes:
 
-```js { "props": { "data-example": "horizontal-guttersizes" } }
+```js { "props": { "data-description": "horizontal guttersizes" } }
 const { ButtonColor } = require('../Button');
 const { GutterSize } = require('.');
 
@@ -101,7 +101,7 @@ const items = [1, 2, 3].map((num) =>
 
 Vertical list of users:
 
-```js { "props": { "data-example": "vertical" } }
+```js { "props": { "data-description": "vertical" } }
 const { AvatarSize } = require('../Avatar');
 const { ButtonSize } = require('../Button');
 const Add = require('../Icon/icons/Add').default;
@@ -146,7 +146,7 @@ const people = [
 
 Vertical list with different gutter sizes:
 
-```js { "props": { "data-example": "vertical-guttersizes" } }
+```js { "props": { "data-description": "vertical guttersizes" } }
 const { ButtonColor } = require('../Button');
 const { GutterSize } = require('.');
 

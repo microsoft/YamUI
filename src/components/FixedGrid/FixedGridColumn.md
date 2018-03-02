@@ -4,7 +4,7 @@
 
 Fixed left column with width:
 
-```js { "props": { "data-example": "fixed left column with width" } }
+```js { "props": { "data-description": "fixed left column with width" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true} width={150}>
     <Image source="logo.png" description="" fullWidth={true} />
@@ -22,7 +22,7 @@ Fixed left column with width:
 
 Fixed left column without width:
 
-```js { "props": { "data-example": "fixed left column without width" } }
+```js { "props": { "data-description": "fixed left column without width" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true}>
     <Image source="logo.png" description="" width={100} />
@@ -40,7 +40,7 @@ Fixed left column without width:
 
 Fixed right column with width:
 
-```js { "props": { "data-example": "fixed right column with width" } }
+```js { "props": { "data-description": "fixed right column with width" } }
 <FixedGridRow>
   <FixedGridColumn>
     <p>
@@ -58,7 +58,7 @@ Fixed right column with width:
 
 Fixed right column without width:
 
-```js { "props": { "data-example": "fixed right column without width" } }
+```js { "props": { "data-description": "fixed right column without width" } }
 <FixedGridRow>
   <FixedGridColumn>
     <p>
@@ -76,7 +76,7 @@ Fixed right column without width:
 
 Two fixed columns:
 
-```js { "props": { "data-example": "two fixed columns" } }
+```js { "props": { "data-description": "two fixed columns" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true} width={100}>
     <Image source="logo.png" description="" fullWidth={true} />
@@ -92,7 +92,7 @@ Two fixed columns:
 
 With gutters and spacing:
 
-```js { "props": { "data-example": "with gutters and spacing" } }
+```js { "props": { "data-description": "with gutters and spacing" } }
 const { GutterSize } = require('.');
 
 <div>
@@ -163,7 +163,7 @@ const { GutterSize } = require('.');
 
 With vertical alignment:
 
-```js { "props": { "data-example": "with vertical alignment" } }
+```js { "props": { "data-description": "with vertical alignment" } }
 <FixedGridRow>
   <FixedGridColumn fixed={true} width={100}>
     This example is showing the different vertical align options for each individual grid columns.

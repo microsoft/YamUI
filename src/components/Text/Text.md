@@ -6,7 +6,7 @@
 
 Basic text:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <div>
   <p>
     <Text>
@@ -21,9 +21,9 @@ Basic text:
 </div>
 ```
 
-With screenreaderText:
+With screenreader text:
 
-```js { "props": { "data-example": "with screenreaderText" } }
+```js { "props": { "data-description": "with screenreader text" } }
 <div>
   <p>
     <Text>
@@ -40,7 +40,7 @@ With screenreaderText:
 
 Bold:
 
-```js { "props": { "data-example": "bold" } }
+```js { "props": { "data-description": "bold" } }
 <div>
   <Text bold={true}>
     This example has <strong>bold: true</strong>.
@@ -50,7 +50,7 @@ Bold:
 
 Uppercase:
 
-```js { "props": { "data-example": "uppercase" } }
+```js { "props": { "data-description": "uppercase" } }
 <div>
   <Text uppercase={true}>
     This example has <strong>uppercase: true</strong>.
@@ -58,11 +58,11 @@ Uppercase:
 </div>
 ```
 
-Max width with ellipsis.
+Max width with ellipsis:
 
 NOTE: Text with maxWidth will add an extra 1px of height to the bottom of its containing element, an unfortunate side-effect of overflow-hidden on the inline-block Text element. To maintain perfect vertical rhythm in the next block of text, give the next container -1px top margin or simply use `<Block push={-1} />`.
 
-```js { "props": { "data-example": "max width with ellipsis" } }
+```js { "props": { "data-description": "max width with ellipsis" } }
 <div>
   <Text maxWidth={200}>
     This has maxWidth: 200px and all extra text will be hidden.
@@ -75,7 +75,7 @@ NOTE: Text with maxWidth will add an extra 1px of height to the bottom of its co
 
 Different text colors:
 
-```js { "props": { "data-example": "colors" } }
+```js { "props": { "data-description": "colors" } }
 const { TextColor } = require('.');
 
 <div>
@@ -93,6 +93,12 @@ const { TextColor } = require('.');
   <p>
     <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
   </p>
+  <p>
+    <Text color={TextColor.ERROR}>This example has <strong>color: ERROR</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.DISABLED}>This example has <strong>color: DISABLED</strong>.</Text>
+  </p>
   <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
     <Text color={TextColor.WHITE}>
       This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
@@ -103,7 +109,7 @@ const { TextColor } = require('.');
 
 Different text sizes:
 
-```js { "props": { "data-example": "sizes" } }
+```js { "props": { "data-description": "sizes" } }
 const { TextSize } = require('.');
 
 <div>
@@ -138,7 +144,7 @@ const { TextSize } = require('.');
 
 Different text sizes with long text:
 
-```js { "props": { "data-example": "sizes long" } }
+```js { "props": { "data-description": "sizes long" } }
 const { TextSize } = require('.');
 
 <div>

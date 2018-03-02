@@ -6,6 +6,6 @@ Add here any notes on how to use the component, or delete this section.
 
 Basic usage:
 
-```js { "props": { "data-example": "basic" } }
+```js { "props": { "data-description": "basic" } }
 <<%= name %> />
 ```

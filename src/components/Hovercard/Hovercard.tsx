@@ -91,11 +91,13 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   };
 
   private triggerElement: HTMLSpanElement | null;
-  private showTimeout: number;
-  private hideTimeout: number;
+  private showTimeout: number | undefined;
+  private hideTimeout: number | undefined;
 
   constructor(props: HovercardProps) {
     super(props);
+
+    this.triggerElement = null;
 
     this.state = {
       visible: false,
@@ -162,8 +164,14 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   }
 
   componentWillUnmount() {
-    window.clearTimeout(this.showTimeout);
-    window.clearTimeout(this.hideTimeout);
+    if (this.showTimeout) {
+      window.clearTimeout(this.showTimeout);
+    }
+
+    if (this.hideTimeout) {
+      window.clearTimeout(this.hideTimeout);
+    }
+
     this.stopKeyListener();
   }
 
@@ -209,7 +217,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   @autobind
   private cancelShow() {
-    window.clearTimeout(this.showTimeout);
+    if (this.showTimeout) {
+      window.clearTimeout(this.showTimeout);
+    }
   }
 
   @autobind
@@ -221,7 +231,9 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   @autobind
   private cancelHide() {
-    window.clearTimeout(this.hideTimeout);
+    if (this.hideTimeout) {
+      window.clearTimeout(this.hideTimeout);
+    }
   }
 
   @autobind

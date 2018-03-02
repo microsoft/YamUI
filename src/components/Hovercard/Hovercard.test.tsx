@@ -147,6 +147,16 @@ describe('<Hovercard />', () => {
       expect(component.find('.y-hovercard--modal-container').length).toBe(1);
     });
 
+    describe('and then unmounted', () => {
+      beforeEach(() => {
+        component.unmount();
+      });
+
+      it('should clearTimeout on the window', () => {
+        expect(window.clearTimeout).toHaveBeenCalled();
+      });
+    });
+
     describe('and the mouse hovers out of the trigger', () => {
       beforeEach(() => {
         component.find('.y-hovercard--trigger').simulate('mouseLeave');
