@@ -14,6 +14,7 @@ export default class CannedChat extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M0 15h240v165H85.664L30 235.664V180H0V15zm225 150V30H15v135h30v34.336L79.336 165H225zM195 60v15H45V60h150zm0 30v15H45V90h150zm0 30v15H45v-15h150z" />
       </svg>

@@ -14,6 +14,7 @@ export default class CheckboxComposite extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M240 0v240H0V0h240zm-15 15H15v210h210V15zM90 190.664l-50.273-50.39 10.546-10.547L90 169.336l99.727-99.61 10.546 10.547L90 190.664z" />
       </svg>

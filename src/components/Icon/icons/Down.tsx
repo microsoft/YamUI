@@ -14,6 +14,7 @@ export default class Down extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M230.273 129.023L120 239.297 9.727 129.023l10.546-10.546 92.227 92.226V0h15v210.703l92.227-92.226z" />
       </svg>

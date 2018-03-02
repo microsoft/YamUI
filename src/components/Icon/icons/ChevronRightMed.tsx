@@ -14,6 +14,7 @@ export default class ChevronRightMed extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M87.832 207.803l-10.635-10.635L154.365 120 77.197 42.832l10.635-10.635L175.635 120z" />
       </svg>

@@ -14,6 +14,7 @@ export default class Remove extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M240 127.5H0v-15h240z" />
       </svg>
