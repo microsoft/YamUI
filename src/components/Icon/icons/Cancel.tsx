@@ -14,6 +14,7 @@ export default class Cancel extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M211.523 39.023L130.664 120l80.86 80.977-10.547 10.546L120 130.664l-80.977 80.86-10.546-10.547L109.336 120l-80.86-80.977 10.547-10.546L120 109.336l80.977-80.86z" />
       </svg>

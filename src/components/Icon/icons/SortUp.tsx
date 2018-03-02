@@ -14,6 +14,7 @@ export default class SortUp extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M177.547 58.773L167 69.32l-39.61-39.492-.117 210.469h-15l.118-210.82L72.547 69.32 62 58.773 119.773 1z" />
       </svg>

@@ -14,6 +14,7 @@ export default class Mail extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M240 45v150H0V45h240zM16.758 60L120 111.68 223.242 60H16.758zM225 180V75.937L120 128.32 15 75.938V180h210z" />
       </svg>

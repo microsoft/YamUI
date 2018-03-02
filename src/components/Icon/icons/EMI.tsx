@@ -14,6 +14,7 @@ export default class EMI extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M188 15v210h-60v-60h-15v60H53V15h135zm-15 15H68v180h30v-60h45v60h30V30zM98 75H83V45h15v30zm30 0h-15V45h15v30zm-30 45H83V90h15v30zm30 0h-15V90h15v30zm30-45h-15V45h15v30zm0 45h-15V90h15v30z" />
       </svg>

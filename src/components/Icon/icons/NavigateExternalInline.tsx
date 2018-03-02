@@ -14,6 +14,7 @@ export default class NavigateExternalInline extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M188 165h15v75H38V75h75v15H53v135h135v-60zm15-90v75h-15v-49.336l-69.727 69.61-10.546-10.547L177.336 90H128V75h75z" />
       </svg>
