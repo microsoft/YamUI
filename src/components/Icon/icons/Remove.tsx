@@ -8,7 +8,14 @@ import BaseIcon from '../BaseIcon';
 export default class Remove extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+        focusable="false"
+      >
         <path fillRule="evenodd" d="M240 127.5H0v-15h240z" />
       </svg>
     );

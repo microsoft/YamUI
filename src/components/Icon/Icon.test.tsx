@@ -9,7 +9,6 @@ describe('<Icon />', () => {
   let component: ShallowWrapper<IconProps, {}>;
 
   describe('an Icon', () => {
-
     describe('with minimal options', () => {
       beforeEach(() => {
         component = shallow(<Accounts />);
@@ -24,7 +23,6 @@ describe('<Icon />', () => {
       beforeEach(() => {
         component = shallow(<Accounts color="blue" />);
       });
-
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
@@ -65,7 +63,7 @@ describe('<Icon />', () => {
   describe('total number of Icons', () => {
     const totalIcons = Object.keys(allExportedIcons).length;
     it('is correct', () => {
-      expect(totalIcons).toBe(113);
+      expect(totalIcons).toBe(115);
     });
   });
 

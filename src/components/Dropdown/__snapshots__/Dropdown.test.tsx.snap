@@ -27,13 +27,16 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
               size="16"
             >
               <svg
+                aria-hidden="true"
                 className="y-icon y-icon__isBlock"
+                focusable="false"
                 style={
                   Object {
                     "height": "16px",
                     "width": "16px",
                   }
                 }
+                tabIndex={-1}
                 viewBox="0 0 240 240"
               >
                 <path

@@ -8,7 +8,14 @@ import BaseIcon from '../BaseIcon';
 export default class ScrollUpDown extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+        focusable="false"
+      >
         <path fillRule="evenodd" d="M120.273 25.328l-69.726 69.61L40 84.39 120.273 4l80.274 80.39L190 94.938l-69.727-69.609zm0 188.672L190 144.39l10.547 10.548-80.274 80.39L40 154.938l10.547-10.547L120.273 214z" />
       </svg>
     );

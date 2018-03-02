@@ -2,21 +2,24 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
+import { AvatarBorderType } from '../Avatar';
 
 describe('<SuggestionsListItem />', () => {
   let rendered: ShallowWrapper<SuggestionsListItemProps, {}>;
   let onSelect: jest.Mock<{}>;
-  let isSelected: boolean;
 
-  const getProps = () => {
+  const getProps = (overrides?: Partial<SuggestionsListItemProps>) => {
+    onSelect = jest.fn();
+
     return {
-      isSelected,
       onSelect,
+      isSelected: false,
       id: '1',
       imageUrl: 'imageUrl',
       name: 'John Smith',
       description: 'Software Engineer',
       searchText: 'Joh',
+      ...overrides,
     };
   };
 
@@ -26,8 +29,7 @@ describe('<SuggestionsListItem />', () => {
 
   describe('when isSelected=true', () => {
     beforeEach(() => {
-      isSelected = true;
-      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
     });
 
     it('renders as expected', () => {
@@ -37,8 +39,18 @@ describe('<SuggestionsListItem />', () => {
 
   describe('when isSelected=false', () => {
     beforeEach(() => {
-      isSelected = false;
-      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: false })} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('with avatarProps', () => {
+    beforeEach(() => {
+      const avatarProps = { borderType: AvatarBorderType.SOFT };
+      rendered = shallow(<SuggestionsListItem {...getProps({ avatarProps })} />);
     });
 
     it('renders as expected', () => {
