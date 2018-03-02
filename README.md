@@ -86,13 +86,17 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ## Releasing a new version
 
-If you want to release a new version of YamUI, do the following to create a release branch:-
+If you want to release a new version of YamUI, do the following to create a release branch. Replace version_type with `major`, `minor`
+or `patch` as appropriate, based on [SemVer](https://semver.org):-
 
 ```sh
 git checkout -b awesome-release-branch
-npm version patch -m "Release version %s"
+npm version version_type -m "Release version %s"
 git push
+git push --tags
 ```
+
+This will add a commit that updates `package.json` and `package-lock.json` with the updated version number.
 
 Once this branch's PR is merged to master, do the following to publish the release so it can be consumed from npm:-
 
@@ -103,8 +107,6 @@ git pull
 npm install
 npm publish
 ```
-
-Learn more about [SemVer](https://semver.org).
 
 ## Roadmap
 
