@@ -14,6 +14,7 @@ export default class BarChart4 extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M0 240v-75h45v75H0zm60 0V105h45v135H60zm120-135h45v135h-45V105zm-60 135V45h45v195h-45z" />
       </svg>

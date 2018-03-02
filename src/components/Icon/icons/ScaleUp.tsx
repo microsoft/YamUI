@@ -14,6 +14,7 @@ export default class ScaleUp extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M30 180V60h180v120H30zM45 75v90h150V75H45zm150-45h45v45h-15V45h-30V30zM15 45v30H0V30h45v15H15zm210 150v-30h15v45h-45v-15h30zM15 165v30h30v15H0v-45h15z" />
       </svg>

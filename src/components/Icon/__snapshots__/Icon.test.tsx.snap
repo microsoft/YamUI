@@ -4,6 +4,7 @@ exports[`<Icon /> an Icon with additional className matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
   className="y-icon TEST_CLASSNAME"
+  focusable="false"
   style={Object {}}
   tabIndex={-1}
   viewBox="0 0 240 240"
@@ -19,6 +20,7 @@ exports[`<Icon /> an Icon with block matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
   className="y-icon y-icon__isBlock"
+  focusable="false"
   style={Object {}}
   tabIndex={-1}
   viewBox="0 0 240 240"
@@ -34,6 +36,7 @@ exports[`<Icon /> an Icon with color matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
   className="y-icon"
+  focusable="false"
   style={
     Object {
       "color": "blue",
@@ -53,6 +56,7 @@ exports[`<Icon /> an Icon with minimal options matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
   className="y-icon"
+  focusable="false"
   style={Object {}}
   tabIndex={-1}
   viewBox="0 0 240 240"
@@ -68,6 +72,7 @@ exports[`<Icon /> an Icon with passed size value matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
   className="y-icon"
+  focusable="false"
   style={
     Object {
       "height": "32px",

@@ -14,6 +14,7 @@ export default class ForwardAlt extends BaseIcon {
         style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
+        focusable="false"
       >
         <path fillRule="evenodd" d="M26.953 105v15H196.29l-47.11 47.227 10.548 10.546L225 112.5l-65.273-65.273-10.547 10.546L196.29 105z" />
       </svg>
