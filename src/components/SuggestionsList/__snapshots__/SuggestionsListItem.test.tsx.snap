@@ -2,8 +2,9 @@
 
 exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] = `
 <div
-  className="y-suggestions-list-item"
+  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
   onMouseDown={[Function]}
+  role="button"
 >
   <MediaObject
     imageContent={
@@ -19,19 +20,14 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
     size="small"
     titleContent={
       Array [
-        <Text
-          bold={false}
-        />,
-        <Text
-          bold={true}
+        <span
+          className="y-suggestions-list-item--match-highlight"
         >
           Joh
-        </Text>,
-        <Text
-          bold={false}
-        >
-          n Smith
-        </Text>,
+        </span>,
+        <span>
+          n Smith
+        </span>,
       ]
     }
   />
@@ -40,8 +36,9 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
 
 exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = `
 <div
-  className="y-suggestions-list-item y-suggestions-list-item--selected"
+  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background y-suggestions-list-item--selected y-hc-selected"
   onMouseDown={[Function]}
+  role="button"
 >
   <MediaObject
     imageContent={
@@ -57,19 +54,48 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
     size="small"
     titleContent={
       Array [
-        <Text
-          bold={false}
-        />,
-        <Text
-          bold={true}
+        <span
+          className="y-suggestions-list-item--match-highlight"
         >
           Joh
-        </Text>,
-        <Text
-          bold={false}
+        </span>,
+        <span>
+          n Smith
+        </span>,
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
+  onMouseDown={[Function]}
+  role="button"
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="soft"
+        imageShouldFadeIn={false}
+        imageUrl="imageUrl"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span
+          className="y-suggestions-list-item--match-highlight"
         >
-          n Smith
-        </Text>,
+          Joh
+        </span>,
+        <span>
+          n Smith
+        </span>,
       ]
     }
   />

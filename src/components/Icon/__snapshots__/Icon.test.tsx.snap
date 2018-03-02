@@ -2,8 +2,10 @@
 
 exports[`<Icon /> an Icon with additional className matches its snapshot 1`] = `
 <svg
+  aria-hidden="true"
   className="y-icon TEST_CLASSNAME"
   style={Object {}}
+  tabIndex={-1}
   viewBox="0 0 240 240"
 >
   <path
@@ -15,8 +17,10 @@ exports[`<Icon /> an Icon with additional className matches its snapshot 1`] = `
 
 exports[`<Icon /> an Icon with block matches its snapshot 1`] = `
 <svg
+  aria-hidden="true"
   className="y-icon y-icon__isBlock"
   style={Object {}}
+  tabIndex={-1}
   viewBox="0 0 240 240"
 >
   <path
@@ -28,12 +32,14 @@ exports[`<Icon /> an Icon with block matches its snapshot 1`] = `
 
 exports[`<Icon /> an Icon with color matches its snapshot 1`] = `
 <svg
+  aria-hidden="true"
   className="y-icon"
   style={
     Object {
       "color": "blue",
     }
   }
+  tabIndex={-1}
   viewBox="0 0 240 240"
 >
   <path
@@ -45,8 +51,10 @@ exports[`<Icon /> an Icon with color matches its snapshot 1`] = `
 
 exports[`<Icon /> an Icon with minimal options matches its snapshot 1`] = `
 <svg
+  aria-hidden="true"
   className="y-icon"
   style={Object {}}
+  tabIndex={-1}
   viewBox="0 0 240 240"
 >
   <path
@@ -58,6 +66,7 @@ exports[`<Icon /> an Icon with minimal options matches its snapshot 1`] = `
 
 exports[`<Icon /> an Icon with passed size value matches its snapshot 1`] = `
 <svg
+  aria-hidden="true"
   className="y-icon"
   style={
     Object {
@@ -65,6 +74,7 @@ exports[`<Icon /> an Icon with passed size value matches its snapshot 1`] = `
       "width": "32px",
     }
   }
+  tabIndex={-1}
   viewBox="0 0 240 240"
 >
   <path

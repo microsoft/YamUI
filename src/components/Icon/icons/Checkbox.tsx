@@ -8,7 +8,13 @@ import BaseIcon from '../BaseIcon';
 export default class Checkbox extends BaseIcon {
   render() {
     return (
-      <svg viewBox="0 0 240 240" className={this.getClassName()} style={this.getStyle()}>
+      <svg
+        viewBox="0 0 240 240"
+        className={this.getClassName()}
+        style={this.getStyle()}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
         <path fillRule="evenodd" d="M240 0v240H0V0h240zm-15 15H15v210h210V15z" />
       </svg>
     );
