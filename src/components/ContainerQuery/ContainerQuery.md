@@ -1,6 +1,6 @@
 ### Notes for use
 
-Note that `renderAt` could possibly provide `undefined` if a query wasn't matched. In this case be sure to return at least an empty div rather than null, or ContainerQuery won't have any content to trigger a re-render on resize.
+You should always render a block-level element within `ContainerQuery`, this is necessary to push its width out so it can recalculate its queries on resize.
 
 
 ### Examples
