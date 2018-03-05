@@ -7,7 +7,7 @@ import { Props } from 'react-container-query/lib/interfaces';
 
 export interface ContainerQueryProps {
   /**
-   * An object with named query keys mapped to min/max height and width number values. Example:
+   * An object of `size` keys mapped to height/width queries. Example:
    * {
    *    small: {
    *      maxWidth: 500,
@@ -28,7 +28,7 @@ export interface ContainerQueryProps {
   /**
    * A render prop which receives the key of the active query.
    */
-  renderAt: (activeQuery?: string) => JSX.Element;
+  renderAt: (size?: string) => JSX.Element;
 }
 
 interface EvaluatedQuery {
@@ -46,8 +46,9 @@ const getActiveQueryKey = (evaluatedQuery: EvaluatedQuery): string | undefined =
 };
 
 /**
- * ContainerQuery allows for conditional rendering based on the component's height or width.
- * Rather than rendering children, pass a `renderWithQuery`
+ * ContainerQuery allows for conditional rendering based on the component's height or width. Provide
+ * a `renderAt` prop function to render your responsive content based on the given size. For performance
+ * this function will only be called when the size changes.
  */
 export default class ContainerQuery extends React.Component<ContainerQueryProps> {
   public render() {
