@@ -48,6 +48,13 @@ describe('<MenuButton />', () => {
       expect(onRenderIcon()).toMatchSnapshot();
     });
 
+    it('passes a menu icon method to fabric that returns null to replace the chevron down icon', () => {
+      const onRenderMenuIcon = component
+        .find('CustomizedIconButton')
+        .prop('onRenderMenuIcon') as () => JSX.Element;
+      expect(onRenderMenuIcon()).toMatchSnapshot();
+    });
+
     it('passes contextualMenuItemAs method to fabric that returns a MenuButtonItem', () => {
       const menuProps = component
         .find('CustomizedIconButton')

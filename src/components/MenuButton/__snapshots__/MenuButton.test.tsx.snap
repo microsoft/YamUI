@@ -143,6 +143,8 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
 />
 `;
 
+exports[`<MenuButton /> with default options passes a menu icon method to fabric that returns null to replace the chevron down icon 1`] = `null`;
+
 exports[`<MenuButton /> with default options passes an icon method to fabric that defaults to the More icon with size large 1`] = `
 <More
   block={true}
