@@ -46,6 +46,7 @@ const enums = require('./enums.ts');
       text: 'Link!',
       icon: Share,
       href: 'http://bing.com',
+      target: '_blank',
       onClick: () => action('clicked link'),
     }]}
   />
@@ -137,6 +138,35 @@ const enums = require('./enums.ts');
       key: 'view',
       text: 'View',
       icon: View,
+    }]}
+  />
+</div>
+```
+
+MenuButton with iconSize specified
+
+```js { "props": { "data-description": "multiple headers" } }
+const Reply = require('../Icon/icons/Reply').default;
+const Edit = require('../Icon/icons/Edit').default;
+const Share = require('../Icon/icons/Share').default;
+const { IconSize } = require('../Icon');
+
+<div>
+  <MenuButton
+    ariaLabel="aria"
+    iconSize={IconSize.XSMALL}
+    menuItems={[{
+      key: 'edit',
+      icon: Edit,
+      text: 'Edit',
+    }, {
+      key: 'reply',
+      text: 'Reply',
+      icon: Reply,
+    }, {
+      key: 'share',
+      text: 'Share',
+      icon: Share,
     }]}
   />
 </div>

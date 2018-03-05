@@ -57,6 +57,11 @@ export interface MenuButtonItem {
   href?: string;
 
   /**
+   * Target that gets added to the anchor tag for a link. This will do nothing if href isn't passed.
+   */
+  target?: string;
+
+  /**
    * YamUI Icon to display in the item content. Default is no icon.
    */
   icon?: typeof BaseIcon;
@@ -77,6 +82,11 @@ export interface MenuButtonProps extends BaseComponentProps {
    * YamUI Icon to display as the click target. Default is the 'More' icon.
    */
   icon?: typeof BaseIcon;
+
+  /**
+   * Size of the icon. Defaults to large.
+   */
+  iconSize?: IconSize;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps, {}> {
@@ -94,10 +104,10 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
 
   @autobind
   private getIcon() {
-    const { icon } = this.props;
+    const { icon, iconSize = IconSize.LARGE } = this.props;
     const Icon = icon || MoreIcon;
 
-    return <Icon size={IconSize.LARGE} block={true} />;
+    return <Icon size={iconSize} block={true} />;
   }
 
   @autobind
@@ -109,6 +119,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
+      target: item.target,
       data: {
         yamUIIcon: item.icon,
       },

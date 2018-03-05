@@ -6,6 +6,7 @@ import {
   IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButton, { MenuButtonProps, MenuButtonItem, MenuItemType } from '.';
+import { IconSize } from '../Icon';
 const Reply = require('../Icon/icons/Reply').default;
 
 describe('<MenuButton />', () => {
@@ -80,7 +81,7 @@ describe('<MenuButton />', () => {
         );
       });
 
-      it('passes an icon method to fabric that returns an Icon with a default size of SMALL', () => {
+      it('passes an icon method to fabric that returns an Icon with a default size of LARGE', () => {
         const onRenderIcon = component
           .find('CustomizedIconButton')
           .prop('onRenderIcon') as () => JSX.Element;
@@ -91,7 +92,12 @@ describe('<MenuButton />', () => {
     describe('with iconSize', () => {
       beforeEach(() => {
         component = shallow(
-          <MenuButton ariaLabel={ariaLabel} menuItems={menuItems} icon={Reply} />,
+          <MenuButton
+            ariaLabel={ariaLabel}
+            menuItems={menuItems}
+            icon={Reply}
+            iconSize={IconSize.XSMALL}
+          />,
         );
       });
 

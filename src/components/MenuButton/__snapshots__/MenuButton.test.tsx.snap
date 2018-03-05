@@ -3,11 +3,11 @@
 exports[`<MenuButton /> when an icon is passed with iconSize passes an icon method to fabric that returns an Icon with the passed size 1`] = `
 <Reply
   block={true}
-  size="20"
+  size="12"
 />
 `;
 
-exports[`<MenuButton /> when an icon is passed without iconSize passes an icon method to fabric that returns an Icon with a default size of SMALL 1`] = `
+exports[`<MenuButton /> when an icon is passed without iconSize passes an icon method to fabric that returns an Icon with a default size of LARGE 1`] = `
 <Reply
   block={true}
   size="20"
@@ -35,6 +35,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
           "key": "test1",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
         Object {
           "data": Object {
@@ -46,6 +47,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
           "key": "test2",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
       ],
     }
@@ -76,6 +78,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
           "key": "test1",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
         Object {
           "data": Object {
@@ -87,6 +90,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
           "key": "test2",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
       ],
     }
@@ -117,6 +121,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
           "key": "test1",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
         Object {
           "data": Object {
@@ -128,6 +133,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
           "key": "test2",
           "name": "test",
           "onClick": undefined,
+          "target": undefined,
         },
       ],
     }
