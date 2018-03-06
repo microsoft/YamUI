@@ -57,9 +57,9 @@ export interface MenuButtonItem {
   href?: string;
 
   /**
-   * Target that gets added to the anchor tag for a link. This will do nothing if href isn't passed.
+   * Whether the link should open in a new window. This will do nothing if href isn't passed.
    */
-  target?: string;
+  newWindow?: boolean;
 
   /**
    * YamUI Icon to display in the item content. Default is no icon.
@@ -119,7 +119,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
-      target: item.target,
+      target: item.newWindow ? '_blank' : undefined,
       data: {
         yamUIIcon: item.icon,
       },

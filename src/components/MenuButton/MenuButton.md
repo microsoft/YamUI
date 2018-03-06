@@ -46,7 +46,7 @@ const enums = require('./enums.ts');
       text: 'Link!',
       icon: Share,
       href: 'http://bing.com',
-      target: '_blank',
+      newWindow: true,
       onClick: () => action('clicked link'),
     }]}
   />
