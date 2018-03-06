@@ -145,7 +145,7 @@ const enums = require('./enums.ts');
 
 MenuButton with iconSize specified
 
-```js { "props": { "data-description": "multiple headers" } }
+```js { "props": { "data-description": "custom icon size" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
