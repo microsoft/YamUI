@@ -22,7 +22,20 @@
   padding-right: .4rem;
 }
 
+.y-text-field .ms-TextField-field {
+  flex: 1;
+  min-width: 30%;
+}
+
 .y-text-field .ms-TextField-prefix,
 .y-text-field .ms-TextField-suffix {
   padding: 0 .8rem;
+  overflow: hidden;
+}
+
+.y-text-field .ms-TextField-prefix span,
+.y-text-field .ms-TextField-suffix span {
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
