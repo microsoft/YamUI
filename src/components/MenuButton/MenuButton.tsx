@@ -103,15 +103,15 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
         menuProps={this.getMenuProps()}
         onRenderIcon={this.getIcon}
         onRenderMenuIcon={renderEmptyIcon}
-        className={join(['y-menu-button', this.getButtonClassNames(), this.props.className])}
+        className={this.getButtonClassNames()}
       />
     );
   }
 
   @autobind
   private getButtonClassNames() {
-    const { iconSize } = this.props;
-    return join(['y-menu-button', `y-menu-button--${iconSize}`]);
+    const { iconSize, className } = this.props;
+    return join(['y-menu-button', `y-menu-button--${iconSize}`, className]);
   }
 
   @autobind

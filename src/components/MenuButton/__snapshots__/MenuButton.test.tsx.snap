@@ -17,7 +17,7 @@ exports[`<MenuButton /> when an icon is passed without iconSize passes an icon m
 exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 <CustomizedIconButton
   ariaLabel="testAria"
-  className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
+  className="y-menu-button y-menu-button--20 TEST-ADDITIONAL-CLASSNAME"
   menuProps={
     Object {
       "calloutProps": Object {
@@ -60,7 +60,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 exports[`<MenuButton /> with all props matches its snapshot 1`] = `
 <CustomizedIconButton
   ariaLabel="testAria"
-  className="y-menu-button TEST-ADDITIONAL-CLASSNAME"
+  className="y-menu-button y-menu-button--20 TEST-ADDITIONAL-CLASSNAME"
   menuProps={
     Object {
       "calloutProps": Object {
@@ -103,7 +103,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
 exports[`<MenuButton /> with default options matches its snapshot 1`] = `
 <CustomizedIconButton
   ariaLabel="testAria"
-  className="y-menu-button"
+  className="y-menu-button y-menu-button--20"
   menuProps={
     Object {
       "calloutProps": Object {
@@ -152,8 +152,4 @@ exports[`<MenuButton /> with default options passes an icon method to fabric tha
 />
 `;
 
-exports[`<MenuButton /> with default options passes contextualMenuItemAs method to fabric that returns a MenuButtonItem 1`] = `
-<MenuButtonItem
-  className="y-menu-button"
-/>
-`;
+exports[`<MenuButton /> with default options passes contextualMenuItemAs method to fabric that returns a MenuButtonItem 1`] = `<MenuButtonItem />`;
