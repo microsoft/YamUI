@@ -26,6 +26,18 @@ describe('<MenuButton />', () => {
         text: 'test',
         type: MenuItemType.Header,
       },
+      {
+        key: 'test3',
+        text: 'test',
+        href: 'http://bing.com',
+        newWindow: true,
+      },
+      {
+        key: 'test4',
+        text: 'test',
+        href: 'http://bing.com',
+        newWindow: false,
+      },
     ];
   });
 

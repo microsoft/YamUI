@@ -49,6 +49,30 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
           "onClick": undefined,
           "target": undefined,
         },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test3",
+          "name": "test",
+          "onClick": undefined,
+          "target": "_blank",
+        },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test4",
+          "name": "test",
+          "onClick": undefined,
+          "target": undefined,
+        },
       ],
     }
   }
@@ -92,6 +116,30 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
           "onClick": undefined,
           "target": undefined,
         },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test3",
+          "name": "test",
+          "onClick": undefined,
+          "target": "_blank",
+        },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test4",
+          "name": "test",
+          "onClick": undefined,
+          "target": undefined,
+        },
       ],
     }
   }
@@ -131,6 +179,30 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
           "href": undefined,
           "itemType": 2,
           "key": "test2",
+          "name": "test",
+          "onClick": undefined,
+          "target": undefined,
+        },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test3",
+          "name": "test",
+          "onClick": undefined,
+          "target": "_blank",
+        },
+        Object {
+          "data": Object {
+            "yamUIIcon": undefined,
+          },
+          "disabled": undefined,
+          "href": "http://bing.com",
+          "itemType": undefined,
+          "key": "test4",
           "name": "test",
           "onClick": undefined,
           "target": undefined,
