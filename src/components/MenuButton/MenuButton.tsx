@@ -80,16 +80,22 @@ export interface MenuButtonProps extends BaseComponentProps {
 
   /**
    * YamUI Icon to display as the click target. Default is the 'More' icon.
+   * @default MoreIcon
    */
   icon?: typeof BaseIcon;
 
   /**
-   * Size of the icon. Defaults to large.
+   * Size of the icon
+   * @default IconSize.LARGE
    */
   iconSize?: IconSize;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps, {}> {
+  static defaultProps: Partial<MenuButtonProps> = {
+    iconSize: IconSize.LARGE,
+  };
+
   public render() {
     return (
       <IconButton
@@ -97,14 +103,20 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
         menuProps={this.getMenuProps()}
         onRenderIcon={this.getIcon}
         onRenderMenuIcon={renderEmptyIcon}
-        className={join(['y-menu-button', this.props.className])}
+        className={join(['y-menu-button', this.getButtonClassNames(), this.props.className])}
       />
     );
   }
 
   @autobind
+  private getButtonClassNames() {
+    const { iconSize } = this.props;
+    return join(['y-menu-button', `y-menu-button--${iconSize}`]);
+  }
+
+  @autobind
   private getIcon() {
-    const { icon, iconSize = IconSize.LARGE } = this.props;
+    const { icon, iconSize } = this.props;
     const Icon = icon || MoreIcon;
 
     return <Icon size={iconSize} block={true} />;
@@ -135,6 +147,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
   }
 
   private getMenuItemContent(props: IContextualMenuItemProps) {
-    return <MenuButtonItem {...props} className="y-menu-button" />;
+    return <MenuButtonItem {...props} />;
   }
 }
