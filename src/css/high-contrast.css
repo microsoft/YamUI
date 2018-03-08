@@ -8,6 +8,19 @@
     border: 1px solid WindowText !important;
   }
 
+  .y-hc-border-top {
+    border-top: 1px solid WindowText !important;
+  }
+
+  .y-hc-border-bottom {
+    border-bottom: 1px solid WindowText !important;
+  }
+
+  .y-hc-border-right-left {
+    border-right: 1px solid WindowText !important;
+    border-left: 1px solid WindowText !important;
+  }
+
   /**
     * EDGE adds background color to text nodes by default, and
     * this causes adjacent block elements to clip one another.
