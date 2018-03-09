@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M48,0v48H0V0H48 M49-1h-1H0h-1v1v48v1h1h48h1v-1V0V-1L49-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M45,3v42H3V3H45 M48,0H0v48h48V0L48,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<g>
+		<polygon fill="#FFFFFF" points="39,44 9,44 9,4 30,4 39,13 		"/>
+		<path fill="#949494" d="M30.0005,3H8v42h32V13L30.0005,3z M30,4.5l8.5,8.5H30V4.5z M39,44H9V4h20v10h10V44z"/>
+	</g>
+	<g>
+		<path fill="#0078D7" d="M20.5205,7l-0.7598,8.9459c-0.0395,0.4177-0.0592,0.6928-0.0592,0.8249
+			c0,0.2115,0.0369,0.3728,0.1107,0.4837c0.0934,0.1534,0.2202,0.2671,0.3801,0.3412c0.1597,0.0741,0.4289,0.1109,0.8077,0.1109
+			L20.9189,18h-3.9395l0.0813-0.2935h0.1696c0.3196,0,0.5802-0.0739,0.7821-0.222c0.1425-0.1004,0.2531-0.2669,0.332-0.4996
+			c0.0539-0.1638,0.1056-0.5499,0.1548-1.158l0.118-1.3641h-2.8622l-1.018,1.4831c-0.2312,0.3331-0.3763,0.5725-0.4353,0.7178
+			c-0.059,0.1455-0.0886,0.2816-0.0886,0.4084c0,0.1693,0.0638,0.3146,0.1919,0.4362c0.1277,0.1218,0.3393,0.1878,0.6343,0.1983
+			L14.9582,18H12l0.0811-0.2935c0.3642-0.0159,0.6849-0.1467,0.9627-0.3925c0.2779-0.246,0.6922-0.7705,1.243-1.5742L20.2623,7
+			H20.5205z M19.0599,9.6411l-2.8993,4.2429h2.5156L19.0599,9.6411z"/>
+	</g>
+	<rect x="12" y="20" fill="#0078D7" width="24" height="1"/>
+	<rect x="12" y="23" fill="#C8C8C8" width="12" height="1"/>
+	<rect x="12" y="26" fill="#C8C8C8" width="12" height="1"/>
+	<rect x="12" y="29" fill="#C8C8C8" width="12" height="1"/>
+	<rect x="12" y="32" fill="#C8C8C8" width="24" height="1"/>
+	<rect x="12" y="35" fill="#C8C8C8" width="24" height="1"/>
+	<rect x="12" y="38" fill="#C8C8C8" width="24" height="1"/>
+	<rect x="23" y="17" fill="#69AFE5" width="13" height="1"/>
+	<rect x="23" y="14" fill="#69AFE5" width="3" height="1"/>
+	<rect x="26" y="23" fill="#69AFE5" width="10" height="7"/>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4.5867" y1="5.8641" x2="38.4893" y2="46.2676">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+		<stop  offset="0.2264" style="stop-color:#FCFCFC;stop-opacity:0.0226"/>
+		<stop  offset="0.3626" style="stop-color:#F4F4F4;stop-opacity:0.0363"/>
+		<stop  offset="0.475" style="stop-color:#E6E6E6;stop-opacity:0.0475"/>
+		<stop  offset="0.5744" style="stop-color:#D1D1D1;stop-opacity:0.0574"/>
+		<stop  offset="0.6652" style="stop-color:#B7B7B7;stop-opacity:0.0665"/>
+		<stop  offset="0.7498" style="stop-color:#979797;stop-opacity:0.075"/>
+		<stop  offset="0.8297" style="stop-color:#707070;stop-opacity:0.083"/>
+		<stop  offset="0.9057" style="stop-color:#444444;stop-opacity:0.0906"/>
+		<stop  offset="0.9761" style="stop-color:#121212;stop-opacity:0.0976"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0.1"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M40,13L30,3H8v42h32V13z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="34" y1="16.9063" x2="34" y2="14.0875">
+		<stop  offset="0" style="stop-color:#828282;stop-opacity:0"/>
+		<stop  offset="0.2812" style="stop-color:#7F7F7F;stop-opacity:0.0281"/>
+		<stop  offset="0.4503" style="stop-color:#777777;stop-opacity:0.045"/>
+		<stop  offset="0.5899" style="stop-color:#696969;stop-opacity:0.059"/>
+		<stop  offset="0.7133" style="stop-color:#545454;stop-opacity:0.0713"/>
+		<stop  offset="0.8259" style="stop-color:#3A3A3A;stop-opacity:0.0826"/>
+		<stop  offset="0.9294" style="stop-color:#1A1A1A;stop-opacity:0.0929"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0.1"/>
+	</linearGradient>
+	<rect x="29" y="14" fill="url(#SVGID_2_)" width="10" height="3"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="28.92" y1="19.08" x2="37.48" y2="10.52">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+		<stop  offset="0.8537" style="stop-color:#FFFFFF;stop-opacity:0.2134"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0.25"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_3_)" points="8,3 8,4 29,4 29,14 39,14 39,45 40,45 40,13 30,3 	"/>
+</g>
+</svg>
