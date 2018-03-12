@@ -4,12 +4,10 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
 <div
   className="y-avatar y-avatar__size-medium"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={12}
   />
@@ -23,12 +21,10 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
 <div
   className="y-avatar y-avatar__size-medium"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={12}
   />
@@ -42,12 +38,10 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-medium TEST_CLASSNAME"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={12}
   />
@@ -61,12 +55,10 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-xSmall"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={10}
   />
@@ -87,12 +79,10 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-medium"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={12}
   />
@@ -106,12 +96,10 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-xLarge"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={14}
   />
@@ -125,12 +113,10 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-medium y-avatar__borderType-soft"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    presence={0}
     primaryText="NAME"
     size={12}
   />
@@ -144,11 +130,9 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
 <div
   className="y-avatar y-avatar__size-medium"
 >
-  <Persona
+  <StyledPersonaBase
     hidePersonaDetails={true}
-    imageAlt=""
     imageShouldFadeIn={false}
-    presence={0}
     primaryText="First Last"
     size={12}
   />
