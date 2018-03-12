@@ -6,6 +6,7 @@ import {
   IContextualMenuItemProps,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButton, { MenuButtonProps, MenuButtonItem, MenuItemType } from '.';
+import { IconSize } from '../Icon';
 const Reply = require('../Icon/icons/Reply').default;
 
 describe('<MenuButton />', () => {
@@ -24,6 +25,18 @@ describe('<MenuButton />', () => {
         key: 'test2',
         text: 'test',
         type: MenuItemType.Header,
+      },
+      {
+        key: 'test3',
+        text: 'test',
+        href: 'http://bing.com',
+        newWindow: true,
+      },
+      {
+        key: 'test4',
+        text: 'test',
+        href: 'http://bing.com',
+        newWindow: false,
       },
     ];
   });
@@ -45,6 +58,13 @@ describe('<MenuButton />', () => {
         .find('CustomizedIconButton')
         .prop('onRenderIcon') as () => JSX.Element;
       expect(onRenderIcon()).toMatchSnapshot();
+    });
+
+    it('passes a menu icon method to fabric that returns null to replace the chevron down icon', () => {
+      const onRenderMenuIcon = component
+        .find('CustomizedIconButton')
+        .prop('onRenderMenuIcon') as () => JSX.Element;
+      expect(onRenderMenuIcon()).toMatchSnapshot();
     });
 
     it('passes contextualMenuItemAs method to fabric that returns a MenuButtonItem', () => {
@@ -80,7 +100,7 @@ describe('<MenuButton />', () => {
         );
       });
 
-      it('passes an icon method to fabric that returns an Icon with a default size of SMALL', () => {
+      it('passes an icon method to fabric that returns an Icon with a default size of LARGE', () => {
         const onRenderIcon = component
           .find('CustomizedIconButton')
           .prop('onRenderIcon') as () => JSX.Element;
@@ -91,7 +111,12 @@ describe('<MenuButton />', () => {
     describe('with iconSize', () => {
       beforeEach(() => {
         component = shallow(
-          <MenuButton ariaLabel={ariaLabel} menuItems={menuItems} icon={Reply} />,
+          <MenuButton
+            ariaLabel={ariaLabel}
+            menuItems={menuItems}
+            icon={Reply}
+            iconSize={IconSize.XSMALL}
+          />,
         );
       });
 

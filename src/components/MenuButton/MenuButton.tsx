@@ -57,6 +57,11 @@ export interface MenuButtonItem {
   href?: string;
 
   /**
+   * Whether the link should open in a new window. This will do nothing if href isn't passed.
+   */
+  newWindow?: boolean;
+
+  /**
    * YamUI Icon to display in the item content. Default is no icon.
    */
   icon?: typeof BaseIcon;
@@ -75,11 +80,22 @@ export interface MenuButtonProps extends BaseComponentProps {
 
   /**
    * YamUI Icon to display as the click target. Default is the 'More' icon.
+   * @default MoreIcon
    */
   icon?: typeof BaseIcon;
+
+  /**
+   * Size of the icon
+   * @default IconSize.LARGE
+   */
+  iconSize?: IconSize;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps, {}> {
+  static defaultProps: Partial<MenuButtonProps> = {
+    iconSize: IconSize.LARGE,
+  };
+
   public render() {
     return (
       <IconButton
@@ -87,17 +103,23 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
         menuProps={this.getMenuProps()}
         onRenderIcon={this.getIcon}
         onRenderMenuIcon={renderEmptyIcon}
-        className={join(['y-menu-button', this.props.className])}
+        className={this.getButtonClassNames()}
       />
     );
   }
 
   @autobind
+  private getButtonClassNames() {
+    const { iconSize, className } = this.props;
+    return join(['y-menu-button', `y-menu-button--${iconSize}`, className]);
+  }
+
+  @autobind
   private getIcon() {
-    const { icon } = this.props;
+    const { icon, iconSize } = this.props;
     const Icon = icon || MoreIcon;
 
-    return <Icon size={IconSize.LARGE} block={true} />;
+    return <Icon size={iconSize} block={true} />;
   }
 
   @autobind
@@ -109,6 +131,7 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
       onClick: item.onClick,
       disabled: item.isDisabled,
       href: item.href,
+      target: item.newWindow ? '_blank' : undefined,
       data: {
         yamUIIcon: item.icon,
       },
@@ -124,6 +147,6 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
   }
 
   private getMenuItemContent(props: IContextualMenuItemProps) {
-    return <MenuButtonItem {...props} className="y-menu-button" />;
+    return <MenuButtonItem {...props} />;
   }
 }
