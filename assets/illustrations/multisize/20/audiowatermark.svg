@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M20,0v20H0V0H20 M21-1h-1H0h-1v1v20v1h1h20h1v-1V0V-1L21-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M19,1v18H1V1H19 M20,0H0v20h20V0L20,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<path fill="#949494" d="M19,1L7,3v11.7539C6.3647,14.29,5.4805,14,4.5,14C2.5669,14,1,15.1191,1,16.5S2.5669,19,4.5,19
+		S8,17.8809,8,16.5C8,15.9346,8,4,8,4l10-1.7l0.002,10.4554C17.3662,12.2905,16.4819,12,15.5,12c-1.9331,0-3.5,1.1191-3.5,2.5
+		s1.5669,2.5,3.5,2.5s3.5-1.1191,3.5-2.5C19,13.9336,19,1,19,1z M4.5,18C3.0269,18,2,17.2095,2,16.5S3.0269,15,4.5,15
+		S7,15.7905,7,16.5S5.9731,18,4.5,18z M15.5,16c-1.4731,0-2.5-0.7905-2.5-1.5s1.0269-1.5,2.5-1.5s2.5,0.7905,2.5,1.5
+		S16.9731,16,15.5,16z"/>
+</g>
+</svg>

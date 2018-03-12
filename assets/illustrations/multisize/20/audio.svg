@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M20,0v20H0V0H20 M21-1h-1H0h-1v1v20v1h1h20h1v-1V0V-1L21-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M19,1v18H1V1H19 M20,0H0v20h20V0L20,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<g>
+		<polygon fill="#FFFFFF" points="16,18 4,18 4,2 14,2 16,4 		"/>
+		<path fill="#949494" d="M14,1H3v18h14V4L14,1z M14,2.5L15.5,4H14V2.5z M16,18H4V2h9v3h3V18z"/>
+	</g>
+	<path fill="#69AFE5" d="M13.7739,8.4448C13.1978,7.0171,11.5684,6.7485,11,6V5.5C11,5.2236,10.7764,5,10.5,5S10,5.2236,10,5.5
+		v6.8135c-0.5107-0.2744-1.1675-0.3848-1.8501-0.2661c-1.3667,0.2383-2.3184,1.3057-2.125,2.3838s1.458,1.7593,2.8252,1.5215
+		c1.2256-0.2134,2.1182-1.0947,2.1499-2.0518V8c0,0,1.1948,0.019,1.8628,0.8379c1.3022,1.5977-0.2397,2.9243-0.2397,3.0015
+		c0,0-0.0625,0.0952,0.0479,0.1431c0.1196,0.0518,0.2051-0.0273,0.2051-0.0273C14.4277,10.5322,13.9902,8.9814,13.7739,8.4448z"/>
+</g>
+</svg>

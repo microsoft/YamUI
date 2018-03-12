@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<g id="TEMPLATE" display="none">
+	<g display="inline">
+		<path fill="#D0D0D0" d="M40,0v40H0V0H40 M41-1h-1H0h-1v1v40v1h1h40h1v-1V0V-1L41-1z"/>
+	</g>
+	<g display="inline" opacity="0.1">
+		<path fill="#FF3A6D" d="M38,2v36H2V2H38 M40,0H0v40h40V0L40,0z"/>
+	</g>
+</g>
+<g id="ICONS">
+	<path fill="#949494" d="M16,7v23.5127C14.7056,29.0127,12.2822,28,9.5,28C5.3579,28,2,30.2388,2,33s3.3579,5,7.5,5
+		s7.5-2.2388,7.5-5V8l20-4.6v22.1127C35.7056,24.0127,33.2822,23,30.5,23c-4.1421,0-7.5,2.2388-7.5,5s3.3579,5,7.5,5
+		s7.5-2.2388,7.5-5V2L16,7z M9.5,37C5.9766,37,3,35.1685,3,33s2.9766-4,6.5-4s6.5,1.8315,6.5,4S13.0234,37,9.5,37z M30.5,32
+		c-3.5234,0-6.5-1.8315-6.5-4s2.9766-4,6.5-4s6.5,1.8315,6.5,4S34.0234,32,30.5,32z"/>
+</g>
+</svg>
