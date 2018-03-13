@@ -6,6 +6,7 @@
   display: none;
 }
 .y-progress-indicator .ms-ProgressIndicator-itemProgress {
+  height: 4px;
   padding: 0;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .y-progress-indicator .ms-ProgressIndicator-progressTrack {
-  background-color: $borderColor;  
+  background-color: $borderColor;
 }
 
 .y-progress-indicator .ms-ProgressIndicator-progressBar {
