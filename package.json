@@ -35,11 +35,13 @@
     "generator-component": "./config/yo/generator-component",
     "glob": "7.1.2",
     "htmltojsx": "0.3.0",
+    "husky": "0.14.3",
     "identity-obj-proxy": "3.0.0",
     "intersection-observer": "0.5.0",
     "jest": "22.0.4",
     "jest-serializer-enzyme": "1.0.0",
     "jsdom": "11.5.1",
+    "lint-staged": "7.0.0",
     "lodash": "4.17.4",
     "markdownlint-cli": "0.3.1",
     "npm-run-all": "4.0.2",
@@ -66,7 +68,7 @@
     "ts-loader": "3.1.0",
     "tslint": "5.9.1",
     "tslint-microsoft-contrib": "5.0.3",
-    "tslint-react": "=3.5.1",
+    "tslint-react": "3.5.1",
     "typescript": "2.7.2",
     "webpack": "3.8.1",
     "yo": "2.0.0"
@@ -111,6 +113,10 @@
     "docs:build": "styleguidist build --config config/styleguide/config.js",
     "docs": "run-s clean:docs docs:*",
     "create:component": "yo component",
+    "precommit": "lint-staged",
     "prepublishOnly": "npm run build"
+  },
+  "lint-staged": {
+    "*.{css,js,jsx,ts,tsx,json,md}": ["prettier --write", "git add -f"]
   }
 }
