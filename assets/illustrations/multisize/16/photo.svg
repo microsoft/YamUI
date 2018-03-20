@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-<g id="TEMPLATE" display="none">
-	<g display="inline">
-		<path fill="#D0D0D0" d="M16,0v16H0V0H16 M17-1h-1H0h-1v1v16v1h1h16h1v-1V0V-1L17-1z"/>
-	</g>
-</g>
-<g id="ICONS">
-	<rect x="1" y="3" fill="#FFFFFF" width="14" height="10"/>
-	<polygon fill="#7DBAB2" points="15,12.707 15,11.293 11,7.293 8.4961,9.7891 4,5.293 1,8.293 1,9.707 4,6.707 10.293,13 11.707,13 
-		9.2036,10.4966 11,8.707 	"/>
-	<rect x="12" y="5" fill="#F5BA9D" width="1" height="1"/>
-	<path fill="#949494" d="M0,2v12h16V2H0z M15,13H1V3h14V13z"/>
-</g>
-</svg>
+<svg id="56d6777e-ceeb-4d41-a328-791649f7bad8" data-name="ICONS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>FileTypeIcons_Master_All_NEW</title><rect x="1" y="3" width="14" height="10" fill="#fff"/><polygon points="15 12.707 15 11.293 11 7.293 8.496 9.789 4 5.293 1 8.293 1 9.707 4 6.707 10.293 13 11.707 13 9.204 10.497 11 8.707 15 12.707" fill="#7dbab2"/><rect x="12" y="5" width="1" height="1" fill="#f5ba9d"/><path d="M0,2V14H16V2ZM15,13H1V3H15Z" fill="#949494"/></svg>
