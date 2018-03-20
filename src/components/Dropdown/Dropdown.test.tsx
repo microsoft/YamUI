@@ -57,7 +57,7 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
       });
     });
 
@@ -69,7 +69,7 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
       });
     });
   });
@@ -94,7 +94,7 @@ describe('<Dropdown />', () => {
     });
 
     it('matches its snapshot', () => {
-      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
     });
   });
 
@@ -104,7 +104,7 @@ describe('<Dropdown />', () => {
     });
 
     it('displays our custom caret icon', () => {
-      expect(fullComponent.find('.y-dropdown__caretDown').length).toBe(1);
+      expect(fullComponent.find('.y-dropdown__caretDown').hostNodes().length).toBe(1);
     });
   });
 
@@ -127,6 +127,27 @@ describe('<Dropdown />', () => {
 
       it('triggers the onChanged callback with key', () => {
         expect(callback).toHaveBeenCalledWith(options[1].key);
+      });
+    });
+  });
+
+  describe('without onChanged handler', () => {
+    const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
+
+    beforeEach(() => {
+      component = shallow(<Dropdown options={options} />);
+    });
+
+    describe('when an option is selected', () => {
+      let fabricDropdown: ShallowWrapper<IDropdownProps>;
+
+      beforeEach(() => {
+        fabricDropdown = component.find(FabricDropdown);
+        fabricDropdown.simulate('changed', options[1]);
+      });
+
+      it('does not blow up', () => {
+        expect(component.update()).toMatchSnapshot();
       });
     });
   });

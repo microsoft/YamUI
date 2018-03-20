@@ -105,4 +105,38 @@ describe('<VisibilityObserver />', () => {
       });
     });
   });
+
+  describe('without callbacks', () => {
+    beforeEach(() => {
+      component = shallow(<VisibilityObserver renderInView={renderInView} renderOutOfView={renderOutOfView} />);
+      callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+      renderProp = component.find(Observer).prop('render') as RenderProp;
+    });
+
+    describe('when out of view', () => {
+      it('renders without blowing up', () => {
+        expect(renderProp(false)).toMatchSnapshot();
+      });
+
+      describe('and scrolled into view', () => {
+        beforeEach(() => {
+          callbackProp(true);
+        });
+
+        it('renders without blowing up', () => {
+          expect(renderProp(true)).toMatchSnapshot();
+        });
+
+        describe('and scrolled out of view', () => {
+          beforeEach(() => {
+            callbackProp(false);
+          });
+
+          it('persists its in-view content without blowing up', () => {
+            expect(renderProp(false)).toMatchSnapshot();
+          });
+        });
+      });
+    });
+  });
 });

@@ -78,7 +78,7 @@ describe('<Icon />', () => {
       });
 
       it('has a 240x240 viewbox', () => {
-        expect(component.getNode().props.viewBox).toBe('0 0 240 240');
+        expect(component.getElement().props.viewBox).toBe('0 0 240 240');
       });
     });
   });

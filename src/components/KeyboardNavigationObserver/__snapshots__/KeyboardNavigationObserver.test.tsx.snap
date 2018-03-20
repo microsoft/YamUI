@@ -50,4 +50,4 @@ exports[`<KeyboardNavigationObserver /> in mouse mode with all options matches i
 </span>
 `;
 
-exports[`<KeyboardNavigationObserver /> in mouse mode with minimal options matches its snapshot 1`] = `null`;
+exports[`<KeyboardNavigationObserver /> in mouse mode with minimal options matches its snapshot 1`] = `""`;

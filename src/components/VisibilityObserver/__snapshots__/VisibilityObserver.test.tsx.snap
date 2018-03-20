@@ -40,3 +40,21 @@ exports[`<VisibilityObserver /> with render, callback, rootMargin and tag option
   triggerOnce={false}
 />
 `;
+
+exports[`<VisibilityObserver /> without callbacks when out of view and scrolled into view and scrolled out of view persists its in-view content without blowing up 1`] = `
+<span>
+  IN VIEW
+</span>
+`;
+
+exports[`<VisibilityObserver /> without callbacks when out of view and scrolled into view renders without blowing up 1`] = `
+<span>
+  IN VIEW
+</span>
+`;
+
+exports[`<VisibilityObserver /> without callbacks when out of view renders without blowing up 1`] = `
+<span>
+  OUT OF VIEW
+</span>
+`;

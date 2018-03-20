@@ -11,12 +11,8 @@ describe('<Fabric />', () => {
       component = shallow(<Fabric>wrapped content</Fabric>);
     });
 
-    it('renders its given content', () => {
-      expect(component.render().text()).toEqual('wrapped content');
-    });
-
-    it('contains its base <Fabric /> component class', () => {
-      expect(component.render().find('.ms-Fabric').length).toEqual(1);
+    it('renders', () => {
+      expect(component.render()).toMatchSnapshot();
     });
   });
 });

@@ -224,4 +224,31 @@ exports[`<MenuButton /> with default options passes an icon method to fabric tha
 />
 `;
 
-exports[`<MenuButton /> with default options passes contextualMenuItemAs method to fabric that returns a MenuButtonItem 1`] = `<MenuButtonItem />`;
+exports[`<MenuButton /> with default options passes contextualMenuItemAs method to fabric that returns a MenuButtonItem 1`] = `
+<MenuButtonItem
+  classNames={
+    Object {
+      "checkmarkIcon": "checkmarkIcon",
+      "divider": "divider",
+      "icon": "icon",
+      "item": "item",
+      "label": "label",
+      "linkContent": "linkContent",
+      "linkContentMenu": "linkContentMenu",
+      "root": "root",
+      "splitContainer": "splitContainer",
+      "splitMenu": "splitMenu",
+      "splitPrimary": "splitPrimary",
+      "subMenuIcon": "subMenuIcon",
+    }
+  }
+  hasIcons={false}
+  index={0}
+  item={
+    Object {
+      "key": "test1",
+      "name": "test",
+    }
+  }
+/>
+`;

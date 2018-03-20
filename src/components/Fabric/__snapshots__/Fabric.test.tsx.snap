@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Fabric /> with default options renders 1`] = `
+<div
+  class="ms-Fabric css-32"
+>
+  wrapped content
+</div>
+`;

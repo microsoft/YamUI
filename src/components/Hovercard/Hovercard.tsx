@@ -111,6 +111,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
         <h1>{screenreaderTitle}</h1>
       </ScreenreaderText>
     );
+
     const hovercard = this.state.visible && (
       <Callout
         isBeakVisible={isBeakVisible}
@@ -223,7 +224,6 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   private show = () => {
     const { onContentDisplay } = this.props;
     const { visible } = this.state;
-
     if (visible) {
       return;
     }
@@ -232,7 +232,8 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
       onContentDisplay();
     }
 
-    this.setState({ visible: true });
+    //this.setState({ visible: true });
+    this.setState(() => ({ visible: true }));
     this.startKeyListener();
   };
 
