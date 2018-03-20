@@ -18,11 +18,8 @@ export default class SharedFolder extends BaseIllustration {
         focusable="false"
       >
         <path fill="#a6a6a6" d="M0 14V4h7l2-2h7v12H0z" />
-        <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
-        <path
-          fill="#eaeaea"
-          d="M5.44 10.383a2 2 0 1 0-2.88 0A2.987 2.987 0 0 0 1 13h1a2 2 0 0 1 4 0h1a2.987 2.987 0 0 0-1.56-2.617zM3 9a1 1 0 1 1 1 1 1.001 1.001 0 0 1-1-1z"
-        />
+  <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
+  <path fill="#eaeaea" d="M5.44 10.383a2 2 0 1 0-2.88 0A2.987 2.987 0 0 0 1 13h1a2 2 0 0 1 4 0h1a2.987 2.987 0 0 0-1.56-2.617zM3 9a1 1 0 1 1 1 1 1.001 1.001 0 0 1-1-1z" />
       </svg>
     );
   }

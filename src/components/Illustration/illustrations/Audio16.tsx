@@ -18,11 +18,8 @@ export default class Audio extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M13 15H3V1h8l2 2v12z" />
-        <path fill="#949494" d="M11 0H2v16h12V3zm0 1.5L12.5 3H11zM13 15H3V1h7v3h3z" />
-        <path
-          fill="#69afe5"
-          d="M10 6V5H9V4H8v6.208A2.497 2.497 0 0 0 7 10c-1.104 0-2 .671-2 1.5S5.896 13 7 13s2-.671 2-1.5V7h1v1h1V6z"
-        />
+  <path fill="#949494" d="M11 0H2v16h12V3zm0 1.5L12.5 3H11zM13 15H3V1h7v3h3z" />
+  <path fill="#69afe5" d="M10 6V5H9V4H8v6.208A2.497 2.497 0 0 0 7 10c-1.104 0-2 .671-2 1.5S5.896 13 7 13s2-.671 2-1.5V7h1v1h1V6z" />
       </svg>
     );
   }

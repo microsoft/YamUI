@@ -18,8 +18,8 @@ export default class Zip extends BaseIllustration {
         focusable="false"
       >
         <path fill="#a6a6a6" d="M0 14V4h7l2-2h7v12H0z" />
-        <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
-        <path fill="#eaeaea" d="M2 4h1v1H2zM2 11h1v1H2zM2 13h1v1H2zM3 5v1H2V5H1v5h3V5zm0 4H2V8h1z" />
+  <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
+  <path fill="#eaeaea" d="M2 4h1v1H2zM2 11h1v1H2zM2 13h1v1H2zM3 5v1H2V5H1v5h3V5zm0 4H2V8h1z" />
       </svg>
     );
   }

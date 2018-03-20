@@ -18,10 +18,7 @@ export default class VideoWatermark extends BaseIllustration {
         focusable="false"
       >
         <path fill="#949494" d="M2 6v20h28V6zm27 19H3V7h26z" />
-        <path
-          fill="#949494"
-          d="M12 11v10l9-5-9-5zM27 24h1v1h-1zM27 22h1v1h-1zM27 20h1v1h-1zM27 18h1v1h-1zM27 16h1v1h-1zM27 14h1v1h-1zM27 12h1v1h-1zM27 10h1v1h-1zM27 8h1v1h-1zM4 24h1v1H4zM4 22h1v1H4zM4 20h1v1H4zM4 18h1v1H4zM4 16h1v1H4zM4 14h1v1H4zM4 12h1v1H4zM4 10h1v1H4zM4 8h1v1H4z"
-        />
+  <path fill="#949494" d="M12 11v10l9-5-9-5zM27 24h1v1h-1zM27 22h1v1h-1zM27 20h1v1h-1zM27 18h1v1h-1zM27 16h1v1h-1zM27 14h1v1h-1zM27 12h1v1h-1zM27 10h1v1h-1zM27 8h1v1h-1zM4 24h1v1H4zM4 22h1v1H4zM4 20h1v1H4zM4 18h1v1H4zM4 16h1v1H4zM4 14h1v1H4zM4 12h1v1H4zM4 10h1v1H4zM4 8h1v1H4z" />
       </svg>
     );
   }

@@ -18,9 +18,9 @@ export default class Email extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M1 3h14v10H1z" />
-        <path fill="#949494" d="M0 2v12h16V2zm15 11H1V3h14z" />
-        <path fill="#c8c8c8" d="M2 4h2v1H2zM4 8h8v1H4zM4 10h8v1H4z" />
-        <path fill="#69afe5" d="M12 4h2v2h-2z" />
+  <path fill="#949494" d="M0 2v12h16V2zm15 11H1V3h14z" />
+  <path fill="#c8c8c8" d="M2 4h2v1H2zM4 8h8v1H4zM4 10h8v1H4z" />
+  <path fill="#69afe5" d="M12 4h2v2h-2z" />
       </svg>
     );
   }

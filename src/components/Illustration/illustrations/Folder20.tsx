@@ -18,7 +18,7 @@ export default class Folder extends BaseIllustration {
         focusable="false"
       >
         <path fill="#a6a6a6" d="M1 17V5h9l2-2h7v14H1z" />
-        <path fill="#666" d="M12 3l-2 2 2 2h7V3h-7z" />
+  <path fill="#666" d="M12 3l-2 2 2 2h7V3h-7z" />
       </svg>
     );
   }

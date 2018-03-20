@@ -18,7 +18,7 @@ export default class Multiple extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M14 1H5v2H3v16h12v-2h2V4l-3-3z" />
-        <path fill="#949494" d="M14 1H5v2H3v16h12v-2h2V4l-3-3zM6 16V2h7v3h3v11H6zm8-12V2.5L15.5 4zM4 18V4h1v13h9v1z" />
+  <path fill="#949494" d="M14 1H5v2H3v16h12v-2h2V4l-3-3zM6 16V2h7v3h3v11H6zm8-12V2.5L15.5 4zM4 18V4h1v13h9v1z" />
       </svg>
     );
   }

@@ -18,13 +18,10 @@ export default class Vector extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M16 18H4V2h10l2 2v14z" />
-        <path fill="#949494" d="M14 1H3v18h14V4zm0 1.5L15.5 4H14zM16 18H4V2h9v3h3z" />
-        <circle cx="7.5" cy="9.5" r="1.5" fill="#0078d7" />
-        <path
-          fill="#0078d7"
-          d="M7 15v1H6v-1h1m1-1H5v3h3v-3zM14 8v1h-1V8h1m1-1h-3v3h3V7zM15 14l-2.5.5L12 17l-2.5-5.5z"
-        />
-        <path fill="#c8c8c8" d="M6 12h1v1H6zM10 8h1v1h-1z" />
+  <path fill="#949494" d="M14 1H3v18h14V4zm0 1.5L15.5 4H14zM16 18H4V2h9v3h3z" />
+  <circle cx="7.5" cy="9.5" r="1.5" fill="#0078d7" />
+  <path fill="#0078d7" d="M7 15v1H6v-1h1m1-1H5v3h3v-3zM14 8v1h-1V8h1m1-1h-3v3h3V7zM15 14l-2.5.5L12 17l-2.5-5.5z" />
+  <path fill="#c8c8c8" d="M6 12h1v1H6zM10 8h1v1h-1z" />
       </svg>
     );
   }

@@ -18,7 +18,7 @@ export default class DocSet extends BaseIllustration {
         focusable="false"
       >
         <path fill="#c8c8c8" d="M4 1v2H2v10h1V4h1v9h1V2h12v9h1V1H4z" />
-        <path fill="#a6a6a6" d="M1 19v-6h9l2-2h7v8H1z" />
+  <path fill="#a6a6a6" d="M1 19v-6h9l2-2h7v8H1z" />
       </svg>
     );
   }

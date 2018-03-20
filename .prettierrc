@@ -9,10 +9,6 @@
       "options": { "parser": "css" }
     },
     {
-      "files": ["*.graphql"],
-      "options": { "parser": "graphql" }
-    },
-    {
       "files": ["*.json", ".*rc"],
       "options": { "parser": "json" }
     },
