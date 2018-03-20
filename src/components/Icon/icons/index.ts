@@ -48,6 +48,7 @@ export { default as FabricFolder } from './FabricFolder';
 export { default as FavoriteStar } from './FavoriteStar';
 export { default as FavoriteStarFill } from './FavoriteStarFill';
 export { default as FavoriteStartRemove } from './FavoriteStartRemove';
+export { default as Filter } from './Filter';
 export { default as Flag } from './Flag';
 export { default as Forward } from './Forward';
 export { default as ForwardAlt } from './ForwardAlt';
