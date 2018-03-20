@@ -58,7 +58,7 @@ describe('<Illustration />', () => {
       });
 
       it('has a viewbox', () => {
-        expect(component.getNode().props.viewBox).toBeDefined();
+        expect(component.getElement().props.viewBox).toBeDefined();
       });
     });
   });
