@@ -59,13 +59,20 @@ describe('<SuggestionsListItem />', () => {
   });
 
   describe('when selecting', () => {
+    let preventDefault: jest.Mock;
+
     beforeEach(() => {
       rendered = shallow(<SuggestionsListItem {...getProps()} />);
-      rendered.simulate('mouseDown');
+      preventDefault = jest.fn();
+      rendered.simulate('mouseDown', { preventDefault });
     });
 
     it('calls props.onSelect', () => {
       expect(onSelect).toBeCalled();
+    });
+
+    it('calls event preventDefault', () => {
+      expect(preventDefault).toBeCalled();
     });
   });
 });

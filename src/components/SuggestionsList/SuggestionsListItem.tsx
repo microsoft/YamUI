@@ -76,8 +76,9 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     return <Avatar {...props} />;
   }
 
-  private onMouseDown = () => {
+  private onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     const { onSelect, children, className, ...item } = this.props;
+    e.preventDefault();
     this.props.onSelect(item.id);
   };
 }
