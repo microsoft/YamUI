@@ -1,4 +1,2 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-
-<% icons.forEach((icon) => { %>export { default as <%= icon %> } from './<%= icon %>';
-<% }) %>
+export { default as BaseIllustration, IllustrationProps } from './BaseIllustration';

@@ -17,7 +17,7 @@ const { IconSize } = require('../index');
 const allIcons = require('../icons');
 const { GutterSize, TextSize } = require('../../Block');
 
-const iconsLibrary = Object.keys(allIcons).map((icon, index) => {
+const iconsLibrary = Object.keys(allIcons).map((icon) => {
   const Icon = allIcons[icon];
   return (
     <div style={{ float: 'left', width: '100px', textAlign: 'center' }} key={icon}>
