@@ -1,9 +1,10 @@
 {
   "rootDir": "../../",
   "cacheDirectory": "<rootDir>/.jest",
+  "setupTestFrameworkScriptFile": "<rootDir>/config/jest/framework.js",
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
   "modulePaths": ["src/components", "src/util"],
-  "testPathIgnorePatterns": ["<rootDir>/build", "<rootDir>/dist"],
+  "testPathIgnorePatterns": ["<rootDir>/build", "<rootDir>/dist", "<rootDir>/config", "<rootDir>/src/demos"],
   "moduleNameMapper": {
     "^.+\\.css$": "identity-obj-proxy"
   },
@@ -16,7 +17,8 @@
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/components/Icon/docs/**/*.{js,jsx,ts,tsx}",
-    "!src/components/Illustration/docs/**/*.{js,jsx,ts,tsx}"
+    "!src/components/Illustration/docs/**/*.{js,jsx,ts,tsx}",
+    "!src/demos/**/*.{js,jsx,ts,tsx}"
   ],
   "coverageDirectory": "build/jest/coverage",
   "coverageReporters": ["text", "text-summary", "html"],
