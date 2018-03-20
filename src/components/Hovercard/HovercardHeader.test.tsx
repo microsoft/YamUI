@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import HovercardHeader, { HovercardHeaderProps } from './HovercardHeader';
 
 describe('<HovercardHeader />', () => {
-  let component: ShallowWrapper<HovercardHeaderProps, {}>;
+  let component: ShallowWrapper<HovercardHeaderProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -26,9 +26,7 @@ describe('<HovercardHeader />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <HovercardHeader className="TEST_CLASSNAME">header content</HovercardHeader>,
-      );
+      component = shallow(<HovercardHeader className="TEST_CLASSNAME">header content</HovercardHeader>);
     });
 
     it('includes that className', () => {

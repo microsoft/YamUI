@@ -1,19 +1,18 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
-@import "src/css/variables/fonts.css";
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
 
 /* Label element above the Dropdown */
 .y-dropdown .ms-Dropdown-label {
   @extend text__mediumSub;
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
-  padding-bottom: .4rem;
+  padding-bottom: 0.4rem;
 }
-
 
 /* Chevron Icon */
 .y-dropdown .ms-Dropdown-caretDownWrapper {
-  top: .2rem;
+  top: 0.2rem;
   right: 1.1rem;
   height: 3.2rem;
   line-height: 3.4rem;
@@ -22,14 +21,13 @@
   color: $linkColor;
 }
 
-
 /* Dropdown options */
 .y-dropdown .ms-Dropdown-items {
-  padding-bottom: .4rem;
+  padding-bottom: 0.4rem;
 }
 
 .y-dropdown .ms-Dropdown-item {
-  padding: .4rem 1.1rem .6rem;
+  padding: 0.4rem 1.1rem 0.6rem;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,
@@ -48,7 +46,7 @@
 
 /* Section headers and dividers */
 .y-dropdown .ms-Dropdown-header {
-  padding: .7rem 1.2rem .9rem;
+  padding: 0.7rem 1.2rem 0.9rem;
   margin: 0;
 }
 .y-dropdown--header {
@@ -60,9 +58,8 @@
 }
 
 .y-dropdown--option-icon {
-  padding-top: .1rem;
+  padding-top: 0.1rem;
 }
-
 
 /* The selected option in the visible field area */
 .y-dropdown .ms-Dropdown-title {
@@ -70,7 +67,7 @@
   border-color: $borderColor;
   border-radius: 1px;
   height: 3.6rem;
-  padding: .7rem 3rem .7rem 1.1rem;
+  padding: 0.7rem 3rem 0.7rem 1.1rem;
 }
 .y-dropdown .ms-Dropdown-titleIsPlaceHolder {
   color: $textColor__metadata;
@@ -84,7 +81,6 @@
 .y-dropdown .ms-Dropdown-title .y-dropdown--ellipsed-title {
   @extend ellipsis;
 }
-
 
 /* Non-layered callout styling */
 .y-dropdown .ms-Callout-container {

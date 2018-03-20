@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import ScreenreaderText, { ScreenreaderTextProps } from '.';
 
 describe('<ScreenreaderText />', () => {
-  let component: ShallowWrapper<ScreenreaderTextProps, {}>;
+  let component: ShallowWrapper<ScreenreaderTextProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -18,9 +18,7 @@ describe('<ScreenreaderText />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <ScreenreaderText className="TEST_CLASSNAME">test content</ScreenreaderText>,
-      );
+      component = shallow(<ScreenreaderText className="TEST_CLASSNAME">test content</ScreenreaderText>);
     });
 
     it('matches its snapshot', () => {

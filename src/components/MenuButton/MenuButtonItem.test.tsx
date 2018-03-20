@@ -7,23 +7,42 @@ import {
   ContextualMenuItemType,
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButtonItem from './MenuButtonItem';
-const Reply = require('../Icon/icons/Reply').default;
+import Reply from '../Icon/icons/Reply';
 
 describe('<MenuButtonItem />', () => {
   let props: IContextualMenuItemProps;
-  let component: ShallowWrapper<IContextualMenuItemProps, {}>;
+  let component: ShallowWrapper<IContextualMenuItemProps>;
+  let baseItem: IContextualMenuItem;
 
-  beforeEach(() => {});
+  beforeEach(() => {
+    baseItem = {
+      key: 'test1',
+      name: 'test',
+    };
+
+    props = {
+      item: baseItem,
+      classNames: {
+        item: 'item',
+        divider: 'divider',
+        root: 'root',
+        linkContent: 'linkContent',
+        icon: 'icon',
+        checkmarkIcon: 'checkmarkIcon',
+        subMenuIcon: 'subMenuIcon',
+        label: 'label',
+        splitContainer: 'splitContainer',
+        splitPrimary: 'splitPrimary',
+        splitMenu: 'splitMenu',
+        linkContentMenu: 'linkContentMenu',
+      },
+      index: 0,
+      hasIcons: false,
+    };
+  });
 
   describe('with default options', () => {
     beforeEach(() => {
-      props = {
-        item: {
-          key: 'test1',
-          name: 'test',
-        } as IContextualMenuItem,
-      } as IContextualMenuItemProps;
-
       component = shallow(<MenuButtonItem {...props} />);
     });
 
@@ -35,12 +54,12 @@ describe('<MenuButtonItem />', () => {
   describe('with an href', () => {
     beforeEach(() => {
       props = {
+        ...props,
         item: {
-          key: 'test1',
-          name: 'test',
+          ...props.item,
           href: 'http://test.com',
-        } as IContextualMenuItem,
-      } as IContextualMenuItemProps;
+        },
+      };
 
       component = shallow(<MenuButtonItem {...props} />);
     });
@@ -54,12 +73,12 @@ describe('<MenuButtonItem />', () => {
     describe('without an icon', () => {
       beforeEach(() => {
         props = {
+          ...props,
           item: {
-            key: 'test1',
-            name: 'test',
+            ...props.item,
             disabled: true,
-          } as IContextualMenuItem,
-        } as IContextualMenuItemProps;
+          },
+        };
 
         component = shallow(<MenuButtonItem {...props} />);
       });
@@ -72,15 +91,15 @@ describe('<MenuButtonItem />', () => {
     describe('with an icon', () => {
       beforeEach(() => {
         props = {
+          ...props,
           item: {
-            key: 'test1',
-            name: 'test',
+            ...props.item,
             disabled: true,
             data: {
               yamUIIcon: Reply,
             },
-          } as IContextualMenuItem,
-        } as IContextualMenuItemProps;
+          },
+        };
 
         component = shallow(<MenuButtonItem {...props} />);
       });
@@ -94,14 +113,14 @@ describe('<MenuButtonItem />', () => {
   describe('with an icon passed', () => {
     beforeEach(() => {
       props = {
+        ...props,
         item: {
-          key: 'test1',
-          name: 'test',
+          ...props.item,
           data: {
             yamUIIcon: Reply,
           },
-        } as IContextualMenuItem,
-      } as IContextualMenuItemProps;
+        },
+      };
 
       component = shallow(<MenuButtonItem {...props} />);
     });
@@ -114,12 +133,12 @@ describe('<MenuButtonItem />', () => {
   describe('when it is a header type', () => {
     beforeEach(() => {
       props = {
+        ...props,
         item: {
-          key: 'test1',
-          name: 'test',
+          ...props.item,
           itemType: ContextualMenuItemType.Header,
-        } as IContextualMenuItem,
-      } as IContextualMenuItemProps;
+        },
+      };
 
       component = shallow(<MenuButtonItem {...props} />);
     });

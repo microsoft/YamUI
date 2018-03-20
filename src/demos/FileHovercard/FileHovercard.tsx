@@ -3,42 +3,27 @@ import * as React from 'react';
 import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
-import {
-  HovercardHeader,
-  HovercardBody,
-} from '../../components/Hovercard';
+import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
 import { LayoutList, LayoutListItem } from '../../components/LayoutList';
 import Image from '../../components/Image';
 import MediaObject, { MediaObjectSize } from '../../components/MediaObject';
 
 const memberImage = 'user.png';
-const memberAvatar1 = (
-  <Avatar imageUrl={memberImage} name="Annie Antelope" size={AvatarSize.XSMALL} />
-);
-const memberAvatar2 = (
-  <Avatar imageUrl={memberImage} name="Bobby Baboon" size={AvatarSize.XSMALL} />
-);
-const memberAvatar3 = (
-  <Avatar imageUrl={memberImage} name="Charles Caribou" size={AvatarSize.XSMALL} />
-);
-const memberAvatar4 = (
-  <Avatar imageUrl={memberImage} name="Daniel Dingo" size={AvatarSize.XSMALL} />
-);
-const memberAvatar5 = (
-  <Avatar imageUrl={memberImage} name="Eleanor Elephant" size={AvatarSize.XSMALL} />
-);
+const memberAvatar1 = <Avatar imageUrl={memberImage} name="Annie Antelope" size={AvatarSize.XSMALL} />;
+const memberAvatar2 = <Avatar imageUrl={memberImage} name="Bobby Baboon" size={AvatarSize.XSMALL} />;
+const memberAvatar3 = <Avatar imageUrl={memberImage} name="Charles Caribou" size={AvatarSize.XSMALL} />;
+const memberAvatar4 = <Avatar imageUrl={memberImage} name="Daniel Dingo" size={AvatarSize.XSMALL} />;
+const memberAvatar5 = <Avatar imageUrl={memberImage} name="Eleanor Elephant" size={AvatarSize.XSMALL} />;
 
 export interface FileHovercardProps {
   file: any;
 }
 
-export default class FileHovercard extends React.Component<FileHovercardProps, {}> {
-  render() {
+export default class FileHovercard extends React.Component<FileHovercardProps> {
+  public render() {
     const { file } = this.props;
 
-    const fileImage = (
-      <Image source={file.imageUrl} description={file.description} fullWidth={true} />
-    );
+    const fileImage = <Image source={file.imageUrl} description={file.description} fullWidth={true} />;
 
     return (
       <div>

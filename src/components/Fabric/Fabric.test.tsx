@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Fabric from '.';
 
 describe('<Fabric />', () => {
-  let component: ShallowWrapper<{}, {}>;
+  let component: ShallowWrapper;
 
   describe('with default options', () => {
     beforeEach(() => {

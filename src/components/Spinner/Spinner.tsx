@@ -61,14 +61,14 @@ export interface SpinnerProps extends BaseComponentProps {
  * A `Spinner` is an outline of a circle which animates around itself indicating to the user that
  * things are processing. It is shown when we're unsure how long a task will take.
  */
-export default class Spinner extends React.Component<SpinnerProps, {}> {
-  static defaultProps: Partial<SpinnerProps> = {
+export default class Spinner extends React.Component<SpinnerProps> {
+  public static defaultProps: Partial<SpinnerProps> = {
     hideText: false,
     color: SpinnerColor.LIGHT,
     size: SpinnerSize.MEDIUM,
   };
 
-  render() {
+  public render() {
     const { text, hideText } = this.props;
 
     const textComponent = hideText ? (

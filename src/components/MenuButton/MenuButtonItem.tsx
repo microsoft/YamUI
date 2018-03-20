@@ -6,10 +6,7 @@ import { IconSize } from '../Icon';
 import Block, { TextColor } from '../Block';
 import { TextSize } from '../Text';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
-import {
-  IContextualMenuItemProps,
-  ContextualMenuItemType,
-} from 'office-ui-fabric-react/lib/ContextualMenu';
+import { IContextualMenuItemProps, ContextualMenuItemType } from 'office-ui-fabric-react/lib/ContextualMenu';
 
 const getClasses = (isHeader: boolean) => {
   const classes = ['y-menu-button--item'];
@@ -29,18 +26,14 @@ const getIconClasses = (isDisabled: boolean) => {
 
 const getIconColumn = (data: any, disabled: boolean) => {
   const Icon = data && data.yamUIIcon;
-  const iconColumn = Icon ? (
+  return Icon ? (
     <FixedGridColumn fixed={true} className={getIconClasses(disabled)}>
       <Icon size={IconSize.MEDIUM} block={true} />
     </FixedGridColumn>
   ) : null;
-
-  return iconColumn;
 };
 
-const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (
-  props: IContextualMenuItemProps,
-) => {
+const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (props: IContextualMenuItemProps) => {
   const { data, name, itemType, disabled = false } = props.item;
   const isHeader = itemType === ContextualMenuItemType.Header;
 

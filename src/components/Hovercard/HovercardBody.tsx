@@ -10,8 +10,8 @@ export { HovercardBodyProps };
 /**
  * Body of a `Hovercard` component. Used to maintain a consistent layout.
  */
-export default class HovercardBody extends React.Component<HovercardBodyProps, {}> {
-  render() {
+export default class HovercardBody extends React.Component<HovercardBodyProps> {
+  public render() {
     const { className, children } = this.props;
 
     return (

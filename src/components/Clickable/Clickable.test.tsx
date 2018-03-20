@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable, { ClickableProps } from '.';
 
 describe('<Clickable />', () => {
-  let component: ShallowWrapper<ClickableProps, {}>;
+  let component: ShallowWrapper<ClickableProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -48,9 +48,7 @@ describe('<Clickable />', () => {
 
   describe('when title is passed', () => {
     beforeEach(() => {
-      component = shallow(
-        <Clickable title="extra browser tooltip content">clickable content</Clickable>,
-      );
+      component = shallow(<Clickable title="extra browser tooltip content">clickable content</Clickable>);
     });
 
     it('matches its snapshot', () => {

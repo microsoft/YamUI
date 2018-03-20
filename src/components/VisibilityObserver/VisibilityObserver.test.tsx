@@ -8,11 +8,11 @@ type CallbackProp = ((inView: boolean) => void);
 type RenderProp = ((inView: boolean) => React.ReactNode);
 
 describe('<VisibilityObserver />', () => {
-  let component: ShallowWrapper<VisibilityObserverProps, {}>;
+  let component: ShallowWrapper<VisibilityObserverProps>;
   const renderInView = () => <span>IN VIEW</span>;
   const renderOutOfView = () => <span>OUT OF VIEW</span>;
-  let onEnterCallback: jest.Mock<{}>;
-  let onLeaveCallback: jest.Mock<{}>;
+  let onEnterCallback: jest.Mock;
+  let onLeaveCallback: jest.Mock;
   let renderProp: RenderProp;
   let callbackProp: CallbackProp;
 
@@ -55,8 +55,6 @@ describe('<VisibilityObserver />', () => {
     });
 
     describe('Observer rendering', () => {
-      let renderProp: RenderProp;
-
       beforeEach(() => {
         renderProp = component.find(Observer).prop('render') as RenderProp;
       });

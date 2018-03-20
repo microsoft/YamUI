@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { LayoutList, LayoutListProps, GutterSize } from '.';
 
 describe('<LayoutList />', () => {
-  let component: ShallowWrapper<LayoutListProps, {}>;
+  let component: ShallowWrapper<LayoutListProps>;
 
   describe('as horizontal list', () => {
     describe('without props', () => {

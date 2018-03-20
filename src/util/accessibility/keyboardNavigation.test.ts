@@ -5,7 +5,7 @@ import KeyboardNavigationEventListener from './KeyboardNavigationEventListener';
 import { getMode, subscribe, unsubscribe } from './keyboardNavigation';
 
 describe('keyboardNavigation', () => {
-  let callback: jest.Mock<{}>;
+  let callback: jest.Mock;
 
   beforeEach(() => {
     callback = jest.fn();
@@ -27,9 +27,7 @@ describe('keyboardNavigation', () => {
 
   describe('subscribe()', () => {
     beforeEach(() => {
-      jest
-        .spyOn(KeyboardNavigationEventListener.prototype, 'subscribe')
-        .mockImplementation(callback => callback('new fake mode'));
+      jest.spyOn(KeyboardNavigationEventListener.prototype, 'subscribe').mockImplementation(cb => cb('new fake mode'));
       subscribe(callback);
     });
 
@@ -42,7 +40,7 @@ describe('keyboardNavigation', () => {
     beforeEach(() => {
       jest
         .spyOn(KeyboardNavigationEventListener.prototype, 'unsubscribe')
-        .mockImplementation(callback => callback('another fake mode'));
+        .mockImplementation(cb => cb('another fake mode'));
       unsubscribe(callback);
     });
 

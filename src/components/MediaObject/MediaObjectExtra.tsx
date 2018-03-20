@@ -9,8 +9,8 @@ export interface MediaObjectExtraProps {
   ellipsis?: boolean;
 }
 
-export default class MediaObjectExtra extends React.Component<MediaObjectExtraProps, {}> {
-  render() {
+export default class MediaObjectExtra extends React.Component<MediaObjectExtraProps> {
+  public render() {
     const { children, ellipsis } = this.props;
 
     return (

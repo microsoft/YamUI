@@ -2,10 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
-import DebouncedOnChange, {
-  DebouncedOnChangeProps,
-  DebouncedOnChangePrivateProps,
-} from '../../util/DebouncedOnChange';
+import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
@@ -23,7 +20,7 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
 
   /**
    * Whether or not the textfield is underlined.
-   **/
+   */
   underlined?: boolean;
 }
 
@@ -32,7 +29,7 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
 class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
-  render() {
+  public render() {
     return (
       <FabricTextField
         className={this.getClasses()}
@@ -45,7 +42,7 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
     );
   }
 
-  getClasses() {
+  private getClasses() {
     const { className, prefix, suffix } = this.props;
     const classes = ['y-base-text-field', 'y-text-field'];
 

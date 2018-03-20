@@ -8,7 +8,7 @@ const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
 
 describe('<Button />', () => {
-  let component: ShallowWrapper<ButtonProps, {}>;
+  let component: ShallowWrapper<ButtonProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -111,13 +111,7 @@ describe('<Button />', () => {
 
     describe('on the right', () => {
       beforeEach(() => {
-        component = shallow(
-          <Button
-            icon={AccountsIcon}
-            text={sampleText}
-            iconPosition={ButtonIconPosition.RIGHT}
-          />,
-        );
+        component = shallow(<Button icon={AccountsIcon} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />);
       });
 
       it('matches its snapshot', () => {
@@ -137,9 +131,7 @@ describe('<Button />', () => {
 
     describe('set as loading', () => {
       beforeEach(() => {
-        component = shallow(
-          <Button color={ButtonColor.PRIMARY} text={sampleText} status={ButtonStatus.LOADING} />,
-        );
+        component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} status={ButtonStatus.LOADING} />);
       });
 
       it('matches its snapshot', () => {
@@ -159,9 +151,7 @@ describe('<Button />', () => {
 
     describe('with icon', () => {
       beforeEach(() => {
-        component = shallow(
-          <Button icon={AccountsIcon} size={ButtonSize.SMALL} text={sampleText} />,
-        );
+        component = shallow(<Button icon={AccountsIcon} size={ButtonSize.SMALL} text={sampleText} />);
       });
 
       it('matches its snapshot', () => {
@@ -171,9 +161,7 @@ describe('<Button />', () => {
 
     describe('set as loading', () => {
       beforeEach(() => {
-        component = shallow(
-          <Button size={ButtonSize.SMALL} text={sampleText} status={ButtonStatus.LOADING} />,
-        );
+        component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} status={ButtonStatus.LOADING} />);
       });
 
       it('matches its snapshot', () => {
@@ -203,11 +191,11 @@ describe('<Button />', () => {
   });
 
   describe('with event callbacks', () => {
-    let onClick: jest.Mock<{}>;
-    let onMouseEnter: jest.Mock<{}>;
-    let onMouseLeave: jest.Mock<{}>;
-    let onFocus: jest.Mock<{}>;
-    let onBlur: jest.Mock<{}>;
+    let onClick: jest.Mock;
+    let onMouseEnter: jest.Mock;
+    let onMouseLeave: jest.Mock;
+    let onFocus: jest.Mock;
+    let onBlur: jest.Mock;
 
     beforeEach(() => {
       onClick = jest.fn();

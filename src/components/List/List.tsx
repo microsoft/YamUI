@@ -25,8 +25,8 @@ export interface ListProps extends NestableBaseComponentProps {
 /**
  * A typographical list, rendering either a `<ul>` or `<ol>` element.
  */
-export default class List extends React.Component<ListProps, {}> {
-  render() {
+export default class List extends React.Component<ListProps> {
+  public render() {
     const { className, children, type, textSize } = this.props;
     const Tag = type === 'ordered' ? 'ol' : 'ul';
     const listClass = type === 'ordered' ? 'y-list__ordered' : 'y-list__unordered';

@@ -4,8 +4,8 @@ import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Image, { ImageProps, ImageFit, ImageLoadState } from '.';
 
 describe('<Image />', () => {
-  let component: ShallowWrapper<ImageProps, {}>;
-  let fullComponent: ReactWrapper<ImageProps, {}>;
+  let component: ShallowWrapper<ImageProps>;
+  let fullComponent: ReactWrapper<ImageProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -19,9 +19,7 @@ describe('<Image />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Image source="image.png" description="description" className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -31,9 +29,7 @@ describe('<Image />', () => {
 
   describe('with height 50 and width 100', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" height={50} width={100} />,
-      );
+      component = shallow(<Image source="image.png" description="description" height={50} width={100} />);
     });
 
     it('matches its snapshot', () => {
@@ -43,9 +39,7 @@ describe('<Image />', () => {
 
   describe('with imageFit cover', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" imageFit={ImageFit.cover} />,
-      );
+      component = shallow(<Image source="image.png" description="description" imageFit={ImageFit.cover} />);
     });
 
     it('matches its snapshot', () => {
@@ -65,9 +59,7 @@ describe('<Image />', () => {
 
   describe('with shouldFadeIn', () => {
     beforeEach(() => {
-      component = shallow(
-        <Image source="image.png" description="description" shouldFadeIn={true} />,
-      );
+      component = shallow(<Image source="image.png" description="description" shouldFadeIn={true} />);
     });
 
     it('matches its snapshot', () => {
@@ -80,13 +72,11 @@ describe('<Image />', () => {
     function setLoadState(newLoadState: ImageLoadState) {
       loadState = newLoadState;
     }
-    jest.useFakeTimers();
 
     beforeEach(() => {
+      jest.useFakeTimers();
       loadState = undefined;
-      fullComponent = mount(
-        <Image source="image.png" description="description" onLoadingStateChange={setLoadState} />,
-      );
+      fullComponent = mount(<Image source="image.png" description="description" onLoadingStateChange={setLoadState} />);
     });
 
     it('triggers a callback with loaded status on load', () => {

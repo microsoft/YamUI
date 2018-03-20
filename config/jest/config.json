@@ -1,42 +1,25 @@
 {
-  "cacheDirectory": ".jest",
   "rootDir": "../../",
-  "roots": [
-    "src/components",
-    "src/util"
-  ],
-  "moduleFileExtensions": [
-    "ts",
-    "tsx",
-    "js",
-    "jsx"
-  ],
+  "cacheDirectory": "<rootDir>/.jest",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+  "modulePaths": ["src/components", "src/util"],
+  "testPathIgnorePatterns": ["<rootDir>/build", "<rootDir>/dist"],
   "moduleNameMapper": {
     "^.+\\.css$": "identity-obj-proxy"
   },
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
   "transform": {
     ".(ts|tsx)$": "ts-jest/preprocessor.js"
   },
   "testRegex": ".*\\.test\\.(js|jsx|ts|tsx)$",
-  "testPathIgnorePatterns": [
-    "/node_modules/"
-  ],
-  "snapshotSerializers": [
-    "jest-serializer-enzyme"
-  ],
   "collectCoverage": true,
-  "mapCoverage": true,
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/components/Icon/docs/**/*.{js,jsx,ts,tsx}",
     "!src/components/Illustration/docs/**/*.{js,jsx,ts,tsx}"
   ],
   "coverageDirectory": "build/jest/coverage",
-  "coverageReporters": [
-    "text",
-    "text-summary",
-    "html"
-  ],
+  "coverageReporters": ["text", "text-summary", "html"],
   "coverageThreshold": {
     "global": {
       "statements": 99,

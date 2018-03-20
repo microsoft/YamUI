@@ -5,7 +5,7 @@ import MessageBar, { MessageBarType, MessageBarProps } from './index';
 import FakeLink from '../../components/FakeLink';
 
 describe('<MessageBar />', () => {
-  let component: ShallowWrapper<MessageBarProps, {}>;
+  let component: ShallowWrapper<MessageBarProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -19,11 +19,7 @@ describe('<MessageBar />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <MessageBar className="TEST_CLASSNAME">
-          content
-        </MessageBar>,
-      );
+      component = shallow(<MessageBar className="TEST_CLASSNAME">content</MessageBar>);
     });
 
     it('matches its snapshot', () => {
@@ -33,11 +29,7 @@ describe('<MessageBar />', () => {
 
   describe('with a type', () => {
     beforeEach(() => {
-      component = shallow(
-        <MessageBar type={MessageBarType.WARNING}>
-          content
-        </MessageBar>,
-      );
+      component = shallow(<MessageBar type={MessageBarType.WARNING}>content</MessageBar>);
     });
 
     it('matches its snapshot', () => {
@@ -48,11 +40,7 @@ describe('<MessageBar />', () => {
   describe('with actions', () => {
     beforeEach(() => {
       const link = <FakeLink>Link</FakeLink>;
-      component = shallow(
-        <MessageBar actions={link}>
-          content
-        </MessageBar>,
-      );
+      component = shallow(<MessageBar actions={link}>content</MessageBar>);
     });
 
     it('matches its snapshot', () => {

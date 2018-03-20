@@ -5,9 +5,9 @@ import Callout from '../Callout';
 import { KeyCodes } from '../../util/enums';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
-describe('<Hovercard />', () => {
-  jest.useFakeTimers();
+jest.useFakeTimers();
 
+describe('<Hovercard />', () => {
   let component: ShallowWrapper<HovercardProps, HovercardState>;
   let fullComponent: ReactWrapper<HovercardProps, HovercardState>;
 
@@ -292,9 +292,9 @@ describe('<Hovercard />', () => {
   });
 
   describe('callbacks', () => {
-    let onHover: jest.Mock<{}>;
-    let onShow: jest.Mock<{}>;
-    let onHide: jest.Mock<{}>;
+    let onHover: jest.Mock;
+    let onShow: jest.Mock;
+    let onHide: jest.Mock;
 
     beforeEach(() => {
       onHover = jest.fn();

@@ -9,8 +9,8 @@ export { ListItemProps };
 /**
  * To be nested under a `List` component.
  */
-export default class ListItem extends React.Component<ListItemProps, {}> {
-  render() {
+export default class ListItem extends React.Component<ListItemProps> {
+  public render() {
     const { className, children } = this.props;
     return <li className={join(['y-list--item', className])}>{children}</li>;
   }

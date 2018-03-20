@@ -5,7 +5,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Text, { TextProps, TextColor, TextSize } from '.';
 
 describe('<Text />', () => {
-  let component: ShallowWrapper<TextProps, {}>;
+  let component: ShallowWrapper<TextProps>;
 
   describe('with default options', () => {
     beforeEach(() => {

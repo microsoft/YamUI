@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import FakeLink, { FakeLinkProps } from '.';
 
 describe('<FakeLink />', () => {
-  let component: ShallowWrapper<FakeLinkProps, {}>;
+  let component: ShallowWrapper<FakeLinkProps>;
 
   describe('with default options', () => {
     beforeEach(() => {

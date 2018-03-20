@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import autobind from 'core-decorators/lib/autobind';
 import {
   IContextualMenuProps,
   IContextualMenuItem,
@@ -12,13 +11,12 @@ import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
+import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
 import { MenuItemType } from './enums';
 import './MenuButton.css';
 
 export { MenuItemType } from './enums';
-
-const MoreIcon = require('../Icon/icons/More').default;
 
 const renderEmptyIcon = () => null;
 
@@ -49,7 +47,7 @@ export interface MenuButtonItem {
   /**
    * On click method for this item.
    */
-  onClick?: (ev?: React.MouseEvent<HTMLElement>) => void;
+  onClick?: ((ev?: React.MouseEvent<HTMLElement>) => void);
 
   /**
    * Href for a link. This will turn the item into a hyperlink that looks like a regular item.
@@ -91,8 +89,8 @@ export interface MenuButtonProps extends BaseComponentProps {
   iconSize?: IconSize;
 }
 
-export default class MenuButton extends React.Component<MenuButtonProps, {}> {
-  static defaultProps: Partial<MenuButtonProps> = {
+export default class MenuButton extends React.Component<MenuButtonProps> {
+  public static defaultProps: Partial<MenuButtonProps> = {
     iconSize: IconSize.LARGE,
   };
 
@@ -108,21 +106,18 @@ export default class MenuButton extends React.Component<MenuButtonProps, {}> {
     );
   }
 
-  @autobind
   private getButtonClassNames() {
     const { iconSize, className } = this.props;
     return join(['y-menu-button', `y-menu-button--${iconSize}`, className]);
   }
 
-  @autobind
-  private getIcon() {
+  private getIcon = () => {
     const { icon, iconSize } = this.props;
     const Icon = icon || MoreIcon;
 
     return <Icon size={iconSize} block={true} />;
-  }
+  };
 
-  @autobind
   private getMenuProps(): IContextualMenuProps {
     const menuItems: IContextualMenuItem[] = this.props.menuItems.map(item => ({
       key: item.key,

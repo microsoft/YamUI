@@ -29,8 +29,8 @@ export interface MediaObjectTitleProps {
   ellipsis?: boolean;
 }
 
-export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps, {}> {
-  render() {
+export default class MediaObjectTitle extends React.Component<MediaObjectTitleProps> {
+  public render() {
     const { size, children, ellipsis } = this.props;
 
     return (
@@ -38,7 +38,7 @@ export default class MediaObjectTitle extends React.Component<MediaObjectTitlePr
         className="y-media-object--title"
         push={BlockPushMap[size]}
         textColor={TextColor.PRIMARY}
-        textSize={TextSizeMap[size] as TextSize}
+        textSize={TextSizeMap[size]}
         ellipsis={ellipsis}
       >
         {children}

@@ -19,7 +19,7 @@ export interface <%= name %>Props extends BaseComponentProps {
  * Describe what `<%= name %>` does. This will also appear as part of this component's
  * documentation.
  */
-export default class <%= name %> extends React.Component<<%= name %>Props, {}> {
+export default class <%= name %> extends React.Component<<%= name %>Props> {
   static defaultProps = {
     type: <%= name %>Type.BLACK,
   };

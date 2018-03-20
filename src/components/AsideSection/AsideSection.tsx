@@ -23,8 +23,8 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 /**
  * A section component to be used primarily for sidebar modules
  */
-export default class AsideSection extends React.Component<AsideSectionProps, {}> {
-  render() {
+export default class AsideSection extends React.Component<AsideSectionProps> {
+  public render() {
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>

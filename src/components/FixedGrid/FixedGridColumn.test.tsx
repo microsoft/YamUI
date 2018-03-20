@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { FixedGridColumn, FixedGridColumnProps } from '.';
 
 describe('<FixedGridColumn />', () => {
-  let component: ShallowWrapper<FixedGridColumnProps, {}>;
+  let component: ShallowWrapper<FixedGridColumnProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -18,9 +18,7 @@ describe('<FixedGridColumn />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridColumn className="TEST_CLASSNAME">grid content</FixedGridColumn>,
-      );
+      component = shallow(<FixedGridColumn className="TEST_CLASSNAME">grid content</FixedGridColumn>);
     });
 
     it('matches its snapshot', () => {

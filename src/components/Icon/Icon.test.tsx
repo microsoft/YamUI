@@ -6,7 +6,7 @@ import * as allExportedIcons from './icons';
 import Accounts from './icons/Accounts';
 
 describe('<Icon />', () => {
-  let component: ShallowWrapper<IconProps, {}>;
+  let component: ShallowWrapper<IconProps>;
 
   describe('an Icon', () => {
     describe('with minimal options', () => {
@@ -70,7 +70,8 @@ describe('<Icon />', () => {
   describe('each Icon', () => {
     let Icon: any;
 
-    Object.keys(allExportedIcons).forEach((name) => {
+    // tslint:disable-next-line:mocha-no-side-effect-code
+    Object.keys(allExportedIcons).forEach(name => {
       beforeEach(() => {
         Icon = (allExportedIcons as any)[name];
         component = shallow(<Icon />);

@@ -1,16 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import {
-  Dropdown as FabricDropdown,
-  IDropdownProps,
-} from 'office-ui-fabric-react/lib/components/Dropdown';
+import { Dropdown as FabricDropdown, IDropdownProps } from 'office-ui-fabric-react/lib/components/Dropdown';
 import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
 import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
-  let component: ShallowWrapper<DropdownProps, {}>;
-  let fullComponent: ReactWrapper<DropdownProps, {}>;
+  let component: ShallowWrapper<DropdownProps>;
+  let fullComponent: ReactWrapper<DropdownProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -79,9 +76,7 @@ describe('<Dropdown />', () => {
 
   describe('with divider', () => {
     beforeEach(() => {
-      const options = [
-        { key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider },
-      ];
+      const options = [{ key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider }];
       fullComponent = mount(<Dropdown options={options} />);
       fullComponent.find('.ms-Dropdown').simulate('click');
     });
@@ -114,7 +109,7 @@ describe('<Dropdown />', () => {
   });
 
   describe('with onChanged handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
     const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
 
     beforeEach(() => {
@@ -123,7 +118,7 @@ describe('<Dropdown />', () => {
     });
 
     describe('when an option is selected', () => {
-      let fabricDropdown: ShallowWrapper<IDropdownProps, {}>;
+      let fabricDropdown: ShallowWrapper<IDropdownProps>;
 
       beforeEach(() => {
         fabricDropdown = component.find(FabricDropdown);

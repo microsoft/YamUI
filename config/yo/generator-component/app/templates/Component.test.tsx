@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import <%= name %>, { <%= name %>Type, <%= name %>Props } from './index';
 
 describe('<<%= name %> />', () => {
-  let component: ShallowWrapper<<%= name %>Props, {}>;
+  let component: ShallowWrapper<<%= name %>Props>;
 
   describe('with default options', () => {
     beforeEach(() => {
