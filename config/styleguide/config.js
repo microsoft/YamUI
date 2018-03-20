@@ -30,7 +30,7 @@ module.exports = {
     {
       name: 'Graphics',
       content: path.resolve(root, 'src/components/README.md'),
-      components: path.resolve(root, 'src/components/Icon/docs/Icons.tsx'),
+      components: path.resolve(root, 'src/components/@(Icon|Illustration)/docs/*.tsx'),
     },
     {
       name: 'Demos',
@@ -48,6 +48,7 @@ module.exports = {
     '**/*.spec.tsx',
     '**/components/Fabric/*',
     '**/components/Icon/icons/*',
+    '**/components/Illustration/illustrations/*',
   ],
   skipComponentsWithoutExample: true,
   resolver: docgen.resolver.findAllComponentDefinitions,

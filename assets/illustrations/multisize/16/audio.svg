@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-<g id="TEMPLATE" display="none">
-	<g display="inline">
-		<path fill="#D0D0D0" d="M16,0v16H0V0H16 M17-1h-1H0h-1v1v16v1h1h16h1v-1V0V-1L17-1z"/>
-	</g>
-</g>
-<g id="ICONS">
-	<polygon fill="#FFFFFF" points="13,15 3,15 3,1 11,1 13,2.9998 	"/>
-	<path fill="#949494" d="M11,0H2v16h12V3L11,0z M11,1.5L12.5,3H11V1.5z M13,15H3V1h7v3h3V15z"/>
-	<path fill="#69AFE5" d="M10,6V5H9V4H8v6.208C7.7046,10.0791,7.3662,10,7,10c-1.1045,0-2,0.6714-2,1.5S5.8955,13,7,13
-		s2-0.6714,2-1.5C9,11.3237,9,7,9,7h1v1h1V6H10z"/>
-</g>
-</svg>
+<svg id="80b5417b-63d6-4e1c-865f-b93e70c54c6e" data-name="ICONS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>FileTypeIcons_Master_All_NEW</title><polygon points="13 15 3 15 3 1 11 1 13 3 13 15" fill="#fff"/><path d="M11,0H2V16H14V3Zm0,1.5L12.5,3H11ZM13,15H3V1h7V4h3Z" fill="#949494"/><path d="M10,6V5H9V4H8v6.208A2.49684,2.49684,0,0,0,7,10c-1.10449,0-2,.67139-2,1.5S5.89551,13,7,13s2-.67139,2-1.5V7h1V8h1V6Z" fill="#69afe5"/></svg>

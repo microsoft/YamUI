@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-<g id="TEMPLATE" display="none">
-	<g display="inline">
-		<path fill="#D0D0D0" d="M16,0v16H0V0H16 M17-1h-1H0h-1v1v16v1h1h16h1v-1V0V-1L17-1z"/>
-	</g>
-</g>
-<g id="ICONS">
-	<polygon fill="#FFFFFF" points="13,15 3,15 3,1 11,1 13,2.9998 	"/>
-	<path fill="#949494" d="M11,0H2v16h12V3L11,0z M11,1.5L12.5,3H11V1.5z M13,15H3V1h7v3h3V15z"/>
-	<path fill="#FF5F10" d="M11.0018,11.1344L8.0935,4H7.8989l-2.9731,7.1494c0,0-0.2234,0.5659-0.9298,0.5996V12h2.3765v-0.2471
-		c0,0-1.0683,0.1122-0.8088-0.7647l0.6118-1.4877h2.9894l0.5648,1.4165c0,0,0.1874,0.4609-0.0541,0.6632
-		c0,0-0.191,0.1724-0.6756,0.1687V12h3v-0.2471C12,11.7529,11.3441,11.8314,11.0018,11.1344z M6.3789,9.0027l1.311-3.1929
-		l1.2954,3.1931L6.3789,9.0027z"/>
-</g>
-</svg>
+<svg id="6f33fa76-dbcc-470a-a7a5-712b765c7968" data-name="ICONS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>FileTypeIcons_Master_All_NEW</title><polygon points="13 15 3 15 3 1 11 1 13 3 13 15" fill="#fff"/><path d="M11,0H2V16H14V3Zm0,1.5L12.5,3H11ZM13,15H3V1h7V4h3Z" fill="#949494"/><path d="M11.00176,11.13443,8.09354,4H7.89893L4.92584,11.14941a1.04492,1.04492,0,0,1-.92976.59961V12H6.37255v-.24706s-1.06832.11217-.80885-.76465L6.17547,9.5006H9.16484l.5648,1.4165s.18739.46089-.05406.66323A1.03206,1.03206,0,0,1,9,11.749V12h3v-.24706A1.02575,1.02575,0,0,1,11.00176,11.13443ZM6.37894,9.00275l1.311-3.19291,1.29537,3.1931Z" fill="#ff5f10"/></svg>

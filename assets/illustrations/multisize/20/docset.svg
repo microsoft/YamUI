@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-<g id="TEMPLATE" display="none">
-	<g display="inline">
-		<path fill="#D0D0D0" d="M20,0v20H0V0H20 M21-1h-1H0h-1v1v20v1h1h20h1v-1V0V-1L21-1z"/>
-	</g>
-	<g display="inline" opacity="0.1">
-		<path fill="#FF3A6D" d="M19,1v18H1V1H19 M20,0H0v20h20V0L20,0z"/>
-	</g>
-</g>
-<g id="ICONS">
-	<polygon fill="#C8C8C8" points="4,1 4,3 2,3 2,13 3,13 3,4 4,4 4,13 5,13 5,2 17,2 17,11 18,11 18,1 	"/>
-	<polygon fill="#A6A6A6" points="1,19 1,13 10,13 12,11 19,11 19,19 	"/>
-</g>
-</svg>
+<svg id="7279c6d9-6e35-4eed-8fd4-121727b9c60c" data-name="ICONS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>FileTypeIcons_Master_All_NEW</title><polygon points="4 1 4 3 2 3 2 13 3 13 3 4 4 4 4 13 5 13 5 2 17 2 17 11 18 11 18 1 4 1" fill="#c8c8c8"/><polygon points="1 19 1 13 10 13 12 11 19 11 19 19 1 19" fill="#a6a6a6"/></svg>
