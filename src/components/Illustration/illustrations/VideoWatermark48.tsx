@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class VideoWatermark extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 48 48"
@@ -18,7 +18,10 @@ export default class VideoWatermark extends BaseIllustration {
         focusable="false"
       >
         <path fill="#949494" d="M3 9v30h42V9zm41 29H4V10h40z" />
-  <path fill="#949494" d="M18 17v14l13-7-13-7zM6 35h2v2H6zM6 31h2v2H6zM6 27h2v2H6zM6 23h2v2H6zM6 19h2v2H6zM6 15h2v2H6zM6 11h2v2H6zM40 35h2v2h-2zM40 31h2v2h-2zM40 27h2v2h-2zM40 23h2v2h-2zM40 19h2v2h-2zM40 15h2v2h-2zM40 11h2v2h-2z" />
+        <path
+          fill="#949494"
+          d="M18 17v14l13-7-13-7zM6 35h2v2H6zM6 31h2v2H6zM6 27h2v2H6zM6 23h2v2H6zM6 19h2v2H6zM6 15h2v2H6zM6 11h2v2H6zM40 35h2v2h-2zM40 31h2v2h-2zM40 27h2v2h-2zM40 23h2v2h-2zM40 19h2v2h-2zM40 15h2v2h-2zM40 11h2v2h-2z"
+        />
       </svg>
     );
   }

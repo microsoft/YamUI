@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Archive extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 16 16"
@@ -18,8 +18,8 @@ export default class Archive extends BaseIllustration {
         focusable="false"
       >
         <path fill="#a6a6a6" d="M0 14V4h7l2-2h7v12H0z" />
-  <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
-  <path fill="#eaeaea" d="M2 4h2v1H2zM2 12h2v2H2zM1 6v5h4V6zm3 1v3H2V7z" />
+        <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
+        <path fill="#eaeaea" d="M2 4h2v1H2zM2 12h2v2H2zM1 6v5h4V6zm3 1v3H2V7z" />
       </svg>
     );
   }

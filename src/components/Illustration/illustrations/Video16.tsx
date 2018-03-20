@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Video extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 16 16"
@@ -18,9 +18,12 @@ export default class Video extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M1 3h14v10H1z" />
-  <path fill="#949494" d="M0 2v12h16V2zm15 11H1V3h14z" />
-  <path fill="#69afe5" d="M6 5v6l5-3-5-3z" />
-  <path fill="#c8c8c8" d="M2 4h1v1H2zM2 8h1v1H2zM2 6h1v1H2zM2 10h1v1H2zM2 12h1v1H2zM13 4h1v1h-1zM13 8h1v1h-1zM13 6h1v1h-1zM13 10h1v1h-1zM13 12h1v1h-1z" />
+        <path fill="#949494" d="M0 2v12h16V2zm15 11H1V3h14z" />
+        <path fill="#69afe5" d="M6 5v6l5-3-5-3z" />
+        <path
+          fill="#c8c8c8"
+          d="M2 4h1v1H2zM2 8h1v1H2zM2 6h1v1H2zM2 10h1v1H2zM2 12h1v1H2zM13 4h1v1h-1zM13 8h1v1h-1zM13 6h1v1h-1zM13 10h1v1h-1zM13 12h1v1h-1z"
+        />
       </svg>
     );
   }

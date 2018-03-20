@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Folder extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 16 16"
@@ -18,7 +18,7 @@ export default class Folder extends BaseIllustration {
         focusable="false"
       >
         <path fill="#a6a6a6" d="M0 14V4h7l2-2h7v12H0z" />
-  <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
+        <path fill="#666" d="M9 2L7 4l2 2h7V2H9z" />
       </svg>
     );
   }

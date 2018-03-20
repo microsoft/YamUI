@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Vsdx extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 16 16"
@@ -18,14 +18,14 @@ export default class Vsdx extends BaseIllustration {
         focusable="false"
       >
         <path fill="#fff" d="M14 15H4V1h8l2 2v12z" />
-  <path fill="#949494" d="M12 0H3v16h12V3zm0 1.5L13.5 3H12zM14 15H4V1h7v3h3z" />
-  <path fill="#2b579a" d="M1 5l7-1v10l-7-1V5z" />
-  <path fill="#fff" d="M3 7h1v3H3zM5 7h1v3H5zM4 10h1v2H4z" />
-  <path fill="#b0c0d8" d="M3 10h1v1H3zM5 10h1v1H5z" />
-  <path fill="#3955a3" d="M1 5l7-1v10l-7-1V5z" />
-  <path fill="#fff" d="M3 7h1v3H3zM5 7h1v3H5zM4 10h1v2H4z" />
-  <path fill="#b0c0d8" d="M3 10h1v1H3zM5 10h1v1H5z" />
-  <path fill="#c8c8c8" d="M11 10V7H8v1h2v2H9v4h4v-4zm1 3h-2v-2h2z" />
+        <path fill="#949494" d="M12 0H3v16h12V3zm0 1.5L13.5 3H12zM14 15H4V1h7v3h3z" />
+        <path fill="#2b579a" d="M1 5l7-1v10l-7-1V5z" />
+        <path fill="#fff" d="M3 7h1v3H3zM5 7h1v3H5zM4 10h1v2H4z" />
+        <path fill="#b0c0d8" d="M3 10h1v1H3zM5 10h1v1H5z" />
+        <path fill="#3955a3" d="M1 5l7-1v10l-7-1V5z" />
+        <path fill="#fff" d="M3 7h1v3H3zM5 7h1v3H5zM4 10h1v2H4z" />
+        <path fill="#b0c0d8" d="M3 10h1v1H3zM5 10h1v1H5z" />
+        <path fill="#c8c8c8" d="M11 10V7H8v1h2v2H9v4h4v-4zm1 3h-2v-2h2z" />
       </svg>
     );
   }
