@@ -59,7 +59,7 @@ const withStatusClass = 'y-suggestions-list--with-status';
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
-export default class SuggestionsList extends React.PureComponent<SuggestionsListProps, {}> {
+export default class SuggestionsList extends React.PureComponent<SuggestionsListProps> {
   public render() {
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
@@ -84,11 +84,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     if (!hasResults(this.props)) {
       return null;
     }
-    return (
-      <ul className="y-suggestions-list--results">
-        {this.props.groupedItems.map(this.getGroupResults)}
-      </ul>
-    );
+    return <ul className="y-suggestions-list--results">{this.props.groupedItems.map(this.getGroupResults)}</ul>;
   }
 
   private getGroupResults = (group: SuggestionItemGroupProps) => {
@@ -105,12 +101,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     const isSelected = item.id === selectedId;
     return (
       <li key={item.id}>
-        <SuggestionsListItem
-          searchText={searchText}
-          isSelected={isSelected}
-          onSelect={onItemSelected}
-          {...item}
-        />
+        <SuggestionsListItem searchText={searchText} isSelected={isSelected} onSelect={onItemSelected} {...item} />
       </li>
     );
   };
@@ -123,7 +114,8 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     return (
       <Block push={-2}>
         <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" />
-      </Block>);
+      </Block>
+    );
   }
 
   private getNoResults() {
@@ -132,7 +124,9 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     }
     return (
       <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
-        <Text color={TextColor.METADATA} className="y-suggestions-list--no-results">{this.props.noResultsText}</Text>
+        <Text color={TextColor.METADATA} className="y-suggestions-list--no-results">
+          {this.props.noResultsText}
+        </Text>
       </Block>
     );
   }

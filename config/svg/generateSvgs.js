@@ -31,7 +31,8 @@ async function generateComponent(svg, svgTemplate, templateData, destFilePath, o
 
     const name = path.basename(svg, path.extname(svg));
     // HTMLtoJSX will wrap multiple nodes in a <div>, so remove it if present
-    const jsx = converter.convert(innerHTML)
+    const jsx = converter
+      .convert(innerHTML)
       .replace('<div>', '')
       .replace('</div>', '')
       .trim();
@@ -44,7 +45,9 @@ async function generateComponent(svg, svgTemplate, templateData, destFilePath, o
     // HACK! Manually fix bad attribute names until this is fixed:
     // https://github.com/reactjs/react-magic/issues/157
     // Note that the repo has other similar issues open so our TS compiler may find them in new svgs
-    const classContents = dirtyClassContents.replace(/gradientunits/g, 'gradientUnits').replace(/gradienttransform/g, 'gradientTransform');
+    const classContents = dirtyClassContents
+      .replace(/gradientunits/g, 'gradientUnits')
+      .replace(/gradienttransform/g, 'gradientTransform');
 
     console.log(`Writing svg React component to ${destFilePath}`);
     await writeFile(destFilePath, classContents, 'utf8');

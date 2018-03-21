@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/gutters.css";
+@import 'src/css/variables/gutters.css';
 
 /* Bullet point styles */
 .y-list {
@@ -35,5 +35,5 @@
   padding: 0 0 $gutterWidth__xSmall 0;
 }
 .y-list__ordered > .y-list--item {
-  padding-left: .7rem;
+  padding-left: 0.7rem;
 }

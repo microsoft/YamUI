@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
-@import "src/css/variables/fonts.css";
-@import "src/css/variables/gutters.css";
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
+@import 'src/css/variables/gutters.css';
 
 .y-block {
   /* Setting full width to push out when nested in a Clickable button */
@@ -146,5 +146,5 @@
 }
 
 .y-block__ellipsis {
-  @extend ellipsis
+  @extend ellipsis;
 }

@@ -12,7 +12,7 @@ export interface BaseTextFieldProps extends BaseComponentProps {
 
   /**
    * Placeholder text. Displayed until a value is entered.
-   **/
+   */
   placeHolder?: string;
 
   /**
@@ -43,27 +43,27 @@ export interface BaseTextFieldProps extends BaseComponentProps {
   /**
    * Callback for the onChanged event.
    */
-  onChange?: (newValue: any) => void;
+  onChange?: ((newValue: any) => void);
 
   /**
    * Focus callback handler.
    */
-  onFocus?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onFocus?: ((event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 
   /**
    * Blur callback handler.
    */
-  onBlur?: (event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onBlur?: ((event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 
   /**
    * Mouse enter callback handler.
    */
-  onMouseEnter?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onMouseEnter?: ((event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 
   /**
    * Mouse leave callback handler.
    */
-  onMouseLeave?: (event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onMouseLeave?: ((event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 }
 
 export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): FabricTextFieldProps {

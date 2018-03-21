@@ -4,13 +4,11 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import ProgressIndicator, { ProgressIndicatorProps } from '.';
 
 describe('<ProgressIndicator />', () => {
-  let component: ShallowWrapper<ProgressIndicatorProps, {}>;
+  let component: ShallowWrapper<ProgressIndicatorProps>;
 
   describe('when incomplete', () => {
     beforeEach(() => {
-      component = shallow(
-        <ProgressIndicator ariaValueText="50% complete" percentComplete={0.5} />,
-      );
+      component = shallow(<ProgressIndicator ariaValueText="50% complete" percentComplete={0.5} />);
     });
 
     it('matches its snapshot', () => {
@@ -20,9 +18,7 @@ describe('<ProgressIndicator />', () => {
 
   describe('when complete', () => {
     beforeEach(() => {
-      component = shallow(
-        <ProgressIndicator ariaValueText="100% complete" percentComplete={1} />,
-      );
+      component = shallow(<ProgressIndicator ariaValueText="100% complete" percentComplete={1} />);
     });
 
     it('matches its snapshot', () => {
@@ -33,11 +29,7 @@ describe('<ProgressIndicator />', () => {
   describe('with additional className', () => {
     beforeEach(() => {
       component = shallow(
-        <ProgressIndicator
-          ariaValueText="50% complete"
-          percentComplete={0.5}
-          className="TEST_CLASS"
-        />,
+        <ProgressIndicator ariaValueText="50% complete" percentComplete={0.5} className="TEST_CLASS" />,
       );
     });
 

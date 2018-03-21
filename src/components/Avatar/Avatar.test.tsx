@@ -5,7 +5,7 @@ import Text from '../Text';
 import Avatar, { AvatarProps, AvatarSize, AvatarBorderType } from '.';
 
 describe('<Avatar />', () => {
-  let component: ShallowWrapper<AvatarProps, {}>;
+  let component: ShallowWrapper<AvatarProps>;
 
   describe('with image url', () => {
     beforeEach(() => {
@@ -30,12 +30,7 @@ describe('<Avatar />', () => {
   describe('with badge content', () => {
     beforeEach(() => {
       component = shallow(
-        <Avatar
-          name="NAME"
-          imageUrl="test.jpg"
-          size={AvatarSize.XSMALL}
-          badgeContent={<Text>badge</Text>}
-        />,
+        <Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XSMALL} badgeContent={<Text>badge</Text>} />,
       );
     });
 
@@ -46,9 +41,7 @@ describe('<Avatar />', () => {
 
   describe('with soft border type', () => {
     beforeEach(() => {
-      component = shallow(
-        <Avatar name="NAME" imageUrl="test.jpg" borderType={AvatarBorderType.SOFT} />,
-      );
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={AvatarBorderType.SOFT} />);
     });
 
     it('matches its snapshot', () => {

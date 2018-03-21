@@ -4,13 +4,11 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Spinner, { SpinnerProps, SpinnerColor, SpinnerSize } from '.';
 
 describe('<Spinner />', () => {
-  let component: ShallowWrapper<SpinnerProps, {}>;
+  let component: ShallowWrapper<SpinnerProps>;
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Spinner className="TEST_CLASSNAME" text="Loading" />,
-      );
+      component = shallow(<Spinner className="TEST_CLASSNAME" text="Loading" />);
     });
 
     it('matches its snapshot', () => {
@@ -20,9 +18,7 @@ describe('<Spinner />', () => {
 
   describe('with visible text', () => {
     beforeEach(() => {
-      component = shallow(
-        <Spinner text="Loading" />,
-      );
+      component = shallow(<Spinner text="Loading" />);
     });
 
     it('matches its snapshot', () => {
@@ -32,9 +28,7 @@ describe('<Spinner />', () => {
 
   describe('with invisible text', () => {
     beforeEach(() => {
-      component = shallow(
-        <Spinner text="Loading" hideText={true} />,
-      );
+      component = shallow(<Spinner text="Loading" hideText={true} />);
     });
 
     it('matches its snapshot', () => {
@@ -44,9 +38,7 @@ describe('<Spinner />', () => {
 
   describe('with a color', () => {
     beforeEach(() => {
-      component = shallow(
-        <Spinner text="Loading" color={SpinnerColor.DARK} />,
-      );
+      component = shallow(<Spinner text="Loading" color={SpinnerColor.DARK} />);
     });
 
     it('matches its snapshot', () => {
@@ -56,9 +48,7 @@ describe('<Spinner />', () => {
 
   describe('with a size', () => {
     beforeEach(() => {
-      component = shallow(
-        <Spinner text="Loading" size={SpinnerSize.XSMALL} />,
-      );
+      component = shallow(<Spinner text="Loading" size={SpinnerSize.XSMALL} />);
     });
 
     it('matches its snapshot', () => {

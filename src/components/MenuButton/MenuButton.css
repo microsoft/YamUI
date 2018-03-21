@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
+@import 'src/css/variables/colors.css';
 
 .y-menu-button {
   border: 0;
@@ -53,7 +53,7 @@
 
 /* Overall top/bottom menu padding */
 .y-menu-button--callout .ms-ContextualMenu-list {
-  padding: .4rem 0;
+  padding: 0.4rem 0;
 }
 
 /* Element styling overrides */
@@ -70,14 +70,14 @@
 }
 
 .y-menu-button--item-icon > .y-icon {
-  top: .3rem;
+  top: 0.3rem;
 }
 
 .y-menu-button--item {
-  padding: .5rem 1.2rem .8rem;
+  padding: 0.5rem 1.2rem 0.8rem;
 }
 .y-menu-button--item-header {
-  padding: .7rem 1.2rem 1rem;
+  padding: 0.7rem 1.2rem 1rem;
 }
 
 .y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link:not(.is-disabled),
@@ -95,7 +95,6 @@
   background-color: $borderColor__secondary;
   margin-bottom: -1px;
 }
-
 
 .y-menu-button--callout .ms-ContextualMenu-link:hover {
   text-decoration: none;

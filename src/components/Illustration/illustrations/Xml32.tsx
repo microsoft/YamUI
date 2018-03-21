@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Xml extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 32 32"

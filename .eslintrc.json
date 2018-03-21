@@ -4,6 +4,7 @@
   "rules": {
     "global-require": "off",
     "import/no-extraneous-dependencies": "off",
+    "max-len": [2, 120],
     "header/header": [
       2,
       "block",

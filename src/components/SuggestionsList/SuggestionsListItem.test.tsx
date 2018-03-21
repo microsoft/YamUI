@@ -5,8 +5,8 @@ import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsList
 import { AvatarBorderType } from '../Avatar';
 
 describe('<SuggestionsListItem />', () => {
-  let rendered: ShallowWrapper<SuggestionsListItemProps, {}>;
-  let onSelect: jest.Mock<{}>;
+  let rendered: ShallowWrapper<SuggestionsListItemProps>;
+  let onSelect: jest.Mock;
 
   const getProps = (overrides?: Partial<SuggestionsListItemProps>) => {
     onSelect = jest.fn();

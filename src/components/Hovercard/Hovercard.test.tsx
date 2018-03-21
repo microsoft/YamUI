@@ -5,9 +5,9 @@ import Callout from '../Callout';
 import { KeyCodes } from '../../util/enums';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
-describe('<Hovercard />', () => {
-  jest.useFakeTimers();
+jest.useFakeTimers();
 
+describe('<Hovercard />', () => {
   let component: ShallowWrapper<HovercardProps, HovercardState>;
   let fullComponent: ReactWrapper<HovercardProps, HovercardState>;
 
@@ -76,8 +76,8 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('mouseEnter');
-      jest.runTimersToTime(750);
-      expect(component.find('.y-hovercard--modal-container').length).toBe(1);
+      jest.advanceTimersByTime(750);
+      expect(component.update().find('.y-hovercard--modal-container').length).toBe(1);
     });
   });
 
@@ -89,7 +89,7 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('click');
-      jest.runTimersToTime(750);
+      jest.advanceTimersByTime(750);
       expect(component.find('.y-hovercard--modal-container').length).toBe(0);
     });
 
@@ -100,7 +100,7 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('mouseEnter');
-      jest.runTimersToTime(750);
+      jest.advanceTimersByTime(750);
       expect(component.find('.y-hovercard--modal-container').length).toBe(0);
     });
   });
@@ -113,7 +113,7 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('mouseEnter');
-      jest.runTimersToTime(250);
+      jest.advanceTimersByTime(250);
     });
 
     it('does not show the hovercard before the show timeout completes', () => {
@@ -140,7 +140,8 @@ describe('<Hovercard />', () => {
         </Hovercard>,
       );
       component.find('.y-hovercard--trigger').simulate('mouseEnter');
-      jest.runTimersToTime(750);
+      jest.advanceTimersByTime(750);
+      component.update();
     });
 
     it('is visible', () => {
@@ -163,19 +164,19 @@ describe('<Hovercard />', () => {
       });
 
       it('the Hovercard closes after a delay', () => {
-        jest.runTimersToTime(500);
-        expect(component.find(Callout).length).toBe(0);
+        jest.advanceTimersByTime(500);
+        expect(component.update().find(Callout).length).toBe(0);
       });
 
       describe('mousing back in', () => {
         beforeEach(() => {
-          jest.runTimersToTime(250);
+          jest.advanceTimersByTime(250);
           component.find('.y-hovercard--trigger').simulate('mouseEnter');
         });
 
         it('prevents the hovercard from closing', () => {
-          jest.runTimersToTime(500);
-          expect(component.find(Callout).length).toBe(1);
+          jest.advanceTimersByTime(500);
+          expect(component.update().find(Callout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
@@ -184,8 +185,8 @@ describe('<Hovercard />', () => {
           });
 
           it('allows the Hovercard to close', () => {
-            jest.runTimersToTime(500);
-            expect(component.find(Callout).length).toBe(0);
+            jest.advanceTimersByTime(500);
+            expect(component.update().find(Callout).length).toBe(0);
           });
         });
       });
@@ -198,13 +199,16 @@ describe('<Hovercard />', () => {
 
       describe('mousing back in', () => {
         beforeEach(() => {
-          jest.runTimersToTime(250);
-          component.find('.y-hovercard--modal-container').simulate('mouseEnter');
+          jest.advanceTimersByTime(250);
+          component
+            .update()
+            .find('.y-hovercard--modal-container')
+            .simulate('mouseEnter');
         });
 
         it('prevents the hovercard from closing', () => {
-          jest.runTimersToTime(500);
-          expect(component.find(Callout).length).toBe(1);
+          jest.advanceTimersByTime(500);
+          expect(component.update().find(Callout).length).toBe(1);
         });
 
         describe('and mousing back out', () => {
@@ -213,8 +217,8 @@ describe('<Hovercard />', () => {
           });
 
           it('allows the Hovercard to close', () => {
-            jest.runTimersToTime(500);
-            expect(component.find(Callout).length).toBe(0);
+            jest.advanceTimersByTime(500);
+            expect(component.update().find(Callout).length).toBe(0);
           });
         });
       });
@@ -227,7 +231,7 @@ describe('<Hovercard />', () => {
       });
 
       it('the Hovercard closes immediately', () => {
-        expect(component.find(Callout).length).toBe(0);
+        expect(component.update().find(Callout).length).toBe(0);
       });
     });
 
@@ -279,12 +283,12 @@ describe('<Hovercard />', () => {
 
       describe('and the component is unmounted before the timeout completes', () => {
         beforeEach(() => {
-          jest.runTimersToTime(250);
+          jest.advanceTimersByTime(250);
           fullComponent.unmount();
         });
 
         it('the timeout has been cleared without throwing an error', () => {
-          jest.runTimersToTime(500);
+          jest.advanceTimersByTime(500);
           expect(fullComponent.find('.y-hovercard--trigger').length).toEqual(0);
         });
       });
@@ -292,9 +296,9 @@ describe('<Hovercard />', () => {
   });
 
   describe('callbacks', () => {
-    let onHover: jest.Mock<{}>;
-    let onShow: jest.Mock<{}>;
-    let onHide: jest.Mock<{}>;
+    let onHover: jest.Mock;
+    let onShow: jest.Mock;
+    let onHide: jest.Mock;
 
     beforeEach(() => {
       onHover = jest.fn();

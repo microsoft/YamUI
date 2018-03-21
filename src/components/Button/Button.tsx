@@ -101,8 +101,6 @@ export interface RegularButtonProps extends BaseButtonProps {
    * Screenreader text for loading state.
    */
   loadingText?: string;
-
-
 }
 
 export interface LoadingButtonProps extends RegularButtonProps {
@@ -123,8 +121,8 @@ export interface LinkButtonProps extends BaseButtonProps {
   status?: void;
 
   /**
-  * Links cannot have a type.
-  */
+   * Links cannot have a type.
+   */
   type?: undefined;
 }
 
@@ -133,8 +131,8 @@ export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonPr
 /**
  * A `Button` allows a user to take an action.
  */
-export default class Button extends React.Component<ButtonProps, {}> {
-  static propTypes = {
+export default class Button extends React.Component<ButtonProps> {
+  public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {
       const href = props.href;
@@ -150,7 +148,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
     },
   };
 
-  static defaultProps = {
+  public static defaultProps = {
     color: ButtonColor.SECONDARY,
     iconPosition: ButtonIconPosition.LEFT,
     size: ButtonSize.REGULAR,
@@ -158,7 +156,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
     type: ButtonType.BUTTON,
   };
 
-  render() {
+  public render() {
     const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
@@ -224,11 +222,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
   private getClasses() {
     const { className, color, status, size, fullWidth } = this.props;
 
-    const classes: string[] = [
-      'y-button',
-      `y-button__color-${color}`,
-      `y-button__size-${size}`,
-    ];
+    const classes: string[] = ['y-button', `y-button__color-${color}`, `y-button__size-${size}`];
     if (status !== ButtonStatus.ENABLED) {
       classes.push(`y-button__state-${status}`);
     }

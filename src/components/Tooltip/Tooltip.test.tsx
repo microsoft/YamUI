@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Tooltip, { DirectionalHint, TooltipProps } from './index';
 
 describe('<Tooltip />', () => {
-  let component: ShallowWrapper<TooltipProps, {}>;
+  let component: ShallowWrapper<TooltipProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -18,9 +18,7 @@ describe('<Tooltip />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Tooltip text="text content" className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Tooltip text="text content" className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -30,9 +28,7 @@ describe('<Tooltip />', () => {
 
   describe('with directionalHint', () => {
     beforeEach(() => {
-      component = shallow(
-        <Tooltip text="text content" directionalHint={DirectionalHint.bottomLeftEdge} />,
-      );
+      component = shallow(<Tooltip text="text content" directionalHint={DirectionalHint.bottomLeftEdge} />);
     });
 
     it('matches its snapshot', () => {

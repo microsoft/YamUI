@@ -5,7 +5,7 @@ import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProp
 import { Async } from 'office-ui-fabric-react/lib/Utilities';
 
 interface InnerComponentProps extends DebouncedOnChangeProps {
-  onChange?: (newValue: any) => void;
+  onChange?: ((newValue: any) => void);
 }
 
 const InnerComponent: React.StatelessComponent<InnerComponentProps> = props => <input {...props} />;
@@ -16,7 +16,7 @@ const DebouncedOnChangeTestComponent = (props: InnerComponentProps) => {
   return <DebouncedOnChange {...props} component={TestComponent} />;
 };
 describe('<BaseTextField />', () => {
-  let component: ReactWrapper<DebouncedOnChangeProps, {}>;
+  let component: ReactWrapper<DebouncedOnChangeProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -29,7 +29,7 @@ describe('<BaseTextField />', () => {
   });
 
   describe('with onChange handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
 
     beforeEach(() => {
       callback = jest.fn();
@@ -62,13 +62,11 @@ describe('<BaseTextField />', () => {
   });
 
   describe('with debouncedOnChange handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
 
     beforeEach(() => {
       callback = jest.fn();
-      component = mount(
-        <DebouncedOnChangeTestComponent debouncedOnChange={callback} debouncedOnChangeTime={0} />,
-      );
+      component = mount(<DebouncedOnChangeTestComponent debouncedOnChange={callback} debouncedOnChangeTime={0} />);
     });
 
     describe('when a change is made', () => {

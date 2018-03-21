@@ -10,7 +10,6 @@ import './MessageBar.css';
 export { MessageBarType };
 
 export interface MessageBarProps extends NestableBaseComponentProps {
-
   /**
    * Type of message being displayed.
    * @default MessageBarType.INFO
@@ -27,15 +26,18 @@ export interface MessageBarProps extends NestableBaseComponentProps {
  * A `MessageBar` displays relevant status information. You can use a `MessageBar` to tell the user
  * about a situation, and optionally provide actions for them to take.
  */
-export default class MessageBar extends React.Component<MessageBarProps, {}> {
-  static defaultProps = {
+export default class MessageBar extends React.Component<MessageBarProps> {
+  public static defaultProps = {
     type: MessageBarType.INFO,
   };
 
-  render() {
+  public render() {
     const { actions, children } = this.props;
-    const actionsColumn = actions &&
-      <FixedGridColumn fixed={true} className="y-message-bar--actions">{actions}</FixedGridColumn>;
+    const actionsColumn = actions && (
+      <FixedGridColumn fixed={true} className="y-message-bar--actions">
+        {actions}
+      </FixedGridColumn>
+    );
 
     return (
       <Block textSize={TextSize.SMALL} className={this.getClasses()}>

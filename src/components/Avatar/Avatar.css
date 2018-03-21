@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
+@import 'src/css/variables/colors.css';
 
 .y-avatar {
   position: relative;
@@ -66,9 +66,9 @@
 }
 
 /* Fabric CSS overrides */
- .y-avatar > .ms-Persona {
-   margin: 0;
- }
+.y-avatar > .ms-Persona {
+  margin: 0;
+}
 .y-avatar__borderType-soft .ms-Persona-imageArea,
 .y-avatar__borderType-soft .ms-Image {
   border-radius: 2px;

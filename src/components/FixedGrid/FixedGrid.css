@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/gutters.css";
+@import 'src/css/variables/gutters.css';
 
 .y-fixedGridRow {
   display: flex;
@@ -23,7 +23,6 @@
 .y-fixedGridRow__bottomSpacing-xSmall {
   margin-bottom: $gutterWidth__xSmall;
 }
-
 
 /* Non-fixed columns grow and shrink to fill their content */
 .y-fixedGridColumn {

@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { LayoutListItem, LayoutListItemProps } from '.';
 
 describe('<LayoutListItem />', () => {
-  let component: ShallowWrapper<LayoutListItemProps, {}>;
+  let component: ShallowWrapper<LayoutListItemProps>;
 
   describe('without props', () => {
     beforeEach(() => {

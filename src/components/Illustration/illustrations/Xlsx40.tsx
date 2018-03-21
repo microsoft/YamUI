@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIllustration from '../BaseIllustration';
 
 export default class Xlsx extends BaseIllustration {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 40 40"

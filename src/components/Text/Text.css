@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
-@import "src/css/variables/fonts.css";
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
 
 .y-text {
   display: inline-block;
@@ -35,7 +35,7 @@
 
 .y-text__ellipsis {
   @extend ellipsis;
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
 }
 
 /**
@@ -44,55 +44,55 @@
  * under each Block's textSize, maintains correct vertical alignment. Increased specificity
  * to handle the nested block case :(
  */
- /* Nested under sized Block */
+/* Nested under sized Block */
 .y-block.y-textSize-xSmall .y-text__ellipsis {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
 }
 .y-block.y-textSize-small .y-text__ellipsis {
-  vertical-align: -.3rem;
+  vertical-align: -0.3rem;
 }
 .y-block.y-textSize-mediumSub .y-text__ellipsis {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
 }
 .y-block.y-textSize-medium .y-text__ellipsis {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
 }
 .y-block.y-textSize-large .y-text__ellipsis {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
 }
 .y-block.y-textSize-xLarge .y-text__ellipsis {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
 }
 .y-block.y-textSize-xxLarge .y-text__ellipsis {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
 }
 
 /* Sized text with ellipsis (takes precedence over nested Block rules) */
 .y-text.y-text__ellipsis.y-textSize-xSmall {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
   height: 1.6rem;
 }
 .y-text.y-text__ellipsis.y-textSize-small {
-  vertical-align: -.3rem;
+  vertical-align: -0.3rem;
   height: 1.6rem;
 }
 .y-text.y-text__ellipsis.y-textSize-mediumSub {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
   height: 2rem;
 }
 .y-text.y-text__ellipsis.y-textSize-medium {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
   height: 2rem;
 }
 .y-text.y-text__ellipsis.y-textSize-large {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
   height: 2.4rem;
 }
 .y-text.y-text__ellipsis.y-textSize-xLarge {
-  vertical-align: -.5rem;
+  vertical-align: -0.5rem;
   height: 2.8rem;
 }
 .y-text.y-text__ellipsis.y-textSize-xxLarge {
-  vertical-align: -.4rem;
+  vertical-align: -0.4rem;
   height: 2.8rem;
 }

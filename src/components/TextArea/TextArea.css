@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
 .y-text-field.ms-TextField--multiline .ms-TextField-field {
-  padding-top: 1.0rem;
-  padding-bottom: .7rem;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
 }

@@ -1,16 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import {
-  Dropdown as FabricDropdown,
-  IDropdownProps,
-} from 'office-ui-fabric-react/lib/components/Dropdown';
+import { Dropdown as FabricDropdown, IDropdownProps } from 'office-ui-fabric-react/lib/components/Dropdown';
 import Dropdown, { DropdownProps, DropdownMenuItemType } from '.';
 import AddIcon from '../Icon/icons/Add';
 
 describe('<Dropdown />', () => {
-  let component: ShallowWrapper<DropdownProps, {}>;
-  let fullComponent: ReactWrapper<DropdownProps, {}>;
+  let component: ShallowWrapper<DropdownProps>;
+  let fullComponent: ReactWrapper<DropdownProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -60,7 +57,7 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
       });
     });
 
@@ -72,16 +69,14 @@ describe('<Dropdown />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+        expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
       });
     });
   });
 
   describe('with divider', () => {
     beforeEach(() => {
-      const options = [
-        { key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider },
-      ];
+      const options = [{ key: 'divider', text: 'divider1', itemType: DropdownMenuItemType.Divider }];
       fullComponent = mount(<Dropdown options={options} />);
       fullComponent.find('.ms-Dropdown').simulate('click');
     });
@@ -99,7 +94,7 @@ describe('<Dropdown />', () => {
     });
 
     it('matches its snapshot', () => {
-      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item')).toMatchSnapshot();
+      expect(fullComponent.find('.ms-Dropdown-items .y-dropdown--item').hostNodes()).toMatchSnapshot();
     });
   });
 
@@ -109,12 +104,12 @@ describe('<Dropdown />', () => {
     });
 
     it('displays our custom caret icon', () => {
-      expect(fullComponent.find('.y-dropdown__caretDown').length).toBe(1);
+      expect(fullComponent.find('.y-dropdown__caretDown').hostNodes().length).toBe(1);
     });
   });
 
   describe('with onChanged handler', () => {
-    let callback: jest.Mock<{}>;
+    let callback: jest.Mock;
     const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
 
     beforeEach(() => {
@@ -123,7 +118,7 @@ describe('<Dropdown />', () => {
     });
 
     describe('when an option is selected', () => {
-      let fabricDropdown: ShallowWrapper<IDropdownProps, {}>;
+      let fabricDropdown: ShallowWrapper<IDropdownProps>;
 
       beforeEach(() => {
         fabricDropdown = component.find(FabricDropdown);
@@ -132,6 +127,27 @@ describe('<Dropdown />', () => {
 
       it('triggers the onChanged callback with key', () => {
         expect(callback).toHaveBeenCalledWith(options[1].key);
+      });
+    });
+  });
+
+  describe('without onChanged handler', () => {
+    const options = [{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }];
+
+    beforeEach(() => {
+      component = shallow(<Dropdown options={options} />);
+    });
+
+    describe('when an option is selected', () => {
+      let fabricDropdown: ShallowWrapper<IDropdownProps>;
+
+      beforeEach(() => {
+        fabricDropdown = component.find(FabricDropdown);
+        fabricDropdown.simulate('changed', options[1]);
+      });
+
+      it('does not blow up', () => {
+        expect(component.update()).toMatchSnapshot();
       });
     });
   });

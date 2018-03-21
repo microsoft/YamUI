@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { FixedGridRow, FixedGridRowProps, GutterSize } from '.';
 
 describe('<FixedGridRow />', () => {
-  let component: ShallowWrapper<FixedGridRowProps, {}>;
+  let component: ShallowWrapper<FixedGridRowProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -38,9 +38,7 @@ describe('<FixedGridRow />', () => {
 
   describe('with bottom spacing', () => {
     beforeEach(() => {
-      component = shallow(
-        <FixedGridRow bottomSpacing={GutterSize.XLARGE}>grid content</FixedGridRow>,
-      );
+      component = shallow(<FixedGridRow bottomSpacing={GutterSize.XLARGE}>grid content</FixedGridRow>);
     });
 
     it('matches its snapshot', () => {

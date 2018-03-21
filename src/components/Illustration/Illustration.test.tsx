@@ -6,7 +6,7 @@ import * as allExportedIllustrations from './illustrations';
 import AccDB16 from './illustrations/AccDB16';
 
 describe('<Illustration />', () => {
-  let component: ShallowWrapper<IllustrationProps, {}>;
+  let component: ShallowWrapper<IllustrationProps>;
 
   describe('an illustration', () => {
     describe('with minimal options', () => {
@@ -50,14 +50,15 @@ describe('<Illustration />', () => {
   describe('each illustration', () => {
     let Illustration: typeof BaseIllustration;
 
-    Object.keys(allExportedIllustrations).forEach((name) => {
+    // tslint:disable-next-line:mocha-no-side-effect-code
+    Object.keys(allExportedIllustrations).forEach(name => {
       beforeEach(() => {
         Illustration = (allExportedIllustrations as any)[name];
         component = shallow(<Illustration />);
       });
 
       it('has a viewbox', () => {
-        expect(component.getNode().props.viewBox).toBeDefined();
+        expect(component.getElement().props.viewBox).toBeDefined();
       });
     });
   });

@@ -1,10 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, shallow, ReactWrapper, ShallowWrapper } from 'enzyme';
-import KeyboardNavigationObserver, {
-  KeyboardNavigationObserverProps,
-  KeyboardNavigationObserverState,
-} from './index';
+import KeyboardNavigationObserver, { KeyboardNavigationObserverProps, KeyboardNavigationObserverState } from './index';
 import * as keyboardNavigation from '../../util/accessibility/keyboardNavigation';
 
 describe('<KeyboardNavigationObserver />', () => {
@@ -14,8 +11,8 @@ describe('<KeyboardNavigationObserver />', () => {
   const renderInKeyboardMode = () => <span>KEYBOARD</span>;
   const renderInMouseMode = () => <span>MOUSE</span>;
 
-  let onEnterKeyboardModeCallback: jest.Mock<{}>;
-  let onEnterMouseModeCallback: jest.Mock<{}>;
+  let onEnterKeyboardModeCallback: jest.Mock;
+  let onEnterMouseModeCallback: jest.Mock;
 
   beforeEach(() => {
     onEnterKeyboardModeCallback = jest.fn();
@@ -60,9 +57,7 @@ describe('<KeyboardNavigationObserver />', () => {
 
     describe('when mounted and mode is switched to keyboard', () => {
       beforeEach(() => {
-        jest
-          .spyOn(keyboardNavigation, 'subscribe')
-          .mockImplementation((callback: any) => callback('keyboard'));
+        jest.spyOn(keyboardNavigation, 'subscribe').mockImplementation((callback: any) => callback('keyboard'));
 
         mounted = mount(
           <KeyboardNavigationObserver
@@ -114,9 +109,7 @@ describe('<KeyboardNavigationObserver />', () => {
 
     describe('when mounted and mode is switched to mouse', () => {
       beforeEach(() => {
-        jest
-          .spyOn(keyboardNavigation, 'subscribe')
-          .mockImplementation((callback: any) => callback('mouse'));
+        jest.spyOn(keyboardNavigation, 'subscribe').mockImplementation((callback: any) => callback('mouse'));
 
         mounted = mount(
           <KeyboardNavigationObserver

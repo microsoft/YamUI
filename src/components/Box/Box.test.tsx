@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Box, { BoxProps } from './index';
 
 describe('<Box />', () => {
-  let component: ShallowWrapper<BoxProps, {}>;
+  let component: ShallowWrapper<BoxProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
@@ -18,9 +18,7 @@ describe('<Box />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(
-        <Box className="TEST_CLASSNAME" />,
-      );
+      component = shallow(<Box className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -30,7 +28,7 @@ describe('<Box />', () => {
 
   describe('with children passed', () => {
     beforeEach(() => {
-      component = shallow(<Box/>);
+      component = shallow(<Box />);
     });
 
     it('matches its snapshot', () => {

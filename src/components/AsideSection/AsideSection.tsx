@@ -10,7 +10,7 @@ import './AsideSection.css';
 
 export interface AsideSectionProps extends NestableBaseComponentProps {
   /**
-   * The title of the aside section
+   * The visual title of the aside section
    */
   title: string;
 
@@ -23,34 +23,30 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 /**
  * A section component to be used primarily for sidebar modules
  */
-export default class AsideSection extends React.Component<AsideSectionProps, {}> {
-  render() {
+export default class AsideSection extends React.Component<AsideSectionProps> {
+  public render() {
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>
           <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
             <FixedGridColumn>
               <Heading level="2" size="none">
-                <Text uppercase={true} bold={true}>{this.props.title}</Text>
+                <Text uppercase={true} bold={true}>
+                  {this.props.title}
+                </Text>
               </Heading>
             </FixedGridColumn>
             {this.getActionColumn()}
           </FixedGridRow>
         </Block>
-        <div>
-          {this.props.children}
-        </div>
+        <div>{this.props.children}</div>
       </div>
     );
   }
 
   private getActionColumn() {
     if (this.props.action) {
-      return (
-        <FixedGridColumn fixed={true}>
-          {this.props.action}
-        </FixedGridColumn>
-      );
+      return <FixedGridColumn fixed={true}>{this.props.action}</FixedGridColumn>;
     }
 
     return null;

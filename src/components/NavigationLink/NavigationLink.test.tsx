@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import NavigationLink, { NavigationLinkProps } from '.';
 
 describe('<NavigationLink />', () => {
-  let component: ShallowWrapper<NavigationLinkProps, {}>;
+  let component: ShallowWrapper<NavigationLinkProps>;
 
   describe('with default options', () => {
     beforeEach(() => {

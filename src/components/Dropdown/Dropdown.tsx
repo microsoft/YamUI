@@ -1,12 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import autobind from 'core-decorators/lib/autobind';
-import {
-  Dropdown as FabricDropdown,
-  IDropdownOption,
-  DropdownMenuItemType,
-} from 'office-ui-fabric-react/lib/Dropdown';
+import { Dropdown as FabricDropdown, IDropdownOption, DropdownMenuItemType } from 'office-ui-fabric-react/lib/Dropdown';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
 import { IconSize, BaseIcon } from '../Icon';
@@ -18,7 +13,6 @@ import './Dropdown.css';
 
 export type DropdownOptionKey = string | number;
 export { DropdownMenuItemType };
-
 
 export interface DropdownOption {
   /**
@@ -50,36 +44,36 @@ export interface DropdownOption {
 export interface DropdownProps extends BaseComponentProps {
   /**
    * Items to be presented to the user.
-  **/
+   */
   options: DropdownOption[];
 
   /**
    * Label text that will be rendered above the dropdown.
-  **/
+   */
   label?: string;
 
   /**
    * Input placeholder text. Displayed until option is selected.
-  **/
+   */
   placeHolder?: string;
 
   /**
    * Initially selected option.
-  **/
+   */
   selectedKey?: DropdownOptionKey;
 
   /**
    * Function to call when user changes the selected item.
-  **/
-  onChanged?: (key: DropdownOptionKey) => void;
+   */
+  onChanged?: ((key: DropdownOptionKey) => void);
 }
 
 /**
  * A `Dropdown` is a list in which the selected item is always visible, and the others are visible
  * on demand by clicking a button.
  */
-export default class Dropdown extends React.Component<DropdownProps, {}> {
-  render() {
+export default class Dropdown extends React.Component<DropdownProps> {
+  public render() {
     const { className, label, placeHolder, selectedKey } = this.props;
     const calloutProps = {
       directionalHintFixed: false,
@@ -105,13 +99,17 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
     );
   }
 
-  private getChevronIcon() {
+  private getChevronIcon = () => {
     return <ChevronDownMed className="y-dropdown__caretDown" size={IconSize.MEDIUM} />;
-  }
+  };
 
   private getOptionText(label: string | undefined, text: string): React.ReactNode {
     if (label) {
-      return <span><Text bold={true}>{label}:</Text> {text}</span>;
+      return (
+        <span>
+          <Text bold={true}>{label}:</Text> {text}
+        </span>
+      );
     }
     return <span>{text}</span>;
   }
@@ -125,26 +123,22 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
     if (iconNode) {
       return (
         <FixedGridRow gutterSize={GutterSize.SMALL}>
-          <FixedGridColumn fixed={true} className="y-dropdown--option-icon">{iconNode}</FixedGridColumn>
+          <FixedGridColumn fixed={true} className="y-dropdown--option-icon">
+            {iconNode}
+          </FixedGridColumn>
           <FixedGridColumn className="y-dropdown--ellipsed-title">{textContent}</FixedGridColumn>
         </FixedGridRow>
       );
     }
-    
+
     return <div className="y-dropdown--ellipsed-title">{textContent}</div>;
   }
 
-  @autobind
-  private getPlaceholder() {
-    return (
-      <Block textSize={TextSize.MEDIUM_SUB}>
-        {this.props.placeHolder}
-      </Block>
-    );
-  }
+  private getPlaceholder = () => {
+    return <Block textSize={TextSize.MEDIUM_SUB}>{this.props.placeHolder}</Block>;
+  };
 
-  @autobind
-  private getOption(item?: IDropdownOption) {
+  private getOption = (item?: IDropdownOption) => {
     if (!item) {
       return null;
     }
@@ -164,20 +158,19 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
         {this.getOptionContent(item)}
       </Block>
     );
-  }
+  };
 
-  @autobind
   // Fabric Dropdown can support multiple selection. Even though we're not supporting it, TypeScript
   // requires we handle these cases. So some branches cannot actually be reached/tested. RIP 100% coverage :(
-  private getSelectedOption(item?: IDropdownOption | IDropdownOption[]) {
+  private getSelectedOption = (item?: IDropdownOption | IDropdownOption[]) => {
     if (Array.isArray(item)) {
       return item.length > 0 ? this.getOption(item[0]) : this.getOption();
     }
     return this.getOption(item);
-  }
+  };
 
   private getFabricOptions() {
-    return this.props.options.map((item) => {
+    return this.props.options.map(item => {
       return {
         key: item.key,
         text: item.text,
@@ -190,9 +183,10 @@ export default class Dropdown extends React.Component<DropdownProps, {}> {
     });
   }
 
-  @autobind
-  private handleChanged(option: IDropdownOption) {
+  private handleChanged = (option: IDropdownOption) => {
     const { onChanged } = this.props;
-    onChanged && onChanged(option.key);
-  }
+    if (onChanged) {
+      onChanged(option.key);
+    }
+  };
 }

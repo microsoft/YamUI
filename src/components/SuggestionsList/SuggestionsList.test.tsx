@@ -4,8 +4,8 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { default as SuggestionsList, SuggestionsListProps } from '.';
 
 describe('<SuggestionsList />', () => {
-  let rendered: ShallowWrapper<SuggestionsListProps, {}>;
-  let onItemSelected: jest.Mock<{}>;
+  let rendered: ShallowWrapper<SuggestionsListProps>;
+  let onItemSelected: jest.Mock;
   let options: Partial<SuggestionsListProps>;
 
   const getProps = (overrides: Partial<SuggestionsListProps>) => {

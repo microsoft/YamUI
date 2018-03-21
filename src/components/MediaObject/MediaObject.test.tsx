@@ -3,14 +3,21 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import MediaObject, { MediaObjectSize, MediaObjectProps } from '.';
 
-const image = <img src="404.jpg" alt="" />;
-const title = <div className="TITLE">TITLE CONTENT</div>;
-const metadata = <div className="METADATA">METADATA CONTENT</div>;
-const extra = <div className="EXTRA">EXTRA CONTENT</div>;
-const children = <div className="CHILDREN">CHILDREN CONTENT</div>;
-
 describe('<MediaObject />', () => {
-  let component: ShallowWrapper<MediaObjectProps, {}>;
+  let component: ShallowWrapper<MediaObjectProps>;
+  let image: React.ReactNode;
+  let title: React.ReactNode;
+  let metadata: React.ReactNode;
+  let extra: React.ReactNode;
+  let children: React.ReactNode;
+
+  beforeEach(() => {
+    image = <img src="404.jpg" alt="" role="presentation" />;
+    title = <div className="TITLE">TITLE CONTENT</div>;
+    metadata = <div className="METADATA">METADATA CONTENT</div>;
+    extra = <div className="EXTRA">EXTRA CONTENT</div>;
+    children = <div className="CHILDREN">CHILDREN CONTENT</div>;
+  });
 
   describe('with minimal options', () => {
     beforeEach(() => {
@@ -55,9 +62,7 @@ describe('<MediaObject />', () => {
 
     describe('with allowTextWrap', () => {
       beforeEach(() => {
-        component = shallow(
-          <MediaObject allowTextWrap={true} size={MediaObjectSize.MEDIUM} titleContent={title} />,
-        );
+        component = shallow(<MediaObject allowTextWrap={true} size={MediaObjectSize.MEDIUM} titleContent={title} />);
       });
 
       it('matches its snapshot', () => {
@@ -78,9 +83,7 @@ describe('<MediaObject />', () => {
 
     describe('at extra small size', () => {
       beforeEach(() => {
-        component = shallow(
-          <MediaObject size={MediaObjectSize.XSMALL} metadataContent={metadata} />,
-        );
+        component = shallow(<MediaObject size={MediaObjectSize.XSMALL} metadataContent={metadata} />);
       });
 
       it('matches its snapshot', () => {
@@ -123,9 +126,7 @@ describe('<MediaObject />', () => {
 
     describe('with allowTextWrap', () => {
       beforeEach(() => {
-        component = shallow(
-          <MediaObject allowTextWrap={true} size={MediaObjectSize.XLARGE} extraContent={extra} />,
-        );
+        component = shallow(<MediaObject allowTextWrap={true} size={MediaObjectSize.XLARGE} extraContent={extra} />);
       });
 
       it('matches its snapshot', () => {

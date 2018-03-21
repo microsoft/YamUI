@@ -8,11 +8,11 @@ type CallbackProp = ((inView: boolean) => void);
 type RenderProp = ((inView: boolean) => React.ReactNode);
 
 describe('<VisibilityObserver />', () => {
-  let component: ShallowWrapper<VisibilityObserverProps, {}>;
+  let component: ShallowWrapper<VisibilityObserverProps>;
   const renderInView = () => <span>IN VIEW</span>;
   const renderOutOfView = () => <span>OUT OF VIEW</span>;
-  let onEnterCallback: jest.Mock<{}>;
-  let onLeaveCallback: jest.Mock<{}>;
+  let onEnterCallback: jest.Mock;
+  let onLeaveCallback: jest.Mock;
   let renderProp: RenderProp;
   let callbackProp: CallbackProp;
 
@@ -55,8 +55,6 @@ describe('<VisibilityObserver />', () => {
     });
 
     describe('Observer rendering', () => {
-      let renderProp: RenderProp;
-
       beforeEach(() => {
         renderProp = component.find(Observer).prop('render') as RenderProp;
       });
@@ -103,6 +101,40 @@ describe('<VisibilityObserver />', () => {
 
         it('out of view callback is properly called', () => {
           expect(onLeaveCallback).toHaveBeenCalled();
+        });
+      });
+    });
+  });
+
+  describe('without callbacks', () => {
+    beforeEach(() => {
+      component = shallow(<VisibilityObserver renderInView={renderInView} renderOutOfView={renderOutOfView} />);
+      callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
+      renderProp = component.find(Observer).prop('render') as RenderProp;
+    });
+
+    describe('when out of view', () => {
+      it('renders without blowing up', () => {
+        expect(renderProp(false)).toMatchSnapshot();
+      });
+
+      describe('and scrolled into view', () => {
+        beforeEach(() => {
+          callbackProp(true);
+        });
+
+        it('renders without blowing up', () => {
+          expect(renderProp(true)).toMatchSnapshot();
+        });
+
+        describe('and scrolled out of view', () => {
+          beforeEach(() => {
+            callbackProp(false);
+          });
+
+          it('persists its in-view content without blowing up', () => {
+            expect(renderProp(false)).toMatchSnapshot();
+          });
         });
       });
     });

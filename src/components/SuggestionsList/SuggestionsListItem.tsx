@@ -32,8 +32,7 @@ const getHighlightedName = (name: string, search: string) => {
     .split(new RegExp(`(${search})`, 'gi'))
     .filter(content => !!content)
     .map((content, index) => {
-      const className =
-        search.toLowerCase() === content.toLowerCase() ? matchHighlightClass : undefined;
+      const className = search.toLowerCase() === content.toLowerCase() ? matchHighlightClass : undefined;
       return (
         <span key={index} className={className}>
           {content}
@@ -42,7 +41,7 @@ const getHighlightedName = (name: string, search: string) => {
     });
 };
 
-export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps, {}> {
+export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps> {
   public render() {
     const { isSelected, name, searchText, description } = this.props;
     const avatar = this.getAvatar();
@@ -50,11 +49,7 @@ export default class SuggestionsListItem extends React.PureComponent<Suggestions
     const title = getHighlightedName(name, searchText);
     // role=button added so that speech software knows that these are clickable targets.
     return (
-      <div
-        onMouseDown={this.onMouseDown}
-        className={className}
-        role="button"
-      >
+      <div onMouseDown={this.onMouseDown} className={className} role="button">
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}

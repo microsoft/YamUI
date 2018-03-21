@@ -10,8 +10,8 @@ export { HovercardHeaderProps };
 /**
  * Header of a `Hovercard` component. Used to maintain a consistent layout.
  */
-export default class HovercardHeader extends React.Component<HovercardHeaderProps, {}> {
-  render() {
+export default class HovercardHeader extends React.Component<HovercardHeaderProps> {
+  public render() {
     const { className, children } = this.props;
 
     return (

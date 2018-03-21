@@ -11,12 +11,12 @@ import './TextArea.css';
 export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
    * Height of the field, in number of rows.
-   **/
+   */
   rows?: number;
 
   /**
    * Whether or not to auto adjust textField height.
-   **/
+   */
   autoAdjustHeight?: boolean;
 }
 
@@ -25,7 +25,7 @@ export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProp
  * displays on the screen in a simple, uniform format.
  */
 class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateProps> {
-  render() {
+  public render() {
     return (
       <FabricTextField
         className={join(['y-base-text-field', 'y-text-area', this.props.className])}
@@ -38,8 +38,6 @@ class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateP
       />
     );
   }
-
-
 }
 
 export default (props: TextAreaProps) => {

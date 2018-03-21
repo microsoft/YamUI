@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import Block, { BlockProps, GutterSize, TextColor, TextSize } from '.';
 
 describe('<Block />', () => {
-  let component: ShallowWrapper<BlockProps, {}>;
+  let component: ShallowWrapper<BlockProps>;
 
   describe('with default options', () => {
     beforeEach(() => {

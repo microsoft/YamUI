@@ -6,7 +6,7 @@ import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
 export default class View extends BaseIcon {
-  render() {
+  public render() {
     return (
       <svg
         viewBox="0 0 240 240"

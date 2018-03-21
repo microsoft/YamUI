@@ -11,7 +11,7 @@ export type NavigationModeCallback = (mode: NavigationMode) => void;
  * This should be exposed as a singleton via './keyboardNavigation.ts', do not import this class directly.
  */
 export default class KeyboardNavigationEventListener {
-  element: HTMLElement;
+  public element: HTMLElement;
   private eventGroup: EventGroup;
   private mode: NavigationMode;
 

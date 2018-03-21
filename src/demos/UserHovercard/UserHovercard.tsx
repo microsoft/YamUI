@@ -3,10 +3,7 @@ import * as React from 'react';
 import Avatar, { AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
-import {
-  HovercardHeader,
-  HovercardBody,
-} from '../../components/Hovercard';
+import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
 import FakeLink from '../../components/FakeLink';
 import { FixedGridRow, FixedGridColumn } from '../../components/FixedGrid';
 import { LayoutList, LayoutListItem } from '../../components/LayoutList';
@@ -21,11 +18,15 @@ const iconMail = <Mail size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
 const iconGroup = <Group size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
 const iconPhone = <Phone size={IconSize.MEDIUM} block={true} color="#a8b0bd" />;
 
+const groupLink1 = <FakeLink>Frontend Team</FakeLink>;
+const groupLink2 = <FakeLink>Engineering Team</FakeLink>;
+const groupLink3 = <FakeLink>Yammer Team</FakeLink>;
+const groupLink4 = <FakeLink>Performance Domain</FakeLink>;
+const groupLink5 = <FakeLink>Mobile Signup Project</FakeLink>;
+
 const userGroups = (
   <span>
-    Groups: <FakeLink>Frontend Team</FakeLink>, <FakeLink>Engineering Team</FakeLink>,{' '}
-    <FakeLink>Yammer Team</FakeLink>, <FakeLink>Performance Domain</FakeLink>,{' '}
-    <FakeLink>Mobile Signup Project</FakeLink> and 95 more
+    Groups: {groupLink1}, {groupLink2}, {groupLink3}, {groupLink4}, {groupLink5} and 95 more
   </span>
 );
 
@@ -33,8 +34,8 @@ export interface UserHovercardProps {
   user: any;
 }
 
-export default class UserHovercard extends React.Component<UserHovercardProps, {}> {
-  render() {
+export default class UserHovercard extends React.Component<UserHovercardProps> {
+  public render() {
     const { user } = this.props;
 
     const userEmailLink = <FakeLink>{user.email}</FakeLink>;

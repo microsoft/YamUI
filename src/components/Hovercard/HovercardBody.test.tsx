@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import HovercardBody, { HovercardBodyProps } from './HovercardBody';
 
 describe('<HovercardBody />', () => {
-  let component: ShallowWrapper<HovercardBodyProps, {}>;
+  let component: ShallowWrapper<HovercardBodyProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
