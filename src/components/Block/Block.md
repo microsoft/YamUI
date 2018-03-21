@@ -45,6 +45,9 @@ const { GutterSize } = require('.');
   <Block padding={GutterSize.XSMALL}>
     This example has <strong>padding: XSMALL</strong>.
   </Block>
+  <Block padding={GutterSize.XXSMALL}>
+    This example has <strong>padding: XXSMALL</strong>.
+  </Block>
   <Block>
     This example has no padding specified.
   </Block>
@@ -74,6 +77,9 @@ const { GutterSize } = require('.');
   </Block>
   <Block horizontalPadding={GutterSize.XSMALL}>
     This example has <strong>horizontalPadding: XSMALL</strong>.
+  </Block>
+  <Block horizontalPadding={GutterSize.XXSMALL}>
+    This example has <strong>horizontalPadding: XXSMALL</strong>.
   </Block>
   <Block>
     This example has no padding specified.
@@ -105,6 +111,9 @@ const { GutterSize } = require('.');
   <Block verticalPadding={GutterSize.XSMALL}>
     This example has <strong>verticalPadding: XSMALL</strong>.
   </Block>
+  <Block verticalPadding={GutterSize.XXSMALL}>
+    This example has <strong>verticalPadding: XXSMALL</strong>.
+  </Block>
   <Block>
     This example has no padding specified.
   </Block>
@@ -135,6 +144,9 @@ const { GutterSize } = require('.');
   <Block topSpacing={GutterSize.XSMALL}>
     This example has <strong>topSpacing: XSMALL</strong>.
   </Block>
+  <Block topSpacing={GutterSize.XXSMALL}>
+    This example has <strong>topSpacing: XXSMALL</strong>.
+  </Block>
   <Block>
     This example has no spacing specified.
   </Block>
@@ -164,6 +176,9 @@ const { GutterSize } = require('.');
   </Block>
   <Block bottomSpacing={GutterSize.XSMALL}>
     This example has <strong>bottomSpacing: XSMALL</strong>.
+  </Block>
+  <Block bottomSpacing={GutterSize.XXSMALL}>
+    This example has <strong>bottomSpacing: XXSMALL</strong>.
   </Block>
   <Block>
     This example has no spacing specified.

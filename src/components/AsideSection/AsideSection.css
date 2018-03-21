@@ -3,6 +3,12 @@
 @import "src/css/variables/gutters.css";
 
 .y-aside-section--header {
-  border-bottom: 1px solid $borderColor;
-  padding-bottom: $gutterWidth__xSmall;
+  border-bottom: 1px solid $borderColor__secondary;
+  padding-bottom: $gutterWidth__xxSmall;
+  white-space: pre;
+}
+
+.y-aside-section--action {
+  white-space: initial;
+  text-align: right;
 }
