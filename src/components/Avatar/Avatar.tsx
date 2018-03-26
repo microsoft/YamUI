@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Persona, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
+import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarBorderType, AvatarSize } from './enums';
@@ -75,7 +75,7 @@ export default class Avatar extends React.Component<AvatarProps> {
 
     return (
       <div className={this.getClasses()}>
-        <Persona
+        <PersonaCoin
           imageUrl={imageUrl}
           size={personaSize}
           hidePersonaDetails={true}
