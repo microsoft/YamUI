@@ -486,6 +486,55 @@ const sampleUrl = 'https://www.yammer.com';
 </table>
 ```
 
+Bistate button - Join/Leave:
+
+```js { "props": { "data-description": "bistate button join-leave" } }
+const BistateButton = require('./BistateButton').default;
+const CheckMark = require('../Icon/icons/CheckMark').default;
+const SignOut = require('../Icon/icons/SignOut').default;
+
+const leaveJoinProps = {
+  text: 'Joined',
+  icon: CheckMark,
+  activeProps: {
+    text: 'Leave',
+    icon: SignOut,
+  },
+};
+
+<FixedGridRow>
+  <FixedGridColumn fixed={true} width={120}>
+    <BistateButton {...leaveJoinProps} />
+  </FixedGridColumn>
+</FixedGridRow>
+```
+
+Bistate button - Follow/Unfollow:
+
+```js { "props": { "data-description": "bistate button follow-unfollow" } }
+const { ButtonColor } = require('.');
+const BistateButton = require('./BistateButton').default;
+const CheckMark = require('../Icon/icons/CheckMark').default;
+const Remove = require('../Icon/icons/Remove').default;
+
+const followUnfollowProps = {
+  text: 'Following',
+  icon: CheckMark,
+  color: ButtonColor.PRIMARY,
+  activeProps: {
+    text: 'Unfollow',
+    icon: Remove,
+    color: ButtonColor.SECONDARY,
+  },
+};
+
+<FixedGridRow>
+  <FixedGridColumn fixed={true} width={120}>
+    <BistateButton {...followUnfollowProps} />
+  </FixedGridColumn>
+</FixedGridRow>
+```
+
 Link button:
 
 ```js { "props": { "data-description": "link" } }
