@@ -502,11 +502,7 @@ const leaveJoinProps = {
   },
 };
 
-<FixedGridRow>
-  <FixedGridColumn fixed={true} width={120}>
-    <BistateButton {...leaveJoinProps} />
-  </FixedGridColumn>
-</FixedGridRow>
+<BistateButton {...leaveJoinProps} />
 ```
 
 Bistate button - Follow/Unfollow:
@@ -528,11 +524,7 @@ const followUnfollowProps = {
   },
 };
 
-<FixedGridRow>
-  <FixedGridColumn fixed={true} width={120}>
-    <BistateButton {...followUnfollowProps} />
-  </FixedGridColumn>
-</FixedGridRow>
+<BistateButton {...followUnfollowProps} />
 ```
 
 Link button:

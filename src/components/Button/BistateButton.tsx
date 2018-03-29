@@ -31,9 +31,11 @@ export default class BistateButton extends React.Component<BistateButtonProps, B
 
   public render() {
     const propsForState = this.isActive() ? this.props.activeProps : undefined;
+    const secondaryText = this.isActive() ? this.props.text : this.props.activeProps.text;
+
     const { children, activeProps, ...buttonProps } = this.props;
     const props: ButtonProps = {
-      fullWidth: true,
+      secondaryText,
       ...buttonProps,
       ...propsForState,
       onFocus: this.onFocus,
@@ -41,6 +43,7 @@ export default class BistateButton extends React.Component<BistateButtonProps, B
       onBlur: this.onBlur,
       onMouseLeave: this.onMouseLeave,
     };
+
     return <Button {...props} />;
   }
 
