@@ -29,8 +29,13 @@
 
 .y-text-field .ms-TextField-prefix,
 .y-text-field .ms-TextField-suffix {
-  padding: 0 0.8rem 0.1rem;
+  padding: 0 0.7rem 0.1rem 0.8rem;
   overflow: hidden;
+}
+
+.y-text-field .ms-TextField-prefix span,
+.y-text-field .ms-TextField-suffix span {
+  padding-right: 0.1rem;
 }
 
 .y-text-field .ms-TextField-prefix span,
