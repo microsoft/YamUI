@@ -75,7 +75,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 * `y run test:visual` will compile the components, build+export a static version of the styleguide, start a dev server, take screenshots of each example, and fail if there are visual changes from the last approved screenshots. Unless you're developing on a Linux computer, this task must run within the Docker container via the `y` shortcut. Running via `npm run` on Mac or Windows will use your OS version of PhantomJS Webkit and will fail with subtle visual differences. Running in the Docker Linux container ensures consistent screenshots between all development environments and CI.
 * `npm run test:visual:approve` will approve your latest test images and overwrite the previous reference images. Use this when you are deliberately changing a component or its examples and you have manually verified that the new visual changes are correct.
-
+* `y run test:visual:component <ComponentName>` will do the same as `y run test:visual`, but only test the specified component. This allows for faster iterations during development.
 ### Testing all the things
 
 * `y run test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
