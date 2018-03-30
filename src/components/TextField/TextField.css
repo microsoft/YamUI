@@ -36,6 +36,7 @@
 .y-text-field .ms-TextField-prefix span,
 .y-text-field .ms-TextField-suffix span {
   padding-right: 0.1rem;
+  text-align: center;
 }
 
 .y-text-field .ms-TextField-prefix span,
