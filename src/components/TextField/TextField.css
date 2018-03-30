@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
 .y-text-field.ms-TextField--underlined .ms-TextField-fieldGroup {
-  height: 2.9rem
+  height: 2.9rem;
 }
 
 .y-text-field.ms-TextField--underlined .ms-TextField-field {
@@ -14,15 +14,34 @@
 
 .y-text-field--with-prefix.ms-TextField--underlined .ms-TextField-field,
 .y-text-field--with-prefix .ms-TextField-field {
-  padding-left: .4rem;
+  padding-left: 0.4rem;
 }
 
 .y-text-field--with-suffix.ms-TextField--underlined .ms-TextField-field,
 .y-text-field--with-suffix .ms-TextField-field {
-  padding-right: .4rem;
+  padding-right: 0.4rem;
+}
+
+.y-text-field .ms-TextField-field {
+  flex: 1;
+  min-width: 30%;
 }
 
 .y-text-field .ms-TextField-prefix,
 .y-text-field .ms-TextField-suffix {
-  padding: 0 .8rem;
+  padding: 0 0.7rem 0.1rem 0.8rem;
+  overflow: hidden;
+}
+
+.y-text-field .ms-TextField-prefix span,
+.y-text-field .ms-TextField-suffix span {
+  padding-right: 0.1rem;
+  text-align: center;
+}
+
+.y-text-field .ms-TextField-prefix span,
+.y-text-field .ms-TextField-suffix span {
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

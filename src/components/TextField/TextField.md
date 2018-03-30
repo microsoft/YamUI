@@ -57,6 +57,41 @@ With Suffix
 />
 ```
 
+Long Prefix
+```js { "props": { "data-description": "long prefix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+/>
+```
+
+Long Prefix and Suffix
+```js { "props": { "data-description": "long prefix and suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+  suffix="long suffix long suffix long suffix long suffix long suffix long suffix long suffix"
+/>
+```
+
+Short Prefix and Long Suffix
+```js { "props": { "data-description": "short prefix and long suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="short prefix"
+  suffix="long suffix long suffix long suffix long suffix long suffix long suffix long suffix"
+/>
+```
+
+Long Prefix and Short Suffix
+```js { "props": { "data-description": "long prefix and short suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+  suffix="short suffix"
+/>
+```
+
 Required:
 ```js { "props": { "data-description": "required" } }
 <TextField
