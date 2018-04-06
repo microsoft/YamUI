@@ -1,5 +1,9 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+$borderRadius__soft: 2px;
+$borderRadius__round: 50%;
+
 @define-mixin borderStylePopOver {
-  box-shadow: 0 0 12px rgba(0, 0, 0, .2) !important;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
   border: none;
   border-radius: 1px;
 }

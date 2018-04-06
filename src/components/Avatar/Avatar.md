@@ -153,7 +153,7 @@ const badgeContent = (
 With image and soft border:
 
 ```js { "props": { "data-description": "with image and soft border" } }
-const { AvatarBorderType, AvatarSize } = require('.');
+const { BorderType, AvatarSize } = require('.');
 
 <table style={{ textAlign: 'center' }}>
   <thead>
@@ -172,7 +172,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
             size={AvatarSize.XLARGE}
             name={group.name}
             imageUrl={group.imageUrl}
-            borderType={AvatarBorderType.SOFT}
+            borderType={BorderType.SOFT}
           />
         </td>
         <td>
@@ -180,7 +180,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
             size={AvatarSize.LARGE}
             name={group.name}
             imageUrl={group.imageUrl}
-            borderType={AvatarBorderType.SOFT}
+            borderType={BorderType.SOFT}
           />
         </td>
         <td>
@@ -188,7 +188,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
             size={AvatarSize.MEDIUM}
             name={group.name}
             imageUrl={group.imageUrl}
-            borderType={AvatarBorderType.SOFT}
+            borderType={BorderType.SOFT}
           />
         </td>
         <td>
@@ -196,7 +196,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
             size={AvatarSize.SMALL}
             name={group.name}
             imageUrl={group.imageUrl}
-            borderType={AvatarBorderType.SOFT}
+            borderType={BorderType.SOFT}
           />
         </td>
         <td>
@@ -204,7 +204,7 @@ const { AvatarBorderType, AvatarSize } = require('.');
             size={AvatarSize.XSMALL}
             name={group.name}
             imageUrl={group.imageUrl}
-            borderType={AvatarBorderType.SOFT}
+            borderType={BorderType.SOFT}
           />
         </td>
       </tr>
