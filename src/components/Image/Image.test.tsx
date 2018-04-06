@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
-import Image, { ImageProps, ImageFit, ImageLoadState } from '.';
+import Image, { BorderType, ImageProps, ImageFit, ImageLoadState } from '.';
 
 describe('<Image />', () => {
   let component: ShallowWrapper<ImageProps>;
@@ -40,6 +40,16 @@ describe('<Image />', () => {
   describe('with imageFit cover', () => {
     beforeEach(() => {
       component = shallow(<Image source="image.png" description="description" imageFit={ImageFit.cover} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with border type', () => {
+    beforeEach(() => {
+      component = shallow(<Image source="image.png" description="description" borderType={BorderType.ROUND} />);
     });
 
     it('matches its snapshot', () => {

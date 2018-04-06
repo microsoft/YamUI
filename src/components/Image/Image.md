@@ -152,6 +152,34 @@ const fullWidthImage = (
 </div>
 ```
 
+Border types:
+
+```js { "props": { "data-description": "border types" } }
+const { GutterSize } = require('../FixedGrid');
+const { BorderType, ImageFit } = require('.');
+
+const yammerLogo = 'logo.png';
+const yammerLogoDescription = 'Yammer "y" logo';
+
+
+<div>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    Images have square corners by default. They can also have a soft or fully-rounded border:
+  </Block>
+  <FixedGridRow gutterSize={GutterSize.LARGE}>
+    <FixedGridColumn fixed={true}>
+      <Image source={yammerLogo} description={yammerLogoDescription} height={100} width={100} imageFit={ImageFit.cover} />
+    </FixedGridColumn>
+    <FixedGridColumn fixed={true}>
+      <Image source={yammerLogo} description={yammerLogoDescription} borderType={BorderType.SOFT} height={100} width={100} imageFit={ImageFit.cover} />
+    </FixedGridColumn>
+    <FixedGridColumn fixed={true}>
+      <Image source={yammerLogo} description={yammerLogoDescription} borderType={BorderType.ROUND} height={100} width={100} imageFit={ImageFit.cover} />
+    </FixedGridColumn>
+  </FixedGridRow>
+</div>
+```
+
 Handling load state:
 
 ```js { "props": { "data-description": "load state" } }

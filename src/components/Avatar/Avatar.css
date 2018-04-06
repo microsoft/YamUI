@@ -1,4 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/borders.css';
 @import 'src/css/variables/colors.css';
 
 .y-avatar {
@@ -53,5 +54,5 @@
 }
 .y-avatar__borderType-soft .ms-Persona-imageArea,
 .y-avatar__borderType-soft .ms-Image {
-  border-radius: 2px;
+  border-radius: $borderRadius__soft;
 }
