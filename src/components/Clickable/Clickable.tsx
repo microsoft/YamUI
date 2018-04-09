@@ -2,6 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import FakeLink from '../FakeLink';
+import { camelCaseToDashed } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './Clickable.css';
 
@@ -15,6 +16,20 @@ export interface ClickableProps extends NestableBaseComponentProps {
    * Whether the clickable should be `display: block`.
    */
   block?: boolean;
+
+  /**
+   * Display type to use. Defaults to inline, which allows contents to wrap across lines, but can't
+   * hold block content. Use `Block` to contain block content, or `InlineBlock` to contain block
+   * and size to block content
+   */
+  display?: 'inline' | 'block' | 'inlineBlock';
+
+  /**
+   * Focus outline style to use. Defaults to using 1px inset focus. If link contains content that
+   * covers its surface, it should use displayType=BLOCK and focusType=OVERLAY so that the focus
+   * is visible and not hidden under the children.
+   */
+  focus?: 'normal' | 'overlay' | 'highContrastInset';
 
   /**
    * Title or description of the linked document.
@@ -50,15 +65,25 @@ export default class Clickable extends React.Component<ClickableProps> {
   }
 
   private getClasses() {
-    const { block, className } = this.props;
+    const { className, display, focus } = this.props;
 
     const classes: string[] = ['y-clickable'];
-    if (block) {
-      classes.push('y-clickable__block');
+    if (focus) {
+      classes.push(`y-focus-${camelCaseToDashed(focus)}`);
+    } else {
+      classes.push('y-focus-normal');
     }
+
+    if (display) {
+      classes.push(`y-display-${camelCaseToDashed(display)}`);
+    }
+
     if (className) {
       classes.push(className);
     }
+
+    // TODO: only some combinations of block + focus are valid
+    // TODO: block vs displayType
 
     return classes.join(' ');
   }

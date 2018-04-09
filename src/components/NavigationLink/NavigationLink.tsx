@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { join } from '../../util/classNames';
+import { camelCaseToDashed, join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import './NavigationLink.css';
 
@@ -26,6 +26,20 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
    * while nesting `FakeLink` components to show link and hover state visuals.
    */
   unstyled?: boolean;
+
+  /**
+   * Display type to use. Defaults to inline, which allows contents to wrap across lines, but can't
+   * hold block content. Use `Block` to contain block content, or `InlineBlock` to contain block
+   * and size to block content
+   */
+  display?: 'block' | 'inline' | 'inlineBlock';
+
+  /**
+   * Focus outline style to use. Defaults to using 1px inset focus. If link contains content that
+   * covers its surface, it should use displayType=BLOCK and focusType=OVERLAY so that the focus
+   * is visible and not hidden under the children.
+   */
+  focus?: 'normal' | 'overlay' | 'highContrastInset';
 }
 
 /**
@@ -45,15 +59,28 @@ export default class NavigationLink extends React.Component<NavigationLinkProps>
   }
 
   private getClasses() {
-    const { className, unstyled } = this.props;
+    const { className, unstyled, focus, display } = this.props;
 
     const classes: string[] = ['y-navigationLink'];
     if (unstyled) {
       classes.push('y-navigationLink__unstyled');
     }
+
+    if (focus) {
+      classes.push(`y-focus-${camelCaseToDashed(focus)}`);
+    } else {
+      classes.push('y-focus-normal');
+    }
+
+    if (display) {
+      classes.push(`y-display-${camelCaseToDashed(display)}`);
+    }
+
     if (className) {
       classes.push(className);
     }
+
+    // TODO: throw errors for incompatible cases?
 
     return join(classes);
   }

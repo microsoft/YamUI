@@ -3,7 +3,7 @@
 exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
 <button
   aria-label="aria label content"
-  className="y-clickable"
+  className="y-clickable y-focus-normal"
   type="button"
 >
   <FakeLink>
@@ -14,7 +14,7 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
 
 exports[`<Clickable /> when block is true matches its snapshot 1`] = `
 <button
-  className="y-clickable y-clickable__block"
+  className="y-clickable y-focus-normal"
   type="button"
 >
   <FakeLink>
@@ -25,7 +25,7 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
 
 exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className="y-clickable y-focus-normal"
   title="extra browser tooltip content"
   type="button"
 >
@@ -37,7 +37,7 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 
 exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className="y-clickable y-focus-normal"
   type="button"
 >
   clickable content
@@ -46,7 +46,7 @@ exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
 
 exports[`<Clickable /> with additional className matches its snapshot 1`] = `
 <button
-  className="y-clickable TEST_CLASSNAME"
+  className="y-clickable y-focus-normal TEST_CLASSNAME"
   type="button"
 >
   <FakeLink>
@@ -57,7 +57,7 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
 
 exports[`<Clickable /> with default options matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className="y-clickable y-focus-normal"
   type="button"
 >
   <FakeLink>

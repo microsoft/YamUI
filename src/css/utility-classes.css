@@ -2,8 +2,7 @@
   * Shared CSS classes. This file should remain very small, and possibly
   * become unnecessary if we embrace a CSS-in-JS solution.
   */
-@import "src/css/variables/fonts.css";
-
+@import 'src/css/variables/fonts.css';
 
 /* Font sizes */
 .y-textSize-xxLarge {
@@ -26,4 +25,15 @@
 }
 .y-textSize-xSmall {
   @extend text__xSmall;
+}
+
+/* Display overrides */
+.y-display-block {
+  display: block;
+}
+.y-display-inline {
+  display: inline;
+}
+.y-display-inline-block {
+  display: inline-block;
 }

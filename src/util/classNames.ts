@@ -8,3 +8,7 @@ export const join = (classNames: ClassName[]): string => {
 
   return classNames.filter(className => !!className).join(' ');
 };
+
+// Transform somethingLikeThis to something-like-this
+export const camelCaseToDashed: (className: string) => string = className =>
+  className.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
