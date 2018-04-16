@@ -89,3 +89,9 @@
 .y-button--icon-wrapper-right {
   padding-left: 4px;
 }
+
+.y-button--secondary-text {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
+}
