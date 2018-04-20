@@ -28,34 +28,48 @@ Unstyled link:
 </div>
 ```
 
-Link wrapping content:
+Link wrapping block content:
 
 ```js { "props": { "data-description": "wrapping" } }
-<NavigationLink href="/404.html">
+
+<NavigationLink href="/404.html" unstyled display="inlineBlock">
   <div>
     This <strong>NavigationLink</strong> component wraps an entire block of text. By default all text content within a <strong>NavigationLink</strong> tag will be styled like a link.
   </div>
 </NavigationLink>
 ```
 
-Unstyled link wrapping content:
+Unstyled link wrapping block content:
 
 ```js { "props": { "data-description": "unstyled wrapping" } }
 const { TextColor } = require('../Text');
 
 <div>
-  <NavigationLink href="/404.html" unstyled>
+  <NavigationLink href="/404.html" unstyled display="inlineBlock">
     <div>
       This is an unstyled <strong>NavigationLink</strong> component wrapping an entire block of text.
     </div>
   </NavigationLink>
   <br />
-  <NavigationLink href="/404.html" unstyled>
+  <NavigationLink href="/404.html" unstyled display="inlineBlock">
     <div>
       <Text color={TextColor.METADATA}>
         This is another unstyled <strong>NavigationLink</strong> component wrapping a block of text with a different color.
       </Text>
     </div>
+  </NavigationLink>
+</div>
+```
+
+Link wrapping and sizing to child block content:
+
+```js { "props": { "data-description": "wrapping" } }
+const yammerLogo = 'logo.png';
+const yammerLogoDescription = 'Yammer "y" logo';
+
+<div>
+  <NavigationLink href="/404.html" unstyled display="inlineBlock" focus="overlay">
+    <Image source={yammerLogo} description={yammerLogoDescription} width={320} height={240} />
   </NavigationLink>
 </div>
 ```

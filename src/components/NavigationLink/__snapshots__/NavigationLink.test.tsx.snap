@@ -2,7 +2,7 @@
 
 exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className="y-navigationLink y-focus-normal"
   href="test.html"
   rel="nofollow noopener noreferrer"
   target="_blank"
@@ -13,7 +13,7 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 <a
-  className="y-navigationLink y-navigationLink__unstyled"
+  className="y-navigationLink y-navigationLink__unstyled y-focus-normal"
   href="test.html"
 >
   link content
@@ -22,7 +22,7 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with additional className matches its snapshot 1`] = `
 <a
-  className="y-navigationLink TEST_CLASSNAME"
+  className="y-navigationLink y-focus-normal TEST_CLASSNAME"
   href="test.html"
 >
   test content
@@ -31,7 +31,7 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
 
 exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className="y-navigationLink y-focus-normal"
   href="test.html"
 >
   link content
@@ -40,7 +40,7 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with title matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className="y-navigationLink y-focus-normal"
   href="test.html"
   title="TITLE CONTENT"
 >

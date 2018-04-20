@@ -1,0 +1,112 @@
+/**
+  * Helper classes to manage focus outlines
+  *
+  * Focus outlines are only visible when the .is-focusVisible style is set
+  * on some ancestor: we rely on the <Fabric> root element to supply this.
+  *
+  * These only take effect if used within a <Fabric> component, or an element
+  * with .use-focusVisible set. If used outside of these, we leave the defaul
+  * browswer focus style in effect.
+  */
+
+/*
+ * y-focus-normal:
+ * Use to get focus rectangle using an inset box shadow.
+ * 
+ * This is more robust to clipping than browser default focus, as it's inset.
+ * It also provides a more reliable contrast, since it uses the text color, which
+ * should already meet 4.5:1.
+ *
+ * Can be used on inline or block elements.
+ */
+
+.ms-Fabric .y-focus-normal,
+.use-focusVisible .y-focus-normal {
+  outline: none;
+}
+
+.ms-Fabric.is-focusVisible .y-focus-normal:focus,
+.use-focusVisible.is-focusVisible .y-focus-normal:focus {
+  box-shadow: inset 0 0 0 1px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .ms-Fabric.is-focusVisible .y-focus-normal:focus,
+  .use-focusVisible.is-focusVisible .y-focus-normal:focus {
+    box-shadow: inset 0 0 0 1px;
+  }
+}
+
+/*
+ * y-focus-high-contrast-inset:
+ * Use on items with borders to get extra clearance in Windows High Contrast mode
+ * 
+ * In Windows High Contrast mode, some button-link controls with light borders
+ * end up with stronger borders, making it hard to see a 1px inset focus outline.
+ *
+ * This style adds extra pixel inset in HC mode, so that the focus box is clearly
+ * distinct from the border box.
+ */
+
+.ms-Fabric .y-focus-high-contrast-inset,
+.use-focusVisible .y-focus-high-contrast-inset {
+  outline: none;
+}
+
+.ms-Fabric.is-focusVisible .y-focus-high-contrast-inset:focus,
+.use-focusVisible.is-focusVisible .y-focus-high-contrast-inset:focus {
+  box-shadow: inset 0 0 0 1px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .ms-Fabric.is-focusVisible .y-focus-high-contrast-inset:focus,
+  .use-focusVisible.is-focusVisible .y-focus-high-contrast-inset:focus {
+    box-shadow: inset 0 0 0 1px Window, inset 0 0 0 2px;
+  }
+}
+
+/*
+ * y-focus-overlay:
+ * Use on items that contain opaque children that cover the element's
+ * surface.
+ * 
+ * Examples include buttons or links that wrap tight around a child
+ * image.
+ *
+ * In those cases, outlines are clipped, and inset borders are covered
+ * by the child image.
+ *
+ * This style creates an outline higher in the z-index that's overlaid
+ * on top of the child content, so is still visible.
+ *
+ * Owning control must also be using display:block or display:flex so
+ * that relative positioning works properly.
+ */
+
+.ms-Fabric .y-focus-overlay,
+.use-focusVisible .y-focus-overlay {
+  position: relative;
+  outline: none;
+}
+
+.ms-Fabric.is-focusVisible .y-focus-overlay:focus::after,
+.use-focusVisible.is-focusVisible .y-focus-overlay:focus::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 2px black, inset 0 0 0 3px white;
+  pointer-events: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  /* Use thicker version in high contrast mode, so that it's visually distinct from
+   * a regular box border.
+   */
+  .ms-Fabric.is-focusVisible .y-focus-overlay:focus::after,
+  .use-focusVisible.is-focusVisible .y-focus-overlay:focus::after {
+    box-shadow: inset 0 0 0 1px Window, inset 0 0 0 3px WindowText, inset 0 0 0 4px Window;
+  }
+}

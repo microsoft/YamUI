@@ -3,7 +3,7 @@
 exports[`<Button /> set as disabled matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__state-disabled"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset y-button__state-disabled"
   classNames={Object {}}
   disabled={true}
   split={false}
@@ -26,7 +26,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
 exports[`<Button /> set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__state-loading"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset y-button__state-loading"
   classNames={Object {}}
   disabled={true}
   split={false}
@@ -58,7 +58,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
 exports[`<Button /> with additional className matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular TEST_CLASSNAME"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset TEST_CLASSNAME"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -82,7 +82,7 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 <BaseButton
   ariaLabel="Aria description"
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -105,7 +105,7 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 exports[`<Button /> with button type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -128,7 +128,7 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
 exports[`<Button /> with default options matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -151,7 +151,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
 exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__fullWidth"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset y-button__fullWidth"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -174,7 +174,7 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 exports[`<Button /> with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -208,7 +208,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -242,7 +242,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 exports[`<Button /> with invalid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   href="#"
@@ -266,7 +266,7 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
 exports[`<Button /> with primary color matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__color-primary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -289,7 +289,7 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
 exports[`<Button /> with primary color set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular y-button__state-loading"
+  className="y-button y-button__color-primary y-button__size-regular y-focus-high-contrast-inset y-button__state-loading"
   classNames={Object {}}
   disabled={true}
   split={false}
@@ -321,7 +321,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 exports[`<Button /> with reset type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -344,7 +344,7 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
 exports[`<Button /> with small size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
+  className="y-button y-button__color-secondary y-button__size-small y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -367,7 +367,7 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
 exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small y-button__state-loading"
+  className="y-button y-button__color-secondary y-button__size-small y-focus-high-contrast-inset y-button__state-loading"
   classNames={Object {}}
   disabled={true}
   split={false}
@@ -399,7 +399,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
+  className="y-button y-button__color-secondary y-button__size-small y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -433,7 +433,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 exports[`<Button /> with submit type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   split={false}
@@ -456,7 +456,7 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
 exports[`<Button /> with valid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__color-secondary y-button__size-regular y-focus-high-contrast-inset"
   classNames={Object {}}
   disabled={false}
   href="https://www.yammer.com"

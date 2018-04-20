@@ -236,7 +236,12 @@ export default class Button extends React.Component<ButtonProps> {
   private getClasses() {
     const { className, color, status, size, fullWidth } = this.props;
 
-    const classes: string[] = ['y-button', `y-button__color-${color}`, `y-button__size-${size}`];
+    const classes: string[] = [
+      'y-button',
+      `y-button__color-${color}`,
+      `y-button__size-${size}`,
+      'y-focus-high-contrast-inset',
+    ];
     if (status !== ButtonStatus.ENABLED) {
       classes.push(`y-button__state-${status}`);
     }

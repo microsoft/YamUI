@@ -12,8 +12,3 @@
   border: none;
   cursor: pointer;
 }
-
-.y-clickable__block {
-  display: block;
-  width: 100%;
-}

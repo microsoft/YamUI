@@ -30,3 +30,27 @@ Unstyled block with FakeLink:
   </Clickable>
 </div>
 ```
+
+Wrapping block content:
+
+```js { "props": { "data-description": "wrapping" } }
+
+<Clickable onClick={action('clickable clicked')}  display="inlineBlock">
+  <div>
+    This <strong>Clickable</strong> component wraps an entire block of text. By default all text content within a <strong>Clickable</strong> tag will be styled like a link.
+  </div>
+</Clickable>
+```
+
+Wrapping and sizing to child block content:
+
+```js { "props": { "data-description": "wrapping" } }
+const yammerLogo = 'logo.png';
+const yammerLogoDescription = 'Yammer "y" logo';
+
+<div>
+  <Clickable onClick={action('clickable clicked')} unstyled display="inlineBlock" focus="overlay">
+    <Image source={yammerLogo} description={yammerLogoDescription} width={320} height={240} />
+  </Clickable>
+</div>
+```
