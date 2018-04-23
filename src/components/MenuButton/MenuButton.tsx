@@ -9,7 +9,7 @@ import {
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { IconButton } from 'office-ui-fabric-react/lib/Button';
+import { IconButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
@@ -97,6 +97,7 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   public render() {
     return (
       <IconButton
+        styles={this.getStyles()}
         ariaLabel={this.props.ariaLabel}
         menuProps={this.getMenuProps()}
         onRenderIcon={this.getIcon}
@@ -144,4 +145,31 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   private getMenuItemContent(props: IContextualMenuItemProps) {
     return <MenuButtonItem {...props} />;
   }
+
+  private getStyles = (): IButtonStyles => {
+    return {
+      root: {
+        border: 0,
+        padding: 0,
+        opacity: 0.7,
+        width: `${this.props.iconSize}px`,
+        height: `${this.props.iconSize}px`,
+        color: '#495361',
+      },
+      rootHovered: {
+        backgroundColor: 'transparent',
+        color: '#386cbb',
+        opacity: 1,
+      },
+      rootPressed: {
+        backgroundColor: 'transparent',
+        color: '#386cbb',
+        opacity: 1,
+      },
+      rootExpanded: {
+        color: '#386cbb',
+        opacity: 1,
+      },
+    };
+  };
 }
