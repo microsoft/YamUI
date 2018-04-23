@@ -47,7 +47,7 @@ export interface MenuButtonItem {
   /**
    * On click method for this item.
    */
-  onClick?: ((ev?: React.MouseEvent<HTMLElement>) => void);
+  onClick?: ((ev?: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void);
 
   /**
    * Href for a link. This will turn the item into a hyperlink that looks like a regular item.
