@@ -6,6 +6,11 @@ import { ITextFieldProps as FabricTextFieldProps } from 'office-ui-fabric-react/
 
 export interface BaseTextFieldProps extends BaseComponentProps {
   /**
+   * aria-label attribute
+   */
+  ariaLabel?: string;
+
+  /**
    * Current value of the textfield.
    */
   value?: string;
@@ -72,6 +77,7 @@ export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): F
     label: props.label,
     description: props.errorMessage ? undefined : props.description,
     disabled: props.disabled,
+    ariaLabel: props.ariaLabel,
     'aria-required': props.required,
     errorMessage: props.errorMessage,
     placeholder: props.placeHolder,
