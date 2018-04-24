@@ -26,7 +26,7 @@
   color: $textColor__disabled;
 }
 
-.y-base-text-field .ms-TextField-description {
+.y-base-text-field--description {
   @extend text__small;
   color: $textColor__metadata;
   position: relative;
