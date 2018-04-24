@@ -155,20 +155,20 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
         opacity: 0.7,
         width: `${this.props.iconSize}px`,
         height: `${this.props.iconSize}px`,
-        color: Colors.button,
+        color: Colors.textSecondary,
       },
       rootHovered: {
         backgroundColor: 'transparent',
-        color: Colors.buttonHovered,
+        color: Colors.link,
         opacity: 1,
       },
       rootPressed: {
         backgroundColor: 'transparent',
-        color: Colors.buttonPressed,
+        color: Colors.link,
         opacity: 1,
       },
       rootExpanded: {
-        color: Colors.buttonExpanded,
+        color: Colors.link,
         opacity: 1,
       },
     };

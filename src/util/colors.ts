@@ -59,10 +59,8 @@ export const theme: IPartialTheme = {
  * Use for component level overrides
  */
 const colors = {
-  button: deathMetal,
-  buttonHovered: river,
-  buttonPressed: river,
-  buttonExpanded: river,
+  textSecondary: deathMetal,
+  link: river,
 };
 
 export default colors;
