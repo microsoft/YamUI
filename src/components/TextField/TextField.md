@@ -17,6 +17,13 @@ Disabled
 />
 ```
 
+With JSX Description
+```js { "props": { "data-description": "with jsx description" } }
+<TextField
+  description={(<Clickable>Click Me</Clickable>)}
+/>
+```
+
 With Placeholder
 ```js { "props": { "data-description": "with placeholder" } }
 <TextField
