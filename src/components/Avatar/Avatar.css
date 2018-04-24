@@ -56,3 +56,7 @@
 .y-avatar__borderType-soft .ms-Image {
   border-radius: $borderRadius__soft;
 }
+
+.y-avatar__size-xLarge .ms-Persona-initials {
+  line-height: 70px;
+}

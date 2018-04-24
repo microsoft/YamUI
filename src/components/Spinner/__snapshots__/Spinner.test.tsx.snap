@@ -4,8 +4,7 @@ exports[`<Spinner /> with a color matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-dark y-spinner__size-medium"
 >
-  <Spinner
-    ariaLive="polite"
+  <StyledCustomizedSpinner
     className="y-spinner--circle"
     size={2}
   />
@@ -23,8 +22,7 @@ exports[`<Spinner /> with a size matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-light y-spinner__size-xSmall"
 >
-  <Spinner
-    ariaLive="polite"
+  <StyledCustomizedSpinner
     className="y-spinner--circle"
     size={0}
   />
@@ -42,8 +40,7 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-light y-spinner__size-medium TEST_CLASSNAME"
 >
-  <Spinner
-    ariaLive="polite"
+  <StyledCustomizedSpinner
     className="y-spinner--circle"
     size={2}
   />
@@ -61,8 +58,7 @@ exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
-  <Spinner
-    ariaLive="polite"
+  <StyledCustomizedSpinner
     className="y-spinner--circle"
     size={2}
   />
@@ -76,8 +72,7 @@ exports[`<Spinner /> with visible text matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
-  <Spinner
-    ariaLive="polite"
+  <StyledCustomizedSpinner
     className="y-spinner--circle"
     size={2}
   />

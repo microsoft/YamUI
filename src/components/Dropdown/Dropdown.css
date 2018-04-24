@@ -28,6 +28,7 @@
 
 .y-dropdown .ms-Dropdown-item {
   padding: 0.4rem 1.1rem 0.6rem;
+  text-align: left;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,
