@@ -4,7 +4,6 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular y-button__state-disabled"
-  classNames={Object {}}
   disabled={true}
   split={false}
   styles={Object {}}
@@ -12,9 +11,13 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -23,7 +26,6 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular y-button__state-loading"
-  classNames={Object {}}
   disabled={true}
   split={false}
   styles={Object {}}
@@ -31,9 +33,13 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
 >
   <Block
     className="y-button--content__hidden"
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
   <span
     className="y-button--spinner"
@@ -51,7 +57,6 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular TEST_CLASSNAME"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -59,9 +64,13 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -71,7 +80,6 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   ariaLabel="Aria description"
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -79,9 +87,13 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -90,7 +102,6 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -98,9 +109,13 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -109,7 +124,6 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -117,9 +131,13 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -128,7 +146,6 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular y-button__fullWidth"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -136,9 +153,13 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -147,7 +168,6 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -155,6 +175,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     <span
@@ -163,6 +184,15 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
       <Accounts />
     </span>
     Click Me
+    <div
+      className="y-button--secondary-text"
+    >
+      <span
+        className="y-button--icon-wrapper-left"
+      >
+        <Accounts />
+      </span>
+    </div>
   </Block>
 </BaseButton>
 `;
@@ -171,7 +201,6 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -179,6 +208,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
@@ -187,6 +217,15 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
     >
       <Accounts />
     </span>
+    <div
+      className="y-button--secondary-text"
+    >
+      <span
+        className="y-button--icon-wrapper-right"
+      >
+        <Accounts />
+      </span>
+    </div>
   </Block>
 </BaseButton>
 `;
@@ -195,7 +234,6 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   href="#"
   split={false}
@@ -204,9 +242,13 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -215,7 +257,6 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-primary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -223,9 +264,13 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -234,7 +279,6 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-primary y-button__size-regular y-button__state-loading"
-  classNames={Object {}}
   disabled={true}
   split={false}
   styles={Object {}}
@@ -242,9 +286,13 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 >
   <Block
     className="y-button--content__hidden"
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
   <span
     className="y-button--spinner"
@@ -262,7 +310,6 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -270,9 +317,13 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -281,7 +332,6 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-small"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -289,9 +339,13 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="small"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -300,7 +354,6 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-small y-button__state-loading"
-  classNames={Object {}}
   disabled={true}
   split={false}
   styles={Object {}}
@@ -308,9 +361,13 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 >
   <Block
     className="y-button--content__hidden"
+    textAlign="center"
     textSize="small"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
   <span
     className="y-button--spinner"
@@ -328,7 +385,6 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-small"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -336,6 +392,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="small"
   >
     <span
@@ -344,6 +401,15 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
       <Accounts />
     </span>
     Click Me
+    <div
+      className="y-button--secondary-text"
+    >
+      <span
+        className="y-button--icon-wrapper-left"
+      >
+        <Accounts />
+      </span>
+    </div>
   </Block>
 </BaseButton>
 `;
@@ -352,7 +418,6 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   split={false}
   styles={Object {}}
@@ -360,9 +425,13 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;
@@ -371,7 +440,6 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
   className="y-button y-button__color-secondary y-button__size-regular"
-  classNames={Object {}}
   disabled={false}
   href="https://www.yammer.com"
   split={false}
@@ -380,9 +448,13 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
 >
   <Block
     className=""
+    textAlign="center"
     textSize="mediumSub"
   >
     Click Me
+    <div
+      className="y-button--secondary-text"
+    />
   </Block>
 </BaseButton>
 `;

@@ -7,6 +7,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
+
 import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
 
@@ -19,6 +20,11 @@ export interface BaseButtonProps extends BaseComponentProps {
    * Visible button text.
    */
   text: string;
+
+  /**
+   * Alternative state visible button text. Used to determine maximum possible width of button
+   */
+  secondaryText?: string;
 
   /**
    * Additional label that must be provided if the button text is not descriptive enough.
@@ -183,7 +189,7 @@ export default class Button extends React.Component<ButtonProps> {
   }
 
   private getContents() {
-    const { icon: Icon, iconPosition, size, text } = this.props;
+    const { icon: Icon, iconPosition, size, text, secondaryText } = this.props;
 
     const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
 
@@ -195,11 +201,19 @@ export default class Button extends React.Component<ButtonProps> {
 
     const className = this.isLoading() ? 'y-button--content__hidden' : '';
 
+    const leftIcon = iconPosition === 'left' && buttonIcon;
+    const rightIcon = iconPosition === 'right' && buttonIcon;
+
     return (
-      <Block textSize={textSize} className={className}>
-        {iconPosition === 'left' && buttonIcon}
+      <Block textSize={textSize} className={className} textAlign="center">
+        {leftIcon}
         {text}
-        {iconPosition === 'right' && buttonIcon}
+        {rightIcon}
+        <div className="y-button--secondary-text">
+          {leftIcon}
+          {secondaryText}
+          {rightIcon}
+        </div>
       </Block>
     );
   }

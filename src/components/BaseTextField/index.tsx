@@ -6,6 +6,11 @@ import { ITextFieldProps as FabricTextFieldProps } from 'office-ui-fabric-react/
 
 export interface BaseTextFieldProps extends BaseComponentProps {
   /**
+   * aria-label attribute
+   */
+  ariaLabel?: string;
+
+  /**
    * Current value of the textfield.
    */
   value?: string;
@@ -33,7 +38,7 @@ export interface BaseTextFieldProps extends BaseComponentProps {
   /**
    * The textfield input description
    */
-  description?: string;
+  description?: string | JSX.Element;
 
   /**
    * Use to indicate that a value must be provided to allow the containing form to be submitted.
@@ -66,12 +71,36 @@ export interface BaseTextFieldProps extends BaseComponentProps {
   onMouseLeave?: ((event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 }
 
+/**
+ * This is a hack to allow us to accept jsx elements in the description prop.
+ *
+ * We depend on onRenderDescription to display the description. However, the fabric
+ * textfield will only invoke it when it has a truthy description or errorMessage prop.
+ * Therefore we pass an arbitrary truthy string. It's value is only used to invoke
+ * onRenderDescription, and is otherwise ignored.
+ */
+const descriptionPresent = (props: BaseTextFieldProps) => {
+  if (props.description === undefined) {
+    return undefined;
+  }
+  return 'true';
+};
+
+const getOnRenderDescription = (description: string | JSX.Element | undefined, errorMessage: string | undefined) => {
+  if (!description || errorMessage) {
+    return () => null;
+  }
+  return () => <span className="y-base-text-field--description">{description}</span>;
+};
+
 export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): FabricTextFieldProps {
   return {
     value: props.value,
     label: props.label,
-    description: props.errorMessage ? undefined : props.description,
+    description: descriptionPresent(props),
+    onRenderDescription: getOnRenderDescription(props.description, props.errorMessage),
     disabled: props.disabled,
+    ariaLabel: props.ariaLabel,
     'aria-required': props.required,
     errorMessage: props.errorMessage,
     placeholder: props.placeHolder,

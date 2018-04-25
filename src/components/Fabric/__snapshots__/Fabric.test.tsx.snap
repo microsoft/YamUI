@@ -2,7 +2,7 @@
 
 exports[`<Fabric /> with default options renders 1`] = `
 <div
-  class="ms-Fabric css-32"
+  class="ms-Fabric root-33"
 >
   wrapped content
 </div>
