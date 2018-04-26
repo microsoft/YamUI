@@ -18,13 +18,25 @@ export interface DebouncedOnChangeProps {
    * milliseconds.
    */
   debouncedOnChangeTime?: number;
+
+  /**
+   * Optional callback to access the component interface. Use this instead of ref for accessing
+   * the public methods and properties of the component.
+   */
+  componentRef?(a: any): void;
 }
 
 export interface DebouncedOnChangePrivateProps {
   /**
-   * Used to pass both onChange and debouncedOnChange to the contained component.
+   * Private: Used to pass both onChange and debouncedOnChange to the contained component.
    */
   unifiedOnChange?: ((newValue: any) => void);
+
+  /**
+   * Private: Optional callback to access the component.  Used to pass componentRef
+   * to the contained component.
+   */
+  ref?(a: any): void;
 }
 
 export interface NestedComponentProps {
@@ -50,8 +62,8 @@ export default class DebouncedOnChangeComponent extends React.Component<Debounce
   }
 
   public render() {
-    const { component: ComposedComponent } = this.props;
-    return <ComposedComponent {...this.props} unifiedOnChange={this.handleChange} />;
+    const { component: ComposedComponent, componentRef } = this.props;
+    return <ComposedComponent {...this.props} unifiedOnChange={this.handleChange} ref={componentRef} />;
   }
 
   public componentWillUnmount() {

@@ -3,7 +3,8 @@ import '../../yamui';
 import * as React from 'react';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
-import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react/lib/TextField';
+
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
 
@@ -29,9 +30,12 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
 class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
+  private fabricTextFieldElement: ITextField | undefined;
+
   public render() {
     return (
       <FabricTextField
+        componentRef={this.getRef}
         className={this.getClasses()}
         prefix={this.props.prefix}
         suffix={this.props.suffix}
@@ -41,6 +45,19 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
       />
     );
   }
+
+  public focus = () => {
+    const el = this.fabricTextFieldElement;
+    if (el) {
+      const valueLength = this.props.value ? this.props.value.length : 0;
+      el.focus();
+      el.setSelectionRange(valueLength, valueLength);
+    }
+  };
+
+  private getRef = (ref: ITextField | null) => {
+    this.fabricTextFieldElement = ref ? ref : undefined;
+  };
 
   private getClasses() {
     const { className, prefix, suffix } = this.props;

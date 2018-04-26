@@ -151,6 +151,35 @@ class ControlledTextField extends React.Component {
 <ControlledTextField />
 ```
 
+Controlled with link in description:
+```js { "props": { "data-description": "controlled onChange with debounce" } }
+class ControlledTextField extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  render() {
+    return (
+      <TextField
+        componentRef={(ref) => { this.textFieldRef = ref; } }
+        value={this.state.value}
+        description={<Clickable onClick={() => this.textFieldRef.focus()}>Focus and place cursor at the end of the input.</Clickable>}
+        onChange={this.handleChange}
+      />
+    );
+  }
+
+  handleChange(value) {
+    action('textfield changed')(value);
+    this.setState({ value });
+  }
+}
+
+<ControlledTextField />
+```
+
 Beside Button
 ```js { "props": { "data-description": "beside button" } }
 <FixedGridRow>
