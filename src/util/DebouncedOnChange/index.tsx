@@ -28,12 +28,12 @@ export interface DebouncedOnChangeProps {
 
 export interface DebouncedOnChangePrivateProps {
   /**
-   * Private: Used to pass both onChange and debouncedOnChange to the contained component.
+   * Used to pass both onChange and debouncedOnChange to the contained component.
    */
   unifiedOnChange?: ((newValue: any) => void);
 
   /**
-   * Private: Optional callback to access the component.  Used to pass componentRef
+   * Optional callback to access the component.  Used to pass componentRef
    * to the contained component.
    */
   ref?(a: any): void;
