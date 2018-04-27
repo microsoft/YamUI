@@ -152,7 +152,7 @@ class ControlledTextField extends React.Component {
 ```
 
 Controlled with link in description:
-```js { "props": { "data-description": "controlled onChange with debounce" } }
+```js { "props": { "data-description": "controlled with link in description" } }
 class ControlledTextField extends React.Component {
   constructor() {
     super();
