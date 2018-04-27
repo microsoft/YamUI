@@ -25,22 +25,30 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
   underlined?: boolean;
 }
 
+interface Focusable {
+  /**
+   * Sets focus to the input, and places cursor at the end of the value.
+   * @public
+   */
+  focus(): void;
+}
+
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
+class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> implements Focusable {
   private fabricTextFieldElement: ITextField | undefined;
 
   public render() {
     return (
       <FabricTextField
-        componentRef={this.getRef}
         className={this.getClasses()}
         prefix={this.props.prefix}
         suffix={this.props.suffix}
         underlined={this.props.underlined}
         onChanged={this.props.unifiedOnChange}
+        componentRef={this.getRef}
         {...getBaseTextFieldProps(this.props)}
       />
     );
@@ -50,6 +58,7 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
     const el = this.fabricTextFieldElement;
     if (el) {
       const valueLength = this.props.value ? this.props.value.length : 0;
+
       el.focus();
       el.setSelectionRange(valueLength, valueLength);
     }

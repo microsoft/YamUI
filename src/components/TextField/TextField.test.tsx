@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
 
 describe('<TextField />', () => {
@@ -15,6 +15,19 @@ describe('<TextField />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+
+    it('focus', () => {
+      const instance = component.instance() as any;
+      const fabricTextFieldElement = { focus: jest.fn(), setSelectionRange: jest.fn() };
+      const focusSpy = jest.spyOn(fabricTextFieldElement, 'focus');
+      const setSelectionRangeSpy = jest.spyOn(fabricTextFieldElement, 'setSelectionRange');
+
+      instance.fabricTextFieldElement = fabricTextFieldElement;
+      instance.focus();
+
+      expect(focusSpy).toHaveBeenCalled();
+      expect(setSelectionRangeSpy).toHaveBeenCalledWith(0, 0);
     });
   });
 
@@ -49,9 +62,16 @@ describe('<TextField />', () => {
     });
 
     it('focus', () => {
-      const instance = component.instance() as TextField;
+      const instance = component.instance() as any;
+      const fabricTextFieldElement = { focus: jest.fn(), setSelectionRange: jest.fn() };
+      const focusSpy = jest.spyOn(fabricTextFieldElement, 'focus');
+      const setSelectionRangeSpy = jest.spyOn(fabricTextFieldElement, 'setSelectionRange');
+
+      instance.fabricTextFieldElement = fabricTextFieldElement;
       instance.focus();
-      /* TODO: assert something here. */
+
+      expect(focusSpy).toHaveBeenCalled();
+      expect(setSelectionRangeSpy).toHaveBeenCalledWith('VALUE'.length, 'VALUE'.length);
     });
   });
 });
