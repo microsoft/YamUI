@@ -49,43 +49,62 @@ describe('<TextField />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-});
 
-describe('TextField#focus', () => {
-  let ref: any;
-  const setRef = (i: any) => (ref = i);
+  describe('full mount with default options', () => {
+    let ref: any;
+    const setRef = (i: any) => (ref = i);
 
-  describe('with default options', () => {
-    beforeEach(() => {
-      mount(<TextField componentRef={setRef} />);
-    });
+    beforeEach(() => {});
 
-    it('focus', () => {
-      const focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
-      const setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+    describe('when focused', () => {
+      let focusSpy: jest.SpyInstance;
+      let setSelectionRangeSpy: jest.SpyInstance;
 
-      ref.focus();
+      beforeEach(() => {
+        focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
+        setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+        mount(<TextField componentRef={setRef} />);
+      });
 
-      expect(focusSpy).toHaveBeenCalled();
-      expect(setSelectionRangeSpy).toHaveBeenCalledWith(0, 0);
+      it('calls focus', () => {
+        ref.focus();
+        expect(focusSpy).toHaveBeenCalled();
+      });
+
+      it('calls setSelectionRangeSpy', () => {
+        ref.focus();
+        expect(setSelectionRangeSpy).toHaveBeenCalledWith(0, 0);
+      });
     });
   });
 
-  describe('with value', () => {
+  describe('full mount with value', () => {
     const value = 'VALUE';
+    let ref: any;
+    const setRef = (i: any) => (ref = i);
 
     beforeEach(() => {
       mount(<TextField value={value} componentRef={setRef} />);
     });
 
-    it('focus', () => {
-      const focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
-      const setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+    describe('when focused', () => {
+      let focusSpy: jest.SpyInstance;
+      let setSelectionRangeSpy: jest.SpyInstance;
 
-      ref.focus();
+      beforeEach(() => {
+        focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
+        setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+      });
 
-      expect(focusSpy).toHaveBeenCalled();
-      expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
+      it('calls focus', () => {
+        ref.focus();
+        expect(focusSpy).toHaveBeenCalled();
+      });
+
+      it('calls setSelectionRangeSpy', () => {
+        ref.focus();
+        expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
+      });
     });
   });
 });
