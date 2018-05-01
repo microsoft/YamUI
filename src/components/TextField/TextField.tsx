@@ -40,7 +40,7 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
         suffix={this.props.suffix}
         underlined={this.props.underlined}
         onChanged={this.props.unifiedOnChange}
-        componentRef={this.getRef}
+        componentRef={this.setRef}
         {...getBaseTextFieldProps(this.props)}
       />
     );
@@ -56,7 +56,7 @@ class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivat
     }
   };
 
-  private getRef = (ref: ITextField | null) => {
+  private setRef = (ref: ITextField | null) => {
     this.fabricTextFieldElement = ref ? ref : undefined;
   };
 

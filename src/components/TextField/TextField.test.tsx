@@ -64,15 +64,14 @@ describe('<TextField />', () => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
         mount(<TextField componentRef={setRef} />);
+        ref.focus();
       });
 
       it('calls focus', () => {
-        ref.focus();
         expect(focusSpy).toHaveBeenCalled();
       });
 
       it('calls setSelectionRangeSpy', () => {
-        ref.focus();
         expect(setSelectionRangeSpy).toHaveBeenCalledWith(0, 0);
       });
     });
@@ -94,15 +93,14 @@ describe('<TextField />', () => {
       beforeEach(() => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+        ref.focus();
       });
 
       it('calls focus', () => {
-        ref.focus();
         expect(focusSpy).toHaveBeenCalled();
       });
 
       it('calls setSelectionRangeSpy', () => {
-        ref.focus();
         expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
       });
     });
