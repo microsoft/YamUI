@@ -25,6 +25,7 @@ describe('<TextField />', () => {
         <TextField
           prefix="PREFIX"
           suffix="SUFFIX"
+          maxLength={100}
           underlined={true}
           className="CLASS"
           value="VALUE"
@@ -50,11 +51,9 @@ describe('<TextField />', () => {
     });
   });
 
-  describe('full mount with default options', () => {
+  describe('mounted with default options', () => {
     let ref: any;
     const setRef = (i: any) => (ref = i);
-
-    beforeEach(() => {});
 
     describe('when focused', () => {
       let focusSpy: jest.SpyInstance;
@@ -77,7 +76,7 @@ describe('<TextField />', () => {
     });
   });
 
-  describe('full mount with value', () => {
+  describe('mounted with value', () => {
     const value = 'VALUE';
     let ref: any;
     const setRef = (i: any) => (ref = i);
