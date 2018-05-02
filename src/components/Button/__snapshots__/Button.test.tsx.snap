@@ -47,6 +47,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
     <Spinner
       color="light"
       hideText={true}
+      isCentered={true}
       size="small"
     />
   </span>
@@ -300,6 +301,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
     <Spinner
       color="dark"
       hideText={true}
+      isCentered={true}
       size="small"
     />
   </span>
@@ -375,6 +377,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
     <Spinner
       color="light"
       hideText={true}
+      isCentered={true}
       size="xSmall"
     />
   </span>
