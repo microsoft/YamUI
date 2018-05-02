@@ -17,14 +17,70 @@ import './PreviewCard.css';
 
 export interface PreviewCardProps extends BaseComponentProps {
   /**
+   * The name of the file or entity being represented. This will be displayed as the title.
+   */
+  name: string;
+
+  /**
+   * Description of the file.
+   */
+  description?: string;
+
+  /**
+   * Whether the description can be edited or not.
+   */
+  isDescriptionEditable?: boolean;
+
+  /**
+   * Will display on the left of the PreviewCard. If not provided the image will be replaced
+   * by an icon depending on the file type.
+   */
+  imageUrl?: string;
+
+  /**
+   * The alt text to be displayed for the image.
+   */
+  imageDescription?: string;
+
+  /**
+   * If true will display a Spinner, or a ProgressIndicator if progress is also provided.
+   * Note that the loading Spinner will be displayed in place of the description.
+   */
+  isLoading?: boolean;
+
+  /**
+   * A string to describe the loading state. If you've provided a progress value then
+   * this string should also include that percentage.
+   */
+  loadingText?: string;
+
+  /**
+   * Percentage between 0 and 1. If provided, will replace the loading Spinner with
+   * a ProgressIndicator to show the percentage.
+   */
+  progress?: number;
+
+  /**
+   * The text to display when the description is editable and currently empty.
+   */
+  emptyEditableDescriptionText?: string;
+
+  /**
+   * An optional max length for the description field when editing.
+   */
+  descriptionMaxLength?: number;
+
+  /**
    * Triggered when the PreviewCard is clicked. This will not be triggered for clicks on the Remove icon
    * or to edit the description.
    */
   onClick?: (() => void);
+
   /**
    * AriaLabel value describing the onClick action.
    */
-  onClickAriaLabel?: string;
+  clickAriaLabel?: string;
+
   /**
    * Triggered when the Remove icon is clicked.
    */
@@ -33,55 +89,12 @@ export interface PreviewCardProps extends BaseComponentProps {
   /**
    * Alt text for the Remove button
    */
-  removeAltText?: string;
+  removeAriaLabel?: string;
+
   /**
    * Returns the new description string when updated.
    */
   onDescriptionChange?: ((description: string) => void);
-  /**
-   * The name of the file or entity being represented. This will be displayed as the title.
-   */
-  name: string;
-  /**
-   * Will display on the left of the PreviewCard. If not provided the image will be replaced
-   * by an icon depending on the file type.
-   */
-  imageUrl?: string;
-  /**
-   * The alt text to displayed for the image.
-   */
-  imageDescription?: string;
-  /**
-   * If true will display a Spinner, or a ProgressIndicator if progress is also provided.
-   * Note that the loading Spinner will be displayed in place of the description.
-   */
-  isLoading?: boolean;
-  /**
-   * A string to describe the loading state. If you've provided a progress value then
-   * this string should also include that percentage.
-   */
-  loadingText?: string;
-  /**
-   * Percentage between 0 and 1. If provided, will replace the loading Spinner with
-   * a ProgressIndicator to show the percentage.
-   */
-  progress?: number;
-  /**
-   * Description of the file.
-   */
-  description?: string;
-  /**
-   * Whether the description can be edited or not.
-   */
-  isDescriptionEditable?: boolean;
-  /**
-   * The text to display when the description is editable and currently empty.
-   */
-  emptyEditableDescriptionText?: string;
-  /**
-   * An optional max length for the description field when editing.
-   */
-  descriptionMaxLength?: number;
 }
 
 export interface PreviewCardState {
@@ -119,10 +132,12 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
   }
 
   private getNameContent() {
-    const { name, onClick, onClickAriaLabel } = this.props;
+    const { name, onClick, clickAriaLabel } = this.props;
     const size = this.state.isEditing ? TextSize.XSMALL : undefined;
+    // Note that the actual onClick handler is on the outer Box wrapper,
+    // while the clickAriaLabel is here on the keyboard-tabbable element.
     const content = onClick ? (
-      <Clickable ariaLabel={onClickAriaLabel} unstyled={true}>
+      <Clickable ariaLabel={clickAriaLabel} unstyled={true}>
         {name}
       </Clickable>
     ) : (
@@ -132,11 +147,11 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
   }
 
   private getRemoveButton() {
-    const { onRemoveClick, removeAltText } = this.props;
+    const { onRemoveClick, removeAriaLabel } = this.props;
     if (onRemoveClick) {
       return (
         <span className="y-previewCard--remove">
-          <Clickable onClick={this.handleRemoveClick} unstyled={true} ariaLabel={removeAltText} block={true}>
+          <Clickable onClick={this.handleRemoveClick} unstyled={true} ariaLabel={removeAriaLabel} block={true}>
             <Block padding={GutterSize.SMALL}>
               <RemoveIcon size={IconSize.XSMALL} block={true} />
             </Block>
@@ -187,10 +202,10 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
 
   private getEditableText() {
     const { description, descriptionMaxLength, emptyEditableDescriptionText, onDescriptionChange } = this.props;
-    const push = this.state.isEditing ? -3 : 0;
+    const blockPush = this.state.isEditing ? -3 : 0;
 
     return (
-      <Block push={push} textColor={TextColor.METADATA}>
+      <Block push={blockPush} textColor={TextColor.METADATA}>
         <EditableText
           text={description}
           promptText={emptyEditableDescriptionText}
@@ -215,9 +230,7 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
 
   private handleRemoveClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    if (this.props.onRemoveClick) {
-      this.props.onRemoveClick();
-    }
+    (this.props.onRemoveClick as Function)();
   };
 
   private enterEditMode = () => {

@@ -62,7 +62,7 @@ With loading state and progress:
 />
 ```
 
-Editable with an onClick handler:
+Editable with onClick and onRemove handlers:
 
 ```js { "props": { "data-description": "editable with onclick" } }
 <PreviewCard
