@@ -1,8 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { mount, shallow, ReactWrapper, ShallowWrapper } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable from '../Clickable';
-import TextField from '../TextField';
+import TextField, { ITextField } from '../TextField';
 import EditableText, { EditableTextProps } from './index';
 
 describe('<EditableText />', () => {
@@ -118,6 +118,130 @@ describe('<EditableText />', () => {
 
           it('triggers the onEndEditing callback', () => {
             expect(endCallback).toHaveBeenCalledTimes(1);
+          });
+        });
+
+        describe('and an unimportant key is pressed', () => {
+          beforeEach(() => {
+            const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (event: any) => void;
+            onKeyDown({ which: 65, preventDefault: jest.fn() });
+            component.update();
+          });
+
+          it('remains in edit mode', () => {
+            expect(component).toMatchSnapshot();
+          });
+
+          it('does not trigger the update callback', () => {
+            expect(updateCallback).not.toHaveBeenCalled();
+          });
+
+          it('does not trigger the onEndEditing callback', () => {
+            expect(endCallback).not.toHaveBeenCalled();
+          });
+        });
+
+        describe('when the underlying TextField provides its ref', () => {
+          let fakeRef: Partial<ITextField>;
+
+          beforeEach(() => {
+            // Get a reference to our fakeRef so we can check its focus() spy
+            fakeRef = { focus: jest.fn() };
+            const setRef: (node: Partial<ITextField>) => void = component.find(TextField).prop('componentRef') as (
+              node: Partial<ITextField>,
+            ) => void;
+            setRef(fakeRef);
+          });
+
+          describe('and the textfield enters edit mode', () => {
+            beforeEach(() => {
+              // Exit edit mode...
+              const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (
+                event: any,
+              ) => void;
+              onKeyDown({ which: 27, preventDefault: jest.fn() });
+              component.update();
+
+              //  ...and re-enter edit mode to trigger focus now that we have a spy in place
+              component.find(Clickable).simulate('click', fakeEvent);
+            });
+
+            it('focuses its text input', () => {
+              expect(fakeRef.focus).toHaveBeenCalledTimes(1);
+            });
+          });
+        });
+      });
+    });
+  });
+
+  describe('without props', () => {
+    beforeEach(() => {
+      component = shallow(<EditableText />);
+    });
+
+    describe('when clicked', () => {
+      beforeEach(() => {
+        component.find(Clickable).simulate('click', fakeEvent);
+      });
+
+      describe('and text is changed', () => {
+        beforeEach(() => {
+          const onChange: (text: string) => void = component.find(TextField).prop('onChange') as (text: string) => void;
+          onChange('new text');
+        });
+
+        describe('and ENTER is pressed', () => {
+          beforeEach(() => {
+            const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (event: any) => void;
+            onKeyDown({ which: 13, preventDefault: jest.fn() });
+            component.update();
+          });
+
+          it('exits edit mode', () => {
+            expect(component).toMatchSnapshot();
+          });
+        });
+
+        describe('and ESC is pressed', () => {
+          beforeEach(() => {
+            const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (event: any) => void;
+            onKeyDown({ which: 27, preventDefault: jest.fn() });
+            component.update();
+          });
+
+          it('exits edit mode', () => {
+            expect(component).toMatchSnapshot();
+          });
+        });
+
+        describe('when the underlying TextField provides its ref', () => {
+          let fakeRef: Partial<ITextField>;
+
+          beforeEach(() => {
+            // Get a reference to our fakeRef so we can check its focus() spy
+            fakeRef = { focus: jest.fn() };
+            const setRef: (node: Partial<ITextField>) => void = component.find(TextField).prop('componentRef') as (
+              node: Partial<ITextField>,
+            ) => void;
+            setRef(fakeRef);
+          });
+
+          describe('and the textfield enters edit mode', () => {
+            beforeEach(() => {
+              // Exit edit mode and re-enter edit mode to trigger focus now that we have a spy in place
+              const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (
+                event: any,
+              ) => void;
+              onKeyDown({ which: 27, preventDefault: jest.fn() });
+              component.update();
+
+              component.find(Clickable).simulate('click', fakeEvent);
+            });
+
+            it('focuses its text input', () => {
+              expect(fakeRef.focus).toHaveBeenCalledTimes(1);
+            });
           });
         });
       });

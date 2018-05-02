@@ -60,10 +60,7 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
   constructor(props: EditableTextProps) {
     super(props);
     this.textFieldRef = null;
-    this.state = {
-      isEditing: false,
-      editedValue: '',
-    };
+    this.state = { isEditing: false, editedValue: '' };
   }
 
   public render() {
@@ -103,6 +100,13 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
     );
   }
 
+  public componentDidUpdate(_prevProps: EditableTextProps, prevState: EditableTextState) {
+    // Set focus when we enter edit mode; better than depending on a hacky setTimeout()
+    if (this.state.isEditing && !prevState.isEditing) {
+      this.setTextFieldFocus();
+    }
+  }
+
   private onKeyDown = (event: any) => {
     switch (event.which) {
       case KeyCodes.escape:
@@ -126,17 +130,14 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
   };
 
   private setTextFieldFocus() {
-    window.setTimeout(() => {
-      if (this.textFieldRef) {
-        this.textFieldRef.focus();
-      }
-    }, 0);
+    if (this.textFieldRef) {
+      this.textFieldRef.focus();
+    }
   }
 
   private handleEditClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     this.setState(() => ({ isEditing: true, editedValue: this.props.text || '' }));
-    this.setTextFieldFocus();
     if (this.props.onBeginEditing) {
       this.props.onBeginEditing();
     }
