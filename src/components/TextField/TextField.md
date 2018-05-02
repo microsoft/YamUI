@@ -24,6 +24,14 @@ With JSX Description
 />
 ```
 
+Max length
+```js { "props": { "data-description": "maxLength" } }
+<TextField
+  value="maxLength 15"
+  maxLength={15}
+/>
+```
+
 With Placeholder
 ```js { "props": { "data-description": "with placeholder" } }
 <TextField
