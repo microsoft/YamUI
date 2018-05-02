@@ -53,12 +53,6 @@ export interface BaseTextFieldProps extends BaseComponentProps {
   maxLength?: number;
 
   /**
-   * A render-time callback which receives the TextField component as a ref. Use this to save a ref
-   * when you will need to set focus via _textFieldRef.focus().
-   */
-  componentRef?: ((component: ITextField | null) => void);
-
-  /**
    * Callback for the onChanged event.
    */
   onChange?: ((newValue: any) => void);
@@ -123,7 +117,6 @@ export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): F
     errorMessage: props.errorMessage,
     placeholder: props.placeHolder,
     maxLength: props.maxLength,
-    componentRef: props.componentRef,
     onFocus: props.onFocus,
     onBlur: props.onBlur,
     onMouseEnter: props.onMouseEnter,
