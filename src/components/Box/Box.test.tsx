@@ -35,4 +35,22 @@ describe('<Box />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('with onClick', () => {
+    let onClick: jest.Mock;
+    beforeEach(() => {
+      onClick = jest.fn();
+      component = shallow(<Box onClick={onClick}>click me</Box>);
+    });
+
+    describe('when clicked', () => {
+      beforeEach(() => {
+        component.simulate('click');
+      });
+
+      it('triggers the onClick callback', () => {
+        expect(onClick).toHaveBeenCalledTimes(1);
+      });
+    });
+  });
 });
