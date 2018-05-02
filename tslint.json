@@ -1,17 +1,13 @@
 {
   "extends": ["tslint:latest", "tslint-react", "tslint-microsoft-contrib"],
   "rules": {
-    "max-line-length": [
+    "max-line-length": [true, 120],
+    "file-header": [
       true,
-      120
+      "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "
     ],
-    "file-header": [true, "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "],
     "import-name": false,
-    "variable-name": [
-      true,
-      "check-format",
-      "allow-pascal-case"
-    ],
+    "variable-name": [true, "check-format", "allow-pascal-case", "allow-leading-underscore"],
     "semicolon": [true, "always", "ignore-bound-class-methods"],
     "align": false,
     "completed-docs": false,
@@ -36,9 +32,7 @@
     "no-submodule-imports": false,
     "no-unsafe-any": false,
     "number-literal-format": false,
-    "ordered-imports": [
-      false
-    ],
+    "ordered-imports": [false],
     "prefer-type-cast": false,
     "promise-function-async": false,
     "quotemark": [true, "single", "jsx-double", "avoid-escape"],
