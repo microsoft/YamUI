@@ -1,0 +1,6 @@
+*.ejs
+package.json
+package-lock.json
+config/yo
+src/components/Icon/icons
+src/components/Illustration/illustrations
