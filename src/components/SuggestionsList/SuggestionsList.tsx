@@ -113,7 +113,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
   private getLoading() {
     return (
       <Block push={-2}>
-        <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" />
+        <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" isCentered={true} />
       </Block>
     );
   }

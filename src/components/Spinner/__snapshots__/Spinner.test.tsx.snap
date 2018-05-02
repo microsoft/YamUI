@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Spinner /> with a color matches its snapshot 1`] = `
+exports[`<Spinner /> when centered matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-dark y-spinner__size-medium"
+  className="y-spinner y-spinner__color-light y-spinner__size-medium y-spinner__isCentered"
 >
   <StyledCustomizedSpinner
     className="y-spinner--circle"
@@ -10,7 +10,7 @@ exports[`<Spinner /> with a color matches its snapshot 1`] = `
   />
   <Text
     className="y-spinner--label"
-    color="white"
+    color="primary"
     size="mediumSub"
   >
     Loading
@@ -54,6 +54,24 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Spinner /> with dark color matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-dark y-spinner__size-medium"
+>
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
+  />
+  <Text
+    className="y-spinner--label"
+    color="white"
+    size="mediumSub"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
 exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 <div
   className="y-spinner y-spinner__color-light y-spinner__size-medium"
@@ -65,6 +83,24 @@ exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
   <ScreenreaderText>
     Loading
   </ScreenreaderText>
+</div>
+`;
+
+exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-metadata y-spinner__size-medium"
+>
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
+  />
+  <Text
+    className="y-spinner--label"
+    color="metadata"
+    size="mediumSub"
+  >
+    Loading
+  </Text>
 </div>
 `;
 

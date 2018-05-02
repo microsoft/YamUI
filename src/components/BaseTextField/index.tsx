@@ -2,7 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { ITextFieldProps as FabricTextFieldProps } from 'office-ui-fabric-react/lib/TextField';
+import { ITextFieldProps as FabricTextFieldProps, ITextField } from 'office-ui-fabric-react/lib/TextField';
+
+export { ITextField };
 
 export interface BaseTextFieldProps extends BaseComponentProps {
   /**
@@ -46,6 +48,11 @@ export interface BaseTextFieldProps extends BaseComponentProps {
   required?: boolean;
 
   /**
+   * Use as the input's maxLength attribute.
+   */
+  maxLength?: number;
+
+  /**
    * Callback for the onChanged event.
    */
   onChange?: ((newValue: any) => void);
@@ -69,6 +76,11 @@ export interface BaseTextFieldProps extends BaseComponentProps {
    * Mouse leave callback handler.
    */
   onMouseLeave?: ((event: React.MouseEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
+
+  /**
+   * Key press handler, cancelable before text is entered.
+   */
+  onKeyDown?: ((event: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void);
 }
 
 /**
@@ -104,9 +116,11 @@ export function getBaseTextFieldProps<T extends BaseTextFieldProps>(props: T): F
     'aria-required': props.required,
     errorMessage: props.errorMessage,
     placeholder: props.placeHolder,
+    maxLength: props.maxLength,
     onFocus: props.onFocus,
     onBlur: props.onBlur,
     onMouseEnter: props.onMouseEnter,
     onMouseLeave: props.onMouseLeave,
+    onKeyDown: props.onKeyDown,
   };
 }
