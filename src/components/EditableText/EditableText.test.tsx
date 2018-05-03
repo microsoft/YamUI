@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable from '../Clickable';
-import TextField, { ITextField } from '../TextField';
+import TextField, { TextFieldComponent } from '../TextField';
 import EditableText, { EditableTextProps } from './index';
 
 describe('<EditableText />', () => {
@@ -142,14 +142,14 @@ describe('<EditableText />', () => {
         });
 
         describe('when the underlying TextField provides its ref', () => {
-          let fakeRef: Partial<ITextField>;
+          let fakeRef: Partial<TextFieldComponent>;
 
           beforeEach(() => {
             // Get a reference to our fakeRef so we can check its focus() spy
             fakeRef = { focus: jest.fn() };
-            const setRef: (node: Partial<ITextField>) => void = component.find(TextField).prop('componentRef') as (
-              node: Partial<ITextField>,
-            ) => void;
+            const setRef: (node: Partial<TextFieldComponent>) => void = component
+              .find(TextField)
+              .prop('componentRef') as (node: Partial<TextFieldComponent>) => void;
             setRef(fakeRef);
           });
 
@@ -216,14 +216,14 @@ describe('<EditableText />', () => {
         });
 
         describe('when the underlying TextField provides its ref', () => {
-          let fakeRef: Partial<ITextField>;
+          let fakeRef: Partial<TextFieldComponent>;
 
           beforeEach(() => {
             // Get a reference to our fakeRef so we can check its focus() spy
             fakeRef = { focus: jest.fn() };
-            const setRef: (node: Partial<ITextField>) => void = component.find(TextField).prop('componentRef') as (
-              node: Partial<ITextField>,
-            ) => void;
+            const setRef: (node: Partial<TextFieldComponent>) => void = component
+              .find(TextField)
+              .prop('componentRef') as (node: Partial<TextFieldComponent>) => void;
             setRef(fakeRef);
           });
 

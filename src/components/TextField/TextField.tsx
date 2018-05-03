@@ -26,11 +26,18 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
   underlined?: boolean;
 }
 
+export interface TextFieldComponent {
+  /**
+   * Sets focus on the input.
+   */
+  focus(): void;
+}
+
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps> {
+class TextField extends React.Component<TextFieldProps> implements TextFieldComponent {
   private fabricTextFieldRef: ITextField | null;
 
   public constructor(props: TextFieldProps) {

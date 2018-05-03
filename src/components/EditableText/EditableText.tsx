@@ -5,7 +5,7 @@ import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
-import TextField, { ITextField } from '../TextField';
+import TextField, { TextFieldComponent } from '../TextField';
 import { KeyCodes } from '../../util/enums';
 import './EditableText.css';
 
@@ -55,7 +55,7 @@ export interface EditableTextState {
  * Displays text which can be edited on click.
  */
 export default class EditableText extends React.Component<EditableTextProps, EditableTextState> {
-  private textFieldRef: ITextField | null;
+  private textFieldRef: TextFieldComponent | null;
 
   constructor(props: EditableTextProps) {
     super(props);
@@ -121,7 +121,7 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
     }
   };
 
-  private setTextFieldRef = (component: ITextField | null) => {
+  private setTextFieldRef = (component: TextFieldComponent | null) => {
     this.textFieldRef = component;
   };
 
