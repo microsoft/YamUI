@@ -9,8 +9,6 @@ import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
 
-export { ITextField };
-
 export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps {
   /**
    * String for prefix.
