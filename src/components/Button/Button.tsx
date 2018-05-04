@@ -228,7 +228,7 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <span className="y-button--spinner">
-        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} />
+        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} isCentered={true} />
       </span>
     );
   }
