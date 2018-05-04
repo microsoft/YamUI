@@ -80,7 +80,7 @@
   },
   "scripts": {
     "clean:build": "rimraf build/*",
-    "clean:dist": "rimraf dist/*",
+    "clean:dist": "rimraf dist/* dist-*/*",
     "clean:docs": "rimraf build/docs/*",
     "clean:icons": "rimraf build/icons/* src/components/Icon/icons/*.tsx",
     "clean:illustrations": "rimraf build/illustrations/* src/components/Illustration/illustrations/*.tsx",
@@ -88,7 +88,8 @@
     "clean": "run-p clean:build clean:dist",
     "build:css:global": "postcss src/css/index.css --output dist/yamui-base.css",
     "build:css:components": "postcss \"src/components/**/*.css\" --dir \"dist/components\" --base \"src/components\"",
-    "build:ts:components": "tsc --project .",
+    "build:es2015:components": "tsc -p tsconfig.es2015.json",
+    "build:cjs:components": "tsc -p .",
     "build": "run-s clean build:**",
     "test:eslint:root": "eslint \"./*.+(js|jsx)\"",
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
