@@ -25,15 +25,17 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
   underlined?: boolean;
 }
 
+export type DebouncedTextFieldProps = TextFieldProps & DebouncedOnChangePrivateProps;
+
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps & DebouncedOnChangePrivateProps> {
+class TextField extends React.Component<DebouncedTextFieldProps> {
   private fabricTextFieldElement: ITextField | null;
 
-  public constructor() {
-    super();
+  public constructor(props: DebouncedTextFieldProps) {
+    super(props);
     this.fabricTextFieldElement = null;
   }
 
