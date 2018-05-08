@@ -5,6 +5,7 @@
     "global-require": "off",
     "import/no-extraneous-dependencies": "off",
     "max-len": [2, 120],
+    "function-paren-newline": ["error", "consistent"],
     "header/header": [
       2,
       "block",
