@@ -53,7 +53,7 @@ describe('<PreviewCard />', () => {
 
       describe('when entering edit mode', () => {
         beforeEach(() => {
-          const editableText = shallow(component.find(MediaObject).prop('metadataContent') as any).find(EditableText);
+          const editableText = shallow(component.find(MediaObject).prop('metadataContent')).find(EditableText);
           const beginEditingCallback = editableText.prop('onBeginEditing') as Function;
           beginEditingCallback();
           component.update();
@@ -66,7 +66,7 @@ describe('<PreviewCard />', () => {
 
       describe('when exiting edit mode', () => {
         beforeEach(() => {
-          const editableText = shallow(component.find(MediaObject).prop('metadataContent') as any).find(EditableText);
+          const editableText = shallow(component.find(MediaObject).prop('metadataContent')).find(EditableText);
           const endEditingCallback = editableText.prop('onEndEditing') as Function;
           endEditingCallback();
           component.update();

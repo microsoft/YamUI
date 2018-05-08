@@ -115,6 +115,7 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
     metadataContent={
       <Block
         className="y-previewCard--spinner"
+        push={1}
         textColor="metadata"
       >
         <Spinner

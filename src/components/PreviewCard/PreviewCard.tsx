@@ -222,7 +222,7 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
   private getLoadingSpinner() {
     const { loadingText } = this.props;
     return (
-      <Block textColor={TextColor.METADATA} className="y-previewCard--spinner">
+      <Block textColor={TextColor.METADATA} className="y-previewCard--spinner" push={1}>
         <Spinner text={loadingText as string} size={SpinnerSize.XSMALL} color={SpinnerColor.METADATA} />
       </Block>
     );
