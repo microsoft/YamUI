@@ -8,7 +8,7 @@ import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
 
-export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps {
+export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps, DebouncedOnChangePrivateProps {
   /**
    * String for prefix.
    */
@@ -25,16 +25,14 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
   underlined?: boolean;
 }
 
-export type DebouncedTextFieldProps = TextFieldProps & DebouncedOnChangePrivateProps;
-
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<DebouncedTextFieldProps> {
+class TextField extends React.Component<TextFieldProps> {
   private fabricTextFieldElement: ITextField | null;
 
-  public constructor(props: DebouncedTextFieldProps) {
+  public constructor(props: TextFieldProps) {
     super(props);
     this.fabricTextFieldElement = null;
   }
