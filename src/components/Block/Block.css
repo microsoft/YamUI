@@ -3,8 +3,8 @@
 @import 'src/css/variables/fonts.css';
 @import 'src/css/variables/gutters.css';
 
-.y-block {
-  /* Setting full width to push out when nested in a Clickable button */
+/* Setting full width to push out when nested in a Clickable button */
+.y-clickable .y-block {
   width: 100%;
 }
 

@@ -26,15 +26,17 @@
   color: $textColor__disabled;
 }
 
-.y-base-text-field--description {
+.y-base-text-field--description,
+.y-base-text-field .ms-TextField-errorMessage {
   @extend text__small;
+  display: block;
+  padding-top: 0.2rem;
+}
+
+.y-base-text-field--description {
   color: $textColor__metadata;
-  position: relative;
-  top: -0.1rem;
 }
 
 .y-base-text-field .ms-TextField-errorMessage {
-  @extend text__small;
   color: $textColor__error;
-  padding-top: 0.2rem;
 }

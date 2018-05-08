@@ -145,6 +145,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
       className="y-suggestions-list--loading"
       color="light"
       hideText={false}
+      isCentered={true}
       size="medium"
       text="loadingText"
     />
@@ -188,6 +189,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       className="y-suggestions-list--loading"
       color="light"
       hideText={false}
+      isCentered={true}
       size="medium"
       text="loadingText"
     />
@@ -229,6 +231,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       className="y-suggestions-list--loading"
       color="light"
       hideText={false}
+      isCentered={true}
       size="medium"
       text="loadingText"
     />
@@ -247,6 +250,7 @@ exports[`<SuggestionsList /> when isLoading=true without results renders as expe
       className="y-suggestions-list--loading"
       color="light"
       hideText={false}
+      isCentered={true}
       size="medium"
       text="loadingText"
     />
