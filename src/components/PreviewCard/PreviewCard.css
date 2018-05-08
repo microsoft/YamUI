@@ -1,6 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import 'src/css/variables/colors.css';
 
+.y-previewCard__hasClick:hover {
+  background-color: $interactiveElementBackround__focused;
+}
+
 .y-previewCard--media {
   padding-bottom: 2px;
 }

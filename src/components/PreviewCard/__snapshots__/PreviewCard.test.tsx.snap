@@ -248,7 +248,7 @@ exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className="y-previewCard y-previewCard__hasClick"
   onClick={[MockFunction]}
 >
   <MediaObject

@@ -40,7 +40,7 @@
 .y-menu-button--callout .ms-ContextualMenu-item:hover .ms-ContextualMenu-link:not(.is-disabled),
 .y-menu-button--callout .ms-ContextualMenu-item:active .ms-ContextualMenu-link:not(.is-disabled),
 .y-menu-button--callout .ms-ContextualMenu-item:focus .ms-ContextualMenu-link:not(.is-disabled) {
-  background-color: $dropdownOptionBackgroundColor__focused;
+  background-color: $interactiveElementBackround__focused;
 }
 
 /* Headers and Dividers */

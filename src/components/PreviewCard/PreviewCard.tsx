@@ -122,13 +122,28 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
       metadataContent: this.getDescriptionContent(),
     };
 
+    const onClick = this.allowOnClick() ? this.props.onClick : undefined;
+
     return (
-      <Box className={join(['y-previewCard', this.props.className])} onClick={this.props.onClick}>
+      <Box className={this.getClassnames()} onClick={onClick}>
         <MediaObject {...mediaObjectProps} />
         {this.getRemoveButton()}
         {this.getProgressIndicator()}
       </Box>
     );
+  }
+
+  private getClassnames() {
+    const classes = ['y-previewCard', this.props.className];
+    if (this.allowOnClick()) {
+      classes.push('y-previewCard__hasClick');
+    }
+    return join(classes);
+  }
+
+  // Allow onClick callback and hover styling if onClick prop was provided and we're not in edit mode
+  private allowOnClick(): boolean {
+    return !!this.props.onClick && !this.state.isEditing;
   }
 
   private getNameContent() {
