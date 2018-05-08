@@ -1,11 +1,17 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 
 .y-text-field.ms-TextField--underlined .ms-TextField-fieldGroup {
-  height: 2.9rem;
+  height: 2.5rem;
+  padding-bottom: 0.3rem;
 }
 
 .y-text-field.ms-TextField--underlined .ms-TextField-field {
-  padding-left: 0px;
+  padding-left: 0;
+}
+
+.y-text-field.ms-TextField--underlined .y-base-text-field--description,
+.y-text-field.ms-TextField--underlined .ms-TextField-errorMessage {
+  padding-top: 0.1rem;
 }
 
 .y-text-field.ms-TextField--underlined.is-active .ms-TextField-wrapper {

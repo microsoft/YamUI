@@ -24,6 +24,14 @@ With JSX Description
 />
 ```
 
+Max length
+```js { "props": { "data-description": "maxLength" } }
+<TextField
+  value="maxLength 15"
+  maxLength={15}
+/>
+```
+
 With Placeholder
 ```js { "props": { "data-description": "with placeholder" } }
 <TextField
@@ -192,15 +200,24 @@ Underlined Variation
 ```js { "props": { "data-description": "basic underlined" } }
 <TextField
   placeHolder="Textfield Placeholder..."
-  underlined
+  underlined={true}
 />
 ```
 
-Underlined Variation With Error
+Underlined With Description
+```js { "props": { "data-description": "underlined with description" } }
+<TextField
+  description="Small hint goes here"
+  placeHolder="Textfield with description"
+  underlined={true}
+/>
+```
+
+Underlined With Error
 ```js { "props": { "data-description": "underlined with error" } }
 <TextField
   errorMessage="Error hint goes here"
   placeHolder="Textfield Error"
-  underlined
+  underlined={true}
 />
 ```
