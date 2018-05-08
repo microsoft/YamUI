@@ -75,6 +75,28 @@ describe('<EditableText />', () => {
         expect(beginCallback).toHaveBeenCalledTimes(1);
       });
 
+      // Getting coverage on componentDidUpdate, necessary because of https://github.com/airbnb/enzyme/issues/1452
+      describe('when triggered to enter edit mode again', () => {
+        beforeEach(() => {
+          (component.instance() as any).componentDidUpdate({}, { isEditing: true });
+        });
+
+        it('remains in edit mode', () => {
+          expect(component).toMatchSnapshot();
+        });
+      });
+
+      // Getting coverage on setTextFieldFocus, necessary because of https://github.com/airbnb/enzyme/issues/1452
+      describe('when triggered to enter edit mode without private textFieldRef', () => {
+        beforeEach(() => {
+          (component.instance() as any).componentDidUpdate({}, { isEditing: false });
+        });
+
+        it('remains in edit mode', () => {
+          expect(component).toMatchSnapshot();
+        });
+      });
+
       describe('and text is changed', () => {
         beforeEach(() => {
           const onChange: (text: string) => void = component.find(TextField).prop('onChange') as (text: string) => void;
@@ -142,7 +164,7 @@ describe('<EditableText />', () => {
         });
 
         describe('when the underlying TextField provides its ref', () => {
-          let fakeRef: Partial<TextFieldComponent>;
+          let fakeRef: TextFieldComponent;
 
           beforeEach(() => {
             // Get a reference to our fakeRef so we can check its focus() spy
@@ -162,8 +184,12 @@ describe('<EditableText />', () => {
               onKeyDown({ which: 27, preventDefault: jest.fn() });
               component.update();
 
-              //  ...and re-enter edit mode to trigger focus now that we have a spy in place
+              // ...and re-enter edit mode to trigger focus now that we have a spy in place
               component.find(Clickable).simulate('click', fakeEvent);
+
+              // Force componentDidUpdate() since enzyme isn't allowing internal setState to trigger componentDidUpdate
+              // https://github.com/airbnb/enzyme/issues/1452
+              (component.instance() as any).componentDidUpdate({}, { isEditing: false });
             });
 
             it('focuses its text input', () => {
@@ -229,14 +255,19 @@ describe('<EditableText />', () => {
 
           describe('and the textfield enters edit mode', () => {
             beforeEach(() => {
-              // Exit edit mode and re-enter edit mode to trigger focus now that we have a spy in place
+              // Exit edit mode...
               const onKeyDown: (event: any) => void = component.find(TextField).prop('onKeyDown') as (
                 event: any,
               ) => void;
               onKeyDown({ which: 27, preventDefault: jest.fn() });
               component.update();
 
+              // ...and re-enter edit mode to trigger focus now that we have a spy in place
               component.find(Clickable).simulate('click', fakeEvent);
+
+              // Force componentDidUpdate() since enzyme isn't allowing internal setState to trigger componentDidUpdate
+              // https://github.com/airbnb/enzyme/issues/1452
+              (component.instance() as any).componentDidUpdate({}, { isEditing: false });
             });
 
             it('focuses its text input', () => {

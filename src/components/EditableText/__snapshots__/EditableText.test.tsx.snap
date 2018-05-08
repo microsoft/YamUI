@@ -114,6 +114,42 @@ exports[`<EditableText /> with all props except promptText when clicked enters e
 </div>
 `;
 
+exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode again remains in edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <Component
+    className="y-editableText--textfield"
+    componentRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="TEXT"
+  />
+</div>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode without private textFieldRef remains in edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <Component
+    className="y-editableText--textfield"
+    componentRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="TEXT"
+  />
+</div>
+`;
+
 exports[`<EditableText /> with promptText matches its snapshot 1`] = `
 <span
   className="y-editableText"
