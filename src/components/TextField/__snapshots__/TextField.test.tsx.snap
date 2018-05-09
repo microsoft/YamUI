@@ -3,6 +3,7 @@
 exports[`<TextField /> with all options matches its snapshot 1`] = `
 <TextField
   aria-required={true}
+  ariaLabel="ARIA_LABEL"
   autoAdjustHeight={false}
   borderless={false}
   className="y-base-text-field y-text-field CLASS y-text-field--with-prefix y-text-field--with-suffix"

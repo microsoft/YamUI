@@ -23,6 +23,7 @@ describe('<TextField />', () => {
     beforeEach(() => {
       component = shallow(
         <TextField
+          ariaLabel="ARIA_LABEL"
           prefix="PREFIX"
           suffix="SUFFIX"
           maxLength={100}

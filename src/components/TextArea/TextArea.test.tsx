@@ -22,6 +22,7 @@ describe('<TextArea />', () => {
     beforeEach(() => {
       component = shallow(
         <TextArea
+          ariaLabel="ARIA_LABEL"
           rows={2}
           autoAdjustHeight={true}
           className="CLASS"
