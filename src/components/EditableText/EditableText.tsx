@@ -94,7 +94,8 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
           className="y-editableText--clickable"
           ariaLabel={promptText}
         >
-          <EditIcon /> <span className="y-editableText--clickableText">{text || promptText}</span>
+          <EditIcon />
+          <span className="y-editableText--clickableText">{text || promptText}</span>
         </Clickable>
       </span>
     );

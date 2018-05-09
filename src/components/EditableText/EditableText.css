@@ -12,7 +12,7 @@
 }
 
 .y-editableText--clickableText {
-  padding-left: 0.1rem;
+  padding-left: 0.2rem;
 }
 
 .y-editableText--clickable:active > .y-editableText--clickableText,

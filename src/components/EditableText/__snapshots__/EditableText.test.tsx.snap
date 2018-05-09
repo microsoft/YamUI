@@ -10,7 +10,6 @@ exports[`<EditableText /> with additional className matches its snapshot 1`] = `
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     />
@@ -28,7 +27,6 @@ exports[`<EditableText /> with all props except promptText matches its snapshot 
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     >
@@ -48,7 +46,6 @@ exports[`<EditableText /> with all props except promptText when clicked and text
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     >
@@ -68,7 +65,6 @@ exports[`<EditableText /> with all props except promptText when clicked and text
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     >
@@ -161,7 +157,6 @@ exports[`<EditableText /> with promptText matches its snapshot 1`] = `
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     >
@@ -181,7 +176,6 @@ exports[`<EditableText /> without props when clicked and text is changed and ENT
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     />
@@ -199,7 +193,6 @@ exports[`<EditableText /> without props when clicked and text is changed and ESC
     unstyled={true}
   >
     <Edit />
-     
     <span
       className="y-editableText--clickableText"
     />
