@@ -136,6 +136,7 @@ exports[`<Dropdown /> with all props matches its snapshot 1`] = `
   className="y-dropdown TEST_CLASSNAME"
 >
   <WithResponsiveMode
+    ariaLabel="ARIA_LABEL"
     calloutProps={
       Object {
         "directionalHintFixed": false,
