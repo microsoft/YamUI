@@ -43,6 +43,11 @@ export interface DropdownOption {
 
 export interface DropdownProps extends BaseComponentProps {
   /**
+   * aria-label attribute
+   */
+  ariaLabel?: string;
+
+  /**
    * Items to be presented to the user.
    */
   options: DropdownOption[];
@@ -74,7 +79,7 @@ export interface DropdownProps extends BaseComponentProps {
  */
 export default class Dropdown extends React.Component<DropdownProps> {
   public render() {
-    const { className, label, placeHolder, selectedKey } = this.props;
+    const { ariaLabel, className, label, placeHolder, selectedKey } = this.props;
     const calloutProps = {
       directionalHintFixed: false,
       doNotLayer: true,
@@ -84,6 +89,7 @@ export default class Dropdown extends React.Component<DropdownProps> {
     return (
       <div className={join(['y-dropdown', className])}>
         <FabricDropdown
+          ariaLabel={ariaLabel}
           label={label}
           options={this.getFabricOptions()}
           placeHolder={placeHolder}
