@@ -1,5 +1,6 @@
 /build
 /dist
+/dist-es2015
 /docs
 /node_modules
 /config/travis/deploy.key
