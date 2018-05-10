@@ -5,6 +5,7 @@ import { join } from '../../util/classNames';
 import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
 import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
 import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react/lib/TextField';
+import { Focusable } from '../../util/Focusable';
 
 import '../BaseTextField/BaseTextField.css';
 import './TextField.css';
@@ -26,23 +27,19 @@ export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangePro
   underlined?: boolean;
 }
 
-export interface TextFieldComponent {
-  /**
-   * Sets focus on the input.
-   */
-  focus(): void;
-}
-
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps> implements TextFieldComponent {
+class TextField extends React.Component<TextFieldProps> implements Focusable {
   private fabricTextFieldRef: ITextField | null;
 
   public constructor(props: TextFieldProps) {
     super(props);
     this.fabricTextFieldRef = null;
+    if (this.props.focusableRef) {
+      this.props.focusableRef(this);
+    }
   }
 
   public render() {
@@ -59,7 +56,7 @@ class TextField extends React.Component<TextFieldProps> implements TextFieldComp
     );
   }
 
-  public focus = () => {
+  public focus() {
     const ref = this.fabricTextFieldRef;
     if (!ref) {
       return;
@@ -68,7 +65,7 @@ class TextField extends React.Component<TextFieldProps> implements TextFieldComp
     const valueLength = this.props.value ? this.props.value.length : 0;
     ref.focus();
     ref.setSelectionRange(valueLength, valueLength);
-  };
+  }
 
   private setRef = (node: ITextField | null) => {
     this.fabricTextFieldRef = node;
