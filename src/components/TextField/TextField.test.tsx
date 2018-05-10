@@ -3,6 +3,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { Focusable } from '../../util/Focusable';
 
 describe('<TextField />', () => {
   let component: ShallowWrapper<TextFieldProps>;
@@ -40,7 +41,7 @@ describe('<TextField />', () => {
           onBlur={jest.fn().mockName('onBlur')}
           onMouseEnter={jest.fn().mockName('onMouseEnter')}
           onMouseLeave={jest.fn().mockName('onMouseLeave')}
-          componentRef={jest.fn().mockName('componentRef')}
+          focusableRef={jest.fn().mockName('focusableRef')}
         />,
       )
         .dive()
@@ -53,8 +54,8 @@ describe('<TextField />', () => {
   });
 
   describe('mounted with default options', () => {
-    let ref: any;
-    const setRef = (i: any) => (ref = i);
+    let focusable: Focusable;
+    const setFocusable = (f: Focusable) => (focusable = f);
 
     describe('when focused', () => {
       let focusSpy: jest.SpyInstance;
@@ -63,8 +64,8 @@ describe('<TextField />', () => {
       beforeEach(() => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-        mount(<TextField componentRef={setRef} />);
-        ref.focus();
+        mount(<TextField focusableRef={setFocusable} />);
+        focusable.focus();
       });
 
       it('calls focus', () => {
@@ -79,11 +80,11 @@ describe('<TextField />', () => {
 
   describe('mounted with value', () => {
     const value = 'VALUE';
-    let ref: any;
-    const setRef = (i: any) => (ref = i);
+    let focusable: Focusable;
+    const setFocusable = (f: Focusable) => (focusable = f);
 
     beforeEach(() => {
-      mount(<TextField value={value} componentRef={setRef} />);
+      mount(<TextField value={value} focusableRef={setFocusable} />);
     });
 
     describe('when focused', () => {
@@ -93,7 +94,7 @@ describe('<TextField />', () => {
       beforeEach(() => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-        ref.focus();
+        focusable.focus();
       });
 
       it('calls focus', () => {

@@ -1,10 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { BaseComponentProps, FocusableComponentProps } from '../../util/BaseComponent/props';
 import { ITextFieldProps as FabricTextFieldProps } from 'office-ui-fabric-react/lib/TextField';
 
-export interface BaseTextFieldProps extends BaseComponentProps {
+export interface BaseTextFieldProps extends BaseComponentProps, FocusableComponentProps {
   /**
    * aria-label attribute
    */
