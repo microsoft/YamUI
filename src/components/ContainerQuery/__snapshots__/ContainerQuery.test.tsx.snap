@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContainerQuery /> matches its snapshot 1`] = `
+<ContainerQuery
+  query={
+    Object {
+      "large": Object {
+        "minWidth": 501,
+      },
+      "small": Object {
+        "maxWidth": 500,
+      },
+    }
+  }
+/>
+`;
+
+exports[`<ContainerQuery /> when mounted at large size matches its snapshot 1`] = `
+<div
+  className="content"
+>
+  large
+</div>
+`;
+
+exports[`<ContainerQuery /> when mounted at small size matches its snapshot 1`] = `
+<div
+  className="content"
+>
+  small
+</div>
+`;
