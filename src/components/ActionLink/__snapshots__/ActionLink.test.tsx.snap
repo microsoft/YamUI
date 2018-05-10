@@ -7,6 +7,7 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
   title="Download the file"
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
@@ -14,11 +15,14 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
     >
       <Down
         block={true}
+        className="y-actionLink--icon"
         size="16"
       />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block>
+      <Block
+        textSize="mediumSub"
+      >
         Download
       </Block>
     </FixedGridColumn>
@@ -34,6 +38,7 @@ exports[`<ActionLink /> with href passed matches its snapshot 1`] = `
   title="Download the file"
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
@@ -41,11 +46,14 @@ exports[`<ActionLink /> with href passed matches its snapshot 1`] = `
     >
       <Down
         block={true}
+        className="y-actionLink--icon"
         size="16"
       />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block>
+      <Block
+        textSize="mediumSub"
+      >
         Download
       </Block>
     </FixedGridColumn>
@@ -56,10 +64,12 @@ exports[`<ActionLink /> with href passed matches its snapshot 1`] = `
 exports[`<ActionLink /> with onClick passed matches its snapshot 1`] = `
 <Clickable
   ariaLabel="Download the file"
+  block={true}
   className="y-actionLink"
   onClick={[MockFunction]}
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
@@ -67,11 +77,14 @@ exports[`<ActionLink /> with onClick passed matches its snapshot 1`] = `
     >
       <Down
         block={true}
+        className="y-actionLink--icon"
         size="16"
       />
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block>
+      <Block
+        textSize="mediumSub"
+      >
         Download
       </Block>
     </FixedGridColumn>

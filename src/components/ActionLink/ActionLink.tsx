@@ -3,11 +3,12 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
-import Block from '../Block';
+import Block, { TextSize } from '../Block';
 import Clickable from '../Clickable';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { BaseIcon, IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
+import './ActionLink.css';
 
 export interface BaseActionLinkProps extends BaseComponentProps {
   /**
@@ -63,12 +64,14 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
     const classNames = join(['y-actionLink', className]);
 
     const content = (
-      <FixedGridRow gutterSize={GutterSize.SMALL}>
+      <FixedGridRow gutterSize={GutterSize.SMALL} className="y-actionLink--wrapper">
         <FixedGridColumn fixed={true}>
-          <Icon size={IconSize.MEDIUM} block={true} />
+          <Icon size={IconSize.MEDIUM} block={true} className="y-actionLink--icon" />
         </FixedGridColumn>
         <FixedGridColumn>
-          <Block ellipsis={ellipsis}>{text}</Block>
+          <Block ellipsis={ellipsis} textSize={TextSize.MEDIUM_SUB}>
+            {text}
+          </Block>
         </FixedGridColumn>
       </FixedGridRow>
     );
@@ -90,6 +93,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
         onClick={(this.props as ClickableActionLinkProps).onClick}
         ariaLabel={ariaLabel}
         className={classNames}
+        block={true}
       >
         {content}
       </Clickable>
