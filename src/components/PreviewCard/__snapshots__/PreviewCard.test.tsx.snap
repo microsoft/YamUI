@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PreviewCard /> when description is edible with onDescriptionChange callback matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    metadataContent={
+      <Block
+        push={0}
+        textColor="metadata"
+      >
+        <EditableText
+          maxLength={120}
+          onBeginEditing={[Function]}
+          onEndEditing={[Function]}
+          onUpdate={[MockFunction]}
+          placeHolder="empty placeholder text"
+          promptText="empty placeholder text"
+          text="file description"
+        />
+      </Block>
+    }
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when entering edit mode matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    metadataContent={
+      <Block
+        push={-3}
+        textColor="metadata"
+      >
+        <EditableText
+          maxLength={120}
+          onBeginEditing={[Function]}
+          onEndEditing={[Function]}
+          onUpdate={[MockFunction]}
+          placeHolder="empty placeholder text"
+          promptText="empty placeholder text"
+          text="file description"
+        />
+      </Block>
+    }
+    size="medium"
+    titleContent={
+      <Block
+        textSize="xSmall"
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when exiting edit mode matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    metadataContent={
+      <Block
+        push={0}
+        textColor="metadata"
+      >
+        <EditableText
+          maxLength={120}
+          onBeginEditing={[Function]}
+          onEndEditing={[Function]}
+          onUpdate={[MockFunction]}
+          placeHolder="empty placeholder text"
+          promptText="empty placeholder text"
+          text="file description"
+        />
+      </Block>
+    }
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    metadataContent={
+      <Block
+        className="y-previewCard--spinner"
+        push={1}
+        textColor="metadata"
+      >
+        <Spinner
+          color="metadata"
+          hideText={false}
+          size="xSmall"
+          text="loading..."
+        />
+      </Block>
+    }
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
+<Box
+  className="y-previewCard TEST_CLASSNAME"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with description matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    metadataContent="file description"
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with image matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={
+      <Image
+        description="file description"
+        fullWidth={true}
+        shouldFadeIn={false}
+        source="filename.png"
+      />
+    }
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+  <ProgressIndicator
+    ariaValueText="Uploading, currently at 50%"
+    className="y-previewCard--progress"
+    percentComplete={0.5}
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
+<Box
+  className="y-previewCard y-previewCard__hasClick"
+  onClick={[MockFunction]}
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        <Clickable
+          ariaLabel="Show file preview"
+          unstyled={true}
+        >
+          Filename.gif
+        </Clickable>
+      </Block>
+    }
+  />
+</Box>
+`;
+
+exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
+<Box
+  className="y-previewCard"
+>
+  <MediaObject
+    className="y-previewCard--media"
+    imageContent={null}
+    size="medium"
+    titleContent={
+      <Block
+        textSize={undefined}
+      >
+        Filename.gif
+      </Block>
+    }
+  />
+  <span
+    className="y-previewCard--remove"
+  >
+    <Clickable
+      ariaLabel="Remove this attachment"
+      block={true}
+      onClick={[Function]}
+      unstyled={true}
+    >
+      <Block
+        padding="small"
+      >
+        <Cancel
+          block={true}
+          size="12"
+        />
+      </Block>
+    </Clickable>
+  </span>
+</Box>
+`;

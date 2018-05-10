@@ -7,11 +7,11 @@
 }
 
 .y-suggestions-list-item:hover {
-  background-color: $suggestionsListItemBackgroundColor__mouseHover;
+  background-color: $interactiveElementBackround__focused;
 }
 
 .y-suggestions-list-item--selected {
-  background-color: $suggestionsListItemBackgroundColor__keyboardNavigate;
+  background-color: $interactiveElementBackround__selected;
 }
 
 .y-suggestions-list-item--match-highlight {
