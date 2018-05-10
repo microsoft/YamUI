@@ -3,9 +3,10 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { Focusable } from '../../util/Focusable';
 import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
-import TextField, { TextFieldComponent } from '../TextField';
+import TextField from '../TextField';
 import { KeyCodes } from '../../util/enums';
 import './EditableText.css';
 
@@ -55,11 +56,13 @@ export interface EditableTextState {
  * Displays text which can be edited on click.
  */
 export default class EditableText extends React.Component<EditableTextProps, EditableTextState> {
-  private textFieldRef: TextFieldComponent | null;
+  private textFieldFocusable: Focusable | null;
+  private clickableFocusable: Focusable | null;
 
   constructor(props: EditableTextProps) {
     super(props);
-    this.textFieldRef = null;
+    this.textFieldFocusable = null;
+    this.clickableFocusable = null;
     this.state = { isEditing: false, editedValue: '' };
   }
 
@@ -78,7 +81,7 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
             value={editedValue}
             placeHolder={placeHolder}
             maxLength={maxLength}
-            componentRef={this.setTextFieldRef}
+            focusableRef={this.setTextFieldFocusable}
             onBlur={this.commitEdit}
             onKeyDown={this.onKeyDown}
           />
@@ -93,6 +96,7 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
           unstyled={true}
           className="y-editableText--clickable"
           ariaLabel={promptText}
+          focusableRef={this.setClickableFocusable}
         >
           <EditIcon />
           <span className="y-editableText--clickableText">{text || promptText}</span>
@@ -102,9 +106,14 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
   }
 
   public componentDidUpdate(_prevProps: EditableTextProps, prevState: EditableTextState) {
-    // Set focus when we enter edit mode; better than depending on a hacky setTimeout()
+    // Set focus when we enter edit mode
     if (this.state.isEditing && !prevState.isEditing) {
       this.setTextFieldFocus();
+    }
+
+    // Restore focus after leaving edit mode
+    if (!this.state.isEditing && prevState.isEditing) {
+      this.setClickableFocus();
     }
   }
 
@@ -122,8 +131,12 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
     }
   };
 
-  private setTextFieldRef = (component: TextFieldComponent | null) => {
-    this.textFieldRef = component;
+  private setTextFieldFocusable = (focusable: Focusable | null) => {
+    this.textFieldFocusable = focusable;
+  };
+
+  private setClickableFocusable = (focusable: Focusable) => {
+    this.clickableFocusable = focusable;
   };
 
   private updateInternalEditedDescription = (description: string) => {
@@ -131,8 +144,14 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
   };
 
   private setTextFieldFocus() {
-    if (this.textFieldRef) {
-      this.textFieldRef.focus();
+    if (this.textFieldFocusable) {
+      this.textFieldFocusable.focus();
+    }
+  }
+
+  private setClickableFocus() {
+    if (this.clickableFocusable) {
+      this.clickableFocusable.focus();
     }
   }
 
