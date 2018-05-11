@@ -182,11 +182,17 @@ describe('<Button />', () => {
 
   describe('with invalid href', () => {
     beforeEach(() => {
+      jest.spyOn(console, 'error').mockImplementation(() => {});
       component = shallow(<Button text={sampleText} href="#" />);
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+
+    it('raises a propTypes validation error', () => {
+      const err = 'Please use a Button for actions, NavigationLink (or Button with href) for navigation';
+      expect(console.error).toHaveBeenCalledWith(expect.stringContaining(err));
     });
   });
 
