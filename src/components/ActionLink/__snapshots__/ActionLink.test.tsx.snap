@@ -2,9 +2,9 @@
 
 exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
 <NavigationLink
+  ariaLabel="Download the file"
   className="y-actionLink TEST_CLASSNAME"
   href="https://yammer.com"
-  title="Download the file"
 >
   <FixedGridRow
     className="y-actionLink--wrapper"
@@ -32,10 +32,10 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
 
 exports[`<ActionLink /> with href passed matches its snapshot 1`] = `
 <NavigationLink
+  ariaLabel="Download the file"
   className="y-actionLink"
   href="https://yammer.com"
   newWindow={true}
-  title="Download the file"
 >
   <FixedGridRow
     className="y-actionLink--wrapper"

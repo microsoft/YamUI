@@ -81,7 +81,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
         <NavigationLink
           href={(this.props as NavigationActionLinkProps).href}
           newWindow={(this.props as NavigationActionLinkProps).newWindow}
-          title={ariaLabel}
+          ariaLabel={ariaLabel}
           className={classNames}
         >
           {content}
