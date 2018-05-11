@@ -17,7 +17,12 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
   newWindow?: boolean;
 
   /**
-   * Title or description of the linked document for the anchor tag.
+   * Title or description of the linked document for screenreaders.
+   */
+  ariaLabel?: string;
+
+  /**
+   * Title or description of the linked document for the anchor tag. You should generally avoid using this.
    */
   title?: string;
 
@@ -33,12 +38,12 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
  */
 export default class NavigationLink extends React.Component<NavigationLinkProps> {
   public render() {
-    const { href, newWindow, title, children } = this.props;
+    const { ariaLabel, href, newWindow, title, children } = this.props;
     const target = newWindow ? '_blank' : undefined;
     const rel = newWindow ? 'nofollow noopener noreferrer' : undefined;
 
     return (
-      <a className={this.getClasses()} href={href} rel={rel} target={target} title={title}>
+      <a className={this.getClasses()} href={href} rel={rel} target={target} title={title} aria-label={ariaLabel}>
         {children}
       </a>
     );
