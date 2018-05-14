@@ -77,6 +77,16 @@ describe('<Image />', () => {
     });
   });
 
+  describe('with block', () => {
+    beforeEach(() => {
+      component = shallow(<Image source="image.png" description="description" block={true} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('when provided a loading state callback', () => {
     let loadState: ImageLoadState | undefined;
     function setLoadState(newLoadState: ImageLoadState) {
