@@ -8,14 +8,15 @@ import { IPartialTheme } from 'office-ui-fabric-react/lib/Styling';
 /* Blue */
 // const blue = '#2477c3';
 // const stream = '#e9eff8';
-// const pond = '#9ac3ff';
+const pond = '#9ac3ff';
 const lake = '#6c98d9';
 const river = '#386cbb';
-// const bay = '#264f8c';
+const bay = '#264f8c';
 // const ocean = '#19345d';
+const newBlue = '#2f5c9f';
 
 /* Gray */
-// const white = '#fff';
+const white = '#fff';
 const popRock = '#f3f5f8';
 // const altRock = '#edeff2';
 const indieRock = '#dde0e6';
@@ -61,6 +62,13 @@ export const theme: IPartialTheme = {
 const colors = {
   textSecondary: deathMetal,
   link: river,
+  river,
+  lake,
+  bay,
+  white,
+  newBlue,
+  indieRock,
+  pond,
 };
 
 export default colors;

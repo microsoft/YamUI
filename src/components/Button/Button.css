@@ -1,7 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import 'src/css/variables/borders.css';
-@import 'src/css/variables/colors.css';
-@import 'src/css/variables/fonts.css';
 
 .y-button {
   text-align: center;
@@ -33,44 +31,6 @@
 .y-button__fullWidth {
   display: block;
   width: 100%;
-}
-
-.y-button__color-primary {
-  background-color: $color__river;
-  border-color: $color__river;
-  color: $color__white;
-}
-
-.y-button__color-primary:hover:enabled,
-.y-button__color-primary:focus {
-  background-color: #2f5c9f;
-  border-color: #2f5c9f;
-  color: $color__white;
-}
-
-.y-button__color-primary:active:enabled {
-  background-color: $color__bay;
-  border-color: $color__bay;
-  color: $color__white;
-}
-
-.y-button__color-secondary {
-  background-color: $color__white;
-  border-color: $color__indieRock;
-  color: $color__river;
-}
-
-.y-button__color-secondary:hover:enabled,
-.y-button__color-secondary:focus {
-  background-color: $color__white;
-  border-color: $color__pond;
-  color: $color__pond;
-}
-
-.y-button__color-secondary:active:enabled {
-  background-color: $color__white;
-  border-color: $color__lake;
-  color: $color__lake;
 }
 
 .y-button__state-disabled {

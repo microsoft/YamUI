@@ -7,6 +7,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
+import ButtonStyles from './ButtonStyles';
 
 import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
@@ -163,11 +164,12 @@ export default class Button extends React.Component<ButtonProps> {
   };
 
   public render() {
-    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
+    const { color, ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
     const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
+    const styles = color ? ButtonStyles[color] : ButtonStyles[ButtonColor.SECONDARY];
 
     return (
       <BaseButton
@@ -181,6 +183,7 @@ export default class Button extends React.Component<ButtonProps> {
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        styles={styles}
       >
         {this.getContents()}
         {this.isLoading() && this.getSpinner()}
@@ -234,9 +237,9 @@ export default class Button extends React.Component<ButtonProps> {
   }
 
   private getClasses() {
-    const { className, color, status, size, fullWidth } = this.props;
+    const { className, status, size, fullWidth } = this.props;
 
-    const classes: string[] = ['y-button', `y-button__color-${color}`, `y-button__size-${size}`];
+    const classes: string[] = ['y-button', `y-button__size-${size}`];
     if (status !== ButtonStatus.ENABLED) {
       classes.push(`y-button__state-${status}`);
     }
