@@ -80,33 +80,31 @@ describe('<TextField />', () => {
     });
   });
 
-  describe('mounted with value', () => {
+  describe('when mounted', () => {
     const value = 'VALUE';
     let focusable: Focusable;
     const setFocusable = (f: Focusable) => (focusable = f);
 
-    describe('when internal ref is available', () => {
+    beforeEach(() => {
+      mount(<TextField value={value} description="DESCRIPTION" focusableRef={setFocusable} />);
+    });
+
+    describe('and its public focus() method is called', () => {
+      let focusSpy: jest.SpyInstance;
+      let setSelectionRangeSpy: jest.SpyInstance;
+
       beforeEach(() => {
-        mount(<TextField value={value} description="DESCRIPTION" focusableRef={setFocusable} />);
+        focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
+        setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+        focusable.focus();
       });
 
-      describe('when focused', () => {
-        let focusSpy: jest.SpyInstance;
-        let setSelectionRangeSpy: jest.SpyInstance;
+      it('focuses the interal textfield', () => {
+        expect(focusSpy).toHaveBeenCalled();
+      });
 
-        beforeEach(() => {
-          focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
-          setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-          focusable.focus();
-        });
-
-        it('calls focus', () => {
-          expect(focusSpy).toHaveBeenCalled();
-        });
-
-        it('calls setSelectionRangeSpy', () => {
-          expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
-        });
+      it('places the cursor at the end of the input text', () => {
+        expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
       });
     });
   });
