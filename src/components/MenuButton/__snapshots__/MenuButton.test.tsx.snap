@@ -314,6 +314,7 @@ exports[`<MenuButton /> with default options passes contextualMenuItemAs method 
       "linkContent": "linkContent",
       "linkContentMenu": "linkContentMenu",
       "root": "root",
+      "secondaryText": "secondaryText",
       "splitContainer": "splitContainer",
       "splitMenu": "splitMenu",
       "splitPrimary": "splitPrimary",
