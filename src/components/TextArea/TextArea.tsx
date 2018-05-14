@@ -10,7 +10,7 @@ export type TextAreaProps = Omit<InternalTextAreaProps, 'multiline'>;
 /**
  * TextArea is rendered as an html textarea tag, used to allow more than one line of text to be entered.
  */
-export default class TextField extends React.Component<TextAreaProps> {
+export default class TextArea extends React.Component<TextAreaProps> {
   public render() {
     const { className, ...props } = this.props;
     return <BaseTextField {...props} multiline={true} className={join(['y-textArea', this.props.className])} />;
