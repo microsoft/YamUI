@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { Omit } from '../../util/types';
-import BaseTextField, { TextInputProps } from '../internal/TextField';
+import BaseTextField, { TextInputProps } from '../internal/TextField/TextField';
 
 export type TextFieldProps = Omit<TextInputProps, 'multiline'>;
 
