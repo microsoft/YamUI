@@ -15,3 +15,7 @@
 .y-image__border-round {
   border-radius: $borderRadius__round;
 }
+
+.y-image__block {
+  display: block;
+}
