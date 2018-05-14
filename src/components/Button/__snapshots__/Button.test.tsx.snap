@@ -3,10 +3,33 @@
 exports[`<Button /> set as disabled matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__state-disabled"
+  className="y-button y-button__size-regular y-button__state-disabled"
   disabled={true}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -25,10 +48,33 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
 exports[`<Button /> set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__state-loading"
+  className="y-button y-button__size-regular y-button__state-loading"
   disabled={true}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -57,10 +103,33 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
 exports[`<Button /> with additional className matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular TEST_CLASSNAME"
+  className="y-button y-button__size-regular TEST_CLASSNAME"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -80,10 +149,33 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 <BaseButton
   ariaLabel="Aria description"
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -102,10 +194,33 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
 exports[`<Button /> with button type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -124,10 +239,33 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
 exports[`<Button /> with default options matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -146,10 +284,33 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
 exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular y-button__fullWidth"
+  className="y-button y-button__size-regular y-button__fullWidth"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -168,10 +329,33 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
 exports[`<Button /> with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -201,10 +385,33 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
 exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -234,11 +441,34 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
 exports[`<Button /> with invalid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   href="#"
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type=""
 >
   <Block
@@ -257,10 +487,33 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
 exports[`<Button /> with primary color matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#386cbb",
+        "borderColor": "#386cbb",
+        "color": "#fff",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#2f5c9f",
+        "borderColor": "#2f5c9f",
+        "color": "#fff",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#2f5c9f",
+        "borderColor": "#2f5c9f",
+        "color": "#fff",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#264f8c",
+        "borderColor": "#264f8c",
+        "color": "#fff",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -279,10 +532,33 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
 exports[`<Button /> with primary color set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-primary y-button__size-regular y-button__state-loading"
+  className="y-button y-button__size-regular y-button__state-loading"
   disabled={true}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#386cbb",
+        "borderColor": "#386cbb",
+        "color": "#fff",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#2f5c9f",
+        "borderColor": "#2f5c9f",
+        "color": "#fff",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#2f5c9f",
+        "borderColor": "#2f5c9f",
+        "color": "#fff",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#264f8c",
+        "borderColor": "#264f8c",
+        "color": "#fff",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -311,10 +587,33 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
 exports[`<Button /> with reset type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="reset"
 >
   <Block
@@ -333,10 +632,33 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
 exports[`<Button /> with small size matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
+  className="y-button y-button__size-small"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -355,10 +677,33 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
 exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small y-button__state-loading"
+  className="y-button y-button__size-small y-button__state-loading"
   disabled={true}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -387,10 +732,33 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
 exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-small"
+  className="y-button y-button__size-small"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="button"
 >
   <Block
@@ -420,10 +788,33 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
 exports[`<Button /> with submit type matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type="submit"
 >
   <Block
@@ -442,11 +833,34 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
 exports[`<Button /> with valid href matches its snapshot 1`] = `
 <BaseButton
   baseClassName="ms-Button"
-  className="y-button y-button__color-secondary y-button__size-regular"
+  className="y-button y-button__size-regular"
   disabled={false}
   href="https://www.yammer.com"
   split={false}
-  styles={Object {}}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#dde0e6",
+        "color": "#386cbb",
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#fff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
   type=""
 >
   <Block
