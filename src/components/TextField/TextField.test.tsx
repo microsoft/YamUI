@@ -12,6 +12,7 @@ describe('<TextField />', () => {
     beforeEach(() => {
       component = shallow(<TextField />)
         .dive()
+        .dive()
         .dive();
     });
 
@@ -44,6 +45,7 @@ describe('<TextField />', () => {
           focusableRef={jest.fn().mockName('focusableRef')}
         />,
       )
+        .dive()
         .dive()
         .dive();
     });
@@ -83,26 +85,28 @@ describe('<TextField />', () => {
     let focusable: Focusable;
     const setFocusable = (f: Focusable) => (focusable = f);
 
-    beforeEach(() => {
-      mount(<TextField value={value} focusableRef={setFocusable} />);
-    });
-
-    describe('when focused', () => {
-      let focusSpy: jest.SpyInstance;
-      let setSelectionRangeSpy: jest.SpyInstance;
-
+    describe('when internal ref is available', () => {
       beforeEach(() => {
-        focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
-        setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-        focusable.focus();
+        mount(<TextField value={value} description="DESCRIPTION" focusableRef={setFocusable} />);
       });
 
-      it('calls focus', () => {
-        expect(focusSpy).toHaveBeenCalled();
-      });
+      describe('when focused', () => {
+        let focusSpy: jest.SpyInstance;
+        let setSelectionRangeSpy: jest.SpyInstance;
 
-      it('calls setSelectionRangeSpy', () => {
-        expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
+        beforeEach(() => {
+          focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
+          setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
+          focusable.focus();
+        });
+
+        it('calls focus', () => {
+          expect(focusSpy).toHaveBeenCalled();
+        });
+
+        it('calls setSelectionRangeSpy', () => {
+          expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
+        });
       });
     });
   });
