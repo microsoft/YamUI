@@ -1,26 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import 'src/css/variables/borders.css';
-@import 'src/css/variables/colors.css';
-@import 'src/css/variables/fonts.css';
-
-.y-tooltip--callout {
-  box-shadow: none !important;
-  padding: 0.7rem 1.2rem 0.8rem;
-  min-height: 3.2rem;
-  z-index: 1000;
-  border: none;
-}
-
-.y-tooltip--callout .ms-Tooltip-content {
-  @extend text__small;
-  color: $textColor__white;
-}
-.y-tooltip--callout > .ms-Callout-main,
-.y-tooltip--callout > .ms-Callout-beak,
-.y-tooltip--callout > .ms-Callout-beakCurtain {
-  background-color: $textColor;
-}
-
-.y-tooltip--callout > .ms-Callout-beakCurtain {
-  border-radius: $borderRadius__soft;
+.y-tooltip.ms-TooltipHost {
+  display: inline-block;
 }
