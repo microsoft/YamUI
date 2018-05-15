@@ -6,7 +6,7 @@
     directionalHint={4}
     startVisible={true}
   >
-    <FakeLink>{user.name}</FakeLink>
+    <Clickable>{user.name}</Clickable>
   </Hovercard>
 </div>
 ```
