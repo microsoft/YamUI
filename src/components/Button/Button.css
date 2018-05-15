@@ -1,47 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import 'src/css/variables/borders.css';
-
-.y-button {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.05s ease-out;
-  border-radius: $borderRadius__soft;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
-  font-weight: 600;
-}
-
-.y-button,
-.y-button:hover {
-  text-decoration: none;
-}
-
-.y-button__size-regular {
-  padding: 7px 15px;
-}
-
-.y-button__size-small {
-  padding: 4px 9px 6px;
-}
-
-.y-button__fullWidth {
-  display: block;
-  width: 100%;
-}
-
-.y-button__state-disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.y-button__state-loading {
-  cursor: default;
-}
-
 .y-button--content__hidden {
   visibility: hidden;
 }
