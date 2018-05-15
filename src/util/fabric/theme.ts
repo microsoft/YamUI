@@ -5,10 +5,11 @@
  */
 
 import { loadTheme } from 'office-ui-fabric-react/lib/Styling';
-import { theme } from '../colors';
+import { palette, semanticColors } from '../colors';
 
 loadTheme({
-  palette: theme.palette,
+  palette,
+  semanticColors,
   fonts: {
     xSmall: {
       fontSize: '1.0rem',

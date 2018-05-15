@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { IPartialTheme } from 'office-ui-fabric-react/lib/Styling';
+import { IPalette, ISemanticColors } from 'office-ui-fabric-react/lib/Styling';
 
 /*
 * Yammer's Color Palette - Uncomment as needed.
@@ -8,22 +8,22 @@ import { IPartialTheme } from 'office-ui-fabric-react/lib/Styling';
 /* Blue */
 // const blue = '#2477c3';
 // const stream = '#e9eff8';
-// const pond = '#9ac3ff';
+const pond = '#9ac3ff';
 const lake = '#6c98d9';
+const newBlue = '#2f5c9f';
 const river = '#386cbb';
-// const bay = '#264f8c';
+const bay = '#264f8c';
 // const ocean = '#19345d';
 
 /* Gray */
-// const white = '#fff';
+const white = '#ffffff';
 const popRock = '#f3f5f8';
-// const altRock = '#edeff2';
+const altRock = '#edeff2';
 const indieRock = '#dde0e6';
-// const punkRock = '#a8b0bd';
+const punkRock = '#a8b0bd';
 const heavyMetal = '#646d7a';
 const deathMetal = '#495361';
 // const blackMetal = '#343A41';
-// const black = '#000';
 
 /* Yellow */
 // const sunrise = '#ffe7b8';
@@ -43,24 +43,31 @@ const lestat = '#d1423b';
 /*
  * Used globally by Fabric
  */
-export const theme: IPartialTheme = {
-  palette: {
-    themePrimary: lake,
-    neutralSecondary: heavyMetal,
-    neutralTertiary: indieRock,
-    neutralLighter: popRock,
-    neutralDark: indieRock,
-    redDark: lestat,
-    themeDarker: deathMetal,
-  },
+export const palette: Partial<IPalette> = {
+  themeDarker: bay,
+  themeDark: river,
+  themeDarkAlt: newBlue,
+  themePrimary: lake,
+  themeLighter: pond,
+  neutralDark: indieRock,
+  neutralPrimaryAlt: deathMetal,
+  neutralSecondary: heavyMetal,
+  neutralTertiary: indieRock,
+  neutralTertiaryAlt: punkRock,
+  neutralLight: altRock,
+  neutralLighter: popRock,
+  redDark: lestat,
+  white,
 };
 
 /*
- * Use for component level overrides
+ * Used globally by Fabric
  */
-const colors = {
-  textSecondary: deathMetal,
-  link: river,
+export const semanticColors: Partial<ISemanticColors> = {
+  bodyText: palette.neutralPrimary,
+  disabledBodyText: palette.neutralTertiaryAlt,
+  bodySubtext: palette.neutralSecondary,
+  buttonText: palette.neutralPrimaryAlt,
+  errorText: palette.redDark,
+  link: palette.themeDark,
 };
-
-export default colors;
