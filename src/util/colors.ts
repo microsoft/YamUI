@@ -23,7 +23,8 @@ const indieRock = '#dde0e6';
 const punkRock = '#a8b0bd';
 const heavyMetal = '#646d7a';
 const deathMetal = '#495361';
-// const blackMetal = '#343A41';
+const blackMetal = '#343A41';
+// const black = '#000';
 
 /* Yellow */
 // const sunrise = '#ffe7b8';
@@ -50,6 +51,7 @@ export const palette: Partial<IPalette> = {
   themePrimary: lake,
   themeLighter: pond,
   neutralDark: indieRock,
+  neutralPrimary: blackMetal,
   neutralPrimaryAlt: deathMetal,
   neutralSecondary: heavyMetal,
   neutralTertiary: indieRock,
