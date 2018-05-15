@@ -16,7 +16,7 @@ Dark Background and block-level child:
 ```js { "props": { "data-description": "dark background" } }
 <div style={{ backgroundColor: '#666', padding: '50px 15px 15px 50px' }}>
   <Tooltip text="This is the tooltip content.">
-    <Button text='Button' />
+    <Button text='Hover over me' />
   </Tooltip>
 </div>
 ```
