@@ -1,5 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-jest.mock('office-ui-fabric-react/lib/Styling');
+jest.mock('office-ui-fabric-react/lib/Styling', () => ({
+  loadTheme: jest.fn(),
+}));
 
 import * as Styling from 'office-ui-fabric-react/lib/Styling';
 import './theme';

@@ -6,9 +6,10 @@
   "modulePaths": ["src/components", "src/util"],
   "testPathIgnorePatterns": ["<rootDir>/build", "<rootDir>/dist", "<rootDir>/config", "<rootDir>/src/demos"],
   "moduleNameMapper": {
+    "office-ui-fabric-react/lib/": "office-ui-fabric-react/lib-commonjs/",
     "^.+\\.css$": "identity-obj-proxy"
   },
-  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "snapshotSerializers": ["enzyme-to-json/serializer", "@uifabric/jest-serializer-merge-styles"],
   "transform": {
     ".(ts|tsx)$": "ts-jest/preprocessor.js"
   },
