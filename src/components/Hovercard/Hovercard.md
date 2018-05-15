@@ -29,7 +29,7 @@ const handlers = {
     startVisible={true}
     {...handlers}
   >
-    <FakeLink>hovercard trigger</FakeLink>
+    <Clickable>hovercard trigger</Clickable>
   </Hovercard>
   .
 </div>
@@ -66,7 +66,7 @@ const handlers = {
     triggerType={TriggerType.CLICK}
     {...handlers}
   >
-    <FakeLink>hovercard trigger</FakeLink>
+    <Clickable>hovercard trigger</Clickable>
   </Hovercard>
   .
 </div>
@@ -103,7 +103,7 @@ const handlers = {
     startVisible={true}
     {...handlers}
   >
-    <FakeLink>hover trigger</FakeLink>
+    <Clickable>hover trigger</Clickable>
   </Hovercard>
   .
 </div>
@@ -134,9 +134,9 @@ const handlers = {
 const HintedPositionHovercard = (props) => (
   <Hovercard content={content} directionalHint={props.hint} startVisible={true} {...handlers} >
     <Block textAlign={props.align}>
-      <FakeLink>
+      <Clickable>
         {props.label}
-      </FakeLink>
+      </Clickable>
     </Block>
   </Hovercard>
 );
