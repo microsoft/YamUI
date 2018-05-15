@@ -9,7 +9,7 @@ import {
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Colors from '../../util/colors';
+import { semanticColors } from '../../util/colors';
 import { IconButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
@@ -155,20 +155,20 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
         opacity: 0.7,
         width: `${this.props.iconSize}px`,
         height: `${this.props.iconSize}px`,
-        color: Colors.textSecondary,
+        color: semanticColors.buttonText,
       },
       rootHovered: {
         backgroundColor: 'transparent',
-        color: Colors.themeDark,
+        color: semanticColors.link,
         opacity: 1,
       },
       rootPressed: {
         backgroundColor: 'transparent',
-        color: Colors.themeDark,
+        color: semanticColors.link,
         opacity: 1,
       },
       rootExpanded: {
-        color: Colors.themeDark,
+        color: semanticColors.link,
         opacity: 1,
       },
     };
