@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChoiceGroup /> when \`props.selectedKey\` is set renders as expected 1`] = `
+<ChoiceGroup
+  className="y-choice-group"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "key": "A",
+        "onRenderLabel": [Function],
+        "text": "Option A",
+      },
+      Object {
+        "key": "B",
+        "onRenderLabel": undefined,
+        "text": "Option B",
+      },
+    ]
+  }
+  selectedKey="B"
+/>
+`;
+
+exports[`<ChoiceGroup /> with minimal props renders as expected 1`] = `
+<ChoiceGroup
+  className="y-choice-group"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "key": "A",
+        "onRenderLabel": [Function],
+        "text": "Option A",
+      },
+      Object {
+        "key": "B",
+        "onRenderLabel": undefined,
+        "text": "Option B",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
+<span
+  className="ms-Label"
+>
+  <Text
+    bold={true}
+  >
+    Option A:
+  </Text>
+  <Text>
+     
+    Sublabel for A
+  </Text>
+</span>
+`;
+
+exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option renders as expected 1`] = `
+<ChoiceGroup
+  className="y-choice-group"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "key": "A",
+        "onRenderLabel": [Function],
+        "text": "Option A",
+      },
+      Object {
+        "key": "B",
+        "onRenderLabel": undefined,
+        "text": "Option B",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option that is \`undefined\` renders as expected 1`] = `
+<ChoiceGroup
+  className="y-choice-group"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "key": "A",
+        "onRenderLabel": [Function],
+        "text": "Option A",
+      },
+      Object {
+        "key": "B",
+        "onRenderLabel": undefined,
+        "text": "Option B",
+      },
+    ]
+  }
+/>
+`;

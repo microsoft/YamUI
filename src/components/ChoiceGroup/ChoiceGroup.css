@@ -1,0 +1,31 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
+
+.y-choice-group .ms-ChoiceField {
+  margin-bottom: 1.2rem;
+  min-height: 0;
+}
+
+.y-choice-group .ms-ChoiceField-field,
+.y-choice-group .ms-ChoiceField-field::before {
+  border-color: $borderColor;
+}
+
+.y-choice-group.ms-Label {
+  @extend text__mediumSub;
+  font-weight: $fontWeight__bold;
+  color: $textColor__secondary;
+  padding-bottom: 0.4rem;
+}
+
+/* radio button border */
+.y-choice-group .is-checked.ms-ChoiceField-field::before {
+  border-width: 2px;
+  border-color: $borderColor__focused;
+}
+
+/* inside radio button */
+.y-choice-group .ms-ChoiceField-field::after {
+  border-color: $choiceGroupRadioButtonCheck;
+}
