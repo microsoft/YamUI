@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { IPartialTheme } from 'office-ui-fabric-react/lib/Styling';
+import { IPartialTheme, IPalette } from 'office-ui-fabric-react/lib/Styling';
 
 /*
 * Yammer's Color Palette - Uncomment as needed.
@@ -44,31 +44,30 @@ const lestat = '#d1423b';
 /*
  * Used globally by Fabric
  */
+const palette: Partial<IPalette> = {
+  themeDarker: bay,
+  themeDark: river,
+  themeDarkAlt: newBlue,
+  themePrimary: lake,
+  themeLighter: pond,
+  neutralSecondary: heavyMetal,
+  neutralTertiary: indieRock,
+  neutralLighter: popRock,
+  neutralDark: indieRock,
+  redDark: lestat,
+  white,
+};
+
 export const theme: IPartialTheme = {
-  palette: {
-    themePrimary: lake,
-    neutralSecondary: heavyMetal,
-    neutralTertiary: indieRock,
-    neutralLighter: popRock,
-    neutralDark: indieRock,
-    redDark: lestat,
-    themeDarker: deathMetal,
-  },
+  palette,
 };
 
 /*
  * Use for component level overrides
  */
 const colors = {
+  ...palette,
   textSecondary: deathMetal,
-  link: river,
-  river,
-  lake,
-  bay,
-  white,
-  newBlue,
-  indieRock,
-  pond,
 };
 
 export default colors;

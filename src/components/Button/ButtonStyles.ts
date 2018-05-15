@@ -7,46 +7,46 @@ import { ButtonColor } from './enums';
 const primaryColors: IButtonStyles = {
   root: {
     color: Colors.white,
-    backgroundColor: Colors.river,
-    borderColor: Colors.river,
+    backgroundColor: Colors.themeDark,
+    borderColor: Colors.themeDark,
   },
   rootHovered: {
     color: Colors.white,
-    backgroundColor: Colors.newBlue,
-    borderColor: Colors.newBlue,
+    backgroundColor: Colors.themeDarkAlt,
+    borderColor: Colors.themeDarkAlt,
   },
   rootFocused: {
     color: Colors.white,
-    backgroundColor: Colors.newBlue,
-    borderColor: Colors.newBlue,
+    backgroundColor: Colors.themeDarkAlt,
+    borderColor: Colors.themeDarkAlt,
   },
   rootPressed: {
     color: Colors.white,
-    backgroundColor: Colors.bay,
-    borderColor: Colors.bay,
+    backgroundColor: Colors.themeDarker,
+    borderColor: Colors.themeDarker,
   },
 };
 
 const secondaryColors: IButtonStyles = {
   root: {
-    color: Colors.river,
+    color: Colors.themeDark,
     backgroundColor: Colors.white,
-    borderColor: Colors.indieRock,
+    borderColor: Colors.neutralDark,
   },
   rootHovered: {
-    color: Colors.river,
+    color: Colors.themeDark,
     backgroundColor: Colors.white,
-    borderColor: Colors.pond,
+    borderColor: Colors.themeLighter,
   },
   rootFocused: {
-    color: Colors.river,
+    color: Colors.themeDark,
     backgroundColor: Colors.white,
-    borderColor: Colors.pond,
+    borderColor: Colors.themeLighter,
   },
   rootPressed: {
-    color: Colors.river,
+    color: Colors.themeDark,
     backgroundColor: Colors.white,
-    borderColor: Colors.lake,
+    borderColor: Colors.themePrimary,
   },
 };
 
