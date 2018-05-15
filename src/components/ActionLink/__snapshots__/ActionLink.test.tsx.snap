@@ -3,6 +3,7 @@
 exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
 <NavigationLink
   ariaLabel="Download the file"
+  block={true}
   className="y-actionLink TEST_CLASSNAME"
   href="https://yammer.com"
 >
@@ -33,6 +34,7 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
 exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
 <NavigationLink
   ariaLabel="Download file"
+  block={true}
   className="y-actionLink"
   href="https://yammer.com"
   newWindow={true}
@@ -63,6 +65,7 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
 
 exports[`<ActionLink /> with href matches its snapshot 1`] = `
 <NavigationLink
+  block={true}
   className="y-actionLink"
   href="https://yammer.com"
   newWindow={true}

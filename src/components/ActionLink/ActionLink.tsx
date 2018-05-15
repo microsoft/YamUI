@@ -75,6 +75,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
           newWindow={(this.props as NavigationActionLinkProps).newWindow}
           ariaLabel={ariaLabel}
           className={classNames}
+          block={true}
         >
           {content}
         </NavigationLink>
