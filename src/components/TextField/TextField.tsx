@@ -2,91 +2,18 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
-import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
-import { TextField as FabricTextField, ITextField } from 'office-ui-fabric-react/lib/TextField';
-import { Focusable } from '../../util/Focusable';
+import { Omit } from '../../util/types';
+import BaseTextField, { TextInputProps } from '../internal/TextField/TextField';
 
-import '../BaseTextField/BaseTextField.css';
-import './TextField.css';
-
-export interface TextFieldProps extends BaseTextFieldProps, DebouncedOnChangeProps, DebouncedOnChangePrivateProps {
-  /**
-   * String for prefix.
-   */
-  prefix?: string;
-
-  /**
-   * String for suffix.
-   */
-  suffix?: string;
-
-  /**
-   * Whether or not the textfield is underlined.
-   */
-  underlined?: boolean;
-}
+export type TextFieldProps = Omit<TextInputProps, 'multiline'>;
 
 /**
  * The TextField component enables a user to type text into an app. It's used to capture
  * a single line of text. The text displays on the screen in a simple, uniform format.
  */
-class TextField extends React.Component<TextFieldProps> implements Focusable {
-  private fabricTextFieldRef: ITextField | null;
-
-  public constructor(props: TextFieldProps) {
-    super(props);
-    this.fabricTextFieldRef = null;
-    if (this.props.focusableRef) {
-      this.props.focusableRef(this);
-    }
-  }
-
+export default class TextField extends React.Component<TextFieldProps> {
   public render() {
-    return (
-      <FabricTextField
-        {...getBaseTextFieldProps(this.props)}
-        className={this.getClasses()}
-        prefix={this.props.prefix}
-        suffix={this.props.suffix}
-        underlined={this.props.underlined}
-        onChanged={this.props.unifiedOnChange}
-        componentRef={this.setRef}
-      />
-    );
-  }
-
-  public focus() {
-    const ref = this.fabricTextFieldRef;
-    if (!ref) {
-      return;
-    }
-
-    const valueLength = this.props.value ? this.props.value.length : 0;
-    ref.focus();
-    ref.setSelectionRange(valueLength, valueLength);
-  }
-
-  private setRef = (node: ITextField | null) => {
-    this.fabricTextFieldRef = node;
-  };
-
-  private getClasses() {
-    const { className, prefix, suffix } = this.props;
-    const classes = ['y-base-text-field', 'y-text-field', className];
-
-    if (prefix) {
-      classes.push('y-text-field--with-prefix');
-    }
-
-    if (suffix) {
-      classes.push('y-text-field--with-suffix');
-    }
-
-    return join(classes);
+    const { className, ...props } = this.props;
+    return <BaseTextField {...props} multiline={false} className={join(['y-textInput', this.props.className])} />;
   }
 }
-
-export default (props: TextFieldProps) => {
-  return <DebouncedOnChange {...props} component={TextField} />;
-};
