@@ -82,7 +82,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
@@ -100,7 +100,7 @@ exports[`<EditableText /> with all props except promptText when clicked enters e
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
@@ -118,7 +118,7 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
@@ -136,7 +136,7 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}

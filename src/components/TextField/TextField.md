@@ -171,7 +171,7 @@ class ControlledTextField extends React.Component {
   render() {
     return (
       <TextField
-        componentRef={(ref) => { this.textFieldRef = ref; } }
+        focusableRef={(ref) => { this.textFieldRef = ref; } }
         value={this.state.value}
         description={<Clickable onClick={() => this.textFieldRef.focus()}>Focus and place cursor at the end of the input.</Clickable>}
         onChange={this.handleChange}

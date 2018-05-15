@@ -12,6 +12,7 @@ describe('<TextField />', () => {
     beforeEach(() => {
       component = shallow(<TextField />)
         .dive()
+        .dive()
         .dive();
     });
 
@@ -44,6 +45,7 @@ describe('<TextField />', () => {
           focusableRef={jest.fn().mockName('focusableRef')}
         />,
       )
+        .dive()
         .dive()
         .dive();
     });
@@ -78,16 +80,16 @@ describe('<TextField />', () => {
     });
   });
 
-  describe('mounted with value', () => {
+  describe('when mounted', () => {
     const value = 'VALUE';
     let focusable: Focusable;
     const setFocusable = (f: Focusable) => (focusable = f);
 
     beforeEach(() => {
-      mount(<TextField value={value} focusableRef={setFocusable} />);
+      mount(<TextField value={value} description="DESCRIPTION" focusableRef={setFocusable} />);
     });
 
-    describe('when focused', () => {
+    describe('and its public focus() method is called', () => {
       let focusSpy: jest.SpyInstance;
       let setSelectionRangeSpy: jest.SpyInstance;
 
@@ -97,11 +99,11 @@ describe('<TextField />', () => {
         focusable.focus();
       });
 
-      it('calls focus', () => {
+      it('focuses the interal textfield', () => {
         expect(focusSpy).toHaveBeenCalled();
       });
 
-      it('calls setSelectionRangeSpy', () => {
+      it('places the cursor at the end of the input text', () => {
         expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
       });
     });
