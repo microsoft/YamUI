@@ -7,6 +7,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
+import { getStyles } from './Button.styles';
 
 import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
@@ -163,7 +164,7 @@ export default class Button extends React.Component<ButtonProps> {
   };
 
   public render() {
-    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
+    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave, className } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
@@ -172,7 +173,7 @@ export default class Button extends React.Component<ButtonProps> {
     return (
       <BaseButton
         ariaLabel={ariaLabel}
-        className={this.getClasses()}
+        className={`y-button ${className ? className : ''}`}
         disabled={isDisabled}
         href={href}
         type={href ? '' : type}
@@ -181,6 +182,7 @@ export default class Button extends React.Component<ButtonProps> {
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        styles={getStyles(this.props)}
       >
         {this.getContents()}
         {this.isLoading() && this.getSpinner()}
@@ -231,23 +233,6 @@ export default class Button extends React.Component<ButtonProps> {
         <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} isCentered={true} />
       </span>
     );
-  }
-
-  private getClasses() {
-    const { className, color, status, size, fullWidth } = this.props;
-
-    const classes: string[] = ['y-button', `y-button__color-${color}`, `y-button__size-${size}`];
-    if (status !== ButtonStatus.ENABLED) {
-      classes.push(`y-button__state-${status}`);
-    }
-    if (fullWidth) {
-      classes.push('y-button__fullWidth');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 
   private isLoading() {
