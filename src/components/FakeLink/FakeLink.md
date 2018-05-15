@@ -11,7 +11,7 @@ Basic example:
 Inside an unstyled `NavigationLink`:
 
 ```js { "props": { "data-description": "inside unstyled navigationlink" } }
-<NavigationLink href="/404.html" unstyled={true}>
+<NavigationLink href="/404.html" unstyled={true} block={true}>
   <Block>
     This unstyled link wraps an entire block of text. Here is a nested <FakeLink>FakeLink component</FakeLink>, which imitates link styles when its parent is hovered, focused or active. This allows screenreaders to understand a linked block of UI while also supporting nice visual styles for sighted users.
   </Block>
