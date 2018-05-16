@@ -3,7 +3,8 @@ import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
 import { ButtonColor, ButtonSize, ButtonStatus } from './enums';
 import { ButtonProps } from './Button';
-import { borderRadiusSoft, fontWeightBold } from '../../util/styles';
+import { fontWeightBold } from '../../util/styles/fonts';
+import { borderRadiusSoft } from '../../util/styles/borders';
 
 const smallPadding = '4px 9px 6px';
 const regularPadding = '7px 15px';

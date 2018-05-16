@@ -37,6 +37,20 @@ describe('<Text />', () => {
     });
   });
 
+  describe('with a valid size and maxWidth', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Text size={TextSize.XLARGE} maxWidth="200px">
+          test content
+        </Text>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with bold', () => {
     beforeEach(() => {
       component = shallow(<Text bold={true}>test content</Text>);

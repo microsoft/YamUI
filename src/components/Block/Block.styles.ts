@@ -1,19 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BlockProps } from './Block';
-import { ellipsisStyle } from '../../util/styles';
 import { GutterSize } from '../FixedGrid/enums';
-import { textColors, fontSizes, lineHeights } from '../Text/Text.styles';
+import { textColors, fontSizes, lineHeights, ellipsisStyle } from '../../util/styles/fonts';
+import { gutterSize } from '../../util/styles/gutters';
 import { IRawStyle } from '@uifabric/styling';
-
-export const gutterSize: { [size in GutterSize]: string } = {
-  none: '0',
-  xSmall: '0.4rem',
-  small: '0.8rem',
-  medium: '1.2rem',
-  large: '1.6rem',
-  xLarge: '2rem',
-  xxLarge: '2.4rem',
-};
 
 const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (push) {
