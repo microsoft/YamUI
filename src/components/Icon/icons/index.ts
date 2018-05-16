@@ -77,6 +77,7 @@ export { default as People } from './People';
 export { default as Phone } from './Phone';
 export { default as Pinned } from './Pinned';
 export { default as PlannerLogo } from './PlannerLogo';
+export { default as Play } from './Play';
 export { default as Puzzle } from './Puzzle';
 export { default as Refresh } from './Refresh';
 export { default as Remove } from './Remove';
