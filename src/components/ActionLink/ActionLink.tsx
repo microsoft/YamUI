@@ -19,7 +19,7 @@ export interface BaseActionLinkProps extends BaseComponentProps {
   /**
    * A well-curated string describing the action for screen readers.
    */
-  ariaLabel: string;
+  ariaLabel?: string;
 
   /**
    * The visible text.
