@@ -12,7 +12,7 @@ export const textColors: { [color in TextColor]: string | undefined } = {
   secondary: palette.neutralPrimaryAlt,
   metadata: palette.neutralSecondary,
   white: palette.white,
-  error: semanticColors.errorText,
+  error: palette.redDark,
   disabled: semanticColors.disabledBodyText,
 };
 
