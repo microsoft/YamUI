@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../FixedGrid/enums';
 import { TextColor, TextSize } from '../Text/enums';
@@ -82,18 +83,6 @@ export default class Block extends React.Component<BlockProps> {
 
   private getClasses() {
     const { className, textSize } = this.props;
-    const classes = ['y-block'];
-
-    if (textSize) {
-      classes.push(`y-textSize-${textSize}`);
-    }
-
-    if (className) {
-      classes.push(className);
-    }
-
-    classes.push(mergeStyles(getStyles(this.props)));
-
-    return classes.join(' ');
+    return join(['y-block', className, textSize ? `y-textSize-${textSize}` : '', mergeStyles(getStyles(this.props))]);
   }
 }

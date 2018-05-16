@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './enums';
 import ScreenReaderText from '../ScreenreaderText';
@@ -64,22 +65,12 @@ export default class Text extends React.Component<TextProps> {
 
   private getClasses() {
     const { className, size, maxWidth } = this.props;
-    const classes = ['y-text'];
-
-    if (size) {
-      classes.push(`y-textSize-${size}`);
-    }
-
-    if (maxWidth) {
-      classes.push('y-text__ellipsis');
-    }
-
-    if (className) {
-      classes.push(className);
-    }
-
-    classes.push(mergeStyles(getStyles(this.props)));
-
-    return classes.join(' ');
+    return join([
+      'y-text',
+      className,
+      size ? `y-textSize-${size}` : '',
+      maxWidth ? 'y-text__ellipsis' : '',
+      mergeStyles(getStyles(this.props)),
+    ]);
   }
 }
