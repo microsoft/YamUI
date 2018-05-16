@@ -4,7 +4,13 @@
   "setupTestFrameworkScriptFile": "<rootDir>/config/jest/framework.js",
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
   "modulePaths": ["src/components", "src/util"],
-  "testPathIgnorePatterns": ["<rootDir>/build", "<rootDir>/dist", "<rootDir>/config", "<rootDir>/src/demos"],
+  "testPathIgnorePatterns": [
+    "<rootDir>/build",
+    "<rootDir>/dist",
+    "<rootDir>/dist-commonjs",
+    "<rootDir>/config",
+    "<rootDir>/src/demos"
+  ],
   "moduleNameMapper": {
     "office-ui-fabric-react/lib/": "office-ui-fabric-react/lib-commonjs/",
     "^.+\\.css$": "identity-obj-proxy"
