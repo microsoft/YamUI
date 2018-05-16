@@ -2,7 +2,7 @@
 
 ### Notes for use
 
-Add here any notes on how to use the component, or delete this section.
+Note that `ellipsis={true}` should only be used for things like file names or other user-supplied text. UI text should never truncate, and should only wrap.
 
 ### Examples
 
@@ -31,8 +31,8 @@ const text = 'Upload a new version of this file';
 With ellipsed text and onClick:
 
 ```js { "props": { "data-description": "with onClick and ellipsed text" } }
-const Icon = require('../Icon/icons/FavoriteStar').default;
-const text = 'Mark official and lock changes';
+const Icon = require('../Illustration/illustrations/Docx16').default;
+const text = 'Word file with really long name.doc';
 
 <div style={{ maxWidth: '200px' }}>
   <ActionLink text={text} icon={Icon} ariaLabel={text} onClick={action('ActionLink clicked')} ellipsis={true} />
@@ -63,8 +63,8 @@ const text = 'SharePoint Document Library website';
 With ellipsed text and href:
 
 ```js { "props": { "data-description": "with href and ellipsed text" } }
-const Icon = require('../Icon/icons/Embed').default;
-const text = 'Embed this feed in your own website';
+const Icon = require('../Illustration/illustrations/Docx16').default;
+const text = 'Word file with really long name.doc';
 
 <div style={{ maxWidth: '200px' }}>
   <ActionLink text={text} icon={Icon} ariaLabel={text} href="https://www.yammer.com" newWindow={true} ellipsis={true} />
