@@ -7,16 +7,20 @@ import Down from '../Icon/icons/Down';
 describe('<ActionLink />', () => {
   let component: ShallowWrapper<ActionLinkProps>;
 
-  describe('with href passed', () => {
+  describe('with href', () => {
+    beforeEach(() => {
+      component = shallow(<ActionLink text="Download" icon={Down} href="https://yammer.com" newWindow={true} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with href and ariaLabel', () => {
     beforeEach(() => {
       component = shallow(
-        <ActionLink
-          text="Download"
-          icon={Down}
-          ariaLabel="Download the file"
-          href="https://yammer.com"
-          newWindow={true}
-        />,
+        <ActionLink text="Download" icon={Down} ariaLabel="Download file" href="https://yammer.com" newWindow={true} />,
       );
     });
 
@@ -25,12 +29,12 @@ describe('<ActionLink />', () => {
     });
   });
 
-  describe('with onClick passed', () => {
+  describe('with onClick', () => {
     let onClick: jest.Mock;
 
     beforeEach(() => {
       onClick = jest.fn();
-      component = shallow(<ActionLink text="Download" icon={Down} ariaLabel="Download the file" onClick={onClick} />);
+      component = shallow(<ActionLink text="Download" icon={Down} onClick={onClick} />);
     });
 
     it('matches its snapshot', () => {
@@ -45,6 +49,19 @@ describe('<ActionLink />', () => {
       it('calls props.onClick', () => {
         expect(onClick).toHaveBeenCalledTimes(1);
       });
+    });
+  });
+
+  describe('with onClick and ariaLabel', () => {
+    let onClick: jest.Mock;
+
+    beforeEach(() => {
+      onClick = jest.fn();
+      component = shallow(<ActionLink text="Download" ariaLabel="Download file" icon={Down} onClick={onClick} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
   });
 

@@ -19,18 +19,12 @@ export interface BaseActionLinkProps extends BaseComponentProps {
   /**
    * A well-curated string describing the action for screen readers.
    */
-  ariaLabel: string;
+  ariaLabel?: string;
 
   /**
    * The visible text.
    */
   text: string;
-
-  /**
-   * If true would hide overflow text with ellipsis.
-   * @default false
-   */
-  ellipsis?: boolean;
 }
 
 export interface NavigationActionLinkProps extends BaseActionLinkProps {
@@ -60,7 +54,7 @@ export type ActionLinkProps = NavigationActionLinkProps | ClickableActionLinkPro
  */
 export default class ActionLink extends React.Component<ActionLinkProps> {
   public render() {
-    const { ariaLabel, className, ellipsis, icon: Icon, text } = this.props;
+    const { ariaLabel, className, icon: Icon, text } = this.props;
     const classNames = join(['y-actionLink', className]);
 
     const content = (
@@ -69,9 +63,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
           <Icon size={IconSize.MEDIUM} block={true} className="y-actionLink--icon" />
         </FixedGridColumn>
         <FixedGridColumn>
-          <Block ellipsis={ellipsis} textSize={TextSize.MEDIUM_SUB}>
-            {text}
-          </Block>
+          <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>
         </FixedGridColumn>
       </FixedGridRow>
     );
