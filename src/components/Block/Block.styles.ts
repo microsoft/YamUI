@@ -5,16 +5,6 @@ import { GutterSize } from '../FixedGrid/enums';
 import { textColors, fontSizes, lineHeights } from '../Text/Text.styles';
 import { IRawStyle } from '@uifabric/styling';
 
-const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
-  if (push) {
-    // For negative push, use top margin to "pull" it up
-    return push < 0 ? `${push / 10}rem` : undefined;
-  }
-  if (topSpacing) {
-    return gutterSize[topSpacing];
-  }
-};
-
 export const gutterSize: { [size in GutterSize]: string } = {
   none: '0',
   xSmall: '0.4rem',
@@ -23,6 +13,16 @@ export const gutterSize: { [size in GutterSize]: string } = {
   large: '1.6rem',
   xLarge: '2rem',
   xxLarge: '2.4rem',
+};
+
+const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
+  if (push) {
+    // For negative push, use top margin to "pull" it up
+    return push < 0 ? `${push / 10}rem` : undefined;
+  }
+  if (topSpacing) {
+    return gutterSize[topSpacing];
+  }
 };
 
 export const getStyles = (props: BlockProps): IRawStyle => {

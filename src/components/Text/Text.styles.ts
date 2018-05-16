@@ -36,6 +36,32 @@ export const fontSizes: Sizes = {
   xxLarge: '2.4rem',
 };
 
+const getHeight = (size?: TextSize) => {
+  const heights: Sizes = {
+    xSmall: '1.6rem',
+    small: '1.6rem',
+    mediumSub: '2rem',
+    medium: '2rem',
+    large: '2.4rem',
+    xLarge: '2.8rem',
+    xxLarge: '2.8rem',
+  };
+  return size ? heights[size] : undefined;
+};
+
+const getVerticalAlign = (size?: TextSize) => {
+  const verticalAligns: Sizes = {
+    xSmall: '-0.4rem',
+    small: '-0.3rem',
+    mediumSub: '-0.5rem',
+    medium: '-0.4rem',
+    large: '-0.5rem',
+    xLarge: '-0.5rem',
+    xxLarge: '-0.4rem',
+  };
+  return size ? verticalAligns[size] : undefined;
+};
+
 export const getStyles = (props: TextProps): IRawStyle => {
   const { size, maxWidth, bold, uppercase, color } = props;
 
@@ -65,30 +91,4 @@ export const getInlineStyles = (props: TextProps): CSSProperties => {
     verticalAlign: maxWidth ? getVerticalAlign(size) : undefined,
     height: maxWidth ? getHeight(size) : undefined,
   };
-};
-
-const getHeight = (size?: TextSize) => {
-  const heights: Sizes = {
-    xSmall: '1.6rem',
-    small: '1.6rem',
-    mediumSub: '2rem',
-    medium: '2rem',
-    large: '2.4rem',
-    xLarge: '2.8rem',
-    xxLarge: '2.8rem',
-  };
-  return size ? heights[size] : undefined;
-};
-
-const getVerticalAlign = (size?: TextSize) => {
-  const verticalAligns: Sizes = {
-    xSmall: '-0.4rem',
-    small: '-0.3rem',
-    mediumSub: '-0.5rem',
-    medium: '-0.4rem',
-    large: '-0.5rem',
-    xLarge: '-0.5rem',
-    xxLarge: '-0.4rem',
-  };
-  return size ? verticalAligns[size] : undefined;
 };
