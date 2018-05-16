@@ -4,6 +4,8 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './enums';
 import ScreenReaderText from '../ScreenreaderText';
+import { getStyles, getInlineStyles } from './Text.styles';
+import { mergeStyles } from '@uifabric/styling';
 import './Text.css';
 
 export { TextColor, TextSize };
@@ -52,50 +54,32 @@ export default class Text extends React.Component<TextProps> {
   public render() {
     const { children, screenreaderText } = this.props;
 
-    if (screenreaderText === undefined) {
-      return (
-        <span className={this.getClasses()} style={this.getStyles()}>
-          {children}
-        </span>
-      );
-    }
-
     return (
-      <span className={this.getClasses()} style={this.getStyles()}>
+      <span className={this.getClasses()} style={getInlineStyles(this.props)}>
         <span aria-hidden={true}>{children}</span>
-        <ScreenReaderText>{screenreaderText}</ScreenReaderText>
+        {screenreaderText !== undefined ? <ScreenReaderText>{screenreaderText}</ScreenReaderText> : null}
       </span>
     );
   }
 
   private getClasses() {
-    const { bold, className, color, maxWidth, size, uppercase } = this.props;
-
+    const { className, size, maxWidth } = this.props;
     const classes = ['y-text'];
-    if (bold) {
-      classes.push('y-text__bold');
-    }
-    if (color) {
-      classes.push(`y-text__color-${color}`);
-    }
-    if (uppercase) {
-      classes.push('y-text__uppercase');
-    }
-    if (maxWidth) {
-      classes.push('y-text__ellipsis');
-    }
+
     if (size) {
       classes.push(`y-textSize-${size}`);
     }
+
+    if (maxWidth) {
+      classes.push('y-text__ellipsis');
+    }
+
     if (className) {
       classes.push(className);
     }
 
-    return classes.join(' ');
-  }
+    classes.push(mergeStyles(getStyles(this.props)));
 
-  private getStyles() {
-    const { maxWidth } = this.props;
-    return maxWidth ? { maxWidth } : {};
+    return classes.join(' ');
   }
 }

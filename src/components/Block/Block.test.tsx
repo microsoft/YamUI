@@ -62,8 +62,8 @@ describe('<Block />', () => {
         component = shallow(<Block textAlign="center">block content</Block>);
       });
 
-      it('includes the aligned center className', () => {
-        expect(component.hasClass('y-block__textAlign-center')).toBe(true);
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
   });

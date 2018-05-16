@@ -1,9 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { TooltipProps } from './Tooltip';
-import Styles from '../../util/styles';
+import { borderRadiusSoft } from '../../util/styles';
 import { ITooltipStyles } from 'office-ui-fabric-react/lib/components/Tooltip/Tooltip.types';
 import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Callout/Callout.types';
+import { lineHeights, fontSizes } from '../Text/Text.styles';
 
 export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
   return {
@@ -12,8 +13,8 @@ export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
       display: 'inline-block',
     },
     subText: {
-      lineHeight: Styles.lineHeightSmall,
-      fontSize: Styles.fontSizeSmall,
+      lineHeight: lineHeights.small,
+      fontSize: fontSizes.small,
       color: palette.white,
     },
   };
@@ -37,7 +38,7 @@ export const getCalloutStyles = (_: TooltipProps): ICalloutContentStyles => {
     },
     beakCurtain: {
       backgroundColor: palette.neutralPrimary,
-      borderRadius: Styles.borderRadiusSoft,
+      ...borderRadiusSoft,
     },
     calloutMain: {
       backgroundColor: palette.neutralPrimary,

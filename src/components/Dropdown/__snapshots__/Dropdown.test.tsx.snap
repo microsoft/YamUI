@@ -2,11 +2,22 @@
 
 exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
 <div
-  className="y-block y-textSize-mediumSub y-dropdown--item"
-  style={Object {}}
+  className=
+      y-block
+      y-textSize-mediumSub
+      y-dropdown--item
+      {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     <FixedGridRow
       gutterSize="small"
@@ -67,11 +78,22 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
 
 exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
 <div
-  className="y-block y-textSize-mediumSub y-dropdown--item"
-  style={Object {}}
+  className=
+      y-block
+      y-textSize-mediumSub
+      y-dropdown--item
+      {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     <div
       className="y-dropdown--ellipsed-title"
@@ -81,11 +103,25 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
           bold={true}
         >
           <span
-            className="y-text y-text__bold"
-            style={Object {}}
+            className=
+                y-text
+                {
+                  display: inline-block;
+                  font-weight: 600;
+                }
+            style={
+              Object {
+                "height": undefined,
+                "verticalAlign": undefined,
+              }
+            }
           >
-            label
-            :
+            <span
+              aria-hidden={true}
+            >
+              label
+              :
+            </span>
           </span>
         </Text>
          
@@ -204,11 +240,23 @@ exports[`<Dropdown /> with divider matches its snapshot 1`] = `null`;
 
 exports[`<Dropdown /> with section header matches its snapshot 1`] = `
 <div
-  className="y-block y-textSize-small y-dropdown--item y-dropdown--header"
-  style={Object {}}
+  className=
+      y-block
+      y-textSize-small
+      y-dropdown--item
+      y-dropdown--header
+      {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     header1
   </div>

@@ -1,16 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { IFontWeight } from '@uifabric/styling/lib';
-import { ICSSPixelUnitRule } from '@uifabric/merge-styles/lib/IRawStyleBase';
+import { IRawStyle } from '@uifabric/styling';
 
-const borderRadiusSoft: ICSSPixelUnitRule = '2px';
-const fontWeightBold: IFontWeight = '600';
+export const borderRadiusSoft: IRawStyle = { borderRadius: '2px' };
+export const borderRadiusRound: IRawStyle = { borderRadius: '50%' };
+export const fontWeightBold: IRawStyle = { fontWeight: '600' };
+export const fontWeightNormal: IRawStyle = { fontWeight: '600' };
 
-const fontSizeSmall = '1.2rem';
-const lineHeightSmall = '1.6rem';
-
-export default {
-  fontSizeSmall,
-  lineHeightSmall,
-  fontWeightBold,
-  borderRadiusSoft,
+export const ellipsisStyle: IRawStyle = {
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 };
