@@ -11,11 +11,10 @@
   },
   "dependencies": {
     "normalize.css": "6.0.0",
-    "office-ui-fabric-react": "6.0.0-beta3",
+    "office-ui-fabric-react": "6.0.0-beta4",
     "react-intersection-observer": "3.0.2"
   },
   "devDependencies": {
-    "@types/classnames": "0.0.32",
     "@types/enzyme": "3.1.9",
     "@types/jest": "22.2.0",
     "@types/node": "7.0.12",

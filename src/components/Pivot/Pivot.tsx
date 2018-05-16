@@ -32,26 +32,15 @@ export interface PivotProps extends NestableBaseComponentProps {
   onChange(key: string): void;
 }
 
-export interface PivotState {
-  /**
-   * Key of the selected pivot item at a certain point.
-   */
-  selectedKey: string;
-}
-
-export default class Pivot extends React.Component<PivotProps, PivotState> {
-  constructor(props: PivotProps) {
-    super(props);
-    this.onLinkClick = this.onLinkClick.bind(this);
-
-    this.state = {
-      selectedKey: this.props.selectedKey,
-    };
-  }
-
+export default class Pivot extends React.Component<PivotProps> {
   public render() {
     return (
-      <FabricPivot className={this.getClasses()} selectedKey={this.props.selectedKey} onLinkClick={this.onLinkClick}>
+      <FabricPivot
+        className={this.getClasses()}
+        selectedKey={this.props.selectedKey}
+        onLinkClick={this.onLinkClick}
+        headersOnly={true}
+      >
         {this.getFabricPivotItems()}
       </FabricPivot>
     );
@@ -59,31 +48,22 @@ export default class Pivot extends React.Component<PivotProps, PivotState> {
 
   private getFabricPivotItems() {
     return this.props.pivotItems.map((child: PivotItem) => (
-      <FabricPivotItem
-        ariaLabel={child.ariaLabel}
-        className="y-pivot-item"
-        itemKey={child.key}
-        headerText={child.text}
-        key={child.key}
-      />
+      <FabricPivotItem ariaLabel={child.ariaLabel} itemKey={child.key} headerText={child.text} key={child.key} />
     ));
   }
 
-  private onLinkClick(item?: FabricPivotItem) {
-    if (item && item.props.itemKey && item.props.itemKey !== this.state.selectedKey) {
+  private onLinkClick = (item?: FabricPivotItem) => {
+    if (item && item.props.itemKey && item.props.itemKey !== this.props.selectedKey) {
       this.props.onChange(item.props.itemKey);
-      this.setState({
-        selectedKey: item.props.itemKey,
-      });
     }
-  }
+  };
 
   private getClasses() {
     const classes: string[] = ['y-pivot'];
     const { className, isDark } = this.props;
 
     if (isDark) {
-      classes.push('is-dark');
+      classes.push('y-pivot__isDark');
     }
     if (className) {
       classes.push(className);

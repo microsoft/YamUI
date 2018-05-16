@@ -3,24 +3,22 @@
 exports[`<Pivot /> with default options matches its snapshot 1`] = `
 <StyledPivotBase
   className="y-pivot"
+  headersOnly={true}
   onLinkClick={[Function]}
   selectedKey="1"
 >
   <PivotItem
     ariaLabel="test"
-    className="y-pivot-item"
     headerText="Tab 1"
     itemKey="1"
     key="1"
   />
   <PivotItem
-    className="y-pivot-item"
     headerText="Tab 2"
     itemKey="2"
     key="2"
   />
   <PivotItem
-    className="y-pivot-item"
     headerText="Tab 3"
     itemKey="3"
     key="3"
@@ -30,25 +28,23 @@ exports[`<Pivot /> with default options matches its snapshot 1`] = `
 
 exports[`<Pivot /> with isDark as true matches its snapshot 1`] = `
 <StyledPivotBase
-  className="y-pivot is-dark"
+  className="y-pivot y-pivot__isDark"
+  headersOnly={true}
   onLinkClick={[Function]}
   selectedKey="1"
 >
   <PivotItem
     ariaLabel="test"
-    className="y-pivot-item"
     headerText="Tab 1"
     itemKey="1"
     key="1"
   />
   <PivotItem
-    className="y-pivot-item"
     headerText="Tab 2"
     itemKey="2"
     key="2"
   />
   <PivotItem
-    className="y-pivot-item"
     headerText="Tab 3"
     itemKey="3"
     key="3"
