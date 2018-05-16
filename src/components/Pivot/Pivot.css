@@ -1,0 +1,32 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/colors.css';
+
+.y-pivot .ms-Pivot-text {
+  font-weight: 600;
+}
+
+.y-pivot .ms-Pivot-link {
+  color: $color__deathMetal;
+  opacity: 0.7;
+}
+
+.y-pivot .ms-Pivot-link.is-selected {
+  opacity: 1;
+}
+
+.y-pivot .ms-Pivot-link.is-selected::before {
+  border-bottom-color: $color__river;
+}
+
+.y-pivot.is-dark .ms-Pivot-link {
+  color: $color__white;
+  opacity: 0.7;
+}
+
+.y-pivot.is-dark .ms-Pivot-link.is-selected {
+  opacity: 1;
+}
+
+.y-pivot.is-dark .ms-Pivot-link.is-selected::before {
+  border-bottom-color: $color__white;
+}
