@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PeoplePicker /> when given only required prop matches its snapshot 1`] = `
+<NormalPeoplePicker
+  createGenericItem={[Function]}
+  onRenderItem={[Function]}
+  onRenderSuggestionsItem={[Function]}
+  onResolveSuggestions={[MockFunction]}
+/>
+`;
