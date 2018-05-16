@@ -65,8 +65,8 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
   return {
     root: {
       ...(root as {}),
-      ...borderRadiusSoft,
-      ...fontWeightBold,
+      borderRadius: borderRadiusSoft,
+      fontWeight: fontWeightBold,
       textAlign: 'center',
       display: fullWidth ? 'block' : 'inline-block',
       position: 'relative',

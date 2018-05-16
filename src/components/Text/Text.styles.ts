@@ -67,7 +67,7 @@ export const getStyles = (props: TextProps): IRawStyle => {
 
   return {
     ...(maxWidth ? ellipsisStyle : {}),
-    ...(bold ? fontWeightBold : {}),
+    fontWeight: bold ? fontWeightBold : undefined,
     display: 'inline-block',
     textTransform: uppercase ? 'uppercase' : undefined,
     fontSize: size ? fontSizes[size] : undefined,

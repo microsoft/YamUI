@@ -38,7 +38,7 @@ export const getCalloutStyles = (_: TooltipProps): ICalloutContentStyles => {
     },
     beakCurtain: {
       backgroundColor: palette.neutralPrimary,
-      ...borderRadiusSoft,
+      borderRadius: borderRadiusSoft,
     },
     calloutMain: {
       backgroundColor: palette.neutralPrimary,
