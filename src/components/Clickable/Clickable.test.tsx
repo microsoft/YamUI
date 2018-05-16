@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Clickable, { ClickableProps } from '.';
+import { Focusable } from '../../util/Focusable';
 
 describe('<Clickable />', () => {
   let component: ShallowWrapper<ClickableProps>;
@@ -63,6 +64,38 @@ describe('<Clickable />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when focusableRef is passed', () => {
+    let mounted: ReactWrapper<ClickableProps>;
+
+    let focusable: Focusable;
+
+    beforeEach(() => {
+      const setFocusable = (f: Focusable) => {
+        focusable = f;
+      };
+      mounted = mount(<Clickable focusableRef={setFocusable}>clickable content</Clickable>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(mounted).toMatchSnapshot();
+    });
+
+    describe('when focusable is used', () => {
+      let button: HTMLElement;
+
+      beforeEach(() => {
+        button = mounted.find('button').getDOMNode() as HTMLElement;
+        jest.spyOn(button, 'focus');
+
+        focusable.focus();
+      });
+
+      it('calls focus on underlying button', () => {
+        expect(button.focus).toHaveBeenCalledTimes(1);
+      });
     });
   });
 

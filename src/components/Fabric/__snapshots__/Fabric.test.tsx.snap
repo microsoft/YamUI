@@ -2,7 +2,25 @@
 
 exports[`<Fabric /> with default options renders 1`] = `
 <div
-  class="ms-Fabric root-33"
+  class=
+      ms-Fabric
+      {
+        color: #343A41;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+      }
+      & button {
+        font-family: inherit;
+      }
+      & input {
+        font-family: inherit;
+      }
+      & textarea {
+        font-family: inherit;
+      }
+      button {
+        overflow: visible;
+      }
 >
   wrapped content
 </div>

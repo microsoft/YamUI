@@ -10,6 +10,7 @@ describe('<TextArea />', () => {
     beforeEach(() => {
       component = shallow(<TextArea />)
         .dive()
+        .dive()
         .dive();
     });
 
@@ -40,6 +41,7 @@ describe('<TextArea />', () => {
         />,
       )
         .dive()
+        .dive()
         .dive();
     });
 
@@ -51,6 +53,7 @@ describe('<TextArea />', () => {
   describe('with description and no error', () => {
     beforeEach(() => {
       component = shallow(<TextArea description="DESCRIPTION" />)
+        .dive()
         .dive()
         .dive();
     });

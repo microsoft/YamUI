@@ -2,7 +2,7 @@
   "name": "yamui",
   "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
-  "version": "6.4.0",
+  "version": "7.0.0",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "repository": {
@@ -11,17 +11,17 @@
   },
   "dependencies": {
     "normalize.css": "6.0.0",
-    "office-ui-fabric-react": "5.85.0",
+    "office-ui-fabric-react": "6.0.0-beta4",
     "react-intersection-observer": "3.0.2"
   },
   "devDependencies": {
-    "@types/classnames": "0.0.32",
     "@types/enzyme": "3.1.9",
     "@types/jest": "22.2.0",
     "@types/node": "7.0.12",
     "@types/prop-types": "15.5.1",
     "@types/react": "16.3.13",
     "@types/react-dom": "16.0.5",
+    "@uifabric/jest-serializer-merge-styles": "5.2.0",
     "css-loader": "0.27.3",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
@@ -74,8 +74,8 @@
     "yo": "2.0.0"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "typescript": "^2.5.0"
   },
   "scripts": {

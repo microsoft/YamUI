@@ -3,6 +3,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
 import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { Focusable } from '../../util/Focusable';
 
 describe('<TextField />', () => {
   let component: ShallowWrapper<TextFieldProps>;
@@ -10,6 +11,7 @@ describe('<TextField />', () => {
   describe('with default options', () => {
     beforeEach(() => {
       component = shallow(<TextField />)
+        .dive()
         .dive()
         .dive();
     });
@@ -40,9 +42,10 @@ describe('<TextField />', () => {
           onBlur={jest.fn().mockName('onBlur')}
           onMouseEnter={jest.fn().mockName('onMouseEnter')}
           onMouseLeave={jest.fn().mockName('onMouseLeave')}
-          componentRef={jest.fn().mockName('componentRef')}
+          focusableRef={jest.fn().mockName('focusableRef')}
         />,
       )
+        .dive()
         .dive()
         .dive();
     });
@@ -53,8 +56,8 @@ describe('<TextField />', () => {
   });
 
   describe('mounted with default options', () => {
-    let ref: any;
-    const setRef = (i: any) => (ref = i);
+    let focusable: Focusable;
+    const setFocusable = (f: Focusable) => (focusable = f);
 
     describe('when focused', () => {
       let focusSpy: jest.SpyInstance;
@@ -63,8 +66,8 @@ describe('<TextField />', () => {
       beforeEach(() => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-        mount(<TextField componentRef={setRef} />);
-        ref.focus();
+        mount(<TextField focusableRef={setFocusable} />);
+        focusable.focus();
       });
 
       it('calls focus', () => {
@@ -77,30 +80,30 @@ describe('<TextField />', () => {
     });
   });
 
-  describe('mounted with value', () => {
+  describe('when mounted', () => {
     const value = 'VALUE';
-    let ref: any;
-    const setRef = (i: any) => (ref = i);
+    let focusable: Focusable;
+    const setFocusable = (f: Focusable) => (focusable = f);
 
     beforeEach(() => {
-      mount(<TextField value={value} componentRef={setRef} />);
+      mount(<TextField value={value} description="DESCRIPTION" focusableRef={setFocusable} />);
     });
 
-    describe('when focused', () => {
+    describe('and its public focus() method is called', () => {
       let focusSpy: jest.SpyInstance;
       let setSelectionRangeSpy: jest.SpyInstance;
 
       beforeEach(() => {
         focusSpy = jest.spyOn(FabricTextField.prototype, 'focus');
         setSelectionRangeSpy = jest.spyOn(FabricTextField.prototype, 'setSelectionRange');
-        ref.focus();
+        focusable.focus();
       });
 
-      it('calls focus', () => {
+      it('focuses the interal textfield', () => {
         expect(focusSpy).toHaveBeenCalled();
       });
 
-      it('calls setSelectionRangeSpy', () => {
+      it('places the cursor at the end of the input text', () => {
         expect(setSelectionRangeSpy).toHaveBeenCalledWith(value.length, value.length);
       });
     });

@@ -6,6 +6,7 @@ exports[`<EditableText /> with additional className matches its snapshot 1`] = `
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -23,6 +24,7 @@ exports[`<EditableText /> with all props except promptText matches its snapshot 
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -42,6 +44,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -61,6 +64,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -78,9 +82,9 @@ exports[`<EditableText /> with all props except promptText when clicked and text
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
-    componentRef={[Function]}
+    focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
     onChange={[Function]}
@@ -96,9 +100,9 @@ exports[`<EditableText /> with all props except promptText when clicked enters e
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
-    componentRef={[Function]}
+    focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
     onChange={[Function]}
@@ -114,9 +118,9 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
-    componentRef={[Function]}
+    focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
     onChange={[Function]}
@@ -132,9 +136,9 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 <div
   className="y-editableText"
 >
-  <Component
+  <TextField
     className="y-editableText--textfield"
-    componentRef={[Function]}
+    focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
     onChange={[Function]}
@@ -153,6 +157,7 @@ exports[`<EditableText /> with promptText matches its snapshot 1`] = `
   <Clickable
     ariaLabel="PROMPT TEXT"
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -172,6 +177,7 @@ exports[`<EditableText /> without props when clicked and text is changed and ENT
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
@@ -189,6 +195,7 @@ exports[`<EditableText /> without props when clicked and text is changed and ESC
 >
   <Clickable
     className="y-editableText--clickable"
+    focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
