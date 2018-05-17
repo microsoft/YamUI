@@ -67,9 +67,9 @@ export default class Text extends React.Component<TextProps> {
     const { className, size, maxWidth } = this.props;
     return join([
       'y-text',
-      className,
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
+      className,
       mergeStyles(getStyles(this.props)),
     ]);
   }

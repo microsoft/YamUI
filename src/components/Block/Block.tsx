@@ -83,6 +83,6 @@ export default class Block extends React.Component<BlockProps> {
 
   private getClasses() {
     const { className, textSize } = this.props;
-    return join(['y-block', className, textSize ? `y-textSize-${textSize}` : '', mergeStyles(getStyles(this.props))]);
+    return join(['y-block', textSize ? `y-textSize-${textSize}` : '', className, mergeStyles(getStyles(this.props))]);
   }
 }
