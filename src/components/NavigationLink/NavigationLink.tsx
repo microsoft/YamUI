@@ -7,6 +7,11 @@ import './NavigationLink.css';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   /**
+   * Whether the clickable should be `display: block`.
+   */
+  block?: boolean;
+
+  /**
    * URL or a URL fragment that the link points to.
    */
   href: string;
@@ -50,12 +55,17 @@ export default class NavigationLink extends React.Component<NavigationLinkProps>
   }
 
   private getClasses() {
-    const { className, unstyled } = this.props;
+    const { className, block, unstyled } = this.props;
 
     const classes: string[] = ['y-navigationLink'];
     if (unstyled) {
       classes.push('y-navigationLink__unstyled');
     }
+
+    if (block) {
+      classes.push('y-navigationLink__block');
+    }
+
     if (className) {
       classes.push(className);
     }

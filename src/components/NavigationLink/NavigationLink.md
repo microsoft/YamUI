@@ -31,7 +31,7 @@ Unstyled link:
 Link wrapping content:
 
 ```js { "props": { "data-description": "wrapping" } }
-<NavigationLink href="/404.html">
+<NavigationLink href="/404.html" block={true}>
   <div>
     This <strong>NavigationLink</strong> component wraps an entire block of text. By default all text content within a <strong>NavigationLink</strong> tag will be styled like a link.
   </div>
@@ -44,18 +44,31 @@ Unstyled link wrapping content:
 const { TextColor } = require('../Text');
 
 <div>
-  <NavigationLink href="/404.html" unstyled>
+  <NavigationLink href="/404.html" unstyled={true} block={true}>
     <div>
       This is an unstyled <strong>NavigationLink</strong> component wrapping an entire block of text.
     </div>
   </NavigationLink>
   <br />
-  <NavigationLink href="/404.html" unstyled>
+  <NavigationLink href="/404.html" unstyled={true} block={true}>
     <div>
       <Text color={TextColor.METADATA}>
         This is another unstyled <strong>NavigationLink</strong> component wrapping a block of text with a different color.
       </Text>
     </div>
+  </NavigationLink>
+</div>
+```
+
+Wrapping image:
+
+```js { "props": { "data-description": "wrapping image" } }
+const yammerLogo = 'logo.png';
+const yammerLogoDescription = 'Yammer "y" logo';
+
+<div>
+  <NavigationLink href="/404.html" unstyled={true} block={true}>
+    <Image source={yammerLogo} description={yammerLogoDescription} width={320} height={240} block={true} />
   </NavigationLink>
 </div>
 ```

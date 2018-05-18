@@ -8,8 +8,8 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={12}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME - BADGE
@@ -25,8 +25,8 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={12}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME
@@ -42,8 +42,8 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={12}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME
@@ -59,8 +59,8 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={10}
+    text="NAME"
   />
   <div
     className="y-avatar--badge y-avatar__size-xSmall--badge"
@@ -83,8 +83,8 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={12}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME
@@ -100,8 +100,8 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={14}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME
@@ -117,8 +117,8 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
-    primaryText="NAME"
     size={12}
+    text="NAME"
   />
   <ScreenreaderText>
     NAME
@@ -133,8 +133,8 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
-    primaryText="First Last"
     size={12}
+    text="First Last"
   />
   <ScreenreaderText>
     First Last
