@@ -12,7 +12,8 @@ module.exports = {
     },
   },
   launchOptions: {
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting medium'],
+    slowMo: 25,
   },
   navigationOptions: {
     waitUntil: 'networkidle0',
