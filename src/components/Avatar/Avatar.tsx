@@ -80,7 +80,7 @@ export default class Avatar extends React.Component<AvatarProps> {
           imageUrl={imageUrl}
           size={personaSize}
           hidePersonaDetails={true}
-          primaryText={name}
+          text={name}
           imageShouldFadeIn={imageShouldFadeIn}
         />
         {badge}
