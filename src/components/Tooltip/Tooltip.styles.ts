@@ -7,12 +7,13 @@ import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Cal
 
 export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
   return {
-    root: {},
+    root: {
+      lineHeight: lineHeightSmall,
+    },
     content: {
       display: 'inline-block',
     },
     subText: {
-      lineHeight: lineHeightSmall,
       fontSize: fontSizeSmall,
       color: palette.white,
     },
