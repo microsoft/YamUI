@@ -67,7 +67,7 @@ Error with a link action:
 ```js { "props": { "data-description": "with link action" } }
 const { MessageBarType } = require('.');
 
-const link = <FakeLink>Retry</FakeLink>;
+const link = <Clickable>Retry</Clickable>;
 
 <MessageBar actions={link} type={MessageBarType.ERROR}>
   Oh no, something bad happened and we couldn't complete your action!

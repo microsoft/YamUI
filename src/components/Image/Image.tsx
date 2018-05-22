@@ -10,6 +10,11 @@ export { BorderType, ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
   /**
+   * Whether the clickable should be `display: block`.
+   */
+  block?: boolean;
+
+  /**
    * Description of the image that must be provided for screenreaders. Set to an empty string if
    * screenreaders should not read anything out loud.
    */
@@ -101,7 +106,7 @@ export default class Image extends React.Component<ImageProps> {
   }
 
   private getClasses() {
-    const { borderType, className, fullWidth } = this.props;
+    const { block, borderType, className, fullWidth } = this.props;
 
     const classes: string[] = ['y-image'];
     if (fullWidth) {
@@ -109,6 +114,9 @@ export default class Image extends React.Component<ImageProps> {
     }
     if (borderType) {
       classes.push(`y-image__border-${borderType}`);
+    }
+    if (block) {
+      classes.push('y-image__block');
     }
     if (className) {
       classes.push(className);

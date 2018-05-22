@@ -85,4 +85,18 @@ describe('<NavigationLink />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('with block={true}', () => {
+    beforeEach(() => {
+      component = shallow(
+        <NavigationLink href="test.html" block={true}>
+          test content
+        </NavigationLink>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

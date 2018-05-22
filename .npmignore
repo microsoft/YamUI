@@ -1,3 +1,4 @@
-# Only need to publish the dist/ directory, ignore everything else
+# Only need to publish the dist directories, ignore everything else
 *
 !dist/**
+!dist-commonjs/**
