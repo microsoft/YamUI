@@ -17,12 +17,12 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Text
+          <Component
             bold={true}
             uppercase={true}
           >
             Test title
-          </Text>
+          </Component>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
@@ -48,12 +48,12 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
           level="2"
           size="none"
         >
-          <Text
+          <Component
             bold={true}
             uppercase={true}
           >
             Test title
-          </Text>
+          </Component>
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
@@ -86,12 +86,12 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Text
+          <Component
             bold={true}
             uppercase={true}
           >
             Test title
-          </Text>
+          </Component>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>

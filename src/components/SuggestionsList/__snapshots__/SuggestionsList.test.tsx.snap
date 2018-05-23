@@ -101,12 +101,12 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
     textAlign="center"
     textSize="small"
   >
-    <Text
+    <Component
       className="y-suggestions-list--no-results"
       color="metadata"
     >
       noResultsText
-    </Text>
+    </Component>
   </Block>
 </div>
 `;

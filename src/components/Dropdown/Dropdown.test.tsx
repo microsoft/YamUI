@@ -1,4 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+jest.mock('../Block/');
+
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import { Dropdown as FabricDropdown, IDropdownProps } from 'office-ui-fabric-react/lib/components/Dropdown';

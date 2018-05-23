@@ -24,7 +24,6 @@ const punkRock = '#a8b0bd';
 const heavyMetal = '#646d7a';
 const deathMetal = '#495361';
 const blackMetal = '#343A41';
-// const black = '#000';
 
 /* Yellow */
 // const sunrise = '#ffe7b8';

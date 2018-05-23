@@ -1,20 +1,23 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { TooltipProps } from './Tooltip';
+import { lineHeights, fontSizes } from '../../util/styles/fonts';
 import { borderRadiusSoft } from '../../util/styles/borders';
+
 import { ITooltipStyles } from 'office-ui-fabric-react/lib/components/Tooltip/Tooltip.types';
 import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Callout/Callout.types';
-import { lineHeights, fontSizes } from '../../util/styles/fonts';
 
 export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
   return {
-    root: {},
+    root: {
+      lineHeight: '1',
+    },
     content: {
       display: 'inline-block',
     },
     subText: {
-      lineHeight: lineHeights.small,
       fontSize: fontSizes.small,
+      lineHeight: lineHeights.small,
       color: palette.white,
     },
   };
