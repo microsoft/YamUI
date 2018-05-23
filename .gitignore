@@ -1,5 +1,6 @@
 /build
 /dist
+/dist-commonjs
 /docs
 /node_modules
 /config/travis/deploy.key

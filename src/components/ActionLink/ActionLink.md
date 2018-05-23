@@ -28,17 +28,6 @@ const text = 'Upload a new version of this file';
 </div>
 ```
 
-With ellipsed text and onClick:
-
-```js { "props": { "data-description": "with onClick and ellipsed text" } }
-const Icon = require('../Icon/icons/FavoriteStar').default;
-const text = 'Mark official and lock changes';
-
-<div style={{ maxWidth: '200px' }}>
-  <ActionLink text={text} icon={Icon} ariaLabel={text} onClick={action('ActionLink clicked')} ellipsis={true} />
-</div>
-```
-
 With href (link implementation):
 
 ```js { "props": { "data-description": "with href" } }
@@ -57,16 +46,5 @@ const text = 'SharePoint Document Library website';
 
 <div style={{ maxWidth: '200px' }}>
   <ActionLink text={text} icon={Icon} ariaLabel={text} href="https://www.yammer.com" newWindow={true} />
-</div>
-```
-
-With ellipsed text and href:
-
-```js { "props": { "data-description": "with href and ellipsed text" } }
-const Icon = require('../Icon/icons/Embed').default;
-const text = 'Embed this feed in your own website';
-
-<div style={{ maxWidth: '200px' }}>
-  <ActionLink text={text} icon={Icon} ariaLabel={text} href="https://www.yammer.com" newWindow={true} ellipsis={true} />
 </div>
 ```
