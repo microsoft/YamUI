@@ -8,13 +8,14 @@ import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Cal
 export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
   return {
     root: {
-      lineHeight: lineHeightSmall,
+      lineHeight: '1',
     },
     content: {
       display: 'inline-block',
     },
     subText: {
       fontSize: fontSizeSmall,
+      lineHeight: lineHeightSmall,
       color: palette.white,
     },
   };
