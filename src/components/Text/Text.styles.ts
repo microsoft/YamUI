@@ -1,11 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextProps, TextSize } from './Text';
+import { TextProps, TextSize, PrivateTextProps } from './Text';
 import { ellipsisStyle, fontWeightBold, fontSizes, lineHeights, textColors, Sizes } from '../../util/styles/fonts';
 import { IRawStyle } from '@uifabric/styling';
-import { CSSProperties } from 'react';
 
-export const getStyles = (props: TextProps): IRawStyle => {
-  const { size, maxWidth, bold, uppercase, color } = props;
+export const getStyles = (props: TextProps & PrivateTextProps): IRawStyle => {
+  const { size, maxWidth, bold, uppercase, color, blockTextSize } = props;
 
   return {
     ...(maxWidth ? ellipsisStyle : {}),
@@ -16,7 +15,8 @@ export const getStyles = (props: TextProps): IRawStyle => {
     lineHeight: size ? lineHeights[size] : undefined,
     color: color ? textColors[color] : undefined,
     maxWidth: maxWidth || undefined,
-    verticalAlign: maxWidth ? '-0.4rem' : undefined,
+    height: maxWidth ? getHeight(size) : undefined,
+    verticalAlign: maxWidth ? getVerticalAlign(size || blockTextSize) : undefined,
   };
 };
 
@@ -45,20 +45,5 @@ const verticalAligns: Sizes = {
 };
 
 const getVerticalAlign = (size?: TextSize) => {
-  return size ? verticalAligns[size] : undefined;
-};
-
-/**
- * Inline-block elements shift vertical-align from baseline to bottom when we set
- * overflow:hidden for ellipsis. These rules ensure ellipsis Text, at each size and nested
- * under each Block's textSize, maintains correct vertical alignment. Increased specificity
- * to handle the nested block case :(
- */
-export const getInlineStyles = (props: TextProps): CSSProperties => {
-  const { size, maxWidth } = props;
-
-  return {
-    verticalAlign: maxWidth ? getVerticalAlign(size) : undefined,
-    height: maxWidth ? getHeight(size) : undefined,
-  };
+  return size ? verticalAligns[size] : '-0.4rem';
 };

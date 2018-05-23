@@ -64,6 +64,10 @@ export interface BlockProps extends NestableBaseComponentProps {
   ellipsis?: boolean;
 }
 
+const defaultContext = { textSize: undefined as TextSize | undefined };
+
+export const BlockContext = React.createContext(defaultContext);
+
 /**
  * A `Block` is a layout component to build consistent padding and vertical spacing between
  * components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in
@@ -72,12 +76,14 @@ export interface BlockProps extends NestableBaseComponentProps {
  */
 export default class Block extends React.Component<BlockProps> {
   public render() {
-    const { children } = this.props;
+    const { children, textSize } = this.props;
 
     return (
-      <div className={this.getClasses()}>
-        <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
-      </div>
+      <BlockContext.Provider value={{ textSize }}>
+        <div className={this.getClasses()}>
+          <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
+        </div>
+      </BlockContext.Provider>
     );
   }
 

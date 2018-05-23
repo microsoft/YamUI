@@ -2,12 +2,12 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
+import { BlockContext } from '../Block';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './enums';
 import ScreenReaderText from '../ScreenreaderText';
-import { getStyles, getInlineStyles } from './Text.styles';
+import { getStyles } from './Text.styles';
 import { mergeStyles } from '@uifabric/styling';
-import './Text.css';
 
 export { TextColor, TextSize };
 
@@ -46,17 +46,21 @@ export interface TextProps extends NestableBaseComponentProps {
   screenreaderText?: string;
 }
 
+export interface PrivateTextProps extends NestableBaseComponentProps {
+  blockTextSize?: TextSize;
+}
+
 /**
  * A `Text` component simply renders a `span`. It offers size and color props so UI features don't
  * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
  * of supported text colors and `font-size`/`line-height` combinations.
  */
-export default class Text extends React.Component<TextProps> {
+class Text extends React.Component<TextProps & PrivateTextProps> {
   public render() {
     const { children, screenreaderText } = this.props;
 
     return (
-      <span className={this.getClasses()} style={getInlineStyles(this.props)}>
+      <span className={this.getClasses()}>
         <span aria-hidden={true}>{children}</span>
         {screenreaderText !== undefined ? <ScreenReaderText>{screenreaderText}</ScreenReaderText> : null}
       </span>
@@ -74,3 +78,7 @@ export default class Text extends React.Component<TextProps> {
     ]);
   }
 }
+
+export default (props: TextProps) => (
+  <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>
+);
