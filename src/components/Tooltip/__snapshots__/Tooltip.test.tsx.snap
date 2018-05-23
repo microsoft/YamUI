@@ -40,11 +40,12 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
           "display": "inline-block",
         },
         "root": Object {
-          "lineHeight": "1.6rem",
+          "lineHeight": "1",
         },
         "subText": Object {
           "color": "#ffffff",
           "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
         },
       },
     }
@@ -92,11 +93,12 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
           "display": "inline-block",
         },
         "root": Object {
-          "lineHeight": "1.6rem",
+          "lineHeight": "1",
         },
         "subText": Object {
           "color": "#ffffff",
           "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
         },
       },
     }
@@ -147,11 +149,12 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
           "display": "inline-block",
         },
         "root": Object {
-          "lineHeight": "1.6rem",
+          "lineHeight": "1",
         },
         "subText": Object {
           "color": "#ffffff",
           "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
         },
       },
     }
