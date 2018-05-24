@@ -5,7 +5,7 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
   maxWidth="200px"
   size="xLarge"
 >
-  <Text
+  <PrivateText
     maxWidth="200px"
     size="xLarge"
   >
@@ -26,13 +26,9 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
             white-space: nowrap;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -40,7 +36,7 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <Text
   size="xLarge"
 >
-  <Text
+  <PrivateText
     size="xLarge"
   >
     <span
@@ -53,13 +49,9 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
             line-height: 2.8rem;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -67,7 +59,7 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
 <Text
   className="TEST_CLASSNAME"
 >
-  <Text
+  <PrivateText
     className="TEST_CLASSNAME"
   >
     <span
@@ -78,13 +70,9 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
             display: inline-block;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -92,7 +80,7 @@ exports[`<Text /> with bold matches its snapshot 1`] = `
 <Text
   bold={true}
 >
-  <Text
+  <PrivateText
     bold={true}
   >
     <span
@@ -103,13 +91,9 @@ exports[`<Text /> with bold matches its snapshot 1`] = `
             font-weight: 600;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -117,7 +101,7 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
 <Text
   color="secondary"
 >
-  <Text
+  <PrivateText
     color="secondary"
   >
     <span
@@ -128,19 +112,15 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
             display: inline-block;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
 exports[`<Text /> with default options matches its snapshot 1`] = `
 <Text>
-  <Text>
+  <PrivateText>
     <span
       className=
           y-text
@@ -148,13 +128,9 @@ exports[`<Text /> with default options matches its snapshot 1`] = `
             display: inline-block;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -162,7 +138,7 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 <Text
   maxWidth="500px"
 >
-  <Text
+  <PrivateText
     maxWidth="500px"
   >
     <span
@@ -178,13 +154,9 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
             white-space: nowrap;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -192,7 +164,7 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
 <Text
   screenreaderText=""
 >
-  <Text
+  <PrivateText
     screenreaderText=""
   >
     <span
@@ -213,7 +185,7 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
         />
       </ScreenreaderText>
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -221,7 +193,7 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
 <Text
   screenreaderText="SCREENREADER TEXT"
 >
-  <Text
+  <PrivateText
     screenreaderText="SCREENREADER TEXT"
   >
     <span
@@ -244,7 +216,7 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
         </span>
       </ScreenreaderText>
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;
 
@@ -252,7 +224,7 @@ exports[`<Text /> with uppercase matches its snapshot 1`] = `
 <Text
   uppercase={true}
 >
-  <Text
+  <PrivateText
     uppercase={true}
   >
     <span
@@ -263,12 +235,8 @@ exports[`<Text /> with uppercase matches its snapshot 1`] = `
             text-transform: uppercase;
           }
     >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
+      test content
     </span>
-  </Text>
+  </PrivateText>
 </Text>
 `;

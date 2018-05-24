@@ -55,16 +55,19 @@ export interface PrivateTextProps extends NestableBaseComponentProps {
  * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
  * of supported text colors and `font-size`/`line-height` combinations.
  */
-class Text extends React.Component<TextProps & PrivateTextProps> {
+class PrivateText extends React.Component<TextProps & PrivateTextProps> {
   public render() {
     const { children, screenreaderText } = this.props;
 
-    return (
-      <span className={this.getClasses()}>
-        <span aria-hidden={true}>{children}</span>
-        {screenreaderText !== undefined ? <ScreenReaderText>{screenreaderText}</ScreenReaderText> : null}
-      </span>
-    );
+    if (screenreaderText !== undefined) {
+      return (
+        <span className={this.getClasses()}>
+          <span aria-hidden={true}>{children}</span>
+          <ScreenReaderText>{screenreaderText}</ScreenReaderText>
+        </span>
+      );
+    }
+    return <span className={this.getClasses()}>{children}</span>;
   }
 
   private getClasses() {
@@ -79,10 +82,10 @@ class Text extends React.Component<TextProps & PrivateTextProps> {
   }
 }
 
-const ExportComponent: React.SFC = (props: TextProps): JSX.Element => {
-  return <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>;
+const Text: React.SFC = (props: TextProps): JSX.Element => {
+  return (
+    <BlockContext.Consumer>{block => <PrivateText {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>
+  );
 };
 
-ExportComponent.displayName = 'Text';
-
-export default ExportComponent;
+export default Text;

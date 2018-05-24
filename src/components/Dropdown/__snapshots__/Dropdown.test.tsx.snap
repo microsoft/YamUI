@@ -102,7 +102,7 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
         <Text
           bold={true}
         >
-          <Text
+          <PrivateText
             blockTextSize="mediumSub"
             bold={true}
           >
@@ -114,14 +114,10 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                     font-weight: 600;
                   }
             >
-              <span
-                aria-hidden={true}
-              >
-                label
-                :
-              </span>
+              label
+              :
             </span>
-          </Text>
+          </PrivateText>
         </Text>
          
         with icon
