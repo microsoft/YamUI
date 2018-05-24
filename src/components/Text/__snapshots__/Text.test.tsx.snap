@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
-<Component
+<Text
   maxWidth="200px"
   size="xLarge"
 >
@@ -33,11 +33,11 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
-<Component
+<Text
   size="xLarge"
 >
   <Text
@@ -60,11 +60,11 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with additional className matches its snapshot 1`] = `
-<Component
+<Text
   className="TEST_CLASSNAME"
 >
   <Text
@@ -85,11 +85,11 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with bold matches its snapshot 1`] = `
-<Component
+<Text
   bold={true}
 >
   <Text
@@ -110,11 +110,11 @@ exports[`<Text /> with bold matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with color secondary matches its snapshot 1`] = `
-<Component
+<Text
   color="secondary"
 >
   <Text
@@ -135,11 +135,11 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with default options matches its snapshot 1`] = `
-<Component>
+<Text>
   <Text>
     <span
       className=
@@ -155,11 +155,11 @@ exports[`<Text /> with default options matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
-<Component
+<Text
   maxWidth="500px"
 >
   <Text
@@ -185,11 +185,11 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with screenreader text empty string matches its snapshot 1`] = `
-<Component
+<Text
   screenreaderText=""
 >
   <Text
@@ -214,11 +214,11 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
       </ScreenreaderText>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with screenreader text matches its snapshot 1`] = `
-<Component
+<Text
   screenreaderText="SCREENREADER TEXT"
 >
   <Text
@@ -245,11 +245,11 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
       </ScreenreaderText>
     </span>
   </Text>
-</Component>
+</Text>
 `;
 
 exports[`<Text /> with uppercase matches its snapshot 1`] = `
-<Component
+<Text
   uppercase={true}
 >
   <Text
@@ -270,5 +270,5 @@ exports[`<Text /> with uppercase matches its snapshot 1`] = `
       </span>
     </span>
   </Text>
-</Component>
+</Text>
 `;

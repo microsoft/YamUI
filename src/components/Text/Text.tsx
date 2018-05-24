@@ -79,6 +79,10 @@ class Text extends React.Component<TextProps & PrivateTextProps> {
   }
 }
 
-export default (props: TextProps) => (
-  <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>
-);
+const ExportComponent: React.SFC = (props: TextProps): JSX.Element => {
+  return <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>;
+};
+
+ExportComponent.displayName = 'Text';
+
+export default ExportComponent;
