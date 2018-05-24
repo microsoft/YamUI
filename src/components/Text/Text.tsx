@@ -55,7 +55,7 @@ export interface PrivateTextProps extends NestableBaseComponentProps {
  * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
  * of supported text colors and `font-size`/`line-height` combinations.
  */
-class PrivateText extends React.Component<TextProps & PrivateTextProps> {
+class Text extends React.Component<TextProps & PrivateTextProps> {
   public render() {
     const { children, screenreaderText } = this.props;
 
@@ -82,10 +82,8 @@ class PrivateText extends React.Component<TextProps & PrivateTextProps> {
   }
 }
 
-const Text: React.SFC = (props: TextProps): JSX.Element => {
-  return (
-    <BlockContext.Consumer>{block => <PrivateText {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>
-  );
+const TextWrapper: React.SFC<TextProps> = (props: TextProps): JSX.Element => {
+  return <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>;
 };
 
-export default Text;
+export default TextWrapper;

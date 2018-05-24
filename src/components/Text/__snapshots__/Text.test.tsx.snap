@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
-<Text
+<TextWrapper
   maxWidth="200px"
   size="xLarge"
 >
-  <PrivateText
+  <Text
     maxWidth="200px"
     size="xLarge"
   >
@@ -28,15 +28,15 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
-<Text
+<TextWrapper
   size="xLarge"
 >
-  <PrivateText
+  <Text
     size="xLarge"
   >
     <span
@@ -51,15 +51,15 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with additional className matches its snapshot 1`] = `
-<Text
+<TextWrapper
   className="TEST_CLASSNAME"
 >
-  <PrivateText
+  <Text
     className="TEST_CLASSNAME"
   >
     <span
@@ -72,15 +72,15 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with bold matches its snapshot 1`] = `
-<Text
+<TextWrapper
   bold={true}
 >
-  <PrivateText
+  <Text
     bold={true}
   >
     <span
@@ -93,15 +93,15 @@ exports[`<Text /> with bold matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with color secondary matches its snapshot 1`] = `
-<Text
+<TextWrapper
   color="secondary"
 >
-  <PrivateText
+  <Text
     color="secondary"
   >
     <span
@@ -114,13 +114,13 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with default options matches its snapshot 1`] = `
-<Text>
-  <PrivateText>
+<TextWrapper>
+  <Text>
     <span
       className=
           y-text
@@ -130,15 +130,15 @@ exports[`<Text /> with default options matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
-<Text
+<TextWrapper
   maxWidth="500px"
 >
-  <PrivateText
+  <Text
     maxWidth="500px"
   >
     <span
@@ -156,15 +156,15 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with screenreader text empty string matches its snapshot 1`] = `
-<Text
+<TextWrapper
   screenreaderText=""
 >
-  <PrivateText
+  <Text
     screenreaderText=""
   >
     <span
@@ -185,15 +185,15 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
         />
       </ScreenreaderText>
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with screenreader text matches its snapshot 1`] = `
-<Text
+<TextWrapper
   screenreaderText="SCREENREADER TEXT"
 >
-  <PrivateText
+  <Text
     screenreaderText="SCREENREADER TEXT"
   >
     <span
@@ -216,15 +216,15 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
         </span>
       </ScreenreaderText>
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;
 
 exports[`<Text /> with uppercase matches its snapshot 1`] = `
-<Text
+<TextWrapper
   uppercase={true}
 >
-  <PrivateText
+  <Text
     uppercase={true}
   >
     <span
@@ -237,6 +237,6 @@ exports[`<Text /> with uppercase matches its snapshot 1`] = `
     >
       test content
     </span>
-  </PrivateText>
-</Text>
+  </Text>
+</TextWrapper>
 `;

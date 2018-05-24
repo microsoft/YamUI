@@ -99,10 +99,10 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       className="y-dropdown--ellipsed-title"
     >
       <span>
-        <Text
+        <TextWrapper
           bold={true}
         >
-          <PrivateText
+          <Text
             blockTextSize="mediumSub"
             bold={true}
           >
@@ -117,8 +117,8 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
               label
               :
             </span>
-          </PrivateText>
-        </Text>
+          </Text>
+        </TextWrapper>
          
         with icon
       </span>
