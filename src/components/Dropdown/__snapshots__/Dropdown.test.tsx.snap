@@ -1,8 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `null`;
+exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
+<div
+  className=
+      y-block
+      y-textSize-mediumSub
+      y-dropdown--item
+      {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+      }
+>
+  <div
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    <FixedGridRow
+      gutterSize="small"
+    >
+      <div
+        className="y-fixedGridRow y-fixedGridRow__gutter-small"
+      >
+        <FixedGridColumn
+          className="y-dropdown--option-icon"
+          fixed={true}
+        >
+          <div
+            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
+            style={Object {}}
+          >
+            <Add
+              block={true}
+              size="16"
+            >
+              <svg
+                aria-hidden="true"
+                className="y-icon y-icon__isBlock"
+                focusable="false"
+                style={
+                  Object {
+                    "height": "16px",
+                    "width": "16px",
+                  }
+                }
+                tabIndex={-1}
+                viewBox="0 0 240 240"
+              >
+                <path
+                  d="M240 112.5v15H127.5V240h-15V127.5H0v-15h112.5V0h15v112.5z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Add>
+          </div>
+        </FixedGridColumn>
+        <FixedGridColumn
+          className="y-dropdown--ellipsed-title"
+        >
+          <div
+            className="y-fixedGridColumn y-dropdown--ellipsed-title"
+            style={Object {}}
+          >
+            <span>
+              with icon
+            </span>
+          </div>
+        </FixedGridColumn>
+      </div>
+    </FixedGridRow>
+  </div>
+</div>
+`;
 
-exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `null`;
+exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
+<div
+  className=
+      y-block
+      y-textSize-mediumSub
+      y-dropdown--item
+      {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+      }
+>
+  <div
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    <div
+      className="y-dropdown--ellipsed-title"
+    >
+      <span>
+        <Text
+          bold={true}
+        >
+          <Text
+            blockTextSize="mediumSub"
+            bold={true}
+          >
+            <span
+              className=
+                  y-text
+                  {
+                    display: inline-block;
+                    font-weight: 600;
+                  }
+            >
+              <span
+                aria-hidden={true}
+              >
+                label
+                :
+              </span>
+            </span>
+          </Text>
+        </Text>
+         
+        with icon
+      </span>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
 <Block
@@ -110,7 +237,30 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
 
 exports[`<Dropdown /> with divider matches its snapshot 1`] = `null`;
 
-exports[`<Dropdown /> with section header matches its snapshot 1`] = `null`;
+exports[`<Dropdown /> with section header matches its snapshot 1`] = `
+<div
+  className=
+      y-block
+      y-textSize-small
+      y-dropdown--item
+      y-dropdown--header
+      {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+>
+  <div
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    header1
+  </div>
+</div>
+`;
 
 exports[`<Dropdown /> without onChanged handler when an option is selected does not blow up 1`] = `
 <div
