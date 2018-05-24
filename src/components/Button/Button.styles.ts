@@ -3,7 +3,7 @@ import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
 import { ButtonColor, ButtonSize, ButtonStatus } from './enums';
 import { ButtonProps } from './Button';
-import Styles from '../../util/styles';
+import { borderRadiusSoft, fontWeightBold } from '../../util/styles';
 
 const smallPadding = '4px 9px 6px';
 const regularPadding = '7px 15px';
@@ -70,11 +70,11 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
       position: 'relative',
       whiteSpace: 'nowrap',
       transition: 'all 0.05s ease-out',
-      borderRadius: Styles.borderRadiusSoft,
+      borderRadius: borderRadiusSoft,
       borderWidth: '1px',
       borderStyle: 'solid',
       boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
-      fontWeight: Styles.fontWeightBold,
+      fontWeight: fontWeightBold,
       padding: size === ButtonSize.REGULAR ? regularPadding : smallPadding,
       cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
       opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',
