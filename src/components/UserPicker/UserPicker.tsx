@@ -14,6 +14,13 @@ export { IPersona, IBasePickerProps, IBasePickerSuggestionsProps };
 export default class UserPicker extends React.Component<IBasePickerProps<IPersona>> {
   public render() {
     const { onResolveSuggestions } = this.props;
-    return <NormalPeoplePicker onResolveSuggestions={onResolveSuggestions} />;
+    const suggestionsClass: IBasePickerSuggestionsProps = { className: 'y-userpicker-suggestions__container' };
+    return (
+      <NormalPeoplePicker
+        className="y-userpicker__container"
+        pickerSuggestionsProps={suggestionsClass}
+        onResolveSuggestions={onResolveSuggestions}
+      />
+    );
   }
 }
