@@ -4,7 +4,11 @@ const config = require('./config');
 
 module.exports = Object.assign({}, config, {
   showSidebar: false,
-  require: config.require.concat([
-    path.resolve(__dirname, 'assets/disable-animations.css'),
-  ]),
+  require: config.require.concat([path.resolve(__dirname, 'assets/disable-animations.css')]),
+  propsParser: () => ({}), // Faster without parsing props. They're not needed for diffs.
+  theme: {
+    color: {
+      border: 'white',
+    },
+  },
 });
