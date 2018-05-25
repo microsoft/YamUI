@@ -7,3 +7,7 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.y-navigationLink__block {
+  display: block;
+}

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
-import { AvatarBorderType } from '../Avatar';
+import { BorderType } from '../Avatar';
 
 describe('<SuggestionsListItem />', () => {
   let rendered: ShallowWrapper<SuggestionsListItemProps>;
@@ -49,7 +49,7 @@ describe('<SuggestionsListItem />', () => {
 
   describe('with avatarProps', () => {
     beforeEach(() => {
-      const avatarProps = { borderType: AvatarBorderType.SOFT };
+      const avatarProps = { borderType: BorderType.SOFT };
       rendered = shallow(<SuggestionsListItem {...getProps({ avatarProps })} />);
     });
 

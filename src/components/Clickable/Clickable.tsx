@@ -2,10 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import FakeLink from '../FakeLink';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps, FocusableComponentProps } from '../../util/BaseComponent/props';
 import './Clickable.css';
 
-export interface ClickableProps extends NestableBaseComponentProps {
+export interface ClickableProps extends NestableBaseComponentProps, FocusableComponentProps {
   /**
    * Additional label that must be provided if the clickable text is not descriptive enough.
    */
@@ -39,14 +39,37 @@ export interface ClickableProps extends NestableBaseComponentProps {
  * content in a `button` element.
  */
 export default class Clickable extends React.Component<ClickableProps> {
+  private buttonRef = React.createRef<HTMLButtonElement>();
+
+  public constructor(props: ClickableProps) {
+    super(props);
+    if (this.props.focusableRef) {
+      this.props.focusableRef(this);
+    }
+  }
+
   public render() {
     const { ariaLabel, title, unstyled, onClick, children } = this.props;
 
     return (
-      <button className={this.getClasses()} aria-label={ariaLabel} title={title} onClick={onClick} type="button">
+      <button
+        className={this.getClasses()}
+        aria-label={ariaLabel}
+        title={title}
+        onClick={onClick}
+        type="button"
+        ref={this.buttonRef}
+      >
         {unstyled ? children : <FakeLink>{children}</FakeLink>}
       </button>
     );
+  }
+
+  public focus() {
+    const button = this.buttonRef.current;
+    if (button) {
+      button.focus();
+    }
   }
 
   private getClasses() {

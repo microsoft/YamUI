@@ -78,6 +78,32 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
   }
   onRenderIcon={[Function]}
   onRenderMenuIcon={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+        "color": "#495361",
+        "height": "20px",
+        "opacity": 0.7,
+        "padding": 0,
+        "width": "20px",
+      },
+      "rootExpanded": Object {
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootHovered": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootPressed": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+    }
+  }
 />
 `;
 
@@ -145,6 +171,32 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
   }
   onRenderIcon={[Function]}
   onRenderMenuIcon={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+        "color": "#495361",
+        "height": "20px",
+        "opacity": 0.7,
+        "padding": 0,
+        "width": "20px",
+      },
+      "rootExpanded": Object {
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootHovered": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootPressed": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+    }
+  }
 />
 `;
 
@@ -212,6 +264,32 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
   }
   onRenderIcon={[Function]}
   onRenderMenuIcon={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+        "color": "#495361",
+        "height": "20px",
+        "opacity": 0.7,
+        "padding": 0,
+        "width": "20px",
+      },
+      "rootExpanded": Object {
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootHovered": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+      "rootPressed": Object {
+        "backgroundColor": "transparent",
+        "color": "#386cbb",
+        "opacity": 1,
+      },
+    }
+  }
 />
 `;
 
@@ -236,6 +314,7 @@ exports[`<MenuButton /> with default options passes contextualMenuItemAs method 
       "linkContent": "linkContent",
       "linkContentMenu": "linkContentMenu",
       "root": "root",
+      "secondaryText": "secondaryText",
       "splitContainer": "splitContainer",
       "splitMenu": "splitMenu",
       "splitPrimary": "splitPrimary",

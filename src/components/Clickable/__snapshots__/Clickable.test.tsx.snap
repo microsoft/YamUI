@@ -23,6 +23,25 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
 </button>
 `;
 
+exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
+<Clickable
+  focusableRef={[Function]}
+>
+  <button
+    className="y-clickable"
+    type="button"
+  >
+    <FakeLink>
+      <span
+        className="y-fakeLink"
+      >
+        clickable content
+      </span>
+    </FakeLink>
+  </button>
+</Clickable>
+`;
+
 exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 <button
   className="y-clickable"

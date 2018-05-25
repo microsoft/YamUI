@@ -9,6 +9,24 @@ exports[`<Image /> with additional className matches its snapshot 1`] = `
 />
 `;
 
+exports[`<Image /> with block matches its snapshot 1`] = `
+<StyledCustomizedImage
+  alt="description"
+  className="y-image y-image__block"
+  shouldFadeIn={false}
+  src="image.png"
+/>
+`;
+
+exports[`<Image /> with border type matches its snapshot 1`] = `
+<StyledCustomizedImage
+  alt="description"
+  className="y-image y-image__border-round"
+  shouldFadeIn={false}
+  src="image.png"
+/>
+`;
+
 exports[`<Image /> with default options matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"

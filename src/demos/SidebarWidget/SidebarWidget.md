@@ -1,5 +1,5 @@
 ```js
-const { AvatarSize, AvatarBorderType } = require('../../components/Avatar');
+const { AvatarSize, BorderType } = require('../../components/Avatar');
 const { MediaObjectSize } = require('../../components/MediaObject');
 
 const actionComponent = <Clickable onClick={action('Added!')}>Add</Clickable>;
@@ -17,7 +17,7 @@ const groupItems = groupNames.map((name) => {
       size={AvatarSize.XSMALL}
       name={name}
       imageUrl="group.png"
-      borderType={AvatarBorderType.SOFT}
+      borderType={BorderType.SOFT}
     />
   );
   return (

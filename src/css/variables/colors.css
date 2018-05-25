@@ -5,7 +5,7 @@
   * Duplication is ok, intent is more important.
   */
 
-@import "./_yammer_palette.css";
+@import './_yammer_palette.css';
 
 $borderColor: $color__indieRock;
 $borderColor__secondary: $color__altRock;
@@ -22,12 +22,10 @@ $textColor__disabled: $color__punkRock;
 $linkColor: $color__river;
 $linkColor__active: $color__bay;
 
+$interactiveElementBackround__focused: $color__popRock;
+$interactiveElementBackround__selected: $color__altRock;
+
 $captionBackgroundColor: $color__sunrise;
-
-$dropdownOptionBackgroundColor__focused: $color__popRock;
-$dropdownOptionBackgroundColor__selected: $color__altRock;
-
-$messageBarBackgroundColor: $color__popRock;
 
 $alertColor__info: $color__punkRock;
 $alertColor__warning: $color__noon;
@@ -35,6 +33,3 @@ $alertColor__error: $color__angel;
 
 $spinnerColor__light: $color__river;
 $spinnerColor__dark: $color__white;
-
-$suggestionsListItemBackgroundColor__mouseHover: $color__popRock;
-$suggestionsListItemBackgroundColor__keyboardNavigate: $color__altRock;

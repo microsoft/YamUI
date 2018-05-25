@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Text from '../Text';
-import Avatar, { AvatarProps, AvatarSize, AvatarBorderType } from '.';
+import Avatar, { AvatarProps, AvatarSize, BorderType } from '.';
 
 describe('<Avatar />', () => {
   let component: ShallowWrapper<AvatarProps>;
@@ -41,7 +41,7 @@ describe('<Avatar />', () => {
 
   describe('with soft border type', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={AvatarBorderType.SOFT} />);
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />);
     });
 
     it('matches its snapshot', () => {

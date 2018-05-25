@@ -10,6 +10,7 @@ describe('<TextArea />', () => {
     beforeEach(() => {
       component = shallow(<TextArea />)
         .dive()
+        .dive()
         .dive();
     });
 
@@ -22,6 +23,7 @@ describe('<TextArea />', () => {
     beforeEach(() => {
       component = shallow(
         <TextArea
+          ariaLabel="ARIA_LABEL"
           rows={2}
           autoAdjustHeight={true}
           className="CLASS"
@@ -39,6 +41,7 @@ describe('<TextArea />', () => {
         />,
       )
         .dive()
+        .dive()
         .dive();
     });
 
@@ -50,6 +53,7 @@ describe('<TextArea />', () => {
   describe('with description and no error', () => {
     beforeEach(() => {
       component = shallow(<TextArea description="DESCRIPTION" />)
+        .dive()
         .dive()
         .dive();
     });

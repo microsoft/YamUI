@@ -60,13 +60,6 @@ describe('<Icon />', () => {
     });
   });
 
-  describe('total number of Icons', () => {
-    const totalIcons = Object.keys(allExportedIcons).length;
-    it('is correct', () => {
-      expect(totalIcons).toBe(116);
-    });
-  });
-
   describe('each Icon', () => {
     let Icon: any;
 

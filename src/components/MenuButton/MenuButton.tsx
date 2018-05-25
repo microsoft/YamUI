@@ -9,7 +9,8 @@ import {
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { IconButton } from 'office-ui-fabric-react/lib/Button';
+import { semanticColors } from '../../util/colors';
+import { IconButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
@@ -47,7 +48,7 @@ export interface MenuButtonItem {
   /**
    * On click method for this item.
    */
-  onClick?: ((ev?: React.MouseEvent<HTMLElement>) => void);
+  onClick?: ((ev?: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void);
 
   /**
    * Href for a link. This will turn the item into a hyperlink that looks like a regular item.
@@ -97,6 +98,7 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   public render() {
     return (
       <IconButton
+        styles={this.getStyles()}
         ariaLabel={this.props.ariaLabel}
         menuProps={this.getMenuProps()}
         onRenderIcon={this.getIcon}
@@ -144,4 +146,31 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   private getMenuItemContent(props: IContextualMenuItemProps) {
     return <MenuButtonItem {...props} />;
   }
+
+  private getStyles = (): IButtonStyles => {
+    return {
+      root: {
+        border: 0,
+        padding: 0,
+        opacity: 0.7,
+        width: `${this.props.iconSize}px`,
+        height: `${this.props.iconSize}px`,
+        color: semanticColors.buttonText,
+      },
+      rootHovered: {
+        backgroundColor: 'transparent',
+        color: semanticColors.link,
+        opacity: 1,
+      },
+      rootPressed: {
+        backgroundColor: 'transparent',
+        color: semanticColors.link,
+        opacity: 1,
+      },
+      rootExpanded: {
+        color: semanticColors.link,
+        opacity: 1,
+      },
+    };
+  };
 }

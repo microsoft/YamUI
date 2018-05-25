@@ -1,8 +1,10 @@
 /build
 /dist
+/dist-commonjs
 /docs
 /node_modules
 /config/travis/deploy.key
-.*
+.*/
+.DS_Store
 *.diff.png
 *.new.png

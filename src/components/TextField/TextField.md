@@ -17,6 +17,21 @@ Disabled
 />
 ```
 
+With JSX Description
+```js { "props": { "data-description": "with jsx description" } }
+<TextField
+  description={(<Clickable>Click Me</Clickable>)}
+/>
+```
+
+Max length
+```js { "props": { "data-description": "maxLength" } }
+<TextField
+  value="maxLength 15"
+  maxLength={15}
+/>
+```
+
 With Placeholder
 ```js { "props": { "data-description": "with placeholder" } }
 <TextField
@@ -54,6 +69,41 @@ With Suffix
 <TextField
   placeHolder="your e-mail"
   suffix="@contoso.com"
+/>
+```
+
+Long Prefix
+```js { "props": { "data-description": "long prefix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+/>
+```
+
+Long Prefix and Suffix
+```js { "props": { "data-description": "long prefix and suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+  suffix="long suffix long suffix long suffix long suffix long suffix long suffix long suffix"
+/>
+```
+
+Short Prefix and Long Suffix
+```js { "props": { "data-description": "short prefix and long suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="short prefix"
+  suffix="long suffix long suffix long suffix long suffix long suffix long suffix long suffix"
+/>
+```
+
+Long Prefix and Short Suffix
+```js { "props": { "data-description": "long prefix and short suffix" } }
+<TextField
+  placeHolder="placeholder text"
+  prefix="long prefix long prefix long prefix long prefix long prefix long prefix long prefix"
+  suffix="short suffix"
 />
 ```
 
@@ -109,6 +159,35 @@ class ControlledTextField extends React.Component {
 <ControlledTextField />
 ```
 
+Controlled with link in description:
+```js { "props": { "data-description": "controlled with link in description" } }
+class ControlledTextField extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  render() {
+    return (
+      <TextField
+        focusableRef={(ref) => { this.textFieldRef = ref; } }
+        value={this.state.value}
+        description={<Clickable onClick={() => this.textFieldRef.focus()}>Focus and place cursor at the end of the input.</Clickable>}
+        onChange={this.handleChange}
+      />
+    );
+  }
+
+  handleChange(value) {
+    action('textfield changed')(value);
+    this.setState({ value });
+  }
+}
+
+<ControlledTextField />
+```
+
 Beside Button
 ```js { "props": { "data-description": "beside button" } }
 <FixedGridRow>
@@ -121,15 +200,24 @@ Underlined Variation
 ```js { "props": { "data-description": "basic underlined" } }
 <TextField
   placeHolder="Textfield Placeholder..."
-  underlined
+  underlined={true}
 />
 ```
 
-Underlined Variation With Error
+Underlined With Description
+```js { "props": { "data-description": "underlined with description" } }
+<TextField
+  description="Small hint goes here"
+  placeHolder="Textfield with description"
+  underlined={true}
+/>
+```
+
+Underlined With Error
 ```js { "props": { "data-description": "underlined with error" } }
 <TextField
   errorMessage="Error hint goes here"
   placeHolder="Textfield Error"
-  underlined
+  underlined={true}
 />
 ```

@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditableText /> with additional className matches its snapshot 1`] = `
+<span
+  className="y-editableText TEST_CLASSNAME"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    />
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> with all props except promptText matches its snapshot 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    >
+      TEXT
+    </span>
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked and text is changed and ENTER is pressed exits edit mode 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    >
+      TEXT
+    </span>
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked and text is changed and ESC is pressed exits edit mode 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    >
+      TEXT
+    </span>
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked and text is changed and an unimportant key is pressed remains in edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <TextField
+    className="y-editableText--textfield"
+    focusableRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="new text"
+  />
+</div>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked enters edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <TextField
+    className="y-editableText--textfield"
+    focusableRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="TEXT"
+  />
+</div>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode again remains in edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <TextField
+    className="y-editableText--textfield"
+    focusableRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="TEXT"
+  />
+</div>
+`;
+
+exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode without private textFieldRef remains in edit mode 1`] = `
+<div
+  className="y-editableText"
+>
+  <TextField
+    className="y-editableText--textfield"
+    focusableRef={[Function]}
+    maxLength={120}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeHolder="PLACEHOLDER"
+    underlined={true}
+    value="TEXT"
+  />
+</div>
+`;
+
+exports[`<EditableText /> with promptText matches its snapshot 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    ariaLabel="PROMPT TEXT"
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    >
+      PROMPT TEXT
+    </span>
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> without props when clicked and text is changed and ENTER is pressed exits edit mode 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    />
+  </Clickable>
+</span>
+`;
+
+exports[`<EditableText /> without props when clicked and text is changed and ESC is pressed exits edit mode 1`] = `
+<span
+  className="y-editableText"
+>
+  <Clickable
+    className="y-editableText--clickable"
+    focusableRef={[Function]}
+    onClick={[Function]}
+    unstyled={true}
+  >
+    <Edit />
+    <span
+      className="y-editableText--clickableText"
+    />
+  </Clickable>
+</span>
+`;

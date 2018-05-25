@@ -2,7 +2,7 @@
 @import 'src/css/variables/colors.css';
 
 .y-message-bar {
-  background-color: $messageBarBackgroundColor;
+  background-color: $interactiveElementBackround__focused;
   border: solid 0 $alertColor__info;
   border-radius: 1px;
   border-left-width: 4px;

@@ -1,45 +1,18 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getBaseTextFieldProps, BaseTextFieldProps } from '../BaseTextField';
-import DebouncedOnChange, { DebouncedOnChangeProps, DebouncedOnChangePrivateProps } from '../../util/DebouncedOnChange';
-import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import { join } from '../../util/classNames';
-import '../BaseTextField/BaseTextField.css';
-import './TextArea.css';
+import { Omit } from '../../util/types';
+import BaseTextField, { TextAreaProps as InternalTextAreaProps } from '../internal/TextField/TextField';
 
-export interface TextAreaProps extends BaseTextFieldProps, DebouncedOnChangeProps {
-  /**
-   * Height of the field, in number of rows.
-   */
-  rows?: number;
-
-  /**
-   * Whether or not to auto adjust textField height.
-   */
-  autoAdjustHeight?: boolean;
-}
+export type TextAreaProps = Omit<InternalTextAreaProps, 'multiline'>;
 
 /**
- * The TextArea component enables a user to type text into an app. The text
- * displays on the screen in a simple, uniform format.
+ * TextArea is rendered as an html textarea tag, used to allow more than one line of text to be entered.
  */
-class TextArea extends React.Component<TextAreaProps & DebouncedOnChangePrivateProps> {
+export default class TextArea extends React.Component<TextAreaProps> {
   public render() {
-    return (
-      <FabricTextField
-        className={join(['y-base-text-field', 'y-text-area', this.props.className])}
-        rows={this.props.rows}
-        autoAdjustHeight={this.props.autoAdjustHeight}
-        multiline={true}
-        resizable={false}
-        onChanged={this.props.unifiedOnChange}
-        {...getBaseTextFieldProps(this.props)}
-      />
-    );
+    const { className, ...props } = this.props;
+    return <BaseTextField {...props} multiline={true} className={join(['y-textArea', this.props.className])} />;
   }
 }
-
-export default (props: TextAreaProps) => {
-  return <DebouncedOnChange {...props} component={TextArea} />;
-};

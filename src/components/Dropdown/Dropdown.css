@@ -28,15 +28,16 @@
 
 .y-dropdown .ms-Dropdown-item {
   padding: 0.4rem 1.1rem 0.6rem;
+  text-align: left;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,
 .y-dropdown .ms-Dropdown-item:active,
 .y-dropdown .ms-Dropdown-item:focus {
-  background-color: $dropdownOptionBackgroundColor__focused;
+  background-color: $interactiveElementBackround__focused;
 }
 .y-dropdown .ms-Dropdown-item.is-selected {
-  background-color: $dropdownOptionBackgroundColor__selected;
+  background-color: $interactiveElementBackround__selected;
 }
 
 /* Nested option content */

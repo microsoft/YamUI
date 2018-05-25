@@ -16,6 +16,7 @@ export interface DebouncedOnChangeProps {
   /**
    * Component will trigger `onChange` after users stop typing for `debouncedOnChangeTime`
    * milliseconds.
+   * @default 700
    */
   debouncedOnChangeTime?: number;
 }
@@ -27,13 +28,15 @@ export interface DebouncedOnChangePrivateProps {
   unifiedOnChange?: ((newValue: any) => void);
 }
 
-export interface NestedComponentProps {
-  component:
-    | React.ComponentClass<DebouncedOnChangePrivateProps>
-    | React.StatelessComponent<DebouncedOnChangePrivateProps>;
+export interface NestedComponentProps<T extends DebouncedOnChangePrivateProps> {
+  component: React.ComponentClass<T> | React.StatelessComponent<T>;
 }
 
-export default class DebouncedOnChangeComponent extends React.Component<DebouncedOnChangeProps & NestedComponentProps> {
+export type DebouncedOnChangeComponentProps<T> = DebouncedOnChangeProps & NestedComponentProps<T>;
+
+export default class DebouncedOnChangeComponent<T extends DebouncedOnChangePrivateProps> extends React.Component<
+  DebouncedOnChangeComponentProps<T>
+> {
   public static defaultProps = {
     debouncedOnChangeTime: 700,
   };
@@ -41,8 +44,8 @@ export default class DebouncedOnChangeComponent extends React.Component<Debounce
   private async: Async | undefined;
   private debouncedOnChange: ((newValue: string) => void) | undefined;
 
-  constructor(props: DebouncedOnChangeProps) {
-    super();
+  constructor(props: DebouncedOnChangeComponentProps<T>) {
+    super(props);
     if (props.debouncedOnChange) {
       this.async = new Async(this);
       this.debouncedOnChange = this.async.debounce(props.debouncedOnChange, props.debouncedOnChangeTime);

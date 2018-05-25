@@ -1,75 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import 'src/css/variables/colors.css';
-@import 'src/css/variables/fonts.css';
-
-.y-button {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.05s ease-out;
-  border-radius: 2px;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
-  font-weight: 600;
-}
-
-.y-button,
-.y-button:hover {
-  text-decoration: none;
-}
-
-.y-button__size-regular {
-  padding: 7px 15px;
-}
-
-.y-button__size-small {
-  padding: 4px 9px 6px;
-}
-
-.y-button__fullWidth {
-  display: block;
-  width: 100%;
-}
-
-.y-button__color-primary,
-.y-button__color-primary:active,
-.y-button__color-primary:focus {
-  background-color: $color__river;
-  border-color: $color__river;
-  color: $color__white;
-}
-
-.y-button__color-primary:hover:enabled {
-  background-color: $color__bay;
-  border-color: $color__bay;
-  color: $color__white;
-}
-
-.y-button__color-secondary,
-.y-button__color-secondary:active,
-.y-button__color-secondary:focus {
-  background-color: $color__white;
-  border-color: $color__indieRock;
-  color: $color__river;
-}
-
-.y-button__color-secondary:hover:enabled {
-  border-color: $color__pond;
-  color: $color__river;
-}
-
-.y-button__state-disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.y-button__state-loading {
-  cursor: default;
-}
-
 .y-button--content__hidden {
   visibility: hidden;
 }
@@ -87,4 +16,10 @@
 
 .y-button--icon-wrapper-right {
   padding-left: 4px;
+}
+
+.y-button--secondary-text {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
 }

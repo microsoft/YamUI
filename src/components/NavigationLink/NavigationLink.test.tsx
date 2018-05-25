@@ -30,6 +30,20 @@ describe('<NavigationLink />', () => {
     });
   });
 
+  describe('with ariaLabel', () => {
+    beforeEach(() => {
+      component = shallow(
+        <NavigationLink href="test.html" ariaLabel="ARIA LABEL CONTENT">
+          link content
+        </NavigationLink>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with title', () => {
     beforeEach(() => {
       component = shallow(
@@ -62,6 +76,20 @@ describe('<NavigationLink />', () => {
     beforeEach(() => {
       component = shallow(
         <NavigationLink href="test.html" className="TEST_CLASSNAME">
+          test content
+        </NavigationLink>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with block={true}', () => {
+    beforeEach(() => {
+      component = shallow(
+        <NavigationLink href="test.html" block={true}>
           test content
         </NavigationLink>,
       );

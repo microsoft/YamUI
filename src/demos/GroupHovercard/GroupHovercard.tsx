@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import Avatar, { AvatarBorderType, AvatarSize } from '../../components/Avatar';
+import Avatar, { BorderType, AvatarSize } from '../../components/Avatar';
 import Block, { GutterSize, TextSize } from '../../components/Block';
 import Button, { ButtonColor } from '../../components/Button';
 import { HovercardHeader, HovercardBody } from '../../components/Hovercard';
@@ -38,7 +38,7 @@ export default class GroupHovercard extends React.Component<GroupHovercardProps>
     const { group } = this.props;
 
     const groupAvatar = (
-      <Avatar imageUrl={group.imageUrl} name={group.name} size={AvatarSize.LARGE} borderType={AvatarBorderType.SOFT} />
+      <Avatar imageUrl={group.imageUrl} name={group.name} size={AvatarSize.LARGE} borderType={BorderType.SOFT} />
     );
 
     const groupMetadata = (

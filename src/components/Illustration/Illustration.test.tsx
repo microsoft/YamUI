@@ -40,13 +40,6 @@ describe('<Illustration />', () => {
     });
   });
 
-  describe('total number of illustrations', () => {
-    const totalIcons = Object.keys(allExportedIllustrations).length;
-    it('is correct', () => {
-      expect(totalIcons).toBe(300);
-    });
-  });
-
   describe('each illustration', () => {
     let Illustration: typeof BaseIllustration;
 

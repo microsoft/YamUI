@@ -3,11 +3,17 @@ import '../../yamui';
 import * as React from 'react';
 import { Image as FabricImage, ImageFit, ImageLoadState } from 'office-ui-fabric-react/lib/Image';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { BorderType } from './enums';
 import './Image.css';
 
-export { ImageFit, ImageLoadState };
+export { BorderType, ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
+  /**
+   * Whether the clickable should be `display: block`.
+   */
+  block?: boolean;
+
   /**
    * Description of the image that must be provided for screenreaders. Set to an empty string if
    * screenreaders should not read anything out loud.
@@ -44,6 +50,11 @@ export interface ImageProps extends BaseComponentProps {
    * the image within the area, centering the image without scaling or stretching, etc.
    */
   imageFit?: ImageFit;
+
+  /**
+   * Image can have the default square corners, a soft 2px radius, or a fully round border.
+   */
+  borderType?: BorderType;
 
   /**
    * Will hide the image until it has loaded, then fade it in.
@@ -95,11 +106,17 @@ export default class Image extends React.Component<ImageProps> {
   }
 
   private getClasses() {
-    const { className, fullWidth } = this.props;
+    const { block, borderType, className, fullWidth } = this.props;
 
     const classes: string[] = ['y-image'];
     if (fullWidth) {
       classes.push('y-image__fullWidth');
+    }
+    if (borderType) {
+      classes.push(`y-image__border-${borderType}`);
+    }
+    if (block) {
+      classes.push('y-image__block');
     }
     if (className) {
       classes.push(className);

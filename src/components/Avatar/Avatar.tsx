@@ -4,10 +4,11 @@ import * as React from 'react';
 import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
-import { AvatarBorderType, AvatarSize } from './enums';
+import { AvatarSize } from './enums';
+import { BorderType } from '../Image/enums';
 import './Avatar.css';
 
-export { AvatarBorderType, AvatarSize };
+export { BorderType, AvatarSize };
 
 const SizeMap = {
   [AvatarSize.XLARGE]: PersonaSize.size72,
@@ -35,9 +36,9 @@ export interface AvatarProps extends BaseComponentProps {
 
   /**
    * Type of border around the avatar.
-   * @default AvatarBorderType.ROUND
+   * @default BorderType.ROUND
    */
-  borderType?: AvatarBorderType;
+  borderType?: BorderType;
 
   /**
    * Image source URL.
@@ -62,7 +63,7 @@ export interface AvatarProps extends BaseComponentProps {
  */
 export default class Avatar extends React.Component<AvatarProps> {
   public static defaultProps: Partial<AvatarProps> = {
-    borderType: AvatarBorderType.ROUND,
+    borderType: BorderType.ROUND,
     size: AvatarSize.MEDIUM,
     imageShouldFadeIn: false,
   };
@@ -79,7 +80,7 @@ export default class Avatar extends React.Component<AvatarProps> {
           imageUrl={imageUrl}
           size={personaSize}
           hidePersonaDetails={true}
-          primaryText={name}
+          text={name}
           imageShouldFadeIn={imageShouldFadeIn}
         />
         {badge}

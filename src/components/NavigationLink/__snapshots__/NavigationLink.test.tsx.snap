@@ -29,6 +29,25 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
 </a>
 `;
 
+exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
+<a
+  aria-label="ARIA LABEL CONTENT"
+  className="y-navigationLink"
+  href="test.html"
+>
+  link content
+</a>
+`;
+
+exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
+<a
+  className="y-navigationLink y-navigationLink__block"
+  href="test.html"
+>
+  test content
+</a>
+`;
+
 exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 <a
   className="y-navigationLink"

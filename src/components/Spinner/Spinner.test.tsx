@@ -36,9 +36,19 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with a color', () => {
+  describe('with dark color', () => {
     beforeEach(() => {
       component = shallow(<Spinner text="Loading" color={SpinnerColor.DARK} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with metadata color', () => {
+    beforeEach(() => {
+      component = shallow(<Spinner text="Loading" color={SpinnerColor.METADATA} />);
     });
 
     it('matches its snapshot', () => {
@@ -49,6 +59,16 @@ describe('<Spinner />', () => {
   describe('with a size', () => {
     beforeEach(() => {
       component = shallow(<Spinner text="Loading" size={SpinnerSize.XSMALL} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when centered', () => {
+    beforeEach(() => {
+      component = shallow(<Spinner text="Loading" isCentered={true} />);
     });
 
     it('matches its snapshot', () => {

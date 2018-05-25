@@ -4,6 +4,7 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
 import { DirectionalHint, TooltipDelay, TooltipHost } from 'office-ui-fabric-react/lib/Tooltip';
+import { getTooltipStyles, getCalloutStyles } from './Tooltip.styles';
 import './Tooltip.css';
 
 export { DirectionalHint };
@@ -32,9 +33,9 @@ export default class Tooltip extends React.Component<TooltipProps> {
         content={text}
         directionalHint={directionalHint}
         delay={TooltipDelay.medium}
-        calloutProps={{ beakWidth: 8 }}
         hostClassName={join(['y-tooltip', className])}
-        className="y-tooltip--callout"
+        calloutProps={{ styles: getCalloutStyles(this.props), beakWidth: 8 }}
+        tooltipProps={{ styles: getTooltipStyles(this.props) }}
       >
         {children}
       </TooltipHost>

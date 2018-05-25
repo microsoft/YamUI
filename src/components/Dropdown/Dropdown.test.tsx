@@ -33,6 +33,7 @@ describe('<Dropdown />', () => {
     beforeEach(() => {
       component = shallow(
         <Dropdown
+          ariaLabel="ARIA_LABEL"
           options={[{ key: 'A', text: 'Option a' }, { key: 'B', text: 'Option b' }]}
           className="TEST_CLASSNAME"
           selectedKey="A"

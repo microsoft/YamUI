@@ -7,6 +7,8 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
+import { getStyles } from './Button.styles';
+
 import BaseIcon from '../Icon/BaseIcon';
 import './Button.css';
 
@@ -19,6 +21,11 @@ export interface BaseButtonProps extends BaseComponentProps {
    * Visible button text.
    */
   text: string;
+
+  /**
+   * Alternative state visible button text. Used to determine maximum possible width of button
+   */
+  secondaryText?: string;
 
   /**
    * Additional label that must be provided if the button text is not descriptive enough.
@@ -157,7 +164,7 @@ export default class Button extends React.Component<ButtonProps> {
   };
 
   public render() {
-    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave } = this.props;
+    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave, className } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
     const status = (this.props as RegularButtonProps).status;
@@ -166,7 +173,7 @@ export default class Button extends React.Component<ButtonProps> {
     return (
       <BaseButton
         ariaLabel={ariaLabel}
-        className={this.getClasses()}
+        className={`y-button ${className ? className : ''}`}
         disabled={isDisabled}
         href={href}
         type={href ? '' : type}
@@ -175,6 +182,7 @@ export default class Button extends React.Component<ButtonProps> {
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        styles={getStyles(this.props)}
       >
         {this.getContents()}
         {this.isLoading() && this.getSpinner()}
@@ -183,7 +191,7 @@ export default class Button extends React.Component<ButtonProps> {
   }
 
   private getContents() {
-    const { icon: Icon, iconPosition, size, text } = this.props;
+    const { icon: Icon, iconPosition, size, text, secondaryText } = this.props;
 
     const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
 
@@ -195,11 +203,19 @@ export default class Button extends React.Component<ButtonProps> {
 
     const className = this.isLoading() ? 'y-button--content__hidden' : '';
 
+    const leftIcon = iconPosition === 'left' && buttonIcon;
+    const rightIcon = iconPosition === 'right' && buttonIcon;
+
     return (
-      <Block textSize={textSize} className={className}>
-        {iconPosition === 'left' && buttonIcon}
+      <Block textSize={textSize} className={className} textAlign="center">
+        {leftIcon}
         {text}
-        {iconPosition === 'right' && buttonIcon}
+        {rightIcon}
+        <div className="y-button--secondary-text">
+          {leftIcon}
+          {secondaryText}
+          {rightIcon}
+        </div>
       </Block>
     );
   }
@@ -214,26 +230,9 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <span className="y-button--spinner">
-        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} />
+        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} isCentered={true} />
       </span>
     );
-  }
-
-  private getClasses() {
-    const { className, color, status, size, fullWidth } = this.props;
-
-    const classes: string[] = ['y-button', `y-button__color-${color}`, `y-button__size-${size}`];
-    if (status !== ButtonStatus.ENABLED) {
-      classes.push(`y-button__state-${status}`);
-    }
-    if (fullWidth) {
-      classes.push('y-button__fullWidth');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 
   private isLoading() {
