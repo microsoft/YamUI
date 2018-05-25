@@ -5,12 +5,51 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
+      "styles": Object {
+        "beak": Object {
+          "backgroundColor": "#343A41",
+        },
+        "beakCurtain": Object {
+          "backgroundColor": "#343A41",
+          "borderRadius": "2px",
+        },
+        "calloutMain": Object {
+          "backgroundColor": "#343A41",
+        },
+        "container": Object {
+          "backgroundColor": "inherit",
+        },
+        "root": Object {
+          "backgroundColor": "inherit",
+          "border": "none",
+          "boxShadow": "none",
+          "minHeight": "3.2rem",
+          "padding": "0.7rem 1.2rem 0.8rem",
+          "zIndex": 1000,
+        },
+      },
     }
   }
-  className="y-tooltip--callout"
   content="text content"
   delay={1}
   hostClassName="y-tooltip TEST_CLASSNAME"
+  tooltipProps={
+    Object {
+      "styles": Object {
+        "content": Object {
+          "display": "inline-block",
+        },
+        "root": Object {
+          "lineHeight": "1",
+        },
+        "subText": Object {
+          "color": "#ffffff",
+          "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
+        },
+      },
+    }
+  }
 />
 `;
 
@@ -19,12 +58,51 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
+      "styles": Object {
+        "beak": Object {
+          "backgroundColor": "#343A41",
+        },
+        "beakCurtain": Object {
+          "backgroundColor": "#343A41",
+          "borderRadius": "2px",
+        },
+        "calloutMain": Object {
+          "backgroundColor": "#343A41",
+        },
+        "container": Object {
+          "backgroundColor": "inherit",
+        },
+        "root": Object {
+          "backgroundColor": "inherit",
+          "border": "none",
+          "boxShadow": "none",
+          "minHeight": "3.2rem",
+          "padding": "0.7rem 1.2rem 0.8rem",
+          "zIndex": 1000,
+        },
+      },
     }
   }
-  className="y-tooltip--callout"
   content="text content"
   delay={1}
   hostClassName="y-tooltip"
+  tooltipProps={
+    Object {
+      "styles": Object {
+        "content": Object {
+          "display": "inline-block",
+        },
+        "root": Object {
+          "lineHeight": "1",
+        },
+        "subText": Object {
+          "color": "#ffffff",
+          "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
+        },
+      },
+    }
+  }
 >
   text
 </TooltipHost>
@@ -35,12 +113,51 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
   calloutProps={
     Object {
       "beakWidth": 8,
+      "styles": Object {
+        "beak": Object {
+          "backgroundColor": "#343A41",
+        },
+        "beakCurtain": Object {
+          "backgroundColor": "#343A41",
+          "borderRadius": "2px",
+        },
+        "calloutMain": Object {
+          "backgroundColor": "#343A41",
+        },
+        "container": Object {
+          "backgroundColor": "inherit",
+        },
+        "root": Object {
+          "backgroundColor": "inherit",
+          "border": "none",
+          "boxShadow": "none",
+          "minHeight": "3.2rem",
+          "padding": "0.7rem 1.2rem 0.8rem",
+          "zIndex": 1000,
+        },
+      },
     }
   }
-  className="y-tooltip--callout"
   content="text content"
   delay={1}
   directionalHint={4}
   hostClassName="y-tooltip"
+  tooltipProps={
+    Object {
+      "styles": Object {
+        "content": Object {
+          "display": "inline-block",
+        },
+        "root": Object {
+          "lineHeight": "1",
+        },
+        "subText": Object {
+          "color": "#ffffff",
+          "fontSize": "1.2rem",
+          "lineHeight": "1.6rem",
+        },
+      },
+    }
+  }
 />
 `;
