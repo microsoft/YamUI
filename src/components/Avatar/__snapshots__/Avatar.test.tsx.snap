@@ -65,9 +65,9 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
   <div
     className="y-avatar--badge y-avatar__size-xSmall--badge"
   >
-    <TextWrapper>
+    <Component>
       badge
-    </TextWrapper>
+    </Component>
   </div>
   <ScreenreaderText>
     NAME

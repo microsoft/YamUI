@@ -99,7 +99,7 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       className="y-dropdown--ellipsed-title"
     >
       <span>
-        <TextWrapper
+        <Component
           bold={true}
         >
           <Text
@@ -118,7 +118,7 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
               :
             </span>
           </Text>
-        </TextWrapper>
+        </Component>
          
         with icon
       </span>

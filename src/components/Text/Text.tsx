@@ -82,8 +82,6 @@ class Text extends React.Component<TextProps & PrivateTextProps> {
   }
 }
 
-const TextWrapper: React.SFC<TextProps> = (props: TextProps): JSX.Element => {
+export default (props: TextProps): JSX.Element => {
   return <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>;
 };
-
-export default TextWrapper;
