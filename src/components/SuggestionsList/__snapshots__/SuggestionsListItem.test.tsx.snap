@@ -25,9 +25,7 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
         >
           Joh
         </span>,
-        <span
-          className={undefined}
-        >
+        <span>
           n Smith
         </span>,
       ]
@@ -61,9 +59,7 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
         >
           Joh
         </span>,
-        <span
-          className={undefined}
-        >
+        <span>
           n Smith
         </span>,
       ]
@@ -97,9 +93,7 @@ exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
         >
           Joh
         </span>,
-        <span
-          className={undefined}
-        >
+        <span>
           n Smith
         </span>,
       ]

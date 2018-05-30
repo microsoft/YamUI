@@ -8,6 +8,12 @@ exports[`<KeyboardNavigationObserver /> in keyboard mode when mounted and mode i
       "calls": Array [
         Array [],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
     }
   }
   renderInKeyboardMode={[Function]}
@@ -31,6 +37,12 @@ exports[`<KeyboardNavigationObserver /> in mouse mode when mounted and mode is s
     [MockFunction] {
       "calls": Array [
         Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     }
   }
