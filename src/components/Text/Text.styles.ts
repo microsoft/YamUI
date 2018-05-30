@@ -1,30 +1,17 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { TextProps, TextSize } from './Text';
-import { ellipsisStyle, fontWeightBold, fontSizes, lineHeights, textColors, Sizes } from '../../util/styles/fonts';
+import {
+  ellipsisStyle,
+  fontWeights,
+  fontSizes,
+  lineHeights,
+  textColors,
+  verticalAligns,
+} from '../../util/styles/fonts';
 import { IRawStyle } from '@uifabric/styling';
 
-const heights: Sizes = {
-  xSmall: '1.6rem',
-  small: '1.6rem',
-  mediumSub: '2rem',
-  medium: '2rem',
-  large: '2.4rem',
-  xLarge: '2.8rem',
-  xxLarge: '2.8rem',
-};
-
 const getHeight = (size?: TextSize) => {
-  return size ? heights[size] : undefined;
-};
-
-const verticalAligns: Sizes = {
-  xSmall: '-0.4rem',
-  small: '-0.3rem',
-  mediumSub: '-0.5rem',
-  medium: '-0.4rem',
-  large: '-0.5rem',
-  xLarge: '-0.5rem',
-  xxLarge: '-0.4rem',
+  return size ? lineHeights[size] : undefined;
 };
 
 const getVerticalAlignForMaxWidth = (size?: TextSize) => {
@@ -36,7 +23,7 @@ export const getStyles = (props: TextProps & { blockTextSize?: TextSize }): IRaw
 
   return {
     ...(maxWidth ? ellipsisStyle : {}),
-    fontWeight: bold ? fontWeightBold : undefined,
+    fontWeight: bold ? fontWeights.bold : undefined,
     display: 'inline-block',
     textTransform: uppercase ? 'uppercase' : undefined,
     fontSize: size ? fontSizes[size] : undefined,
