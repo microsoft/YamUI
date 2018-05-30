@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextProps, TextSize, PrivateTextProps } from './Text';
+import { TextProps, TextSize } from './Text';
 import { ellipsisStyle, fontWeightBold, fontSizes, lineHeights, textColors, Sizes } from '../../util/styles/fonts';
 import { IRawStyle } from '@uifabric/styling';
 
@@ -31,7 +31,7 @@ const getVerticalAlign = (size?: TextSize) => {
   return size ? verticalAligns[size] : '-0.4rem';
 };
 
-export const getStyles = (props: TextProps & PrivateTextProps): IRawStyle => {
+export const getStyles = (props: TextProps & { blockTextSize?: TextSize }): IRawStyle => {
   const { size, maxWidth, bold, uppercase, color, blockTextSize } = props;
 
   return {

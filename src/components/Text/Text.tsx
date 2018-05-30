@@ -1,4 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+/* tslint:disable:no-use-before-declare */
+
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
@@ -46,42 +48,38 @@ export interface TextProps extends NestableBaseComponentProps {
   screenreaderText?: string;
 }
 
-export interface PrivateTextProps extends NestableBaseComponentProps {
-  blockTextSize?: TextSize;
-}
-
 /**
  * A `Text` component simply renders a `span`. It offers size and color props so UI features don't
  * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
  * of supported text colors and `font-size`/`line-height` combinations.
  */
-class Text extends React.Component<TextProps & PrivateTextProps> {
+export default class Text extends React.Component<TextProps> {
   public render() {
+    return <BlockContext.Consumer>{blockContext => this.getContent(blockContext.textSize)}</BlockContext.Consumer>;
+  }
+
+  private getContent(blockTextSize?: TextSize) {
     const { children, screenreaderText } = this.props;
 
     if (screenreaderText !== undefined) {
       return (
-        <span className={this.getClasses()}>
+        <span className={this.getClasses(blockTextSize)}>
           <span aria-hidden={true}>{children}</span>
           <ScreenReaderText>{screenreaderText}</ScreenReaderText>
         </span>
       );
     }
-    return <span className={this.getClasses()}>{children}</span>;
+    return <span className={this.getClasses(blockTextSize)}>{children}</span>;
   }
 
-  private getClasses() {
+  private getClasses(blockTextSize?: TextSize) {
     const { className, size, maxWidth } = this.props;
     return join([
       'y-text',
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
       className,
-      mergeStyles(getStyles(this.props)),
+      mergeStyles(getStyles({ ...this.props, blockTextSize })),
     ]);
   }
 }
-
-export default (props: TextProps): JSX.Element => {
-  return <BlockContext.Consumer>{block => <Text {...props} blockTextSize={block.textSize} />}</BlockContext.Consumer>;
-};

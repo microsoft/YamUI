@@ -1,242 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
-<Component
+<Text
   maxWidth="200px"
   size="xLarge"
 >
-  <Text
-    maxWidth="200px"
-    size="xLarge"
+  <span
+    className=
+        y-text
+        y-textSize-xLarge
+        y-text__ellipsis
+        {
+          display: inline-block;
+          font-size: 2.2rem;
+          height: 2.8rem;
+          line-height: 2.8rem;
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: -0.5rem;
+          white-space: nowrap;
+        }
   >
-    <span
-      className=
-          y-text
-          y-textSize-xLarge
-          y-text__ellipsis
-          {
-            display: inline-block;
-            font-size: 2.2rem;
-            height: 2.8rem;
-            line-height: 2.8rem;
-            max-width: 200px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            vertical-align: -0.5rem;
-            white-space: nowrap;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
-<Component
+<Text
   size="xLarge"
 >
-  <Text
-    size="xLarge"
+  <span
+    className=
+        y-text
+        y-textSize-xLarge
+        {
+          display: inline-block;
+          font-size: 2.2rem;
+          line-height: 2.8rem;
+        }
   >
-    <span
-      className=
-          y-text
-          y-textSize-xLarge
-          {
-            display: inline-block;
-            font-size: 2.2rem;
-            line-height: 2.8rem;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with additional className matches its snapshot 1`] = `
-<Component
+<Text
   className="TEST_CLASSNAME"
 >
-  <Text
-    className="TEST_CLASSNAME"
+  <span
+    className=
+        y-text
+        TEST_CLASSNAME
+        {
+          display: inline-block;
+        }
   >
-    <span
-      className=
-          y-text
-          TEST_CLASSNAME
-          {
-            display: inline-block;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with bold matches its snapshot 1`] = `
-<Component
+<Text
   bold={true}
 >
-  <Text
-    bold={true}
+  <span
+    className=
+        y-text
+        {
+          display: inline-block;
+          font-weight: 600;
+        }
   >
-    <span
-      className=
-          y-text
-          {
-            display: inline-block;
-            font-weight: 600;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with color secondary matches its snapshot 1`] = `
-<Component
+<Text
   color="secondary"
 >
-  <Text
-    color="secondary"
+  <span
+    className=
+        y-text
+        {
+          color: #495361;
+          display: inline-block;
+        }
   >
-    <span
-      className=
-          y-text
-          {
-            color: #495361;
-            display: inline-block;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with default options matches its snapshot 1`] = `
-<Component>
-  <Text>
-    <span
-      className=
-          y-text
-          {
-            display: inline-block;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+<Text>
+  <span
+    className=
+        y-text
+        {
+          display: inline-block;
+        }
+  >
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
-<Component
+<Text
   maxWidth="500px"
 >
-  <Text
-    maxWidth="500px"
+  <span
+    className=
+        y-text
+        y-text__ellipsis
+        {
+          display: inline-block;
+          max-width: 500px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: -0.4rem;
+          white-space: nowrap;
+        }
   >
-    <span
-      className=
-          y-text
-          y-text__ellipsis
-          {
-            display: inline-block;
-            max-width: 500px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            vertical-align: -0.4rem;
-            white-space: nowrap;
-          }
-    >
-      test content
-    </span>
-  </Text>
-</Component>
+    test content
+  </span>
+</Text>
 `;
 
 exports[`<Text /> with screenreader text empty string matches its snapshot 1`] = `
-<Component
+<Text
   screenreaderText=""
 >
-  <Text
-    screenreaderText=""
+  <span
+    className=
+        y-text
+        {
+          display: inline-block;
+        }
   >
     <span
-      className=
-          y-text
-          {
-            display: inline-block;
-          }
-    >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
-      <ScreenreaderText>
-        <span
-          className="y-screenreaderText"
-        />
-      </ScreenreaderText>
-    </span>
-  </Text>
-</Component>
-`;
-
-exports[`<Text /> with screenreader text matches its snapshot 1`] = `
-<Component
-  screenreaderText="SCREENREADER TEXT"
->
-  <Text
-    screenreaderText="SCREENREADER TEXT"
-  >
-    <span
-      className=
-          y-text
-          {
-            display: inline-block;
-          }
-    >
-      <span
-        aria-hidden={true}
-      >
-        test content
-      </span>
-      <ScreenreaderText>
-        <span
-          className="y-screenreaderText"
-        >
-          SCREENREADER TEXT
-        </span>
-      </ScreenreaderText>
-    </span>
-  </Text>
-</Component>
-`;
-
-exports[`<Text /> with uppercase matches its snapshot 1`] = `
-<Component
-  uppercase={true}
->
-  <Text
-    uppercase={true}
-  >
-    <span
-      className=
-          y-text
-          {
-            display: inline-block;
-            text-transform: uppercase;
-          }
+      aria-hidden={true}
     >
       test content
     </span>
-  </Text>
-</Component>
+    <ScreenreaderText>
+      <span
+        className="y-screenreaderText"
+      />
+    </ScreenreaderText>
+  </span>
+</Text>
+`;
+
+exports[`<Text /> with screenreader text matches its snapshot 1`] = `
+<Text
+  screenreaderText="SCREENREADER TEXT"
+>
+  <span
+    className=
+        y-text
+        {
+          display: inline-block;
+        }
+  >
+    <span
+      aria-hidden={true}
+    >
+      test content
+    </span>
+    <ScreenreaderText>
+      <span
+        className="y-screenreaderText"
+      >
+        SCREENREADER TEXT
+      </span>
+    </ScreenreaderText>
+  </span>
+</Text>
+`;
+
+exports[`<Text /> with uppercase matches its snapshot 1`] = `
+<Text
+  uppercase={true}
+>
+  <span
+    className=
+        y-text
+        {
+          display: inline-block;
+          text-transform: uppercase;
+        }
+  >
+    test content
+  </span>
+</Text>
 `;

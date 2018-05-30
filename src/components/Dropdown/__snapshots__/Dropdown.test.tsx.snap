@@ -99,26 +99,21 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       className="y-dropdown--ellipsed-title"
     >
       <span>
-        <Component
+        <Text
           bold={true}
         >
-          <Text
-            blockTextSize="mediumSub"
-            bold={true}
+          <span
+            className=
+                y-text
+                {
+                  display: inline-block;
+                  font-weight: 600;
+                }
           >
-            <span
-              className=
-                  y-text
-                  {
-                    display: inline-block;
-                    font-weight: 600;
-                  }
-            >
-              label
-              :
-            </span>
-          </Text>
-        </Component>
+            label
+            :
+          </span>
+        </Text>
          
         with icon
       </span>
