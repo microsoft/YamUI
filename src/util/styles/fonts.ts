@@ -45,8 +45,8 @@ export const textColors: { [color in TextColor]: string | undefined } = {
 };
 
 export const fontWeights: { [weight in 'normal' | 'bold']: IFontWeight } = {
-  normal: 400,
-  bold: 600,
+  normal: '400',
+  bold: '600',
 };
 
 export const ellipsisStyle: IRawStyle = {
