@@ -64,7 +64,11 @@ export interface BlockProps extends NestableBaseComponentProps {
   ellipsis?: boolean;
 }
 
-const defaultContext = { textSize: undefined as TextSize | undefined };
+export interface BlockContext {
+  textSize?: TextSize;
+}
+
+const defaultContext: BlockContext = {};
 
 export const BlockContext = React.createContext(defaultContext);
 

@@ -1,8 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { createRenderer as createShallowRenderer } from 'react-test-renderer/shallow';
 import { renderIntoDocument, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
-import Block, { BlockProps, GutterSize, TextColor, TextSize } from '.';
+import Block, { GutterSize, TextColor, TextSize } from '.';
+
+const shallowWithContext = (jsx: JSX.Element) => {
+  const renderer = createShallowRenderer();
+  renderer.render(jsx);
+  return renderer.getRenderOutput();
+};
 
 const renderWithoutContext = (jsx: JSX.Element) => {
   const renderedText = renderIntoDocument(jsx) as Block;
@@ -11,11 +17,11 @@ const renderWithoutContext = (jsx: JSX.Element) => {
 
 describe('<Block />', () => {
   let component: Element;
-  let componentWithContext: ShallowWrapper<BlockProps>;
+  let componentWithContext: React.ReactElement<Block>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      componentWithContext = shallow(<Block>block content</Block>);
+      componentWithContext = shallowWithContext(<Block>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -35,7 +41,7 @@ describe('<Block />', () => {
 
   describe('with xLarge text size', () => {
     beforeEach(() => {
-      componentWithContext = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
+      componentWithContext = shallowWithContext(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {

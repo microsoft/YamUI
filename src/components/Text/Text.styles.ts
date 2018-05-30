@@ -27,7 +27,7 @@ const verticalAligns: Sizes = {
   xxLarge: '-0.4rem',
 };
 
-const getVerticalAlign = (size?: TextSize) => {
+const getVerticalAlignForMaxWidth = (size?: TextSize) => {
   return size ? verticalAligns[size] : '-0.4rem';
 };
 
@@ -44,6 +44,6 @@ export const getStyles = (props: TextProps & { blockTextSize?: TextSize }): IRaw
     color: color ? textColors[color] : undefined,
     maxWidth: maxWidth || undefined,
     height: maxWidth ? getHeight(size) : undefined,
-    verticalAlign: maxWidth ? getVerticalAlign(size || blockTextSize) : undefined,
+    verticalAlign: maxWidth ? getVerticalAlignForMaxWidth(size || blockTextSize) : undefined,
   };
 };

@@ -39,7 +39,7 @@ exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 `;
 
 exports[`<Block /> with default options matches its snapshot 1`] = `
-<[object Object]
+<Context.Provider
   value={
     Object {
       "textSize": undefined,
@@ -60,7 +60,7 @@ exports[`<Block /> with default options matches its snapshot 1`] = `
       block content
     </div>
   </div>
-</[object Object]>
+</Context.Provider>
 `;
 
 exports[`<Block /> with ellipsis matches its snapshot 1`] = `
@@ -269,7 +269,7 @@ exports[`<Block /> with vertical padding matches its snapshot 1`] = `
 `;
 
 exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
-<[object Object]
+<Context.Provider
   value={
     Object {
       "textSize": "xLarge",
@@ -296,5 +296,5 @@ exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
       block content
     </div>
   </div>
-</[object Object]>
+</Context.Provider>
 `;
