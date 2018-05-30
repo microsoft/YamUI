@@ -1,6 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-/* tslint:disable:no-use-before-declare */
-
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
@@ -60,16 +58,17 @@ export default class Text extends React.Component<TextProps> {
 
   private getContent(blockTextSize?: TextSize) {
     const { children, screenreaderText } = this.props;
+    const classes = this.getClasses(blockTextSize);
 
     if (screenreaderText !== undefined) {
       return (
-        <span className={this.getClasses(blockTextSize)}>
+        <span className={classes}>
           <span aria-hidden={true}>{children}</span>
           <ScreenReaderText>{screenreaderText}</ScreenReaderText>
         </span>
       );
     }
-    return <span className={this.getClasses(blockTextSize)}>{children}</span>;
+    return <span className={classes}>{children}</span>;
   }
 
   private getClasses(blockTextSize?: TextSize) {

@@ -10,32 +10,22 @@ const renderWithoutContext = (jsx: JSX.Element) => {
 };
 
 describe('<Block />', () => {
-  let componentWithoutContext: Element;
-  let component: ShallowWrapper<BlockProps>;
+  let component: Element;
+  let componentWithContext: ShallowWrapper<BlockProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<Block>block content</Block>);
+      componentWithContext = shallow(<Block>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      expect(componentWithContext).toMatchSnapshot();
     });
   });
 
   describe('with additional className', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block className="TEST_CLASSNAME">block content</Block>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
-    });
-  });
-
-  describe('with xLarge text size', () => {
-    beforeEach(() => {
-      component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
+      component = renderWithoutContext(<Block className="TEST_CLASSNAME">block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -43,117 +33,125 @@ describe('<Block />', () => {
     });
   });
 
-  describe('with secondary textColor', () => {
+  describe('with xLarge text size', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block textColor={TextColor.SECONDARY}>block content</Block>);
+      componentWithContext = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(componentWithContext).toMatchSnapshot();
+    });
+  });
+
+  describe('with secondary textColor', () => {
+    beforeEach(() => {
+      component = renderWithoutContext(<Block textColor={TextColor.SECONDARY}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with textAlign', () => {
     describe('right', () => {
       beforeEach(() => {
-        componentWithoutContext = renderWithoutContext(<Block textAlign="right">block content</Block>);
+        component = renderWithoutContext(<Block textAlign="right">block content</Block>);
       });
 
       it('matches its snapshot', () => {
-        expect(componentWithoutContext).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
       });
     });
 
     describe('center', () => {
       beforeEach(() => {
-        componentWithoutContext = renderWithoutContext(<Block textAlign="center">block content</Block>);
+        component = renderWithoutContext(<Block textAlign="center">block content</Block>);
       });
 
       it('matches its snapshot', () => {
-        expect(componentWithoutContext).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
       });
     });
   });
 
   describe('with ellipsis', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block ellipsis={true}>block content</Block>);
+      component = renderWithoutContext(<Block ellipsis={true}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with top spacing', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
+      component = renderWithoutContext(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with bottom spacing', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
+      component = renderWithoutContext(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with padding', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block padding={GutterSize.SMALL}>block content</Block>);
+      component = renderWithoutContext(<Block padding={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with horizontal padding', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(
-        <Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>,
-      );
+      component = renderWithoutContext(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with vertical padding', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
+      component = renderWithoutContext(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with positive push', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block push={3}>block content</Block>);
+      component = renderWithoutContext(<Block push={3}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
   describe('with negative push', () => {
     beforeEach(() => {
-      componentWithoutContext = renderWithoutContext(<Block push={-2}>block content</Block>);
+      component = renderWithoutContext(<Block push={-2}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithoutContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 });
