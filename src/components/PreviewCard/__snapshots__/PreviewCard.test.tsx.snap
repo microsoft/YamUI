@@ -25,9 +25,7 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
     }
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -95,9 +93,7 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
     }
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -128,9 +124,7 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
     }
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -147,9 +141,7 @@ exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
     imageContent={null}
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -167,9 +159,7 @@ exports[`<PreviewCard /> with description matches its snapshot 1`] = `
     metadataContent="file description"
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -193,9 +183,7 @@ exports[`<PreviewCard /> with image matches its snapshot 1`] = `
     }
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -212,9 +200,7 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
     imageContent={null}
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -236,9 +222,7 @@ exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
     imageContent={null}
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
@@ -256,9 +240,7 @@ exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
     imageContent={null}
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         <Clickable
           ariaLabel="Show file preview"
           unstyled={true}
@@ -280,9 +262,7 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
     imageContent={null}
     size="medium"
     titleContent={
-      <Block
-        textSize={undefined}
-      >
+      <Block>
         Filename.gif
       </Block>
     }
