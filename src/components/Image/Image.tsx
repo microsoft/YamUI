@@ -81,15 +81,8 @@ export default class Image extends React.Component<ImageProps> {
   };
 
   public render() {
-    const { description, fullWidth, imageFit, source, shouldFadeIn, onLoadingStateChange } = this.props;
-
-    let height = this.props.height;
-    let width: number | string | undefined = this.props.width;
-
-    if (fullWidth) {
-      height = undefined;
-      width = '100%';
-    }
+    const { description, fullWidth, height, width, imageFit, source, shouldFadeIn, onLoadingStateChange } = this.props;
+    const imageWidth = fullWidth ? '100%' : width;
 
     return (
       <FabricImage
@@ -97,7 +90,7 @@ export default class Image extends React.Component<ImageProps> {
         className={this.getClasses()}
         height={height}
         imageFit={imageFit}
-        width={width}
+        width={imageWidth}
         src={source}
         onLoadingStateChange={onLoadingStateChange}
         shouldFadeIn={shouldFadeIn}
