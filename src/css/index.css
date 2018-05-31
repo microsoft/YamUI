@@ -1,7 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "normalize.css";
-@import "src/css/reset.css";
-@import "src/css/font-face.css";
-@import "src/css/base.css";
-@import "src/css/utility-classes.css";
-@import "src/css/high-contrast.css";
+@import 'normalize.css';
+@import 'src/css/reset.css';
+@import 'src/css/font-face.css';
+@import 'src/css/base.css';
+@import 'src/css/high-contrast.css';

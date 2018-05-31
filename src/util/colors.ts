@@ -33,7 +33,7 @@ const blackMetal = '#343A41';
 /* Red */
 // const angel = '#fb7f78';
 const lestat = '#d1423b';
-// const dracula = '#9e3028';
+const dracula = '#9e3028';
 
 /* Green */
 // const leaf = '#84ca4b';
@@ -57,7 +57,8 @@ export const palette: Partial<IPalette> = {
   neutralTertiaryAlt: punkRock,
   neutralLight: altRock,
   neutralLighter: popRock,
-  redDark: lestat,
+  redDark: dracula,
+  red: lestat,
   white,
 };
 
@@ -69,6 +70,6 @@ export const semanticColors: Partial<ISemanticColors> = {
   disabledBodyText: palette.neutralTertiaryAlt,
   bodySubtext: palette.neutralSecondary,
   buttonText: palette.neutralPrimaryAlt,
-  errorText: palette.redDark,
+  errorText: palette.red,
   link: palette.themeDark,
 };

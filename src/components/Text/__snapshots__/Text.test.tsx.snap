@@ -1,9 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
+<span
+  class=
+      y-text
+      y-textSize-xLarge
+      y-text__ellipsis
+      {
+        display: inline-block;
+        font-size: 2.2rem;
+        height: 2.8rem;
+        line-height: 2.8rem;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: -0.5rem;
+        white-space: nowrap;
+      }
+>
+  test content
+</span>
+`;
+
 exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <span
-  className="y-text y-textSize-xLarge"
-  style={Object {}}
+  class=
+      y-text
+      y-textSize-xLarge
+      {
+        display: inline-block;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
 >
   test content
 </span>
@@ -11,8 +39,12 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
 
 exports[`<Text /> with additional className matches its snapshot 1`] = `
 <span
-  className="y-text TEST_CLASSNAME"
-  style={Object {}}
+  class=
+      y-text
+      TEST_CLASSNAME
+      {
+        display: inline-block;
+      }
 >
   test content
 </span>
@@ -20,8 +52,12 @@ exports[`<Text /> with additional className matches its snapshot 1`] = `
 
 exports[`<Text /> with bold matches its snapshot 1`] = `
 <span
-  className="y-text y-text__bold"
-  style={Object {}}
+  class=
+      y-text
+      {
+        display: inline-block;
+        font-weight: 600;
+      }
 >
   test content
 </span>
@@ -29,8 +65,12 @@ exports[`<Text /> with bold matches its snapshot 1`] = `
 
 exports[`<Text /> with color secondary matches its snapshot 1`] = `
 <span
-  className="y-text y-text__color-secondary"
-  style={Object {}}
+  class=
+      y-text
+      {
+        color: #495361;
+        display: inline-block;
+      }
 >
   test content
 </span>
@@ -38,8 +78,11 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
 
 exports[`<Text /> with default options matches its snapshot 1`] = `
 <span
-  className="y-text"
-  style={Object {}}
+  class=
+      y-text
+      {
+        display: inline-block;
+      }
 >
   test content
 </span>
@@ -47,12 +90,17 @@ exports[`<Text /> with default options matches its snapshot 1`] = `
 
 exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 <span
-  className="y-text y-text__ellipsis"
-  style={
-    Object {
-      "maxWidth": "500px",
-    }
-  }
+  class=
+      y-text
+      y-text__ellipsis
+      {
+        display: inline-block;
+        max-width: 500px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: -0.4rem;
+        white-space: nowrap;
+      }
 >
   test content
 </span>
@@ -60,38 +108,52 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 
 exports[`<Text /> with screenreader text empty string matches its snapshot 1`] = `
 <span
-  className="y-text"
-  style={Object {}}
+  class=
+      y-text
+      {
+        display: inline-block;
+      }
 >
   <span
-    aria-hidden={true}
+    aria-hidden="true"
   >
     test content
   </span>
-  <ScreenreaderText />
+  <span
+    class="y-screenreaderText"
+  />
 </span>
 `;
 
 exports[`<Text /> with screenreader text matches its snapshot 1`] = `
 <span
-  className="y-text"
-  style={Object {}}
+  class=
+      y-text
+      {
+        display: inline-block;
+      }
 >
   <span
-    aria-hidden={true}
+    aria-hidden="true"
   >
     test content
   </span>
-  <ScreenreaderText>
+  <span
+    class="y-screenreaderText"
+  >
     SCREENREADER TEXT
-  </ScreenreaderText>
+  </span>
 </span>
 `;
 
 exports[`<Text /> with uppercase matches its snapshot 1`] = `
 <span
-  className="y-text y-text__uppercase"
-  style={Object {}}
+  class=
+      y-text
+      {
+        display: inline-block;
+        text-transform: uppercase;
+      }
 >
   test content
 </span>

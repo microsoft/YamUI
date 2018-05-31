@@ -1,24 +1,37 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import Block, { BlockProps, GutterSize, TextColor, TextSize } from '.';
+import { createRenderer as createShallowRenderer } from 'react-test-renderer/shallow';
+import { renderIntoDocument, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
+import Block, { GutterSize, TextColor, TextSize } from '.';
+
+const shallowWithContext = (jsx: JSX.Element) => {
+  const renderer = createShallowRenderer();
+  renderer.render(jsx);
+  return renderer.getRenderOutput();
+};
+
+const renderWithoutContext = (jsx: JSX.Element) => {
+  const renderedText = renderIntoDocument(jsx) as Block;
+  return findRenderedDOMComponentWithClass(renderedText, 'y-block');
+};
 
 describe('<Block />', () => {
-  let component: ShallowWrapper<BlockProps>;
+  let component: Element;
+  let componentWithContext: React.ReactElement<Block>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<Block>block content</Block>);
+      componentWithContext = shallowWithContext(<Block>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      expect(componentWithContext).toMatchSnapshot();
     });
   });
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<Block className="TEST_CLASSNAME">block content</Block>);
+      component = renderWithoutContext(<Block className="TEST_CLASSNAME">block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -28,17 +41,17 @@ describe('<Block />', () => {
 
   describe('with xLarge text size', () => {
     beforeEach(() => {
-      component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
+      componentWithContext = shallowWithContext(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+      expect(componentWithContext).toMatchSnapshot();
     });
   });
 
   describe('with secondary textColor', () => {
     beforeEach(() => {
-      component = shallow(<Block textColor={TextColor.SECONDARY}>block content</Block>);
+      component = renderWithoutContext(<Block textColor={TextColor.SECONDARY}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -49,7 +62,7 @@ describe('<Block />', () => {
   describe('with textAlign', () => {
     describe('right', () => {
       beforeEach(() => {
-        component = shallow(<Block textAlign="right">block content</Block>);
+        component = renderWithoutContext(<Block textAlign="right">block content</Block>);
       });
 
       it('matches its snapshot', () => {
@@ -59,18 +72,18 @@ describe('<Block />', () => {
 
     describe('center', () => {
       beforeEach(() => {
-        component = shallow(<Block textAlign="center">block content</Block>);
+        component = renderWithoutContext(<Block textAlign="center">block content</Block>);
       });
 
-      it('includes the aligned center className', () => {
-        expect(component.hasClass('y-block__textAlign-center')).toBe(true);
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
   });
 
   describe('with ellipsis', () => {
     beforeEach(() => {
-      component = shallow(<Block ellipsis={true}>block content</Block>);
+      component = renderWithoutContext(<Block ellipsis={true}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -80,7 +93,7 @@ describe('<Block />', () => {
 
   describe('with top spacing', () => {
     beforeEach(() => {
-      component = shallow(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
+      component = renderWithoutContext(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -90,7 +103,7 @@ describe('<Block />', () => {
 
   describe('with bottom spacing', () => {
     beforeEach(() => {
-      component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
+      component = renderWithoutContext(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -100,7 +113,7 @@ describe('<Block />', () => {
 
   describe('with padding', () => {
     beforeEach(() => {
-      component = shallow(<Block padding={GutterSize.SMALL}>block content</Block>);
+      component = renderWithoutContext(<Block padding={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -110,7 +123,7 @@ describe('<Block />', () => {
 
   describe('with horizontal padding', () => {
     beforeEach(() => {
-      component = shallow(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
+      component = renderWithoutContext(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -120,7 +133,7 @@ describe('<Block />', () => {
 
   describe('with vertical padding', () => {
     beforeEach(() => {
-      component = shallow(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
+      component = renderWithoutContext(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -130,7 +143,7 @@ describe('<Block />', () => {
 
   describe('with positive push', () => {
     beforeEach(() => {
-      component = shallow(<Block push={3}>block content</Block>);
+      component = renderWithoutContext(<Block push={3}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -140,7 +153,7 @@ describe('<Block />', () => {
 
   describe('with negative push', () => {
     beforeEach(() => {
-      component = shallow(<Block push={-2}>block content</Block>);
+      component = renderWithoutContext(<Block push={-2}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
