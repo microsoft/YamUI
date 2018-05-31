@@ -1,6 +1,0 @@
-/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-
-/* Setting full width to push out when nested in a Clickable button */
-.y-clickable .y-block {
-  width: 100%;
-}

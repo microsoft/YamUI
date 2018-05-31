@@ -15,11 +15,12 @@ const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   }
 };
 
-export const getStyles = (props: BlockProps): IRawStyle => {
-  const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor } = props;
+export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRawStyle => {
+  const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor, withinClickable } = props;
 
   return {
     textAlign,
+    width: withinClickable ? '100%' : undefined,
     color: textColor ? textColors[textColor] : undefined,
     fontSize: textSize ? fontSizes[textSize] : undefined,
     lineHeight: textSize ? lineHeights[textSize] : undefined,

@@ -2,10 +2,10 @@
 
 exports[`<Block /> with additional className matches its snapshot 1`] = `
 <div
-  class="y-block TEST_CLASSNAME"
+  className="y-block TEST_CLASSNAME"
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -19,14 +19,14 @@ exports[`<Block /> with additional className matches its snapshot 1`] = `
 
 exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         margin-bottom: 2rem;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -39,36 +39,28 @@ exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 `;
 
 exports[`<Block /> with default options matches its snapshot 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "textSize": undefined,
-    }
-  }
+<div
+  className="y-block"
 >
   <div
-    className="y-block"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
-    <div
-      className=
-          y-block--inner
-          {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-          }
-    >
-      block content
-    </div>
+    block content
   </div>
-</Context.Provider>
+</div>
 `;
 
 exports[`<Block /> with ellipsis matches its snapshot 1`] = `
 <div
-  class="y-block"
+  className="y-block"
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -85,10 +77,10 @@ exports[`<Block /> with ellipsis matches its snapshot 1`] = `
 
 exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
 <div
-  class="y-block"
+  className="y-block"
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -104,14 +96,14 @@ exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
 
 exports[`<Block /> with negative push matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         margin-top: -0.2rem;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -125,10 +117,10 @@ exports[`<Block /> with negative push matches its snapshot 1`] = `
 
 exports[`<Block /> with padding matches its snapshot 1`] = `
 <div
-  class="y-block"
+  className="y-block"
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -146,14 +138,14 @@ exports[`<Block /> with padding matches its snapshot 1`] = `
 
 exports[`<Block /> with positive push matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         padding-top: 0.3rem;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -167,14 +159,14 @@ exports[`<Block /> with positive push matches its snapshot 1`] = `
 
 exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         color: #495361;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -188,14 +180,14 @@ exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
 
 exports[`<Block /> with textAlign center matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         text-align: center;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -209,14 +201,14 @@ exports[`<Block /> with textAlign center matches its snapshot 1`] = `
 
 exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         text-align: right;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -230,14 +222,14 @@ exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 
 exports[`<Block /> with top spacing matches its snapshot 1`] = `
 <div
-  class=
+  className=
       y-block
       {
         margin-top: 0.8rem;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -251,10 +243,10 @@ exports[`<Block /> with top spacing matches its snapshot 1`] = `
 
 exports[`<Block /> with vertical padding matches its snapshot 1`] = `
 <div
-  class="y-block"
+  className="y-block"
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;
@@ -269,32 +261,45 @@ exports[`<Block /> with vertical padding matches its snapshot 1`] = `
 `;
 
 exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
-<Context.Provider
-  value={
-    Object {
-      "textSize": "xLarge",
-    }
-  }
+<div
+  className=
+      y-block
+      y-textSize-xLarge
+      {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
 >
   <div
     className=
-        y-block
-        y-textSize-xLarge
+        y-block--inner
         {
-          font-size: 2.2rem;
-          line-height: 2.8rem;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
         }
   >
-    <div
-      className=
-          y-block--inner
-          {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-          }
-    >
-      block content
-    </div>
+    block content
   </div>
-</Context.Provider>
+</div>
+`;
+
+exports[`<Block /> within clickable matches its snapshot 1`] = `
+<div
+  class=
+      y-block
+      {
+        width: 100%;
+      }
+>
+  <div
+    class=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    block content
+  </div>
+</div>
 `;

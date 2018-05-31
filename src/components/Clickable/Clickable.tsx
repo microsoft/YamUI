@@ -33,6 +33,10 @@ export interface ClickableProps extends NestableBaseComponentProps, FocusableCom
   onClick?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
+const defaultContext = { withinClickable: false as boolean };
+
+export const ClickableContext = React.createContext(defaultContext);
+
 /**
  * A `Clickable` is an accessible, clickable area that accepts arbitrary children. It is styled
  * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
@@ -52,16 +56,18 @@ export default class Clickable extends React.Component<ClickableProps> {
     const { ariaLabel, title, unstyled, onClick, children } = this.props;
 
     return (
-      <button
-        className={this.getClasses()}
-        aria-label={ariaLabel}
-        title={title}
-        onClick={onClick}
-        type="button"
-        ref={this.buttonRef}
-      >
-        {unstyled ? children : <FakeLink>{children}</FakeLink>}
-      </button>
+      <ClickableContext.Provider value={{ withinClickable: true }}>
+        <button
+          className={this.getClasses()}
+          aria-label={ariaLabel}
+          title={title}
+          onClick={onClick}
+          type="button"
+          ref={this.buttonRef}
+        >
+          {unstyled ? children : <FakeLink>{children}</FakeLink>}
+        </button>
+      </ClickableContext.Provider>
     );
   }
 
