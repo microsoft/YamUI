@@ -73,7 +73,7 @@ describe('<Clickable />', () => {
   });
 
   describe('when focusableRef is passed', () => {
-    let mounted: HTMLElement;
+    let button: HTMLElement;
     let focusable: Focusable;
 
     beforeEach(() => {
@@ -83,22 +83,22 @@ describe('<Clickable />', () => {
       const rendered = renderIntoDocument(
         <Clickable focusableRef={setFocusable}>clickable content</Clickable>,
       ) as React.Component;
-      mounted = findRenderedDOMComponentWithClass(rendered, 'y-clickable') as HTMLElement;
+      button = findRenderedDOMComponentWithClass(rendered, 'y-clickable') as HTMLElement;
     });
 
     it('matches its snapshot', () => {
-      expect(mounted).toMatchSnapshot();
+      expect(button).toMatchSnapshot();
     });
 
     describe('when focusable is used', () => {
       beforeEach(() => {
-        jest.spyOn(mounted, 'focus');
+        jest.spyOn(button, 'focus');
 
         focusable.focus();
       });
 
       it('calls focus on underlying button', () => {
-        expect(mounted.focus).toHaveBeenCalledTimes(1);
+        expect(button.focus).toHaveBeenCalledTimes(1);
       });
     });
   });
