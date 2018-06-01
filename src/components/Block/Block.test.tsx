@@ -11,15 +11,14 @@ const render = (jsx: JSX.Element) => {
 
 describe('<Block />', () => {
   let component: ReactTestRendererJSON | null;
-  let componentWithContext: ReactTestRendererJSON | null;
 
   describe('with default options', () => {
     beforeEach(() => {
-      componentWithContext = render(<Block>block content</Block>);
+      component = render(<Block>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
@@ -35,11 +34,11 @@ describe('<Block />', () => {
 
   describe('with xLarge text size', () => {
     beforeEach(() => {
-      componentWithContext = render(<Block textSize={TextSize.XLARGE}>block content</Block>);
+      component = render(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
-      expect(componentWithContext).toMatchSnapshot();
+      expect(component).toMatchSnapshot();
     });
   });
 
