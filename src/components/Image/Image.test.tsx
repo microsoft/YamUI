@@ -67,6 +67,16 @@ describe('<Image />', () => {
     });
   });
 
+  describe('with fullWidth and height', () => {
+    beforeEach(() => {
+      component = shallow(<Image source="image.png" description="description" fullWidth={true} height={50} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with shouldFadeIn', () => {
     beforeEach(() => {
       component = shallow(<Image source="image.png" description="description" shouldFadeIn={true} />);
