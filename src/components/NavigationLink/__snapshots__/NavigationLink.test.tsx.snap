@@ -29,6 +29,16 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
 </a>
 `;
 
+exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
+<a
+  aria-current="page"
+  className="y-navigationLink"
+  href="test.html"
+>
+  link content
+</a>
+`;
+
 exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
 <a
   aria-label="ARIA LABEL CONTENT"
