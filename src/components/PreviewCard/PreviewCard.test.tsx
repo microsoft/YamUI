@@ -62,7 +62,7 @@ describe('<PreviewCard />', () => {
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
             any,
             any,
-            React.ComponentClass<{}>
+            React.ComponentClass
           >).render();
         });
 
@@ -79,7 +79,7 @@ describe('<PreviewCard />', () => {
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
             any,
             any,
-            React.ComponentClass<{}>
+            React.ComponentClass
           >).render();
         });
 
