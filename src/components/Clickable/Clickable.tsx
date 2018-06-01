@@ -33,7 +33,11 @@ export interface ClickableProps extends NestableBaseComponentProps, FocusableCom
   onClick?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
-const defaultContext = { withinClickable: false as boolean };
+export interface ClickableContext {
+  withinClickable: boolean;
+}
+
+const defaultContext: ClickableContext = { withinClickable: false };
 
 export const ClickableContext = React.createContext(defaultContext);
 
