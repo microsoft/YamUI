@@ -14,13 +14,13 @@ const pivotItems = [
 
 With Dark theme:
 
-```js { "props": { "data-description": "with dark theme" } }
+```js { "props": { "data-description": "with dark background" } }
 const pivotItems = [
   { text: 'NEW CONVERSATIONS', key: '0' },
   { text: 'ALL CONVERSATIONS', key: '1' },
   { text: 'FILES', key: '2' }
 ];
 <div style={{ backgroundColor: '#386cbb' }}>
-  <Pivot onChange={action('onChange')} isDark={true} pivotItems={pivotItems}  />
+  <Pivot onChange={action('onChange')} overDarkBackground={true} pivotItems={pivotItems}  />
 </div>
 ```

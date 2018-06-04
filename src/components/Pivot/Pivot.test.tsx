@@ -14,7 +14,7 @@ describe('<Pivot />', () => {
       { key: '3', text: 'Tab 3' },
     ];
 
-    return shallow(<Pivot selectedKey="1" pivotItems={pivotItems} onChange={jest.fn()} {...overrides} />);
+    return shallow<PivotProps>(<Pivot selectedKey="1" pivotItems={pivotItems} onChange={jest.fn()} {...overrides} />);
   };
 
   describe('with default options', () => {
@@ -52,9 +52,19 @@ describe('<Pivot />', () => {
     });
   });
 
-  describe('with isDark as true', () => {
+  describe('with overDarkBackground as true', () => {
     beforeEach(() => {
-      component = getComponent({ isDark: true });
+      component = getComponent({ overDarkBackground: true });
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when given a className', () => {
+    beforeEach(() => {
+      component = getComponent({ className: 'Test' });
     });
 
     it('matches its snapshot', () => {
