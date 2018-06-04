@@ -6,6 +6,7 @@
       true,
       "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "
     ],
+    "arrow-parens": [true, "as-needed"],
     "import-name": false,
     "variable-name": [true, "check-format", "allow-pascal-case", "allow-leading-underscore"],
     "semicolon": [true, "always", "ignore-bound-class-methods"],
@@ -37,7 +38,7 @@
     "prefer-type-cast": false,
     "promise-function-async": false,
     "quotemark": [true, "single", "jsx-double", "avoid-escape"],
-    "react-tsx-curly-spacing": [true, "never"],
+    "react-tsx-curly-spacing": false,
     "strict-boolean-expressions": false,
     "trailing-comma": [
       true,
@@ -51,7 +52,6 @@
         "esSpecCompliant": true
       }
     ],
-    "react-tsx-curly-spacing": false,
     "typedef": false,
     "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-redundant-jsdoc": false,
