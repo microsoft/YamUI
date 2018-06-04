@@ -3,9 +3,9 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ChoiceGroup as FabricChoiceGroup, IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { getStyles, getOptionStyles } from './ChoiceGroup.styles';
 import { join } from '../../util/classNames';
 import Text from '../Text';
-import './ChoiceGroup.css';
 
 export interface ChoiceGroupOption {
   /**
@@ -60,6 +60,7 @@ const mapOption = (option: ChoiceGroupOption) => {
   const onRenderLabel = label ? getTextWithLabel(text, label) : undefined;
 
   return {
+    styles: getOptionStyles,
     key: option.key,
     text: text,
     onRenderLabel,
@@ -81,6 +82,7 @@ export default class ChoiceGroup extends React.Component<ChoiceGroupProps> {
         options={options.map(mapOption)}
         onChange={this.onChange}
         selectedKey={selectedKey}
+        styles={getStyles}
       />
     );
   }

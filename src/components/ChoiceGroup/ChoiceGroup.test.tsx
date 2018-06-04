@@ -33,7 +33,7 @@ describe('<ChoiceGroup />', () => {
   describe('with minimal props', () => {
     beforeEach(() => {
       component = shallow(getChoiceGroup());
-      const options = component.find('ChoiceGroup').prop('options');
+      const options = component.find('StyledCustomizedChoiceGroup').prop('options');
       const onRenderLabel = (options as IChoiceGroupOption[])[0].onRenderLabel;
       labelWithSublabel = (onRenderLabel as Function)();
     });
