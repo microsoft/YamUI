@@ -3,6 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ChoiceGroup as FabricChoiceGroup, IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
 import { getStyles, getOptionStyles } from './ChoiceGroup.styles';
 import { join } from '../../util/classNames';
 import Text from '../Text';
@@ -55,7 +56,7 @@ const getTextWithLabel = (label: string, sublabel: string) => {
   );
 };
 
-const mapOption = (option: ChoiceGroupOption) => {
+const mapOption = (option: ChoiceGroupOption): IChoiceGroupOptionProps => {
   const { text, label } = option;
   const onRenderLabel = label ? getTextWithLabel(text, label) : undefined;
 

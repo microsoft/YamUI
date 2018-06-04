@@ -25,6 +25,23 @@ exports[`<ChoiceGroup /> when \`props.selectedKey\` is set renders as expected 1
 />
 `;
 
+exports[`<ChoiceGroup /> with minimal props option styled as expected 1`] = `
+Object {
+  "field": Object {
+    "selectors": Object {
+      ":before": Object {
+        "borderColor": "#dde0e6",
+        "borderWidth": "1px",
+      },
+    },
+  },
+  "root": Object {
+    "marginBottom": "1.2rem",
+    "minHeight": 0,
+  },
+}
+`;
+
 exports[`<ChoiceGroup /> with minimal props renders as expected 1`] = `
 <StyledCustomizedChoiceGroup
   className="y-choice-group"
@@ -47,6 +64,17 @@ exports[`<ChoiceGroup /> with minimal props renders as expected 1`] = `
   }
   styles={[Function]}
 />
+`;
+
+exports[`<ChoiceGroup /> with minimal props styled as expected 1`] = `
+Object {
+  "label": Object {
+    "color": "#495361",
+    "fontSize": "1.4rem",
+    "fontWeight": "600",
+    "paddingBottom": "0.4rem",
+  },
+}
 `;
 
 exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
@@ -111,4 +139,21 @@ exports[`<ChoiceGroup /> with minimal props when a change is triggered with an o
   }
   styles={[Function]}
 />
+`;
+
+exports[`<ChoiceGroup /> with minimal props when checked, option styled as expected 1`] = `
+Object {
+  "field": Object {
+    "selectors": Object {
+      ":before": Object {
+        "borderColor": "#6c98d9",
+        "borderWidth": "2px",
+      },
+    },
+  },
+  "root": Object {
+    "marginBottom": "1.2rem",
+    "minHeight": 0,
+  },
+}
 `;

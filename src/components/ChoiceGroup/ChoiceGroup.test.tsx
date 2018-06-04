@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import ChoiceGroup, { ChoiceGroupProps } from '.';
-import { IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
 
 describe('<ChoiceGroup />', () => {
   let onChange: jest.Mock<Function>;
@@ -29,13 +29,12 @@ describe('<ChoiceGroup />', () => {
 
   let component: ShallowWrapper<ChoiceGroupProps>;
   let labelWithSublabel: JSX.Element;
+  let firstOption: IChoiceGroupOptionProps;
 
   describe('with minimal props', () => {
     beforeEach(() => {
       component = shallow(getChoiceGroup());
-      const options = component.find('StyledCustomizedChoiceGroup').prop('options');
-      const onRenderLabel = (options as IChoiceGroupOption[])[0].onRenderLabel;
-      labelWithSublabel = (onRenderLabel as Function)();
+      firstOption = (component.find('StyledCustomizedChoiceGroup').prop('options') as IChoiceGroupOptionProps[])[0];
     });
 
     it('renders as expected', () => {
@@ -43,7 +42,24 @@ describe('<ChoiceGroup />', () => {
     });
 
     it('sublabel renders as expected', () => {
+      const onRenderLabel = firstOption.onRenderLabel;
+      labelWithSublabel = (onRenderLabel as Function)();
       expect(labelWithSublabel).toMatchSnapshot();
+    });
+
+    it('styled as expected', () => {
+      const styles = (component.find('StyledCustomizedChoiceGroup').prop('styles') as Function)();
+      expect(styles).toMatchSnapshot();
+    });
+
+    it('option styled as expected', () => {
+      const getOptionStyles = firstOption.styles as Function;
+      expect(getOptionStyles({})).toMatchSnapshot();
+    });
+
+    it('when checked, option styled as expected', () => {
+      const getOptionStyles = firstOption.styles as Function;
+      expect(getOptionStyles({ checked: true })).toMatchSnapshot();
     });
 
     describe('when a change is triggered with an option', () => {
