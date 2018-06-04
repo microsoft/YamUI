@@ -4,8 +4,8 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { ClickableContext } from '../Clickable';
-import { GutterSize } from '../FixedGrid/enums';
-import { TextColor, TextSize } from '../Text/enums';
+import { GutterSize } from '../FixedGrid/types';
+import { TextColor, TextSize } from '../Text/types';
 import { getStyles, getInnerStyles } from './Block.styles';
 import { mergeStyles } from '@uifabric/styling';
 

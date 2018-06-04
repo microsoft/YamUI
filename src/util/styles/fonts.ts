@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette, semanticColors } from '../../util/colors';
-import { TextSize, TextColor } from '../../components/Text/enums';
+import { TextSize, TextColor } from '../../components/Text/types';
 import { IRawStyle, IFontWeight } from '@uifabric/styling';
 
 export type Sizes = { [size in TextSize]: string };

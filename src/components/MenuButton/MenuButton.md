@@ -10,7 +10,7 @@ MenuButton with default Icon, and all applicable children properties
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
-const enums = require('./enums.ts');
+const types = require('./types.ts');
 
 <div>
   <MenuButton
@@ -32,7 +32,7 @@ const enums = require('./enums.ts');
     }, {
       key: 'header',
       text: 'Header Type',
-      type: enums.MenuItemType.Header,
+      type: types.MenuItemType.Header,
     }, {
       key: 'longText',
       icon: Edit,
@@ -40,7 +40,7 @@ const enums = require('./enums.ts');
     },
     {
       key: 'divider',
-      type: enums.MenuItemType.Divider,
+      type: types.MenuItemType.Divider,
     }, {
       key: 'link',
       text: 'Link!',
@@ -59,7 +59,7 @@ MenuButton with multiple headers in children
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
-const enums = require('./enums.ts');
+const types = require('./types.ts');
 
 <div>
   <MenuButton
@@ -67,7 +67,7 @@ const enums = require('./enums.ts');
     menuItems={[{
       key: 'header',
       text: 'Header',
-      type: enums.MenuItemType.Header,
+      type: types.MenuItemType.Header,
     },
     {
       key: 'edit',
@@ -84,7 +84,7 @@ const enums = require('./enums.ts');
     }, {
       key: 'anotherHeader',
       text: 'Header',
-      type: enums.MenuItemType.Header,
+      type: types.MenuItemType.Header,
     }, {
       key: 'edit1',
       icon: Edit,
@@ -110,7 +110,7 @@ const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const View = require('../Icon/icons/View').default;
-const enums = require('./enums.ts');
+const types = require('./types.ts');
 
 <div>
   <MenuButton
@@ -122,7 +122,7 @@ const enums = require('./enums.ts');
       text: 'Edit',
     }, {
       key: 'divider',
-      type: enums.MenuItemType.Divider,
+      type: types.MenuItemType.Divider,
     }, {
       key: 'reply',
       text: 'Reply',
@@ -133,7 +133,7 @@ const enums = require('./enums.ts');
       icon: Share,
     }, {
       key: 'divider',
-      type: enums.MenuItemType.Divider,
+      type: types.MenuItemType.Divider,
     }, {
       key: 'view',
       text: 'View',
