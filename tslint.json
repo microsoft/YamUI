@@ -6,7 +6,6 @@
       true,
       "! Copyright \\(c\\) Microsoft Corporation. All rights reserved. Licensed under the MIT license. "
     ],
-    "arrow-parens": [true, "as-needed"],
     "import-name": false,
     "variable-name": [true, "check-format", "allow-pascal-case", "allow-leading-underscore"],
     "semicolon": [true, "always", "ignore-bound-class-methods"],
