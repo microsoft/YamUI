@@ -30,7 +30,7 @@ function getSvgNames(icons) {
   const svgNames = getSvgNames(icons);
 
   await generateIndex(svgNames, indexTemplate, destPath);
-  icons.forEach((icon) => {
+  icons.forEach(icon => {
     const name = path.basename(icon, path.extname(icon));
     const destIconPath = path.resolve(destPath, `${name}.tsx`);
     generateComponent(icon, iconTemplate, {}, destIconPath, optimizer);

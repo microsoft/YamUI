@@ -4,7 +4,7 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import { BlockContext } from '../Block';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { TextColor, TextSize } from './enums';
+import { TextColor, TextSize } from './types';
 import ScreenReaderText from '../ScreenreaderText';
 import { getStyles } from './Text.styles';
 import { mergeStyles } from '@uifabric/styling';

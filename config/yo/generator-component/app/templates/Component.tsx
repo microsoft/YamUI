@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { <%= name %>Type } from './enums';
+import { <%= name %>Type } from './types';
 import './<%= name %>.css';
 
 export { <%= name %>Type };

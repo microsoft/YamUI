@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize, GutterSize } from '../Block';
-import { HeadingLevel, HeadingSize } from './enums';
+import { HeadingLevel, HeadingSize } from './types';
 import './Heading.css';
 
 const blockPropsMap = {
