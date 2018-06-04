@@ -129,11 +129,14 @@ const yammerLogoDescription = 'Yammer "y" logo';
 const fullWidthImage = (
   <Image source={yammerLogo} description={yammerLogoDescription} fullWidth={true} />
 );
+const fullWidthImageWithHeight = (
+  <Image source={yammerLogo} description={yammerLogoDescription} fullWidth={true} height={75} imageFit={ImageFit.cover} />
+);
 
 <div style={{ maxWidth: '500px' }}>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      Your image will grow to fit the width of its container. Use this option when you have a grid or other layout component determining the space an image should fill. Any provided height and width will be ignored in this case, replaced with <strong>width: 100%</strong> and <strong>height: auto</strong>.
+      Use <strong>fullWidth: true</strong> when your layout should determine the image width. If <strong>height</strong> is not provided then the image will maintain its aspect ratio:
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
@@ -148,6 +151,26 @@ const fullWidthImage = (
   </FixedGridRow>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>{fullWidthImage}</FixedGridColumn>
+  </FixedGridRow>
+
+  <FixedGridRow bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>
+      <br />
+      If <strong>height</strong> is also provided then the height will remain fixed while the width stretches to fill its container. In this case you will probably want to set an <strong>imageFit</strong> value to prevent a skewed aspect ratio:
+    </FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
+  </FixedGridRow>
+  <FixedGridRow bottomSpacing={GutterSize.SMALL}>
+    <FixedGridColumn>{fullWidthImageWithHeight}</FixedGridColumn>
   </FixedGridRow>
 </div>
 ```

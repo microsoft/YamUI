@@ -3,10 +3,14 @@
 exports[`<Block /> with additional className matches its snapshot 1`] = `
 <div
   className="y-block TEST_CLASSNAME"
-  style={Object {}}
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -15,11 +19,19 @@ exports[`<Block /> with additional className matches its snapshot 1`] = `
 
 exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 <div
-  className="y-block y-block__bottomSpacing-xLarge"
-  style={Object {}}
+  className=
+      y-block
+      {
+        margin-bottom: 2rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -29,10 +41,14 @@ exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 exports[`<Block /> with default options matches its snapshot 1`] = `
 <div
   className="y-block"
-  style={Object {}}
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -42,10 +58,17 @@ exports[`<Block /> with default options matches its snapshot 1`] = `
 exports[`<Block /> with ellipsis matches its snapshot 1`] = `
 <div
   className="y-block"
-  style={Object {}}
 >
   <div
-    className="y-block--inner y-block__ellipsis"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -55,10 +78,16 @@ exports[`<Block /> with ellipsis matches its snapshot 1`] = `
 exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
 <div
   className="y-block"
-  style={Object {}}
 >
   <div
-    className="y-block--inner y-block--inner__horizontalPadding-medium"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          padding-left: 1.2rem;
+          padding-right: 1.2rem;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -67,15 +96,19 @@ exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
 
 exports[`<Block /> with negative push matches its snapshot 1`] = `
 <div
-  className="y-block"
-  style={
-    Object {
-      "marginTop": "-0.2rem",
-    }
-  }
+  className=
+      y-block
+      {
+        margin-top: -0.2rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -85,10 +118,18 @@ exports[`<Block /> with negative push matches its snapshot 1`] = `
 exports[`<Block /> with padding matches its snapshot 1`] = `
 <div
   className="y-block"
-  style={Object {}}
 >
   <div
-    className="y-block--inner y-block--inner__padding-small"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          padding-bottom: 0.8rem;
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          padding-top: 0.8rem;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -97,15 +138,19 @@ exports[`<Block /> with padding matches its snapshot 1`] = `
 
 exports[`<Block /> with positive push matches its snapshot 1`] = `
 <div
-  className="y-block"
-  style={
-    Object {
-      "paddingTop": "0.3rem",
-    }
-  }
+  className=
+      y-block
+      {
+        padding-top: 0.3rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -114,11 +159,40 @@ exports[`<Block /> with positive push matches its snapshot 1`] = `
 
 exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
 <div
-  className="y-block y-block__textColor-secondary"
-  style={Object {}}
+  className=
+      y-block
+      {
+        color: #495361;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> with textAlign center matches its snapshot 1`] = `
+<div
+  className=
+      y-block
+      {
+        text-align: center;
+      }
+>
+  <div
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -127,11 +201,19 @@ exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
 
 exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 <div
-  className="y-block y-block__textAlign-right"
-  style={Object {}}
+  className=
+      y-block
+      {
+        text-align: right;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -140,11 +222,19 @@ exports[`<Block /> with textAlign right matches its snapshot 1`] = `
 
 exports[`<Block /> with top spacing matches its snapshot 1`] = `
 <div
-  className="y-block y-block__topSpacing-small"
-  style={Object {}}
+  className=
+      y-block
+      {
+        margin-top: 0.8rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -154,10 +244,16 @@ exports[`<Block /> with top spacing matches its snapshot 1`] = `
 exports[`<Block /> with vertical padding matches its snapshot 1`] = `
 <div
   className="y-block"
-  style={Object {}}
 >
   <div
-    className="y-block--inner y-block--inner__verticalPadding-xLarge"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          padding-bottom: 2rem;
+          padding-top: 2rem;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>
@@ -166,11 +262,42 @@ exports[`<Block /> with vertical padding matches its snapshot 1`] = `
 
 exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
 <div
-  className="y-block y-textSize-xLarge"
-  style={Object {}}
+  className=
+      y-block
+      y-textSize-xLarge
+      {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
 >
   <div
-    className="y-block--inner"
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    block content
+  </div>
+</div>
+`;
+
+exports[`<Block /> within clickable matches its snapshot 1`] = `
+<div
+  class=
+      y-block
+      {
+        width: 100%;
+      }
+>
+  <div
+    class=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
   >
     block content
   </div>

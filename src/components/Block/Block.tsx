@@ -1,10 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { ClickableContext } from '../Clickable';
 import { GutterSize } from '../FixedGrid/enums';
 import { TextColor, TextSize } from '../Text/enums';
-import './Block.css';
+import { getStyles, getInnerStyles } from './Block.styles';
+import { mergeStyles } from '@uifabric/styling';
 
 export { GutterSize, TextColor, TextSize };
 
@@ -61,10 +64,13 @@ export interface BlockProps extends NestableBaseComponentProps {
   ellipsis?: boolean;
 }
 
-interface BlockStyles {
-  marginTop?: string;
-  paddingTop?: string;
+export interface BlockContext {
+  textSize?: TextSize;
 }
+
+const defaultContext: BlockContext = {};
+
+export const BlockContext = React.createContext(defaultContext);
 
 /**
  * A `Block` is a layout component to build consistent padding and vertical spacing between
@@ -74,79 +80,28 @@ interface BlockStyles {
  */
 export default class Block extends React.Component<BlockProps> {
   public render() {
-    const { children } = this.props;
+    const { children, textSize } = this.props;
 
     return (
-      <div className={this.getClasses()} style={this.getStyle()}>
-        <div className={this.getInnerClasses()}>{children}</div>
-      </div>
+      <ClickableContext.Consumer>
+        {clickableContext => (
+          <BlockContext.Provider value={{ textSize }}>
+            <div className={this.getClasses(clickableContext.withinClickable)}>
+              <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
+            </div>
+          </BlockContext.Provider>
+        )}
+      </ClickableContext.Consumer>
     );
   }
 
-  private getClasses() {
-    const { topSpacing, bottomSpacing, textSize, textColor, textAlign, className } = this.props;
-
-    const classes: string[] = ['y-block'];
-    if (topSpacing) {
-      classes.push(`y-block__topSpacing-${topSpacing}`);
-    }
-    if (bottomSpacing) {
-      classes.push(`y-block__bottomSpacing-${bottomSpacing}`);
-    }
-    if (textColor) {
-      classes.push(`y-block__textColor-${textColor}`);
-    }
-    if (textSize) {
-      classes.push(`y-textSize-${textSize}`);
-    }
-    if (textAlign === 'center' || textAlign === 'right') {
-      classes.push(`y-block__textAlign-${textAlign}`);
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
-  }
-
-  private getInnerClasses() {
-    const { ellipsis, padding, horizontalPadding, verticalPadding } = this.props;
-
-    const classes = ['y-block--inner'];
-    if (ellipsis) {
-      classes.push('y-block__ellipsis');
-    }
-    if (padding) {
-      classes.push(`y-block--inner__padding-${padding}`);
-    }
-    if (horizontalPadding) {
-      classes.push(`y-block--inner__horizontalPadding-${horizontalPadding}`);
-    }
-    if (verticalPadding) {
-      classes.push(`y-block--inner__verticalPadding-${verticalPadding}`);
-    }
-
-    return classes.join(' ');
-  }
-
-  private getStyle() {
-    const { push } = this.props;
-    const styles: BlockStyles = {};
-
-    if (!push) {
-      return styles;
-    }
-
-    // If `push` is negative, set negative top margin to "pull" it up.
-    // If positive, "push" it down with top padding (because margins can collapse).
-    const rems = push / 10;
-    const value = `${rems}rem`;
-    if (rems < 0) {
-      styles.marginTop = value;
-    } else {
-      styles.paddingTop = value;
-    }
-
-    return styles;
+  private getClasses(withinClickable: boolean) {
+    const { className, textSize } = this.props;
+    return join([
+      'y-block',
+      textSize ? `y-textSize-${textSize}` : '',
+      className,
+      mergeStyles(getStyles({ ...this.props, withinClickable })),
+    ]);
   }
 }

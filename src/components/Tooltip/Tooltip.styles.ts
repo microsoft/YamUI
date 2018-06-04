@@ -1,7 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { TooltipProps } from './Tooltip';
-import { borderRadiusSoft, fontSizeSmall, lineHeightSmall } from '../../util/styles';
+import { lineHeights, fontSizes } from '../../util/styles/fonts';
+import { borderRadiusSoft } from '../../util/styles/borders';
+
 import { ITooltipStyles } from 'office-ui-fabric-react/lib/components/Tooltip/Tooltip.types';
 import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Callout/Callout.types';
 
@@ -14,8 +16,8 @@ export const getTooltipStyles = (_: TooltipProps): ITooltipStyles => {
       display: 'inline-block',
     },
     subText: {
-      fontSize: fontSizeSmall,
-      lineHeight: lineHeightSmall,
+      fontSize: fontSizes.small,
+      lineHeight: lineHeights.small,
       color: palette.white,
     },
   };

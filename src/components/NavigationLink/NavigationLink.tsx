@@ -22,6 +22,12 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
   newWindow?: boolean;
 
   /**
+   * If present, indicates the link refers to the current page. This is usually used in cases where the link
+   * is visually styled to indicate it is selected or is the current page, such as in a navigation list.
+   */
+  ariaCurrent?: 'page';
+
+  /**
    * Title or description of the linked document for screenreaders.
    */
   ariaLabel?: string;
@@ -43,12 +49,20 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
  */
 export default class NavigationLink extends React.Component<NavigationLinkProps> {
   public render() {
-    const { ariaLabel, href, newWindow, title, children } = this.props;
+    const { ariaCurrent, ariaLabel, href, newWindow, title, children } = this.props;
     const target = newWindow ? '_blank' : undefined;
     const rel = newWindow ? 'nofollow noopener noreferrer' : undefined;
 
     return (
-      <a className={this.getClasses()} href={href} rel={rel} target={target} title={title} aria-label={ariaLabel}>
+      <a
+        className={this.getClasses()}
+        href={href}
+        rel={rel}
+        target={target}
+        title={title}
+        aria-label={ariaLabel}
+        aria-current={ariaCurrent}
+      >
         {children}
       </a>
     );
