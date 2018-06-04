@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { IconSize } from './enums';
+import { IconSize } from './types';
 import './Icon.css';
 
 export { IconSize };

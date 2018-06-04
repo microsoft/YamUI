@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Callout from '../Callout';
-import { KeyCodes } from '../../util/enums';
+import { KeyCodes } from '../../util/keyCodes';
 import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
 jest.useFakeTimers();

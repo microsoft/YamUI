@@ -7,7 +7,7 @@ import { Focusable } from '../../util/Focusable';
 import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
 import TextField from '../TextField';
-import { KeyCodes } from '../../util/enums';
+import { KeyCodes } from '../../util/keyCodes';
 import './EditableText.css';
 
 export interface EditableTextProps extends BaseComponentProps {

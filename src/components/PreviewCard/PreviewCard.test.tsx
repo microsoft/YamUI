@@ -3,8 +3,8 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Clickable from '../Clickable';
 import EditableText from '../EditableText';
-import MediaObject from '../MediaObject';
 import PreviewCard, { PreviewCardProps } from './index';
+import { renderIntoDocument, findRenderedComponentWithType } from 'react-dom/test-utils';
 
 describe('<PreviewCard />', () => {
   let component: ShallowWrapper<PreviewCardProps>;
@@ -33,9 +33,12 @@ describe('<PreviewCard />', () => {
 
   describe('when description is edible', () => {
     describe('with onDescriptionChange callback', () => {
+      let jsxComponent: JSX.Element;
+      let testComponent: React.Component;
+
       beforeEach(() => {
         onChange = jest.fn();
-        component = shallow(
+        jsxComponent = (
           <PreviewCard
             name="Filename.gif"
             description="file description"
@@ -43,37 +46,45 @@ describe('<PreviewCard />', () => {
             descriptionMaxLength={120}
             emptyEditableDescriptionText="empty placeholder text"
             onDescriptionChange={onChange}
-          />,
+          />
         );
       });
 
       it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
+        expect(shallow(jsxComponent)).toMatchSnapshot();
       });
 
       describe('when entering edit mode', () => {
         beforeEach(() => {
-          const editableText = shallow(component.find(MediaObject).prop('metadataContent')).find(EditableText);
-          const beginEditingCallback = editableText.prop('onBeginEditing') as Function;
-          beginEditingCallback();
-          component.update();
+          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
+          (renderedEditableText.props.onBeginEditing as Function)();
+          testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
+            any,
+            any,
+            React.ComponentClass
+          >).render();
         });
 
         it('matches its snapshot', () => {
-          expect(component).toMatchSnapshot();
+          expect(testComponent).toMatchSnapshot();
         });
       });
 
       describe('when exiting edit mode', () => {
         beforeEach(() => {
-          const editableText = shallow(component.find(MediaObject).prop('metadataContent')).find(EditableText);
-          const endEditingCallback = editableText.prop('onEndEditing') as Function;
-          endEditingCallback();
-          component.update();
+          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
+          (renderedEditableText.props.onEndEditing as Function)();
+          testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
+            any,
+            any,
+            React.ComponentClass
+          >).render();
         });
 
         it('matches its snapshot', () => {
-          expect(component).toMatchSnapshot();
+          expect(testComponent).toMatchSnapshot();
         });
       });
     });
