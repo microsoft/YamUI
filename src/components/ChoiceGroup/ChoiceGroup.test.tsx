@@ -2,7 +2,10 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import ChoiceGroup, { ChoiceGroupProps } from '.';
-import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
+// prettier-ignore
+import {
+  IChoiceGroupOptionProps,
+} from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
 
 describe('<ChoiceGroup />', () => {
   let onChange: jest.Mock<Function>;
@@ -34,7 +37,7 @@ describe('<ChoiceGroup />', () => {
   describe('with minimal props', () => {
     beforeEach(() => {
       component = shallow(getChoiceGroup());
-      firstOption = (component.find('StyledCustomizedChoiceGroup').prop('options') as IChoiceGroupOptionProps[])[0];
+      firstOption = component.find('StyledCustomizedChoiceGroup').prop('options')[0];
     });
 
     it('renders as expected', () => {
@@ -48,8 +51,8 @@ describe('<ChoiceGroup />', () => {
     });
 
     it('styled as expected', () => {
-      const styles = (component.find('StyledCustomizedChoiceGroup').prop('styles') as Function)();
-      expect(styles).toMatchSnapshot();
+      const getStyles = component.find('StyledCustomizedChoiceGroup').prop('styles');
+      expect(getStyles()).toMatchSnapshot();
     });
 
     it('option styled as expected', () => {
