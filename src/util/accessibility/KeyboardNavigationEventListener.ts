@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { EventGroup } from 'office-ui-fabric-react/lib/Utilities';
-import { directionalKeyCodes } from '../enums';
+import { directionalKeyCodes } from '../keyCodes';
 
 export type NavigationMode = 'mouse' | 'keyboard';
 

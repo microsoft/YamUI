@@ -1,9 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus } from './enums';
+import { ButtonColor, ButtonSize, ButtonStatus } from './types';
 import { ButtonProps } from './Button';
-import { borderRadiusSoft, fontWeightBold } from '../../util/styles';
+import { fontWeights } from '../../util/styles/fonts';
+import { borderRadiusSoft } from '../../util/styles/borders';
 
 const smallPadding = '4px 9px 6px';
 const regularPadding = '7px 15px';
@@ -65,16 +66,16 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
   return {
     root: {
       ...(root as {}),
+      borderRadius: borderRadiusSoft,
+      fontWeight: fontWeights.bold,
       textAlign: 'center',
       display: fullWidth ? 'block' : 'inline-block',
       position: 'relative',
       whiteSpace: 'nowrap',
       transition: 'all 0.05s ease-out',
-      borderRadius: borderRadiusSoft,
       borderWidth: '1px',
       borderStyle: 'solid',
       boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
-      fontWeight: fontWeightBold,
       padding: size === ButtonSize.REGULAR ? regularPadding : smallPadding,
       cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
       opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',

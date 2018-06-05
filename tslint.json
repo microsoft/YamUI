@@ -15,6 +15,7 @@
     "insecure-random": false,
     "interface-name": [true, "never-prefix"],
     "linebreak-style": false,
+    "jsx-no-multiline-js": false,
     "match-default-export-name": false,
     "missing-jsdoc": false,
     "newline-before-return": false,
@@ -36,7 +37,7 @@
     "prefer-type-cast": false,
     "promise-function-async": false,
     "quotemark": [true, "single", "jsx-double", "avoid-escape"],
-    "react-tsx-curly-spacing": [true, "never"],
+    "react-tsx-curly-spacing": false,
     "strict-boolean-expressions": false,
     "trailing-comma": [
       true,

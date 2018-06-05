@@ -1,10 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
+import { BlockContext } from '../Block';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { TextColor, TextSize } from './enums';
+import { TextColor, TextSize } from './types';
 import ScreenReaderText from '../ScreenreaderText';
-import './Text.css';
+import { getStyles } from './Text.styles';
+import { mergeStyles } from '@uifabric/styling';
 
 export { TextColor, TextSize };
 
@@ -50,52 +53,32 @@ export interface TextProps extends NestableBaseComponentProps {
  */
 export default class Text extends React.Component<TextProps> {
   public render() {
-    const { children, screenreaderText } = this.props;
+    return <BlockContext.Consumer>{blockContext => this.getContent(blockContext.textSize)}</BlockContext.Consumer>;
+  }
 
-    if (screenreaderText === undefined) {
+  private getContent(blockTextSize?: TextSize) {
+    const { children, screenreaderText } = this.props;
+    const classes = this.getClasses(blockTextSize);
+
+    if (screenreaderText !== undefined) {
       return (
-        <span className={this.getClasses()} style={this.getStyles()}>
-          {children}
+        <span className={classes}>
+          <span aria-hidden={true}>{children}</span>
+          <ScreenReaderText>{screenreaderText}</ScreenReaderText>
         </span>
       );
     }
-
-    return (
-      <span className={this.getClasses()} style={this.getStyles()}>
-        <span aria-hidden={true}>{children}</span>
-        <ScreenReaderText>{screenreaderText}</ScreenReaderText>
-      </span>
-    );
+    return <span className={classes}>{children}</span>;
   }
 
-  private getClasses() {
-    const { bold, className, color, maxWidth, size, uppercase } = this.props;
-
-    const classes = ['y-text'];
-    if (bold) {
-      classes.push('y-text__bold');
-    }
-    if (color) {
-      classes.push(`y-text__color-${color}`);
-    }
-    if (uppercase) {
-      classes.push('y-text__uppercase');
-    }
-    if (maxWidth) {
-      classes.push('y-text__ellipsis');
-    }
-    if (size) {
-      classes.push(`y-textSize-${size}`);
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
-  }
-
-  private getStyles() {
-    const { maxWidth } = this.props;
-    return maxWidth ? { maxWidth } : {};
+  private getClasses(blockTextSize?: TextSize) {
+    const { className, size, maxWidth } = this.props;
+    return join([
+      'y-text',
+      size ? `y-textSize-${size}` : '',
+      maxWidth ? 'y-text__ellipsis' : '',
+      className,
+      mergeStyles(getStyles({ ...this.props, blockTextSize })),
+    ]);
   }
 }

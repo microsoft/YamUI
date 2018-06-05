@@ -14,10 +14,10 @@ import { IconButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
-import { MenuItemType } from './enums';
+import { MenuItemType } from './types';
 import './MenuButton.css';
 
-export { MenuItemType } from './enums';
+export { MenuItemType };
 
 const renderEmptyIcon = () => null;
 

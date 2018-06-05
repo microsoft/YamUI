@@ -4,7 +4,7 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { KeyCodes } from '../../util/enums';
+import { KeyCodes } from '../../util/keyCodes';
 import ScreenreaderText from '../ScreenreaderText';
 import './Hovercard.css';
 

@@ -29,7 +29,7 @@ function getSizeFromFilePath(filePath) {
 }
 
 function getSvgNames(illustrations) {
-  return illustrations.map((illustration) => {
+  return illustrations.map(illustration => {
     const size = getSizeFromFilePath(illustration);
     const filename = path.basename(illustration, path.extname(illustration));
     return `${filename}${size}`;
@@ -43,7 +43,7 @@ function getSvgNames(illustrations) {
   const svgNames = getSvgNames(svgs);
 
   await generateIndex(svgNames, indexTemplate, destPath);
-  svgs.forEach((svg) => {
+  svgs.forEach(svg => {
     const size = getSizeFromFilePath(svg);
     const templateData = { size };
     const name = path.basename(svg, path.extname(svg));

@@ -6,7 +6,7 @@ import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseBut
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
-import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './enums';
+import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
 import { getStyles } from './Button.styles';
 
 import BaseIcon from '../Icon/BaseIcon';
