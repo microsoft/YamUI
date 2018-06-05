@@ -26,6 +26,7 @@ export const getOptionStyles = (props: IChoiceGroupOptionStyleProps): IChoiceGro
       minHeight: 0,
     },
     field: {
+      paddingLeft: '2.6rem',
       selectors: {
         ':before': {
           borderColor: checked || focused ? palette.themePrimary : palette.neutralDark,

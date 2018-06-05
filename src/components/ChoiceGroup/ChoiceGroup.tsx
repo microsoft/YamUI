@@ -47,23 +47,28 @@ export interface ChoiceGroupProps extends BaseComponentProps {
   onChange(key: ChoiceGroupOption['key']): void;
 }
 
-const getTextWithLabel = (label: string, sublabel: string) => {
-  return () => (
-    <span className="ms-Label">
-      <Text bold={true}>{`${label}:`}</Text>
-      <Text>&nbsp;{sublabel}</Text>
-    </span>
-  );
+const getTextWithLabel = (text: string, label?: string) => {
+  return () => {
+    if (label) {
+      return (
+        <span>
+          <Text bold={true}>{`${text}:`}</Text>
+          <Text>&nbsp;{label}</Text>
+        </span>
+      );
+    }
+    return <Text>{text}</Text>;
+  };
 };
 
 const mapOption = (option: ChoiceGroupOption): IChoiceGroupOptionProps => {
-  const { text, label } = option;
-  const onRenderLabel = label ? getTextWithLabel(text, label) : undefined;
+  const { text, label, key } = option;
+  const onRenderLabel = getTextWithLabel(text, label);
 
   return {
     styles: getOptionStyles,
-    key: option.key,
-    text: text,
+    key,
+    text,
     onRenderLabel,
   };
 };
