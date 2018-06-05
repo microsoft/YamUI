@@ -6,8 +6,8 @@ import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
 import Text, { TextSize } from '../Text';
-import './AsideSection.css';
-
+import { getStyles } from './AsideSection.styles';
+import { mergeStyleSets } from '@uifabric/styling';
 export interface AsideSectionProps extends NestableBaseComponentProps {
   /**
    * The visual title of the aside section
@@ -25,15 +25,19 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
  */
 export default class AsideSection extends React.Component<AsideSectionProps> {
   public render() {
+    const styles = mergeStyleSets(getStyles());
+
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>
-          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
+          <FixedGridRow className={styles.header} bottomSpacing={GutterSize.SMALL}>
             <FixedGridColumn>
               <Heading level="2" size="none">
-                <Text uppercase={true} bold={true}>
-                  {this.props.title}
-                </Text>
+                <Block bottomSpacing={GutterSize.XSMALL}>
+                  <Text uppercase={true} bold={true}>
+                    {this.props.title}
+                  </Text>
+                </Block>
               </Heading>
             </FixedGridColumn>
             {this.getActionColumn()}
