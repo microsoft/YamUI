@@ -41,13 +41,6 @@ export interface HovercardProps extends NestableBaseComponentProps {
   screenreaderTitle?: string;
 
   /**
-   * Whether the Hovercard should start visible. Note that it will wait until `componentDidMount` to
-   * ensure it can properly position itself in relation to the trigger. Only exposed for testing.
-   * @default false
-   */
-  startVisible?: boolean;
-
-  /**
    * Whether a mouse click or hover should trigger the Hovercard.
    * @default TriggerType.HOVER
    */
@@ -85,7 +78,6 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
   public static defaultProps: Partial<HovercardProps> = {
     directionalHint: DirectionalHint.bottomCenter,
     isBeakVisible: true,
-    startVisible: false,
     triggerType: TriggerType.HOVER,
   };
 
@@ -141,15 +133,6 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
         {hovercard}
       </span>
     );
-  }
-
-  // Set initial visible state after mount so the trigger ref exists for positioning
-  public componentDidMount() {
-    const { startVisible } = this.props;
-
-    if (startVisible) {
-      this.show();
-    }
   }
 
   public componentWillUnmount() {
