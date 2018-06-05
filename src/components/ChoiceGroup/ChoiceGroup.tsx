@@ -48,17 +48,12 @@ export interface ChoiceGroupProps extends BaseComponentProps {
 }
 
 const getTextWithLabel = (text: string, label?: string) => {
-  return () => {
-    if (label) {
-      return (
-        <span>
-          <Text bold={true}>{`${text}:`}</Text>
-          <Text>&nbsp;{label}</Text>
-        </span>
-      );
-    }
-    return <Text>{text}</Text>;
-  };
+  const labelContent = label ? <Text bold={true}>{label}: </Text> : null;
+  return () => (
+    <React.Fragment>
+      {labelContent} {text}
+    </React.Fragment>
+  );
 };
 
 const mapOption = (option: ChoiceGroupOption): IChoiceGroupOptionProps => {
