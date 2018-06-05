@@ -1,6 +1,6 @@
 ### Examples
 
-```js { "props": { "data-example": "no selected key" } }
+```js { "props": { "data-description": "no selected key" } }
 const options = [
   { key: 'A', text: 'Option A', label: 'optional sublabel for A' },
   { key: 'B', text: 'Option B' },
@@ -10,7 +10,7 @@ const options = [
 <ChoiceGroup label="No Selected Key Provided" options={options} onChange={console.log} />;
 ```
 
-```js { "props": { "data-example": "selected key provided" } }
+```js { "props": { "data-description": "selected key provided" } }
 const options = [
   { key: 'A', text: 'Option A', label: 'optional sublabel for A' },
   { key: 'B', text: 'Option B' },
