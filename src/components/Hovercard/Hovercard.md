@@ -2,7 +2,7 @@
 
 Default hover trigger:
 
-```js { "props": { "data-description": "default hover trigger" } }
+```js { "props": { "data-description": "default hover trigger", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
 
 const content = (
   <div>
@@ -26,7 +26,6 @@ const handlers = {
   <Hovercard
     content={content}
     directionalHint={4}
-    startVisible={true}
     {...handlers}
   >
     <Clickable>hovercard trigger</Clickable>
@@ -37,7 +36,7 @@ const handlers = {
 
 Click trigger:
 
-```js { "props": { "data-description": "click trigger" } }
+```js { "props": { "data-description": "click trigger", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
 const { DirectionalHint, TriggerType } = require('.');
 
 const content = (
@@ -62,7 +61,6 @@ const handlers = {
   <Hovercard
     content={content}
     directionalHint={4}
-    startVisible={true}
     triggerType={TriggerType.CLICK}
     {...handlers}
   >
@@ -74,7 +72,7 @@ const handlers = {
 
 Hovercard without beak:
 
-```js { "props": { "data-description": "without beak" } }
+```js { "props": { "data-description": "without beak", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
 
 
 const content = (
@@ -100,7 +98,6 @@ const handlers = {
     content={content}
     directionalHint={4}
     isBeakVisible={false}
-    startVisible={true}
     {...handlers}
   >
     <Clickable>hover trigger</Clickable>
@@ -111,7 +108,7 @@ const handlers = {
 
 Hovercard with different alignments:
 
-```js { "props": { "data-description": "alignments" } }
+```js { "props": { "data-description": "alignments", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
 
 
 const content = (
@@ -132,7 +129,7 @@ const handlers = {
 };
 
 const HintedPositionHovercard = (props) => (
-  <Hovercard content={content} directionalHint={props.hint} startVisible={true} {...handlers} >
+  <Hovercard content={content} directionalHint={props.hint} {...handlers} >
     <Block textAlign={props.align}>
       <Clickable>
         {props.label}
