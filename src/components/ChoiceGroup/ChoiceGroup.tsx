@@ -3,10 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ChoiceGroup as FabricChoiceGroup, IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
-// prettier-ignore
-import {
-  IChoiceGroupOptionProps,
-} from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
+import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption';
 import { getStyles, getOptionStyles } from './ChoiceGroup.styles';
 import { join } from '../../util/classNames';
 import Text from '../Text';

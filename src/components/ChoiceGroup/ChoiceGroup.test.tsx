@@ -2,10 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import ChoiceGroup, { ChoiceGroupProps } from '.';
-// prettier-ignore
-import {
-  IChoiceGroupOptionProps,
-} from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
+import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption';
 
 describe('<ChoiceGroup />', () => {
   let onChange: jest.Mock<Function>;
