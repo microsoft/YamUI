@@ -9,7 +9,11 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
   >
     <FixedGridRow
       bottomSpacing="small"
-      className="y-aside-section--header"
+      className=
+
+          {
+            border-bottom: 1px solid #dde0e6;
+          }
       gutterSize="small"
     >
       <FixedGridColumn>
@@ -17,12 +21,16 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Text
-            bold={true}
-            uppercase={true}
+          <Block
+            bottomSpacing="xSmall"
           >
-            Test title
-          </Text>
+            <Text
+              bold={true}
+              uppercase={true}
+            >
+              Test title
+            </Text>
+          </Block>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
@@ -40,7 +48,11 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
   >
     <FixedGridRow
       bottomSpacing="small"
-      className="y-aside-section--header"
+      className=
+
+          {
+            border-bottom: 1px solid #dde0e6;
+          }
       gutterSize="small"
     >
       <FixedGridColumn>
@@ -48,12 +60,16 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
           level="2"
           size="none"
         >
-          <Text
-            bold={true}
-            uppercase={true}
+          <Block
+            bottomSpacing="xSmall"
           >
-            Test title
-          </Text>
+            <Text
+              bold={true}
+              uppercase={true}
+            >
+              Test title
+            </Text>
+          </Block>
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
@@ -78,7 +94,11 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
   >
     <FixedGridRow
       bottomSpacing="small"
-      className="y-aside-section--header"
+      className=
+
+          {
+            border-bottom: 1px solid #dde0e6;
+          }
       gutterSize="small"
     >
       <FixedGridColumn>
@@ -86,12 +106,16 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Text
-            bold={true}
-            uppercase={true}
+          <Block
+            bottomSpacing="xSmall"
           >
-            Test title
-          </Text>
+            <Text
+              bold={true}
+              uppercase={true}
+            >
+              Test title
+            </Text>
+          </Block>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
