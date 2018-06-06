@@ -8,7 +8,8 @@ import Clickable from '../Clickable';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { BaseIcon, IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
-import './ActionLink.css';
+import { getStyles } from './ActionLink.styles';
+import { mergeStyleSets } from '@uifabric/styling';
 
 export interface BaseActionLinkProps extends BaseComponentProps {
   /**
@@ -54,13 +55,16 @@ export type ActionLinkProps = NavigationActionLinkProps | ClickableActionLinkPro
  */
 export default class ActionLink extends React.Component<ActionLinkProps> {
   public render() {
+    const styles = mergeStyleSets(getStyles());
     const { ariaLabel, className, icon: Icon, text } = this.props;
     const classNames = join(['y-actionLink', className]);
 
     const content = (
-      <FixedGridRow gutterSize={GutterSize.SMALL} className="y-actionLink--wrapper">
+      <FixedGridRow gutterSize={GutterSize.SMALL} className={styles.wrapper}>
         <FixedGridColumn fixed={true}>
-          <Icon size={IconSize.MEDIUM} block={true} className="y-actionLink--icon" />
+          <Block push={2}>
+            <Icon size={IconSize.MEDIUM} block={true} />
+          </Block>
         </FixedGridColumn>
         <FixedGridColumn>
           <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>

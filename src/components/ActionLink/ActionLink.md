@@ -9,7 +9,7 @@ Add here any notes on how to use the component, or delete this section.
 
 With onClick (button implementation):
 
-```js { "props": { "data-description": "with onClick" } }
+```js { "props": { "data-description": "with onClick", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 const Icon = require('../Icon/icons/Download').default;
 
 <div>
