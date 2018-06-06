@@ -46,6 +46,7 @@
   top: 0.1rem;
 }
 
+/* Remove when this is addressed: https://github.com/Microsoft/YamUI/issues/327 */
 .y-avatar--badge > .y-icon {
   top: 0;
 }
