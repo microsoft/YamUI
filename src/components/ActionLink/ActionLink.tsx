@@ -60,9 +60,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
     const content = (
       <FixedGridRow gutterSize={GutterSize.SMALL} className={classNames.wrapper}>
         <FixedGridColumn fixed={true}>
-          <Block push={2}>
-            <Icon size={IconSize.MEDIUM} block={true} />
-          </Block>
+          <Icon size={IconSize.MEDIUM} block={true} className={classNames.icon} />
         </FixedGridColumn>
         <FixedGridColumn>
           <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>
