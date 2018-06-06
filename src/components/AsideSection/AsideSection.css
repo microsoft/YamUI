@@ -1,8 +1,0 @@
-/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import 'src/css/variables/colors.css';
-@import 'src/css/variables/gutters.css';
-
-.y-aside-section--header {
-  border-bottom: 1px solid $borderColor;
-  padding-bottom: $gutterWidth__xSmall;
-}

@@ -6,7 +6,7 @@ import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
 import Text, { TextSize } from '../Text';
-import './AsideSection.css';
+import { getClassNames } from './AsideSection.styles';
 
 export interface AsideSectionProps extends NestableBaseComponentProps {
   /**
@@ -25,15 +25,19 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
  */
 export default class AsideSection extends React.Component<AsideSectionProps> {
   public render() {
+    const classes = getClassNames();
+
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>
-          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
+          <FixedGridRow className={classes.header} bottomSpacing={GutterSize.SMALL}>
             <FixedGridColumn>
               <Heading level="2" size="none">
-                <Text uppercase={true} bold={true}>
-                  {this.props.title}
-                </Text>
+                <Block bottomSpacing={GutterSize.XSMALL}>
+                  <Text uppercase={true} bold={true}>
+                    {this.props.title}
+                  </Text>
+                </Block>
               </Heading>
             </FixedGridColumn>
             {this.getActionColumn()}
