@@ -55,7 +55,7 @@ const types = require('./types.ts');
 
 MenuButton with multiple headers in children
 
-```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"keyPress\",\"selector\":\"ArrowDown\"}]" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
@@ -104,7 +104,7 @@ const types = require('./types.ts');
 
 MenuButton with custom icon and dividers
 
-```js { "props": { "data-description": "with custom icon and dividers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "with custom icon and dividers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"hover\",\"selector\":\".y-menu-button--item-text\"}]" } }
 const Home = require('../Icon/icons/Home').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
