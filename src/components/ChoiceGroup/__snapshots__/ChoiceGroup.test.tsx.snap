@@ -79,17 +79,16 @@ Object {
 `;
 
 exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
-<span>
+<React.Fragment>
   <Text
     bold={true}
   >
-    Option A:
-  </Text>
-  <Text>
-     
     Sublabel for A
+    : 
   </Text>
-</span>
+   
+  Option A
+</React.Fragment>
 `;
 
 exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option renders as expected 1`] = `
