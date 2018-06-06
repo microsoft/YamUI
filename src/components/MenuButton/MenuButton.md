@@ -55,7 +55,7 @@ const types = require('./types.ts');
 
 MenuButton with multiple headers in children
 
-```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"keyPress\",\"selector\":\"ArrowDown\"}]" } }
+```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"}]" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
