@@ -3,7 +3,7 @@ import { palette } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
-export const getClasses = memoizeFunction(() => {
+export const getClassNames = memoizeFunction(() => {
   return mergeStyleSets({
     header: {
       borderBottom: `1px solid ${palette.neutralDark}`,
