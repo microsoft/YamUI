@@ -6,7 +6,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarSize } from './types';
 import { BorderType } from '../Image/types';
-import { getPersonaCoinGetStylesFunction, getClassNames } from './Avatar.styles';
+import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
 export { BorderType, AvatarSize };
 
 const SizeMap = {
@@ -82,7 +82,7 @@ export default class Avatar extends React.Component<AvatarProps> {
           hidePersonaDetails={true}
           text={name}
           imageShouldFadeIn={imageShouldFadeIn}
-          styles={getPersonaCoinGetStylesFunction({ borderType, size })}
+          styles={getPersonaCoinStyles({ borderType, size })}
         />
         {badge}
         <ScreenreaderText>{badgeDescription ? `${name} - ${badgeDescription}` : name}</ScreenreaderText>

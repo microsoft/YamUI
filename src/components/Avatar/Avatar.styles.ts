@@ -11,9 +11,9 @@ export interface AvatarStyleProps {
   size: AvatarSize;
 }
 
-export const getPersonaCoinGetStylesFunction = (
-  props: AvatarStyleProps,
-): ((styleProps: IPersonaCoinStyleProps) => Partial<IPersonaCoinStyles>) => {
+export const getPersonaCoinStyles = memoizeFunction((props: AvatarStyleProps): ((
+  styleProps: IPersonaCoinStyleProps,
+) => Partial<IPersonaCoinStyles>) => {
   const { borderType, size } = props;
   const borderRadius = borders[borderType];
   const initials = size === AvatarSize.XLARGE ? { lineHeight: '70px' } : {};
@@ -26,7 +26,7 @@ export const getPersonaCoinGetStylesFunction = (
       borderRadius,
     },
   });
-};
+});
 
 export const getClassNames = memoizeFunction((size: AvatarSize) =>
   mergeStyleSets({
