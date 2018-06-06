@@ -1,6 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-export const getStyles = () => ({
-  wrapper: {
-    padding: '0.2rem 0 0.6rem',
-  },
+import { mergeStyleSets } from '@uifabric/styling';
+import { memoizeFunction } from '@uifabric/utilities';
+
+export const getClassNames = memoizeFunction(() => {
+  return mergeStyleSets({
+    wrapper: {
+      padding: '0.2rem 0 0.6rem',
+    },
+  });
 });
