@@ -7,12 +7,5 @@ export const getClassNames = memoizeFunction(() => {
     wrapper: {
       padding: '0.2rem 0 0.6rem',
     },
-    icon: {
-      marginTop: '0.4rem',
-
-      /* Remove when this is addressed: https://github.com/Microsoft/YamUI/issues/327 */
-      position: 'static',
-      top: 0,
-    },
   });
 });

@@ -57,10 +57,13 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
     const { ariaLabel, className, icon: Icon, text } = this.props;
     const classNames = getClassNames();
 
+    // Remove Block around Icon when this is addressed: https://github.com/Microsoft/YamUI/issues/327
     const content = (
       <FixedGridRow gutterSize={GutterSize.SMALL} className={classNames.wrapper}>
         <FixedGridColumn fixed={true}>
-          <Icon size={IconSize.MEDIUM} block={true} className={classNames.icon} />
+          <Block push={2}>
+            <Icon size={IconSize.MEDIUM} block={true} />
+          </Block>
         </FixedGridColumn>
         <FixedGridColumn>
           <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>

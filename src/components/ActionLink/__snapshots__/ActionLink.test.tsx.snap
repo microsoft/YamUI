@@ -21,17 +21,14 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Down
-        block={true}
-        className=
-
-            {
-              margin-top: 0.4rem;
-              position: static;
-              top: 0px;
-            }
-        size="16"
-      />
+      <Block
+        push={2}
+      >
+        <Down
+          block={true}
+          size="16"
+        />
+      </Block>
     </FixedGridColumn>
     <FixedGridColumn>
       <Block
@@ -66,17 +63,14 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Down
-        block={true}
-        className=
-
-            {
-              margin-top: 0.4rem;
-              position: static;
-              top: 0px;
-            }
-        size="16"
-      />
+      <Block
+        push={2}
+      >
+        <Down
+          block={true}
+          size="16"
+        />
+      </Block>
     </FixedGridColumn>
     <FixedGridColumn>
       <Block
@@ -110,17 +104,14 @@ exports[`<ActionLink /> with href matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Down
-        block={true}
-        className=
-
-            {
-              margin-top: 0.4rem;
-              position: static;
-              top: 0px;
-            }
-        size="16"
-      />
+      <Block
+        push={2}
+      >
+        <Down
+          block={true}
+          size="16"
+        />
+      </Block>
     </FixedGridColumn>
     <FixedGridColumn>
       <Block
@@ -154,17 +145,14 @@ exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Down
-        block={true}
-        className=
-
-            {
-              margin-top: 0.4rem;
-              position: static;
-              top: 0px;
-            }
-        size="16"
-      />
+      <Block
+        push={2}
+      >
+        <Down
+          block={true}
+          size="16"
+        />
+      </Block>
     </FixedGridColumn>
     <FixedGridColumn>
       <Block
@@ -197,17 +185,14 @@ exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Down
-        block={true}
-        className=
-
-            {
-              margin-top: 0.4rem;
-              position: static;
-              top: 0px;
-            }
-        size="16"
-      />
+      <Block
+        push={2}
+      >
+        <Down
+          block={true}
+          size="16"
+        />
+      </Block>
     </FixedGridColumn>
     <FixedGridColumn>
       <Block
