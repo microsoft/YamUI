@@ -4,8 +4,8 @@ import * as React from 'react';
 import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
-import { AvatarSize } from './enums';
-import { BorderType } from '../Image/enums';
+import { AvatarSize } from './types';
+import { BorderType } from '../Image/types';
 import './Avatar.css';
 
 export { BorderType, AvatarSize };

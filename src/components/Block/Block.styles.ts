@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BlockProps } from './Block';
-import { GutterSize } from '../FixedGrid/enums';
+import { GutterSize } from '../FixedGrid/types';
 import { textColors, fontSizes, lineHeights, ellipsisStyle } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
 import { IRawStyle } from '@uifabric/styling';

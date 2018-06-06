@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus } from './enums';
+import { ButtonColor, ButtonSize, ButtonStatus } from './types';
 import { ButtonProps } from './Button';
 import { fontWeights } from '../../util/styles/fonts';
 import { borderRadiusSoft } from '../../util/styles/borders';

@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { MessageBarType } from './enums';
+import { MessageBarType } from './types';
 import Block, { TextSize } from '../Block';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import './MessageBar.css';

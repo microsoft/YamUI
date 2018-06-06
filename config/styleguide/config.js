@@ -7,7 +7,7 @@ const pkg = require('../../package.json');
 
 const componentsWithoutPathLine = ['Icons'];
 
-const getComponentPathLine = (componentPath) => {
+const getComponentPathLine = componentPath => {
   const ext = path.extname(componentPath);
   const name = path.basename(componentPath, ext);
   if (componentsWithoutPathLine.indexOf(name) >= 0) {
@@ -41,7 +41,7 @@ module.exports = {
   ignore: [
     '**/index.ts',
     '**/index.tsx',
-    '**/enums.ts',
+    '**/types.ts',
     '**/*.test.ts',
     '**/*.test.tsx',
     '**/*.spec.ts',
