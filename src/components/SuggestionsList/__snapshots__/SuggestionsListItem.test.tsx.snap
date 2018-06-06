@@ -9,8 +9,6 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
   <MediaObject
     imageContent={
       <Avatar
-        borderType="round"
-        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
@@ -43,8 +41,6 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
   <MediaObject
     imageContent={
       <Avatar
-        borderType="round"
-        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"
@@ -78,7 +74,6 @@ exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
     imageContent={
       <Avatar
         borderType="soft"
-        imageShouldFadeIn={false}
         imageUrl="imageUrl"
         name="John Smith"
         size="small"

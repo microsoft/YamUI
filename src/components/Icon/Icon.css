@@ -45,3 +45,7 @@
   width: 1rem;
   top: 0.1rem;
 }
+
+.y-avatar--badge > .y-icon {
+  top: 0;
+}

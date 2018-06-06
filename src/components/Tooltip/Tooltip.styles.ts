@@ -2,7 +2,7 @@
 import { palette } from '../../util/colors';
 import { TooltipProps } from './Tooltip';
 import { lineHeights, fontSizes } from '../../util/styles/fonts';
-import { borderRadiusSoft } from '../../util/styles/borders';
+import { borders } from '../../util/styles/borders';
 
 import { ITooltipStyles } from 'office-ui-fabric-react/lib/components/Tooltip/Tooltip.types';
 import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Callout/Callout.types';
@@ -41,7 +41,7 @@ export const getCalloutStyles = (_: TooltipProps): ICalloutContentStyles => {
     },
     beakCurtain: {
       backgroundColor: palette.neutralPrimary,
-      borderRadius: borderRadiusSoft,
+      borderRadius: borders.soft,
     },
     calloutMain: {
       backgroundColor: palette.neutralPrimary,
