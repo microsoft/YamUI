@@ -2,7 +2,7 @@
 import { palette } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
-import { IPersonaCoinStyleProps, IPersonaCoinStyles } from 'office-ui-fabric-react/lib/PersonaCoin';
+import { IPersonaCoinStyles } from 'office-ui-fabric-react/lib/PersonaCoin';
 import { AvatarSize, BorderType } from './Avatar';
 import { borders } from '../../util/styles/borders';
 
@@ -11,9 +11,7 @@ export interface AvatarStyleProps {
   size: AvatarSize;
 }
 
-export const getPersonaCoinStyles = memoizeFunction((props: AvatarStyleProps): ((
-  styleProps: IPersonaCoinStyleProps,
-) => Partial<IPersonaCoinStyles>) => {
+export const getPersonaCoinStyles = memoizeFunction((props: AvatarStyleProps): (() => Partial<IPersonaCoinStyles>) => {
   const { borderType, size } = props;
   const borderRadius = borders[borderType];
   const initials = size === AvatarSize.XLARGE ? { lineHeight: '70px' } : {};
