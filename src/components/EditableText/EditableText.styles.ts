@@ -9,15 +9,17 @@ export interface EditableTextStyleProps {
 
 export const getClassNames = memoizeFunction((styleProps: EditableTextStyleProps) => {
   const { isEditing } = styleProps;
+  const activeColorStyle = { color: semanticColors.buttonText };
+  const underlineStyle = { textDecoration: 'underline' };
 
   const root = isEditing
     ? {}
     : {
         color: semanticColors.bodySubtext,
         selectors: {
-          ':hover': { color: semanticColors.buttonText },
-          ':active': { color: semanticColors.buttonText },
-          ':focus': { color: semanticColors.buttonText },
+          ':hover': activeColorStyle,
+          ':active': activeColorStyle,
+          ':focus': activeColorStyle,
         },
       };
 
@@ -26,9 +28,9 @@ export const getClassNames = memoizeFunction((styleProps: EditableTextStyleProps
     clickableText: {
       paddingLeft: '0.2rem',
       selectors: {
-        ':hover': { textDecoration: 'underline' },
-        ':active': { textDecoration: 'underline' },
-        ':focus': { textDecoration: 'underline' },
+        ':hover': underlineStyle,
+        ':active': underlineStyle,
+        ':focus': underlineStyle,
       },
     },
   });
