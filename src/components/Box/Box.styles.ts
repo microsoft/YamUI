@@ -13,7 +13,7 @@ export const getClassNames = memoizeFunction((styleProps: BoxStyleProps) => {
   return mergeStyleSets({
     root: {
       borderRadius: '1px',
-      border: `1px solid ${semanticColors.pageDivider}`,
+      border: `1px solid ${semanticColors.bodyDivider}`,
       cursor: hasOnClick ? 'pointer' : undefined,
     },
     inner: {

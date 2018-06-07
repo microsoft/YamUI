@@ -6,7 +6,7 @@ import { memoizeFunction } from '@uifabric/utilities';
 export const getClassNames = memoizeFunction(() => {
   return mergeStyleSets({
     header: {
-      borderBottom: `1px solid ${semanticColors.pageDivider}`,
+      borderBottom: `1px solid ${semanticColors.bodyDivider}`,
     },
   });
 });
