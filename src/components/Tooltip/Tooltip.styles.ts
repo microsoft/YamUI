@@ -2,7 +2,7 @@
 import { palette } from '../../util/colors';
 import { TooltipProps } from './Tooltip';
 import { lineHeights, fontSizes } from '../../util/styles/fonts';
-import { borderRadiusSoft } from '../../util/styles/borders';
+import { borderRadiusSoft, borderStylePopOver } from '../../util/styles/borders';
 
 import { ITooltipStyles } from 'office-ui-fabric-react/lib/components/Tooltip/Tooltip.types';
 import { ICalloutContentStyles } from 'office-ui-fabric-react/lib/components/Callout/Callout.types';
@@ -30,20 +30,21 @@ export const getCalloutStyles = (_: TooltipProps): ICalloutContentStyles => {
     },
     root: {
       backgroundColor: 'inherit',
-      boxShadow: 'none',
       padding: '0.7rem 1.2rem 0.8rem',
       minHeight: '3.2rem',
       zIndex: 1000,
-      border: 'none',
+      ...borderStylePopOver,
     },
     beak: {
       backgroundColor: palette.neutralPrimary,
     },
     beakCurtain: {
+      boxShadow: 'none',
       backgroundColor: palette.neutralPrimary,
       borderRadius: borderRadiusSoft,
     },
     calloutMain: {
+      boxShadow: 'none',
       backgroundColor: palette.neutralPrimary,
     },
   };

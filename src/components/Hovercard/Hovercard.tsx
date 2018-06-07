@@ -2,10 +2,11 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import Callout, { DirectionalHint } from '../Callout';
+import { Callout, DirectionalHint } from 'office-ui-fabric-react/lib/Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { KeyCodes } from '../../util/keyCodes';
 import ScreenreaderText from '../ScreenreaderText';
+import { getCalloutStyles } from './Hovercard.styles';
 import './Hovercard.css';
 
 const hideDelay = 500;
@@ -111,6 +112,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
         target={this.triggerElement}
         onDismiss={this.hide}
         preventDismissOnScroll={false}
+        styles={getCalloutStyles()}
       >
         <div className="y-hovercard--modal-container" onMouseEnter={this.handleBodyHover} onMouseLeave={this.beginHide}>
           {screenreaderTitleChild}

@@ -53,6 +53,7 @@ exports[`<Hovercard /> with screenreaderTitle matches its snapshot 1`] = `
     isBeakVisible={true}
     onDismiss={[Function]}
     preventDismissOnScroll={false}
+    styles={[Function]}
     target={null}
   >
     <div
