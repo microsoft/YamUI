@@ -3,6 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
+import { join } from '../../util/classNames';
 import { getClassNames } from './Box.styles';
 
 export interface BoxProps extends NestableBaseComponentProps {
@@ -15,11 +16,12 @@ export interface BoxProps extends NestableBaseComponentProps {
  */
 export default class Box extends React.Component<BoxProps> {
   public render() {
-    const { children, onClick } = this.props;
+    const { children, onClick, className } = this.props;
     const classNames = getClassNames({ hasOnClick: !!onClick });
+    const rootClassNames = join(['y-box', classNames.root, className]);
 
     return (
-      <div className={`y-box ${classNames.root}`} onClick={onClick} role={onClick ? 'button' : undefined}>
+      <div className={rootClassNames} onClick={onClick} role={onClick ? 'button' : undefined}>
         <Block className={classNames.inner} padding={GutterSize.SMALL}>
           {children}
         </Block>

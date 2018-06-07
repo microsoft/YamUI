@@ -4,6 +4,7 @@ exports[`<Box /> with additional className matches its snapshot 1`] = `
 <div
   className=
       y-box
+      TEST_CLASSNAME
       {
         border-radius: 1px;
         border: 1px solid #dde0e6;
