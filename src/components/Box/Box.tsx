@@ -2,9 +2,8 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { join } from '../../util/classNames';
 import Block, { GutterSize } from '../Block';
-import './Box.css';
+import { getClassNames } from './Box.styles';
 
 export interface BoxProps extends NestableBaseComponentProps {
   onClick?: (() => void);
@@ -17,21 +16,14 @@ export interface BoxProps extends NestableBaseComponentProps {
 export default class Box extends React.Component<BoxProps> {
   public render() {
     const { children, onClick } = this.props;
+    const classNames = getClassNames({ hasOnClick: !!onClick });
 
     return (
-      <div className={this.getClasses()} onClick={onClick} role={onClick ? 'button' : undefined}>
-        <Block className="y-box--inner" padding={GutterSize.SMALL}>
+      <div className={`y-box ${classNames.root}`} onClick={onClick} role={onClick ? 'button' : undefined}>
+        <Block className={classNames.inner} padding={GutterSize.SMALL}>
           {children}
         </Block>
       </div>
     );
-  }
-
-  private getClasses() {
-    const classes = ['y-box', this.props.className];
-    if (this.props.onClick) {
-      classes.push('y-box__hasClick');
-    }
-    return join(classes);
   }
 }
