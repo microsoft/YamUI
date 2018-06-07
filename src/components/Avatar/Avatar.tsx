@@ -6,8 +6,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarSize } from './types';
 import { BorderType } from '../Image/types';
-import './Avatar.css';
-
+import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
 export { BorderType, AvatarSize };
 
 const SizeMap = {
@@ -62,54 +61,32 @@ export interface AvatarProps extends BaseComponentProps {
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
 export default class Avatar extends React.Component<AvatarProps> {
-  public static defaultProps: Partial<AvatarProps> = {
-    borderType: BorderType.ROUND,
-    size: AvatarSize.MEDIUM,
-    imageShouldFadeIn: false,
-  };
-
   public render() {
-    const { badgeContent, imageUrl, name, size, imageShouldFadeIn } = this.props;
-    const personaSize = SizeMap[size as AvatarSize];
-
-    const badge = badgeContent && <div className={`y-avatar--badge y-avatar__size-${size}--badge`}>{badgeContent}</div>;
+    const {
+      badgeContent,
+      imageUrl,
+      name,
+      badgeDescription,
+      size = AvatarSize.MEDIUM,
+      imageShouldFadeIn = false,
+      borderType = BorderType.ROUND,
+    } = this.props;
+    const classNames = getClassNames(size);
+    const badge = badgeContent && <div className={`y-avatar--badge ${classNames.badge}`}>{badgeContent}</div>;
 
     return (
-      <div className={this.getClasses()}>
+      <div className={`y-avatar ${classNames.root}`}>
         <PersonaCoin
           imageUrl={imageUrl}
-          size={personaSize}
+          size={SizeMap[size]}
           hidePersonaDetails={true}
           text={name}
           imageShouldFadeIn={imageShouldFadeIn}
+          styles={getPersonaCoinStyles({ borderType, size })}
         />
         {badge}
-        <ScreenreaderText>{this.getAccessibleText()}</ScreenreaderText>
+        <ScreenreaderText>{badgeDescription ? `${name} - ${badgeDescription}` : name}</ScreenreaderText>
       </div>
     );
-  }
-
-  private getAccessibleText() {
-    const { badgeDescription, name } = this.props;
-
-    if (badgeDescription) {
-      return `${name} - ${badgeDescription}`;
-    }
-
-    return name;
-  }
-
-  private getClasses() {
-    const { borderType, className, size } = this.props;
-
-    const classes: string[] = ['y-avatar', `y-avatar__size-${size}`];
-    if (borderType !== Avatar.defaultProps.borderType) {
-      classes.push(`y-avatar__borderType-${borderType}`);
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 }
