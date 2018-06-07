@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { palette } from '../../util/colors';
+import { semanticColors } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
@@ -13,7 +13,7 @@ export const getClassNames = memoizeFunction((styleProps: BoxStyleProps) => {
   return mergeStyleSets({
     root: {
       borderRadius: '1px',
-      border: `1px solid ${palette.neutralDark}`,
+      border: `1px solid ${semanticColors.pageDivider}`,
       cursor: hasOnClick ? 'pointer' : undefined,
     },
     inner: {

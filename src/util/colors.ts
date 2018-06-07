@@ -65,11 +65,16 @@ export const palette: Partial<IPalette> = {
 /*
  * Used globally by Fabric
  */
-export const semanticColors: Partial<ISemanticColors> = {
+const fabricSemanticColors: Partial<ISemanticColors> = {
   bodyText: palette.neutralPrimary,
   disabledBodyText: palette.neutralTertiaryAlt,
   bodySubtext: palette.neutralSecondary,
   buttonText: palette.neutralPrimaryAlt,
   errorText: palette.red,
   link: palette.themeDark,
+};
+
+export const semanticColors = {
+  ...fabricSemanticColors,
+  pageDivider: palette.neutralDark,
 };
