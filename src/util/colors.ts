@@ -72,4 +72,5 @@ export const semanticColors: Partial<ISemanticColors> = {
   buttonText: palette.neutralPrimaryAlt,
   errorText: palette.red,
   link: palette.themeDark,
+  bodyDivider: palette.neutralDark,
 };
