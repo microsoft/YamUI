@@ -162,7 +162,7 @@ exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
   className=
       y-block
       {
-        color: #495361;
+        color: rgb(73,83,97);
       }
 >
   <div

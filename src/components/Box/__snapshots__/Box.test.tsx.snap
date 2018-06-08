@@ -7,7 +7,7 @@ exports[`<Box /> with additional className matches its snapshot 1`] = `
       TEST_CLASSNAME
       {
         border-radius: 1px;
-        border: 1px solid #dde0e6;
+        border: 1px solid rgb(221,224,230);
       }
 >
   <Block
@@ -31,7 +31,7 @@ exports[`<Box /> with children passed matches its snapshot 1`] = `
       y-box
       {
         border-radius: 1px;
-        border: 1px solid #dde0e6;
+        border: 1px solid rgb(221,224,230);
       }
 >
   <Block
@@ -55,7 +55,7 @@ exports[`<Box /> with default options matches its snapshot 1`] = `
       y-box
       {
         border-radius: 1px;
-        border: 1px solid #dde0e6;
+        border: 1px solid rgb(221,224,230);
       }
 >
   <Block

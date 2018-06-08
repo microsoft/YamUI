@@ -82,24 +82,24 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
     Object {
       "root": Object {
         "border": 0,
-        "color": "#495361",
+        "color": "rgb(73,83,97)",
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
         "width": "20px",
       },
       "rootExpanded": Object {
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootHovered": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootPressed": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
     }
@@ -175,24 +175,24 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
     Object {
       "root": Object {
         "border": 0,
-        "color": "#495361",
+        "color": "rgb(73,83,97)",
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
         "width": "20px",
       },
       "rootExpanded": Object {
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootHovered": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootPressed": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
     }
@@ -268,24 +268,24 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
     Object {
       "root": Object {
         "border": 0,
-        "color": "#495361",
+        "color": "rgb(73,83,97)",
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
         "width": "20px",
       },
       "rootExpanded": Object {
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootHovered": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
       "rootPressed": Object {
         "backgroundColor": "transparent",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "opacity": 1,
       },
     }
