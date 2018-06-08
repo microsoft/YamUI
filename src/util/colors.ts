@@ -1,41 +1,42 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+import { getColorFromString, updateA } from 'office-ui-fabric-react/lib/utilities/color/colors';
 import { IPalette, ISemanticColors } from 'office-ui-fabric-react/lib/Styling';
 
 const yammerColors = {
   /* Blue */
-  blue: 'rgb(36,119,195)', // #2477c3';
-  stream: 'rgb(233,239,248)', // '#e9eff8';
-  pond: 'rgb(154,195,255)', // '#9ac3ff';
-  lake: 'rgb(108,152,217)', // '#6c98d9';
-  newBlue: 'rgb(47,92,159)', // '#2f5c9f';
-  river: 'rgb(56,108,187)', // '#386cbb';
-  bay: 'rgb(38,79,140)', // '#264f8c';
-  ocean: 'rgb(25,52,93)', // '#19345d';
+  blue: '#2477c3',
+  stream: '#e9eff8',
+  pond: '#9ac3ff',
+  lake: '#6c98d9',
+  newBlue: '#2f5c9f',
+  river: '#386cbb',
+  bay: '#264f8c',
+  ocean: '#19345d',
 
   /* Gray */
-  white: 'rgb(255,255,255)', // '#ffffff';
-  popRock: 'rgb(243,245,248)', // '#f3f5f8';
-  altRock: 'rgb(237,239,242)', // '#edeff2';
-  indieRock: 'rgb(221,224,230)', // '#dde0e6';
-  punkRock: 'rgb(168,176,189)', // '#a8b0bd';
-  heavyMetal: 'rgb(100,109,122)', // '#646d7a';
-  deathMetal: 'rgb(73,83,97)', // '#495361';
-  blackMetal: 'rgb(52,58,65)', // '#343A41';
+  white: '#ffffff',
+  popRock: '#f3f5f8',
+  altRock: '#edeff2',
+  indieRock: '#dde0e6',
+  punkRock: '#a8b0bd',
+  heavyMetal: '#646d7a',
+  deathMetal: '#495361',
+  blackMetal: '#343A41',
 
   /* Yellow */
-  sunrise: 'rgb(255,231,184)', // '#ffe7b8';
-  noon: 'rgb(255,197,108)', // '#ffc56c';
-  sunset: 'rgb(248,174,65)', // '#f8ae41';
+  sunrise: '#ffe7b8',
+  noon: '#ffc56c',
+  sunset: '#f8ae41',
 
   /* Red */
-  angel: 'rgb(251,127,120)', // '#fb7f78';
-  lestat: 'rgb(209,66,59)', // '#d1423b';
-  dracula: 'rgb(158,48,40)', // '#9e3028';
+  angel: '#fb7f78',
+  lestat: '#d1423b',
+  dracula: '#9e3028',
 
   /* Green */
-  leaf: 'rgb(132,202,75)', // '#84ca4b';
-  tree: 'rgb(51,131,35)', // '#338323';
-  forest: 'rgb(39,100,27)', // '#27641b';
+  leaf: '#84ca4b',
+  tree: '#338323',
+  forest: '#27641b',
 };
 
 /*
@@ -71,4 +72,17 @@ export const semanticColors: Partial<ISemanticColors> = {
   errorText: palette.red,
   link: palette.themeDark,
   bodyDivider: palette.neutralDark,
+};
+
+/**
+ * Generates a new CSS color value with alpha transparency.
+ * @param color Any valid CSS color value
+ * @param alphaPercentage Number between 0 and 100
+ */
+export const addAlpha = (color: string, alphaPercentage: number): string => {
+  const colorObject = getColorFromString(color);
+  if (!colorObject) {
+    return color;
+  }
+  return updateA(colorObject, alphaPercentage).str;
 };

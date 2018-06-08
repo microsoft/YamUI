@@ -5,7 +5,7 @@ exports[`<Fabric /> with default options renders 1`] = `
   class=
       ms-Fabric
       {
-        color: rgb(52,58,65);
+        color: #343A41;
         font-size: 1.5rem;
         line-height: 2.0rem;
       }
