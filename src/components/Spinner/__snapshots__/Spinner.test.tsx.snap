@@ -2,14 +2,32 @@
 
 exports[`<Spinner /> when centered matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-light y-spinner__size-medium y-spinner__isCentered"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
   />
   <Text
-    className="y-spinner--label"
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 0;
+          margin-top: -2px;
+        }
     color="primary"
     size="mediumSub"
   >
@@ -18,34 +36,33 @@ exports[`<Spinner /> when centered matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Spinner /> with a size matches its snapshot 1`] = `
-<div
-  className="y-spinner y-spinner__color-light y-spinner__size-xSmall"
->
-  <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={0}
-  />
-  <Text
-    className="y-spinner--label"
-    color="primary"
-    size="small"
-  >
-    Loading
-  </Text>
-</div>
-`;
-
 exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-light y-spinner__size-medium TEST_CLASSNAME"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
   />
   <Text
-    className="y-spinner--label"
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 0;
+          margin-top: -2px;
+        }
     color="primary"
     size="mediumSub"
   >
@@ -56,14 +73,31 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 
 exports[`<Spinner /> with dark color matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-dark y-spinner__size-medium"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #ffffff;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+        }
   />
   <Text
-    className="y-spinner--label"
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 0;
+          margin-top: -2px;
+        }
     color="white"
     size="mediumSub"
   >
@@ -74,11 +108,21 @@ exports[`<Spinner /> with dark color matches its snapshot 1`] = `
 
 exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
   />
   <ScreenreaderText>
     Loading
@@ -86,16 +130,69 @@ exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
+exports[`<Spinner /> with large size matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-metadata y-spinner__size-medium"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
+    size={3}
   />
   <Text
-    className="y-spinner--label"
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 4px;
+        }
+    color="primary"
+    size="mediumSub"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
+<div
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
+>
+  <StyledCustomizedSpinner
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
+  />
+  <Text
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 0;
+          margin-top: -2px;
+        }
     color="metadata"
     size="mediumSub"
   >
@@ -104,16 +201,69 @@ exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Spinner /> with visible text matches its snapshot 1`] = `
+exports[`<Spinner /> with small size matches its snapshot 1`] = `
 <div
-  className="y-spinner y-spinner__color-light y-spinner__size-medium"
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
 >
   <StyledCustomizedSpinner
-    className="y-spinner--circle"
-    size={2}
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
+    size={0}
   />
   <Text
-    className="y-spinner--label"
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 6px;
+          margin-right: 0;
+          margin-top: -1px;
+        }
+    color="primary"
+    size="small"
+  >
+    Loading
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with visible text matches its snapshot 1`] = `
+<div
+  className=
+      y-spinner
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
+>
+  <StyledCustomizedSpinner
+    className=
+
+        & > .ms-Spinner-circle {
+          border-top-color: #386cbb;
+          border: 2px solid rgba(56, 108, 187, 0.3);
+        }
+  />
+  <Text
+    className=
+
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 0;
+          margin-top: -2px;
+        }
     color="primary"
     size="mediumSub"
   >

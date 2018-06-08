@@ -7,34 +7,33 @@ import {
   SpinnerSize as FabricSpinnerSize,
 } from 'office-ui-fabric-react/lib/Spinner';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Text, { TextProps, TextColor, TextSize } from '../Text';
+import Text, { TextColor, TextSize } from '../Text';
 import ScreenreaderText from '../ScreenreaderText';
-import { SpinnerSize } from './types';
-import './Spinner.css';
+import { SpinnerColor, SpinnerSize } from './types';
+import { join } from '../../util/classNames';
+import { getClassNames } from './Spinner.styles';
 
-export { SpinnerSize };
+export { SpinnerColor, SpinnerSize };
 
-const SizeMap = {
+const labelColors = {
+  [SpinnerColor.LIGHT]: TextColor.PRIMARY,
+  [SpinnerColor.METADATA]: TextColor.METADATA,
+  [SpinnerColor.DARK]: TextColor.WHITE,
+};
+
+const labelSizes = {
+  [SpinnerSize.LARGE]: TextSize.MEDIUM_SUB,
+  [SpinnerSize.MEDIUM]: TextSize.MEDIUM_SUB,
+  [SpinnerSize.SMALL]: TextSize.MEDIUM_SUB,
+  [SpinnerSize.XSMALL]: TextSize.SMALL,
+};
+
+const fabricSpinnerSizes = {
   [SpinnerSize.LARGE]: FabricSpinnerSize.large,
   [SpinnerSize.MEDIUM]: FabricSpinnerSize.medium,
   [SpinnerSize.SMALL]: FabricSpinnerSize.small,
   [SpinnerSize.XSMALL]: FabricSpinnerSize.xSmall,
 };
-
-export enum SpinnerColor {
-  /**
-   * Light theme.
-   */
-  LIGHT = 'light',
-  /**
-   * Light theme spinner color with gray text.
-   */
-  METADATA = 'metadata',
-  /**
-   * Dark theme.
-   */
-  DARK = 'dark',
-}
 
 export interface SpinnerProps extends BaseComponentProps {
   /**
@@ -71,67 +70,32 @@ export interface SpinnerProps extends BaseComponentProps {
  * things are processing. It is shown when we're unsure how long a task will take.
  */
 export default class Spinner extends React.Component<SpinnerProps> {
-  public static defaultProps: Partial<SpinnerProps> = {
-    hideText: false,
-    color: SpinnerColor.LIGHT,
-    size: SpinnerSize.MEDIUM,
-  };
-
   public render() {
-    const { text, hideText } = this.props;
+    const { text, hideText, color = SpinnerColor.LIGHT, size = SpinnerSize.MEDIUM, isCentered = false } = this.props;
+    const classNames = getClassNames(color, size, isCentered);
 
-    const textComponent = hideText ? (
+    const label = hideText ? (
       <ScreenreaderText>{text}</ScreenreaderText>
     ) : (
-      <Text {...this.getLabelProps()}>{text}</Text>
+      <Text className={classNames.label} color={labelColors[color]} size={labelSizes[size]}>
+        {text}
+      </Text>
     );
 
     return (
-      <div className={this.getClasses()}>
-        <FabricSpinner {...this.getSpinnerProps()} />
-        {textComponent}
+      <div className={join(['y-spinner', classNames.root])}>
+        <FabricSpinner {...this.getSpinnerProps(classNames.circle)} />
+        {label}
       </div>
     );
   }
 
-  private getClasses() {
-    const { isCentered, className, color, size } = this.props;
-
-    const classes: string[] = ['y-spinner', `y-spinner__color-${color}`, `y-spinner__size-${size}`];
-
-    if (isCentered) {
-      classes.push('y-spinner__isCentered');
-    }
-
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
-  }
-
-  private getSpinnerProps(): FabricSpinnerProps {
+  private getSpinnerProps(className: string): FabricSpinnerProps {
     const { size } = this.props;
 
     return {
-      className: 'y-spinner--circle',
-      size: SizeMap[size as SpinnerSize],
-    };
-  }
-
-  private getLabelProps(): TextProps {
-    const { color, size } = this.props;
-    let textColor = TextColor.PRIMARY;
-    if (color === SpinnerColor.DARK) {
-      textColor = TextColor.WHITE;
-    } else if (color === SpinnerColor.METADATA) {
-      textColor = TextColor.METADATA;
-    }
-
-    return {
-      color: textColor,
-      size: size === SpinnerSize.XSMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB,
-      className: 'y-spinner--label',
+      className,
+      size: fabricSpinnerSizes[size as SpinnerSize],
     };
   }
 }
