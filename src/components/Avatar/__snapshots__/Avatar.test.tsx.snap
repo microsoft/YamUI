@@ -86,11 +86,11 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
     className=
         y-avatar--badge
         {
-          background: #ffffff;
+          background: rgb(255,255,255);
           border-radius: 50%;
-          border: solid 2px #ffffff;
+          border: solid 2px rgb(255,255,255);
           bottom: -2px;
-          color: #386cbb;
+          color: rgb(56,108,187);
           height: 16px;
           position: absolute;
           right: -2px;
