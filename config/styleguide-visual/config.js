@@ -6,7 +6,7 @@ module.exports = {
   dir: 'config/styleguide-visual/reference/',
   viewports: {
     desktop: {
-      width: 600,
+      width: 1024,
       height: 600,
       deviceScaleFactor: 2,
     },
