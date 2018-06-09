@@ -56,7 +56,7 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with small size', () => {
+  describe('with xSmall size', () => {
     beforeEach(() => {
       component = shallow(<Spinner text="Loading" size={SpinnerSize.XSMALL} />);
     });

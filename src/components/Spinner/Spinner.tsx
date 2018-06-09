@@ -11,7 +11,7 @@ import Text, { TextColor, TextSize } from '../Text';
 import ScreenreaderText from '../ScreenreaderText';
 import { SpinnerColor, SpinnerSize } from './types';
 import { join } from '../../util/classNames';
-import { getClassNames } from './Spinner.styles';
+import { getClassNames, getFabricSpinnerStyles } from './Spinner.styles';
 
 export { SpinnerColor, SpinnerSize };
 
@@ -72,7 +72,7 @@ export interface SpinnerProps extends BaseComponentProps {
 export default class Spinner extends React.Component<SpinnerProps> {
   public render() {
     const { text, hideText, color = SpinnerColor.LIGHT, size = SpinnerSize.MEDIUM, isCentered = false } = this.props;
-    const classNames = getClassNames(color, size, isCentered);
+    const classNames = getClassNames(size, isCentered);
 
     const label = hideText ? (
       <ScreenreaderText>{text}</ScreenreaderText>
@@ -84,18 +84,18 @@ export default class Spinner extends React.Component<SpinnerProps> {
 
     return (
       <div className={join(['y-spinner', classNames.root])}>
-        <FabricSpinner {...this.getSpinnerProps(classNames.circle)} />
+        <FabricSpinner {...this.getSpinnerProps()} />
         {label}
       </div>
     );
   }
 
-  private getSpinnerProps(className: string): FabricSpinnerProps {
-    const { size } = this.props;
+  private getSpinnerProps(): FabricSpinnerProps {
+    const { color = SpinnerColor.LIGHT, size } = this.props;
 
     return {
-      className,
       size: fabricSpinnerSizes[size as SpinnerSize],
+      styles: getFabricSpinnerStyles(color),
     };
   }
 }

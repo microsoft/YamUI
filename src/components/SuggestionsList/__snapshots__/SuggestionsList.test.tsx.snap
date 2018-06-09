@@ -97,12 +97,12 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
   className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
 >
   <Block
+    className="y-suggestions-list--no-results"
     padding="large"
     textAlign="center"
     textSize="small"
   >
     <Text
-      className="y-suggestions-list--no-results"
       color="metadata"
     >
       noResultsText
@@ -138,15 +138,14 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
       </ul>
     </li>
   </ul>
-  <Block
-    push={-2}
+  <div
+    className="y-suggestions-list--loading"
   >
     <Spinner
-      className="y-suggestions-list--loading"
       isCentered={true}
       text="loadingText"
     />
-  </Block>
+  </div>
 </div>
 `;
 
@@ -179,15 +178,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       </ul>
     </li>
   </ul>
-  <Block
-    push={-2}
+  <div
+    className="y-suggestions-list--loading"
   >
     <Spinner
-      className="y-suggestions-list--loading"
       isCentered={true}
       text="loadingText"
     />
-  </Block>
+  </div>
 </div>
 `;
 
@@ -218,15 +216,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       </ul>
     </li>
   </ul>
-  <Block
-    push={-2}
+  <div
+    className="y-suggestions-list--loading"
   >
     <Spinner
-      className="y-suggestions-list--loading"
       isCentered={true}
       text="loadingText"
     />
-  </Block>
+  </div>
 </div>
 `;
 
@@ -234,14 +231,13 @@ exports[`<SuggestionsList /> when isLoading=true without results renders as expe
 <div
   className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
 >
-  <Block
-    push={-2}
+  <div
+    className="y-suggestions-list--loading"
   >
     <Spinner
-      className="y-suggestions-list--loading"
       isCentered={true}
       text="loadingText"
     />
-  </Block>
+  </div>
 </div>
 `;
