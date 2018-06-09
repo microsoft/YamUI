@@ -8,7 +8,7 @@ describe('colors', () => {
     });
 
     it('makes a color partially transparent', () => {
-      expect(addAlpha('rgb(255, 255, 255)', 50)).toBe('rgba(255, 255, 255, 0.5)');
+      expect(addAlpha('white', 50)).toBe('rgba(255, 255, 255, 0.5)');
     });
 
     it('makes a color fully opaque', () => {
@@ -17,7 +17,7 @@ describe('colors', () => {
 
     // Covering all lines of code
     it('handles Fabric method returning undefined', () => {
-      expect(addAlpha('', 100)).toBe('');
+      expect(addAlpha('asdf', 100)).toBe(undefined);
     });
   });
 });

@@ -79,10 +79,7 @@ export const semanticColors: Partial<ISemanticColors> = {
  * @param color Any valid CSS color value
  * @param alphaPercentage Number between 0 and 100
  */
-export const addAlpha = (color: string, alphaPercentage: number): string => {
+export const addAlpha = (color: string, alphaPercentage: number) => {
   const colorObject = getColorFromString(color);
-  if (!colorObject) {
-    return color;
-  }
-  return updateA(colorObject, alphaPercentage).str;
+  return colorObject ? updateA(colorObject, alphaPercentage).str : undefined;
 };
