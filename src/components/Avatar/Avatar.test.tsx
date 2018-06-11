@@ -27,6 +27,16 @@ describe('<Avatar />', () => {
     });
   });
 
+  describe('with imageShouldFadeIn', () => {
+    beforeEach(() => {
+      component = shallow(<Avatar name="NAME" imageShouldFadeIn={true} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with badge content', () => {
     beforeEach(() => {
       component = shallow(

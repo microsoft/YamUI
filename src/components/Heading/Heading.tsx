@@ -1,10 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize, GutterSize } from '../Block';
 import { HeadingLevel, HeadingSize } from './types';
-import './Heading.css';
+import { getClassNames } from './Heading.styles';
 
 const blockPropsMap = {
   1: {
@@ -54,32 +55,14 @@ export interface HeadingProps extends NestableBaseComponentProps {
  */
 export default class Heading extends React.Component<HeadingProps> {
   public render() {
-    const TagName = `h${this.props.level}`;
+    const { className, level, size, children } = this.props;
+    const TagName = `h${level}`;
+    const classNames = getClassNames({ size: size || level });
 
-    return <TagName className={this.getClasses()}>{this.getSizedContent()}</TagName>;
-  }
-
-  private getSizedContent() {
-    const { children, level, size } = this.props;
-    if (size === 'none') {
-      return children;
-    }
-
-    const visualSize = size || level;
-    return <Block {...blockPropsMap[visualSize]}>{children}</Block>;
-  }
-
-  private getClasses() {
-    const { className, size } = this.props;
-
-    const classes = ['y-heading'];
-    if (size) {
-      classes.push(`y-heading__size-${size}`);
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
+    return (
+      <TagName className={join(['y-heading', className, classNames.root])}>
+        {size === 'none' ? children : <Block {...blockPropsMap[size || level]}>{children}</Block>}
+      </TagName>
+    );
   }
 }
