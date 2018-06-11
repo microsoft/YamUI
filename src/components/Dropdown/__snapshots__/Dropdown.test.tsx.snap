@@ -23,15 +23,41 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
       gutterSize="small"
     >
       <div
-        className="y-fixedGridRow y-fixedGridRow__gutter-small"
+        className=
+            y-fixedGridRow
+            {
+              display: flex;
+            }
       >
         <FixedGridColumn
-          className="y-dropdown--option-icon"
+          className=
+              y-dropdown--option-icon
+              {
+                margin-left: 0.8rem;
+              }
+              &:first-child {
+                margin-left: 0px;
+              }
           fixed={true}
+          key=".0"
         >
           <div
-            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
-            style={Object {}}
+            className=
+                y-fixedGridColumn
+                y-dropdown--option-icon
+                {
+                  margin-left: 0.8rem;
+                }
+                &:first-child {
+                  margin-left: 0px;
+                }
+                {
+                  flex-basis: auto;
+                  flex-grow: 0;
+                  flex-shrink: 1;
+                  min-width: auto;
+                  width: undefinedpx;
+                }
           >
             <Add
               block={true}
@@ -59,11 +85,31 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
           </div>
         </FixedGridColumn>
         <FixedGridColumn
-          className="y-dropdown--ellipsed-title"
+          className=
+              y-dropdown--ellipsed-title
+              {
+                margin-left: 0.8rem;
+              }
+              &:first-child {
+                margin-left: 0px;
+              }
+          key=".1"
         >
           <div
-            className="y-fixedGridColumn y-dropdown--ellipsed-title"
-            style={Object {}}
+            className=
+                y-fixedGridColumn
+                y-dropdown--ellipsed-title
+                {
+                  margin-left: 0.8rem;
+                }
+                &:first-child {
+                  margin-left: 0px;
+                }
+                {
+                  flex-basis: 100%;
+                  flex-grow: 1;
+                  flex-shrink: 1;
+                }
           >
             <span>
               with icon

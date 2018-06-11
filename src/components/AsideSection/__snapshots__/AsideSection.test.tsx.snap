@@ -14,7 +14,6 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
           {
             border-bottom: 1px solid rgb(221,224,230);
           }
-      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
@@ -53,7 +52,6 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
           {
             border-bottom: 1px solid rgb(221,224,230);
           }
-      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
@@ -99,7 +97,6 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
           {
             border-bottom: 1px solid rgb(221,224,230);
           }
-      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
