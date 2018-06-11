@@ -32,8 +32,8 @@ export interface ResizeListProps extends BaseComponentProps {
 }
 
 /**
- * Describe what `ResizeList` does. This will also appear as part of this component's
- * documentation.
+ * ResizeList renders a items on a single row, without rendering any items which don't fit in the available width.
+ * An optional "actionItem" can be provided, which will always be rendered after the other visible items.
  */
 export default class ResizeList extends React.Component<ResizeListProps> {
   public render() {
