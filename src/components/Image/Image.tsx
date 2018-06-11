@@ -1,11 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { Image as FabricImage, ImageFit, ImageLoadState } from 'office-ui-fabric-react/lib/Image';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BorderType } from './types';
-import './Image.css';
-
+import { getClassNames } from './Image.styles';
 export { BorderType, ImageFit, ImageLoadState };
 
 export interface ImageProps extends BaseComponentProps {
@@ -81,40 +81,31 @@ export default class Image extends React.Component<ImageProps> {
   };
 
   public render() {
-    const { description, fullWidth, height, width, imageFit, source, shouldFadeIn, onLoadingStateChange } = this.props;
-    const imageWidth = fullWidth ? '100%' : width;
-
+    const {
+      description,
+      fullWidth,
+      height,
+      width,
+      imageFit,
+      source,
+      shouldFadeIn,
+      onLoadingStateChange,
+      borderType,
+      block,
+      className,
+    } = this.props;
+    const classNames = getClassNames({ borderType, fullWidth, block });
     return (
       <FabricImage
         alt={description}
-        className={this.getClasses()}
+        className={join(['y-image', className, classNames.root])}
         height={height}
         imageFit={imageFit}
-        width={imageWidth}
+        width={fullWidth ? '100%' : width}
         src={source}
         onLoadingStateChange={onLoadingStateChange}
         shouldFadeIn={shouldFadeIn}
       />
     );
-  }
-
-  private getClasses() {
-    const { block, borderType, className, fullWidth } = this.props;
-
-    const classes: string[] = ['y-image'];
-    if (fullWidth) {
-      classes.push('y-image__fullWidth');
-    }
-    if (borderType) {
-      classes.push(`y-image__border-${borderType}`);
-    }
-    if (block) {
-      classes.push('y-image__block');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 }
