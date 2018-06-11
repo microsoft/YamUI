@@ -32,7 +32,7 @@ export const getClassNames = memoizeFunction((size: SpinnerSize, isCentered: boo
 
 export const getFabricSpinnerStyles = memoizeFunction((color: SpinnerColor) => {
   const theme = getTheme();
-  const circleColor = color === SpinnerColor.DARK ? theme.palette.white : theme.semanticColors.link;
+  const circleColor = color === SpinnerColor.DARK ? theme.palette.white : theme.palette.themeDark;
 
   return {
     circle: {
