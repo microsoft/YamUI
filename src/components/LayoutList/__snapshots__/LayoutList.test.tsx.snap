@@ -18,6 +18,19 @@ exports[`<LayoutList /> as horizontal list with additional className matches its
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0.4rem;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-right: 0px;
+      }
 />
 `;
 
@@ -39,6 +52,19 @@ exports[`<LayoutList /> as horizontal list with align "right" matches its snapsh
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0.4rem;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-right: 0px;
+      }
 />
 `;
 
@@ -58,6 +84,19 @@ exports[`<LayoutList /> as horizontal list with child content matches its snapsh
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
+      }
+      & > .y-layoutList--item {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0.4rem;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-right: 0px;
       }
 >
   list content
@@ -81,6 +120,19 @@ exports[`<LayoutList /> as horizontal list with gutterSize matches its snapshot 
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 1.6rem;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-right: 0px;
+      }
 />
 `;
 
@@ -101,6 +153,19 @@ exports[`<LayoutList /> as horizontal list without props matches its snapshot 1`
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0.4rem;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-right: 0px;
+      }
 />
 `;
 
@@ -120,25 +185,23 @@ exports[`<LayoutList /> as vertical list with LayoutListItem child content match
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-bottom: 0px;
+      }
 >
   <LayoutListItem
-    className=
-        TEST_CLASSNAME
-        {
-          display: block;
-          margin-bottom: 0;
-          margin-left: 0px;
-          margin-right: 0px;
-          margin-top: 0px;
-          padding-bottom: 0px;
-          padding-left: 0px;
-          padding-right: 0px;
-          padding-top: 0px;
-        }
-        &:last-child {
-          margin-bottom: 0px;
-        }
-    key=".0"
+    className="TEST_CLASSNAME"
   />
 </ul>
 `;
@@ -160,6 +223,20 @@ exports[`<LayoutList /> as vertical list with additional className matches its s
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-bottom: 0px;
+      }
 />
 `;
 
@@ -178,6 +255,20 @@ exports[`<LayoutList /> as vertical list with child content matches its snapshot
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
+      }
+      & > .y-layoutList--item {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-bottom: 0px;
       }
 >
   list content
@@ -200,6 +291,20 @@ exports[`<LayoutList /> as vertical list with gutterSize matches its snapshot 1`
         padding-right: 0px;
         padding-top: 0px;
       }
+      & > .y-layoutList--item {
+        display: block;
+        margin-bottom: 0.8rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-bottom: 0px;
+      }
 />
 `;
 
@@ -218,6 +323,20 @@ exports[`<LayoutList /> as vertical list without props matches its snapshot 1`] 
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
+      }
+      & > .y-layoutList--item {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-layoutList--item:last-child {
+        margin-bottom: 0px;
       }
 />
 `;

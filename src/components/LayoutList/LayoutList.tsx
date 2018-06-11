@@ -2,10 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { join, mapClassNameToElementsOfType } from '../../util/classNames';
+import { join } from '../../util/classNames';
 import { GutterSize } from '../FixedGrid';
 import { getClassNames } from './LayoutList.styles';
-import LayoutListItem from './LayoutListItem';
 
 export { GutterSize };
 
@@ -48,10 +47,6 @@ export default class LayoutList extends React.Component<LayoutListProps> {
     const align = direction === 'horizontal' ? (this.props as HorizontalListProps).align || 'left' : undefined;
     const classNames = getClassNames({ direction, gutterSize, align });
 
-    return (
-      <ul className={join(['y-layoutList', className, classNames.root])}>
-        {mapClassNameToElementsOfType(children, classNames.child, LayoutListItem)}
-      </ul>
-    );
+    return <ul className={join(['y-layoutList', className, classNames.root])}>{children}</ul>;
   }
 }

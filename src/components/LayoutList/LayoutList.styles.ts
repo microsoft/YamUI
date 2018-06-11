@@ -40,7 +40,9 @@ export const getClassNames = memoizeFunction((styleProps: LayoutListStyleProps) 
       display: isHorizontal ? 'flex' : 'block',
       flexFlow: isHorizontal ? 'row wrap' : undefined,
       justifyContent: align === 'right' ? 'flex-end' : undefined,
+      selectors: {
+        '> .y-layoutList--item': isHorizontal ? horizontalChild : verticalChild,
+      },
     },
-    child: isHorizontal ? horizontalChild : verticalChild,
   });
 });
