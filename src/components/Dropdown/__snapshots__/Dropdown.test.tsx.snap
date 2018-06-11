@@ -23,15 +23,32 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
       gutterSize="small"
     >
       <div
-        className="y-fixedGridRow y-fixedGridRow__gutter-small"
+        className=
+            y-fixedGridRow
+            {
+              display: flex;
+            }
+            & > .y-fixedGridColumn {
+              margin-left: 0.8rem;
+            }
+            & > .y-fixedGridColumn:first-child {
+              margin-left: 0px;
+            }
       >
         <FixedGridColumn
           className="y-dropdown--option-icon"
           fixed={true}
         >
           <div
-            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
-            style={Object {}}
+            className=
+                y-fixedGridColumn
+                y-dropdown--option-icon
+                {
+                  flex-basis: auto;
+                  flex-grow: 0;
+                  flex-shrink: 1;
+                  min-width: auto;
+                }
           >
             <Add
               block={true}
@@ -62,8 +79,15 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
           className="y-dropdown--ellipsed-title"
         >
           <div
-            className="y-fixedGridColumn y-dropdown--ellipsed-title"
-            style={Object {}}
+            className=
+                y-fixedGridColumn
+                y-dropdown--ellipsed-title
+                {
+                  flex-basis: 100%;
+                  flex-grow: 1;
+                  flex-shrink: 1;
+                  min-width: 0px;
+                }
           >
             <span>
               with icon

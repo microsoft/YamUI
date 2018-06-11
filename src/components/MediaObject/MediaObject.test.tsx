@@ -50,6 +50,17 @@ describe('<MediaObject />', () => {
     });
   });
 
+  describe('with image content, size small', () => {
+    beforeEach(() => {
+      component = shallow(<MediaObject size={MediaObjectSize.SMALL} imageContent={image} />);
+      component.render();
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with title content', () => {
     beforeEach(() => {
       component = shallow(<MediaObject size={MediaObjectSize.MEDIUM} titleContent={title} />);
