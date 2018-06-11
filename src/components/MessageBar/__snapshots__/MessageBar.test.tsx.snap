@@ -7,10 +7,9 @@ exports[`<MessageBar /> with a type matches its snapshot 1`] = `
       {
         background-color: rgb(243,245,248);
         border-color: rgb(255,197,108);
+        border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
-        border: solid 0 rgb(168,176,189);
-        color: rgb(52,58,65);
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
@@ -34,10 +33,10 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
       y-message-bar
       {
         background-color: rgb(243,245,248);
+        border-color: rgb(168,176,189);
+        border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
-        border: solid 0 rgb(168,176,189);
-        color: rgb(52,58,65);
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
@@ -74,10 +73,10 @@ exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
       TEST_CLASSNAME
       {
         background-color: rgb(243,245,248);
+        border-color: rgb(168,176,189);
+        border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
-        border: solid 0 rgb(168,176,189);
-        color: rgb(52,58,65);
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
@@ -101,10 +100,10 @@ exports[`<MessageBar /> with default options matches its snapshot 1`] = `
       y-message-bar
       {
         background-color: rgb(243,245,248);
+        border-color: rgb(168,176,189);
+        border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
-        border: solid 0 rgb(168,176,189);
-        color: rgb(52,58,65);
         padding-bottom: 8px;
         padding-left: 12px;
         padding-right: 12px;
