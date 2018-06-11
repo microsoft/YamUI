@@ -28,8 +28,8 @@ export const getClassNames = memoizeFunction((styleProps: FixedGridColumnStylePr
        * https://css-tricks.com/flexbox-truncated-text/
        */
       flexBasis: fixed ? 'auto' : '100%',
-      minWidth: fixed ? 'auto' : undefined,
-      width: fixed ? `${width}px` : undefined,
+      minWidth: fixed ? 'auto' : 0,
+      width: fixed && width ? `${width}px` : undefined,
     },
     inner: {
       height: '100%',

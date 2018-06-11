@@ -8,6 +8,7 @@ exports[`<FixedGridColumn /> when given a width but not fixed matches its snapsh
         flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
+        min-width: 0px;
       }
 >
   grid content
@@ -39,7 +40,6 @@ exports[`<FixedGridColumn /> when set to fixed matches its snapshot 1`] = `
         flex-grow: 0;
         flex-shrink: 1;
         min-width: auto;
-        width: undefinedpx;
       }
 >
   grid content
@@ -55,6 +55,7 @@ exports[`<FixedGridColumn /> with additional className matches its snapshot 1`] 
         flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
+        min-width: 0px;
       }
 >
   grid content
@@ -69,6 +70,7 @@ exports[`<FixedGridColumn /> with default options matches its snapshot 1`] = `
         flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
+        min-width: 0px;
       }
 >
   grid content
@@ -83,6 +85,7 @@ exports[`<FixedGridColumn /> with vertical align middle matches its snapshot 1`]
         flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
+        min-width: 0px;
       }
 >
   <div

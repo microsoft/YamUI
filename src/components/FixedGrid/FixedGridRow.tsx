@@ -27,20 +27,20 @@ export { GutterSize };
  */
 export default class FixedGridRow extends React.Component<FixedGridRowProps> {
   public render() {
-    const { children, className, bottomSpacing, gutterSize = GutterSize.SMALL } = this.props;
+    const { className, bottomSpacing, gutterSize = GutterSize.SMALL } = this.props;
     const classNames = getClassNames({ bottomSpacing, gutterSize });
     return (
       <div className={join(['y-fixedGridRow', className, classNames.root])}>
-        {this.childrenWithClassName(children, classNames.column)}
+        {this.childrenWithClassName(classNames.column)}
       </div>
     );
   }
 
-  private childrenWithClassName = (children: React.ReactNode, className: string) => {
-    return React.Children.map(children, child => {
+  private childrenWithClassName = (className: string) => {
+    return React.Children.map(this.props.children, child => {
       if (React.isValidElement(child) && child.type === FixedGridColumn) {
         return React.cloneElement(child as React.ReactElement<FixedGridColumnProps>, {
-          className: `${(child.props as FixedGridColumnProps).className} ${className}`,
+          className: join([(child.props as FixedGridColumnProps).className, className]),
         });
       }
       return child;
