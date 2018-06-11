@@ -3,6 +3,7 @@ import { addAlpha, getTheme } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { SpinnerColor, SpinnerSize } from './types';
+import { getGutterValue } from '../../util/styles/gutters';
 
 export interface SpinnerClassNames {
   root: string;
@@ -10,10 +11,10 @@ export interface SpinnerClassNames {
 }
 
 const labelMargins = {
-  [SpinnerSize.XSMALL]: '-1px 0 0 6px',
-  [SpinnerSize.SMALL]: '-1px 0 0 8px',
-  [SpinnerSize.MEDIUM]: '-2px 0 0 8px',
-  [SpinnerSize.LARGE]: '4px 0 0',
+  [SpinnerSize.XSMALL]: `-1px 0 0 ${getGutterValue(1.5, true)}`,
+  [SpinnerSize.SMALL]: `-1px 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.MEDIUM]: `-2px 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.LARGE]: `${getGutterValue(1, true)} 0 0`,
 };
 
 export const getClassNames = memoizeFunction((size: SpinnerSize, isCentered: boolean): SpinnerClassNames => {

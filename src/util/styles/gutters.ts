@@ -3,19 +3,6 @@ import { GutterSize } from '../../components/FixedGrid/types';
 
 export type CSSLengthUnit = string;
 
-/**
- * @deprecated
- */
-export const gutterSize: { [size in GutterSize]: string } = {
-  none: '0',
-  xSmall: '0.4rem',
-  small: '0.8rem',
-  medium: '1.2rem',
-  large: '1.6rem',
-  xLarge: '2rem',
-  xxLarge: '2.4rem',
-};
-
 export const gutterUnit = {
   px: 4,
   rem: 0.4,
@@ -41,4 +28,17 @@ export const getGutterValue = (gutterUnits: number, resizeWithText?: boolean): C
     return getRemGutterValue(gutterUnits);
   }
   return getPxGutterValue(gutterUnits);
+};
+
+/**
+ * @deprecated
+ */
+export const gutterSize: { [size in GutterSize]: string } = {
+  none: '0',
+  xSmall: getGutterValue(1, true),
+  small: getGutterValue(2, true),
+  medium: getGutterValue(3, true),
+  large: getGutterValue(4, true),
+  xLarge: getGutterValue(5, true),
+  xxLarge: getGutterValue(6, true),
 };

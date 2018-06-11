@@ -26,7 +26,7 @@ exports[`<Spinner /> when centered matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 8px;
+          margin-left: 0.8rem;
           margin-right: 0;
           margin-top: -2px;
         }
@@ -63,7 +63,7 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 8px;
+          margin-left: 0.8rem;
           margin-right: 0;
           margin-top: -2px;
         }
@@ -100,7 +100,7 @@ exports[`<Spinner /> with dark color matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 8px;
+          margin-left: 0.8rem;
           margin-right: 0;
           margin-top: -2px;
         }
@@ -166,7 +166,7 @@ exports[`<Spinner /> with large size matches its snapshot 1`] = `
           margin-bottom: 0;
           margin-left: 0;
           margin-right: 0;
-          margin-top: 4px;
+          margin-top: 0.4rem;
         }
     color="primary"
     size="mediumSub"
@@ -201,7 +201,7 @@ exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 8px;
+          margin-left: 0.8rem;
           margin-right: 0;
           margin-top: -2px;
         }
@@ -238,7 +238,7 @@ exports[`<Spinner /> with visible text matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 8px;
+          margin-left: 0.8rem;
           margin-right: 0;
           margin-top: -2px;
         }
@@ -276,7 +276,7 @@ exports[`<Spinner /> with xSmall size matches its snapshot 1`] = `
 
         {
           margin-bottom: 0;
-          margin-left: 6px;
+          margin-left: 0.6rem;
           margin-right: 0;
           margin-top: -1px;
         }
