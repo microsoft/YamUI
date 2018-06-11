@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResizeList /> onRenderData prop matches its snapshot 1`] = `
+<LayoutList
+  className="y-resizeList"
+  direction="horizontal"
+>
+  <LayoutListItem>
+    <div>
+      1
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      2
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      3
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      4
+    </div>
+  </LayoutListItem>
+</LayoutList>
+`;
+
+exports[`<ResizeList /> onRenderData prop with actionItem matches its snapshot 1`] = `
+<LayoutList
+  className="y-resizeList"
+  direction="horizontal"
+>
+  <LayoutListItem>
+    <div>
+      1
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      2
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      3
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      4
+    </div>
+  </LayoutListItem>
+  <LayoutListItem>
+    <div>
+      action&gt;
+    </div>
+  </LayoutListItem>
+</LayoutList>
+`;
+
+exports[`<ResizeList /> with action item matches its snapshot 1`] = `
+<StyledCustomizedResizeGroup
+  data={
+    Object {
+      "cacheKey": "4",
+      "count": 4,
+    }
+  }
+  onGrowData={[Function]}
+  onReduceData={[Function]}
+  onRenderData={[Function]}
+/>
+`;
+
+exports[`<ResizeList /> with additional className matches its snapshot 1`] = `
+<StyledCustomizedResizeGroup
+  data={
+    Object {
+      "cacheKey": "4",
+      "count": 4,
+    }
+  }
+  onGrowData={[Function]}
+  onReduceData={[Function]}
+  onRenderData={[Function]}
+/>
+`;
+
+exports[`<ResizeList /> with gutter size matches its snapshot 1`] = `
+<StyledCustomizedResizeGroup
+  data={
+    Object {
+      "cacheKey": "4",
+      "count": 4,
+    }
+  }
+  onGrowData={[Function]}
+  onReduceData={[Function]}
+  onRenderData={[Function]}
+/>
+`;
+
+exports[`<ResizeList /> with items matches its snapshot 1`] = `
+<StyledCustomizedResizeGroup
+  data={
+    Object {
+      "cacheKey": "4",
+      "count": 4,
+    }
+  }
+  onGrowData={[Function]}
+  onReduceData={[Function]}
+  onRenderData={[Function]}
+/>
+`;
