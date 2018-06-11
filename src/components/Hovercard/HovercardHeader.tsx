@@ -4,6 +4,7 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps as HovercardHeaderProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
+import { getClassNames } from './Hovercard.styles';
 
 export { HovercardHeaderProps };
 
@@ -13,9 +14,10 @@ export { HovercardHeaderProps };
 export default class HovercardHeader extends React.Component<HovercardHeaderProps> {
   public render() {
     const { className, children } = this.props;
+    const classNames = getClassNames();
 
     return (
-      <div className={join(['y-hovercard--header', className])}>
+      <div className={join(['y-hovercard--header', className, classNames.header])}>
         <Block padding={GutterSize.XLARGE}>{children}</Block>
       </div>
     );
