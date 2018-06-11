@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
@@ -64,7 +65,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     const status = this.getSearchStatus();
     const results = this.getGroupedResults();
 
-    const classNames = ['y-suggestions-list', 'y-hc-border'];
+    const classNames = ['y-suggestions-list', 'y-hc-border', this.props.className];
     if (status) {
       classNames.push(withStatusClass);
     }
@@ -73,7 +74,7 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     }
 
     return (
-      <div className={classNames.join(' ')}>
+      <div className={join(classNames)}>
         {results}
         {status}
       </div>
@@ -112,9 +113,9 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
 
   private getLoading() {
     return (
-      <Block push={-2}>
-        <Spinner text={this.props.loadingText} className="y-suggestions-list--loading" isCentered={true} />
-      </Block>
+      <div className="y-suggestions-list--loading">
+        <Spinner text={this.props.loadingText} isCentered={true} />
+      </div>
     );
   }
 
@@ -123,10 +124,13 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
       return null;
     }
     return (
-      <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
-        <Text color={TextColor.METADATA} className="y-suggestions-list--no-results">
-          {this.props.noResultsText}
-        </Text>
+      <Block
+        className="y-suggestions-list--no-results"
+        textAlign="center"
+        padding={GutterSize.LARGE}
+        textSize={TextSize.SMALL}
+      >
+        <Text color={TextColor.METADATA}>{this.props.noResultsText}</Text>
       </Block>
     );
   }

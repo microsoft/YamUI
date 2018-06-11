@@ -1,6 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { getColorFromString, updateA } from 'office-ui-fabric-react/lib/utilities/color/colors';
-import { IPalette, ISemanticColors } from 'office-ui-fabric-react/lib/Styling';
+import { getColorFromString, updateA } from 'office-ui-fabric-react/lib/utilities/color';
+import { getTheme, IPalette, ISemanticColors } from 'office-ui-fabric-react/lib/Styling';
+
+export { getTheme };
 
 const yammerColors = {
   /* Blue */
