@@ -1,0 +1,29 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
+
+.y-pivot .ms-Pivot-link {
+  @extend text__small;
+  color: $color__deathMetal;
+  font-weight: $fontWeight__bold;
+  height: 2.8rem;
+  opacity: 0.8;
+  padding-bottom: 0.7rem;
+}
+
+.y-pivot .ms-Pivot-link.is-selected {
+  opacity: 1;
+}
+
+.y-pivot .ms-Pivot-link.is-selected::before {
+  border-bottom-color: $color__river;
+}
+
+.y-pivot.y-pivot__overDarkBackground .ms-Pivot-link {
+  color: $color__white;
+  opacity: 1;
+}
+
+.y-pivot.y-pivot__overDarkBackground .ms-Pivot-link.is-selected::before {
+  border-bottom-color: $color__white;
+}
