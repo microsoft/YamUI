@@ -7,14 +7,14 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -43,7 +43,7 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
           "lineHeight": "1",
         },
         "subText": Object {
-          "color": "rgb(255,255,255)",
+          "color": "#ffffff",
           "fontSize": "1.2rem",
           "lineHeight": "1.6rem",
         },
@@ -60,14 +60,14 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -96,7 +96,7 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
           "lineHeight": "1",
         },
         "subText": Object {
-          "color": "rgb(255,255,255)",
+          "color": "#ffffff",
           "fontSize": "1.2rem",
           "lineHeight": "1.6rem",
         },
@@ -115,14 +115,14 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "rgb(52,58,65)",
+          "backgroundColor": "#343A41",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -152,7 +152,7 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
           "lineHeight": "1",
         },
         "subText": Object {
-          "color": "rgb(255,255,255)",
+          "color": "#ffffff",
           "fontSize": "1.2rem",
           "lineHeight": "1.6rem",
         },

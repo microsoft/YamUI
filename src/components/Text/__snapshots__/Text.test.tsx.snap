@@ -68,7 +68,7 @@ exports[`<Text /> with color secondary matches its snapshot 1`] = `
   class=
       y-text
       {
-        color: rgb(73,83,97);
+        color: #495361;
         display: inline-block;
       }
 >
