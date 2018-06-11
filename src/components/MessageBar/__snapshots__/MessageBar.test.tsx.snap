@@ -5,8 +5,8 @@ exports[`<MessageBar /> with a type matches its snapshot 1`] = `
   className=
       y-message-bar
       {
-        background-color: rgb(243,245,248);
-        border-color: rgb(255,197,108);
+        background-color: #f3f5f8;
+        border-color: #ffc56c;
         border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
@@ -32,8 +32,8 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
   className=
       y-message-bar
       {
-        background-color: rgb(243,245,248);
-        border-color: rgb(168,176,189);
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
         border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
@@ -72,8 +72,8 @@ exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
       y-message-bar
       TEST_CLASSNAME
       {
-        background-color: rgb(243,245,248);
-        border-color: rgb(168,176,189);
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
         border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
@@ -99,8 +99,8 @@ exports[`<MessageBar /> with default options matches its snapshot 1`] = `
   className=
       y-message-bar
       {
-        background-color: rgb(243,245,248);
-        border-color: rgb(168,176,189);
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
         border-left-style: solid;
         border-left-width: 4px;
         border-radius: 1px;
