@@ -6,7 +6,7 @@ exports[`<HovercardHeader /> with additional className matches its snapshot 1`] 
       y-hovercard--header
       TEST_CLASSNAME
       {
-        border-bottom: 2px solid rgb(243,245,248);
+        border-bottom: 2px solid #f3f5f8;
       }
 >
   <Block
@@ -22,7 +22,7 @@ exports[`<HovercardHeader /> with default options matches its snapshot 1`] = `
   className=
       y-hovercard--header
       {
-        border-bottom: 2px solid rgb(243,245,248);
+        border-bottom: 2px solid #f3f5f8;
       }
 >
   <Block
