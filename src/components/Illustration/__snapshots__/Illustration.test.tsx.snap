@@ -3,7 +3,13 @@
 exports[`<Illustration /> an illustration with additional className matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className="y-illustration TEST_CLASSNAME"
+  className=
+      y-illustration
+      TEST_CLASSNAME
+      {
+        display: inline;
+        pointer-events: none;
+      }
   focusable="false"
   height="16"
   tabIndex={-1}
@@ -53,7 +59,12 @@ exports[`<Illustration /> an illustration with additional className matches its 
 exports[`<Illustration /> an illustration with block matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className="y-illustration y-illustration__isBlock"
+  className=
+      y-illustration
+      {
+        display: block;
+        pointer-events: none;
+      }
   focusable="false"
   height="16"
   tabIndex={-1}
@@ -103,7 +114,12 @@ exports[`<Illustration /> an illustration with block matches its snapshot 1`] = 
 exports[`<Illustration /> an illustration with minimal options matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className="y-illustration"
+  className=
+      y-illustration
+      {
+        display: inline;
+        pointer-events: none;
+      }
   focusable="false"
   height="16"
   tabIndex={-1}
