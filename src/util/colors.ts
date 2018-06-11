@@ -72,6 +72,8 @@ export const semanticColors: Partial<ISemanticColors> = {
   buttonText: palette.neutralPrimaryAlt,
   errorText: palette.red,
   link: palette.themeDark,
+  inputBackgroundCheckedHovered: palette.themePrimary,
+  inputBackgroundChecked: palette.themeDark,
   bodyDivider: palette.neutralDark,
   errorBackground: yammerColors.angel,
   warningBackground: palette.yellow,
