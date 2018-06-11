@@ -2,7 +2,19 @@
 
 exports[`<MessageBar /> with a type matches its snapshot 1`] = `
 <Block
-  className="y-message-bar y-message-bar__type-warning"
+  className=
+      y-message-bar
+      {
+        background-color: #f3f5f8;
+        border-color: #ffc56c;
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-radius: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 7px;
+      }
   textSize="small"
 >
   <FixedGridRow
@@ -17,7 +29,19 @@ exports[`<MessageBar /> with a type matches its snapshot 1`] = `
 
 exports[`<MessageBar /> with actions matches its snapshot 1`] = `
 <Block
-  className="y-message-bar y-message-bar__type-info"
+  className=
+      y-message-bar
+      {
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-radius: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 7px;
+      }
   textSize="small"
 >
   <FixedGridRow
@@ -27,7 +51,11 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
       content
     </FixedGridColumn>
     <FixedGridColumn
-      className="y-message-bar--actions"
+      className=
+
+          {
+            white-space: nowrap;
+          }
       fixed={true}
     >
       <FakeLink>
@@ -40,7 +68,20 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
 
 exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
 <Block
-  className="y-message-bar y-message-bar__type-info TEST_CLASSNAME"
+  className=
+      y-message-bar
+      TEST_CLASSNAME
+      {
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-radius: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 7px;
+      }
   textSize="small"
 >
   <FixedGridRow
@@ -55,7 +96,19 @@ exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
 
 exports[`<MessageBar /> with default options matches its snapshot 1`] = `
 <Block
-  className="y-message-bar y-message-bar__type-info"
+  className=
+      y-message-bar
+      {
+        background-color: #f3f5f8;
+        border-color: #a8b0bd;
+        border-left-style: solid;
+        border-left-width: 4px;
+        border-radius: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 7px;
+      }
   textSize="small"
 >
   <FixedGridRow
