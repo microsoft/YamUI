@@ -2,19 +2,63 @@
 
 exports[`<LayoutList /> as horizontal list with additional className matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal TEST_CLASSNAME y-layoutList__align-left y-layoutList__gutterSize-xSmall"
+  className=
+      y-layoutList
+      TEST_CLASSNAME
+      {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;
 
 exports[`<LayoutList /> as horizontal list with align "right" matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal y-layoutList__align-right y-layoutList__gutterSize-xSmall"
+  className=
+      y-layoutList
+      {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;
 
 exports[`<LayoutList /> as horizontal list with child content matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-xSmall"
+  className=
+      y-layoutList
+      {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 >
   list content
 </ul>
@@ -22,25 +66,119 @@ exports[`<LayoutList /> as horizontal list with child content matches its snapsh
 
 exports[`<LayoutList /> as horizontal list with gutterSize matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-large"
+  className=
+      y-layoutList
+      {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;
 
 exports[`<LayoutList /> as horizontal list without props matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__horizontal y-layoutList__align-left y-layoutList__gutterSize-xSmall"
+  className=
+      y-layoutList
+      {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
+`;
+
+exports[`<LayoutList /> as vertical list with LayoutListItem child content matches its snapshot 1`] = `
+<ul
+  className=
+      y-layoutList
+      {
+        display: block;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+>
+  <LayoutListItem
+    className=
+        TEST_CLASSNAME
+        {
+          display: block;
+          margin-bottom: 0;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+    key=".0"
+  />
+</ul>
 `;
 
 exports[`<LayoutList /> as vertical list with additional className matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical TEST_CLASSNAME y-layoutList__gutterSize-none"
+  className=
+      y-layoutList
+      TEST_CLASSNAME
+      {
+        display: block;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;
 
 exports[`<LayoutList /> as vertical list with child content matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-none"
+  className=
+      y-layoutList
+      {
+        display: block;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 >
   list content
 </ul>
@@ -48,12 +186,38 @@ exports[`<LayoutList /> as vertical list with child content matches its snapshot
 
 exports[`<LayoutList /> as vertical list with gutterSize matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-small"
+  className=
+      y-layoutList
+      {
+        display: block;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;
 
 exports[`<LayoutList /> as vertical list without props matches its snapshot 1`] = `
 <ul
-  className="y-layoutList y-layoutList__vertical y-layoutList__gutterSize-none"
+  className=
+      y-layoutList
+      {
+        display: block;
+        list-style: none;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
 />
 `;

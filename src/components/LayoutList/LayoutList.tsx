@@ -2,9 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { join } from '../../util/classNames';
+import { join, mapClassNameToElementsOfType } from '../../util/classNames';
 import { GutterSize } from '../FixedGrid';
-import './LayoutList.css';
+import { getClassNames } from './LayoutList.styles';
+import LayoutListItem from './LayoutListItem';
 
 export { GutterSize };
 
@@ -43,22 +44,14 @@ export type LayoutListProps = HorizontalListProps | VerticalListProps;
  */
 export default class LayoutList extends React.Component<LayoutListProps> {
   public render() {
-    return <ul className={this.getClasses()}>{this.props.children}</ul>;
-  }
+    const { className, direction, gutterSize, children } = this.props;
+    const align = direction === 'horizontal' ? (this.props as HorizontalListProps).align || 'left' : undefined;
+    const classNames = getClassNames({ direction, gutterSize, align });
 
-  private getClasses() {
-    const { className, direction, gutterSize } = this.props;
-    const defaultGutterSize = direction === 'horizontal' ? GutterSize.XSMALL : GutterSize.NONE;
-
-    const classes = ['y-layoutList', `y-layoutList__${direction}`, className];
-
-    if (direction === 'horizontal') {
-      const { align = 'left' } = this.props as HorizontalListProps;
-      classes.push(`y-layoutList__align-${align}`);
-    }
-
-    classes.push(`y-layoutList__gutterSize-${gutterSize || defaultGutterSize}`);
-
-    return join(classes);
+    return (
+      <ul className={join(['y-layoutList', className, classNames.root])}>
+        {mapClassNameToElementsOfType(children, classNames.child, LayoutListItem)}
+      </ul>
+    );
   }
 }
