@@ -6,7 +6,7 @@ import Callout, { DirectionalHint } from '../Callout';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { KeyCodes } from '../../util/keyCodes';
 import ScreenreaderText from '../ScreenreaderText';
-import './Hovercard.css';
+import { getClassNames } from './Hovercard.styles';
 
 const hideDelay = 500;
 const showDelay = 750;
@@ -97,27 +97,7 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
 
   public render() {
     const { className, content, directionalHint, isBeakVisible, screenreaderTitle, children } = this.props;
-
-    const screenreaderTitleChild = screenreaderTitle && (
-      <ScreenreaderText>
-        <h1>{screenreaderTitle}</h1>
-      </ScreenreaderText>
-    );
-
-    const hovercard = this.state.visible && (
-      <Callout
-        isBeakVisible={isBeakVisible}
-        directionalHint={directionalHint}
-        target={this.triggerElement}
-        onDismiss={this.hide}
-        preventDismissOnScroll={false}
-      >
-        <div className="y-hovercard--modal-container" onMouseEnter={this.handleBodyHover} onMouseLeave={this.beginHide}>
-          {screenreaderTitleChild}
-          {content}
-        </div>
-      </Callout>
-    );
+    const classNames = getClassNames();
 
     return (
       <span className={join(['y-hovercard', className])}>
@@ -130,7 +110,28 @@ export default class Hovercard extends React.Component<HovercardProps, Hovercard
         >
           {children}
         </span>
-        {hovercard}
+        {this.state.visible && (
+          <Callout
+            isBeakVisible={isBeakVisible}
+            directionalHint={directionalHint}
+            target={this.triggerElement}
+            onDismiss={this.hide}
+            preventDismissOnScroll={false}
+          >
+            <div
+              className={`y-hovercard--modal-container ${classNames.modalContainer}`}
+              onMouseEnter={this.handleBodyHover}
+              onMouseLeave={this.beginHide}
+            >
+              {screenreaderTitle && (
+                <ScreenreaderText>
+                  <h1>{screenreaderTitle}</h1>
+                </ScreenreaderText>
+              )}
+              {content}
+            </div>
+          </Callout>
+        )}
       </span>
     );
   }

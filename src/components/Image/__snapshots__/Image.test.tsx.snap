@@ -3,7 +3,12 @@
 exports[`<Image /> with additional className matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image TEST_CLASSNAME"
+  className=
+      y-image
+      TEST_CLASSNAME
+      {
+        display: inline-block;
+      }
   shouldFadeIn={false}
   src="image.png"
 />
@@ -12,7 +17,11 @@ exports[`<Image /> with additional className matches its snapshot 1`] = `
 exports[`<Image /> with block matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image y-image__block"
+  className=
+      y-image
+      {
+        display: block;
+      }
   shouldFadeIn={false}
   src="image.png"
 />
@@ -21,7 +30,12 @@ exports[`<Image /> with block matches its snapshot 1`] = `
 exports[`<Image /> with border type matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image y-image__border-round"
+  className=
+      y-image
+      {
+        border-radius: 50%;
+        display: inline-block;
+      }
   shouldFadeIn={false}
   src="image.png"
 />
@@ -30,7 +44,11 @@ exports[`<Image /> with border type matches its snapshot 1`] = `
 exports[`<Image /> with default options matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image"
+  className=
+      y-image
+      {
+        display: inline-block;
+      }
   shouldFadeIn={false}
   src="image.png"
 />
@@ -39,7 +57,11 @@ exports[`<Image /> with default options matches its snapshot 1`] = `
 exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image y-image__fullWidth"
+  className=
+      y-image
+      {
+        display: block;
+      }
   height={50}
   shouldFadeIn={false}
   src="image.png"
@@ -50,7 +72,11 @@ exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
 exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image y-image__fullWidth"
+  className=
+      y-image
+      {
+        display: block;
+      }
   shouldFadeIn={false}
   src="image.png"
   width="100%"
@@ -60,7 +86,11 @@ exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image"
+  className=
+      y-image
+      {
+        display: inline-block;
+      }
   height={50}
   shouldFadeIn={false}
   src="image.png"
@@ -71,7 +101,11 @@ exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image"
+  className=
+      y-image
+      {
+        display: inline-block;
+      }
   imageFit={2}
   shouldFadeIn={false}
   src="image.png"
@@ -81,7 +115,11 @@ exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 exports[`<Image /> with shouldFadeIn matches its snapshot 1`] = `
 <StyledCustomizedImage
   alt="description"
-  className="y-image"
+  className=
+      y-image
+      {
+        display: inline-block;
+      }
   shouldFadeIn={true}
   src="image.png"
 />
