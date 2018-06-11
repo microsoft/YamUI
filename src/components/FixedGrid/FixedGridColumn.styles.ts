@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets } from '@uifabric/styling';
+import { mergeStyleSets, IRawStyle } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
 export interface FixedGridColumnStyleProps {
@@ -8,7 +8,7 @@ export interface FixedGridColumnStyleProps {
   verticalAlign: 'top' | 'middle' | 'bottom';
 }
 
-const alignItems: { [i in 'top' | 'middle' | 'bottom']: 'flex-start' | 'flex-end' | 'center' } = {
+const alignItems: { [i in 'top' | 'middle' | 'bottom']: IRawStyle['alignItems'] } = {
   top: 'flex-start',
   middle: 'center',
   bottom: 'flex-end',

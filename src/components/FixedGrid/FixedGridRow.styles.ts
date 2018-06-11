@@ -16,12 +16,14 @@ export const getClassNames = memoizeFunction((styleProps: BoxStyleProps) => {
     root: {
       display: 'flex',
       marginBottom: bottomSpacing ? gutterSizes[bottomSpacing] : undefined,
-    },
-    column: {
-      marginLeft: gutterSizes[gutterSize],
       selectors: {
-        ':first-child': {
-          marginLeft: 0,
+        '> .y-fixedGridColumn': {
+          marginLeft: gutterSizes[gutterSize],
+          selectors: {
+            ':first-child': {
+              marginLeft: 0,
+            },
+          },
         },
       },
     },

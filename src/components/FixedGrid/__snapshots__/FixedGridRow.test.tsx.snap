@@ -8,6 +8,12 @@ exports[`<FixedGridRow /> with additional className matches its snapshot 1`] = `
       {
         display: flex;
       }
+      & > .y-fixedGridColumn {
+        margin-left: 0.8rem;
+      }
+      & > .y-fixedGridColumn:first-child {
+        margin-left: 0px;
+      }
 >
   grid content
 </div>
@@ -21,6 +27,12 @@ exports[`<FixedGridRow /> with bottom spacing matches its snapshot 1`] = `
         display: flex;
         margin-bottom: 2rem;
       }
+      & > .y-fixedGridColumn {
+        margin-left: 0.8rem;
+      }
+      & > .y-fixedGridColumn:first-child {
+        margin-left: 0px;
+      }
 >
   grid content
 </div>
@@ -33,6 +45,12 @@ exports[`<FixedGridRow /> with default options matches its snapshot 1`] = `
       {
         display: flex;
       }
+      & > .y-fixedGridColumn {
+        margin-left: 0.8rem;
+      }
+      & > .y-fixedGridColumn:first-child {
+        margin-left: 0px;
+      }
 >
   grid content
 </div>
@@ -44,6 +62,12 @@ exports[`<FixedGridRow /> with gutter size matches its snapshot 1`] = `
       y-fixedGridRow
       {
         display: flex;
+      }
+      & > .y-fixedGridColumn {
+        margin-left: 1.6rem;
+      }
+      & > .y-fixedGridColumn:first-child {
+        margin-left: 0px;
       }
 >
   grid content
