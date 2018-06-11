@@ -59,6 +59,7 @@ export const palette: Partial<IPalette> = {
   redDark: yammerColors.dracula,
   red: yammerColors.lestat,
   white: yammerColors.white,
+  yellow: yammerColors.noon,
 };
 
 /*
@@ -72,6 +73,8 @@ export const semanticColors: Partial<ISemanticColors> = {
   errorText: palette.red,
   link: palette.themeDark,
   bodyDivider: palette.neutralDark,
+  errorBackground: yammerColors.angel,
+  warningBackground: palette.yellow,
 };
 
 /**
