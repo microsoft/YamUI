@@ -54,7 +54,9 @@ export default class ResizeList extends React.Component<ResizeListProps> {
 
   private onRenderData = (data: ResizeListData) => {
     const renderItems = this.props.items.slice(0, data.count);
-    const actionItem = this.props.actionItem ? <LayoutListItem>{this.props.actionItem}</LayoutListItem> : null;
+    const actionItem = this.props.actionItem ? (
+      <LayoutListItem key="action">{this.props.actionItem}</LayoutListItem>
+    ) : null;
 
     return (
       <LayoutList
