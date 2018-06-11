@@ -2,13 +2,18 @@
 
 exports[`<Avatar /> accessible text with badge description matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -19,13 +24,18 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
 
 exports[`<Avatar /> accessible text without badge description matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -36,13 +46,18 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
 
 exports[`<Avatar /> with additional className matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium TEST_CLASSNAME"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -53,17 +68,34 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
 
 exports[`<Avatar /> with badge content matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-xSmall"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={10}
+    styles={[Function]}
     text="NAME"
   />
   <div
-    className="y-avatar--badge y-avatar__size-xSmall--badge"
+    className=
+        y-avatar--badge
+        {
+          background: rgb(255,255,255);
+          border-radius: 50%;
+          border: solid 2px rgb(255,255,255);
+          bottom: -2px;
+          color: rgb(56,108,187);
+          height: 16px;
+          position: absolute;
+          right: -2px;
+          width: 16px;
+        }
   >
     <Text>
       badge
@@ -77,13 +109,39 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
 
 exports[`<Avatar /> with image url matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
+    styles={[Function]}
+    text="NAME"
+  />
+  <ScreenreaderText>
+    NAME
+  </ScreenreaderText>
+</div>
+`;
+
+exports[`<Avatar /> with imageShouldFadeIn matches its snapshot 1`] = `
+<div
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
+>
+  <StyledCustomizedPersonaCoin
+    hidePersonaDetails={true}
+    imageShouldFadeIn={true}
+    size={12}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -94,13 +152,18 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
 
 exports[`<Avatar /> with size matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-xLarge"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={14}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -111,13 +174,18 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
 
 exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium y-avatar__borderType-soft"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
+    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -128,12 +196,17 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 
 exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
 <div
-  className="y-avatar y-avatar__size-medium"
+  className=
+      y-avatar
+      {
+        position: relative;
+      }
 >
   <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     size={12}
+    styles={[Function]}
     text="First Last"
   />
   <ScreenreaderText>

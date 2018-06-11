@@ -9,13 +9,13 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "default",
         "display": "inline-block",
         "fontWeight": "600",
@@ -28,20 +28,20 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -69,13 +69,13 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "default",
         "display": "inline-block",
         "fontWeight": "600",
@@ -88,20 +88,20 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -139,13 +139,13 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -158,20 +158,20 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -200,13 +200,13 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -219,20 +219,20 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -260,13 +260,13 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -279,20 +279,20 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -320,13 +320,13 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -339,20 +339,20 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -380,13 +380,13 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "block",
         "fontWeight": "600",
@@ -399,20 +399,20 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
         "width": "100%",
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -440,13 +440,13 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -459,20 +459,20 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -511,13 +511,13 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -530,20 +530,20 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -583,13 +583,13 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -602,20 +602,20 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -643,13 +643,13 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#386cbb",
-        "borderColor": "#386cbb",
+        "backgroundColor": "rgb(56,108,187)",
+        "borderColor": "rgb(56,108,187)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#ffffff",
+        "color": "rgb(255,255,255)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -662,20 +662,20 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#2f5c9f",
-        "borderColor": "#2f5c9f",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(47,92,159)",
+        "borderColor": "rgb(47,92,159)",
+        "color": "rgb(255,255,255)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#2f5c9f",
-        "borderColor": "#2f5c9f",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(47,92,159)",
+        "borderColor": "rgb(47,92,159)",
+        "color": "rgb(255,255,255)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#264f8c",
-        "borderColor": "#264f8c",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(38,79,140)",
+        "borderColor": "rgb(38,79,140)",
+        "color": "rgb(255,255,255)",
       },
     }
   }
@@ -703,13 +703,13 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#386cbb",
-        "borderColor": "#386cbb",
+        "backgroundColor": "rgb(56,108,187)",
+        "borderColor": "rgb(56,108,187)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#ffffff",
+        "color": "rgb(255,255,255)",
         "cursor": "default",
         "display": "inline-block",
         "fontWeight": "600",
@@ -722,20 +722,20 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#2f5c9f",
-        "borderColor": "#2f5c9f",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(47,92,159)",
+        "borderColor": "rgb(47,92,159)",
+        "color": "rgb(255,255,255)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#2f5c9f",
-        "borderColor": "#2f5c9f",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(47,92,159)",
+        "borderColor": "rgb(47,92,159)",
+        "color": "rgb(255,255,255)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#264f8c",
-        "borderColor": "#264f8c",
-        "color": "#ffffff",
+        "backgroundColor": "rgb(38,79,140)",
+        "borderColor": "rgb(38,79,140)",
+        "color": "rgb(255,255,255)",
       },
     }
   }
@@ -773,13 +773,13 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -792,20 +792,20 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -833,13 +833,13 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -852,20 +852,20 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -893,13 +893,13 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "default",
         "display": "inline-block",
         "fontWeight": "600",
@@ -912,20 +912,20 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -963,13 +963,13 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -982,20 +982,20 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -1034,13 +1034,13 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -1053,20 +1053,20 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
@@ -1095,13 +1095,13 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   styles={
     Object {
       "root": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#dde0e6",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(221,224,230)",
         "borderRadius": "2px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
-        "color": "#386cbb",
+        "color": "rgb(56,108,187)",
         "cursor": "pointer",
         "display": "inline-block",
         "fontWeight": "600",
@@ -1114,20 +1114,20 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
         "width": undefined,
       },
       "rootFocused": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
       },
       "rootHovered": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#9ac3ff",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(154,195,255)",
+        "color": "rgb(56,108,187)",
         "textDecoration": "none",
       },
       "rootPressed": Object {
-        "backgroundColor": "#ffffff",
-        "borderColor": "#6c98d9",
-        "color": "#386cbb",
+        "backgroundColor": "rgb(255,255,255)",
+        "borderColor": "rgb(108,152,217)",
+        "color": "rgb(56,108,187)",
       },
     }
   }
