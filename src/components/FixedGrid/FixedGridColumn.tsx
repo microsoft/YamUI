@@ -34,7 +34,9 @@ export default class FixedGridColumn extends React.Component<FixedGridColumnProp
 
     return (
       <div className={join(['y-fixedGridColumn', className, classNames.root])}>
-        {verticalAlign && verticalAlign !== 'top' ? (
+        {/* NOTE: We achieve vertical-align with flexbox. The extra inner div prevents direct children
+           from receiving flex-child styling and getting wonky vertical alignment. */
+        verticalAlign && verticalAlign !== 'top' ? (
           <div className={classNames.inner}>
             <div>{children}</div>
           </div>
