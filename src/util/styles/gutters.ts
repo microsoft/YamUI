@@ -34,7 +34,7 @@ const getPxGutterValue = (gutterUnits: number) => {
 /**
  * Get a CSS unit length value from the number of gutter units desired.
  * @param gutterUnits The number of 4px gutter units desired.
- * @param growWithText Uses rem instead of px, which resizes with text if the user changes their base font-size.
+ * @param resizeWithText Uses rem instead of px, which resizes with text if the user changes their base font-size.
  */
 export const getGutterValue = (gutterUnits: number, resizeWithText?: boolean): CSSLengthUnit => {
   if (resizeWithText) {
