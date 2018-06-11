@@ -56,7 +56,13 @@ exports[`<Hovercard /> with screenreaderTitle matches its snapshot 1`] = `
     target={null}
   >
     <div
-      className="y-hovercard--modal-container"
+      className=
+          y-hovercard--modal-container
+          {
+            font-size: 1.5rem;
+            line-height: 2.0rem;
+            width: 340px;
+          }
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
     >
