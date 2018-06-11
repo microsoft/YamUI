@@ -121,6 +121,7 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
   </span>
   <span
     class="y-screenreaderText"
+    style="display: block; padding: 0px; border: 0px; position: absolute; margin: -1px; height: 1px; width: 1px; overflow: hidden; word-wrap: normal;"
   />
 </span>
 `;
@@ -140,6 +141,7 @@ exports[`<Text /> with screenreader text matches its snapshot 1`] = `
   </span>
   <span
     class="y-screenreaderText"
+    style="display: block; padding: 0px; border: 0px; position: absolute; margin: -1px; height: 1px; width: 1px; overflow: hidden; word-wrap: normal;"
   >
     SCREENREADER TEXT
   </span>
