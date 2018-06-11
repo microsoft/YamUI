@@ -8,6 +8,18 @@ export interface HeadingStyleProps {
   size?: HeadingSize;
 }
 
+const getFontWeight = (size?: HeadingSize) => {
+  if (size === '4') {
+    return fontWeights.normal;
+  }
+
+  if (size === 'none') {
+    return 'inherit';
+  }
+
+  return fontWeights.bold;
+};
+
 export const getClassNames = memoizeFunction((styleProps: HeadingStyleProps) => {
   const { size } = styleProps;
 
@@ -16,7 +28,7 @@ export const getClassNames = memoizeFunction((styleProps: HeadingStyleProps) => 
       display: 'inline',
       fontSize: 'inherit',
       lineHeight: 'inherit',
-      fontWeight: size === '4' ? fontWeights.normal : size === 'none' ? 'inherit' : fontWeights.bold,
+      fontWeight: getFontWeight(size),
       marginBottom: size === 'none' ? 0 : undefined,
     },
   });
