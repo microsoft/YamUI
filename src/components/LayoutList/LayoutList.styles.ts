@@ -3,11 +3,12 @@ import { gutterSize as gutterSizes } from '../../util/styles/gutters';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { GutterSize } from '../FixedGrid';
+import { LayoutListProps, HorizontalListProps } from './';
 
 export interface LayoutListStyleProps {
-  direction: 'horizontal' | 'vertical';
+  direction: LayoutListProps['direction'];
   gutterSize?: GutterSize;
-  align?: 'left' | 'right';
+  align?: HorizontalListProps['align'];
 }
 
 export const getClassNames = memoizeFunction((styleProps: LayoutListStyleProps) => {
