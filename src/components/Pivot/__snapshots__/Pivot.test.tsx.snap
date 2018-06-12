@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pivot /> when given a className matches its snapshot 1`] = `
+<StyledPivotBase
+  className="y-pivot Test"
+  headersOnly={true}
+  onLinkClick={[Function]}
+  selectedKey="1"
+>
+  <PivotItem
+    ariaLabel="test"
+    headerText="Tab 1"
+    itemKey="1"
+    key="1"
+  />
+  <PivotItem
+    headerText="Tab 2"
+    itemKey="2"
+    key="2"
+  />
+  <PivotItem
+    headerText="Tab 3"
+    itemKey="3"
+    key="3"
+  />
+</StyledPivotBase>
+`;
+
+exports[`<Pivot /> with default options matches its snapshot 1`] = `
+<StyledPivotBase
+  className="y-pivot"
+  headersOnly={true}
+  onLinkClick={[Function]}
+  selectedKey="1"
+>
+  <PivotItem
+    ariaLabel="test"
+    headerText="Tab 1"
+    itemKey="1"
+    key="1"
+  />
+  <PivotItem
+    headerText="Tab 2"
+    itemKey="2"
+    key="2"
+  />
+  <PivotItem
+    headerText="Tab 3"
+    itemKey="3"
+    key="3"
+  />
+</StyledPivotBase>
+`;
+
+exports[`<Pivot /> with overDarkBackground as true matches its snapshot 1`] = `
+<StyledPivotBase
+  className="y-pivot y-pivot__overDarkBackground"
+  headersOnly={true}
+  onLinkClick={[Function]}
+  selectedKey="1"
+>
+  <PivotItem
+    ariaLabel="test"
+    headerText="Tab 1"
+    itemKey="1"
+    key="1"
+  />
+  <PivotItem
+    headerText="Tab 2"
+    itemKey="2"
+    key="2"
+  />
+  <PivotItem
+    headerText="Tab 3"
+    itemKey="3"
+    key="3"
+  />
+</StyledPivotBase>
+`;
