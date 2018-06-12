@@ -17,7 +17,7 @@ When loading:
 
 With results:
 
-```js { "props": { "data-description": "with results" } }
+```js { "props": { "data-description": "with results", "data-action-states":"[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-suggestions-list-item\"}]" } }
 <SuggestionsList
   searchText="Cris"
   loadingText={'Searching for \'Cris\''}
