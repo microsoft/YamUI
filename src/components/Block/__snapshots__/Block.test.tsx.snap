@@ -22,7 +22,7 @@ exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
   className=
       y-block
       {
-        margin-bottom: 2rem;
+        margin-bottom: 2.0rem;
       }
 >
   <div
@@ -250,8 +250,8 @@ exports[`<Block /> with vertical padding matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          padding-bottom: 2rem;
-          padding-top: 2rem;
+          padding-bottom: 2.0rem;
+          padding-top: 2.0rem;
           word-wrap: break-word;
         }
   >

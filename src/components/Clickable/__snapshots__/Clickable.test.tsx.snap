@@ -3,7 +3,28 @@
 exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
 <button
   aria-label="aria label content"
-  className="y-clickable"
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   type="button"
 >
   <span
@@ -16,7 +37,28 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
 
 exports[`<Clickable /> when block is true matches its snapshot 1`] = `
 <button
-  className="y-clickable y-clickable__block"
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: block;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: 100%;
+      }
   type="button"
 >
   <span
@@ -29,7 +71,28 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
 
 exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
 <button
-  class="y-clickable"
+  class=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   type="button"
 >
   <span
@@ -42,7 +105,28 @@ exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
 
 exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   title="extra browser tooltip content"
   type="button"
 >
@@ -56,7 +140,28 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
 
 exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   type="button"
 >
   clickable content
@@ -65,7 +170,29 @@ exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
 
 exports[`<Clickable /> with additional className matches its snapshot 1`] = `
 <button
-  className="y-clickable TEST_CLASSNAME"
+  className=
+      y-clickable
+      TEST_CLASSNAME
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   type="button"
 >
   <span
@@ -78,7 +205,28 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
 
 exports[`<Clickable /> with default options matches its snapshot 1`] = `
 <button
-  className="y-clickable"
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
   type="button"
 >
   <span
