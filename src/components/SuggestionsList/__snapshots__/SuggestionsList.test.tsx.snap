@@ -2,10 +2,27 @@
 
 exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
+      & > *:last-child {
+        padding-bottom: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+
   >
     <li
       key="groupTitle"
@@ -34,10 +51,27 @@ exports[`<SuggestionsList /> when isLoading=false with results when onHover is c
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
+      & > *:last-child {
+        padding-bottom: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+
   >
     <li
       key="groupTitle"
@@ -64,10 +98,27 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
+      & > *:last-child {
+        padding-bottom: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+
   >
     <li
       key="groupTitle"
@@ -94,10 +145,18 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 
 exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
 >
   <Block
-    className="y-suggestions-list--no-results"
     padding="large"
     textAlign="center"
     textSize="small"
@@ -113,10 +172,27 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
 
 exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+        {
+          border-bottom: 0.1rem solid #f3f5f8;
+          margin-bottom: -1px;
+        }
   >
     <li
       key="groupTitle"
@@ -139,7 +215,14 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
     </li>
   </ul>
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          padding-bottom: 1.4rem;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 1.4rem;
+        }
   >
     <Spinner
       isCentered={true}
@@ -153,10 +236,27 @@ exports[`<SuggestionsList /> when isLoading=true with results when onHover is ca
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+        {
+          border-bottom: 0.1rem solid #f3f5f8;
+          margin-bottom: -1px;
+        }
   >
     <li
       key="groupTitle"
@@ -179,7 +279,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
     </li>
   </ul>
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          padding-bottom: 1.4rem;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 1.4rem;
+        }
   >
     <Spinner
       isCentered={true}
@@ -191,10 +298,27 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
+      & > *:first-child {
+        padding-top: 4px;
+      }
 >
   <ul
-    className="y-suggestions-list--results"
+    className=
+
+        {
+          border-bottom: 0.1rem solid #f3f5f8;
+          margin-bottom: -1px;
+        }
   >
     <li
       key="groupTitle"
@@ -217,7 +341,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
     </li>
   </ul>
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          padding-bottom: 1.4rem;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 1.4rem;
+        }
   >
     <Spinner
       isCentered={true}
@@ -229,10 +360,26 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 
 exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0 !important;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        width: 280px;
+      }
 >
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          padding-bottom: 1.4rem;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 1.4rem;
+        }
   >
     <Spinner
       isCentered={true}
