@@ -8,7 +8,7 @@ import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
 import TextField from '../TextField';
 import { KeyCodes } from '../../util/keyCodes';
-import './EditableText.css';
+import { getClassNames } from './EditableText.styles';
 
 export interface EditableTextProps extends BaseComponentProps {
   /**
@@ -69,13 +69,13 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
   public render() {
     const { editedValue, isEditing } = this.state;
     const { text, promptText, placeHolder, maxLength, className } = this.props;
-    const classes = join(['y-editableText', className]);
+    const classNames = getClassNames({ isEditing });
+    const rootClassNames = join(['y-editableText', className, classNames.root]);
 
     if (isEditing) {
       return (
-        <div className={classes}>
+        <div className={rootClassNames}>
           <TextField
-            className="y-editableText--textfield"
             underlined={true}
             onChange={this.updateInternalEditedDescription}
             value={editedValue}
@@ -90,16 +90,15 @@ export default class EditableText extends React.Component<EditableTextProps, Edi
     }
 
     return (
-      <span className={classes}>
+      <span className={rootClassNames}>
         <Clickable
           onClick={this.handleEditClick}
           unstyled={true}
-          className="y-editableText--clickable"
           ariaLabel={promptText}
           focusableRef={this.setClickableFocusable}
         >
           <EditIcon />
-          <span className="y-editableText--clickableText">{text || promptText}</span>
+          <span className={classNames.clickableText}>{text || promptText}</span>
         </Clickable>
       </span>
     );

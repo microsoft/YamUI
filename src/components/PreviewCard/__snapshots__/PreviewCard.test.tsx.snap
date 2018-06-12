@@ -116,7 +116,6 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
       >
         <Spinner
           color="metadata"
-          hideText={false}
           size="xSmall"
           text="loading..."
         />
