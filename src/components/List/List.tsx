@@ -4,7 +4,7 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
 import Block, { TextSize } from '../Block';
-import './List.css';
+import { getClassNames } from './List.styles';
 
 export { TextSize };
 
@@ -29,9 +29,8 @@ export default class List extends React.Component<ListProps> {
   public render() {
     const { className, children, type, textSize } = this.props;
     const Tag = type === 'ordered' ? 'ol' : 'ul';
-    const listClass = type === 'ordered' ? 'y-list__ordered' : 'y-list__unordered';
-
-    const list = <Tag className={join(['y-list', listClass, className])}>{children}</Tag>;
+    const classNames = getClassNames({ type, textSize });
+    const list = <Tag className={join(['y-list', className, classNames.root])}>{children}</Tag>;
 
     return textSize ? <Block textSize={textSize}>{list}</Block> : list;
   }
