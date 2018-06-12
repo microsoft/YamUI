@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
+<WithResponsiveMode
+  className=""
+  containerClassName=
+      y-modalDialog
+      TEST_CLASSNAME
+      {
+        width: 580px;
+      }
+  isBlocking={false}
+  isDarkOverlay={true}
+  isOpen={false}
+  onDismiss={[MockFunction]}
+  onDismissed={[MockFunction]}
+>
+  <Block
+    horizontalPadding="xLarge"
+    verticalPadding="medium"
+  >
+    <ScreenreaderText>
+      <h1>
+        Title
+      </h1>
+    </ScreenreaderText>
+  </Block>
+</WithResponsiveMode>
+`;
+
+exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
+<WithResponsiveMode
+  className=""
+  containerClassName=
+      y-modalDialog
+      TEST_CLASSNAME
+      {
+        width: 580px;
+      }
+  isBlocking={false}
+  isDarkOverlay={true}
+  isOpen={false}
+  onDismiss={[MockFunction]}
+  onDismissed={[MockFunction]}
+>
+  <Block
+    horizontalPadding="xLarge"
+    verticalPadding="medium"
+  >
+    <FixedGridRow
+      bottomSpacing="xLarge"
+    >
+      <FixedGridColumn>
+        <Heading
+          level="1"
+          size="5"
+        >
+          Title
+        </Heading>
+      </FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <Clickable
+          ariaLabel="close"
+          block={true}
+          onClick={[MockFunction]}
+          unstyled={true}
+        >
+          <Cancel
+            block={true}
+            size="12"
+          />
+        </Clickable>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+</WithResponsiveMode>
+`;
+
+exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
+<WithResponsiveMode
+  className=""
+  containerClassName=
+      y-modalDialog
+      {
+        width: 580px;
+      }
+  isBlocking={false}
+  isDarkOverlay={true}
+  isOpen={false}
+  onDismiss={[MockFunction]}
+  onDismissed={[MockFunction]}
+>
+  <Block
+    horizontalPadding="xLarge"
+    verticalPadding="medium"
+  >
+    <FixedGridRow
+      bottomSpacing="xLarge"
+    >
+      <FixedGridColumn>
+        <Heading
+          level="1"
+          size="5"
+        >
+          Title
+        </Heading>
+      </FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <Clickable
+          ariaLabel="close"
+          block={true}
+          onClick={[MockFunction]}
+          unstyled={true}
+        >
+          <Cancel
+            block={true}
+            size="12"
+          />
+        </Clickable>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+</WithResponsiveMode>
+`;
