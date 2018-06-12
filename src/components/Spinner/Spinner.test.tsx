@@ -56,9 +56,19 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with a size', () => {
+  describe('with xSmall size', () => {
     beforeEach(() => {
       component = shallow(<Spinner text="Loading" size={SpinnerSize.XSMALL} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with large size', () => {
+    beforeEach(() => {
+      component = shallow(<Spinner text="Loading" size={SpinnerSize.LARGE} />);
     });
 
     it('matches its snapshot', () => {
