@@ -7,7 +7,7 @@ Clickable should be used in place of NavigationLink when you need click interact
 
 Inline:
 
-```js { "props": { "data-description": "inline" } }
+```js { "props": { "data-description": "inline", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 <div>
   The following Clickable example looks like a link but is actually rendered as a button: <Clickable onClick={action('clickable clicked')}>Click me</Clickable>
 </div>
@@ -15,7 +15,7 @@ Inline:
 
 Unstyled:
 
-```js { "props": { "data-description": "unstyled" } }
+```js { "props": { "data-description": "unstyled", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 <div>
   The following Clickable example has <strong>unstyled: true</strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
 </div>
@@ -23,7 +23,7 @@ Unstyled:
 
 Unstyled block with FakeLink:
 
-```js { "props": { "data-description": "unstyled block with fakelink" } }
+```js { "props": { "data-description": "unstyled block with fakelink", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 <div>
   <Clickable onClick={action('clickable clicked')} unstyled={true} block={true}>
     This entire area is a Clickable with <strong>unstyled: true</strong> and <strong>block: true</strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
@@ -33,7 +33,7 @@ Unstyled block with FakeLink:
 
 Wrapping block content:
 
-```js { "props": { "data-description": "wrapping block" } }
+```js { "props": { "data-description": "wrapping block", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 
 <Clickable onClick={action('clickable clicked')} block={true}>
   <div>
@@ -44,7 +44,7 @@ Wrapping block content:
 
 Wrapping image:
 
-```js { "props": { "data-description": "wrapping image" } }
+```js { "props": { "data-description": "wrapping image", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 

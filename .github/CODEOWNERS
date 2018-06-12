@@ -3,5 +3,3 @@
 # Order is important. The last matching pattern has the most precedence.
 
 * @swese44 @unindented @richardtagger
-
-config/styleguide-visual/reference/*    @vanschyndel @cainhimself @dan5382
