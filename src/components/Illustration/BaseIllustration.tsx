@@ -12,6 +12,11 @@ export interface IllustrationProps extends BaseComponentProps {
    * `line-height`, and is creating extra vertical space.
    */
   block?: boolean;
+
+  /**
+   *  If provided, this pixel value will override the default size this Illustration is optimized for.
+   */
+  size?: number;
 }
 
 /**
@@ -19,7 +24,7 @@ export interface IllustrationProps extends BaseComponentProps {
  * sizes, so you must import the proper size for your application.
  */
 export default class BaseIllustration extends React.Component<IllustrationProps> {
-  protected getClassName() {
-    return join(['y-illustration', this.props.className, getClassNames({ block: !!this.props.block }).root]);
+  protected getClassName(size: number) {
+    return join(['y-illustration', this.props.className, getClassNames({ block: !!this.props.block, size }).root]);
   }
 }

@@ -25,7 +25,7 @@ exports[`<FixedGridRow /> with bottom spacing matches its snapshot 1`] = `
       y-fixedGridRow
       {
         display: flex;
-        margin-bottom: 2rem;
+        margin-bottom: 2.0rem;
       }
       & > .y-fixedGridColumn {
         margin-left: 0.8rem;

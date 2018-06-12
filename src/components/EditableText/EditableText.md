@@ -5,7 +5,7 @@ EditableText will inherit the text size of the nearest Block component.
 
 With text and max length:
 
-```js { "props": { "data-description": "with text and maxLength" } }
+```js { "props": { "data-description": "with text and maxLength", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"},{\"action\":\"click\",\"selector\":\".y-clickable\"}]" } }
 const { TextSize } = require('../Block');
 
 <Block textSize={TextSize.SMALL}>
@@ -15,7 +15,7 @@ const { TextSize } = require('../Block');
 
 With prompt text and placeholder text:
 
-```js { "props": { "data-description": "with promptText and placeHolder" } }
+```js { "props": { "data-description": "with promptText and placeHolder", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"},{\"action\":\"click\",\"selector\":\".y-clickable\"},{\"action\":\"keyPress\",\"key\":\"Y\"}]" } }
 const { TextSize } = require('../Block');
 
 <Block textSize={TextSize.SMALL}>

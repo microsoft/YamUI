@@ -7,12 +7,12 @@ import BaseIllustration from '../BaseIllustration';
 
 export default class PhotoWatermark extends BaseIllustration {
   public render() {
+    const { size = 20 } = this.props;
+
     return (
       <svg
         viewBox="0 0 20 20"
-        height="20"
-        width="20"
-        className={this.getClassName()}
+        className={this.getClassName(size)}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"

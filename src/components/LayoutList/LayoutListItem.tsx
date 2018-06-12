@@ -3,7 +3,6 @@ import '../../yamui';
 import * as React from 'react';
 import { NestableBaseComponentProps as LayoutListItemProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
-import './LayoutList.css';
 
 export { LayoutListItemProps };
 

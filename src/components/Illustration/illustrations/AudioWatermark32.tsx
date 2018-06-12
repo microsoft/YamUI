@@ -7,12 +7,12 @@ import BaseIllustration from '../BaseIllustration';
 
 export default class AudioWatermark extends BaseIllustration {
   public render() {
+    const { size = 32 } = this.props;
+
     return (
       <svg
         viewBox="0 0 32 32"
-        height="32"
-        width="32"
-        className={this.getClassName()}
+        className={this.getClassName(size)}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"
