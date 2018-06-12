@@ -3,23 +3,29 @@
 exports[`<ProgressIndicator /> when complete matches its snapshot 1`] = `
 <StyledCustomizedProgressIndicator
   ariaValueText="100% complete"
+  barHeight={4}
   className="y-progress-indicator"
   percentComplete={1}
+  styles={[Function]}
 />
 `;
 
 exports[`<ProgressIndicator /> when incomplete matches its snapshot 1`] = `
 <StyledCustomizedProgressIndicator
   ariaValueText="50% complete"
-  className="y-progress-indicator y-progress-indicator__incomplete"
+  barHeight={4}
+  className="y-progress-indicator"
   percentComplete={0.5}
+  styles={[Function]}
 />
 `;
 
 exports[`<ProgressIndicator /> with additional className matches its snapshot 1`] = `
 <StyledCustomizedProgressIndicator
   ariaValueText="50% complete"
-  className="y-progress-indicator y-progress-indicator__incomplete TEST_CLASS"
+  barHeight={4}
+  className="y-progress-indicator TEST_CLASS"
   percentComplete={0.5}
+  styles={[Function]}
 />
 `;
