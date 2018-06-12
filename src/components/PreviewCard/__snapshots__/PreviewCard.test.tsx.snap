@@ -2,11 +2,16 @@
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     metadataContent={
       <Block
         push={0}
@@ -35,11 +40,16 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when entering edit mode matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     metadataContent={
       <Block
         push={-3}
@@ -70,11 +80,16 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when exiting edit mode matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     metadataContent={
       <Block
         push={0}
@@ -103,11 +118,16 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
 
 exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     metadataContent={
       <Block
         className="y-previewCard--spinner"
@@ -133,11 +153,17 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
 <Box
-  className="y-previewCard TEST_CLASSNAME"
+  className=
+      y-previewCard
+      TEST_CLASSNAME
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     size="medium"
     titleContent={
       <Block>
@@ -150,11 +176,16 @@ exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with description matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     metadataContent="file description"
     size="medium"
     titleContent={
@@ -168,10 +199,16 @@ exports[`<PreviewCard /> with description matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with image matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     imageContent={
       <Image
         description="file description"
@@ -192,11 +229,16 @@ exports[`<PreviewCard /> with image matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     size="medium"
     titleContent={
       <Block>
@@ -206,7 +248,14 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
   />
   <ProgressIndicator
     ariaValueText="Uploading, currently at 50%"
-    className="y-previewCard--progress"
+    className=
+
+        {
+          bottom: 0px;
+          left: 0px;
+          position: absolute;
+          right: 0px;
+        }
     percentComplete={0.5}
   />
 </Box>
@@ -214,11 +263,16 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     size="medium"
     titleContent={
       <Block>
@@ -231,12 +285,19 @@ exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
 <Box
-  className="y-previewCard y-previewCard__hasClick"
+  className=
+      y-previewCard
+      &:hover {
+        background-color: #f3f5f8;
+      }
   onClick={[MockFunction]}
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     size="medium"
     titleContent={
       <Block>
@@ -254,11 +315,16 @@ exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
 
 exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
 <Box
-  className="y-previewCard"
+  className=
+      y-previewCard
+
 >
   <MediaObject
-    className="y-previewCard--media"
-    imageContent={null}
+    className=
+
+        {
+          padding-bottom: 2px;
+        }
     size="medium"
     titleContent={
       <Block>
@@ -267,7 +333,14 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
     }
   />
   <span
-    className="y-previewCard--remove"
+    className=
+
+        {
+          color: #646d7a;
+          position: absolute;
+          right: 2px;
+          top: 4px;
+        }
   >
     <Clickable
       ariaLabel="Remove this attachment"
