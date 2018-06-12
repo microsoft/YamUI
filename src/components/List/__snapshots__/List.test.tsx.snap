@@ -2,7 +2,27 @@
 
 exports[`<List /> ordered with additional className matches its snapshot 1`] = `
 <ol
-  className="y-list y-list__ordered TEST_CLASSNAME"
+  className=
+      y-list
+      TEST_CLASSNAME
+      {
+        list-style-position: outside;
+        list-style-type: decimal;
+        margin-bottom: 2.0rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0;
+        padding-left: 2.8rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      & > .y-list--item {
+        padding-bottom: 0.4rem;
+        padding-left: 0.7rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
 />
 `;
 
@@ -11,20 +31,77 @@ exports[`<List /> ordered with textSize matches its snapshot 1`] = `
   textSize="small"
 >
   <ol
-    className="y-list y-list__ordered"
+    className=
+        y-list
+        {
+          list-style-position: outside;
+          list-style-type: decimal;
+          margin-bottom: 1.2rem;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0;
+          padding-left: 2.8rem;
+          padding-right: 0;
+          padding-top: 0;
+        }
+        & > .y-list--item {
+          padding-bottom: 0.4rem;
+          padding-left: 0.7rem;
+          padding-right: 0;
+          padding-top: 0;
+        }
   />
 </Block>
 `;
 
 exports[`<List /> ordered without textSize matches its snapshot 1`] = `
 <ol
-  className="y-list y-list__ordered"
+  className=
+      y-list
+      {
+        list-style-position: outside;
+        list-style-type: decimal;
+        margin-bottom: 2.0rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0;
+        padding-left: 2.8rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      & > .y-list--item {
+        padding-bottom: 0.4rem;
+        padding-left: 0.7rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
 />
 `;
 
 exports[`<List /> unordered with additional className matches its snapshot 1`] = `
 <ul
-  className="y-list y-list__unordered TEST_CLASSNAME"
+  className=
+      y-list
+      TEST_CLASSNAME
+      {
+        list-style-position: outside;
+        list-style-type: disc;
+        margin-bottom: 2.0rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0;
+        padding-left: 3.5rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      & > .y-list--item {
+        padding-bottom: 0.4rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
 />
 `;
 
@@ -33,13 +110,49 @@ exports[`<List /> unordered with textSize matches its snapshot 1`] = `
   textSize="small"
 >
   <ul
-    className="y-list y-list__unordered"
+    className=
+        y-list
+        {
+          list-style-position: outside;
+          list-style-type: disc;
+          margin-bottom: 1.2rem;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0;
+          padding-left: 3.5rem;
+          padding-right: 0;
+          padding-top: 0;
+        }
+        & > .y-list--item {
+          padding-bottom: 0.4rem;
+          padding-right: 0;
+          padding-top: 0;
+        }
   />
 </Block>
 `;
 
 exports[`<List /> unordered without textSize matches its snapshot 1`] = `
 <ul
-  className="y-list y-list__unordered"
+  className=
+      y-list
+      {
+        list-style-position: outside;
+        list-style-type: disc;
+        margin-bottom: 2.0rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0;
+        padding-left: 3.5rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      & > .y-list--item {
+        padding-bottom: 0.4rem;
+        padding-right: 0;
+        padding-top: 0;
+      }
 />
 `;
