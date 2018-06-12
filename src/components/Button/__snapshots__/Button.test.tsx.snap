@@ -48,13 +48,23 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -108,17 +118,34 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className="y-button--content__hidden"
+    className=
+
+        {
+          visibility: hidden;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
   <span
-    className="y-button--spinner"
+    className=
+
+        {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
   >
     <Spinner
       color="light"
@@ -178,13 +205,23 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -239,13 +276,23 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -299,13 +346,23 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -359,13 +416,23 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -419,13 +486,23 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -479,21 +556,41 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     <span
-      className="y-button--icon-wrapper-left"
+      className=
+
+          {
+            padding-left: 0px;
+            padding-right: 5px;
+          }
     >
       <Accounts />
     </span>
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     >
       <span
-        className="y-button--icon-wrapper-left"
+        className=
+
+            {
+              padding-left: 0px;
+              padding-right: 5px;
+            }
       >
         <Accounts />
       </span>
@@ -550,21 +647,41 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <span
-      className="y-button--icon-wrapper-right"
+      className=
+
+          {
+            padding-left: 4px;
+            padding-right: 0px;
+          }
     >
       <Accounts />
     </span>
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     >
       <span
-        className="y-button--icon-wrapper-right"
+        className=
+
+            {
+              padding-left: 4px;
+              padding-right: 0px;
+            }
       >
         <Accounts />
       </span>
@@ -622,13 +739,23 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   type=""
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -682,13 +809,23 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -742,17 +879,34 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
   type="button"
 >
   <Block
-    className="y-button--content__hidden"
+    className=
+
+        {
+          visibility: hidden;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
   <span
-    className="y-button--spinner"
+    className=
+
+        {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
   >
     <Spinner
       color="dark"
@@ -812,13 +966,23 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
   type="reset"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -872,13 +1036,23 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="small"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -932,17 +1106,34 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className="y-button--content__hidden"
+    className=
+
+        {
+          visibility: hidden;
+        }
     textAlign="center"
     textSize="small"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
   <span
-    className="y-button--spinner"
+    className=
+
+        {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
   >
     <Spinner
       color="light"
@@ -1002,21 +1193,41 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
   type="button"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="small"
   >
     <span
-      className="y-button--icon-wrapper-left"
+      className=
+
+          {
+            padding-left: 0px;
+            padding-right: 5px;
+          }
     >
       <Accounts />
     </span>
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     >
       <span
-        className="y-button--icon-wrapper-left"
+        className=
+
+            {
+              padding-left: 0px;
+              padding-right: 5px;
+            }
       >
         <Accounts />
       </span>
@@ -1073,13 +1284,23 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
   type="submit"
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
@@ -1134,13 +1355,23 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   type=""
 >
   <Block
-    className=""
+    className=
+
+        {
+          visibility: visible;
+        }
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className="y-button--secondary-text"
+      className=
+
+          {
+            height: 0px;
+            overflow: hidden;
+            visibility: hidden;
+          }
     />
   </Block>
 </BaseButton>
