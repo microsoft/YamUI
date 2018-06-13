@@ -2,7 +2,20 @@
 
 exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] = `
 <div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
+  className=
+      y-suggestions-list-item
+      y-hc-select-on-hover
+      y-hc-suppress-text-background
+      {
+        cursor: pointer;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+      &:hover {
+        background-color: #f3f5f8;
+      }
   onMouseDown={[Function]}
   role="button"
 >
@@ -19,7 +32,11 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
     titleContent={
       Array [
         <span
-          className="y-suggestions-list-item--match-highlight"
+          className=
+
+              {
+                font-weight: 600;
+              }
         >
           Joh
         </span>,
@@ -34,7 +51,22 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
 
 exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = `
 <div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background y-suggestions-list-item--selected y-hc-selected"
+  className=
+      y-suggestions-list-item
+      y-hc-select-on-hover
+      y-hc-suppress-text-background
+      y-hc-selected
+      {
+        background-color: #edeff2;
+        cursor: pointer;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+      &:hover {
+        background-color: #f3f5f8;
+      }
   onMouseDown={[Function]}
   role="button"
 >
@@ -51,7 +83,11 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
     titleContent={
       Array [
         <span
-          className="y-suggestions-list-item--match-highlight"
+          className=
+
+              {
+                font-weight: 600;
+              }
         >
           Joh
         </span>,
@@ -66,7 +102,20 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
 
 exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
 <div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
+  className=
+      y-suggestions-list-item
+      y-hc-select-on-hover
+      y-hc-suppress-text-background
+      {
+        cursor: pointer;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+      &:hover {
+        background-color: #f3f5f8;
+      }
   onMouseDown={[Function]}
   role="button"
 >
@@ -84,7 +133,11 @@ exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
     titleContent={
       Array [
         <span
-          className="y-suggestions-list-item--match-highlight"
+          className=
+
+              {
+                font-weight: 600;
+              }
         >
           Joh
         </span>,

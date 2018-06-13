@@ -3,6 +3,20 @@
 exports[`<ScreenreaderText /> with additional className matches its snapshot 1`] = `
 <span
   className="y-screenreaderText TEST_CLASSNAME"
+  style={
+    Object {
+      "border": 0,
+      "clip": "rect(0 0 0 0)",
+      "display": "block",
+      "height": "1px",
+      "margin": "-1px",
+      "overflow": "hidden",
+      "padding": 0,
+      "position": "absolute",
+      "width": "1px",
+      "wordWrap": "normal",
+    }
+  }
 >
   test content
 </span>
@@ -11,6 +25,20 @@ exports[`<ScreenreaderText /> with additional className matches its snapshot 1`]
 exports[`<ScreenreaderText /> with default options matches its snapshot 1`] = `
 <span
   className="y-screenreaderText"
+  style={
+    Object {
+      "border": 0,
+      "clip": "rect(0 0 0 0)",
+      "display": "block",
+      "height": "1px",
+      "margin": "-1px",
+      "overflow": "hidden",
+      "padding": 0,
+      "position": "absolute",
+      "width": "1px",
+      "wordWrap": "normal",
+    }
+  }
 >
   text content
 </span>
