@@ -7,8 +7,8 @@ import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
 import Block, { GutterSize } from '../Block';
-import './SuggestionsList.css';
-
+import { LayoutList, LayoutListItem } from '../LayoutList';
+import { getClassNames } from './SuggestionsList.styles';
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * The active search that produced the current state.
@@ -41,97 +41,63 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   onItemSelected(id: string | number): void;
 }
 
-interface SuggestionsListWithResultsProps extends SuggestionsListProps {
-  groupedItems: SuggestionItemGroupProps[];
-}
-
 export interface SuggestionItemGroupProps {
   title: string;
   items: SuggestionItem[];
 }
-
-const hasResults = (props: SuggestionsListProps): props is SuggestionsListWithResultsProps => {
-  return !!props.groupedItems && props.groupedItems.length > 0;
-};
-
-const withResultsClass = 'y-suggestions-list--with-results';
-const withStatusClass = 'y-suggestions-list--with-status';
 
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
 export default class SuggestionsList extends React.PureComponent<SuggestionsListProps> {
   public render() {
-    const status = this.getSearchStatus();
-    const results = this.getGroupedResults();
-
-    const classNames = ['y-suggestions-list', 'y-hc-border', this.props.className];
-    if (status) {
-      classNames.push(withStatusClass);
-    }
-    if (results) {
-      classNames.push(withResultsClass);
-    }
+    const {
+      className,
+      searchText,
+      selectedId,
+      onItemSelected,
+      isLoading,
+      loadingText,
+      noResultsText,
+      groupedItems = [],
+    } = this.props;
+    const hasResults = groupedItems.length > 0;
+    const classNames = getClassNames({ isLoading, hasResults });
 
     return (
-      <div className={join(classNames)}>
-        {results}
-        {status}
+      <div className={join(['y-suggestions-list', 'y-hc-border', className, classNames.root])}>
+        {hasResults && (
+          <LayoutList direction="vertical">
+            {groupedItems.map((group: SuggestionItemGroupProps) => (
+              <LayoutListItem key={group.title}>
+                <LayoutList direction="vertical">
+                  {group.items.map((item: SuggestionItem) => (
+                    <LayoutListItem key={item.id}>
+                      <SuggestionsListItem
+                        searchText={searchText}
+                        isSelected={item.id === selectedId}
+                        onSelect={onItemSelected}
+                        {...item}
+                      />
+                    </LayoutListItem>
+                  ))}
+                </LayoutList>
+              </LayoutListItem>
+            ))}
+          </LayoutList>
+        )}
+        {isLoading ? (
+          <div className={classNames.spinnerWrapper}>
+            <Spinner text={loadingText} isCentered={true} />
+          </div>
+        ) : (
+          !hasResults && (
+            <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
+              <Text color={TextColor.METADATA}>{noResultsText}</Text>
+            </Block>
+          )
+        )}
       </div>
-    );
-  }
-
-  private getGroupedResults() {
-    if (!hasResults(this.props)) {
-      return null;
-    }
-    return <ul className="y-suggestions-list--results">{this.props.groupedItems.map(this.getGroupResults)}</ul>;
-  }
-
-  private getGroupResults = (group: SuggestionItemGroupProps) => {
-    const items = group.items.map(this.getResultItem);
-    return (
-      <li key={group.title}>
-        <ul>{items}</ul>
-      </li>
-    );
-  };
-
-  private getResultItem = (item: SuggestionItem) => {
-    const { searchText, selectedId, onItemSelected } = this.props;
-    const isSelected = item.id === selectedId;
-    return (
-      <li key={item.id}>
-        <SuggestionsListItem searchText={searchText} isSelected={isSelected} onSelect={onItemSelected} {...item} />
-      </li>
-    );
-  };
-
-  private getSearchStatus() {
-    return this.props.isLoading ? this.getLoading() : this.getNoResults();
-  }
-
-  private getLoading() {
-    return (
-      <div className="y-suggestions-list--loading">
-        <Spinner text={this.props.loadingText} isCentered={true} />
-      </div>
-    );
-  }
-
-  private getNoResults() {
-    if (hasResults(this.props)) {
-      return null;
-    }
-    return (
-      <Block
-        className="y-suggestions-list--no-results"
-        textAlign="center"
-        padding={GutterSize.LARGE}
-        textSize={TextSize.SMALL}
-      >
-        <Text color={TextColor.METADATA}>{this.props.noResultsText}</Text>
-      </Block>
     );
   }
 }

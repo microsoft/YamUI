@@ -16,7 +16,7 @@ Basic usage:
 
 With editable description:
 
-```js { "props": { "data-description": "editable description" } }
+```js { "props": { "data-description": "editable description", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-editableText > .y-clickable\"}, {\"action\":\"click\",\"selector\":\".y-editableText > .y-clickable\"}]" } }
 <PreviewCard
   name="Filename.gif"
   description="this is the file description"
@@ -64,7 +64,7 @@ With loading state and progress:
 
 Editable with onClick and onRemove handlers:
 
-```js { "props": { "data-description": "editable with onclick" } }
+```js { "props": { "data-description": "editable with onclick", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-editableText > .y-clickable\"}, {\"action\":\"click\",\"selector\":\".y-editableText > .y-clickable\"}]" } }
 <PreviewCard
   name="sunset.jpg"
   description="nice pic of a sunset i took in hawaii"
