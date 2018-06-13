@@ -8,10 +8,10 @@ exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] =
       y-hc-suppress-text-background
       {
         cursor: pointer;
-        padding-bottom: 0.8rem;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        padding-top: 0.4rem;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
       }
       &:hover {
         background-color: #f3f5f8;
@@ -59,10 +59,10 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
       {
         background-color: #edeff2;
         cursor: pointer;
-        padding-bottom: 0.8rem;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        padding-top: 0.4rem;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
       }
       &:hover {
         background-color: #f3f5f8;
@@ -108,10 +108,10 @@ exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
       y-hc-suppress-text-background
       {
         cursor: pointer;
-        padding-bottom: 0.8rem;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        padding-top: 0.4rem;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
       }
       &:hover {
         background-color: #f3f5f8;

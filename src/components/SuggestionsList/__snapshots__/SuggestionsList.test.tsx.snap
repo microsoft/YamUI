@@ -7,28 +7,24 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-bottom: 4px;
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
-      & > *:last-child {
-        padding-bottom: 4px;
-      }
 >
-  <ul
-    className=
-
-
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -40,10 +36,10 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
 </div>
 `;
 
@@ -56,28 +52,24 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-bottom: 4px;
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
-      & > *:last-child {
-        padding-bottom: 4px;
-      }
 >
-  <ul
-    className=
-
-
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -89,10 +81,10 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
 </div>
 `;
 
@@ -103,28 +95,24 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-bottom: 4px;
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
-      & > *:last-child {
-        padding-bottom: 4px;
-      }
 >
-  <ul
-    className=
-
-
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -136,10 +124,10 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
 </div>
 `;
 
@@ -150,9 +138,9 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
         width: 280px;
       }
 >
@@ -177,28 +165,23 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
 >
-  <ul
-    className=
-
-        {
-          border-bottom: 0.1rem solid #f3f5f8;
-          margin-bottom: -1px;
-        }
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -210,18 +193,17 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
   <div
     className=
 
         {
-          padding-bottom: 1.4rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 1.4rem;
+          border-top: 1px solid #f3f5f8;
+          padding-bottom: 14px;
+          padding-top: 13px;
         }
   >
     <Spinner
@@ -241,28 +223,23 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
 >
-  <ul
-    className=
-
-        {
-          border-bottom: 0.1rem solid #f3f5f8;
-          margin-bottom: -1px;
-        }
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -274,18 +251,17 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
   <div
     className=
 
         {
-          padding-bottom: 1.4rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 1.4rem;
+          border-top: 1px solid #f3f5f8;
+          padding-bottom: 14px;
+          padding-top: 13px;
         }
   >
     <Spinner
@@ -303,28 +279,23 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-top: 4px;
         width: 280px;
       }
-      & > *:first-child {
-        padding-top: 4px;
-      }
 >
-  <ul
-    className=
-
-        {
-          border-bottom: 0.1rem solid #f3f5f8;
-          margin-bottom: -1px;
-        }
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
@@ -336,18 +307,17 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
   <div
     className=
 
         {
-          padding-bottom: 1.4rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 1.4rem;
+          border-top: 1px solid #f3f5f8;
+          padding-bottom: 14px;
+          padding-top: 13px;
         }
   >
     <Spinner
@@ -365,9 +335,9 @@ exports[`<SuggestionsList /> when isLoading=true without results renders as expe
       y-hc-border
       {
         border-radius: 1px;
-        border-width: 0 !important;
+        border-width: 0px;
         border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
         width: 280px;
       }
 >
@@ -375,10 +345,8 @@ exports[`<SuggestionsList /> when isLoading=true without results renders as expe
     className=
 
         {
-          padding-bottom: 1.4rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 1.4rem;
+          padding-bottom: 14px;
+          padding-top: 14px;
         }
   >
     <Spinner
