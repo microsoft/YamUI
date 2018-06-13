@@ -18,7 +18,7 @@ export interface SuggestionItem {
 }
 
 export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseComponentProps {
-  searchText: string;
+  searchText?: string;
   isSelected: boolean;
   onSelect(id: string | number): void;
 }
