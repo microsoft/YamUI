@@ -5,9 +5,8 @@ import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from './types';
 import { getClassNames } from './Icon.styles';
-import { TextSizeContext, TextSize } from '../Block';
 
-export { IconSize, TextSize };
+export { IconSize };
 
 export interface IconProps extends BaseComponentProps {
   /**
@@ -34,17 +33,10 @@ export interface IconProps extends BaseComponentProps {
  */
 export default abstract class BaseIcon extends React.Component<IconProps> {
   public render() {
-    return (
-      <TextSizeContext.Consumer>
-        {textSizeContext => {
-          const textSize = textSizeContext.textSize;
-          const { block, className, size, color } = this.props;
-          const classNames = getClassNames({ block, size, color, textSize });
+    const { block, className, size, color } = this.props;
+    const classNames = getClassNames({ block, size, color });
 
-          return this.renderIcon(join(['y-icon', className, classNames.root]));
-        }}
-      </TextSizeContext.Consumer>
-    );
+    return this.renderIcon(join(['y-icon', className, classNames.root]));
   }
 
   protected abstract renderIcon(className: string): JSX.Element;

@@ -1,5 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { BlockProps, TextSize } from './Block';
+import { BlockProps } from './Block';
+import { TextSize } from '../Text';
 import { GutterSize } from '../FixedGrid/types';
 import { getTheme } from '../../util/colors';
 import { textColors, ellipsisStyle } from '../../util/styles/fonts';
@@ -14,6 +15,16 @@ const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (topSpacing) {
     return gutterSize[topSpacing];
   }
+};
+
+const iconSizeForTextSize = {
+  [TextSize.XXLARGE]: '2.4rem',
+  [TextSize.XLARGE]: '2.2rem',
+  [TextSize.LARGE]: '1.5rem',
+  [TextSize.MEDIUM]: '1.4rem',
+  [TextSize.MEDIUM_SUB]: '1.4rem',
+  [TextSize.SMALL]: '1.2rem',
+  [TextSize.XSMALL]: '1.0rem',
 };
 
 export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRawStyle => {
@@ -31,6 +42,15 @@ export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRa
     marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
     // For positive push, "push" it down with top padding (because margins can collapse).
     paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
+    selectors: {
+      '&.y-block .y-icon': {
+        top: textSize === TextSize.XSMALL || textSize === TextSize.SMALL ? '0.1rem' : undefined,
+      },
+      '.y-icon': {
+        height: textSize ? iconSizeForTextSize[textSize] : undefined,
+        width: textSize ? iconSizeForTextSize[textSize] : undefined,
+      },
+    },
   };
 };
 
