@@ -64,13 +64,13 @@ export interface BlockProps extends NestableBaseComponentProps {
   ellipsis?: boolean;
 }
 
-export interface BlockContext {
+export interface TextSizeContext {
   textSize?: TextSize;
 }
 
-const defaultContext: BlockContext = {};
+const defaultContext: TextSizeContext = {};
 
-export const BlockContext = React.createContext(defaultContext);
+export const TextSizeContext = React.createContext(defaultContext);
 
 /**
  * A `Block` is a layout component to build consistent padding and vertical spacing between
@@ -83,15 +83,19 @@ export default class Block extends React.Component<BlockProps> {
     const { children, textSize } = this.props;
 
     return (
-      <ClickableContext.Consumer>
-        {clickableContext => (
-          <BlockContext.Provider value={{ textSize }}>
-            <div className={this.getClasses(clickableContext.withinClickable)}>
-              <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
-            </div>
-          </BlockContext.Provider>
+      <TextSizeContext.Consumer>
+        {textSizeContext => (
+          <ClickableContext.Consumer>
+            {clickableContext => (
+              <TextSizeContext.Provider value={{ textSize: textSize || textSizeContext.textSize }}>
+                <div className={this.getClasses(clickableContext.withinClickable)}>
+                  <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
+                </div>
+              </TextSizeContext.Provider>
+            )}
+          </ClickableContext.Consumer>
         )}
-      </ClickableContext.Consumer>
+      </TextSizeContext.Consumer>
     );
   }
 

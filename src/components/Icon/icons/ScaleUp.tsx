@@ -6,12 +6,11 @@ import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
 export default class ScaleUp extends BaseIcon {
-  public render() {
+  public renderIcon(className: string) {
     return (
       <svg
         viewBox="0 0 240 240"
-        className={this.getClassName()}
-        style={this.getStyle()}
+        className={className}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"

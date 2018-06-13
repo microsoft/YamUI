@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { BlockProps } from './Block';
+import { BlockProps, TextSize } from './Block';
 import { GutterSize } from '../FixedGrid/types';
-import { textColors, fontSizes, lineHeights, ellipsisStyle } from '../../util/styles/fonts';
+import { getTheme } from '../../util/colors';
+import { textColors, ellipsisStyle } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
 import { IRawStyle } from '@uifabric/styling';
 
@@ -17,13 +18,15 @@ const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
 
 export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRawStyle => {
   const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor, withinClickable } = props;
+  const theme = getTheme();
+  const font = textSize ? theme.fonts[textSize === TextSize.MEDIUM_SUB ? 'smallPlus' : textSize] : undefined;
 
   return {
     textAlign,
     width: withinClickable ? '100%' : undefined,
     color: textColor ? textColors[textColor] : undefined,
-    fontSize: textSize ? fontSizes[textSize] : undefined,
-    lineHeight: textSize ? lineHeights[textSize] : undefined,
+    fontSize: font ? font.fontSize : undefined,
+    lineHeight: font ? font.lineHeight : undefined,
     marginTop: getMarginTop(topSpacing, push),
     marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
     // For positive push, "push" it down with top padding (because margins can collapse).

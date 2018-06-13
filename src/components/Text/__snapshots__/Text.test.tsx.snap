@@ -4,8 +4,6 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
 <span
   class=
       y-text
-      y-textSize-xLarge
-      y-text__ellipsis
       {
         display: inline-block;
         font-size: 2.2rem;
@@ -26,7 +24,6 @@ exports[`<Text /> with a valid size matches its snapshot 1`] = `
 <span
   class=
       y-text
-      y-textSize-xLarge
       {
         display: inline-block;
         font-size: 2.2rem;
@@ -92,7 +89,6 @@ exports[`<Text /> with maxWidth 500px matches its snapshot 1`] = `
 <span
   class=
       y-text
-      y-text__ellipsis
       {
         display: inline-block;
         max-width: 500px;
@@ -114,14 +110,8 @@ exports[`<Text /> with screenreader text empty string matches its snapshot 1`] =
         display: inline-block;
       }
 >
-  <span
-    aria-hidden="true"
-  >
-    test content
-  </span>
-  <span
-    class="y-screenreaderText"
-  />
+  test content
+  
 </span>
 `;
 

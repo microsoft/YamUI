@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { IconSize, IconProps } from '.';
-import * as allExportedIcons from './icons';
 import Accounts from './icons/Accounts';
 
 describe('<Icon />', () => {
@@ -56,22 +55,6 @@ describe('<Icon />', () => {
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
-      });
-    });
-  });
-
-  describe('each Icon', () => {
-    let Icon: any;
-
-    // tslint:disable-next-line:mocha-no-side-effect-code
-    Object.keys(allExportedIcons).forEach(name => {
-      beforeEach(() => {
-        Icon = (allExportedIcons as any)[name];
-        component = shallow(<Icon />);
-      });
-
-      it('has a 240x240 viewbox', () => {
-        expect(component.getElement().props.viewBox).toBe('0 0 240 240');
       });
     });
   });

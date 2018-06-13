@@ -1,11 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from './types';
-import './Icon.css';
+import { getClassNames } from './Icon.styles';
+import { TextSizeContext, TextSize } from '../Block';
 
-export { IconSize };
+export { IconSize, TextSize };
 
 export interface IconProps extends BaseComponentProps {
   /**
@@ -27,44 +29,23 @@ export interface IconProps extends BaseComponentProps {
   size?: IconSize;
 }
 
-export interface IconStyles {
-  height?: string;
-  width?: string;
-  color?: string;
-}
-
 /**
  * An `Icon` renders an SVG icon.
  */
-export default class BaseIcon extends React.Component<IconProps> {
-  protected getClassName() {
-    const { block, className } = this.props;
+export default abstract class BaseIcon extends React.Component<IconProps> {
+  public render() {
+    return (
+      <TextSizeContext.Consumer>
+        {textSizeContext => {
+          const textSize = textSizeContext.textSize;
+          const { block, className, size, color } = this.props;
+          const classNames = getClassNames({ block, size, color, textSize });
 
-    const classes = ['y-icon'];
-    if (block) {
-      classes.push('y-icon__isBlock');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
+          return this.renderIcon(join(['y-icon', className, classNames.root]));
+        }}
+      </TextSizeContext.Consumer>
+    );
   }
 
-  protected getStyle() {
-    const { color, size } = this.props;
-
-    const styles: IconStyles = {};
-
-    if (size) {
-      const length = `${size}px`;
-      styles.height = length;
-      styles.width = length;
-    }
-    if (color) {
-      styles.color = color;
-    }
-
-    return styles;
-  }
+  protected abstract renderIcon(className: string): JSX.Element;
 }
