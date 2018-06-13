@@ -20,12 +20,13 @@ export interface ModalDialogProps extends BaseComponentProps {
   title: string;
 
   /**
-   * Whether to hide the title or not.
+   * Replace the title with a hidden ScreenreaderText title.
+   * @default false
    */
   hideTitle?: boolean;
 
   /**
-   * Whether the dialog modal is open.
+   * Determines whether the dialog is displayed or not.
    */
   isOpen: boolean;
 
@@ -83,9 +84,9 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
       );
     }
     return (
-      <FixedGridRow bottomSpacing={GutterSize.XLARGE}>
+      <FixedGridRow bottomSpacing={GutterSize.XSMALL}>
         <FixedGridColumn>
-          <Heading level={'1'} size={'5'}>
+          <Heading level="1" size="5">
             {title}
           </Heading>
         </FixedGridColumn>
