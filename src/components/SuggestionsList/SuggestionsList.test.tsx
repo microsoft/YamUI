@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { default as SuggestionsList, SuggestionsListProps } from '.';
+import { LayoutListItem } from '../LayoutList';
 
 describe('<SuggestionsList />', () => {
   let rendered: ShallowWrapper<SuggestionsListProps>;
@@ -96,7 +97,7 @@ describe('<SuggestionsList />', () => {
         describe('when the mouse leaves', () => {
           beforeEach(() => {
             rendered
-              .find('ul')
+              .find(LayoutListItem)
               .at(1)
               .simulate('mouseLeave');
           });
@@ -174,7 +175,7 @@ describe('<SuggestionsList />', () => {
         describe('when the mouse leaves', () => {
           beforeEach(() => {
             rendered
-              .find('ul')
+              .find(LayoutListItem)
               .at(1)
               .simulate('mouseLeave');
           });

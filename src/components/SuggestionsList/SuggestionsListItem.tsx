@@ -1,11 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import Avatar, { AvatarProps, AvatarSize } from '../Avatar';
-
-import './SuggestionsListItem.css';
+import { getClassNames } from './SuggestionListItem.styles';
 
 export type CustomizableAvatarProps = 'badgeContent' | 'badgeDescription' | 'borderType';
 
@@ -24,32 +24,28 @@ export interface SuggestionsListItemProps extends SuggestionItem, NestableBaseCo
 }
 
 const baseClass = 'y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background';
-const selectedClass = `${baseClass} y-suggestions-list-item--selected y-hc-selected`;
-const matchHighlightClass = 'y-suggestions-list-item--match-highlight';
-
-const getHighlightedName = (name: string, search: string) => {
+const selectedClass = `${baseClass} y-hc-selected`;
+const getHighlightedName = (name: string, search: string, className: string) => {
   return name
     .split(new RegExp(`(${search})`, 'gi'))
     .filter(content => !!content)
-    .map((content, index) => {
-      const className = search.toLowerCase() === content.toLowerCase() ? matchHighlightClass : undefined;
-      return (
-        <span key={index} className={className}>
-          {content}
-        </span>
-      );
-    });
+    .map((content, index) => (
+      <span key={index} className={search.toLowerCase() === content.toLowerCase() ? className : undefined}>
+        {content}
+      </span>
+    ));
 };
 
 export default class SuggestionsListItem extends React.PureComponent<SuggestionsListItemProps> {
   public render() {
-    const { isSelected, name, searchText, description } = this.props;
+    const { name, searchText, description, className, isSelected } = this.props;
+    const baseClassNames = isSelected ? selectedClass : baseClass;
+    const classNames = getClassNames({ isSelected });
     const avatar = this.getAvatar();
-    const className = isSelected ? selectedClass : baseClass;
-    const title = getHighlightedName(name, searchText);
+    const title = getHighlightedName(name, searchText, classNames.highlight);
     // role=button added so that speech software knows that these are clickable targets.
     return (
-      <div onMouseDown={this.onMouseDown} className={className} role="button">
+      <div onMouseDown={this.onMouseDown} className={join([baseClassNames, className, classNames.root])} role="button">
         <MediaObject
           size={MediaObjectSize.SMALL}
           imageContent={avatar}
