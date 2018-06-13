@@ -1,9 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { join } from '../../util/classNames';
 import { ProgressIndicator as OfficeFabricProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import './ProgressIndicator.css';
-
+import { getProgressIndicatorStyles } from './ProgressIndicator.styles';
 export interface ProgressIndicatorProps extends BaseComponentProps {
   /**
    * Used by screen readers to convey percentComplete value
@@ -23,28 +23,15 @@ export interface ProgressIndicatorProps extends BaseComponentProps {
  */
 export default class ProgressIndicator extends React.Component<ProgressIndicatorProps> {
   public render() {
-    const { ariaValueText, percentComplete } = this.props;
+    const { ariaValueText, percentComplete, className } = this.props;
     return (
       <OfficeFabricProgressIndicator
         ariaValueText={ariaValueText}
         percentComplete={percentComplete}
-        className={this.getClasses()}
+        barHeight={4}
+        className={join(['y-progress-indicator', className])}
+        styles={getProgressIndicatorStyles({ percentComplete })}
       />
     );
-  }
-
-  private getClasses() {
-    const { className, percentComplete } = this.props;
-    const classes = ['y-progress-indicator'];
-
-    if (percentComplete < 1) {
-      classes.push('y-progress-indicator__incomplete');
-    }
-
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 }

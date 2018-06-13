@@ -8,7 +8,29 @@ Use `type='submit'` for submitting forms. Doing this will trigger the onClick ac
 
 ### Examples
 
-Regular buttons:
+Primary button:
+
+```js { "props": { "data-description": "primary", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-button\"},{\"action\":\"focus\",\"selector\":\".y-button\"},{\"action\":\"mouseDown\",\"selector\":\".y-button\"}]" } }
+const { ButtonColor } = require('.');
+
+<Button
+  text="Primary"
+  color={ButtonColor.PRIMARY}
+/>
+```
+
+Secondary button:
+
+```js { "props": { "data-description": "secondary", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-button\"},{\"action\":\"focus\",\"selector\":\".y-button\"},{\"action\":\"mouseDown\",\"selector\":\".y-button\"}]" } }
+const { ButtonColor } = require('.');
+
+<Button
+  text="Secondary"
+  color={ButtonColor.Secondary}
+/>
+```
+
+Variations:
 
 ```js { "props": { "data-description": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
@@ -488,7 +510,7 @@ const sampleUrl = 'https://www.yammer.com';
 
 Bistate button - Join/Leave:
 
-```js { "props": { "data-description": "bistate button join-leave" } }
+```js { "props": { "data-description": "bistate button join-leave", "data-action-states": "[{\"action\":\"none\"}, {\"action\":\"hover\",\"selector\":\".y-button\"}]" } }
 const BistateButton = require('./BistateButton').default;
 const CheckMark = require('../Icon/icons/CheckMark').default;
 const SignOut = require('../Icon/icons/SignOut').default;
@@ -507,7 +529,7 @@ const leaveJoinProps = {
 
 Bistate button - Follow/Unfollow:
 
-```js { "props": { "data-description": "bistate button follow-unfollow" } }
+```js { "props": { "data-description": "bistate button follow-unfollow", "data-action-states": "[{\"action\":\"none\"}, {\"action\":\"hover\",\"selector\":\".y-button\"}]" } }
 const { ButtonColor } = require('.');
 const BistateButton = require('./BistateButton').default;
 const CheckMark = require('../Icon/icons/CheckMark').default;
@@ -527,21 +549,15 @@ const followUnfollowProps = {
 <BistateButton {...followUnfollowProps} />
 ```
 
-Link button:
-
-```js { "props": { "data-description": "link" } }
-<Button text="I am a link" href="https://www.yammer.com" />
-```
-
 Submit button:
 
-```js { "props": { "data-description": "submit button" } }
+```js { "props": { "data-description": "submit button", "data-action-states": "[]" } }
 <Button text="Submit" type="submit" />
 ```
 
 Loading button:
 
-```js { "props": { "data-description": "loading" } }
+```js { "props": { "data-description": "loading", "data-action-states": "[]" } }
 const { ButtonStatus } = require('.');
 
 class LoadingButton extends React.Component {

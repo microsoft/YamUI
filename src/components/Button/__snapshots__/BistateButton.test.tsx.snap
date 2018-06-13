@@ -2,112 +2,77 @@
 
 exports[`<BistateButton /> matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Leave"
-  size="regular"
-  status="enabled"
   text="Joined"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when focuses matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Joined"
-  size="regular"
-  status="enabled"
   text="Leave"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when focuses when blurs matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Leave"
-  size="regular"
-  status="enabled"
   text="Joined"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when focuses when mouse leaves matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Joined"
-  size="regular"
-  status="enabled"
   text="Leave"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when mouse enters matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Joined"
-  size="regular"
-  status="enabled"
   text="Leave"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when mouse enters when blurs matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Joined"
-  size="regular"
-  status="enabled"
   text="Leave"
-  type="button"
 />
 `;
 
 exports[`<BistateButton /> when mouse enters when mouse leaves matches its snapshot 1`] = `
 <Button
-  color="secondary"
-  iconPosition="left"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   secondaryText="Leave"
-  size="regular"
-  status="enabled"
   text="Joined"
-  type="button"
 />
 `;

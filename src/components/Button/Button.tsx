@@ -7,10 +7,8 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
-import { getStyles } from './Button.styles';
-
+import { getBaseButtonStyles, getClassNames } from './Button.styles';
 import BaseIcon from '../Icon/BaseIcon';
-import './Button.css';
 
 export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType };
 
@@ -155,26 +153,43 @@ export default class Button extends React.Component<ButtonProps> {
     },
   };
 
-  public static defaultProps = {
-    color: ButtonColor.SECONDARY,
-    iconPosition: ButtonIconPosition.LEFT,
-    size: ButtonSize.REGULAR,
-    status: ButtonStatus.ENABLED,
-    type: ButtonType.BUTTON,
-  };
-
   public render() {
-    const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave, className } = this.props;
+    const {
+      ariaLabel,
+      onClick,
+      onFocus,
+      onBlur,
+      onMouseEnter,
+      onMouseLeave,
+      text,
+      secondaryText,
+      icon: Icon,
+      className = '',
+      type = ButtonType.BUTTON,
+      size = ButtonSize.REGULAR,
+      color = ButtonColor.SECONDARY,
+      fullWidth = false,
+      iconPosition = ButtonIconPosition.LEFT,
+      status = ButtonStatus.ENABLED,
+    } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
-    const status = (this.props as RegularButtonProps).status;
-    const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
+
+    const classNames = getClassNames({ status, iconPosition });
+
+    const buttonIcon = Icon && (
+      <span className={classNames.iconWrapper}>
+        <Icon />
+      </span>
+    );
+    const leftIcon = iconPosition === 'left' && buttonIcon;
+    const rightIcon = iconPosition === 'right' && buttonIcon;
 
     return (
       <BaseButton
         ariaLabel={ariaLabel}
-        className={`y-button ${className ? className : ''}`}
-        disabled={isDisabled}
+        className={`y-button ${className}`}
+        disabled={status !== ButtonStatus.ENABLED}
         href={href}
         type={href ? '' : type}
         onBlur={onBlur}
@@ -182,60 +197,34 @@ export default class Button extends React.Component<ButtonProps> {
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        styles={getStyles(this.props)}
+        styles={getBaseButtonStyles({ size, color, fullWidth, status })}
       >
-        {this.getContents()}
-        {this.isLoading() && this.getSpinner()}
+        <Block
+          textSize={size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB}
+          className={classNames.content}
+          textAlign="center"
+        >
+          {leftIcon}
+          {text}
+          {rightIcon}
+          <div className={classNames.secondaryText}>
+            {leftIcon}
+            {secondaryText}
+            {rightIcon}
+          </div>
+        </Block>
+        {status === ButtonStatus.LOADING && (
+          <span className={classNames.spinner}>
+            <Spinner
+              color={color === ButtonColor.PRIMARY ? SpinnerColor.DARK : SpinnerColor.LIGHT}
+              size={size === ButtonSize.SMALL ? SpinnerSize.XSMALL : SpinnerSize.SMALL}
+              text={(this.props as LoadingButtonProps).loadingText}
+              hideText={true}
+              isCentered={true}
+            />
+          </span>
+        )}
       </BaseButton>
     );
-  }
-
-  private getContents() {
-    const { icon: Icon, iconPosition, size, text, secondaryText } = this.props;
-
-    const textSize = size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB;
-
-    const buttonIcon = Icon && (
-      <span className={`y-button--icon-wrapper-${iconPosition}`}>
-        <Icon />
-      </span>
-    );
-
-    const className = this.isLoading() ? 'y-button--content__hidden' : '';
-
-    const leftIcon = iconPosition === 'left' && buttonIcon;
-    const rightIcon = iconPosition === 'right' && buttonIcon;
-
-    return (
-      <Block textSize={textSize} className={className} textAlign="center">
-        {leftIcon}
-        {text}
-        {rightIcon}
-        <div className="y-button--secondary-text">
-          {leftIcon}
-          {secondaryText}
-          {rightIcon}
-        </div>
-      </Block>
-    );
-  }
-
-  private getSpinner() {
-    const { color, size } = this.props;
-
-    const loadingText = (this.props as LoadingButtonProps).loadingText;
-
-    const spinnerColor = color === ButtonColor.PRIMARY ? SpinnerColor.DARK : SpinnerColor.LIGHT;
-    const spinnerSize = size === ButtonSize.SMALL ? SpinnerSize.XSMALL : SpinnerSize.SMALL;
-
-    return (
-      <span className="y-button--spinner">
-        <Spinner color={spinnerColor} size={spinnerSize} text={loadingText} hideText={true} isCentered={true} />
-      </span>
-    );
-  }
-
-  private isLoading() {
-    return this.props.status === ButtonStatus.LOADING;
   }
 }
