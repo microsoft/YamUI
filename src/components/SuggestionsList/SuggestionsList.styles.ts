@@ -2,6 +2,8 @@
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { getTheme } from '../../util/colors';
+import { getGutterValue } from '../../util/styles/gutters';
+import { borderStylePopOver } from '../../util/styles/borders';
 
 export interface SuggestionsListStyleProps {
   isLoading?: boolean;
@@ -13,31 +15,16 @@ const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
 
   return mergeStyleSets({
     root: {
+      ...borderStylePopOver,
       width: '280px',
-      boxShadow: '0 0 12px rgba(0, 0, 0, 0.2) !important',
-      border: 'none',
-      borderRadius: '1px',
-      borderWidth: '0 !important',
-
-      selectors: {
-        '> *:first-child': {
-          paddingTop: hasResults ? '4px' : undefined,
-        },
-        '> *:last-child': {
-          paddingBottom: isLoading || !hasResults ? undefined : '4px',
-        },
-      },
+      paddingTop: hasResults ? getGutterValue(1) : undefined,
+      paddingBottom: hasResults && !isLoading ? getGutterValue(1) : undefined,
     },
     spinnerWrapper: {
-      padding: '1.4rem 0 1.4rem',
+      paddingBottom: '14px',
+      paddingTop: hasResults ? '13px' : '14px',
+      borderTop: hasResults ? `1px solid ${theme.palette.neutralLighter}` : undefined,
     },
-    resultList:
-      isLoading || !hasResults
-        ? {
-            borderBottom: `0.1rem solid ${theme.palette.neutralLighter}`,
-            marginBottom: '-1px',
-          }
-        : {},
   });
 });
 

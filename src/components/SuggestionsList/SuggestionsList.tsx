@@ -7,6 +7,7 @@ import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
 import Block, { GutterSize } from '../Block';
+import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames } from './SuggestionsList.styles';
 export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
@@ -66,24 +67,24 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     return (
       <div className={join(['y-suggestions-list', 'y-hc-border', className, classNames.root])}>
         {hasResults && (
-          <ul className={classNames.resultList}>
+          <LayoutList direction="vertical">
             {groupedItems.map((group: SuggestionItemGroupProps) => (
-              <li key={group.title}>
-                <ul>
+              <LayoutListItem key={group.title}>
+                <LayoutList direction="vertical">
                   {group.items.map((item: SuggestionItem) => (
-                    <li key={item.id}>
+                    <LayoutListItem key={item.id}>
                       <SuggestionsListItem
                         searchText={searchText}
                         isSelected={item.id === selectedId}
                         onSelect={onItemSelected}
                         {...item}
                       />
-                    </li>
+                    </LayoutListItem>
                   ))}
-                </ul>
-              </li>
+                </LayoutList>
+              </LayoutListItem>
             ))}
-          </ul>
+          </LayoutList>
         )}
         {isLoading ? (
           <div className={classNames.spinnerWrapper}>
