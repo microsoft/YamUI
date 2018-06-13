@@ -6,7 +6,7 @@
 
 Basic:
 
-```js { "props": { "data-description": "basic" } }
+```js { "props": { "data-description": "basic", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-navigationLink\"},{\"action\":\"focus\",\"selector\":\".y-navigationLink\"}]" } }
 <div>
   Here is a <NavigationLink href="/404.html"><strong>NavigationLink</strong> component</NavigationLink> with just an <strong>href</strong>, its only required property.
 </div>
@@ -22,7 +22,7 @@ Opens a new window:
 
 Unstyled link:
 
-```js { "props": { "data-description": "unstyled" } }
+```js { "props": { "data-description": "unstyled" , "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-navigationLink\"},{\"action\":\"focus\",\"selector\":\".y-navigationLink\"}]" } }
 <div>
   Here is a <NavigationLink href="/404.html" unstyled={true}><strong>NavigationLink</strong> component</NavigationLink> which removes the link styling and inherits its parent's color.
 </div>
@@ -30,7 +30,7 @@ Unstyled link:
 
 Link wrapping content:
 
-```js { "props": { "data-description": "wrapping" } }
+```js { "props": { "data-description": "wrapping", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-navigationLink\"},{\"action\":\"focus\",\"selector\":\".y-navigationLink\"}]" } }
 <NavigationLink href="/404.html" block={true}>
   <div>
     This <strong>NavigationLink</strong> component wraps an entire block of text. By default all text content within a <strong>NavigationLink</strong> tag will be styled like a link.
@@ -40,7 +40,7 @@ Link wrapping content:
 
 Unstyled link wrapping content:
 
-```js { "props": { "data-description": "unstyled wrapping" } }
+```js { "props": { "data-description": "unstyled wrapping", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-navigationLink\"},{\"action\":\"focus\",\"selector\":\".y-navigationLink\"}]" } }
 const { TextColor } = require('../Text');
 
 <div>

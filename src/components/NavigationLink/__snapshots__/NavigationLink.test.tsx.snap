@@ -2,7 +2,9 @@
 
 exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className=
+      y-navigationLink
+
   href="test.html"
   rel="nofollow noopener noreferrer"
   target="_blank"
@@ -13,7 +15,28 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 <a
-  className="y-navigationLink y-navigationLink__unstyled"
+  className=
+      y-navigationLink
+      {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:focus {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:hover {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
   href="test.html"
 >
   link content
@@ -22,7 +45,10 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with additional className matches its snapshot 1`] = `
 <a
-  className="y-navigationLink TEST_CLASSNAME"
+  className=
+      y-navigationLink
+      TEST_CLASSNAME
+
   href="test.html"
 >
   test content
@@ -32,7 +58,9 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
 exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
 <a
   aria-current="page"
-  className="y-navigationLink"
+  className=
+      y-navigationLink
+
   href="test.html"
 >
   link content
@@ -42,7 +70,9 @@ exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
 exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
 <a
   aria-label="ARIA LABEL CONTENT"
-  className="y-navigationLink"
+  className=
+      y-navigationLink
+
   href="test.html"
 >
   link content
@@ -51,7 +81,11 @@ exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
 <a
-  className="y-navigationLink y-navigationLink__block"
+  className=
+      y-navigationLink
+      {
+        display: block;
+      }
   href="test.html"
 >
   test content
@@ -60,7 +94,9 @@ exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className=
+      y-navigationLink
+
   href="test.html"
 >
   link content
@@ -69,7 +105,9 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with title matches its snapshot 1`] = `
 <a
-  className="y-navigationLink"
+  className=
+      y-navigationLink
+
   href="test.html"
   title="TITLE CONTENT"
 >
