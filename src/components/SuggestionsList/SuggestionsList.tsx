@@ -2,14 +2,21 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import SuggestionsListItem, { SuggestionItem } from './SuggestionsListItem';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
+import Block, { GutterSize } from '../Block';
+import SuggestionsListItem from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import Text, { TextSize, TextColor } from '../Text';
-import Block, { GutterSize } from '../Block';
 import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames } from './SuggestionsList.styles';
-export interface SuggestionsListProps extends NestableBaseComponentProps {
+import { SuggestionItem } from './types';
+
+export interface SuggestionItemGroup {
+  title: string;
+  items: SuggestionItem[];
+}
+
+export interface SuggestionsListProps extends BaseComponentProps {
   /**
    * The active search that produced the current state.
    */
@@ -30,7 +37,7 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
   /**
    * The groups of items to render.
    */
-  groupedItems?: SuggestionItemGroupProps[];
+  groupedItems?: SuggestionItemGroup[];
   /**
    * The index of current keyboard selection.
    */
@@ -39,11 +46,6 @@ export interface SuggestionsListProps extends NestableBaseComponentProps {
    * Called when an item in a group is selected by clicking.
    */
   onItemSelected(id: string | number): void;
-}
-
-export interface SuggestionItemGroupProps {
-  title: string;
-  items: SuggestionItem[];
 }
 
 /**
@@ -68,16 +70,16 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
       <div className={join(['y-suggestions-list', 'y-hc-border', className, classNames.root])}>
         {hasResults && (
           <LayoutList direction="vertical">
-            {groupedItems.map((group: SuggestionItemGroupProps) => (
+            {groupedItems.map((group: SuggestionItemGroup) => (
               <LayoutListItem key={group.title}>
                 <LayoutList direction="vertical">
                   {group.items.map((item: SuggestionItem) => (
                     <LayoutListItem key={item.id}>
                       <SuggestionsListItem
+                        item={item}
                         searchText={searchText}
                         isSelected={item.id === selectedId}
                         onSelect={onItemSelected}
-                        {...item}
                       />
                     </LayoutListItem>
                   ))}

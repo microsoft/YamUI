@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false with results matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -28,11 +28,14 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -45,7 +48,7 @@ exports[`<SuggestionsList /> when isLoading=false with results renders as expect
 
 exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `null`;
 
-exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -73,11 +76,14 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -88,7 +94,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -116,11 +122,14 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -131,7 +140,7 @@ exports[`<SuggestionsList /> when isLoading=false with results with state.hovere
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false without results matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -158,7 +167,7 @@ exports[`<SuggestionsList /> when isLoading=false without results renders as exp
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true with results matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -185,11 +194,14 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -216,7 +228,7 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
 
 exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `null`;
 
-exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -243,11 +255,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -272,7 +287,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
@@ -299,11 +314,14 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
@@ -328,7 +346,7 @@ exports[`<SuggestionsList /> when isLoading=true with results with state.hovered
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true without results matches its snapshot 1`] = `
 <div
   className=
       y-suggestions-list
