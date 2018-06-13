@@ -197,7 +197,7 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
 
     if (isLoading && !this.hasProgress()) {
       return (
-        <Block textColor={TextColor.METADATA} className="y-previewCard--spinner" push={1}>
+        <Block textColor={TextColor.METADATA} push={1}>
           <Spinner text={loadingText as string} size={SpinnerSize.XSMALL} color={SpinnerColor.METADATA} />
         </Block>
       );
