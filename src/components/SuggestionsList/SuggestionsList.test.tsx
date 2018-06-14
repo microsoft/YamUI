@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { default as SuggestionsList, SuggestionsListProps } from '.';
-import { LayoutListItem } from '../LayoutList';
 import { SuggestionsListItemTemplate } from './types';
 
 describe('<SuggestionsList />', () => {
@@ -74,39 +73,6 @@ describe('<SuggestionsList />', () => {
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
       });
-
-      describe('when onHover is called', () => {
-        beforeEach(() => {
-          component.find('SuggestionsListItem').simulate('hover', '1');
-        });
-
-        it('updates the state', () => {
-          expect(component.state()).toMatchSnapshot();
-        });
-      });
-
-      describe('with state.hoveredId=id', () => {
-        beforeEach(() => {
-          component.setState({ hoveredId: 'id' });
-        });
-
-        it('matches its snapshot', () => {
-          expect(component).toMatchSnapshot();
-        });
-
-        describe('when the mouse leaves', () => {
-          beforeEach(() => {
-            component
-              .find(LayoutListItem)
-              .at(1)
-              .simulate('mouseLeave');
-          });
-
-          it('matches its snapshot', () => {
-            expect(component).toMatchSnapshot();
-          });
-        });
-      });
     });
   });
 
@@ -150,39 +116,6 @@ describe('<SuggestionsList />', () => {
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
-      });
-
-      describe('when onHover is called', () => {
-        beforeEach(() => {
-          component.find('SuggestionsListItem').simulate('hover', '1');
-        });
-
-        it('updates the state', () => {
-          expect(component.state()).toMatchSnapshot();
-        });
-      });
-
-      describe('with state.hoveredId=id', () => {
-        beforeEach(() => {
-          component.setState({ hoveredId: 'id' });
-        });
-
-        it('matches its snapshot', () => {
-          expect(component).toMatchSnapshot();
-        });
-
-        describe('when the mouse leaves', () => {
-          beforeEach(() => {
-            component
-              .find(LayoutListItem)
-              .at(1)
-              .simulate('mouseLeave');
-          });
-
-          it('matches its snapshot', () => {
-            expect(component).toMatchSnapshot();
-          });
-        });
       });
     });
   });
