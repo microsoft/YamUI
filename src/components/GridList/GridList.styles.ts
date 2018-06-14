@@ -3,21 +3,32 @@ import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { getGutterValue } from '../../util/styles/gutters';
 
-// For IE11 support, use empty columns to fake the "grid-gap" gutter.
-const getTemplateColumns = (columns: number) => {
-  const cols: string[] = [];
-  for (let i = 0; i < columns; i = i + 1) {
-    cols.push('1fr');
-  }
-  return cols.join(' ');
+/**
+ * Gets the width of each item as a percentage. Prevents any decimals from rounding up,
+ * which would cause items to wrap to the next line in some browsers.
+ */
+const getItemWidthAsPercent = (columns: number) => {
+  const percent = 100 / columns;
+  const safePercent = (Math.floor(percent * 10000) / 10000).toFixed(4);
+  return `${safePercent}%`;
 };
 
 export const getClassNames = memoizeFunction((columns: number, gutterUnits: number) => {
+  const halfGutter = getGutterValue(gutterUnits / 2);
+
   return mergeStyleSets({
     root: {
-      display: 'grid',
-      gridTemplateColumns: getTemplateColumns(columns),
-      gridGap: getGutterValue(gutterUnits),
+      display: 'flex',
+      flexWrap: 'wrap',
+      margin: `-${halfGutter}`,
+      padding: 0,
+      selectors: {
+        '> .y-gridListItem': {
+          width: getItemWidthAsPercent(columns),
+          padding: halfGutter,
+          margin: 0,
+        },
+      },
     },
   });
 });

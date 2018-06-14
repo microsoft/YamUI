@@ -2,38 +2,177 @@
 
 1 column:
 
-```js { "props": { "data-description": "1" } }
+```js { "props": { "data-description": "1 column" } }
 const { GridList, GridListItem } = require('.');
-const { GutterSize } = require('../Block')
 
-const getItems = (total) => {
-  const items = [];
-  for (let i = 0; i < total; i++) {
-    items.push(
-      <GridListItem key={i}>
-        <Image source="logo.png" fullWidth={true} />
-      </GridListItem>
-    );
-  }
-  return items;
-}
+<GridList columns={1}>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+</GridList>
+```
 
-const getGrids = (total) => {
-  const grids = [];
-  for (let i = 1; i < total + 1; i++) {
-    grids.push(
-      <Block bottomSpacing={GutterSize.MEDIUM}>
-        <Heading level="3">{i} Column</Heading>
-        <GridList columns={i} gutterUnits={3}>
-          {getItems(i * 2)}
-        </GridList>
-      </Block>
-    );
-  }
-  return grids;
-}
+2 columns:
 
-<div>
-  {getGrids(8)}
-</div>
+```js { "props": { "data-description": "2 columns" } }
+const { GridList, GridListItem } = require('.');
+
+<GridList columns={2}>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+</GridList>
+```
+
+3 columns:
+
+```js { "props": { "data-description": "3 columns" } }
+const { GridList, GridListItem } = require('.');
+
+<GridList columns={3}>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+</GridList>
+```
+
+4 columns:
+
+```js { "props": { "data-description": "4 columns" } }
+const { GridList, GridListItem } = require('.');
+
+<GridList columns={4}>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+</GridList>
+```
+
+12 columns:
+
+```js { "props": { "data-description": "12 columns" } }
+const { GridList, GridListItem } = require('.');
+
+<GridList columns={12}>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+  <GridListItem>
+    <Image source="logo.png" fullWidth={true} />
+  </GridListItem>
+</GridList>
 ```

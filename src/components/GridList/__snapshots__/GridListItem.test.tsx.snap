@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridList /> with additional className matches its snapshot 1`] = `
+<li
+  className="y-gridListItem TEST_CLASSNAME"
+>
+  <div>
+    content
+  </div>
+</li>
+`;
+
+exports[`<GridList /> without props matches its snapshot 1`] = `
+<li
+  className="y-gridListItem"
+>
+  <div>
+    content
+  </div>
+</li>
+`;

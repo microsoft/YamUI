@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridList /> with additional className matches its snapshot 1`] = `
+<ul
+  className=
+      y-gridList
+      TEST_CLASSNAME
+      {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        margin-top: -2px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-gridListItem {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 2px;
+        width: 100.0000%;
+      }
+>
+  <GridListItem
+    key="1"
+  >
+    1
+  </GridListItem>
+  <GridListItem
+    key="2"
+  >
+    2
+  </GridListItem>
+  <GridListItem
+    key="3"
+  >
+    3
+  </GridListItem>
+  <GridListItem
+    key="4"
+  >
+    4
+  </GridListItem>
+</ul>
+`;
+
+exports[`<GridList /> with items matches its snapshot 1`] = `
+<ul
+  className=
+      y-gridList
+      {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        margin-top: -2px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-gridListItem {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 2px;
+        width: 100.0000%;
+      }
+>
+  <GridListItem
+    key="1"
+  >
+    1
+  </GridListItem>
+  <GridListItem
+    key="2"
+  >
+    2
+  </GridListItem>
+  <GridListItem
+    key="3"
+  >
+    3
+  </GridListItem>
+  <GridListItem
+    key="4"
+  >
+    4
+  </GridListItem>
+</ul>
+`;
+
+exports[`<GridList /> with more columns and wider gutters matches its snapshot 1`] = `
+<ul
+  className=
+      y-gridList
+      {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -6px;
+        margin-left: -6px;
+        margin-right: -6px;
+        margin-top: -6px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-gridListItem {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 6px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 6px;
+        width: 12.5000%;
+      }
+>
+  <GridListItem
+    key="1"
+  >
+    1
+  </GridListItem>
+  <GridListItem
+    key="2"
+  >
+    2
+  </GridListItem>
+  <GridListItem
+    key="3"
+  >
+    3
+  </GridListItem>
+  <GridListItem
+    key="4"
+  >
+    4
+  </GridListItem>
+</ul>
+`;
+
+exports[`<GridList /> without items matches its snapshot 1`] = `
+<ul
+  className=
+      y-gridList
+      {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        margin-top: -2px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      & > .y-gridListItem {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 2px;
+        width: 100.0000%;
+      }
+/>
+`;

@@ -3,7 +3,6 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { GridListItem } from './GridListItem';
 import { getClassNames } from './GridList.styles';
 
 export interface GridListProps extends NestableBaseComponentProps {
@@ -16,11 +15,12 @@ export interface GridListProps extends NestableBaseComponentProps {
    * The number of gutter units between each list item.
    * @default 1 (4px)
    */
-  gutterUnits: number;
+  gutterUnits?: number;
 }
 
 /**
- * GridList renders a list items as a grid. Nest GridListItems with your item content.
+ * GridList renders a list items in a grid pattern. Simply set a number of columns and an optional number
+ * of gutterUnits, then nest as many GridListItems as needed.
  */
 export class GridList extends React.Component<GridListProps> {
   public render() {
