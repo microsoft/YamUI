@@ -1,8 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { getGutterValue } from '../../util/styles/gutters';
-import { semanticColors } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
+import { semanticColors } from '../../util/colors';
+import { getGutterValue } from '../../util/styles/gutters';
 import { SidebarListSize } from './types';
 
 const getPadding = (size: SidebarListSize) => {

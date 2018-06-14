@@ -11,8 +11,8 @@ import {
   SidebarListItem,
   SidebarListLinkItem,
   SidebarListIllustrationItem,
-  SidebarListImageItem,
   SidebarListClickableItem,
+  BaseSidebarListItem,
 } from './types';
 import { getClassNames, SidebarListItemClassNames } from './SidebarListItem.styles';
 
@@ -25,14 +25,17 @@ const getMediaObjectSize = (size: SidebarListItemProps['size']) =>
 const isLinkItem = (item: SidebarListItem): item is SidebarListLinkItem => {
   return (item as SidebarListLinkItem).href !== undefined;
 };
+const isIllustrationItem = (item: BaseSidebarListItem): item is SidebarListIllustrationItem => {
+  return (item as SidebarListIllustrationItem).illustration !== undefined;
+};
 
 const getImageContent = (item: SidebarListItem, size: SidebarListItemProps['size']) => {
-  if ((item as SidebarListIllustrationItem).illustration) {
-    const Illustration = (item as SidebarListIllustrationItem).illustration;
+  if (isIllustrationItem(item)) {
+    const Illustration = item.illustration;
     return <Illustration size={getIllustrationSize(size)} block={true} />;
   }
 
-  return (item as SidebarListImageItem).imageContent;
+  return item.imageContent;
 };
 
 export interface SidebarListItemProps {

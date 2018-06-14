@@ -34,12 +34,12 @@ export default class SidebarList extends React.Component<SidebarListProps> {
   public render() {
     return (
       <LayoutList direction="vertical" className={join(['y-sidebarList', this.props.className])}>
-        {this.getItems()}
+        {this.props.items.map(this.getItem)}
       </LayoutList>
     );
   }
 
-  private getItems() {
-    return this.props.items.map(item => <SidebarListItemView item={item} size={this.props.size} key={item.key} />);
-  }
+  private getItem = (item: SidebarListItem) => {
+    return <SidebarListItemView item={item} size={this.props.size} key={item.key} />;
+  };
 }
