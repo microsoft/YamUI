@@ -154,15 +154,17 @@ exports[`<SuggestionsList /> when isLoading=false without results matches its sn
       }
 >
   <Block
-    padding="large"
+    className=
+
+        {
+          padding-bottom: 17px;
+          padding-top: 15px;
+        }
     textAlign="center"
+    textColor="metadata"
     textSize="small"
   >
-    <Text
-      color="metadata"
-    >
-      noResultsText
-    </Text>
+    noResultsText
   </Block>
 </div>
 `;

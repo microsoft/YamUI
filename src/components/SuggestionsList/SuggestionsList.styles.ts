@@ -10,7 +10,13 @@ export interface SuggestionsListStyleProps {
   hasResults: boolean;
 }
 
-const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
+export interface SuggestionsListClassNames {
+  root: string;
+  spinnerWrapper: string;
+  noResultsWrapper: string;
+}
+
+const getMemoizedClassNames = memoizeFunction((styleProps, theme): SuggestionsListClassNames => {
   const { isLoading, hasResults } = styleProps;
 
   return mergeStyleSets({

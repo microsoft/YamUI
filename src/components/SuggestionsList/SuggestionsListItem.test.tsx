@@ -14,13 +14,14 @@ describe('<SuggestionsListItem />', () => {
     name: 'John Smith',
   };
 
-  const baseProps = (overrides?: Partial<SuggestionsListItemProps>) => {
+  const getProps = (overrides?: Partial<SuggestionsListItemProps>) => {
     onSelect = jest.fn();
 
     return {
       onSelect,
       isSelected: false,
       searchText: 'Joh',
+      item: textItem,
       ...overrides,
     };
   };
@@ -31,7 +32,7 @@ describe('<SuggestionsListItem />', () => {
 
   describe('when isSelected=true', () => {
     beforeEach(() => {
-      component = shallow(<SuggestionsListItem {...baseProps({ isSelected: true })} item={textItem} />);
+      component = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
     });
 
     it('matches its snapshot', () => {
@@ -43,7 +44,7 @@ describe('<SuggestionsListItem />', () => {
     let preventDefault: jest.Mock;
 
     beforeEach(() => {
-      component = shallow(<SuggestionsListItem {...baseProps()} item={textItem} />);
+      component = shallow(<SuggestionsListItem {...getProps()} />);
       preventDefault = jest.fn();
       component.simulate('mouseDown', { preventDefault });
     });

@@ -3,7 +3,7 @@
 With no results:
 
 ```js { "props": { "data-description": "no results" } }
-<SuggestionsList noResultsText="No results found" />
+<SuggestionsList noResultsText="No results found" groupedItems={[]} />
 ```
 
 When loading:
@@ -14,6 +14,7 @@ When loading:
   loadingText="Searching for 'Cris'"
   noResultsText="No results found"
   isLoading={true}
+  groupedItems={[]}
 />
 ```
 

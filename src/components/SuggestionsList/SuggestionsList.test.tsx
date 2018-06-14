@@ -20,6 +20,7 @@ describe('<SuggestionsList />', () => {
       noResultsText: 'noResultsText',
       isLoading: false,
       selectedId: 2,
+      groupedItems: [],
     };
 
     return {
