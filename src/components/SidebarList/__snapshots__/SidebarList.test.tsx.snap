@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarList /> with additional className matches its snapshot 1`] = `
+<LayoutList
+  className="y-sidebarList TEST_CLASSNAME"
+  direction="vertical"
+/>
+`;
+
+exports[`<SidebarList /> with default options and empty items matches its snapshot 1`] = `
+<LayoutList
+  className="y-sidebarList"
+  direction="vertical"
+/>
+`;
+
+exports[`<SidebarList /> with items matches its snapshot 1`] = `
+<LayoutList
+  className="y-sidebarList"
+  direction="vertical"
+>
+  <SidebarListItemView
+    item={
+      Object {
+        "href": "https://www.yammer.dev",
+        "illustration": [Function],
+        "key": "1",
+        "title": "Item 1 title",
+      }
+    }
+    key="1"
+    size="large"
+  />
+</LayoutList>
+`;
