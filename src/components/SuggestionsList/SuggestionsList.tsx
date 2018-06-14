@@ -3,10 +3,9 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import Block, { GutterSize } from '../Block';
+import Block, { TextSize, TextColor } from '../Block';
 import SuggestionsListItem from './SuggestionsListItem';
 import Spinner from '../Spinner';
-import Text, { TextSize, TextColor } from '../Text';
 import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames } from './SuggestionsList.styles';
 import { SuggestionItem } from './types';
@@ -94,8 +93,13 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
           </div>
         ) : (
           !hasResults && (
-            <Block textAlign="center" padding={GutterSize.LARGE} textSize={TextSize.SMALL}>
-              <Text color={TextColor.METADATA}>{noResultsText}</Text>
+            <Block
+              textAlign="center"
+              textSize={TextSize.SMALL}
+              textColor={TextColor.METADATA}
+              className={classNames.noResultsWrapper}
+            >
+              {noResultsText}
             </Block>
           )
         )}

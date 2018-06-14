@@ -25,6 +25,10 @@ const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
       paddingTop: hasResults ? '13px' : '14px',
       borderTop: hasResults ? `1px solid ${theme.palette.neutralLighter}` : undefined,
     },
+    noResultsWrapper: {
+      paddingTop: '15px',
+      paddingBottom: '17px',
+    },
   });
 });
 
