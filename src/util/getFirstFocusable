@@ -1,4 +1,2 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { getFirstFocusable } from '@uifabric/utilities/lib/focus';
-
-export { getFirstFocusable };
+export { getFirstFocusable } from '@uifabric/utilities/lib/focus';
