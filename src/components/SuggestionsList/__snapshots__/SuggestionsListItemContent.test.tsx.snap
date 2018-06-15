@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SuggestionsListItemContentContent /> with avatar item matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        badgeContent="badge"
+        imageUrl="user.png"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="description"
+    size="small"
+    titleContent="John Smith"
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItemContentContent /> with media item without image matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <MediaObject
+    imageContent={null}
+    metadataContent="description"
+    size="small"
+    titleContent="John Smith"
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItemContentContent /> with media soft item matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <MediaObject
+    imageContent={
+      <span
+        aria-hidden={true}
+      >
+        <Image
+          block={true}
+          borderType="soft"
+          description=""
+          fullWidth={false}
+          height={32}
+          imageFit={2}
+          shouldFadeIn={false}
+          source="user.png"
+          width={32}
+        />
+      </span>
+    }
+    metadataContent="description"
+    size="small"
+    titleContent="John Smith"
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItemContentContent /> with media square item matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <MediaObject
+    imageContent={
+      <span
+        aria-hidden={true}
+      >
+        <Image
+          block={true}
+          description=""
+          fullWidth={false}
+          height={32}
+          imageFit={2}
+          shouldFadeIn={false}
+          source="user.png"
+          width={32}
+        />
+      </span>
+    }
+    metadataContent="description"
+    size="small"
+    titleContent="John Smith"
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItemContentContent /> with search text matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        badgeContent="badge"
+        imageUrl="user.png"
+        name="John Smith"
+        size="small"
+      />
+    }
+    metadataContent="description"
+    size="small"
+    titleContent={
+      Array [
+        <span
+          className=
+
+              {
+                font-weight: 600;
+              }
+        >
+          Joh
+        </span>,
+        <span>
+          n Smith
+        </span>,
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SuggestionsListItemContentContent /> with text item matches its snapshot 1`] = `
+<div
+  className=
+      y-suggestionsListItem
+      {
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+      }
+>
+  <Block
+    textSize="mediumSub"
+  >
+    John Smith
+  </Block>
+</div>
+`;
