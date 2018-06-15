@@ -2,11 +2,17 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
-import { BorderType } from '../Avatar';
+import { SuggestionItem, SuggestionsListItemTemplate } from './types';
 
 describe('<SuggestionsListItem />', () => {
-  let rendered: ShallowWrapper<SuggestionsListItemProps>;
+  let component: ShallowWrapper<SuggestionsListItemProps>;
   let onSelect: jest.Mock;
+
+  const textItem: SuggestionItem = {
+    template: SuggestionsListItemTemplate.TEXT,
+    id: '1',
+    name: 'John Smith',
+  };
 
   const getProps = (overrides?: Partial<SuggestionsListItemProps>) => {
     onSelect = jest.fn();
@@ -14,11 +20,8 @@ describe('<SuggestionsListItem />', () => {
     return {
       onSelect,
       isSelected: false,
-      id: '1',
-      imageUrl: 'imageUrl',
-      name: 'John Smith',
-      description: 'Software Engineer',
       searchText: 'Joh',
+      item: textItem,
       ...overrides,
     };
   };
@@ -29,32 +32,11 @@ describe('<SuggestionsListItem />', () => {
 
   describe('when isSelected=true', () => {
     beforeEach(() => {
-      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
+      component = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
     });
 
-    it('renders as expected', () => {
-      expect(rendered).toMatchSnapshot();
-    });
-  });
-
-  describe('when isSelected=false', () => {
-    beforeEach(() => {
-      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: false })} />);
-    });
-
-    it('renders as expected', () => {
-      expect(rendered).toMatchSnapshot();
-    });
-  });
-
-  describe('with avatarProps', () => {
-    beforeEach(() => {
-      const avatarProps = { borderType: BorderType.SOFT };
-      rendered = shallow(<SuggestionsListItem {...getProps({ avatarProps })} />);
-    });
-
-    it('renders as expected', () => {
-      expect(rendered).toMatchSnapshot();
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
     });
   });
 
@@ -62,9 +44,9 @@ describe('<SuggestionsListItem />', () => {
     let preventDefault: jest.Mock;
 
     beforeEach(() => {
-      rendered = shallow(<SuggestionsListItem {...getProps()} />);
+      component = shallow(<SuggestionsListItem {...getProps()} />);
       preventDefault = jest.fn();
-      rendered.simulate('mouseDown', { preventDefault });
+      component.simulate('mouseDown', { preventDefault });
     });
 
     it('calls props.onSelect', () => {

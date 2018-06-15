@@ -10,7 +10,13 @@ export interface SuggestionsListStyleProps {
   hasResults: boolean;
 }
 
-const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
+export interface SuggestionsListClassNames {
+  root: string;
+  spinnerWrapper: string;
+  noResultsWrapper: string;
+}
+
+const getMemoizedClassNames = memoizeFunction((styleProps, theme): SuggestionsListClassNames => {
   const { isLoading, hasResults } = styleProps;
 
   return mergeStyleSets({
@@ -24,6 +30,10 @@ const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
       paddingBottom: '14px',
       paddingTop: hasResults ? '13px' : '14px',
       borderTop: hasResults ? `1px solid ${theme.palette.neutralLighter}` : undefined,
+    },
+    noResultsWrapper: {
+      paddingTop: '15px',
+      paddingBottom: '17px',
     },
   });
 });
