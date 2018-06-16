@@ -118,7 +118,7 @@ export default class Picker extends React.Component<PickerProps<SuggestionItem>>
   }
 
   private getSuggestionItemContent = (item: SuggestionItem) => {
-    return <SuggestionItemContent item={item} />;
+    return <SuggestionItemContent item={item} className={getClassNames().suggestionItem} />;
   };
 
   // TODO: Get accessibility guidance from Brendan on this!!!

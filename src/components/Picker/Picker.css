@@ -1,5 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-.ms-Suggestions-container .ms-Suggestions-itemButton {
+.ms-Suggestions {
+  width: 280px;
+}
+
+.ms-Suggestions .ms-Suggestions-itemButton {
   margin: 0;
   padding: 0;
 }

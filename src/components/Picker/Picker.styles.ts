@@ -19,6 +19,9 @@ const getMemoizedClassNames = memoizeFunction((theme: ITheme) => {
       cursor: 'pointer',
       height: '100%',
     },
+    suggestionItem: {
+      width: '100%',
+    },
   });
 });
 
