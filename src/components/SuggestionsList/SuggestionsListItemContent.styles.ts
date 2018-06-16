@@ -8,6 +8,7 @@ import { SuggestionsListItemTemplate } from './types';
 export const getClassNames = memoizeFunction((template: SuggestionsListItemTemplate) => {
   return mergeStyleSets({
     root: {
+      textAlign: 'left',
       padding:
         template === SuggestionsListItemTemplate.TEXT
           ? `${getGutterValue(1)} ${getGutterValue(3)}`
