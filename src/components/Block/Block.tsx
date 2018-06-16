@@ -3,7 +3,6 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { ClickableContext } from '../Clickable';
 import { GutterSize } from '../FixedGrid/types';
 import { TextColor, TextSize } from '../Text/types';
 import { getStyles, getInnerStyles } from './Block.styles';
@@ -83,25 +82,16 @@ export default class Block extends React.Component<BlockProps> {
     const { children, textSize } = this.props;
 
     return (
-      <ClickableContext.Consumer>
-        {clickableContext => (
-          <BlockContext.Provider value={{ textSize }}>
-            <div className={this.getClasses(clickableContext.withinClickable)}>
-              <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
-            </div>
-          </BlockContext.Provider>
-        )}
-      </ClickableContext.Consumer>
+      <BlockContext.Provider value={{ textSize }}>
+        <div className={this.getClasses()}>
+          <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
+        </div>
+      </BlockContext.Provider>
     );
   }
 
-  private getClasses(withinClickable: boolean) {
+  private getClasses() {
     const { className, textSize } = this.props;
-    return join([
-      'y-block',
-      textSize ? `y-textSize-${textSize}` : '',
-      className,
-      mergeStyles(getStyles({ ...this.props, withinClickable })),
-    ]);
+    return join(['y-block', textSize ? `y-textSize-${textSize}` : '', className, mergeStyles(getStyles(this.props))]);
   }
 }

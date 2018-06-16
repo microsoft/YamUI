@@ -285,11 +285,7 @@ exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
 
 exports[`<Block /> within clickable matches its snapshot 1`] = `
 <div
-  class=
-      y-block
-      {
-        width: 100%;
-      }
+  class="y-block"
 >
   <div
     class=
