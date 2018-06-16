@@ -6,7 +6,7 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BasePicker, IBasePickerProps, IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
 import SuggestionItemContent, {
   SuggestionItem,
-  SuggestionsListItemTemplate,
+  /* SuggestionsListItemTemplate, */
 } from '../SuggestionsList/SuggestionsListItemContent';
 import { getClassNames } from './Picker.styles';
 import RemoveIcon from '../Icon/icons/Cancel';

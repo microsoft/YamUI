@@ -2,7 +2,7 @@
 
 User picker:
 
-```js { "props": { "data-description": "user picker" } }
+```js { "props": { "data-description": "user picker", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"a\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
 
@@ -75,16 +75,18 @@ class PeoplePicker extends React.Component {
   }
 }
 
-<PeoplePicker />
+<div style={{ height: '500px'}}>
+  <PeoplePicker />
+</div>
 ```
 
 Group picker limited to a single item:
 
-```js { "props": { "data-description": "group picker" } }
+```js { "props": { "data-description": "group picker", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"a\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
 
-const userItems = [{
+const groupItems = [{
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 1,
     name: 'Model Rocket Enthusiasts',
@@ -146,7 +148,7 @@ class GroupPicker extends React.Component {
   }
 
   getSuggestions(filterText) {
-    const items = filterText ? userItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1) : userItems;
+    const items = filterText ? groupItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1) : groupItems;
 
     if (!this.state.selectedItems || !this.state.selectedItems.length) {
       return items;
@@ -157,12 +159,14 @@ class GroupPicker extends React.Component {
   }
 }
 
-<GroupPicker />
+<div style={{ height: '500px'}}>
+  <GroupPicker />
+</div>
 ```
 
 Tag picker which allows the current text to be added:
 
-```js { "props": { "data-description": "tag picker" } }
+```js { "props": { "data-description": "tag picker", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"n\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"keyPress\",\"key\":\"n\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
 
@@ -233,5 +237,7 @@ class TagPicker extends React.Component {
   }
 }
 
-<TagPicker />
+<div style={{ height: '500px'}}>
+  <TagPicker />
+</div>
 ```
