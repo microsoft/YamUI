@@ -24,7 +24,7 @@ export const getClassNames = memoizeFunction((styleProps: ClickableStyleProps) =
       display: block ? 'block' : 'inline',
       width: block ? '100%' : 'undefined',
       selectors: {
-        '.y-block': {
+        '> .y-block': {
           width: '100%',
         },
       },
