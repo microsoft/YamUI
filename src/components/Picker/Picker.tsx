@@ -18,6 +18,17 @@ class SuggestionListBasePicker extends BasePicker<SuggestionItem, IBasePickerPro
 
 export interface PickerProps<T> extends BaseComponentProps {
   /**
+   * This is where you provide the items to be rendered in the autocomplete dropdown.
+   * The current filter text and list of already-selected items will be provided.
+   */
+  onResolveSuggestions: IBasePickerProps<T>['onResolveSuggestions'];
+
+  /**
+   * Called when the list of selected items changes.
+   */
+  onChange: IBasePickerProps<T>['onChange'];
+
+  /**
    * The list of currently-selected items.
    */
   selectedItems: IBasePickerProps<T>['selectedItems'];
@@ -27,8 +38,19 @@ export interface PickerProps<T> extends BaseComponentProps {
    */
   inputAriaLabel: string;
 
+  /**
+   * Aria label for the close button on selected items.
+   */
+  removeItemAriaLabel: string;
+
+  /**
+   * Visible header text in the autocomplete dropdown.
+   */
   suggestionsHeaderText: string;
 
+  /**
+   * Message to display when no results are found.
+   */
   noResultsFoundText: string;
 
   /**
@@ -50,22 +72,6 @@ export interface PickerProps<T> extends BaseComponentProps {
    * Callback event when the UI element loses focus.
    */
   onBlur?: IBasePickerProps<T>['onBlur'];
-
-  /**
-   * This is where you provide the items to be rendered in the autocomplete dropdown.
-   * The current filter text and list of already-selected items will be provided.
-   */
-  onResolveSuggestions: IBasePickerProps<T>['onResolveSuggestions'];
-
-  /**
-   * Called when an item has been selected. The application is responsible for updating the `selectedItems` prop.
-   */
-  onItemSelected: IBasePickerProps<T>['onItemSelected'];
-
-  /**
-   * Called when an item has been removed. The application is responsible for updating the `selectedItems` prop.
-   */
-  onRemoveSuggestion(item: T): void; // Fabric BasePicker has a bad type here, references Persona...
 }
 
 /**
@@ -81,8 +87,7 @@ export default class Picker extends React.Component<PickerProps<SuggestionItem>>
       onFocus,
       onBlur,
       onResolveSuggestions,
-      onItemSelected,
-      onRemoveSuggestion,
+      onChange,
       selectedItems,
       inputAriaLabel,
       suggestionsHeaderText,
@@ -106,8 +111,7 @@ export default class Picker extends React.Component<PickerProps<SuggestionItem>>
         }}
         onRenderSuggestionsItem={this.getSuggestionItemContent}
         onRenderItem={this.getSelectedItem}
-        onItemSelected={onItemSelected}
-        onRemoveSuggestion={onRemoveSuggestion as any}
+        onChange={onChange}
         selectedItems={selectedItems}
       />
     );
@@ -144,7 +148,11 @@ export default class Picker extends React.Component<PickerProps<SuggestionItem>>
             </FixedGridColumn>
             <FixedGridColumn fixed={true}>
               {!props.disabled && (
-                <div className={classNames.selectedItemCloseButton} onClick={props.onRemoveItem}>
+                <div
+                  className={classNames.selectedItemCloseButton}
+                  onClick={props.onRemoveItem}
+                  aria-label={this.props.removeItemAriaLabel}
+                >
                   <RemoveIcon block={true} />
                 </div>
               )}

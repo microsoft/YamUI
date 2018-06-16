@@ -40,8 +40,7 @@ class PeoplePicker extends React.Component {
     super(props);
     this.state = { selectedItems: [] };
     this.getSuggestions = this.getSuggestions.bind(this);
-    this.onItemSelected = this.onItemSelected.bind(this);
-    this.onItemRemoved = this.onItemRemoved.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   render() {
@@ -50,27 +49,18 @@ class PeoplePicker extends React.Component {
     return (
       <Picker
         onResolveSuggestions={this.getSuggestions}
-        onItemSelected={this.onItemSelected}
-        onItemRemoved={this.onItemRemoved}
+        onChange={this.onChange}
         selectedItems={this.state.selectedItems}
         inputAriaLabel="People to mention"
+        removeItemAriaLabel="Remove this item"
         suggestionsHeaderText="People"
         noResultsFoundText="No results found"
       />
     );
   }
 
-  onItemSelected(item) {
-    if (item) {
-      this.setState({ selectedItems: [...this.state.selectedItems, item] });
-    }
-  }
-
-  onItemRemoved(removedItem) {
-    console.log(removedItem)
-    if (removedItem) {
-      this.setState({ selectedItems: this.state.selectedItems.filter((item) => item.id !== removedItem.id) });
-    }
+  onChange(items) {
+    this.setState({ selectedItems: items });
   }
 
   getSuggestions(filterText) {
@@ -131,8 +121,7 @@ class GroupPicker extends React.Component {
     super(props);
     this.state = { selectedItems: [] };
     this.getSuggestions = this.getSuggestions.bind(this);
-    this.onItemSelected = this.onItemSelected.bind(this);
-    this.onItemRemoved = this.onItemRemoved.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   render() {
@@ -141,10 +130,10 @@ class GroupPicker extends React.Component {
     return (
       <Picker
         onResolveSuggestions={this.getSuggestions}
-        onItemSelected={this.onItemSelected}
-        onItemRemoved={this.onItemRemoved}
+        onChange={this.onChange}
         selectedItems={this.state.selectedItems}
         inputAriaLabel="Choose a group"
+        removeItemAriaLabel="Remove this item"
         suggestionsHeaderText="Groups"
         noResultsFoundText="No results found"
         itemLimit={1}
@@ -152,17 +141,8 @@ class GroupPicker extends React.Component {
     );
   }
 
-  onItemSelected(item) {
-    if (item) {
-      this.setState({ selectedItems: [...this.state.selectedItems, item] });
-    }
-  }
-
-  onItemRemoved(removedItem) {
-    console.log(removedItem)
-    if (removedItem) {
-      this.setState({ selectedItems: this.state.selectedItems.filter((item) => item.id !== removedItem.id) });
-    }
+  onChange(items) {
+    this.setState({ selectedItems: items });
   }
 
   getSuggestions(filterText) {
@@ -216,8 +196,7 @@ class TagPicker extends React.Component {
     super(props);
     this.state = { selectedItems: [] };
     this.getSuggestions = this.getSuggestions.bind(this);
-    this.onItemSelected = this.onItemSelected.bind(this);
-    this.onItemRemoved = this.onItemRemoved.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   render() {
@@ -226,27 +205,18 @@ class TagPicker extends React.Component {
     return (
       <Picker
         onResolveSuggestions={this.getSuggestions}
-        onItemSelected={this.onItemSelected}
-        onItemRemoved={this.onItemRemoved}
+        onChange={this.onChange}
         selectedItems={this.state.selectedItems}
         inputAriaLabel="Add topics"
+        removeItemAriaLabel="Remove this item"
         suggestionsHeaderText="Topics"
         noResultsFoundText="No results found"
       />
     );
   }
 
-  onItemSelected(item) {
-    if (item) {
-      this.setState({ selectedItems: [...this.state.selectedItems, item] });
-    }
-  }
-
-  onItemRemoved(removedItem) {
-    console.log(removedItem)
-    if (removedItem) {
-      this.setState({ selectedItems: this.state.selectedItems.filter((item) => item.id !== removedItem.id) });
-    }
+  onChange(items) {
+    this.setState({ selectedItems: items });
   }
 
   getSuggestions(filterText) {
