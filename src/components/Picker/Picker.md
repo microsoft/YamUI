@@ -75,7 +75,7 @@ class PeoplePicker extends React.Component {
   }
 }
 
-<div style={{ height: '500px'}}>
+<div style={{ height: '350px'}}>
   <PeoplePicker />
 </div>
 ```
@@ -159,7 +159,7 @@ class GroupPicker extends React.Component {
   }
 }
 
-<div style={{ height: '500px'}}>
+<div style={{ height: '230px'}}>
   <GroupPicker />
 </div>
 ```
@@ -237,7 +237,7 @@ class TagPicker extends React.Component {
   }
 }
 
-<div style={{ height: '500px'}}>
+<div style={{ height: '230px'}}>
   <TagPicker />
 </div>
 ```
