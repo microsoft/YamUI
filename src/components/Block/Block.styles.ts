@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BlockProps } from './Block';
 import { GutterSize } from '../FixedGrid/types';
-import { textColors, fontSizes, lineHeights, ellipsisStyle } from '../../util/styles/fonts';
+import { textColors, fontSizes, lineHeights, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
 import { IRawStyle } from '@uifabric/styling';
 
@@ -27,6 +27,11 @@ export const getStyles = (props: BlockProps): IRawStyle => {
     marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
     // For positive push, "push" it down with top padding (because margins can collapse).
     paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
+    selectors: {
+      '.y-text__ellipsis': {
+        verticalAlign: textSize ? verticalAligns[textSize] : undefined,
+      },
+    },
   };
 };
 

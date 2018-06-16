@@ -269,6 +269,9 @@ exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
         font-size: 2.2rem;
         line-height: 2.8rem;
       }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
+      }
 >
   <div
     className=

@@ -14,8 +14,11 @@ exports[`<Text /> with a valid size and maxWidth matches its snapshot 1`] = `
         max-width: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
-        vertical-align: -0.5rem;
+        vertical-align: -0.4rem;
         white-space: nowrap;
+      }
+      &.y-text.y-text__ellipsis {
+        vertical-align: -0.5rem;
       }
 >
   test content
