@@ -14,12 +14,8 @@ const getHeight = (size?: TextSize) => {
   return size ? lineHeights[size] : undefined;
 };
 
-const getVerticalAlignForMaxWidth = (size?: TextSize) => {
-  return size ? verticalAligns[size] : '-0.4rem';
-};
-
-export const getStyles = (props: TextProps & { blockTextSize?: TextSize }): IRawStyle => {
-  const { size, maxWidth, bold, uppercase, color, blockTextSize } = props;
+export const getStyles = (props: TextProps): IRawStyle => {
+  const { size, maxWidth, bold, uppercase, color } = props;
 
   return {
     ...(maxWidth ? ellipsisStyle : {}),
@@ -31,6 +27,12 @@ export const getStyles = (props: TextProps & { blockTextSize?: TextSize }): IRaw
     color: color ? textColors[color] : undefined,
     maxWidth: maxWidth || undefined,
     height: maxWidth ? getHeight(size) : undefined,
-    verticalAlign: maxWidth ? getVerticalAlignForMaxWidth(size || blockTextSize) : undefined,
+    verticalAlign: maxWidth ? '-0.4rem' : undefined,
+    selectors: {
+      /* increased specificity to override the block style */
+      '&.y-text.y-text__ellipsis': {
+        verticalAlign: maxWidth && size ? verticalAligns[size] : undefined,
+      },
+    },
   };
 };

@@ -25,6 +25,9 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
         text-align: inherit;
         width: undefined;
       }
+      & > .y-block {
+        width: 100%;
+      }
   type="button"
 >
   <span
@@ -57,6 +60,9 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
         padding-right: 0px;
         padding-top: 0px;
         text-align: inherit;
+        width: 100%;
+      }
+      & > .y-block {
         width: 100%;
       }
   type="button"
@@ -93,6 +99,9 @@ exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
         text-align: inherit;
         width: undefined;
       }
+      & > .y-block {
+        width: 100%;
+      }
   type="button"
 >
   <span
@@ -126,6 +135,9 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
         padding-top: 0px;
         text-align: inherit;
         width: undefined;
+      }
+      & > .y-block {
+        width: 100%;
       }
   title="extra browser tooltip content"
   type="button"
@@ -162,6 +174,9 @@ exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
         text-align: inherit;
         width: undefined;
       }
+      & > .y-block {
+        width: 100%;
+      }
   type="button"
 >
   clickable content
@@ -192,6 +207,9 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
         padding-top: 0px;
         text-align: inherit;
         width: undefined;
+      }
+      & > .y-block {
+        width: 100%;
       }
   type="button"
 >
@@ -226,6 +244,9 @@ exports[`<Clickable /> with default options matches its snapshot 1`] = `
         padding-top: 0px;
         text-align: inherit;
         width: undefined;
+      }
+      & > .y-block {
+        width: 100%;
       }
   type="button"
 >

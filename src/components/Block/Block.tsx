@@ -3,7 +3,6 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { ClickableContext } from '../Clickable';
 import { GutterSize } from '../FixedGrid/types';
 import { TextColor, TextSize } from '../Text/types';
 import { getStyles, getInnerStyles } from './Block.styles';
@@ -64,14 +63,6 @@ export interface BlockProps extends NestableBaseComponentProps {
   ellipsis?: boolean;
 }
 
-export interface BlockContext {
-  textSize?: TextSize;
-}
-
-const defaultContext: BlockContext = {};
-
-export const BlockContext = React.createContext(defaultContext);
-
 /**
  * A `Block` is a layout component to build consistent padding and vertical spacing between
  * components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in
@@ -80,28 +71,17 @@ export const BlockContext = React.createContext(defaultContext);
  */
 export default class Block extends React.Component<BlockProps> {
   public render() {
-    const { children, textSize } = this.props;
+    const { children } = this.props;
 
     return (
-      <ClickableContext.Consumer>
-        {clickableContext => (
-          <BlockContext.Provider value={{ textSize }}>
-            <div className={this.getClasses(clickableContext.withinClickable)}>
-              <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
-            </div>
-          </BlockContext.Provider>
-        )}
-      </ClickableContext.Consumer>
+      <div className={this.getClasses()}>
+        <div className={`y-block--inner ${mergeStyles(getInnerStyles(this.props))}`}>{children}</div>
+      </div>
     );
   }
 
-  private getClasses(withinClickable: boolean) {
+  private getClasses() {
     const { className, textSize } = this.props;
-    return join([
-      'y-block',
-      textSize ? `y-textSize-${textSize}` : '',
-      className,
-      mergeStyles(getStyles({ ...this.props, withinClickable })),
-    ]);
+    return join(['y-block', textSize ? `y-textSize-${textSize}` : '', className, mergeStyles(getStyles(this.props))]);
   }
 }

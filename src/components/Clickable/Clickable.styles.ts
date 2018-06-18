@@ -23,6 +23,11 @@ export const getClassNames = memoizeFunction((styleProps: ClickableStyleProps) =
       cursor: 'pointer',
       display: block ? 'block' : 'inline',
       width: block ? '100%' : 'undefined',
+      selectors: {
+        '> .y-block': {
+          width: '100%',
+        },
+      },
     },
   });
 });

@@ -10,6 +10,9 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
         font-size: 1.4rem;
         line-height: 2.0rem;
       }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
+      }
 >
   <div
     className=
@@ -109,6 +112,9 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       {
         font-size: 1.4rem;
         line-height: 2.0rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
       }
 >
   <div
@@ -262,6 +268,9 @@ exports[`<Dropdown /> with section header matches its snapshot 1`] = `
       {
         font-size: 1.2rem;
         line-height: 1.6rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.3rem;
       }
 >
   <div
