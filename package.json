@@ -2,7 +2,7 @@
   "name": "yamui",
   "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
-  "version": "8.3.0",
+  "version": "8.4.0",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "repository": {
