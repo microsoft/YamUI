@@ -12,6 +12,7 @@
     "<rootDir>/src/demos"
   ],
   "moduleNameMapper": {
+    "@uifabric/utilities/(.*)": "<rootDir>/node_modules/@uifabric/utilities/",
     "office-ui-fabric-react/lib/(.*)": "<rootDir>/node_modules/office-ui-fabric-react/lib-commonjs/$1",
     "^.+\\.css$": "identity-obj-proxy"
   },
