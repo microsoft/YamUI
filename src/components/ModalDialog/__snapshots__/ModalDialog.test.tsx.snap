@@ -48,7 +48,7 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
     verticalPadding="medium"
   >
     <FixedGridRow
-      bottomSpacing="xLarge"
+      bottomSpacing="xSmall"
     >
       <FixedGridColumn>
         <Heading
@@ -97,7 +97,7 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
     verticalPadding="medium"
   >
     <FixedGridRow
-      bottomSpacing="xLarge"
+      bottomSpacing="xSmall"
     >
       <FixedGridColumn>
         <Heading

@@ -12,6 +12,7 @@ import ScreenreaderText from '../ScreenreaderText';
 import { join } from '../../util/classNames';
 import { getClassNames } from './ModalDialog.styles';
 import { ModalDialogSize } from './types';
+import { KeyCodes } from '@uifabric/utilities';
 
 export interface ModalDialogProps extends BaseComponentProps {
   /**
@@ -46,22 +47,34 @@ export interface ModalDialogProps extends BaseComponentProps {
   size: ModalDialogSize;
 }
 
+export interface ModalDialogState {
+  isOpen: boolean;
+}
+
 /**
  * A `ModalDialog` is a temporary, modal UI overlay that generally provides contextual app
  * information or requires user confirmation/input.
  */
-export default class ModalDialog extends React.Component<ModalDialogProps> {
+export default class ModalDialog extends React.Component<ModalDialogProps, ModalDialogState> {
   constructor(props: ModalDialogProps) {
     super(props);
   }
 
+  public static getDerivedStateFromProps(props: ModalDialogProps) {
+    return {
+      isOpen: props.isOpen,
+    };
+  }
+
   public render() {
-    const { children, className, isOpen, onDismissed, size } = this.props;
+    const { children, className, onDismissed, size } = this.props;
     const classNames = getClassNames(size);
+
+    this.state.isOpen ? this.startKeyListener() : this.stopKeyListener();
 
     return (
       <OfficeFabricModal
-        isOpen={isOpen}
+        isOpen={this.state.isOpen}
         onDismiss={onDismissed}
         onDismissed={onDismissed}
         containerClassName={join(['y-modalDialog', className, classNames.container])}
@@ -97,5 +110,21 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
         </FixedGridColumn>
       </FixedGridRow>
     );
+  };
+
+  private handleKeyDown = (e: KeyboardEvent) => {
+    if (e.keyCode === KeyCodes.escape) {
+      this.setState(() => ({
+        isOpen: false,
+      }));
+    }
+  };
+
+  private startKeyListener = () => {
+    document.addEventListener('keydown', this.handleKeyDown);
+  };
+
+  private stopKeyListener = () => {
+    document.removeEventListener('keydown', this.handleKeyDown);
   };
 }
