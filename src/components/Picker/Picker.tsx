@@ -4,19 +4,16 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BasePicker, IBasePickerProps, IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
-import SuggestionItemContent, {
-  SuggestionItem,
-  /* SuggestionsListItemTemplate, */
-} from '../SuggestionsList/SuggestionsListItemContent';
-import { getClassNames } from './Picker.styles';
-import RemoveIcon from '../Icon/icons/Cancel';
-import './Picker.css'; // Required for the Callout content as there aren't JS styles to override
 import Block, { TextSize } from '../Block';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
+import SuggestionItemContent, { SuggestionItem } from '../SuggestionsList/SuggestionsListItemContent';
+import RemoveIcon from '../Icon/icons/Cancel';
+import { getClassNames } from './Picker.styles';
+import './Picker.css'; // Required for the Callout content as there aren't JS styles to override
 
 class SuggestionListBasePicker extends BasePicker<SuggestionItem, IBasePickerProps<SuggestionItem>> {}
 
-export interface PickerProps<T> extends BaseComponentProps {
+export interface BasePickerProps<T> extends BaseComponentProps {
   /**
    * This is where you provide the items to be rendered in the autocomplete dropdown.
    * The current filter text and list of already-selected items will be provided.
@@ -74,11 +71,12 @@ export interface PickerProps<T> extends BaseComponentProps {
   onBlur?: IBasePickerProps<T>['onBlur'];
 }
 
+export type PickerProps = BasePickerProps<SuggestionItem>;
+
 /**
- * Describe what `Picker` does. This will also appear as part of this component's
- * documentation.
+ * Pickers are used to pick one or more entities (e.g. people, groups, topics) from a list with typeahead capabilities.
  */
-export default class Picker extends React.Component<PickerProps<SuggestionItem>> {
+export default class Picker extends React.Component<PickerProps> {
   public render() {
     const {
       className,
@@ -118,18 +116,11 @@ export default class Picker extends React.Component<PickerProps<SuggestionItem>>
   }
 
   private getSuggestionItemContent = (item: SuggestionItem) => {
-    return <SuggestionItemContent item={item} className={getClassNames().suggestionItem} />;
+    const classNames = getClassNames();
+
+    return <SuggestionItemContent item={item} className={classNames.suggestionItem} />;
   };
 
-  // TODO: Get accessibility guidance from Brendan on this!!!
-  // TODO: Get guidance from UX Design team on this!!!
-  // TODO: Render selected items from a different template based on props.item.template:
-  //        SuggestionsListItemTemplate.AVATAR_ROUND (user)
-  //        SuggestionsListItemTemplate.TEXT (topic)
-  //        SuggestionsListItemTemplate.MEDIA_SOFT (group)
-  //        SuggestionsListItemTemplate.MEDIA_SQUARE (OGOs, etc.)
-  // NOTE: This is based on the Tag Picker implementation:
-  // https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/pickers/TagPicker/TagItem.tsx#L16-L36
   private getSelectedItem = (props: IPickerItemProps<SuggestionItem>) => {
     const classNames = getClassNames();
 

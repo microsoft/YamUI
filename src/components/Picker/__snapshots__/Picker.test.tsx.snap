@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Picker /> when rendering a selected item matches its snapshot 1`] = `
+<div
+  className=
+
+      {
+        background-color: #f3f5f8;
+        border-radius: 2px;
+        border: solid 1px #dde0e6;
+        color: #343A41;
+        cursor: default;
+        height: 26px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 2px;
+      }
+  data-is-focusable={true}
+  data-selection-index={0}
+  role="listitem"
+>
+  <Block
+    textSize="mediumSub"
+  >
+    <FixedGridRow>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <span>
+          Cristiana Cline
+        </span>
+      </FixedGridColumn>
+      <FixedGridColumn
+        fixed={true}
+      >
+        <div
+          aria-label="Remove this item"
+          className=
+
+              {
+                cursor: pointer;
+                display: inline-block;
+              }
+        >
+          <Cancel
+            block={true}
+          />
+        </div>
+      </FixedGridColumn>
+    </FixedGridRow>
+  </Block>
+</div>
+`;
+
+exports[`<Picker /> when rendering a suggestion item matches its snapshot 1`] = `
+<SuggestionsListItemContent
+  className=
+
+      {
+        width: 100%;
+      }
+  item={
+    Object {
+      "description": "Data Analyst",
+      "id": 1,
+      "name": "Cristiana Cline",
+      "template": "mediaRound",
+    }
+  }
+/>
+`;
+
+exports[`<Picker /> with additional className matches its snapshot 1`] = `
+<SuggestionListBasePicker
+  className="y-picker TEST_CLASSNAME"
+  inputProps={
+    Object {
+      "aria-label": "People to mention",
+      "onBlur": undefined,
+      "onFocus": undefined,
+    }
+  }
+  onChange={[MockFunction]}
+  onRenderItem={[Function]}
+  onRenderSuggestionsItem={[Function]}
+  onResolveSuggestions={[Function]}
+  pickerSuggestionsProps={
+    Object {
+      "noResultsFoundText": "No results found",
+      "suggestionsHeaderText": "People",
+    }
+  }
+  selectedItems={Array []}
+/>
+`;
+
+exports[`<Picker /> with default options matches its snapshot 1`] = `
+<SuggestionListBasePicker
+  className="y-picker"
+  inputProps={
+    Object {
+      "aria-label": "People to mention",
+      "onBlur": undefined,
+      "onFocus": undefined,
+    }
+  }
+  onChange={[MockFunction]}
+  onRenderItem={[Function]}
+  onRenderSuggestionsItem={[Function]}
+  onResolveSuggestions={[Function]}
+  pickerSuggestionsProps={
+    Object {
+      "noResultsFoundText": "No results found",
+      "suggestionsHeaderText": "People",
+    }
+  }
+  selectedItems={Array []}
+/>
+`;

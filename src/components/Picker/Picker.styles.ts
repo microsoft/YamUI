@@ -17,7 +17,7 @@ const getMemoizedClassNames = memoizeFunction((theme: ITheme) => {
     },
     selectedItemCloseButton: {
       cursor: 'pointer',
-      height: '100%',
+      display: 'inline-block',
     },
     suggestionItem: {
       width: '100%',

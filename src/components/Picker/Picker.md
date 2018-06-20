@@ -5,35 +5,40 @@ User picker:
 ```js { "props": { "data-description": "user picker", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"a\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
-
-const avatarItems = [{
+const avatarItems = [
+  {
     template: SuggestionsListItemTemplate.AVATAR_ROUND,
     id: 1,
     name: 'Cristiana Cline',
     description: 'Data Analyst',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.AVATAR_ROUND,
     id: 2,
     name: 'Cristian Sayers',
     description: 'Front-End Developer',
     imageUrl: 'user.png',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.AVATAR_ROUND,
     id: 3,
     name: 'Johanna Cristian Rodriguez Hernandez',
     description: 'Information Architecture',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.AVATAR_ROUND,
     id: 4,
     name: 'Lidia Holloway Cristina',
     description: 'Senior Designer',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.AVATAR_ROUND,
     id: 5,
     name: 'Nestor Cristian Wilke',
     description: 'Product Manager',
     imageUrl: 'group.png',
-  }];
+  },
+];
 
 class PeoplePicker extends React.Component {
   constructor(props) {
@@ -64,7 +69,9 @@ class PeoplePicker extends React.Component {
   }
 
   getSuggestions(filterText) {
-    const items = filterText ? avatarItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1) : avatarItems;
+    const items = filterText
+      ? avatarItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1)
+      : avatarItems;
 
     if (!this.state.selectedItems || !this.state.selectedItems.length) {
       return items;
@@ -75,9 +82,9 @@ class PeoplePicker extends React.Component {
   }
 }
 
-<div style={{ height: '350px'}}>
+<div style={{ height: '350px' }}>
   <PeoplePicker />
-</div>
+</div>;
 ```
 
 Group picker limited to a single item:
@@ -85,38 +92,42 @@ Group picker limited to a single item:
 ```js { "props": { "data-description": "group picker", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"a\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
-
-const groupItems = [{
+const groupItems = [
+  {
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 1,
     name: 'Model Rocket Enthusiasts',
     description: 'all the cool rocket things',
     imageUrl: 'group.png',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 2,
     name: 'Model Rocket Professionals',
     description: 'All the professional rocket things',
     imageUrl: 'logo.png',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 3,
     name: 'Modeling Agency Group',
     description: 'Talent acquisition, modeling contracts, all the other modeling-related things',
     imageUrl: 'user.png',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 4,
     name: 'Modeling group #2',
     description: 'no group image :(',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.MEDIA_SOFT,
     id: 5,
     name: 'Modeling group #3',
     description: 'best modeling group of all',
     imageUrl: 'logoFallback.png',
-  }];
-
+  },
+];
 
 class GroupPicker extends React.Component {
   constructor(props) {
@@ -148,7 +159,9 @@ class GroupPicker extends React.Component {
   }
 
   getSuggestions(filterText) {
-    const items = filterText ? groupItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1) : groupItems;
+    const items = filterText
+      ? groupItems.filter(item => item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1)
+      : groupItems;
 
     if (!this.state.selectedItems || !this.state.selectedItems.length) {
       return items;
@@ -159,9 +172,9 @@ class GroupPicker extends React.Component {
   }
 }
 
-<div style={{ height: '230px'}}>
+<div style={{ height: '230px' }}>
   <GroupPicker />
-</div>
+</div>;
 ```
 
 Tag picker which allows the current text to be added:
@@ -169,31 +182,33 @@ Tag picker which allows the current text to be added:
 ```js { "props": { "data-description": "tag picker", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-picker\"},{\"action\":\"keyPress\",\"key\":\"n\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"keyPress\",\"key\":\"n\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"},{\"action\":\"click\",\"selector\":\".y-suggestionsListItem\"}]" } }
 const { SuggestionsListItemTemplate } = require('../SuggestionsList/SuggestionsListItemContent');
 
-
-const textItems = [{
+const textItems = [
+  {
     template: SuggestionsListItemTemplate.TEXT,
     id: 1,
     name: '#nobody',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.TEXT,
     id: 2,
     name: '#northbound',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.TEXT,
     id: 3,
     name: '#notinmyhouse',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.TEXT,
     id: 4,
     name: '#nowayjose',
-  }, {
+  },
+  {
     template: SuggestionsListItemTemplate.TEXT,
     id: 5,
     name: '#nowisthetime',
-  }];
-
-
-
+  },
+];
 
 class TagPicker extends React.Component {
   constructor(props) {
@@ -237,7 +252,7 @@ class TagPicker extends React.Component {
   }
 }
 
-<div style={{ height: '230px'}}>
+<div style={{ height: '230px' }}>
   <TagPicker />
-</div>
+</div>;
 ```
