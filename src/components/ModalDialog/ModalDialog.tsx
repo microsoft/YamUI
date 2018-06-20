@@ -64,6 +64,7 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
         isOpen={isOpen}
         onDismiss={onDismissed}
         onDismissed={onDismissed}
+        titleAriaId="y-modalDialog--title"
         containerClassName={join(['y-modalDialog', className, classNames.container])}
       >
         <Block verticalPadding={GutterSize.MEDIUM} horizontalPadding={GutterSize.XLARGE}>
@@ -86,9 +87,11 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
     return (
       <FixedGridRow bottomSpacing={GutterSize.XSMALL}>
         <FixedGridColumn>
-          <Heading level="1" size="5">
-            {title}
-          </Heading>
+          <div id="y-modalDialog--title">
+            <Heading level="1" size="5">
+              {title}
+            </Heading>
+          </div>
         </FixedGridColumn>
         <FixedGridColumn fixed={true}>
           <Clickable onClick={onDismissed} unstyled={true} ariaLabel={closeAriaLabel} block={true}>

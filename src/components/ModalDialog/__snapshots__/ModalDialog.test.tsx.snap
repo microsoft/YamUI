@@ -14,6 +14,7 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
   isOpen={false}
   onDismiss={[MockFunction]}
   onDismissed={[MockFunction]}
+  titleAriaId="y-modalDialog--title"
 >
   <Block
     horizontalPadding="xLarge"
@@ -42,6 +43,7 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
   isOpen={false}
   onDismiss={[MockFunction]}
   onDismissed={[MockFunction]}
+  titleAriaId="y-modalDialog--title"
 >
   <Block
     horizontalPadding="xLarge"
@@ -51,12 +53,16 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
       bottomSpacing="xSmall"
     >
       <FixedGridColumn>
-        <Heading
-          level="1"
-          size="5"
+        <div
+          id="y-modalDialog--title"
         >
-          Title
-        </Heading>
+          <Heading
+            level="1"
+            size="5"
+          >
+            Title
+          </Heading>
+        </div>
       </FixedGridColumn>
       <FixedGridColumn
         fixed={true}
@@ -91,6 +97,7 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
   isOpen={false}
   onDismiss={[MockFunction]}
   onDismissed={[MockFunction]}
+  titleAriaId="y-modalDialog--title"
 >
   <Block
     horizontalPadding="xLarge"
@@ -100,12 +107,16 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
       bottomSpacing="xSmall"
     >
       <FixedGridColumn>
-        <Heading
-          level="1"
-          size="5"
+        <div
+          id="y-modalDialog--title"
         >
-          Title
-        </Heading>
+          <Heading
+            level="1"
+            size="5"
+          >
+            Title
+          </Heading>
+        </div>
       </FixedGridColumn>
       <FixedGridColumn
         fixed={true}
