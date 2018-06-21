@@ -103,8 +103,8 @@ export default class Picker extends React.Component<PickerProps> {
         itemLimit={itemLimit}
         disabled={disabled}
         inputProps={{
-          onBlur: onBlur,
-          onFocus: onFocus,
+          onBlur,
+          onFocus,
           'aria-label': inputAriaLabel,
         }}
         onRenderSuggestionsItem={this.getSuggestionItemContent}
