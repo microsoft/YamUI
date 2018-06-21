@@ -10,6 +10,8 @@ import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames, SuggestionsListClassNames } from './SuggestionsList.styles';
 import { SuggestionItem } from './types';
 
+export { SuggestionItem };
+
 export interface SuggestionItemGroup {
   title: string;
   items: SuggestionItem[];

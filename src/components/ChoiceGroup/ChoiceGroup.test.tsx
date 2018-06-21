@@ -5,31 +5,31 @@ import ChoiceGroup, { ChoiceGroupProps } from '.';
 import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption';
 
 describe('<ChoiceGroup />', () => {
+  let component: ShallowWrapper<ChoiceGroupProps>;
+  let labelWithSublabel: JSX.Element;
+  let firstOption: IChoiceGroupOptionProps;
   let onChange: jest.Mock<Function>;
 
   const getChoiceGroup = (overrides?: Partial<ChoiceGroupProps>) => {
     onChange = jest.fn();
+    const options = [
+      {
+        key: 'A',
+        text: 'Option A',
+        label: 'Sublabel for A',
+      },
+      {
+        key: 'B',
+        text: 'Option B',
+      },
+    ];
     const props = {
       onChange,
-      options: [
-        {
-          key: 'A',
-          text: 'Option A',
-          label: 'Sublabel for A',
-        },
-        {
-          key: 'B',
-          text: 'Option B',
-        },
-      ],
+      options,
       ...overrides,
     };
     return <ChoiceGroup {...props} />;
   };
-
-  let component: ShallowWrapper<ChoiceGroupProps>;
-  let labelWithSublabel: JSX.Element;
-  let firstOption: IChoiceGroupOptionProps;
 
   describe('with minimal props', () => {
     beforeEach(() => {
