@@ -1,18 +1,16 @@
 ### Examples
 
-Default click trigger:
+Click trigger:
 
-```js { "props": { "data-description": "default click trigger","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "click trigger","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]", "data-preview-selector": ".y-modalDialog" } }
 const types = require('./types.ts');
 
-class ClickableDialog extends React.Component {
+class ModalDialogExample extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = { isOpen: false };
-
-    this.handleClick = this.handleClick.bind(this);
-    this.onDismissed = this.onDismissed.bind(this);
+    this.toggleOpen = this.toggleOpen.bind(this);
   }
 
   render() {
@@ -20,31 +18,27 @@ class ClickableDialog extends React.Component {
 
     return (
       <div>
+        <Clickable onClick={this.toggleOpen}>Show</Clickable>
         <ModalDialog
           isOpen={isOpen}
           title={'Dialog title'}
           size={types.ModalDialogSize.LARGE}
           closeAriaLabel={'close dialog'}
-          onDismissed={this.onDismissed}>
+          onDismiss={this.toggleOpen}>
           This is the content!
         </ModalDialog>
-        <Clickable onClick={this.handleClick}>Show</Clickable>
       </div>
     );
   }
 
-  onDismissed() {
-    this.setState({ isOpen: false });
-  }
-
-  handleClick(key) {
-    const { isOpen } = this.state;
-
-    this.setState({ isOpen: !isOpen });
+  toggleOpen() {
+    this.setState((prevState, props) => ({
+      isOpen: !prevState.isOpen
+    }))
   }
 }
 
-<ClickableDialog />
+<ModalDialogExample />
 ```
 
 Hidden title:

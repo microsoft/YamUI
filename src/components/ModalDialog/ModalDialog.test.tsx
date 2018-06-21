@@ -6,16 +6,16 @@ import { ModalDialogSize } from './types';
 
 describe('<ModalDialog />', () => {
   let component: ShallowWrapper<ModalDialogProps>;
-  let onDismissed: jest.Mock;
+  let onDismiss: jest.Mock;
 
   describe('with default options', () => {
     beforeEach(() => {
-      onDismissed = jest.fn();
+      onDismiss = jest.fn();
       component = shallow(
         <ModalDialog
           title={'Title'}
           isOpen={false}
-          onDismissed={onDismissed}
+          onDismiss={onDismiss}
           size={ModalDialogSize.MEDIUM}
           closeAriaLabel={'close'}
         />,
@@ -29,13 +29,13 @@ describe('<ModalDialog />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      onDismissed = jest.fn();
+      onDismiss = jest.fn();
       component = shallow(
         <ModalDialog
           title={'Title'}
           className="TEST_CLASSNAME"
           isOpen={false}
-          onDismissed={onDismissed}
+          onDismiss={onDismiss}
           size={ModalDialogSize.MEDIUM}
           closeAriaLabel={'close'}
         />,
@@ -49,13 +49,13 @@ describe('<ModalDialog />', () => {
 
   describe('when the title is hidden', () => {
     beforeEach(() => {
-      onDismissed = jest.fn();
+      onDismiss = jest.fn();
       component = shallow(
         <ModalDialog
           title={'Title'}
           className="TEST_CLASSNAME"
           isOpen={false}
-          onDismissed={onDismissed}
+          onDismiss={onDismiss}
           size={ModalDialogSize.MEDIUM}
           closeAriaLabel={'close'}
           hideTitle={true}

@@ -33,7 +33,7 @@ export interface ModalDialogProps extends BaseComponentProps {
   /**
    * A callback function for when the Dialog is dismissed from the close button or light dismiss.
    */
-  onDismissed: IModalProps['onDismissed'];
+  onDismiss: IModalProps['onDismiss'];
 
   /**
    * The close button's aria label.
@@ -56,14 +56,13 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
   }
 
   public render() {
-    const { children, className, isOpen, onDismissed, size } = this.props;
+    const { children, className, isOpen, onDismiss, size } = this.props;
     const classNames = getClassNames(size);
 
     return (
       <OfficeFabricModal
         isOpen={isOpen}
-        onDismiss={onDismissed}
-        onDismissed={onDismissed}
+        onDismiss={onDismiss}
         titleAriaId="y-modalDialog--title"
         containerClassName={join(['y-modalDialog', className, classNames.container])}
       >
@@ -76,7 +75,7 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
   }
 
   private getHeader = (): JSX.Element => {
-    const { hideTitle, title, onDismissed, closeAriaLabel } = this.props;
+    const { hideTitle, title, onDismiss, closeAriaLabel } = this.props;
     if (hideTitle) {
       return (
         <ScreenreaderText>
@@ -94,7 +93,7 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
           </div>
         </FixedGridColumn>
         <FixedGridColumn fixed={true}>
-          <Clickable onClick={onDismissed} unstyled={true} ariaLabel={closeAriaLabel} block={true}>
+          <Clickable onClick={onDismiss} unstyled={true} ariaLabel={closeAriaLabel} block={true}>
             <CloseIcon size={IconSize.XSMALL} block={true} />
           </Clickable>
         </FixedGridColumn>
