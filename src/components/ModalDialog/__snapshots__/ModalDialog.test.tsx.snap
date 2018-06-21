@@ -13,7 +13,6 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
   isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
-  onDismissed={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
   <Block
@@ -42,7 +41,6 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
   isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
-  onDismissed={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
   <Block
@@ -96,7 +94,6 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
   isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
-  onDismissed={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
   <Block
