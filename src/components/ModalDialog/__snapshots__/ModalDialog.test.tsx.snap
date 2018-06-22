@@ -20,9 +20,13 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
     verticalPadding="medium"
   >
     <ScreenreaderText>
-      <h1>
-        Title
-      </h1>
+      <div
+        id="y-modalDialog--title"
+      >
+        <h1>
+          Title
+        </h1>
+      </div>
     </ScreenreaderText>
   </Block>
 </WithResponsiveMode>

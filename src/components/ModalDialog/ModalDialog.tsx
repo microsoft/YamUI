@@ -79,7 +79,9 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
     if (hideTitle) {
       return (
         <ScreenreaderText>
-          <h1>{title}</h1>
+          <div id="y-modalDialog--title">
+            <h1>{title}</h1>
+          </div>
         </ScreenreaderText>
       );
     }
