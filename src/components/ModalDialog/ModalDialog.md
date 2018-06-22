@@ -43,7 +43,7 @@ class ModalDialogExample extends React.Component {
 
 Hidden title:
 
-```js { "props": { "data-description": "default click trigger","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "hidden title","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]", "data-preview-selector": ".y-modalDialog" } }
 const types = require('./types.ts');
 
 class ClickableDialog extends React.Component {
