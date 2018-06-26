@@ -63,7 +63,7 @@
     "react-docgen-typescript": "1.0.2",
     "react-dom": "16.3.2",
     "react-styleguidist": "7.0.14",
-    "react-styleguidist-visual": "0.6.5",
+    "react-styleguidist-visual": "0.8.0",
     "react-test-renderer": "16.3.2",
     "rimraf": "2.6.1",
     "style-loader": "0.16.1",
