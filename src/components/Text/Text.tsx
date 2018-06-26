@@ -2,7 +2,6 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { BlockContext } from '../Block';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './types';
 import ScreenReaderText from '../ScreenreaderText';
@@ -53,12 +52,8 @@ export interface TextProps extends NestableBaseComponentProps {
  */
 export default class Text extends React.Component<TextProps> {
   public render() {
-    return <BlockContext.Consumer>{blockContext => this.getContent(blockContext.textSize)}</BlockContext.Consumer>;
-  }
-
-  private getContent(blockTextSize?: TextSize) {
     const { children, screenreaderText } = this.props;
-    const classes = this.getClasses(blockTextSize);
+    const classes = this.getClasses();
 
     if (screenreaderText !== undefined) {
       return (
@@ -71,14 +66,14 @@ export default class Text extends React.Component<TextProps> {
     return <span className={classes}>{children}</span>;
   }
 
-  private getClasses(blockTextSize?: TextSize) {
+  private getClasses() {
     const { className, size, maxWidth } = this.props;
     return join([
       'y-text',
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
       className,
-      mergeStyles(getStyles({ ...this.props, blockTextSize })),
+      mergeStyles(getStyles(this.props)),
     ]);
   }
 }

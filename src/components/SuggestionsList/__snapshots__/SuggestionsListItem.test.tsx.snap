@@ -1,98 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] = `
+exports[`<SuggestionsListItem /> when isSelected=true matches its snapshot 1`] = `
 <div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
+  className=
+      y-suggestionsListItem
+      y-hc-select-on-hover
+      y-hc-suppress-text-background
+      y-hc-selected
+      {
+        background-color: #edeff2;
+        cursor: pointer;
+      }
+      &:hover {
+        background-color: #f3f5f8;
+      }
   onMouseDown={[Function]}
   role="button"
 >
-  <MediaObject
-    imageContent={
-      <Avatar
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
+  <SuggestionsListItemContent
+    item={
+      Object {
+        "id": "1",
+        "name": "John Smith",
+        "template": "text",
+      }
     }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className="y-suggestions-list-item--match-highlight"
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
-  />
-</div>
-`;
-
-exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = `
-<div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background y-suggestions-list-item--selected y-hc-selected"
-  onMouseDown={[Function]}
-  role="button"
->
-  <MediaObject
-    imageContent={
-      <Avatar
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
-    }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className="y-suggestions-list-item--match-highlight"
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
-  />
-</div>
-`;
-
-exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
-<div
-  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
-  onMouseDown={[Function]}
-  role="button"
->
-  <MediaObject
-    imageContent={
-      <Avatar
-        borderType="soft"
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
-    }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className="y-suggestions-list-item--match-highlight"
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
+    searchText="Joh"
   />
 </div>
 `;

@@ -1,145 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false with results matches its snapshot 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0px;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-bottom: 4px;
+        padding-top: 4px;
+        width: 280px;
+      }
 >
-  <ul
-    className="y-suggestions-list--results"
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `null`;
-
-exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=false without results matches its snapshot 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
->
-  <ul
-    className="y-suggestions-list--results"
-  >
-    <li
-      key="groupTitle"
-    >
-      <ul>
-        <li
-          key="id"
-        >
-          <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
-            isSelected={false}
-            name="name"
-            onSelect={[MockFunction]}
-            searchText="searchText"
-          />
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
-<div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
->
-  <ul
-    className="y-suggestions-list--results"
-  >
-    <li
-      key="groupTitle"
-    >
-      <ul>
-        <li
-          key="id"
-        >
-          <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
-            isSelected={false}
-            name="name"
-            onSelect={[MockFunction]}
-            searchText="searchText"
-          />
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
-<div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0px;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        width: 280px;
+      }
 >
   <Block
-    className="y-suggestions-list--no-results"
-    padding="large"
+    className=
+
+        {
+          padding-bottom: 17px;
+          padding-top: 15px;
+        }
     textAlign="center"
+    textColor="metadata"
     textSize="small"
   >
-    <Text
-      color="metadata"
-    >
-      noResultsText
-    </Text>
+    noResultsText
   </Block>
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true with results matches its snapshot 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0px;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        padding-top: 4px;
+        width: 280px;
+      }
 >
-  <ul
-    className="y-suggestions-list--results"
+  <LayoutList
+    direction="vertical"
   >
-    <li
+    <LayoutListItem
       key="groupTitle"
     >
-      <ul>
-        <li
+      <LayoutList
+        direction="vertical"
+      >
+        <LayoutListItem
           key="id"
         >
           <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
             isSelected={false}
-            name="name"
+            item={
+              Object {
+                "id": "id",
+                "name": "name",
+                "template": "text",
+              }
+            }
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </LayoutListItem>
+      </LayoutList>
+    </LayoutListItem>
+  </LayoutList>
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          border-top: 1px solid #f3f5f8;
+          padding-bottom: 14px;
+          padding-top: 13px;
+        }
   >
     <Spinner
       isCentered={true}
@@ -149,90 +134,26 @@ exports[`<SuggestionsList /> when isLoading=true with results renders as expecte
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `null`;
-
-exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
+exports[`<SuggestionsList /> when isLoading=true without results matches its snapshot 1`] = `
 <div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
->
-  <ul
-    className="y-suggestions-list--results"
-  >
-    <li
-      key="groupTitle"
-    >
-      <ul>
-        <li
-          key="id"
-        >
-          <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
-            isSelected={false}
-            name="name"
-            onSelect={[MockFunction]}
-            searchText="searchText"
-          />
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <div
-    className="y-suggestions-list--loading"
-  >
-    <Spinner
-      isCentered={true}
-      text="loadingText"
-    />
-  </div>
-</div>
-`;
-
-exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
-<div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
->
-  <ul
-    className="y-suggestions-list--results"
-  >
-    <li
-      key="groupTitle"
-    >
-      <ul>
-        <li
-          key="id"
-        >
-          <SuggestionsListItem
-            description="description"
-            id="id"
-            imageUrl="imageUrl"
-            isSelected={false}
-            name="name"
-            onSelect={[MockFunction]}
-            searchText="searchText"
-          />
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <div
-    className="y-suggestions-list--loading"
-  >
-    <Spinner
-      isCentered={true}
-      text="loadingText"
-    />
-  </div>
-</div>
-`;
-
-exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
-<div
-  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+  className=
+      y-suggestions-list
+      y-hc-border
+      {
+        border-radius: 1px;
+        border-width: 0px;
+        border: none;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        width: 280px;
+      }
 >
   <div
-    className="y-suggestions-list--loading"
+    className=
+
+        {
+          padding-bottom: 14px;
+          padding-top: 14px;
+        }
   >
     <Spinner
       isCentered={true}
