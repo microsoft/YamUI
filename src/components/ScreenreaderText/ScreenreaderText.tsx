@@ -3,9 +3,22 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps as ScreenreaderTextProps } from '../../util/BaseComponent/props';
-import './ScreenreaderText.css';
 
 export { ScreenreaderTextProps };
+
+/* These styles are set inline to reduce the liklihood of being overridden. Similar to !important */
+const inlineStyles: React.CSSProperties = {
+  display: 'block',
+  padding: 0,
+  border: 0,
+  clip: 'rect(0 0 0 0)',
+  position: 'absolute',
+  margin: '-1px',
+  height: '1px',
+  width: '1px',
+  overflow: 'hidden',
+  wordWrap: 'normal',
+};
 
 /**
  * A `ScreenreaderText` simply hides its content from sight without hiding it from screenreaders.
@@ -16,6 +29,10 @@ export default class ScreenreaderText extends React.Component<ScreenreaderTextPr
   public render() {
     const { className, children } = this.props;
 
-    return <span className={join(['y-screenreaderText', className])}>{children}</span>;
+    return (
+      <span className={join(['y-screenreaderText', className])} style={inlineStyles}>
+        {children}
+      </span>
+    );
   }
 }

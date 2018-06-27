@@ -7,6 +7,7 @@ module.exports = Object.assign({}, config, {
   require: config.require.concat([path.resolve(__dirname, 'assets/disable-animations.css')]),
   propsParser: () => ({}), // Faster without parsing props. They're not needed for diffs.
   theme: {
+    maxWidth: 632,
     color: {
       border: 'white',
     },

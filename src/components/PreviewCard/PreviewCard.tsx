@@ -13,7 +13,7 @@ import Image from '../Image';
 import MediaObject, { MediaObjectProps, MediaObjectSize } from '../MediaObject';
 import ProgressIndicator from '../ProgressIndicator';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
-import './PreviewCard.css';
+import { getClassNames } from './PreviewCard.styles';
 
 export interface PreviewCardProps extends BaseComponentProps {
   /**
@@ -114,10 +114,22 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
   }
 
   public render() {
+    const {
+      className,
+      removeAriaLabel,
+      onRemoveClick,
+      loadingText,
+      progress,
+      imageUrl,
+      isLoading,
+      imageDescription = '',
+    } = this.props;
+    const classNames = getClassNames({ allowOnClick: this.allowOnClick() });
+
     const mediaObjectProps: MediaObjectProps = {
       size: MediaObjectSize.MEDIUM,
-      className: 'y-previewCard--media',
-      imageContent: this.getImageContent(),
+      className: classNames.media,
+      imageContent: imageUrl && <Image source={imageUrl} fullWidth={true} description={imageDescription} />,
       titleContent: this.getNameContent(),
       metadataContent: this.getDescriptionContent(),
     };
@@ -125,20 +137,27 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
     const onClick = this.allowOnClick() ? this.props.onClick : undefined;
 
     return (
-      <Box className={this.getClassnames()} onClick={onClick}>
+      <Box className={join(['y-previewCard', className, classNames.root])} onClick={onClick}>
         <MediaObject {...mediaObjectProps} />
-        {this.getRemoveButton()}
-        {this.getProgressIndicator()}
+        {onRemoveClick && (
+          <span className={classNames.remove}>
+            <Clickable onClick={this.handleRemoveClick} unstyled={true} ariaLabel={removeAriaLabel} block={true}>
+              <Block padding={GutterSize.SMALL}>
+                <RemoveIcon size={IconSize.XSMALL} block={true} />
+              </Block>
+            </Clickable>
+          </span>
+        )}
+        {isLoading &&
+          this.hasProgress() && (
+            <ProgressIndicator
+              className={classNames.progress}
+              ariaValueText={loadingText as string}
+              percentComplete={progress as number}
+            />
+          )}
       </Box>
     );
-  }
-
-  private getClassnames() {
-    const classes = ['y-previewCard', this.props.className];
-    if (this.allowOnClick()) {
-      classes.push('y-previewCard__hasClick');
-    }
-    return join(classes);
   }
 
   // Allow onClick callback and hover styling if onClick prop was provided and we're not in edit mode
@@ -151,96 +170,56 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
     const size = this.state.isEditing ? TextSize.XSMALL : undefined;
     // Note that the actual onClick handler is on the outer Box wrapper,
     // while the clickAriaLabel is here on the keyboard-tabbable element.
-    const content = onClick ? (
-      <Clickable ariaLabel={clickAriaLabel} unstyled={true}>
-        {name}
-      </Clickable>
-    ) : (
-      name
-    );
-    return <Block textSize={size}>{content}</Block>;
-  }
-
-  private getRemoveButton() {
-    const { onRemoveClick, removeAriaLabel } = this.props;
-    if (onRemoveClick) {
-      return (
-        <span className="y-previewCard--remove">
-          <Clickable onClick={this.handleRemoveClick} unstyled={true} ariaLabel={removeAriaLabel} block={true}>
-            <Block padding={GutterSize.SMALL}>
-              <RemoveIcon size={IconSize.XSMALL} block={true} />
-            </Block>
+    return (
+      <Block textSize={size}>
+        {onClick ? (
+          <Clickable ariaLabel={clickAriaLabel} unstyled={true}>
+            {name}
           </Clickable>
-        </span>
-      );
-    }
-
-    return null;
-  }
-
-  private getProgressIndicator() {
-    if (this.shouldShowProgressIndicator()) {
-      const { loadingText, progress } = this.props;
-      return (
-        <ProgressIndicator
-          className="y-previewCard--progress"
-          ariaValueText={loadingText as string}
-          percentComplete={progress as number}
-        />
-      );
-    }
-
-    return null;
-  }
-
-  private getImageContent(): React.ReactNode {
-    const { imageUrl, imageDescription = '' } = this.props;
-    if (imageUrl) {
-      return <Image source={imageUrl} fullWidth={true} description={imageDescription} />;
-    }
-
-    return null;
+        ) : (
+          name
+        )}
+      </Block>
+    );
   }
 
   private getDescriptionContent(): React.ReactNode {
-    const { description, isDescriptionEditable } = this.props;
-    if (this.shouldShowLoadingSpinner()) {
-      return this.getLoadingSpinner();
+    const {
+      isLoading,
+      loadingText,
+      description,
+      descriptionMaxLength,
+      emptyEditableDescriptionText,
+      onDescriptionChange,
+      isDescriptionEditable,
+    } = this.props;
+    const blockPush = this.state.isEditing ? -3 : 0;
+
+    if (isLoading && !this.hasProgress()) {
+      return (
+        <Block textColor={TextColor.METADATA} push={1}>
+          <Spinner text={loadingText as string} size={SpinnerSize.XSMALL} color={SpinnerColor.METADATA} />
+        </Block>
+      );
     }
 
     if (isDescriptionEditable) {
-      return this.getEditableText();
+      return (
+        <Block push={blockPush} textColor={TextColor.METADATA}>
+          <EditableText
+            text={description}
+            promptText={emptyEditableDescriptionText}
+            placeHolder={emptyEditableDescriptionText}
+            maxLength={descriptionMaxLength}
+            onUpdate={onDescriptionChange}
+            onBeginEditing={this.enterEditMode}
+            onEndEditing={this.exitEditMode}
+          />
+        </Block>
+      );
     }
 
     return description;
-  }
-
-  private getEditableText() {
-    const { description, descriptionMaxLength, emptyEditableDescriptionText, onDescriptionChange } = this.props;
-    const blockPush = this.state.isEditing ? -3 : 0;
-
-    return (
-      <Block push={blockPush} textColor={TextColor.METADATA}>
-        <EditableText
-          text={description}
-          promptText={emptyEditableDescriptionText}
-          placeHolder={emptyEditableDescriptionText}
-          maxLength={descriptionMaxLength}
-          onUpdate={onDescriptionChange}
-          onBeginEditing={this.enterEditMode}
-          onEndEditing={this.exitEditMode}
-        />
-      </Block>
-    );
-  }
-
-  private getLoadingSpinner() {
-    const { loadingText } = this.props;
-    return (
-      <Block textColor={TextColor.METADATA} className="y-previewCard--spinner" push={1}>
-        <Spinner text={loadingText as string} size={SpinnerSize.XSMALL} color={SpinnerColor.METADATA} />
-      </Block>
-    );
   }
 
   private handleRemoveClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -258,13 +237,5 @@ export default class PreviewCard extends React.Component<PreviewCardProps, Previ
 
   private hasProgress() {
     return typeof this.props.progress === 'number';
-  }
-
-  private shouldShowLoadingSpinner() {
-    return this.props.isLoading && !this.hasProgress();
-  }
-
-  private shouldShowProgressIndicator() {
-    return this.props.isLoading && this.hasProgress();
   }
 }

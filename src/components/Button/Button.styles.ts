@@ -1,13 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus } from './types';
-import { ButtonProps } from './Button';
+import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './types';
 import { fontWeights } from '../../util/styles/fonts';
-import { borderRadiusSoft } from '../../util/styles/borders';
-
-const smallPadding = '4px 9px 6px';
-const regularPadding = '7px 15px';
+import { borders } from '../../util/styles/borders';
+import { mergeStyleSets } from '@uifabric/styling';
+import { memoizeFunction } from '@uifabric/utilities';
 
 const primaryColors: IButtonStyles = {
   root: {
@@ -57,7 +55,14 @@ const secondaryColors: IButtonStyles = {
   },
 };
 
-export const getStyles = (props: ButtonProps): IButtonStyles => {
+export interface BaseButtonStyleProps {
+  size: ButtonSize;
+  color: ButtonColor;
+  status: ButtonStatus;
+  fullWidth: boolean;
+}
+
+export const getBaseButtonStyles = memoizeFunction((props: BaseButtonStyleProps): IButtonStyles => {
   const { size, color, status, fullWidth } = props;
 
   const colors = color === ButtonColor.PRIMARY ? primaryColors : secondaryColors;
@@ -66,7 +71,7 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
   return {
     root: {
       ...(root as {}),
-      borderRadius: borderRadiusSoft,
+      borderRadius: borders.soft,
       fontWeight: fontWeights.bold,
       textAlign: 'center',
       display: fullWidth ? 'block' : 'inline-block',
@@ -76,7 +81,7 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
       borderWidth: '1px',
       borderStyle: 'solid',
       boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
-      padding: size === ButtonSize.REGULAR ? regularPadding : smallPadding,
+      padding: size === ButtonSize.REGULAR ? '7px 15px' : '4px 9px 6px',
       cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
       opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',
       width: fullWidth ? '100%' : undefined,
@@ -91,4 +96,34 @@ export const getStyles = (props: ButtonProps): IButtonStyles => {
       ...(rootPressed as {}),
     },
   };
-};
+});
+
+export interface ButtonStyleProps {
+  status: ButtonStatus;
+  iconPosition: ButtonIconPosition;
+}
+
+export const getClassNames = memoizeFunction((styleProps: ButtonStyleProps) => {
+  const { status, iconPosition } = styleProps;
+
+  return mergeStyleSets({
+    content: {
+      visibility: status === ButtonStatus.LOADING ? 'hidden' : 'visible',
+    },
+    spinner: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+    },
+    iconWrapper: {
+      paddingLeft: iconPosition === ButtonIconPosition.RIGHT ? '4px' : 0,
+      paddingRight: iconPosition === ButtonIconPosition.LEFT ? '5px' : 0,
+    },
+    secondaryText: {
+      visibility: 'hidden',
+      overflow: 'hidden',
+      height: 0,
+    },
+  });
+});

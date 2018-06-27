@@ -2,9 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import FakeLink from '../FakeLink';
+import { join } from '../../util/classNames';
 import { NestableBaseComponentProps, FocusableComponentProps } from '../../util/BaseComponent/props';
-import './Clickable.css';
-
+import { getClassNames } from './Clickable.styles';
 export interface ClickableProps extends NestableBaseComponentProps, FocusableComponentProps {
   /**
    * Additional label that must be provided if the clickable text is not descriptive enough.
@@ -33,14 +33,6 @@ export interface ClickableProps extends NestableBaseComponentProps, FocusableCom
   onClick?: ((event: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
-export interface ClickableContext {
-  withinClickable: boolean;
-}
-
-const defaultContext: ClickableContext = { withinClickable: false };
-
-export const ClickableContext = React.createContext(defaultContext);
-
 /**
  * A `Clickable` is an accessible, clickable area that accepts arbitrary children. It is styled
  * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
@@ -57,21 +49,20 @@ export default class Clickable extends React.Component<ClickableProps> {
   }
 
   public render() {
-    const { ariaLabel, title, unstyled, onClick, children } = this.props;
+    const { ariaLabel, title, unstyled, onClick, children, block, className } = this.props;
+    const classNames = getClassNames({ block });
 
     return (
-      <ClickableContext.Provider value={{ withinClickable: true }}>
-        <button
-          className={this.getClasses()}
-          aria-label={ariaLabel}
-          title={title}
-          onClick={onClick}
-          type="button"
-          ref={this.buttonRef}
-        >
-          {unstyled ? children : <FakeLink>{children}</FakeLink>}
-        </button>
-      </ClickableContext.Provider>
+      <button
+        className={join(['y-clickable', classNames.root, className])}
+        aria-label={ariaLabel}
+        title={title}
+        onClick={onClick}
+        type="button"
+        ref={this.buttonRef}
+      >
+        {unstyled ? children : <FakeLink>{children}</FakeLink>}
+      </button>
     );
   }
 
@@ -80,19 +71,5 @@ export default class Clickable extends React.Component<ClickableProps> {
     if (button) {
       button.focus();
     }
-  }
-
-  private getClasses() {
-    const { block, className } = this.props;
-
-    const classes: string[] = ['y-clickable'];
-    if (block) {
-      classes.push('y-clickable__block');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
   }
 }

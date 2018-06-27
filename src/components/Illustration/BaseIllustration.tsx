@@ -1,8 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import './Illustration.css';
+import { getClassNames } from './Illustration.styles';
 
 export interface IllustrationProps extends BaseComponentProps {
   /**
@@ -11,6 +12,11 @@ export interface IllustrationProps extends BaseComponentProps {
    * `line-height`, and is creating extra vertical space.
    */
   block?: boolean;
+
+  /**
+   *  If provided, this pixel value will override the default size this Illustration is optimized for.
+   */
+  size?: number;
 }
 
 /**
@@ -18,17 +24,7 @@ export interface IllustrationProps extends BaseComponentProps {
  * sizes, so you must import the proper size for your application.
  */
 export default class BaseIllustration extends React.Component<IllustrationProps> {
-  protected getClassName() {
-    const { block, className } = this.props;
-
-    const classes = ['y-illustration'];
-    if (block) {
-      classes.push('y-illustration__isBlock');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
+  protected getClassName(size: number) {
+    return join(['y-illustration', this.props.className, getClassNames({ block: !!this.props.block, size }).root]);
   }
 }

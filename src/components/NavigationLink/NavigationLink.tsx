@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import './NavigationLink.css';
+import { getClassNames } from './NavigationLink.styles';
 
 export interface NavigationLinkProps extends NestableBaseComponentProps {
   /**
@@ -49,16 +49,15 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
  */
 export default class NavigationLink extends React.Component<NavigationLinkProps> {
   public render() {
-    const { ariaCurrent, ariaLabel, href, newWindow, title, children } = this.props;
-    const target = newWindow ? '_blank' : undefined;
-    const rel = newWindow ? 'nofollow noopener noreferrer' : undefined;
+    const { ariaCurrent, ariaLabel, href, newWindow, title, children, unstyled, block, className } = this.props;
+    const classNames = getClassNames({ unstyled, block });
 
     return (
       <a
-        className={this.getClasses()}
+        className={join(['y-navigationLink', className, classNames.root])}
         href={href}
-        rel={rel}
-        target={target}
+        rel={newWindow ? 'nofollow noopener noreferrer' : undefined}
+        target={newWindow ? '_blank' : undefined}
         title={title}
         aria-label={ariaLabel}
         aria-current={ariaCurrent}
@@ -66,24 +65,5 @@ export default class NavigationLink extends React.Component<NavigationLinkProps>
         {children}
       </a>
     );
-  }
-
-  private getClasses() {
-    const { className, block, unstyled } = this.props;
-
-    const classes: string[] = ['y-navigationLink'];
-    if (unstyled) {
-      classes.push('y-navigationLink__unstyled');
-    }
-
-    if (block) {
-      classes.push('y-navigationLink__block');
-    }
-
-    if (className) {
-      classes.push(className);
-    }
-
-    return join(classes);
   }
 }
