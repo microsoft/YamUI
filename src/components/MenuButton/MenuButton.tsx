@@ -15,6 +15,7 @@ import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
 import { MenuItemType } from './types';
+import { getCalloutStyles } from './MenuButton.styles';
 import './MenuButton.css';
 
 export { MenuItemType };
@@ -139,6 +140,7 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
       contextualMenuItemAs: this.getMenuItemContent,
       calloutProps: {
         className: 'y-menu-button--callout',
+        styles: getCalloutStyles,
       },
     };
   }

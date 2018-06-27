@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import 'src/css/variables/colors.css';
 @import 'src/css/variables/fonts.css';
+@import 'src/css/variables/borders.css';
 
 /* Label element above the Dropdown */
 .y-dropdown .ms-Dropdown-label {
@@ -86,4 +87,13 @@
 /* Non-layered callout styling */
 .y-dropdown .ms-Callout-container {
   z-index: 1000;
+}
+
+/* Prevent top shadow of callout from overlapping dropdown. */
+.y-dropdown .ms-Dropdown {
+  z-index: 1001;
+}
+
+.y-dropdown .ms-Dropdown-callout {
+  @mixin borderStylePopOver;
 }
