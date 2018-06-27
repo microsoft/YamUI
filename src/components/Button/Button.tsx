@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Button as FabricButton } from 'office-ui-fabric-react/lib/components/Button/Button';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
@@ -15,7 +15,7 @@ export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType }
 
 const hrefBlacklist = ['', '#', 'javascript://'];
 export type FabricButtonType = HTMLAnchorElement | HTMLDivElement | HTMLButtonElement | BaseButton | FabricButton;
-export interface BaseButtonProps extends BaseComponentProps {
+export interface BaseButtonProps extends CustomizableComponentProps {
   /**
    * Visible button text.
    */

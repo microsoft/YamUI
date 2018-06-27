@@ -16,7 +16,7 @@ describe('<BistateButton />', () => {
   };
 
   beforeEach(() => {
-    component = shallow(<BistateButton {...getProps()} />).dive();
+    component = shallow(<BistateButton {...getProps()} />);
   });
 
   it('matches its snapshot', () => {

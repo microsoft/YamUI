@@ -8,7 +8,9 @@ export interface BaseComponentProps {
    * `"class-one class-two"`.
    */
   className?: string;
+}
 
+export interface CustomizableComponentProps extends BaseComponentProps {
   /**
    * Theme used to style the component. This will often be provided by `customizable`.
    */
