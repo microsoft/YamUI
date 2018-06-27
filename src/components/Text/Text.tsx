@@ -66,13 +66,13 @@ export default class Text extends React.Component<TextProps> {
   }
 
   private getClasses() {
-    const { className, size, maxWidth } = this.props;
+    const { className, size, maxWidth, bold, uppercase, color } = this.props;
     return join([
       'y-text',
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
       className,
-      getClassNames(this.props).root,
+      getClassNames({ size, maxWidth, bold, uppercase, color }).root,
     ]);
   }
 }

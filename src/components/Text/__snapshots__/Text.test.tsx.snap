@@ -102,7 +102,7 @@ exports[`<Text /> with maxWidth and size matches its snapshot 1`] = `
         max-width: 500px;
         overflow: hidden;
         text-overflow: ellipsis;
-        vertical-align: -0.5rem;
+        vertical-align: -0.4rem;
         white-space: nowrap;
       }
       & .y-icon {
