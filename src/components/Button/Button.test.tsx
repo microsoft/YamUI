@@ -12,7 +12,7 @@ describe('<Button />', () => {
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} />);
+      component = shallow(<Button text={sampleText} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -22,7 +22,7 @@ describe('<Button />', () => {
 
   describe('with button type', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} type={ButtonType.BUTTON} />);
+      component = shallow(<Button text={sampleText} type={ButtonType.BUTTON} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -32,7 +32,7 @@ describe('<Button />', () => {
 
   describe('with submit type', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT} />);
+      component = shallow(<Button text={sampleText} type={ButtonType.SUBMIT} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -42,7 +42,7 @@ describe('<Button />', () => {
 
   describe('with reset type', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} type={ButtonType.RESET} />);
+      component = shallow(<Button text={sampleText} type={ButtonType.RESET} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -52,7 +52,7 @@ describe('<Button />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} className="TEST_CLASSNAME" />);
+      component = shallow(<Button text={sampleText} className="TEST_CLASSNAME" />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -62,7 +62,7 @@ describe('<Button />', () => {
 
   describe('with aria label', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} ariaLabel={sampleAriaLabel} />);
+      component = shallow(<Button text={sampleText} ariaLabel={sampleAriaLabel} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -72,7 +72,7 @@ describe('<Button />', () => {
 
   describe('with fullWidth', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} fullWidth={true} />);
+      component = shallow(<Button text={sampleText} fullWidth={true} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -82,7 +82,7 @@ describe('<Button />', () => {
 
   describe('set as disabled', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} status={ButtonStatus.DISABLED} />);
+      component = shallow(<Button text={sampleText} status={ButtonStatus.DISABLED} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -92,7 +92,7 @@ describe('<Button />', () => {
 
   describe('set as loading', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} status={ButtonStatus.LOADING} />);
+      component = shallow(<Button text={sampleText} status={ButtonStatus.LOADING} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -102,7 +102,7 @@ describe('<Button />', () => {
 
   describe('with icon', () => {
     beforeEach(() => {
-      component = shallow(<Button icon={AccountsIcon} text={sampleText} />);
+      component = shallow(<Button icon={AccountsIcon} text={sampleText} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -111,7 +111,9 @@ describe('<Button />', () => {
 
     describe('on the right', () => {
       beforeEach(() => {
-        component = shallow(<Button icon={AccountsIcon} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />);
+        component = shallow(
+          <Button icon={AccountsIcon} text={sampleText} iconPosition={ButtonIconPosition.RIGHT} />,
+        ).dive();
       });
 
       it('matches its snapshot', () => {
@@ -122,7 +124,7 @@ describe('<Button />', () => {
 
   describe('with primary color', () => {
     beforeEach(() => {
-      component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />);
+      component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -131,7 +133,9 @@ describe('<Button />', () => {
 
     describe('set as loading', () => {
       beforeEach(() => {
-        component = shallow(<Button color={ButtonColor.PRIMARY} text={sampleText} status={ButtonStatus.LOADING} />);
+        component = shallow(
+          <Button color={ButtonColor.PRIMARY} text={sampleText} status={ButtonStatus.LOADING} />,
+        ).dive();
       });
 
       it('matches its snapshot', () => {
@@ -142,7 +146,7 @@ describe('<Button />', () => {
 
   describe('with small size', () => {
     beforeEach(() => {
-      component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} />);
+      component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -151,7 +155,7 @@ describe('<Button />', () => {
 
     describe('with icon', () => {
       beforeEach(() => {
-        component = shallow(<Button icon={AccountsIcon} size={ButtonSize.SMALL} text={sampleText} />);
+        component = shallow(<Button icon={AccountsIcon} size={ButtonSize.SMALL} text={sampleText} />).dive();
       });
 
       it('matches its snapshot', () => {
@@ -161,7 +165,7 @@ describe('<Button />', () => {
 
     describe('set as loading', () => {
       beforeEach(() => {
-        component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} status={ButtonStatus.LOADING} />);
+        component = shallow(<Button size={ButtonSize.SMALL} text={sampleText} status={ButtonStatus.LOADING} />).dive();
       });
 
       it('matches its snapshot', () => {
@@ -172,7 +176,7 @@ describe('<Button />', () => {
 
   describe('with valid href', () => {
     beforeEach(() => {
-      component = shallow(<Button text={sampleText} href="https://www.yammer.com" />);
+      component = shallow(<Button text={sampleText} href="https://www.yammer.com" />).dive();
     });
 
     it('matches its snapshot', () => {
@@ -183,7 +187,7 @@ describe('<Button />', () => {
   describe('with invalid href', () => {
     beforeEach(() => {
       jest.spyOn(console, 'error').mockImplementation(() => {});
-      component = shallow(<Button text={sampleText} href="#" />);
+      component = shallow(<Button text={sampleText} href="#" />).dive();
     });
 
     it('matches its snapshot', () => {

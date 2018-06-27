@@ -11,14 +11,13 @@ const grayTheme = createTheme({
     themeDark: '#333',
     neutralDark: '#666',
     themeLighter: '#999',
-  }
+  },
 });
 
 <div>
-  <Button text="Normal" />
-  {' '}
-  <Customizer theme={grayTheme}>
+  <Button text="Normal" />{' '}
+  <Customizer settings={{ theme: grayTheme }}>
     <Button text="Gray Theme" />
   </Customizer>
-</div>
+</div>;
 ```
