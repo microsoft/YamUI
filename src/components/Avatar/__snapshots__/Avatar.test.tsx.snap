@@ -84,7 +84,7 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
   />
   <div
     className=
-        y-avatar--badge
+
         {
           background: #ffffff;
           border-radius: 50%;
@@ -95,6 +95,9 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
           position: absolute;
           right: -2px;
           width: 16px;
+        }
+        & > .y-icon {
+          top: 0px;
         }
   >
     <Text>

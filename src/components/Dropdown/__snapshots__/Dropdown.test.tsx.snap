@@ -10,6 +10,10 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
         font-size: 1.4rem;
         line-height: 2.0rem;
       }
+      & .y-icon {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
       & .y-text__ellipsis {
         vertical-align: -0.5rem;
       }
@@ -59,7 +63,16 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
             >
               <svg
                 aria-hidden="true"
-                className="y-icon y-icon__isBlock"
+                className=
+                    y-icon
+                    {
+                      display: block;
+                      fill: currentColor;
+                      pointer-events: none;
+                      position: relative;
+                      top: 0.2rem;
+                      vertical-align: 0;
+                    }
                 focusable="false"
                 style={
                   Object {
@@ -112,6 +125,10 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       {
         font-size: 1.4rem;
         line-height: 2.0rem;
+      }
+      & .y-icon {
+        height: 1.4rem;
+        width: 1.4rem;
       }
       & .y-text__ellipsis {
         vertical-align: -0.5rem;
@@ -268,6 +285,13 @@ exports[`<Dropdown /> with section header matches its snapshot 1`] = `
       {
         font-size: 1.2rem;
         line-height: 1.6rem;
+      }
+      &.y-block .y-icon {
+        top: 0.1rem;
+      }
+      & .y-icon {
+        height: 1.2rem;
+        width: 1.2rem;
       }
       & .y-text__ellipsis {
         vertical-align: -0.3rem;

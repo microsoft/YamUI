@@ -41,6 +41,12 @@ export const getClassNames = memoizeFunction((size: AvatarSize) =>
       border: `solid 2px ${palette.white}`,
       background: palette.white,
       color: palette.themeDark,
+      selectors: {
+        /* Remove when this is addressed: https://github.com/Microsoft/YamUI/issues/327 */
+        '> .y-icon': {
+          top: 0,
+        },
+      },
     },
   }),
 );

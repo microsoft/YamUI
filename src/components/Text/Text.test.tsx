@@ -67,6 +67,20 @@ describe('<Text />', () => {
     });
   });
 
+  describe('with maxWidth and size', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Text maxWidth="500px" size={TextSize.XLARGE}>
+          test content
+        </Text>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with color secondary', () => {
     beforeEach(() => {
       component = shallow(<Text color={TextColor.SECONDARY}>test content</Text>);
