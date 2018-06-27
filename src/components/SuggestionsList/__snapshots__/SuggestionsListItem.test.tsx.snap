@@ -1,68 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SuggestionsListItem /> when isSelected=false renders as expected 1`] = `
+exports[`<SuggestionsListItem /> when isSelected=true matches its snapshot 1`] = `
 <div
   className=
-      y-suggestions-list-item
-      y-hc-select-on-hover
-      y-hc-suppress-text-background
-      {
-        cursor: pointer;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 4px;
-      }
-      &:hover {
-        background-color: #f3f5f8;
-      }
-  onMouseDown={[Function]}
-  role="button"
->
-  <MediaObject
-    imageContent={
-      <Avatar
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
-    }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className=
-
-              {
-                font-weight: 600;
-              }
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
-  />
-</div>
-`;
-
-exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = `
-<div
-  className=
-      y-suggestions-list-item
+      y-suggestionsListItem
       y-hc-select-on-hover
       y-hc-suppress-text-background
       y-hc-selected
       {
         background-color: #edeff2;
         cursor: pointer;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 4px;
       }
       &:hover {
         background-color: #f3f5f8;
@@ -70,82 +17,15 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
   onMouseDown={[Function]}
   role="button"
 >
-  <MediaObject
-    imageContent={
-      <Avatar
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
-    }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className=
-
-              {
-                font-weight: 600;
-              }
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
-  />
-</div>
-`;
-
-exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
-<div
-  className=
-      y-suggestions-list-item
-      y-hc-select-on-hover
-      y-hc-suppress-text-background
-      {
-        cursor: pointer;
-        padding-bottom: 8px;
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 4px;
+  <SuggestionsListItemContent
+    item={
+      Object {
+        "id": "1",
+        "name": "John Smith",
+        "template": "text",
       }
-      &:hover {
-        background-color: #f3f5f8;
-      }
-  onMouseDown={[Function]}
-  role="button"
->
-  <MediaObject
-    imageContent={
-      <Avatar
-        borderType="soft"
-        imageUrl="imageUrl"
-        name="John Smith"
-        size="small"
-      />
     }
-    metadataContent="Software Engineer"
-    size="small"
-    titleContent={
-      Array [
-        <span
-          className=
-
-              {
-                font-weight: 600;
-              }
-        >
-          Joh
-        </span>,
-        <span>
-          n Smith
-        </span>,
-      ]
-    }
+    searchText="Joh"
   />
 </div>
 `;

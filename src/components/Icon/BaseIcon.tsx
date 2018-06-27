@@ -32,12 +32,15 @@ export interface IconProps extends BaseComponentProps {
  * An `Icon` renders an SVG icon.
  */
 export default abstract class BaseIcon extends React.Component<IconProps> {
-  public render() {
-    const { block, className, size, color } = this.props;
-    const classNames = getClassNames({ block, size, color });
+  protected getClassName() {
+    const { block, className, color } = this.props;
+    const classNames = getClassNames({ block, color });
 
-    return this.renderIcon(join(['y-icon', className, classNames.root]));
+    return join(['y-icon', className, classNames.root]);
   }
 
-  protected abstract renderIcon(className: string): JSX.Element;
+  protected getStyle() {
+    const { size } = this.props;
+    return size ? { height: `${size}px`, width: `${size}px` } : {};
+  }
 }

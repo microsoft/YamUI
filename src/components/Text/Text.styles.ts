@@ -44,6 +44,10 @@ const getMemoizedClassNames = memoizeFunction((styleProps: TextProps & { context
           height: size ? iconSizeForSize[size] : undefined,
           width: size ? iconSizeForSize[size] : undefined,
         },
+        /* increased specificity to override the block style */
+        '&.y-text.y-text__ellipsis': {
+          verticalAlign: maxWidth && size ? verticalAligns[size] : undefined,
+        },
       },
     },
   });

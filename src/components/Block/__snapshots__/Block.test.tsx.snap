@@ -178,28 +178,7 @@ exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Block /> with textAlign center matches its snapshot 1`] = `
-<div
-  className=
-      y-block
-      {
-        text-align: center;
-      }
->
-  <div
-    className=
-        y-block--inner
-        {
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-        }
-  >
-    block content
-  </div>
-</div>
-`;
-
-exports[`<Block /> with textAlign right matches its snapshot 1`] = `
+exports[`<Block /> with textAlign matches its snapshot 1`] = `
 <div
   className=
       y-block
@@ -269,30 +248,16 @@ exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
         font-size: 2.2rem;
         line-height: 2.8rem;
       }
->
-  <div
-    className=
-        y-block--inner
-        {
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-        }
-  >
-    block content
-  </div>
-</div>
-`;
-
-exports[`<Block /> within clickable matches its snapshot 1`] = `
-<div
-  class=
-      y-block
-      {
-        width: 100%;
+      & .y-icon {
+        height: 2.2rem;
+        width: 2.2rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
       }
 >
   <div
-    class=
+    className=
         y-block--inner
         {
           overflow-wrap: break-word;

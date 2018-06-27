@@ -2,7 +2,6 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { TextSizeContext } from '../Block';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './types';
 import ScreenReaderText from '../ScreenreaderText';
@@ -52,29 +51,28 @@ export interface TextProps extends NestableBaseComponentProps {
  */
 export default class Text extends React.Component<TextProps> {
   public render() {
-    return (
-      <TextSizeContext.Consumer>
-        {textSizeContext => {
-          const { children, screenreaderText, size, maxWidth, bold, uppercase, color, className } = this.props;
-          const contextTextSize = textSizeContext.textSize;
-          const classNames = getClassNames({
-            maxWidth,
-            bold,
-            uppercase,
-            color,
-            size,
-            contextTextSize,
-          });
-          return (
-            <TextSizeContext.Provider value={{ textSize: size || contextTextSize }}>
-              <span className={join(['y-text', className, classNames.root])}>
-                {screenreaderText ? <span aria-hidden={true}>{children}</span> : children}
-                {screenreaderText && <ScreenReaderText>{screenreaderText}</ScreenReaderText>}
-              </span>
-            </TextSizeContext.Provider>
-          );
-        }}
-      </TextSizeContext.Consumer>
-    );
+    const { children, screenreaderText } = this.props;
+    const classes = this.getClasses();
+
+    if (screenreaderText !== undefined) {
+      return (
+        <span className={classes}>
+          <span aria-hidden={true}>{children}</span>
+          <ScreenReaderText>{screenreaderText}</ScreenReaderText>
+        </span>
+      );
+    }
+    return <span className={classes}>{children}</span>;
+  }
+
+  private getClasses() {
+    const { className, size, maxWidth } = this.props;
+    return join([
+      'y-text',
+      size ? `y-textSize-${size}` : '',
+      maxWidth ? 'y-text__ellipsis' : '',
+      className,
+      getClassNames(this.props).root,
+    ]);
   }
 }

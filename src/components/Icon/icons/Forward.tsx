@@ -6,11 +6,12 @@ import * as React from 'react';
 import BaseIcon from '../BaseIcon';
 
 export default class Forward extends BaseIcon {
-  public renderIcon(className: string) {
+  public render() {
     return (
       <svg
         viewBox="0 0 240 240"
-        className={className}
+        className={this.getClassName()}
+        style={this.getStyle()}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"

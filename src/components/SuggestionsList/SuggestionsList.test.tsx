@@ -2,10 +2,10 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { default as SuggestionsList, SuggestionsListProps } from '.';
-import { LayoutListItem } from '../LayoutList';
+import { SuggestionsListItemTemplate } from './types';
 
 describe('<SuggestionsList />', () => {
-  let rendered: ShallowWrapper<SuggestionsListProps>;
+  let component: ShallowWrapper<SuggestionsListProps>;
   let onItemSelected: jest.Mock;
   let options: Partial<SuggestionsListProps>;
 
@@ -18,8 +18,8 @@ describe('<SuggestionsList />', () => {
       loadingText: 'loadingText',
       noResultsText: 'noResultsText',
       isLoading: false,
-      groupedItems: [],
       selectedId: 2,
+      groupedItems: [],
     };
 
     return {
@@ -42,11 +42,11 @@ describe('<SuggestionsList />', () => {
 
     describe('without results', () => {
       beforeEach(() => {
-        rendered = shallow(<SuggestionsList {...getProps(options)} />);
+        component = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
 
@@ -59,53 +59,19 @@ describe('<SuggestionsList />', () => {
               title: 'groupTitle',
               items: [
                 {
+                  template: SuggestionsListItemTemplate.TEXT,
                   id: 'id',
-                  imageUrl: 'imageUrl',
                   name: 'name',
-                  description: 'description',
                 },
               ],
             },
           ],
         };
-        rendered = shallow(<SuggestionsList {...getProps(options)} />);
+        component = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-
-      describe('when onHover is called', () => {
-        beforeEach(() => {
-          rendered.find('SuggestionsListItem').simulate('hover', '1');
-        });
-
-        it('updates the state', () => {
-          expect(rendered.state()).toMatchSnapshot();
-        });
-      });
-
-      describe('with state.hoveredId=id', () => {
-        beforeEach(() => {
-          rendered.setState({ hoveredId: 'id' });
-        });
-
-        it('renders as expected', () => {
-          expect(rendered).toMatchSnapshot();
-        });
-
-        describe('when the mouse leaves', () => {
-          beforeEach(() => {
-            rendered
-              .find(LayoutListItem)
-              .at(1)
-              .simulate('mouseLeave');
-          });
-
-          it('renders as expected', () => {
-            expect(rendered).toMatchSnapshot();
-          });
-        });
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
   });
@@ -120,11 +86,11 @@ describe('<SuggestionsList />', () => {
 
     describe('without results', () => {
       beforeEach(() => {
-        rendered = shallow(<SuggestionsList {...getProps(options)} />);
+        component = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
 
@@ -137,53 +103,19 @@ describe('<SuggestionsList />', () => {
               title: 'groupTitle',
               items: [
                 {
+                  template: SuggestionsListItemTemplate.TEXT,
                   id: 'id',
-                  imageUrl: 'imageUrl',
                   name: 'name',
-                  description: 'description',
                 },
               ],
             },
           ],
         };
-        rendered = shallow(<SuggestionsList {...getProps(options)} />);
+        component = shallow(<SuggestionsList {...getProps(options)} />);
       });
 
-      it('renders as expected', () => {
-        expect(rendered).toMatchSnapshot();
-      });
-
-      describe('when onHover is called', () => {
-        beforeEach(() => {
-          rendered.find('SuggestionsListItem').simulate('hover', '1');
-        });
-
-        it('updates the state', () => {
-          expect(rendered.state()).toMatchSnapshot();
-        });
-      });
-
-      describe('with state.hoveredId=id', () => {
-        beforeEach(() => {
-          rendered.setState({ hoveredId: 'id' });
-        });
-
-        it('renders as expected', () => {
-          expect(rendered).toMatchSnapshot();
-        });
-
-        describe('when the mouse leaves', () => {
-          beforeEach(() => {
-            rendered
-              .find(LayoutListItem)
-              .at(1)
-              .simulate('mouseLeave');
-          });
-
-          it('renders as expected', () => {
-            expect(rendered).toMatchSnapshot();
-          });
-        });
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
       });
     });
   });

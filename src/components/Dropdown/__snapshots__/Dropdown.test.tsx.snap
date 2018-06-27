@@ -10,6 +10,13 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
         font-size: 1.4rem;
         line-height: 2.0rem;
       }
+      & .y-icon {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
+      }
 >
   <div
     className=
@@ -61,14 +68,18 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
                     {
                       display: block;
                       fill: currentColor;
-                      height: 16px;
                       pointer-events: none;
                       position: relative;
                       top: 0.2rem;
                       vertical-align: 0;
-                      width: 16px;
                     }
                 focusable="false"
+                style={
+                  Object {
+                    "height": "16px",
+                    "width": "16px",
+                  }
+                }
                 tabIndex={-1}
                 viewBox="0 0 240 240"
               >
@@ -114,6 +125,13 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       {
         font-size: 1.4rem;
         line-height: 2.0rem;
+      }
+      & .y-icon {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.5rem;
       }
 >
   <div
@@ -267,6 +285,16 @@ exports[`<Dropdown /> with section header matches its snapshot 1`] = `
       {
         font-size: 1.2rem;
         line-height: 1.6rem;
+      }
+      &.y-block .y-icon {
+        top: 0.1rem;
+      }
+      & .y-icon {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+      & .y-text__ellipsis {
+        vertical-align: -0.3rem;
       }
 >
   <div

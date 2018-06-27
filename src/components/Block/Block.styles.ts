@@ -3,7 +3,7 @@ import { BlockProps } from './Block';
 import { TextSize } from '../Text';
 import { GutterSize } from '../FixedGrid/types';
 import { getTheme } from '../../util/colors';
-import { textColors, ellipsisStyle } from '../../util/styles/fonts';
+import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
 import { IRawStyle } from '@uifabric/styling';
 
@@ -27,14 +27,13 @@ const iconSizeForTextSize = {
   [TextSize.XSMALL]: '1.0rem',
 };
 
-export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRawStyle => {
-  const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor, withinClickable } = props;
+export const getStyles = (props: BlockProps): IRawStyle => {
+  const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor } = props;
   const theme = getTheme();
   const font = textSize ? theme.fonts[textSize === TextSize.MEDIUM_SUB ? 'smallPlus' : textSize] : undefined;
 
   return {
     textAlign,
-    width: withinClickable ? '100%' : undefined,
     color: textColor ? textColors[textColor] : undefined,
     fontSize: font ? font.fontSize : undefined,
     lineHeight: font ? font.lineHeight : undefined,
@@ -49,6 +48,9 @@ export const getStyles = (props: BlockProps & { withinClickable: boolean }): IRa
       '.y-icon': {
         height: textSize ? iconSizeForTextSize[textSize] : undefined,
         width: textSize ? iconSizeForTextSize[textSize] : undefined,
+      },
+      '.y-text__ellipsis': {
+        verticalAlign: textSize ? verticalAligns[textSize] : undefined,
       },
     },
   };

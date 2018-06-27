@@ -6,7 +6,7 @@ A `Dropdown` can be used in a <a href="https://facebook.github.io/react/docs/for
 
 Controlled dropdown:
 
-```js { "props": { "data-description": "controlled" } }
+```js { "props": { "data-description": "controlled", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -43,7 +43,7 @@ class ControlledDropdown extends React.Component {
   }
 }
 
-<div>
+<div style={{ paddingBottom: '100px' }}>
   <Block bottomSpacing={GutterSize.LARGE}>
     In this example, the state of the <strong>Dropdown</strong> is controlled by the parent component using the <strong>selectedKey</strong> and <strong>onChanged</strong> props.
   </Block>
@@ -53,7 +53,7 @@ class ControlledDropdown extends React.Component {
 
 Uncontrolled dropdown:
 
-```js { "props": { "data-description": "uncontrolled" } }
+```js { "props": { "data-description": "uncontrolled" }, "data-action-states": "[]" }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -74,33 +74,10 @@ const options = [
 </div>
 ```
 
-With a label:
-
-```js { "props": { "data-description": "with label" } }
-const { GutterSize } = require('../Block');
-
-const options = [
-  { key: 'A', text: 'Option A' },
-  { key: 'B', text: 'Option B' },
-  { key: 'C', text: 'Option C' },
-];
-
-<div>
-  <Block bottomSpacing={GutterSize.LARGE}>
-    This <strong>Dropdown</strong> renders its own label text.
-  </Block>
-  <Dropdown
-    label="Please choose from the following options:"
-    placeHolder="Please select..."
-    options={options}
-    onChanged={action('dropdown changed')}
-  />
-</div>
-```
 
 With option templates, dividers and headers:
 
-```js { "props": { "data-description": "with templates dividers headers" } }
+```js { "props": { "data-description": "with templates dividers headers", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
 const { GutterSize } = require('../Block');
 const { DropdownMenuItemType } = require('.');
 const AttachIcon = require('../Icon/icons/Attach').default;
@@ -113,21 +90,16 @@ const text = 'The quick brown fox jumped over the lazy dog.';
 const options = [
   { key: 'section1', text: 'Icon, Label and Text', itemType: DropdownMenuItemType.Header},
   { key: 'A', icon: GroupIcon, label: 'Group', text: 'Option A' },
-  { key: 'B', icon: PhoneIcon, label: 'Phone', text: 'Option B' },
-  { key: 'C', icon: AttachIcon, label: 'Attachment', text: `${text} ${text} ${text} ${text}` },
+  { key: 'B', icon: AttachIcon, label: 'Attachment', text: `${text} ${text} ${text} ${text}` },
   { key: 'divider1', text: 'Section', itemType: DropdownMenuItemType.Divider},
   { key: 'section2', text: 'Label and Text', itemType: DropdownMenuItemType.Header},
-  { key: 'D', label: 'Group', text: 'Option D' },
-  { key: 'E', label: 'Group', text: 'Option E' },
-  { key: 'F', label: 'Group', text: `${text} ${text} ${text} ${text}` },
+  { key: 'D', label: 'Group', text: `${text} ${text} ${text} ${text}` },
   { key: 'divider2', text: 'Section', itemType: DropdownMenuItemType.Divider},
   { key: 'section3', text: 'Plain Text', itemType: DropdownMenuItemType.Header},
-  { key: 'G', text: 'Option G' },
-  { key: 'H', text: 'Option H' },
   { key: 'I', text: `${text} ${text} ${text} ${text}` },
 ];
 
-<div>
+<div style={{ paddingBottom: '350px' }}>
   <Block bottomSpacing={GutterSize.LARGE}>
     This <strong>Dropdown</strong> renders section headers and dividers, and uses icons and labels in options.
   </Block>
