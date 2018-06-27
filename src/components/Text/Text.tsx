@@ -5,8 +5,7 @@ import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { TextColor, TextSize } from './types';
 import ScreenReaderText from '../ScreenreaderText';
-import { getStyles } from './Text.styles';
-import { mergeStyles } from '@uifabric/styling';
+import { getClassNames } from './Text.styles';
 
 export { TextColor, TextSize };
 
@@ -67,13 +66,13 @@ export default class Text extends React.Component<TextProps> {
   }
 
   private getClasses() {
-    const { className, size, maxWidth } = this.props;
+    const { className, size, maxWidth, bold, uppercase, color } = this.props;
     return join([
       'y-text',
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
       className,
-      mergeStyles(getStyles(this.props)),
+      getClassNames({ size, maxWidth, bold, uppercase, color }).root,
     ]);
   }
 }

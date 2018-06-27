@@ -72,7 +72,7 @@ export default class Avatar extends React.Component<AvatarProps> {
       borderType = BorderType.ROUND,
     } = this.props;
     const classNames = getClassNames(size);
-    const badge = badgeContent && <div className={`y-avatar--badge ${classNames.badge}`}>{badgeContent}</div>;
+    const badge = badgeContent && <div className={classNames.badge}>{badgeContent}</div>;
 
     return (
       <div className={`y-avatar ${classNames.root}`}>

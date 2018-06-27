@@ -1,38 +1,55 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextProps, TextSize } from './Text';
-import {
-  ellipsisStyle,
-  fontWeights,
-  fontSizes,
-  lineHeights,
-  textColors,
-  verticalAligns,
-} from '../../util/styles/fonts';
-import { IRawStyle } from '@uifabric/styling';
+import { TextProps } from './Text';
+import { TextSize } from './types';
+import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets } from '@uifabric/styling';
+import { ellipsisStyle, fontWeights, textColors, verticalAligns } from '../../util/styles/fonts';
+import { getTheme } from '../../util/colors';
 
-const getHeight = (size?: TextSize) => {
-  return size ? lineHeights[size] : undefined;
+const iconSizeForSize = {
+  [TextSize.XXLARGE]: '2.4rem',
+  [TextSize.XLARGE]: '2.2rem',
+  [TextSize.LARGE]: '1.5rem',
+  [TextSize.MEDIUM]: '1.4rem',
+  [TextSize.MEDIUM_SUB]: '1.4rem',
+  [TextSize.SMALL]: '1.2rem',
+  [TextSize.XSMALL]: '1.0rem',
 };
 
-export const getStyles = (props: TextProps): IRawStyle => {
-  const { size, maxWidth, bold, uppercase, color } = props;
+const getMemoizedClassNames = memoizeFunction((styleProps: TextProps, theme) => {
+  const { size, maxWidth, bold, uppercase, color } = styleProps;
+  const font = size ? theme.fonts[size === TextSize.MEDIUM_SUB ? 'smallPlus' : size] : undefined;
 
-  return {
-    ...(maxWidth ? ellipsisStyle : {}),
-    fontWeight: bold ? fontWeights.bold : undefined,
-    display: 'inline-block',
-    textTransform: uppercase ? 'uppercase' : undefined,
-    fontSize: size ? fontSizes[size] : undefined,
-    lineHeight: size ? lineHeights[size] : undefined,
-    color: color ? textColors[color] : undefined,
-    maxWidth: maxWidth || undefined,
-    height: maxWidth ? getHeight(size) : undefined,
-    verticalAlign: maxWidth ? '-0.4rem' : undefined,
-    selectors: {
-      /* increased specificity to override the block style */
-      '&.y-text.y-text__ellipsis': {
-        verticalAlign: maxWidth && size ? verticalAligns[size] : undefined,
+  return mergeStyleSets({
+    root: {
+      ...(maxWidth ? ellipsisStyle : {}),
+      fontWeight: bold ? fontWeights.bold : undefined,
+      display: 'inline-block',
+      textTransform: uppercase ? 'uppercase' : undefined,
+      fontSize: font ? font.fontSize : undefined,
+      lineHeight: font ? font.lineHeight : undefined,
+      color: color ? textColors[color] : undefined,
+      maxWidth: maxWidth || undefined,
+      height: maxWidth && font ? font.lineHeight : undefined,
+      verticalAlign: maxWidth ? '-0.4rem' : undefined,
+      selectors: {
+        '&.y-text .y-icon': {
+          top: size === TextSize.XSMALL || size === TextSize.SMALL ? '0.1rem' : undefined,
+        },
+        '.y-icon': {
+          height: size ? iconSizeForSize[size] : undefined,
+          width: size ? iconSizeForSize[size] : undefined,
+        },
+        /* increased specificity to override the block style */
+        '&.y-text.y-text__ellipsis': {
+          verticalAlign: maxWidth && size ? verticalAligns[size] : undefined,
+        },
       },
     },
-  };
+  });
+});
+
+export const getClassNames = (styleProps: TextProps & { contextTextSize?: TextSize }) => {
+  const theme = getTheme();
+  return getMemoizedClassNames(styleProps, theme);
 };

@@ -1,9 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { IconSize } from './types';
-import './Icon.css';
+import { getClassNames } from './Icon.styles';
 
 export { IconSize };
 
@@ -27,44 +28,19 @@ export interface IconProps extends BaseComponentProps {
   size?: IconSize;
 }
 
-export interface IconStyles {
-  height?: string;
-  width?: string;
-  color?: string;
-}
-
 /**
  * An `Icon` renders an SVG icon.
  */
-export default class BaseIcon extends React.Component<IconProps> {
+export default abstract class BaseIcon extends React.Component<IconProps> {
   protected getClassName() {
-    const { block, className } = this.props;
+    const { block, className, color } = this.props;
+    const classNames = getClassNames({ block, color });
 
-    const classes = ['y-icon'];
-    if (block) {
-      classes.push('y-icon__isBlock');
-    }
-    if (className) {
-      classes.push(className);
-    }
-
-    return classes.join(' ');
+    return join(['y-icon', className, classNames.root]);
   }
 
   protected getStyle() {
-    const { color, size } = this.props;
-
-    const styles: IconStyles = {};
-
-    if (size) {
-      const length = `${size}px`;
-      styles.height = length;
-      styles.width = length;
-    }
-    if (color) {
-      styles.color = color;
-    }
-
-    return styles;
+    const { size } = this.props;
+    return size ? { height: `${size}px`, width: `${size}px` } : {};
   }
 }
