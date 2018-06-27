@@ -30,21 +30,20 @@ export const getCalloutStyles = (_: TooltipProps): ICalloutContentStyles => {
     },
     root: {
       backgroundColor: 'inherit',
+      boxShadow: 'none',
       padding: '0.7rem 1.2rem 0.8rem',
       minHeight: '3.2rem',
       zIndex: 1000,
-      ...borderStylePopOver,
+      border: 'none',
     },
     beak: {
       backgroundColor: palette.neutralPrimary,
     },
     beakCurtain: {
-      boxShadow: 'none',
       backgroundColor: palette.neutralPrimary,
       borderRadius: borders.soft,
     },
     calloutMain: {
-      boxShadow: 'none',
       backgroundColor: palette.neutralPrimary,
     },
   };

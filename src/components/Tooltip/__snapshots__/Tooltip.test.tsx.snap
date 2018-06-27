@@ -12,11 +12,9 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
         "beakCurtain": Object {
           "backgroundColor": "#343A41",
           "borderRadius": "2px",
-          "boxShadow": "none",
         },
         "calloutMain": Object {
           "backgroundColor": "#343A41",
-          "boxShadow": "none",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -24,9 +22,7 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
         "root": Object {
           "backgroundColor": "inherit",
           "border": "none",
-          "borderRadius": "1px",
-          "borderWidth": 0,
-          "boxShadow": "0 0 12px rgba(0, 0, 0, 0.2)",
+          "boxShadow": "none",
           "minHeight": "3.2rem",
           "padding": "0.7rem 1.2rem 0.8rem",
           "zIndex": 1000,
@@ -69,11 +65,9 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
         "beakCurtain": Object {
           "backgroundColor": "#343A41",
           "borderRadius": "2px",
-          "boxShadow": "none",
         },
         "calloutMain": Object {
           "backgroundColor": "#343A41",
-          "boxShadow": "none",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -81,9 +75,7 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
         "root": Object {
           "backgroundColor": "inherit",
           "border": "none",
-          "borderRadius": "1px",
-          "borderWidth": 0,
-          "boxShadow": "0 0 12px rgba(0, 0, 0, 0.2)",
+          "boxShadow": "none",
           "minHeight": "3.2rem",
           "padding": "0.7rem 1.2rem 0.8rem",
           "zIndex": 1000,
@@ -128,11 +120,9 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
         "beakCurtain": Object {
           "backgroundColor": "#343A41",
           "borderRadius": "2px",
-          "boxShadow": "none",
         },
         "calloutMain": Object {
           "backgroundColor": "#343A41",
-          "boxShadow": "none",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -140,9 +130,7 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
         "root": Object {
           "backgroundColor": "inherit",
           "border": "none",
-          "borderRadius": "1px",
-          "borderWidth": 0,
-          "boxShadow": "0 0 12px rgba(0, 0, 0, 0.2)",
+          "boxShadow": "none",
           "minHeight": "3.2rem",
           "padding": "0.7rem 1.2rem 0.8rem",
           "zIndex": 1000,
