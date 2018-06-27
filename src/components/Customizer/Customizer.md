@@ -1,6 +1,6 @@
 ### Examples
 
-Button With Theme:
+Button with theme:
 
 ```js { "props": { "data-description": "basic" } }
 const { createTheme, getTheme } = require('./');
