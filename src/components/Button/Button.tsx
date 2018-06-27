@@ -9,6 +9,7 @@ import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
 import { getBaseButtonStyles, getClassNames } from './Button.styles';
 import BaseIcon from '../Icon/BaseIcon';
+import { customizable } from '@uifabric/utilities';
 
 export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType };
 
@@ -136,6 +137,7 @@ export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonPr
 /**
  * A `Button` allows a user to take an action.
  */
+@customizable('Button', ['theme'])
 export default class Button extends React.Component<ButtonProps> {
   public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
@@ -171,6 +173,7 @@ export default class Button extends React.Component<ButtonProps> {
       fullWidth = false,
       iconPosition = ButtonIconPosition.LEFT,
       status = ButtonStatus.ENABLED,
+      theme,
     } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
@@ -197,7 +200,7 @@ export default class Button extends React.Component<ButtonProps> {
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        styles={getBaseButtonStyles({ size, color, fullWidth, status })}
+        styles={getBaseButtonStyles({ theme, size, color, fullWidth, status })}
       >
         <Block
           textSize={size === ButtonSize.SMALL ? TextSize.SMALL : TextSize.MEDIUM_SUB}
