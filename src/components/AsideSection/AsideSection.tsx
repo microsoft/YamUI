@@ -25,8 +25,7 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 /**
  * A section component to be used primarily for sidebar modules
  */
-@customizable('AsideSection', ['theme'])
-export default class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
+export class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
   public render() {
     const { title, children, theme = nullTheme } = this.props;
     const classes = getClassNames({ theme });
@@ -60,3 +59,6 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
     return null;
   }
 }
+
+@customizable('AsideSection', ['theme'])
+export default class CustomizableAsideSection extends AsideSection {}

@@ -137,8 +137,7 @@ export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonPr
 /**
  * A `Button` allows a user to take an action.
  */
-@customizable('Button', ['theme'])
-export default class Button extends React.Component<ButtonProps> {
+export class Button extends React.Component<ButtonProps> {
   public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {
@@ -231,3 +230,6 @@ export default class Button extends React.Component<ButtonProps> {
     );
   }
 }
+
+@customizable('Button', ['theme'])
+export default class CustomizableButton extends Button {}

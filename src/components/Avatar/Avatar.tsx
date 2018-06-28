@@ -8,6 +8,7 @@ import { AvatarSize } from './types';
 import { BorderType } from '../Image/types';
 import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
 import { customizable } from '@uifabric/utilities';
+import { ITheme } from '@uifabric/styling';
 
 export { BorderType, AvatarSize };
 
@@ -62,8 +63,7 @@ export interface AvatarProps extends CustomizableComponentProps {
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
-@customizable('Avatar', ['theme'])
-export default class Avatar extends React.Component<AvatarProps> {
+export class Avatar extends React.Component<AvatarProps> {
   public render() {
     const {
       badgeContent,
@@ -75,7 +75,7 @@ export default class Avatar extends React.Component<AvatarProps> {
       imageShouldFadeIn = false,
       borderType = BorderType.ROUND,
     } = this.props;
-    const classNames = getClassNames({ size, theme });
+    const classNames = getClassNames({ size, theme: theme as ITheme });
     const badge = badgeContent && <div className={classNames.badge}>{badgeContent}</div>;
 
     return (
@@ -94,3 +94,6 @@ export default class Avatar extends React.Component<AvatarProps> {
     );
   }
 }
+
+@customizable('Avatar', ['theme'])
+export default class CustomizableAvatar extends Avatar {}

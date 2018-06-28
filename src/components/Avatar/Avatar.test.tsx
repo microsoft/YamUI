@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
 import Text from '../Text';
-import Avatar, { AvatarProps, AvatarSize, BorderType } from '.';
+import CustomizableAvatar, { Avatar, AvatarProps, AvatarSize, BorderType } from '.';
 import Customizer, { nullTheme } from '../Customizer';
 
 describe('<Avatar />', () => {
@@ -10,7 +10,7 @@ describe('<Avatar />', () => {
 
   describe('with image url', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />).dive();
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />);
     });
 
     it('matches its snapshot', () => {
@@ -20,7 +20,7 @@ describe('<Avatar />', () => {
 
   describe('with too many characters', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="First Last" />).dive();
+      component = shallow(<Avatar name="First Last" />);
     });
 
     it('matches its snapshot', () => {
@@ -30,7 +30,7 @@ describe('<Avatar />', () => {
 
   describe('with imageShouldFadeIn', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageShouldFadeIn={true} />).dive();
+      component = shallow(<Avatar name="NAME" imageShouldFadeIn={true} />);
     });
 
     it('matches its snapshot', () => {
@@ -42,7 +42,7 @@ describe('<Avatar />', () => {
     beforeEach(() => {
       component = shallow(
         <Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XSMALL} badgeContent={<Text>badge</Text>} />,
-      ).dive();
+      );
     });
 
     it('matches its snapshot', () => {
@@ -52,7 +52,7 @@ describe('<Avatar />', () => {
 
   describe('with soft border type', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />).dive();
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" borderType={BorderType.SOFT} />);
     });
 
     it('matches its snapshot', () => {
@@ -62,7 +62,7 @@ describe('<Avatar />', () => {
 
   describe('with size', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XLARGE} />).dive();
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" size={AvatarSize.XLARGE} />);
     });
 
     it('matches its snapshot', () => {
@@ -72,7 +72,7 @@ describe('<Avatar />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" className="TEST_CLASSNAME" />).dive();
+      component = shallow(<Avatar name="NAME" imageUrl="test.jpg" className="TEST_CLASSNAME" />);
     });
 
     it('matches its snapshot', () => {
@@ -83,7 +83,7 @@ describe('<Avatar />', () => {
   describe('accessible text', () => {
     describe('without badge description', () => {
       beforeEach(() => {
-        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />).dive();
+        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" />);
       });
 
       it('matches its snapshot', () => {
@@ -93,7 +93,7 @@ describe('<Avatar />', () => {
 
     describe('with badge description', () => {
       beforeEach(() => {
-        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" badgeDescription="BADGE" />).dive();
+        component = shallow(<Avatar name="NAME" imageUrl="test.jpg" badgeDescription="BADGE" />);
       });
 
       it('matches its snapshot', () => {
@@ -107,10 +107,10 @@ describe('<Avatar />', () => {
       const theme = nullTheme;
       const mountedComponent = mount(
         <Customizer settings={{ theme }}>
-          <Avatar name="NAME" />
+          <CustomizableAvatar name="NAME" />
         </Customizer>,
       );
-      expect(mountedComponent.find('Avatar').prop('theme')).toBe(theme);
+      expect(mountedComponent.find('CustomizableAvatar').prop('theme')).toBe(theme);
     });
   });
 });
