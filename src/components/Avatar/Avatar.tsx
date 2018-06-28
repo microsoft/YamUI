@@ -2,11 +2,13 @@
 import '../../yamui';
 import * as React from 'react';
 import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, nullTheme } from '../Customizer';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarSize } from './types';
 import { BorderType } from '../Image/types';
 import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
+import { customizable } from '@uifabric/utilities';
+
 export { BorderType, AvatarSize };
 
 const SizeMap = {
@@ -17,7 +19,7 @@ const SizeMap = {
   [AvatarSize.XSMALL]: PersonaSize.size24,
 };
 
-export interface AvatarProps extends BaseComponentProps {
+export interface AvatarProps extends CustomizableComponentProps {
   /**
    * Name of the person or object being represented. Will be used as accessible alt text.
    */
@@ -60,6 +62,7 @@ export interface AvatarProps extends BaseComponentProps {
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
+@customizable('Avatar', ['theme'])
 export default class Avatar extends React.Component<AvatarProps> {
   public render() {
     const {
@@ -67,11 +70,12 @@ export default class Avatar extends React.Component<AvatarProps> {
       imageUrl,
       name,
       badgeDescription,
+      theme = nullTheme,
       size = AvatarSize.MEDIUM,
       imageShouldFadeIn = false,
       borderType = BorderType.ROUND,
     } = this.props;
-    const classNames = getClassNames(size);
+    const classNames = getClassNames({ size, theme });
     const badge = badgeContent && <div className={classNames.badge}>{badgeContent}</div>;
 
     return (

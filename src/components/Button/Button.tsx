@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { Button as FabricButton } from 'office-ui-fabric-react/lib/components/Button/Button';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
-import { CustomizableComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, nullTheme } from '../Customizer';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
@@ -173,7 +173,7 @@ export default class Button extends React.Component<ButtonProps> {
       fullWidth = false,
       iconPosition = ButtonIconPosition.LEFT,
       status = ButtonStatus.ENABLED,
-      theme,
+      theme = nullTheme,
     } = this.props;
 
     const href = (this.props as LinkButtonProps).href;

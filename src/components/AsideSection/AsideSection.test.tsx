@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
 import AsideSection, { AsideSectionProps } from '.';
 import Clickable from '../Clickable';
-import Customizer from '../Customizer';
+import Customizer, { nullTheme } from '../Customizer';
 
 describe('<AsideSection />', () => {
   let component: ShallowWrapper<AsideSectionProps>;
@@ -45,7 +45,7 @@ describe('<AsideSection />', () => {
 
   describe('with customizer', () => {
     it('receives custom theme', () => {
-      const theme = { palette: {}, semanticColors: {} };
+      const theme = nullTheme;
       const mountedComponent = mount(
         <Customizer settings={{ theme }}>
           <AsideSection title="TITLE" />

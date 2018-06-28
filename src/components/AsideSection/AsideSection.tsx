@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps, CustomizableComponentProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, nullTheme } from '../Customizer';
 import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
@@ -27,7 +28,7 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 @customizable('AsideSection', ['theme'])
 export default class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
   public render() {
-    const { theme } = this.props;
+    const { title, children, theme = nullTheme } = this.props;
     const classes = getClassNames({ theme });
 
     return (
@@ -38,7 +39,7 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
               <Heading level="2" size="none">
                 <Block bottomSpacing={GutterSize.XSMALL}>
                   <Text uppercase={true} bold={true}>
-                    {this.props.title}
+                    {title}
                   </Text>
                 </Block>
               </Heading>
@@ -46,7 +47,7 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
             {this.getActionColumn()}
           </FixedGridRow>
         </Block>
-        <div>{this.props.children}</div>
+        <div>{children}</div>
       </div>
     );
   }
