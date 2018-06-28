@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper } from 'enzyme';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import Text from '../Text';
 import CustomizableAvatar, { Avatar } from './Avatar';
 import { AvatarProps, AvatarSize, BorderType } from './Avatar.types';
