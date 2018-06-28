@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './types';
+import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
 import { fontWeights } from '../../util/styles/fonts';
 import { borders } from '../../util/styles/borders';
 import { mergeStyleSets, ITheme } from '@uifabric/styling';

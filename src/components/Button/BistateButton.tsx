@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import Button, { ButtonProps, FabricButtonType } from './Button';
+import Button from './Button';
+import { ButtonProps, FabricButtonType } from './Button.types';
 
 export type CustomizableProps = 'color' | 'text' | 'ariaLabel' | 'icon' | 'iconPosition' | 'className';
 

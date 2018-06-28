@@ -2,8 +2,9 @@
 import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
 import Text from '../Text';
-import CustomizableAvatar, { Avatar, AvatarProps, AvatarSize, BorderType } from '.';
-import Customizer, { nullTheme } from '../Customizer';
+import CustomizableAvatar, { Avatar } from './Avatar';
+import { AvatarProps, AvatarSize, BorderType } from './Avatar.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<Avatar />', () => {
   let component: ShallowWrapper<AvatarProps>;
@@ -104,7 +105,7 @@ describe('<Avatar />', () => {
 
   describe('with customizer', () => {
     it('receives custom theme', () => {
-      const theme = nullTheme;
+      const theme = defaultTheme;
       const mountedComponent = mount(
         <Customizer settings={{ theme }}>
           <CustomizableAvatar name="NAME" />

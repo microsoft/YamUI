@@ -2,7 +2,7 @@
 import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { IPersonaCoinStyles } from 'office-ui-fabric-react/lib/PersonaCoin';
-import { AvatarSize, BorderType } from './Avatar';
+import { AvatarSize, BorderType } from './Avatar.types';
 import { borders } from '../../util/styles/borders';
 
 export interface AvatarStyleProps {

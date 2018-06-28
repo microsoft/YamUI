@@ -1,9 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
-import CustomizableAsideSection, { AsideSection, AsideSectionProps } from '.';
+import CustomizableAsideSection, { AsideSection } from './AsideSection';
+import { AsideSectionProps } from './AsideSection.types';
 import Clickable from '../Clickable';
-import Customizer, { nullTheme } from '../Customizer';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<AsideSection />', () => {
   let component: ShallowWrapper<AsideSectionProps>;
@@ -45,7 +46,7 @@ describe('<AsideSection />', () => {
 
   describe('with customizer', () => {
     it('receives custom theme', () => {
-      const theme = nullTheme;
+      const theme = defaultTheme;
       const mountedComponent = mount(
         <Customizer settings={{ theme }}>
           <CustomizableAsideSection title="TITLE" />

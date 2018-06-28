@@ -1,15 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
-import CustomizableButton, {
-  Button,
-  ButtonProps,
-  ButtonColor,
-  ButtonStatus,
-  ButtonIconPosition,
-  ButtonSize,
-  ButtonType,
-} from '.';
+import CustomizableButton, { Button } from './Button';
+import { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './Button.types';
 import AccountsIcon from '../Icon/icons/Accounts';
 import Customizer from '../Customizer';
 

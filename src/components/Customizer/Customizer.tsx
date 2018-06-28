@@ -1,11 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Customizer as FabricCustomizer, ICustomizerProps } from 'office-ui-fabric-react/lib/Utilities';
+import { Customizer as FabricCustomizer, ICustomizerProps, customizable } from 'office-ui-fabric-react/lib/Utilities';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { createTheme, ITheme } from 'office-ui-fabric-react';
 
-export { createTheme, ITheme, ICustomizerProps };
+export { createTheme, ITheme, ICustomizerProps, customizable };
 
 export interface CustomizableComponentProps extends BaseComponentProps {
   /**
@@ -14,7 +14,7 @@ export interface CustomizableComponentProps extends BaseComponentProps {
   theme?: ITheme;
 }
 
-export const nullTheme = createTheme({ palette: {} });
+export const defaultTheme = createTheme({});
 
 /**
  * Used to inject a custom theme object into customizable components, overriding the global theme.
