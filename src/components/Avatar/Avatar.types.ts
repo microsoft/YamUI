@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { CustomizableComponentProps } from '../Customizer';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BorderType } from '../Image/types';
 export { BorderType };
 
@@ -26,7 +26,7 @@ export enum AvatarSize {
   XSMALL = 'xSmall',
 }
 
-export interface AvatarProps extends CustomizableComponentProps {
+export interface AvatarProps extends BaseComponentProps {
   /**
    * Name of the person or object being represented. Will be used as accessible alt text.
    */

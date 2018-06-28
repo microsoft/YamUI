@@ -6,7 +6,7 @@ import ScreenreaderText from '../ScreenreaderText';
 import { AvatarSize, AvatarProps } from './Avatar.types';
 import { BorderType } from '../Image/types';
 import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
-import { defaultTheme, customizable } from '../Customizer';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 
 const SizeMap = {
   [AvatarSize.XLARGE]: PersonaSize.size72,
@@ -19,7 +19,7 @@ const SizeMap = {
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
-export class Avatar extends React.Component<AvatarProps> {
+export class Avatar extends React.Component<AvatarProps & CustomizableComponentProps> {
   public render() {
     const {
       badgeContent,

@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { Button as FabricButton } from 'office-ui-fabric-react/lib/components/Button/Button';
-import { CustomizableComponentProps } from '../Customizer';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
 import BaseIcon from '../Icon/BaseIcon';
 
@@ -38,7 +38,7 @@ export enum ButtonType {
 }
 
 export type FabricButtonType = HTMLAnchorElement | HTMLDivElement | HTMLButtonElement | BaseButton | FabricButton;
-export interface BaseButtonProps extends CustomizableComponentProps {
+export interface BaseButtonProps extends BaseComponentProps {
   /**
    * Visible button text.
    */

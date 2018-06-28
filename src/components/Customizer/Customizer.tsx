@@ -2,12 +2,11 @@
 import '../../yamui';
 import * as React from 'react';
 import { Customizer as FabricCustomizer, ICustomizerProps, customizable } from 'office-ui-fabric-react/lib/Utilities';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { createTheme, ITheme } from 'office-ui-fabric-react';
 
 export { createTheme, ITheme, ICustomizerProps, customizable };
 
-export interface CustomizableComponentProps extends BaseComponentProps {
+export interface CustomizableComponentProps {
   /**
    * Theme used to style the component. This will often be provided by `customizable`.
    */

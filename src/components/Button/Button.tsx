@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
-import { defaultTheme, customizable } from '../Customizer';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { getBaseButtonStyles, getClassNames } from './Button.styles';
@@ -22,7 +22,7 @@ const hrefBlacklist = ['', '#', 'javascript://'];
 /**
  * A `Button` allows a user to take an action.
  */
-export class Button extends React.Component<ButtonProps> {
+export class Button extends React.Component<ButtonProps & CustomizableComponentProps> {
   public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {
