@@ -104,13 +104,18 @@ describe('<Avatar />', () => {
   });
 
   describe('with customizer', () => {
-    it('receives custom theme', () => {
-      const theme = defaultTheme;
-      const mountedComponent = mount(
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
         <Customizer settings={{ theme }}>
           <CustomizableAvatar name="NAME" />
         </Customizer>,
       );
+    });
+
+    it('receives custom theme', () => {
       expect(mountedComponent.find('CustomizableAvatar').prop('theme')).toBe(theme);
     });
   });
