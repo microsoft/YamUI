@@ -1,12 +1,19 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { semanticColors } from '../../util/colors';
-import { mergeStyleSets } from '@uifabric/styling';
+import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
-export const getClassNames = memoizeFunction(() => {
+export interface AsideSectionStyleProps {
+  theme?: ITheme;
+}
+
+const getMemoizedClassNames = memoizeFunction(theme => {
   return mergeStyleSets({
     header: {
-      borderBottom: `1px solid ${semanticColors.bodyDivider}`,
+      borderBottom: `1px solid ${theme.semanticColors.bodyDivider}`,
     },
   });
 });
+
+export const getClassNames = (styleProps: AsideSectionStyleProps) => {
+  return getMemoizedClassNames(styleProps.theme);
+};

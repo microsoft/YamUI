@@ -1,8 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow, mount, ShallowWrapper } from 'enzyme';
 import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
 import AccountsIcon from '../Icon/icons/Accounts';
+import Customizer from '../Customizer';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -273,6 +274,18 @@ describe('<Button />', () => {
       it('triggers its onBlur callback', () => {
         expect(onBlur).toHaveBeenCalled();
       });
+    });
+  });
+
+  describe('with customizer', () => {
+    it('receives custom theme', () => {
+      const theme = { palette: {}, semanticColors: {} };
+      const mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <Button text="Text" />
+        </Customizer>,
+      );
+      expect(mountedComponent.find('Button').prop('theme')).toEqual(theme);
     });
   });
 });

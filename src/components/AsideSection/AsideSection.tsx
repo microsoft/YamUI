@@ -1,12 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps, CustomizableComponentProps } from '../../util/BaseComponent/props';
 import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
 import Text, { TextSize } from '../Text';
 import { getClassNames } from './AsideSection.styles';
+import { customizable } from '@uifabric/utilities';
 
 export interface AsideSectionProps extends NestableBaseComponentProps {
   /**
@@ -23,9 +24,11 @@ export interface AsideSectionProps extends NestableBaseComponentProps {
 /**
  * A section component to be used primarily for sidebar modules
  */
-export default class AsideSection extends React.Component<AsideSectionProps> {
+@customizable('AsideSection', ['theme'])
+export default class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
   public render() {
-    const classes = getClassNames();
+    const { theme } = this.props;
+    const classes = getClassNames({ theme });
 
     return (
       <div className="y-aside-section">

@@ -1,5 +1,4 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { getTheme } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
 import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './types';
 import { fontWeights } from '../../util/styles/fonts';
@@ -63,8 +62,8 @@ export interface BaseButtonStyleProps {
   fullWidth: boolean;
 }
 
-const getMemoizedBaseButtonStyles = memoizeFunction((props, theme): IButtonStyles => {
-  const { size, color, status, fullWidth } = props;
+const getMemoizedBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
+  const { size, color, status, fullWidth, theme } = styleProps;
 
   const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
   const { root, rootHovered, rootFocused, rootPressed } = colors;
@@ -99,9 +98,8 @@ const getMemoizedBaseButtonStyles = memoizeFunction((props, theme): IButtonStyle
   };
 });
 
-export const getBaseButtonStyles = (props: BaseButtonStyleProps) => {
-  const theme = props.theme || getTheme();
-  return getMemoizedBaseButtonStyles(props, theme);
+export const getBaseButtonStyles = (styleProps: BaseButtonStyleProps) => {
+  return getMemoizedBaseButtonStyles(styleProps);
 };
 
 export interface ButtonStyleProps {
