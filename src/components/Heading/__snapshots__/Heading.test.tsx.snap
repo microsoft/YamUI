@@ -12,12 +12,12 @@ exports[`<Heading /> with additional className matches its snapshot 1`] = `
         line-height: inherit;
       }
 >
-  <Block
+  <CustomizedBlock
     bottomSpacing="medium"
     textSize="large"
   >
     test content
-  </Block>
+  </CustomizedBlock>
 </h4>
 `;
 
@@ -32,12 +32,12 @@ exports[`<Heading /> with level 1 matches its snapshot 1`] = `
         line-height: inherit;
       }
 >
-  <Block
+  <CustomizedBlock
     bottomSpacing="small"
     textSize="xxLarge"
   >
     test content
-  </Block>
+  </CustomizedBlock>
 </h1>
 `;
 
@@ -52,12 +52,12 @@ exports[`<Heading /> with level 2 and size 3 matches its snapshot 1`] = `
         line-height: inherit;
       }
 >
-  <Block
+  <CustomizedBlock
     bottomSpacing="medium"
     textSize="large"
   >
     test content
-  </Block>
+  </CustomizedBlock>
 </h2>
 `;
 

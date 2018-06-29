@@ -15,7 +15,7 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
-  <Block
+  <CustomizedBlock
     horizontalPadding="xLarge"
     verticalPadding="medium"
   >
@@ -28,7 +28,7 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
         </h1>
       </div>
     </ScreenreaderText>
-  </Block>
+  </CustomizedBlock>
 </WithResponsiveMode>
 `;
 
@@ -47,7 +47,7 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
-  <Block
+  <CustomizedBlock
     horizontalPadding="xLarge"
     verticalPadding="medium"
   >
@@ -82,7 +82,7 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
         </Clickable>
       </FixedGridColumn>
     </FixedGridRow>
-  </Block>
+  </CustomizedBlock>
 </WithResponsiveMode>
 `;
 
@@ -100,7 +100,7 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
 >
-  <Block
+  <CustomizedBlock
     horizontalPadding="xLarge"
     verticalPadding="medium"
   >
@@ -135,6 +135,6 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
         </Clickable>
       </FixedGridColumn>
     </FixedGridRow>
-  </Block>
+  </CustomizedBlock>
 </WithResponsiveMode>
 `;

@@ -4,11 +4,11 @@ exports[`<HovercardBody /> with additional className matches its snapshot 1`] = 
 <div
   className="y-hovercard--body TEST_CLASSNAME"
 >
-  <Block
+  <CustomizedBlock
     padding="xLarge"
   >
     body content
-  </Block>
+  </CustomizedBlock>
 </div>
 `;
 
@@ -16,10 +16,10 @@ exports[`<HovercardBody /> with default options matches its snapshot 1`] = `
 <div
   className="y-hovercard--body"
 >
-  <Block
+  <CustomizedBlock
     padding="xLarge"
   >
     body content
-  </Block>
+  </CustomizedBlock>
 </div>
 `;

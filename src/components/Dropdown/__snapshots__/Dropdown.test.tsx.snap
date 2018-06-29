@@ -170,12 +170,12 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
 `;
 
 exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
-<Block
+<CustomizedBlock
   className="y-dropdown--item y-dropdown--header"
   textSize="small"
 >
   foo
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<Dropdown /> when onRenderTitle is called with an empty array renders as expected 1`] = `null`;

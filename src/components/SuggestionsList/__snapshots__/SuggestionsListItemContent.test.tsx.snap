@@ -177,11 +177,11 @@ exports[`<SuggestionsListItemContentContent /> with text item matches its snapsh
         text-align: left;
       }
 >
-  <Block
+  <CustomizedBlock
     textColor="primary"
     textSize="mediumSub"
   >
     John Smith
-  </Block>
+  </CustomizedBlock>
 </div>
 `;
