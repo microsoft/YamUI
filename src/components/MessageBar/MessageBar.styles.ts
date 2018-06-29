@@ -3,7 +3,7 @@ import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { MessageBarType } from './MessageBar.types';
 
-export interface MessageBarStyleProps {
+export interface MessageBarClassNameProps {
   type: MessageBarType;
   theme: ITheme;
 }
@@ -14,8 +14,8 @@ const getBorderColors = (theme: ITheme) => ({
   [MessageBarType.INFO]: theme.palette.neutralTertiaryAlt,
 });
 
-export const getClassNames = memoizeFunction((styleProps: MessageBarStyleProps) => {
-  const { type, theme } = styleProps;
+export const getClassNames = memoizeFunction((classNameProps: MessageBarClassNameProps) => {
+  const { type, theme } = classNameProps;
   const borderColors = getBorderColors(theme);
 
   return mergeStyleSets({
