@@ -3,7 +3,7 @@
 Click trigger:
 
 ```js { "props": { "data-description": "click trigger","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]", "data-preview-selector": ".y-modalDialog" } }
-const ModalDialogSize = require('.').ModalDialogSize;
+const { ModalDialogSize } = require('.');
 
 class ModalDialogExample extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class ModalDialogExample extends React.Component {
 Hidden title:
 
 ```js { "props": { "data-description": "hidden title","data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]", "data-preview-selector": ".y-modalDialog" } }
-const ModalDialogSize = require('.').ModalDialogSize;
+const { ModalDialogSize } = require('.');
 
 class ClickableDialog extends React.Component {
   constructor(props) {
