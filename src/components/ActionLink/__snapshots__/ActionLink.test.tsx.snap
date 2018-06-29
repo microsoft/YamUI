@@ -21,21 +21,21 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Block
+      <CustomizedBlock
         push={2}
       >
         <Down
           block={true}
           size="16"
         />
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block
+      <CustomizedBlock
         textSize="mediumSub"
       >
         Download
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
 </NavigationLink>
@@ -63,21 +63,21 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Block
+      <CustomizedBlock
         push={2}
       >
         <Down
           block={true}
           size="16"
         />
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block
+      <CustomizedBlock
         textSize="mediumSub"
       >
         Download
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
 </NavigationLink>
@@ -104,21 +104,21 @@ exports[`<ActionLink /> with href matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Block
+      <CustomizedBlock
         push={2}
       >
         <Down
           block={true}
           size="16"
         />
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block
+      <CustomizedBlock
         textSize="mediumSub"
       >
         Download
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
 </NavigationLink>
@@ -145,21 +145,21 @@ exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Block
+      <CustomizedBlock
         push={2}
       >
         <Down
           block={true}
           size="16"
         />
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block
+      <CustomizedBlock
         textSize="mediumSub"
       >
         Download
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
 </Clickable>
@@ -185,21 +185,21 @@ exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
     <FixedGridColumn
       fixed={true}
     >
-      <Block
+      <CustomizedBlock
         push={2}
       >
         <Down
           block={true}
           size="16"
         />
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
     <FixedGridColumn>
-      <Block
+      <CustomizedBlock
         textSize="mediumSub"
       >
         Download
-      </Block>
+      </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
 </Clickable>

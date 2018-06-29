@@ -59,7 +59,7 @@ exports[`<SuggestionsList /> when isLoading=false without results matches its sn
         width: 280px;
       }
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -71,7 +71,7 @@ exports[`<SuggestionsList /> when isLoading=false without results matches its sn
     textSize="small"
   >
     noResultsText
-  </Block>
+  </CustomizedBlock>
 </div>
 `;
 

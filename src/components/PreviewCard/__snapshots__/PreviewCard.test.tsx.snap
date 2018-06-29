@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -13,11 +13,11 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           padding-bottom: 2px;
         }
     metadataContent={
-      <Block
+      <CustomizedBlock
         push={0}
         textColor="metadata"
       >
-        <EditableText
+        <CustomizedEditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -26,20 +26,20 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </Block>
+      </CustomizedBlock>
     }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when entering edit mode matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -51,11 +51,11 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           padding-bottom: 2px;
         }
     metadataContent={
-      <Block
+      <CustomizedBlock
         push={-3}
         textColor="metadata"
       >
-        <EditableText
+        <CustomizedEditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -64,22 +64,22 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </Block>
+      </CustomizedBlock>
     }
     size="medium"
     titleContent={
-      <Block
+      <CustomizedBlock
         textSize="xSmall"
       >
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when exiting edit mode matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -91,11 +91,11 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           padding-bottom: 2px;
         }
     metadataContent={
-      <Block
+      <CustomizedBlock
         push={0}
         textColor="metadata"
       >
-        <EditableText
+        <CustomizedEditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -104,20 +104,20 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </Block>
+      </CustomizedBlock>
     }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -129,7 +129,7 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
           padding-bottom: 2px;
         }
     metadataContent={
-      <Block
+      <CustomizedBlock
         push={1}
         textColor="metadata"
       >
@@ -138,20 +138,20 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
           size="xSmall"
           text="loading..."
         />
-      </Block>
+      </CustomizedBlock>
     }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
       TEST_CLASSNAME
@@ -165,16 +165,16 @@ exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
         }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with description matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -188,16 +188,16 @@ exports[`<PreviewCard /> with description matches its snapshot 1`] = `
     metadataContent="file description"
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with image matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -218,16 +218,16 @@ exports[`<PreviewCard /> with image matches its snapshot 1`] = `
     }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -240,9 +240,9 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
         }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
   <ProgressIndicator
@@ -257,11 +257,11 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
         }
     percentComplete={0.5}
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -274,16 +274,16 @@ exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
         }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
       &:hover {
@@ -299,21 +299,21 @@ exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
         }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         <Clickable
           ariaLabel="Show file preview"
           unstyled={true}
         >
           Filename.gif
         </Clickable>
-      </Block>
+      </CustomizedBlock>
     }
   />
-</Box>
+</CustomizedBox>
 `;
 
 exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
-<Box
+<CustomizedBox
   className=
       y-previewCard
 
@@ -326,9 +326,9 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
         }
     size="medium"
     titleContent={
-      <Block>
+      <CustomizedBlock>
         Filename.gif
-      </Block>
+      </CustomizedBlock>
     }
   />
   <span
@@ -347,15 +347,15 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
       onClick={[Function]}
       unstyled={true}
     >
-      <Block
+      <CustomizedBlock
         padding="small"
       >
         <Cancel
           block={true}
           size="12"
         />
-      </Block>
+      </CustomizedBlock>
     </Clickable>
   </span>
-</Box>
+</CustomizedBox>
 `;

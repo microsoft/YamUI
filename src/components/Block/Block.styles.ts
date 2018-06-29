@@ -1,11 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { BlockProps } from './Block';
-import { TextSize } from '../Text';
+import { TextSize, TextColor } from './Block.types';
 import { GutterSize } from '../FixedGrid/types';
-import { getTheme } from '../../util/colors';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
-import { IRawStyle } from '@uifabric/styling';
+import { mergeStyleSets, ITheme } from '@uifabric/styling';
+import { memoizeFunction } from '@uifabric/utilities';
 
 const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (push) {
@@ -27,54 +26,76 @@ const iconSizeForTextSize = {
   [TextSize.XSMALL]: '1.0rem',
 };
 
-export const getStyles = (props: BlockProps): IRawStyle => {
-  const { push, textSize, topSpacing, bottomSpacing, textAlign, textColor } = props;
-  const theme = getTheme();
+export interface BlockClassNameProps {
+  theme: ITheme;
+  topSpacing?: GutterSize;
+  bottomSpacing?: GutterSize;
+  padding?: GutterSize;
+  horizontalPadding?: GutterSize;
+  verticalPadding?: GutterSize;
+  push?: number;
+  textAlign?: 'left' | 'right' | 'center';
+  textColor?: TextColor;
+  textSize?: TextSize;
+  ellipsis?: boolean;
+}
+
+export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
+  const {
+    push,
+    textSize,
+    topSpacing,
+    bottomSpacing,
+    textAlign,
+    textColor,
+    theme,
+    ellipsis,
+    padding,
+    horizontalPadding,
+    verticalPadding,
+  } = props;
   const font = textSize ? theme.fonts[textSize === TextSize.MEDIUM_SUB ? 'smallPlus' : textSize] : undefined;
 
-  return {
-    textAlign,
-    color: textColor ? textColors[textColor] : undefined,
-    fontSize: font ? font.fontSize : undefined,
-    lineHeight: font ? font.lineHeight : undefined,
-    marginTop: getMarginTop(topSpacing, push),
-    marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
-    // For positive push, "push" it down with top padding (because margins can collapse).
-    paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
-    selectors: {
-      '&.y-block .y-icon': {
-        top: textSize === TextSize.XSMALL || textSize === TextSize.SMALL ? '0.1rem' : undefined,
-      },
-      '.y-icon': {
-        height: textSize ? iconSizeForTextSize[textSize] : undefined,
-        width: textSize ? iconSizeForTextSize[textSize] : undefined,
-      },
-      '.y-text__ellipsis': {
-        verticalAlign: textSize ? verticalAligns[textSize] : undefined,
+  return mergeStyleSets({
+    root: {
+      textAlign,
+      color: textColor ? textColors[textColor] : undefined,
+      fontSize: font ? font.fontSize : undefined,
+      lineHeight: font ? font.lineHeight : undefined,
+      marginTop: getMarginTop(topSpacing, push),
+      marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
+      // For positive push, "push" it down with top padding (because margins can collapse).
+      paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
+      selectors: {
+        '&.y-block .y-icon': {
+          top: textSize === TextSize.XSMALL || textSize === TextSize.SMALL ? '0.1rem' : undefined,
+        },
+        '.y-icon': {
+          height: textSize ? iconSizeForTextSize[textSize] : undefined,
+          width: textSize ? iconSizeForTextSize[textSize] : undefined,
+        },
+        '.y-text__ellipsis': {
+          verticalAlign: textSize ? verticalAligns[textSize] : undefined,
+        },
       },
     },
-  };
-};
-
-export const getInnerStyles = (props: BlockProps): IRawStyle => {
-  const { padding, horizontalPadding, verticalPadding, ellipsis } = props;
-
-  return {
-    ...(ellipsis ? ellipsisStyle : {}),
-    padding: padding ? gutterSize[padding] : undefined,
-    ...(horizontalPadding
-      ? {
-          paddingLeft: gutterSize[horizontalPadding],
-          paddingRight: gutterSize[horizontalPadding],
-        }
-      : {}),
-    ...(verticalPadding
-      ? {
-          paddingTop: gutterSize[verticalPadding],
-          paddingBottom: gutterSize[verticalPadding],
-        }
-      : {}),
-    wordWrap: 'break-word' as 'break-word',
-    overflowWrap: 'break-word' as 'break-word',
-  };
-};
+    inner: {
+      ...(ellipsis ? ellipsisStyle : {}),
+      padding: padding ? gutterSize[padding] : undefined,
+      ...(horizontalPadding
+        ? {
+            paddingLeft: gutterSize[horizontalPadding],
+            paddingRight: gutterSize[horizontalPadding],
+          }
+        : {}),
+      ...(verticalPadding
+        ? {
+            paddingTop: gutterSize[verticalPadding],
+            paddingBottom: gutterSize[verticalPadding],
+          }
+        : {}),
+      wordWrap: 'break-word',
+      overflowWrap: 'break-word',
+    },
+  });
+});

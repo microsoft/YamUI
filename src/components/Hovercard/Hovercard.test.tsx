@@ -3,7 +3,9 @@ import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Callout from '../Callout';
 import { KeyCodes } from '../../util/keyCodes';
-import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
+import CustomizableHovercard, { Hovercard } from './Hovercard';
+import { HovercardProps, HovercardState, TriggerType } from '.';
+import Customizer, { defaultTheme } from '../Customizer';
 
 jest.useFakeTimers();
 
@@ -330,6 +332,25 @@ describe('<Hovercard />', () => {
           });
         });
       });
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableHovercard content={<div>Hovercard content</div>}>
+            <span>Trigger</span>
+          </CustomizableHovercard>
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableHovercard').prop('theme')).toBe(theme);
     });
   });
 });

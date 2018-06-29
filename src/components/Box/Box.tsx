@@ -1,23 +1,20 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import Block, { GutterSize } from '../Block';
 import { join } from '../../util/classNames';
 import { getClassNames } from './Box.styles';
-
-export interface BoxProps extends NestableBaseComponentProps {
-  onClick?: (() => void);
-}
+import { BoxProps } from './Box.types';
 
 /**
  * A Box is a div with a border and fixed padding. It also has `display: relative` so you can
  * absolutely-position elements like a close button. Boxes will primarily be used for card views.
  */
-export default class Box extends React.Component<BoxProps> {
+export class Box extends React.Component<BoxProps & CustomizableComponentProps> {
   public render() {
-    const { children, onClick, className } = this.props;
-    const classNames = getClassNames({ hasOnClick: !!onClick });
+    const { children, onClick, className, theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ hasOnClick: !!onClick, theme });
     const rootClassNames = join(['y-box', classNames.root, className]);
 
     return (
@@ -29,3 +26,6 @@ export default class Box extends React.Component<BoxProps> {
     );
   }
 }
+
+@customizable('Box', ['theme'])
+export default class CustomizableBox extends Box {}

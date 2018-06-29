@@ -1,14 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { getTheme } from '../../util/colors';
-import { IChoiceGroupStyles } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroup.types';
+import { IChoiceGroupStyles, IChoiceGroupStyleProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/';
 import {
   IChoiceGroupOptionStyles,
   IChoiceGroupOptionStyleProps,
-} from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.types';
+} from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/';
 import { textColors, fontWeights } from '../../util/styles/fonts';
 
-export const getStyles = (): IChoiceGroupStyles => {
-  const theme = getTheme();
+export const getStyles = (props: IChoiceGroupStyleProps): IChoiceGroupStyles => {
+  const { theme } = props;
   return {
     label: {
       color: textColors.secondary,
@@ -20,8 +19,7 @@ export const getStyles = (): IChoiceGroupStyles => {
 };
 
 export const getOptionStyles = (props: IChoiceGroupOptionStyleProps): IChoiceGroupOptionStyles => {
-  const { focused, checked } = props;
-  const theme = getTheme();
+  const { focused, checked, theme } = props;
   return {
     root: {
       marginBottom: '1.2rem',

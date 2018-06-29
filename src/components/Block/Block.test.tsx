@@ -1,7 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import Block, { BlockProps, GutterSize, TextColor, TextSize } from '.';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableBlock, { Block } from './Block';
+import { BlockProps, GutterSize, TextColor, TextSize } from '.';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<Block />', () => {
   let component: ShallowWrapper<BlockProps>;
@@ -133,6 +135,23 @@ describe('<Block />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableBlock />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableBlock').prop('theme')).toBe(theme);
     });
   });
 });

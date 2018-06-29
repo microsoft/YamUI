@@ -12,12 +12,18 @@ const grayTheme = createTheme({
     neutralDark: '#666',
     themeLighter: '#999',
   },
+  fonts: {
+    smallPlus: {
+      fontSize: '1.8rem',
+      lineHeight: '2.4rem',
+    },
+  }
 });
 
 <div>
   <Button text="Normal" />{' '}
   <Customizer settings={{ theme: grayTheme }}>
-    <Button text="Gray Theme" />
+    <Button text="Big Gray Theme" />
   </Customizer>
 </div>;
 ```

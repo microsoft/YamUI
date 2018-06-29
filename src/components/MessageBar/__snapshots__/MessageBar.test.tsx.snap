@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MessageBar /> with a type matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   className=
       y-message-bar
       {
@@ -24,11 +24,11 @@ exports[`<MessageBar /> with a type matches its snapshot 1`] = `
       content
     </FixedGridColumn>
   </FixedGridRow>
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<MessageBar /> with actions matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   className=
       y-message-bar
       {
@@ -63,11 +63,11 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
       </FakeLink>
     </FixedGridColumn>
   </FixedGridRow>
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   className=
       y-message-bar
       TEST_CLASSNAME
@@ -91,11 +91,11 @@ exports[`<MessageBar /> with additional className matches its snapshot 1`] = `
       content
     </FixedGridColumn>
   </FixedGridRow>
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<MessageBar /> with default options matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   className=
       y-message-bar
       {
@@ -118,5 +118,5 @@ exports[`<MessageBar /> with default options matches its snapshot 1`] = `
       content
     </FixedGridColumn>
   </FixedGridRow>
-</Block>
+</CustomizedBlock>
 `;

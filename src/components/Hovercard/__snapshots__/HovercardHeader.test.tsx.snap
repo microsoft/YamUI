@@ -9,11 +9,11 @@ exports[`<HovercardHeader /> with additional className matches its snapshot 1`] 
         border-bottom: 2px solid #f3f5f8;
       }
 >
-  <Block
+  <CustomizedBlock
     padding="xLarge"
   >
     header content
-  </Block>
+  </CustomizedBlock>
 </div>
 `;
 
@@ -25,10 +25,10 @@ exports[`<HovercardHeader /> with default options matches its snapshot 1`] = `
         border-bottom: 2px solid #f3f5f8;
       }
 >
-  <Block
+  <CustomizedBlock
     padding="xLarge"
   >
     header content
-  </Block>
+  </CustomizedBlock>
 </div>
 `;
