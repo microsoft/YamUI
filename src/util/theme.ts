@@ -1,6 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { createTheme } from 'office-ui-fabric-react/lib/Styling';
+import { createTheme, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { palette, semanticColors } from './colors';
+
+export { ITheme };
 
 export const theme = createTheme({
   palette,
