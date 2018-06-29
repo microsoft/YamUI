@@ -8,8 +8,8 @@ export interface <%= name %>ClassNameProps {
   theme: ITheme;
 }
 
-export const getClassNames = memoizeFunction((props: <%= name %>ClassNameProps) => {
-  const { type, theme } = props;
+export const getClassNames = memoizeFunction((classNameProps: <%= name %>ClassNameProps) => {
+  const { type, theme } = classNameProps;
 
   return mergeStyleSets({
     root: {
