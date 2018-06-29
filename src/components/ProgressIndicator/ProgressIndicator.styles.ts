@@ -1,16 +1,18 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { palette } from '../../util/colors';
+import { ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { IProgressIndicatorStyles } from 'office-ui-fabric-react/lib/ProgressIndicator';
 
 export interface ProgressIndicatorStyleProps {
   percentComplete: number;
+  theme: ITheme;
 }
 
-export const getProgressIndicatorStyles = memoizeFunction((props: ProgressIndicatorStyleProps): (() => Partial<
+export const getProgressIndicatorStyles = memoizeFunction((styleProps: ProgressIndicatorStyleProps): (() => Partial<
   IProgressIndicatorStyles
 >) => {
-  const progressBarBorderRightRadius = props.percentComplete === 1 ? undefined : '0';
+  const { percentComplete, theme } = styleProps;
+  const progressBarBorderRightRadius = percentComplete === 1 ? undefined : '0';
 
   return () => ({
     itemName: { display: 'none' },
@@ -19,11 +21,11 @@ export const getProgressIndicatorStyles = memoizeFunction((props: ProgressIndica
     },
     progressTrack: {
       borderRadius: '1px',
-      backgroundColor: palette.neutralDark,
+      backgroundColor: theme.palette.neutralDark,
     },
     progressBar: {
       borderRightRadius: progressBarBorderRightRadius,
-      backgroundColor: palette.themeDark,
+      backgroundColor: theme.palette.themeDark,
     },
   });
 });
