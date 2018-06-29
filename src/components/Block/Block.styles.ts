@@ -26,7 +26,7 @@ const iconSizeForTextSize = {
   [TextSize.XSMALL]: '1.0rem',
 };
 
-export interface BlockStyleProps {
+export interface BlockClassNameProps {
   theme: ITheme;
   topSpacing?: GutterSize;
   bottomSpacing?: GutterSize;
@@ -40,7 +40,7 @@ export interface BlockStyleProps {
   ellipsis?: boolean;
 }
 
-export const getClassNames = memoizeFunction((props: BlockStyleProps) => {
+export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
   const {
     push,
     textSize,
