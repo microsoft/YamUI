@@ -21,7 +21,7 @@ When loading:
 With Avatar template results:
 
 ```js { "props": { "data-description": "with results", "data-action-states":"[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"}]" } }
-const { SuggestionsListItemTemplate } = require('./types');
+const { SuggestionsListItemTemplate } = require('.');
 
 <SuggestionsList
   searchText="Cris"
@@ -68,7 +68,7 @@ const { SuggestionsListItemTemplate } = require('./types');
 With MediaSoft template results:
 
 ```js { "props": { "data-description": "with media soft results", "data-action-states":"[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"}]" } }
-const { SuggestionsListItemTemplate } = require('./types');
+const { SuggestionsListItemTemplate } = require('.');
 
 <SuggestionsList
   searchText="Model"
@@ -117,7 +117,7 @@ const { SuggestionsListItemTemplate } = require('./types');
 With MediaSquare template results:
 
 ```js { "props": { "data-description": "with media square results", "data-action-states":"[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"}]" } }
-const { SuggestionsListItemTemplate } = require('./types');
+const { SuggestionsListItemTemplate } = require('.');
 
 <SuggestionsList
   searchText="Yam"
@@ -167,7 +167,7 @@ const { SuggestionsListItemTemplate } = require('./types');
 With Text template results:
 
 ```js { "props": { "data-description": "with text results", "data-action-states":"[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-suggestionsListItem\"}]" } }
-const { SuggestionsListItemTemplate } = require('./types');
+const { SuggestionsListItemTemplate } = require('.');
 
 <SuggestionsList
   searchText="no"
@@ -207,7 +207,7 @@ const { SuggestionsListItemTemplate } = require('./types');
 With avatar template results and loading more:
 
 ```js { "props": { "data-description": "with results, when loading" } }
-const { SuggestionsListItemTemplate } = require('./types');
+const { SuggestionsListItemTemplate } = require('.');
 
 <SuggestionsList
   isLoading={true}
