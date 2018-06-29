@@ -1,30 +1,19 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { <%= name %>Type } from './types';
+import { <%= name %>Props, <%= name %>Type } from './<%= name %>.types';
 import { getClassNames } from './<%= name %>.styles';
-
-export { <%= name %>Type };
-
-export interface <%= name %>Props extends BaseComponentProps {
-  /**
-   * Describe what this property does. This will also appear as part of this component's
-   * documentation.
-   * @default <%= name %>Type.BLACK
-   */
-  type?: <%= name %>Type;
-}
 
 /**
  * Describe what `<%= name %>` does. This will also appear as part of this component's
  * documentation.
  */
-export default class <%= name %> extends React.Component<<%= name %>Props> {
+export class <%= name %> extends React.Component<<%= name %>Props & CustomizableComponentProps> {
   public render() {
-    const { className, type = <%= name %>Type.BLACK } = this.props;
-    const classNames = getClassNames({ type });
+    const { className, type = <%= name %>Type.BLACK, theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ type, theme });
 
     return (
       <div className={join(['<%= className %>', classNames.root, className])}>
@@ -33,3 +22,6 @@ export default class <%= name %> extends React.Component<<%= name %>Props> {
     );
   }
 }
+
+@customizable('<%= name %>', ['theme'])
+export default class Customizable<%= name %> extends <%= name %> {}

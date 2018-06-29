@@ -1,19 +1,20 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets } from '@uifabric/styling';
+import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
-import { <%= name %>Type } from './types';
+import { <%= name %>Type } from './<%= name %>.types';
 
-export interface <%= name %>StyleProps {
+export interface <%= name %>ClassNameProps {
   type?: <%= name %>Type;
+  theme: ITheme;
 }
 
-export const getClassNames = memoizeFunction((styleProps: <%= name %>StyleProps) => {
-  const { type } = styleProps;
+export const getClassNames = memoizeFunction((props: <%= name %>ClassNameProps) => {
+  const { type, theme } = props;
 
   return mergeStyleSets({
     root: {
-      color: type === <%= name %>Type.BLACK ? '#000' : '#fff',
-      backgroundColor: type === <%= name %>Type.BLACK ? '#fff' : '#000',
+      color: type === <%= name %>Type.BLACK ? theme.palette.black : theme.palette.white,
+      backgroundColor: type === <%= name %>Type.BLACK ? theme.palette.white : theme.palette.black,
     },
   });
 });
