@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import AccDB16 from '../Illustration/illustrations/AccDB16';
 import SidebarList, { SidebarListProps } from './index';
-import { SidebarListItem } from './types';
+import { SidebarListItem } from './SidebarList.types';
 
 describe('<SidebarList />', () => {
   let component: ShallowWrapper<SidebarListProps>;
