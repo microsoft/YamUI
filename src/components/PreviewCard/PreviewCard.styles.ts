@@ -2,11 +2,12 @@
 import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
-export interface PreviewCardStyleProps {
+export interface PreviewCardClassNameProps {
   allowOnClick: boolean;
+  theme: ITheme;
 }
 
-export const getClassNames = memoizeFunction(styleProps => {
+export const getClassNames = memoizeFunction((styleProps: PreviewCardClassNameProps) => {
   const { allowOnClick, theme } = styleProps;
 
   return mergeStyleSets({
