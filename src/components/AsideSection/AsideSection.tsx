@@ -1,33 +1,20 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps, CustomizableComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
+import { AsideSectionProps } from './AsideSection.types';
 import Text, { TextSize } from '../Text';
 import { getClassNames } from './AsideSection.styles';
-import { customizable } from '@uifabric/utilities';
-
-export interface AsideSectionProps extends NestableBaseComponentProps {
-  /**
-   * The visual title of the aside section
-   */
-  title: string;
-
-  /**
-   * An actionable react component to the right of the title
-   */
-  action?: React.ReactNode;
-}
 
 /**
  * A section component to be used primarily for sidebar modules
  */
-@customizable('AsideSection', ['theme'])
-export default class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
+export class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
   public render() {
-    const { theme } = this.props;
+    const { title, children, theme = defaultTheme } = this.props;
     const classes = getClassNames({ theme });
 
     return (
@@ -38,7 +25,7 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
               <Heading level="2" size="none">
                 <Block bottomSpacing={GutterSize.XSMALL}>
                   <Text uppercase={true} bold={true}>
-                    {this.props.title}
+                    {title}
                   </Text>
                 </Block>
               </Heading>
@@ -46,7 +33,7 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
             {this.getActionColumn()}
           </FixedGridRow>
         </Block>
-        <div>{this.props.children}</div>
+        <div>{children}</div>
       </div>
     );
   }
@@ -59,3 +46,6 @@ export default class AsideSection extends React.Component<AsideSectionProps & Cu
     return null;
   }
 }
+
+@customizable('AsideSection', ['theme'])
+export default class CustomizableAsideSection extends AsideSection {}

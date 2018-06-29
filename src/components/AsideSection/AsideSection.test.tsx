@@ -1,16 +1,17 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper } from 'enzyme';
-import AsideSection, { AsideSectionProps } from '.';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableAsideSection, { AsideSection } from './AsideSection';
+import { AsideSectionProps } from './AsideSection.types';
 import Clickable from '../Clickable';
-import Customizer from '../Customizer';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<AsideSection />', () => {
   let component: ShallowWrapper<AsideSectionProps>;
 
   describe('With minimal options', () => {
     beforeEach(() => {
-      component = shallow(<AsideSection title="Test title" />).dive();
+      component = shallow(<AsideSection title="Test title" />);
     });
 
     it('matches snapshot', () => {
@@ -21,7 +22,7 @@ describe('<AsideSection />', () => {
   describe('with action prop', () => {
     beforeEach(() => {
       const action = <Clickable>Add</Clickable>;
-      component = shallow(<AsideSection title="Test title" action={action} />).dive();
+      component = shallow(<AsideSection title="Test title" action={action} />);
     });
 
     it('renders the action in its own FixedGridColumn', () => {
@@ -35,7 +36,7 @@ describe('<AsideSection />', () => {
         <AsideSection title="Test title">
           <div>Child Content</div>
         </AsideSection>,
-      ).dive();
+      );
     });
 
     it('matches the snapshot', () => {
@@ -44,14 +45,19 @@ describe('<AsideSection />', () => {
   });
 
   describe('with customizer', () => {
-    it('receives custom theme', () => {
-      const theme = { palette: {}, semanticColors: {} };
-      const mountedComponent = mount(
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
         <Customizer settings={{ theme }}>
-          <AsideSection title="TITLE" />
+          <CustomizableAsideSection title="TITLE" />
         </Customizer>,
       );
-      expect(mountedComponent.find('AsideSection').prop('theme')).toBe(theme);
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableAsideSection').prop('theme')).toBe(theme);
     });
   });
 });

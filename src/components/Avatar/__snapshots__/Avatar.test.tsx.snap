@@ -90,7 +90,7 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
           border-radius: 50%;
           border: solid 2px #ffffff;
           bottom: -2px;
-          color: #386cbb;
+          color: #005a9e;
           height: 16px;
           position: absolute;
           right: -2px;

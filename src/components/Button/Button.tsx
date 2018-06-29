@@ -1,144 +1,28 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { Button as FabricButton } from 'office-ui-fabric-react/lib/components/Button/Button';
 import { BaseButton } from 'office-ui-fabric-react/lib/components/Button/BaseButton';
-import { CustomizableComponentProps } from '../../util/BaseComponent/props';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import Block, { TextSize } from '../Block';
 import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
-import { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './types';
 import { getBaseButtonStyles, getClassNames } from './Button.styles';
-import BaseIcon from '../Icon/BaseIcon';
-import { customizable } from '@uifabric/utilities';
-
-export { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType };
+import {
+  ButtonProps,
+  ButtonColor,
+  ButtonStatus,
+  ButtonIconPosition,
+  ButtonSize,
+  ButtonType,
+  LinkButtonProps,
+  LoadingButtonProps,
+} from './Button.types';
 
 const hrefBlacklist = ['', '#', 'javascript://'];
-export type FabricButtonType = HTMLAnchorElement | HTMLDivElement | HTMLButtonElement | BaseButton | FabricButton;
-export interface BaseButtonProps extends CustomizableComponentProps {
-  /**
-   * Visible button text.
-   */
-  text: string;
-
-  /**
-   * Alternative state visible button text. Used to determine maximum possible width of button
-   */
-  secondaryText?: string;
-
-  /**
-   * Additional label that must be provided if the button text is not descriptive enough.
-   */
-  ariaLabel?: string;
-
-  /**
-   * Stretch the button to fill the available horizontal space.
-   */
-  fullWidth?: boolean;
-
-  /**
-   * Color describing the button's intent.
-   * @default ButtonColor.SECONDARY
-   */
-  color?: ButtonColor;
-
-  /**
-   * Optional icon.
-   */
-  icon?: typeof BaseIcon;
-
-  /**
-   * Icon position.
-   * @default ButtonIconPosition.LEFT
-   */
-  iconPosition?: ButtonIconPosition;
-
-  /**
-   * Button size.
-   * @default ButtonSize.REGULAR
-   */
-  size?: ButtonSize;
-
-  /**
-   * Button type.
-   * @default ButtonType.BUTTON
-   */
-  type?: ButtonType;
-
-  /**
-   * Click callback handler.
-   */
-  onClick?: React.MouseEventHandler<FabricButtonType>;
-
-  /**
-   * Focus callback handler.
-   */
-  onFocus?: React.FocusEventHandler<FabricButtonType>;
-
-  /**
-   * Blur callback handler.
-   */
-  onBlur?: React.FocusEventHandler<FabricButtonType>;
-
-  /**
-   * Mouse enter callback handler.
-   */
-  onMouseEnter?: React.MouseEventHandler<FabricButtonType>;
-
-  /**
-   * Mouse leave callback handler.
-   */
-  onMouseLeave?: React.MouseEventHandler<FabricButtonType>;
-}
-
-export interface RegularButtonProps extends BaseButtonProps {
-  /**
-   * Buttons cannot have a link.
-   */
-  href?: void;
-
-  /**
-   * Status of this button.
-   * @default ButtonStatus.ENABLED
-   */
-  status?: ButtonStatus;
-
-  /**
-   * Screenreader text for loading state.
-   */
-  loadingText?: string;
-}
-
-export interface LoadingButtonProps extends RegularButtonProps {
-  status: ButtonStatus.LOADING;
-  loadingText: string;
-}
-
-export interface LinkButtonProps extends BaseButtonProps {
-  /**
-   * URL or a URL fragment that the link points to. If provided, the component will be rendered as a
-   * link styled as a button.
-   */
-  href: string;
-
-  /**
-   * Links cannot be disabled nor loading.
-   */
-  status?: void;
-
-  /**
-   * Links cannot have a type.
-   */
-  type?: undefined;
-}
-
-export type ButtonProps = RegularButtonProps | LoadingButtonProps | LinkButtonProps;
 
 /**
  * A `Button` allows a user to take an action.
  */
-@customizable('Button', ['theme'])
-export default class Button extends React.Component<ButtonProps> {
+export class Button extends React.Component<ButtonProps & CustomizableComponentProps> {
   public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
     href(props: LinkButtonProps, propName: string, componentName: string) {
@@ -173,7 +57,7 @@ export default class Button extends React.Component<ButtonProps> {
       fullWidth = false,
       iconPosition = ButtonIconPosition.LEFT,
       status = ButtonStatus.ENABLED,
-      theme,
+      theme = defaultTheme,
     } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
@@ -231,3 +115,6 @@ export default class Button extends React.Component<ButtonProps> {
     );
   }
 }
+
+@customizable('Button', ['theme'])
+export default class CustomizableButton extends Button {}

@@ -14,7 +14,7 @@ exports[`<SuggestionsListItemContentContent /> with avatar item matches its snap
 >
   <MediaObject
     imageContent={
-      <Avatar
+      <CustomizedAvatar
         badgeContent="badge"
         imageUrl="user.png"
         name="John Smith"
@@ -136,7 +136,7 @@ exports[`<SuggestionsListItemContentContent /> with search text matches its snap
 >
   <MediaObject
     imageContent={
-      <Avatar
+      <CustomizedAvatar
         badgeContent="badge"
         imageUrl="user.png"
         name="John Smith"

@@ -2,12 +2,11 @@
 import '../../yamui';
 import * as React from 'react';
 import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import ScreenreaderText from '../ScreenreaderText';
-import { AvatarSize } from './types';
+import { AvatarSize, AvatarProps } from './Avatar.types';
 import { BorderType } from '../Image/types';
 import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
-export { BorderType, AvatarSize };
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 
 const SizeMap = {
   [AvatarSize.XLARGE]: PersonaSize.size72,
@@ -17,61 +16,22 @@ const SizeMap = {
   [AvatarSize.XSMALL]: PersonaSize.size24,
 };
 
-export interface AvatarProps extends BaseComponentProps {
-  /**
-   * Name of the person or object being represented. Will be used as accessible alt text.
-   */
-  name: string;
-
-  /**
-   * Element to be used as badge. You can set its height and width to fill the available area.
-   */
-  badgeContent?: React.ReactNode;
-
-  /**
-   * Short accessible description of the badge. Will be appended to name if provided.
-   */
-  badgeDescription?: string;
-
-  /**
-   * Type of border around the avatar.
-   * @default BorderType.ROUND
-   */
-  borderType?: BorderType;
-
-  /**
-   * Image source URL.
-   */
-  imageUrl?: string;
-
-  /**
-   * XLARGE: 72px, LARGE: 48px, MEDIUM: 40px, SMALL: 32px, XSMALL: 24px.
-   * @default AvatarSize.MEDIUM
-   */
-  size?: AvatarSize;
-
-  /**
-   * Will hide the image until it has loaded, then fade it in.
-   * @default false
-   */
-  imageShouldFadeIn?: boolean;
-}
-
 /**
  * An `Avatar` shows a thumbnail representation of both an individual or group.
  */
-export default class Avatar extends React.Component<AvatarProps> {
+export class Avatar extends React.Component<AvatarProps & CustomizableComponentProps> {
   public render() {
     const {
       badgeContent,
       imageUrl,
       name,
       badgeDescription,
+      theme = defaultTheme,
       size = AvatarSize.MEDIUM,
       imageShouldFadeIn = false,
       borderType = BorderType.ROUND,
     } = this.props;
-    const classNames = getClassNames(size);
+    const classNames = getClassNames({ size, theme });
     const badge = badgeContent && <div className={classNames.badge}>{badgeContent}</div>;
 
     return (
@@ -90,3 +50,6 @@ export default class Avatar extends React.Component<AvatarProps> {
     );
   }
 }
+
+@customizable('Avatar', ['theme'])
+export default class CustomizableAvatar extends Avatar {}

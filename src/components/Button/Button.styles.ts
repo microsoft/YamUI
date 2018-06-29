@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './types';
+import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
 import { fontWeights } from '../../util/styles/fonts';
 import { borders } from '../../util/styles/borders';
 import { mergeStyleSets, ITheme } from '@uifabric/styling';
@@ -55,14 +55,14 @@ const secondaryColors = (theme: ITheme): IButtonStyles => ({
 });
 
 export interface BaseButtonStyleProps {
-  theme?: ITheme;
+  theme: ITheme;
   size: ButtonSize;
   color: ButtonColor;
   status: ButtonStatus;
   fullWidth: boolean;
 }
 
-const getMemoizedBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
+export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
   const { size, color, status, fullWidth, theme } = styleProps;
 
   const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
@@ -98,16 +98,12 @@ const getMemoizedBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles 
   };
 });
 
-export const getBaseButtonStyles = (styleProps: BaseButtonStyleProps) => {
-  return getMemoizedBaseButtonStyles(styleProps);
-};
-
-export interface ButtonStyleProps {
+export interface ButtonClassNameProps {
   status: ButtonStatus;
   iconPosition: ButtonIconPosition;
 }
 
-export const getClassNames = memoizeFunction((styleProps: ButtonStyleProps) => {
+export const getClassNames = memoizeFunction((styleProps: ButtonClassNameProps) => {
   const { status, iconPosition } = styleProps;
 
   return mergeStyleSets({

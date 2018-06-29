@@ -3,17 +3,13 @@ import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 
 export interface AsideSectionStyleProps {
-  theme?: ITheme;
+  theme: ITheme;
 }
 
-const getMemoizedClassNames = memoizeFunction(theme => {
+export const getClassNames = memoizeFunction((props: AsideSectionStyleProps) => {
   return mergeStyleSets({
     header: {
-      borderBottom: `1px solid ${theme.semanticColors.bodyDivider}`,
+      borderBottom: `1px solid ${props.theme.semanticColors.bodyDivider}`,
     },
   });
 });
-
-export const getClassNames = (styleProps: AsideSectionStyleProps) => {
-  return getMemoizedClassNames(styleProps.theme);
-};
