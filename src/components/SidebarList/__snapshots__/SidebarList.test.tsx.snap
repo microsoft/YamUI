@@ -19,7 +19,7 @@ exports[`<SidebarList /> with items matches its snapshot 1`] = `
   className="y-sidebarList"
   direction="vertical"
 >
-  <SidebarListItemView
+  <CustomizedSidebarListItemView
     item={
       Object {
         "href": "https://www.yammer.dev",
