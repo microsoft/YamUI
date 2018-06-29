@@ -3,7 +3,7 @@ import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
 import { fontWeights } from '../../util/styles/fonts';
 import { getGutterValue } from '../../util/styles/gutters';
-import { SuggestionsListItemTemplate } from './types';
+import { SuggestionsListItemTemplate } from './SuggestionsList.types';
 
 export const getClassNames = memoizeFunction((template: SuggestionsListItemTemplate) => {
   return mergeStyleSets({

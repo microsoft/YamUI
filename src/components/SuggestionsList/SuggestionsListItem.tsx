@@ -5,7 +5,7 @@ import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { getClassNames } from './SuggestionsListItem.styles';
 import SuggestionsListItemContent from './SuggestionsListItemContent';
-import { SuggestionItem } from './types';
+import { SuggestionItem } from './SuggestionsList.types';
 
 export interface SuggestionsListItemProps extends BaseComponentProps {
   item: SuggestionItem;

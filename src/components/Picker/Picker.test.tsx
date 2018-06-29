@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/types';
+import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/SuggestionsList.types';
 import Picker, { PickerProps } from './index';
 import { IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
 

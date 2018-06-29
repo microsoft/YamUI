@@ -8,7 +8,12 @@ import Block, { TextSize, TextColor } from '../Block';
 import Image, { BorderType, ImageFit } from '../Image';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import { getClassNames } from './SuggestionsListItemContent.styles';
-import { AvatarSuggestionItem, MediaSuggestionItem, SuggestionItem, SuggestionsListItemTemplate } from './types';
+import {
+  AvatarSuggestionItem,
+  MediaSuggestionItem,
+  SuggestionItem,
+  SuggestionsListItemTemplate,
+} from './SuggestionsList.types';
 
 export { SuggestionItem, SuggestionsListItemTemplate };
 

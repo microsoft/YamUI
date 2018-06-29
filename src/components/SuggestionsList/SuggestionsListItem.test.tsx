@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
-import { SuggestionItem, SuggestionsListItemTemplate } from './types';
+import { SuggestionItem, SuggestionsListItemTemplate } from './SuggestionsList.types';
 
 describe('<SuggestionsListItem />', () => {
   let component: ShallowWrapper<SuggestionsListItemProps>;
