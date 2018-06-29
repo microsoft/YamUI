@@ -100,9 +100,9 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
           top: 0px;
         }
   >
-    <Text>
+    <CustomizedText>
       badge
-    </Text>
+    </CustomizedText>
   </div>
   <ScreenreaderText>
     NAME
