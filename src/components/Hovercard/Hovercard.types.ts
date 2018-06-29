@@ -58,4 +58,8 @@ export interface HovercardState {
   visible: boolean;
 }
 
-export { DirectionalHint, NestableBaseComponentProps as HovercardHeaderProps };
+export {
+  DirectionalHint,
+  NestableBaseComponentProps as HovercardHeaderProps,
+  NestableBaseComponentProps as HovercardBodyProps,
+};
