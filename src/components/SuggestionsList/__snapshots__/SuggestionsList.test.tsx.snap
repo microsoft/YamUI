@@ -126,7 +126,7 @@ exports[`<SuggestionsList /> when isLoading=true with results matches its snapsh
           padding-top: 13px;
         }
   >
-    <Spinner
+    <CustomizedSpinner
       isCentered={true}
       text="loadingText"
     />
@@ -155,7 +155,7 @@ exports[`<SuggestionsList /> when isLoading=true without results matches its sna
           padding-top: 14px;
         }
   >
-    <Spinner
+    <CustomizedSpinner
       isCentered={true}
       text="loadingText"
     />

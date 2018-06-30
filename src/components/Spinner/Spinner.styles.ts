@@ -1,9 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { addAlpha, getTheme } from '../../util/colors';
+import { addAlpha } from '../../util/colors';
 import { mergeStyleSets } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
-import { SpinnerColor, SpinnerSize } from './types';
+import { SpinnerColor, SpinnerSize } from './Spinner.types';
 import { getGutterValue } from '../../util/styles/gutters';
+import { ITheme } from '../Customizer';
 
 export interface SpinnerClassNames {
   root: string;
@@ -16,8 +17,13 @@ const labelMargins = {
   [SpinnerSize.MEDIUM]: `-2px 0 0 ${getGutterValue(2, true)}`,
   [SpinnerSize.LARGE]: `${getGutterValue(1, true)} 0 0`,
 };
+export interface SpinnerClassNameProps {
+  size: SpinnerSize;
+  isCentered: boolean;
+}
 
-export const getClassNames = memoizeFunction((size: SpinnerSize, isCentered: boolean): SpinnerClassNames => {
+export const getClassNames = memoizeFunction((classNameProps: SpinnerClassNameProps): SpinnerClassNames => {
+  const { size, isCentered } = classNameProps;
   return mergeStyleSets({
     root: {
       display: 'flex',
@@ -31,8 +37,13 @@ export const getClassNames = memoizeFunction((size: SpinnerSize, isCentered: boo
   });
 });
 
-export const getFabricSpinnerStyles = memoizeFunction((color: SpinnerColor) => {
-  const theme = getTheme();
+export interface FabricSpinnerStyleProps {
+  color: SpinnerColor;
+  theme: ITheme;
+}
+
+export const getFabricSpinnerStyles = memoizeFunction((styleProps: FabricSpinnerStyleProps) => {
+  const { theme, color } = styleProps;
   const circleColor = color === SpinnerColor.DARK ? theme.palette.white : theme.palette.themeDark;
 
   return {

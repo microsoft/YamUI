@@ -1,5 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BaseIllustration } from '../Illustration';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 
 export type SidebarListSize = 'small' | 'medium' | 'large';
 
@@ -51,3 +52,27 @@ export type SidebarListLinkItem = SidebarListItemWithGraphic & {
   newWindow?: boolean;
 };
 export type SidebarListItem = SidebarListClickableItem | SidebarListLinkItem;
+
+export interface SidebarListProps extends BaseComponentProps {
+  /**
+   * A list of item objects which will be rendered as list items.
+   */
+  items: SidebarListItem[];
+
+  /**
+   * "small" will display the title next to a 24px image and compact vertical padding.
+   * "medium" will display the title next to a 24px image and slightly more vertical padding.
+   * "large" will display the title and description next to a 32px image.
+   */
+  size: SidebarListSize;
+
+  /**
+   * Called when an item is clicked/invoked.
+   */
+  onClick?(key: SidebarListItem['key']): void;
+}
+
+export interface SidebarListItemProps {
+  item: SidebarListItem;
+  size: SidebarListProps['size'];
+}
