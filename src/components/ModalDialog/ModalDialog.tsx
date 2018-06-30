@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { Modal as OfficeFabricModal, IModalProps } from 'office-ui-fabric-react/lib/Modal';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
+import { Modal as OfficeFabricModal } from 'office-ui-fabric-react/lib/Modal';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
 import Heading from '../Heading';
 import Clickable from '../Clickable';
@@ -11,53 +11,16 @@ import { IconSize } from '../Icon';
 import ScreenreaderText from '../ScreenreaderText';
 import { join } from '../../util/classNames';
 import { getClassNames } from './ModalDialog.styles';
-import { ModalDialogSize } from './types';
-
-export interface ModalDialogProps extends BaseComponentProps {
-  /**
-   * The title text to display at the top of the dialog.
-   */
-  title: string;
-
-  /**
-   * Replace the title with a hidden ScreenreaderText title.
-   * @default false
-   */
-  hideTitle?: boolean;
-
-  /**
-   * Determines whether the dialog is displayed or not.
-   */
-  isOpen: boolean;
-
-  /**
-   * A callback function for when the Dialog is dismissed from the close button or light dismiss.
-   */
-  onDismiss: IModalProps['onDismiss'];
-
-  /**
-   * The close button's aria label.
-   */
-  closeAriaLabel: string;
-
-  /**
-   * The size of the ModalDialog
-   */
-  size: ModalDialogSize;
-}
+import { ModalDialogProps } from './ModalDialog.types';
 
 /**
  * A `ModalDialog` is a temporary, modal UI overlay that generally provides contextual app
  * information or requires user confirmation/input.
  */
-export default class ModalDialog extends React.Component<ModalDialogProps> {
-  constructor(props: ModalDialogProps) {
-    super(props);
-  }
-
+export class ModalDialog extends React.Component<ModalDialogProps & CustomizableComponentProps> {
   public render() {
-    const { children, className, isOpen, onDismiss, size } = this.props;
-    const classNames = getClassNames(size);
+    const { children, className, isOpen, onDismiss, size, theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ size, theme });
 
     return (
       <OfficeFabricModal
@@ -103,3 +66,6 @@ export default class ModalDialog extends React.Component<ModalDialogProps> {
     );
   };
 }
+
+@customizable('ModalDialog', ['theme'])
+export default class CustomizableModalDialog extends ModalDialog {}
