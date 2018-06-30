@@ -245,7 +245,7 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
       </CustomizedBlock>
     }
   />
-  <ProgressIndicator
+  <CustomizedProgressIndicator
     ariaValueText="Uploading, currently at 50%"
     className=
 
