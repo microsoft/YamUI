@@ -77,3 +77,10 @@ export interface SuggestionsListProps extends BaseComponentProps {
    */
   onItemSelected(id: string | number): void;
 }
+
+export interface SuggestionsListItemProps extends BaseComponentProps {
+  item: SuggestionItem;
+  searchText: string;
+  isSelected: boolean;
+  onSelect(id: SuggestionItem['id']): void;
+}
