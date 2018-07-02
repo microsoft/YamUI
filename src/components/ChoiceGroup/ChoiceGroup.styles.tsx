@@ -10,7 +10,7 @@ export const getStyles = (props: IChoiceGroupStyleProps): IChoiceGroupStyles => 
   const { theme } = props;
   return {
     label: {
-      color: theme.semanticColors.bodyText,
+      color: theme.palette.neutralPrimaryAlt,
       fontSize: theme.fonts.smallPlus.fontSize,
       fontWeight: fontWeights.bold,
       paddingBottom: '0.4rem',
