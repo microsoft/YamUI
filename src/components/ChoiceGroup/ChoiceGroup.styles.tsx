@@ -4,13 +4,13 @@ import {
   IChoiceGroupOptionStyles,
   IChoiceGroupOptionStyleProps,
 } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption/';
-import { textColors, fontWeights } from '../../util/styles/fonts';
+import { fontWeights } from '../../util/styles/fonts';
 
 export const getStyles = (props: IChoiceGroupStyleProps): IChoiceGroupStyles => {
   const { theme } = props;
   return {
     label: {
-      color: textColors.secondary,
+      color: theme.semanticColors.bodyText,
       fontSize: theme.fonts.smallPlus.fontSize,
       fontWeight: fontWeights.bold,
       paddingBottom: '0.4rem',

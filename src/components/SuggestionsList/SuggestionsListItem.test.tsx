@@ -1,8 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
-import { SuggestionItem, SuggestionsListItemTemplate } from './types';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableSuggestionsListItem, { SuggestionsListItem } from './SuggestionsListItem';
+import { SuggestionItem, SuggestionsListItemTemplate, SuggestionsListItemProps } from './SuggestionsList.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<SuggestionsListItem />', () => {
   let component: ShallowWrapper<SuggestionsListItemProps>;
@@ -55,6 +56,23 @@ describe('<SuggestionsListItem />', () => {
 
     it('calls event preventDefault', () => {
       expect(preventDefault).toBeCalled();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableSuggestionsListItem {...getProps({ isSelected: true })} />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableSuggestionsListItem').prop('theme')).toBe(theme);
     });
   });
 });

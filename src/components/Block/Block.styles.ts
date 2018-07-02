@@ -59,7 +59,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
   return mergeStyleSets({
     root: {
       textAlign,
-      color: textColor ? textColors[textColor] : undefined,
+      color: textColor ? textColors(theme)[textColor] : undefined,
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
       marginTop: getMarginTop(topSpacing, push),

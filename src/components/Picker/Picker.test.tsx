@@ -3,7 +3,7 @@ import * as React from 'react';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import CustomizablePicker, { Picker } from './Picker';
 import { PickerProps } from './Picker.types';
-import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/types';
+import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/';
 import { IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
 import Customizer, { defaultTheme } from '../Customizer';
 
