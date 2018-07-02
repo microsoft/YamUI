@@ -27,7 +27,7 @@ exports[`<SuggestionsList /> when isLoading=false with results matches its snaps
         <LayoutListItem
           key="id"
         >
-          <SuggestionsListItem
+          <CustomizedSuggestionsListItem
             isSelected={false}
             item={
               Object {
@@ -101,7 +101,7 @@ exports[`<SuggestionsList /> when isLoading=true with results matches its snapsh
         <LayoutListItem
           key="id"
         >
-          <SuggestionsListItem
+          <CustomizedSuggestionsListItem
             isSelected={false}
             item={
               Object {
