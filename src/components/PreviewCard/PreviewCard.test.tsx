@@ -35,12 +35,12 @@ describe('<PreviewCard />', () => {
 
   describe('when description is edible', () => {
     describe('with onDescriptionChange callback', () => {
-      let jsxComponent: JSX.Element;
+      let previewComponent: React.ReactElement<PreviewCardProps>;
       let testComponent: React.Component;
 
       beforeEach(() => {
         onChange = jest.fn();
-        jsxComponent = (
+        previewComponent = (
           <PreviewCard
             name="Filename.gif"
             description="file description"
@@ -53,12 +53,12 @@ describe('<PreviewCard />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(shallow(jsxComponent)).toMatchSnapshot();
+        expect(shallow(previewComponent)).toMatchSnapshot();
       });
 
       describe('when entering edit mode', () => {
         beforeEach(() => {
-          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedPreviewCard = renderIntoDocument(previewComponent) as PreviewCard;
           const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
           (renderedEditableText.props.onBeginEditing as Function)();
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
@@ -75,7 +75,7 @@ describe('<PreviewCard />', () => {
 
       describe('when exiting edit mode', () => {
         beforeEach(() => {
-          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedPreviewCard = renderIntoDocument(previewComponent) as PreviewCard;
           const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
           (renderedEditableText.props.onEndEditing as Function)();
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<

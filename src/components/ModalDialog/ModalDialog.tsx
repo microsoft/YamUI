@@ -37,8 +37,9 @@ export class ModalDialog extends React.Component<ModalDialogProps & Customizable
     );
   }
 
-  private getHeader = (): JSX.Element => {
+  private getHeader = (): React.ReactNode => {
     const { hideTitle, title, onDismiss, closeAriaLabel } = this.props;
+
     if (hideTitle) {
       return (
         <ScreenreaderText>
@@ -48,6 +49,7 @@ export class ModalDialog extends React.Component<ModalDialogProps & Customizable
         </ScreenreaderText>
       );
     }
+
     return (
       <FixedGridRow bottomSpacing={GutterSize.XSMALL}>
         <FixedGridColumn>
