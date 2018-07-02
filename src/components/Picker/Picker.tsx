@@ -1,82 +1,23 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BasePicker, IBasePickerProps, IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
 import Block, { TextSize } from '../Block';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
 import SuggestionItemContent, { SuggestionItem } from '../SuggestionsList/SuggestionsListItemContent';
 import RemoveIcon from '../Icon/icons/Cancel';
 import { getClassNames } from './Picker.styles';
+import { PickerProps } from './Picker.types';
 import './Picker.css'; // Required for the Callout content as there aren't JS styles to override
 
 class SuggestionListBasePicker extends BasePicker<SuggestionItem, IBasePickerProps<SuggestionItem>> {}
 
-export interface BasePickerProps<T> extends BaseComponentProps {
-  /**
-   * This is where you provide the items to be rendered in the autocomplete dropdown.
-   * The current filter text and list of already-selected items will be provided.
-   */
-  onResolveSuggestions: IBasePickerProps<T>['onResolveSuggestions'];
-
-  /**
-   * Called when the list of selected items changes.
-   */
-  onChange: IBasePickerProps<T>['onChange'];
-
-  /**
-   * The list of currently-selected items.
-   */
-  selectedItems: IBasePickerProps<T>['selectedItems'];
-
-  /**
-   * Aria label for the focusable text input.
-   */
-  inputAriaLabel: string;
-
-  /**
-   * Aria label for the close button on selected items.
-   */
-  removeItemAriaLabel: string;
-
-  /**
-   * Visible header text in the autocomplete dropdown.
-   */
-  suggestionsHeaderText: string;
-
-  /**
-   * Message to display when no results are found.
-   */
-  noResultsFoundText: string;
-
-  /**
-   * Disables the picker UI.
-   */
-  disabled?: boolean;
-
-  /**
-   * If provided, limits the number of items which can be selected.
-   */
-  itemLimit?: number;
-
-  /**
-   * Callback event when the UI element is focused.
-   */
-  onFocus?: IBasePickerProps<T>['onFocus'];
-
-  /**
-   * Callback event when the UI element loses focus.
-   */
-  onBlur?: IBasePickerProps<T>['onBlur'];
-}
-
-export type PickerProps = BasePickerProps<SuggestionItem>;
-
 /**
  * Pickers are used to pick one or more entities (e.g. people, groups, topics) from a list with typeahead capabilities.
  */
-export default class Picker extends React.Component<PickerProps> {
+export class Picker extends React.Component<PickerProps & CustomizableComponentProps> {
   public render() {
     const {
       className,
@@ -116,13 +57,15 @@ export default class Picker extends React.Component<PickerProps> {
   }
 
   private getSuggestionItemContent = (item: SuggestionItem) => {
-    const classNames = getClassNames();
+    const { theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ theme });
 
     return <SuggestionItemContent item={item} className={classNames.suggestionItem} />;
   };
 
   private getSelectedItem = (props: IPickerItemProps<SuggestionItem>) => {
-    const classNames = getClassNames();
+    const { theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ theme });
 
     return (
       <div
@@ -154,3 +97,5 @@ export default class Picker extends React.Component<PickerProps> {
     );
   };
 }
+@customizable('Picker', ['theme'])
+export default class CustomizablePicker extends Picker {}

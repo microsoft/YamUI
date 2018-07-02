@@ -1,9 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { memoizeFunction } from '@uifabric/utilities';
-import { getTheme } from '../../util/colors';
+export interface PickerClassNameProps {
+  theme: ITheme;
+}
 
-const getMemoizedClassNames = memoizeFunction((theme: ITheme) => {
+export const getClassNames = memoizeFunction((classNameProps: PickerClassNameProps) => {
+  const { theme } = classNameProps;
   return mergeStyleSets({
     selectedItem: {
       backgroundColor: theme.semanticColors.menuItemBackgroundHovered,
@@ -24,7 +27,3 @@ const getMemoizedClassNames = memoizeFunction((theme: ITheme) => {
     },
   });
 });
-
-export const getClassNames = () => {
-  return getMemoizedClassNames(getTheme());
-};
