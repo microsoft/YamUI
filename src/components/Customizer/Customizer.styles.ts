@@ -12,6 +12,7 @@ export const getClassNames = memoizeFunction((styleProps: CustomizerClassNamePro
   return mergeStyleSets({
     root: {
       backgroundColor: theme.semanticColors.bodyBackground,
+      color: theme.semanticColors.bodyText,
     },
   });
 });
