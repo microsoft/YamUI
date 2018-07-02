@@ -1,10 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import AccDB16 from '../Illustration/illustrations/AccDB16';
 import Clickable from '../Clickable';
-import SidebarListItemView, { SidebarListItemProps } from './SidebarListItem';
-import { SidebarListLinkItem, SidebarListClickableItem } from './types';
+import CustomizableSidebarListItemView, { SidebarListItemView } from './SidebarListItem';
+import { SidebarListItemProps, SidebarListLinkItem, SidebarListClickableItem } from './SidebarList.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<SidebarListItem />', () => {
   let component: ShallowWrapper<SidebarListItemProps>;
@@ -132,6 +133,23 @@ describe('<SidebarListItem />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableSidebarListItemView item={linkIllustrationItem} size="small" />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableSidebarListItemView').prop('theme')).toBe(theme);
     });
   });
 });

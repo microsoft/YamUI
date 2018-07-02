@@ -1,4 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+
 export enum TextColor {
   /**
    * Primary black text color
@@ -66,4 +68,39 @@ export enum TextSize {
    * Very limited use. Font-size 1.0rem, line-height 1.6rem.
    */
   XSMALL = 'xSmall',
+}
+
+export interface TextProps extends NestableBaseComponentProps {
+  /**
+   * Text color
+   */
+  color?: TextColor;
+
+  /**
+   * A preset size which determines a font-size + line-height combination
+   * supporting our vertical rhythm.
+   */
+  size?: TextSize;
+
+  /**
+   * Sets a max-width on the Text content, hiding the overflow with an ellipsis character.
+   * You should generally use a px value, or 100%.
+   */
+  maxWidth?: string;
+
+  /**
+   * Sets font-weight: bold.
+   */
+  bold?: boolean;
+
+  /**
+   * Sets text to uppercase.
+   */
+  uppercase?: boolean;
+
+  /**
+   * If provided, will hide child content from screenreaders using aria-hidden while making
+   * the given screenreaderText available to screenreaders.
+   */
+  screenreaderText?: string;
 }

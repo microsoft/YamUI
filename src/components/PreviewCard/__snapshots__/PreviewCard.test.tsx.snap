@@ -133,7 +133,7 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
         push={1}
         textColor="metadata"
       >
-        <Spinner
+        <CustomizedSpinner
           color="metadata"
           size="xSmall"
           text="loading..."
@@ -245,7 +245,7 @@ exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
       </CustomizedBlock>
     }
   />
-  <ProgressIndicator
+  <CustomizedProgressIndicator
     ariaValueText="Uploading, currently at 50%"
     className=
 

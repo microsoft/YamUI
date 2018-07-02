@@ -21,7 +21,7 @@ exports[`<Spinner /> when centered matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -34,7 +34,7 @@ exports[`<Spinner /> when centered matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -58,7 +58,7 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -71,7 +71,7 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -95,7 +95,7 @@ exports[`<Spinner /> with dark color matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -108,7 +108,7 @@ exports[`<Spinner /> with dark color matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -159,7 +159,7 @@ exports[`<Spinner /> with large size matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -172,7 +172,7 @@ exports[`<Spinner /> with large size matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -196,7 +196,7 @@ exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -209,7 +209,7 @@ exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -233,7 +233,7 @@ exports[`<Spinner /> with visible text matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -246,7 +246,7 @@ exports[`<Spinner /> with visible text matches its snapshot 1`] = `
     size="mediumSub"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
 
@@ -271,7 +271,7 @@ exports[`<Spinner /> with xSmall size matches its snapshot 1`] = `
       }
     }
   />
-  <Text
+  <CustomizedText
     className=
 
         {
@@ -284,6 +284,6 @@ exports[`<Spinner /> with xSmall size matches its snapshot 1`] = `
     size="small"
   >
     Loading
-  </Text>
+  </CustomizedText>
 </div>
 `;
