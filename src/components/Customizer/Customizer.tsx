@@ -21,12 +21,13 @@ class CustomizableBody extends React.Component<CustomizableComponentProps & Nest
 /**
  * Used to inject a custom theme object into customizable components, overriding the global theme.
  */
-export default class Customizer extends React.Component<ICustomizerProps> {
+export default class Customizer extends React.Component<ICustomizerProps & NestableBaseComponentProps> {
   public render() {
-    const { children, ...otherProps } = this.props;
+    const { children, className, ...customizerProps } = this.props;
+
     return (
-      <FabricCustomizer {...otherProps}>
-        <CustomizableBody {...{ children }} />
+      <FabricCustomizer {...customizerProps}>
+        <CustomizableBody {...{ children, className }} />
       </FabricCustomizer>
     );
   }

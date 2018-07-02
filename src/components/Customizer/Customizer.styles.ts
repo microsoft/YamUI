@@ -8,7 +8,6 @@ export interface CustomizerClassNameProps {
 
 export const getClassNames = memoizeFunction((styleProps: CustomizerClassNameProps) => {
   const { theme } = styleProps;
-  console.log(theme.semanticColors.bodyBackground);
 
   return mergeStyleSets({
     root: {
