@@ -147,7 +147,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="light"
       hideText={true}
       isCentered={true}
@@ -908,7 +908,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="dark"
       hideText={true}
       isCentered={true}
@@ -1135,7 +1135,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="light"
       hideText={true}
       isCentered={true}

@@ -23,12 +23,12 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
           <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
+            </CustomizedText>
           </CustomizedBlock>
         </Heading>
       </FixedGridColumn>
@@ -61,12 +61,12 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
           <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
+            </CustomizedText>
           </CustomizedBlock>
         </Heading>
       </FixedGridColumn>
@@ -106,12 +106,12 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
           <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
+            </CustomizedText>
           </CustomizedBlock>
         </Heading>
       </FixedGridColumn>

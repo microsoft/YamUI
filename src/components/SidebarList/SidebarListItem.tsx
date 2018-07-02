@@ -1,20 +1,21 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
 import Clickable from '../Clickable';
 import { LayoutListItem } from '../LayoutList';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import NavigationLink from '../NavigationLink';
-import { SidebarListProps } from './SidebarList';
 import {
   SidebarListItem,
+  SidebarListItemProps,
   SidebarListLinkItem,
   SidebarListIllustrationItem,
   SidebarListClickableItem,
   BaseSidebarListItem,
-} from './types';
-import { getClassNames, SidebarListItemClassNames } from './SidebarListItem.styles';
+} from './SidebarList.types';
+import { getClassNames } from './SidebarListItem.styles';
 
 export { SidebarListItem };
 
@@ -38,14 +39,10 @@ const getImageContent = (item: SidebarListItem, size: SidebarListItemProps['size
   return item.imageContent;
 };
 
-export interface SidebarListItemProps {
-  item: SidebarListItem;
-  size: SidebarListProps['size'];
-}
-
-export default class SidebarListItemView extends React.Component<SidebarListItemProps> {
+export class SidebarListItemView extends React.Component<SidebarListItemProps & CustomizableComponentProps> {
   public render() {
-    const { root, content } = getClassNames(this.props.size);
+    const { size, theme = defaultTheme } = this.props;
+    const { root, content } = getClassNames({ size, theme });
     return (
       <LayoutListItem>
         <div className={join([root, 'y-sidebarList--item'])}>{this.getItemContent(content)}</div>
@@ -53,7 +50,7 @@ export default class SidebarListItemView extends React.Component<SidebarListItem
     );
   }
 
-  private getItemContent = (contentClassName: SidebarListItemClassNames['content']) => {
+  private getItemContent = (contentClassName: string) => {
     const { item, size } = this.props;
 
     const content = (
@@ -86,3 +83,6 @@ export default class SidebarListItemView extends React.Component<SidebarListItem
     (this.props.item as SidebarListClickableItem).onClick(this.props.item.key);
   };
 }
+
+@customizable('SidebarListItemView', ['theme'])
+export default class CustomizableSidebarListItemView extends SidebarListItemView {}

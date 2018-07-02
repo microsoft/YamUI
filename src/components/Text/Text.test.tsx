@@ -1,8 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-
-import Text, { TextProps, TextColor, TextSize } from '.';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableText, { Text } from './Text';
+import { TextProps, TextColor, TextSize } from './Text.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<Text />', () => {
   let component: ShallowWrapper<TextProps>;
@@ -108,6 +109,23 @@ describe('<Text />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableText />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableText').prop('theme')).toBe(theme);
     });
   });
 });

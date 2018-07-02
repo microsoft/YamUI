@@ -2,29 +2,9 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { LayoutList } from '../LayoutList';
 import SidebarListItemView from './SidebarListItem';
-import { SidebarListItem, SidebarListSize } from './types';
-
-export interface SidebarListProps extends BaseComponentProps {
-  /**
-   * A list of item objects which will be rendered as list items.
-   */
-  items: SidebarListItem[];
-
-  /**
-   * "small" will display the title next to a 24px image and compact vertical padding.
-   * "medium" will display the title next to a 24px image and slightly more vertical padding.
-   * "large" will display the title and description next to a 32px image.
-   */
-  size: SidebarListSize;
-
-  /**
-   * Called when an item is clicked/invoked.
-   */
-  onClick?(key: SidebarListItem['key']): void;
-}
+import { SidebarListItem, SidebarListProps } from './SidebarList.types';
 
 /**
  * SidebarList renders a list of MediaObjects wrapped in either a link or button. This component should be used to list
