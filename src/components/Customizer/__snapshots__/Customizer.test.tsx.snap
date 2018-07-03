@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Customizer /> with additional className matches its snapshot 1`] = `
+<Customizer>
+  <CustomizedBody
+    className="TEST_CLASSNAME"
+  />
+</Customizer>
+`;
+
+exports[`<Customizer /> with children passed matches its snapshot 1`] = `
+<Customizer>
+  <CustomizedBody>
+    CHILDREN
+  </CustomizedBody>
+</Customizer>
+`;
+
+exports[`<Customizer /> with default options matches its snapshot 1`] = `
+<Customizer>
+  <CustomizedBody />
+</Customizer>
+`;
