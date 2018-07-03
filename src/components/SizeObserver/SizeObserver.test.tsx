@@ -46,7 +46,7 @@ describe('<SizeObserver />', () => {
   });
 
   it('renders at the default size on first render', () => {
-    expect(component).toMatchSnapshot();
+    expect(component.find('span')).toMatchSnapshot();
   });
 
   describe('when its size changes', () => {
@@ -64,7 +64,7 @@ describe('<SizeObserver />', () => {
     });
 
     it('renders at the corresponding size', () => {
-      expect(component).toMatchSnapshot();
+      expect(component.update().find('span')).toMatchSnapshot();
     });
   });
 
@@ -84,7 +84,7 @@ describe('<SizeObserver />', () => {
     });
 
     it('renders at the corresponding size', () => {
-      expect(component).toMatchSnapshot();
+      expect(component.update().find('span')).toMatchSnapshot();
     });
 
     it('calls renderAt once for initialize and once for the first size change', () => {
