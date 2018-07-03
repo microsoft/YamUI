@@ -5,9 +5,11 @@ exports[`<SizeObserver /> renders at the default size on first render 1`] = `
   query={
     Object {
       "large": Object {
+        "minHeight": 501,
         "minWidth": 501,
       },
       "small": Object {
+        "maxHeight": 500,
         "maxWidth": 500,
       },
     }
@@ -43,9 +45,11 @@ exports[`<SizeObserver /> when its size changes renders at the corresponding siz
   query={
     Object {
       "large": Object {
+        "minHeight": 501,
         "minWidth": 501,
       },
       "small": Object {
+        "maxHeight": 500,
         "maxWidth": 500,
       },
     }
@@ -57,7 +61,7 @@ exports[`<SizeObserver /> when its size changes renders at the corresponding siz
           undefined,
         ],
         Array [
-          "large",
+          "small",
         ],
       ],
       "results": Array [
@@ -70,7 +74,7 @@ exports[`<SizeObserver /> when its size changes renders at the corresponding siz
         Object {
           "isThrow": false,
           "value": <span>
-            Large
+            Small
           </span>,
         },
       ],
@@ -90,9 +94,11 @@ exports[`<SizeObserver /> when its size changes twice but both changes match the
   query={
     Object {
       "large": Object {
+        "minHeight": 501,
         "minWidth": 501,
       },
       "small": Object {
+        "maxHeight": 500,
         "maxWidth": 500,
       },
     }

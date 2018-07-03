@@ -41,22 +41,11 @@ export interface SizeQueriesMap {
 
 const getMatchingQuerySize = (query: SizeQueriesMap, height: number, width: number) => {
   for (const key of Object.keys(query)) {
-    const { maxHeight, minHeight, maxWidth, minWidth } = query[key];
+    const { maxHeight = Infinity, maxWidth = Infinity, minHeight = 0, minWidth = 0 } = query[key];
 
-    if (maxHeight !== undefined && height > maxHeight) {
-      continue;
+    if (height <= maxHeight && height >= minHeight && width <= maxWidth && width >= minWidth) {
+      return key;
     }
-    if (minHeight !== undefined && height < minHeight) {
-      continue;
-    }
-    if (maxWidth !== undefined && width > maxWidth) {
-      continue;
-    }
-    if (minWidth !== undefined && width < minWidth) {
-      continue;
-    }
-
-    return key;
   }
 };
 
