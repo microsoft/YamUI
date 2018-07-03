@@ -5,7 +5,7 @@ SizeObserver allows for conditional rendering based on the component's height or
 
 ### Examples
 
-```js { "props": { "query": { "small": { "maxWidth": 500 }, "large": { "minWidth": 501 } } } }
+```js { "props": { "data-description": "basic" } }
 
 const query = {
   small: { maxWidth: 500 },
