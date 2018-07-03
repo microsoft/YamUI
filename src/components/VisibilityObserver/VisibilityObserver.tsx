@@ -48,7 +48,7 @@ export interface VisibilityObserverState {
 }
 
 /**
- * VisibilityObserver uses the IntersectionObserver API to allow conditional child rendering and callbacks based
+ * `VisibilityObserver` uses the `IntersectionObserver` API to allow conditional child rendering and callbacks based
  * on viewport visibility. It will render the `renderOutOfView` prop until it is scrolled into view, then will
  * always render the `renderInView` prop instead. Callbacks will always be triggered on visibility changes.
  */
