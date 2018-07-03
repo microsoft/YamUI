@@ -8,6 +8,8 @@ exports[`<Body /> with additional className matches its snapshot 1`] = `
       {
         background-color: #ffffff;
         color: #343A41;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
       }
 />
 `;
@@ -19,6 +21,8 @@ exports[`<Body /> with children passed matches its snapshot 1`] = `
       {
         background-color: #ffffff;
         color: #343A41;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
       }
 >
   CHILDREN
@@ -32,6 +36,8 @@ exports[`<Body /> with default options matches its snapshot 1`] = `
       {
         background-color: #ffffff;
         color: #343A41;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
       }
 />
 `;
