@@ -8,10 +8,9 @@ describe('<SizeObserver />', () => {
   let onSizeChange: ResizeObserverCallback;
 
   beforeEach(() => {
-    (window as any).ResizeObserver = class {
-      constructor(callback: ResizeObserverCallback) {
-        onSizeChange = callback;
-      }
+    // tslint:disable-next-line:no-function-expression
+    (window as any).ResizeObserver = function(callback: ResizeObserverCallback) {
+      onSizeChange = callback;
     };
     ResizeObserver.prototype.disconnect = jest.fn();
     ResizeObserver.prototype.observe = jest.fn();
@@ -20,13 +19,15 @@ describe('<SizeObserver />', () => {
     const query = {
       small: {
         maxWidth: 500,
+        maxHeight: 500,
       },
       large: {
         minWidth: 501,
+        minHeight: 501,
       },
     };
 
-    const renderAt = (size?: string) => {
+    const renderAt = jest.fn((size?: string) => {
       switch (size) {
         case 'large':
           return <span>Large</span>;
@@ -35,7 +36,7 @@ describe('<SizeObserver />', () => {
         default:
           return <span>Other</span>;
       }
-    };
+    });
 
     component = mount(<SizeObserver query={query} renderAt={renderAt} />);
   });
@@ -54,8 +55,8 @@ describe('<SizeObserver />', () => {
         {
           target: component.getDOMNode(),
           contentRect: {
-            height: 0,
-            width: 0,
+            height: 500,
+            width: 500,
           } as any,
         },
       ];
@@ -64,6 +65,30 @@ describe('<SizeObserver />', () => {
 
     it('renders at the corresponding size', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('when its size changes twice but both changes match the same query', () => {
+    beforeEach(() => {
+      const entries: ResizeObserverEntry[] = [
+        {
+          target: component.getDOMNode(),
+          contentRect: {
+            height: 501,
+            width: 501,
+          } as any,
+        },
+      ];
+      onSizeChange(entries, {} as any);
+      onSizeChange(entries, {} as any);
+    });
+
+    it('renders at the corresponding size', () => {
+      expect(component).toMatchSnapshot();
+    });
+
+    it('calls renderAt once for initialize and once for the first size change', () => {
+      expect(component.prop('renderAt')).toHaveBeenCalledTimes(2);
     });
   });
 

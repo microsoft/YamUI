@@ -12,7 +12,23 @@ exports[`<SizeObserver /> renders at the default size on first render 1`] = `
       },
     }
   }
-  renderAt={[Function]}
+  renderAt={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          undefined,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": <span>
+            Other
+          </span>,
+        },
+      ],
+    }
+  }
 >
   <div>
     <span>
@@ -22,7 +38,7 @@ exports[`<SizeObserver /> renders at the default size on first render 1`] = `
 </SizeObserver>
 `;
 
-exports[`<SizeObserver /> when its size changes disconnects 1`] = `
+exports[`<SizeObserver /> when its size changes renders at the corresponding size 1`] = `
 <SizeObserver
   query={
     Object {
@@ -34,7 +50,79 @@ exports[`<SizeObserver /> when its size changes disconnects 1`] = `
       },
     }
   }
-  renderAt={[Function]}
+  renderAt={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          undefined,
+        ],
+        Array [
+          "large",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": <span>
+            Other
+          </span>,
+        },
+        Object {
+          "isThrow": false,
+          "value": <span>
+            Large
+          </span>,
+        },
+      ],
+    }
+  }
+>
+  <div>
+    <span>
+      Other
+    </span>
+  </div>
+</SizeObserver>
+`;
+
+exports[`<SizeObserver /> when its size changes twice but both changes match the same query renders at the corresponding size 1`] = `
+<SizeObserver
+  query={
+    Object {
+      "large": Object {
+        "minWidth": 501,
+      },
+      "small": Object {
+        "maxWidth": 500,
+      },
+    }
+  }
+  renderAt={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          undefined,
+        ],
+        Array [
+          "large",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": <span>
+            Other
+          </span>,
+        },
+        Object {
+          "isThrow": false,
+          "value": <span>
+            Large
+          </span>,
+        },
+      ],
+    }
+  }
 >
   <div>
     <span>
