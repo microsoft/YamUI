@@ -9,14 +9,13 @@ describe('<SizeObserver />', () => {
 
   beforeEach(() => {
     (window as any).ResizeObserver = class {
-      public observe = jest.fn();
-      public unobserve = jest.fn();
-      public disconnect = jest.fn();
-
       constructor(callback: ResizeObserverCallback) {
         onSizeChange = callback;
       }
     };
+    ResizeObserver.prototype.disconnect = jest.fn();
+    ResizeObserver.prototype.observe = jest.fn();
+    ResizeObserver.prototype.unobserve = jest.fn();
 
     const query = {
       small: {
