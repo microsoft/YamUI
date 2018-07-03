@@ -35,7 +35,7 @@ export const getClassNames = memoizeFunction((classNameProps: TextClassNameProps
       textTransform: uppercase ? 'uppercase' : undefined,
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
-      color: color ? textColors[color] : undefined,
+      color: color ? textColors(theme)[color] : undefined,
       maxWidth: maxWidth || undefined,
       height: maxWidth && font ? font.lineHeight : undefined,
       verticalAlign: maxWidth ? '-0.4rem' : undefined,
