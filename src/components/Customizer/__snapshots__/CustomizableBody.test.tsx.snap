@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Body /> with additional className matches its snapshot 1`] = `
+<div
+  className=
+      y-customizable-body
+      TEST_CLASSNAME
+      {
+        background-color: #ffffff;
+        color: #343A41;
+      }
+/>
+`;
+
+exports[`<Body /> with children passed matches its snapshot 1`] = `
+<div
+  className=
+      y-customizable-body
+      {
+        background-color: #ffffff;
+        color: #343A41;
+      }
+>
+  CHILDREN
+</div>
+`;
+
+exports[`<Body /> with default options matches its snapshot 1`] = `
+<div
+  className=
+      y-customizable-body
+      {
+        background-color: #ffffff;
+        color: #343A41;
+      }
+/>
+`;

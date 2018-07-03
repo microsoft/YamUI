@@ -13,6 +13,10 @@ export const getClassNames = memoizeFunction((styleProps: CustomizerClassNamePro
     root: {
       backgroundColor: theme.semanticColors.bodyBackground,
       color: theme.semanticColors.bodyText,
+      fontSize: theme.fonts.medium.fontSize,
+      lineHeight: theme.fonts.medium.lineHeight,
+      font: theme.fonts.medium.fontFamily,
+      fontWeight: theme.fonts.medium.fontWeight,
     },
   });
 });
