@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SizeObserver /> renders at the default size on first render 1`] = `
+<SizeObserver
+  query={
+    Object {
+      "large": Object {
+        "minWidth": 501,
+      },
+      "small": Object {
+        "maxWidth": 500,
+      },
+    }
+  }
+  renderAt={[Function]}
+>
+  <div>
+    <span>
+      Other
+    </span>
+  </div>
+</SizeObserver>
+`;
+
+exports[`<SizeObserver /> when its size changes disconnects 1`] = `
+<SizeObserver
+  query={
+    Object {
+      "large": Object {
+        "minWidth": 501,
+      },
+      "small": Object {
+        "maxWidth": 500,
+      },
+    }
+  }
+  renderAt={[Function]}
+>
+  <div>
+    <span>
+      Other
+    </span>
+  </div>
+</SizeObserver>
+`;

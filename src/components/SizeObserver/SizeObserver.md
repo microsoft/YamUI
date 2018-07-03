@@ -1,6 +1,6 @@
 ### Notes for use
 
-ContainerQuery allows for conditional rendering based on the component's height or width.
+SizeObserver allows for conditional rendering based on the component's height or width.
 
 
 ### Examples
@@ -24,6 +24,6 @@ const renderAt = (size) => {
 };
 
 <div>
-  <ContainerQuery query={query} renderAt={renderAt} />
+  <SizeObserver query={query} renderAt={renderAt} />
 </div>
 ```
