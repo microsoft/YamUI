@@ -10,22 +10,20 @@ export interface AvatarStyleProps {
   size: AvatarSize;
 }
 
-export const getPersonaCoinStyles = memoizeFunction(
-  (props: AvatarStyleProps): (() => Partial<IPersonaCoinStyles>) => {
-    const { borderType, size } = props;
-    const borderRadius = borders[borderType];
-    const initials = size === AvatarSize.XLARGE ? { lineHeight: '70px' } : {};
-    return () => ({
-      initials,
-      image: {
-        borderRadius,
-      },
-      imageArea: {
-        borderRadius,
-      },
-    });
-  },
-);
+export const getPersonaCoinStyles = memoizeFunction((props: AvatarStyleProps): (() => Partial<IPersonaCoinStyles>) => {
+  const { borderType, size } = props;
+  const borderRadius = borders[borderType];
+  const initials = size === AvatarSize.XLARGE ? { lineHeight: '70px' } : {};
+  return () => ({
+    initials,
+    image: {
+      borderRadius,
+    },
+    imageArea: {
+      borderRadius,
+    },
+  });
+});
 
 export interface AvatarClassNameProps {
   size: AvatarSize;

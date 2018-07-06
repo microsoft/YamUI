@@ -8,24 +8,24 @@ export interface ProgressIndicatorStyleProps {
   theme: ITheme;
 }
 
-export const getProgressIndicatorStyles = memoizeFunction(
-  (styleProps: ProgressIndicatorStyleProps): (() => Partial<IProgressIndicatorStyles>) => {
-    const { percentComplete, theme } = styleProps;
-    const progressBarBorderRightRadius = percentComplete === 1 ? undefined : '0';
+export const getProgressIndicatorStyles = memoizeFunction((styleProps: ProgressIndicatorStyleProps): (() => Partial<
+  IProgressIndicatorStyles
+>) => {
+  const { percentComplete, theme } = styleProps;
+  const progressBarBorderRightRadius = percentComplete === 1 ? undefined : '0';
 
-    return () => ({
-      itemName: { display: 'none' },
-      itemProgress: {
-        padding: 0,
-      },
-      progressTrack: {
-        borderRadius: '1px',
-        backgroundColor: theme.palette.neutralDark,
-      },
-      progressBar: {
-        borderRightRadius: progressBarBorderRightRadius,
-        backgroundColor: theme.palette.themeDark,
-      },
-    });
-  },
-);
+  return () => ({
+    itemName: { display: 'none' },
+    itemProgress: {
+      padding: 0,
+    },
+    progressTrack: {
+      borderRadius: '1px',
+      backgroundColor: theme.palette.neutralDark,
+    },
+    progressBar: {
+      borderRightRadius: progressBarBorderRightRadius,
+      backgroundColor: theme.palette.themeDark,
+    },
+  });
+});
