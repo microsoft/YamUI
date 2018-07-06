@@ -65,7 +65,7 @@
     "react-test-renderer": "16.3.2",
     "resize-observer-polyfill": "1.5.0",
     "rimraf": "2.6.1",
-    "size-limit": "^0.18.3",
+    "size-limit": "0.18.3",
     "style-loader": "0.16.1",
     "svgo": "1.0.3",
     "ts-jest": "22.4.2",
