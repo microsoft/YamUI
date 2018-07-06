@@ -79,7 +79,71 @@ const Attach = require('../icons/Attach').default;
 </table>
 ```
 
-Auto-sized to text:
+Auto-sized to text in Text:
+
+```js { "props": { "data-description": "autosized to text in Text" } }
+const { GutterSize, TextSize } = require('../../Block');
+const Attach = require('../icons/Attach').default;
+const CheckMark = require('../icons/CheckMark').default;
+const Group = require('../icons/Group').default;
+const Add = require('../icons/Add').default;
+const Like = require('../icons/Like').default;
+
+const longText = (
+  <span>
+    <Attach /> The quick brown fox jumps over the lazy dog.
+    <CheckMark /> The quick brown fox jumps over the lazy dog.
+    <Group /> The quick brown fox jumps over the lazy dog.
+    <Add /> The quick brown fox jumps over the lazy dog.
+    <Like /> LIKE
+  </span>
+);
+
+<div>
+  <Block bottomSpacing={GutterSize.XLARGE}>
+    <Text>
+      If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Text` component with a valid textSize:
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.XXLARGE}>
+      XXLARGE. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.XLARGE}>
+      XLARGE. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.LARGE}>
+      LARGE. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.MEDIUM}>
+      MEDIUM. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.MEDIUM_SUB}>
+      MEDIUM_SUB. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.SMALL}>
+      SMALL. {longText}
+    </Text>
+  </Block>
+  <Block bottomSpacing={GutterSize.MEDIUM}>
+    <Text size={TextSize.XSMALL}>
+      XSMALL. {longText}
+    </Text>
+  </Block>
+</div>
+```
+
+Auto-sized to text in Block:
 
 ```js { "props": { "data-description": "autosized to text" } }
 const { GutterSize, TextSize } = require('../../Block');
@@ -101,7 +165,7 @@ const longText = (
 
 <div>
   <Block bottomSpacing={GutterSize.XLARGE}>
-    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` or `Text` component with a valid textSize:
+    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` component with a valid textSize:
   </Block>
   <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XXLARGE}>
     XXLARGE. {longText}
