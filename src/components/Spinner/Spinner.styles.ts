@@ -22,20 +22,22 @@ export interface SpinnerClassNameProps {
   isCentered: boolean;
 }
 
-export const getClassNames = memoizeFunction((classNameProps: SpinnerClassNameProps): SpinnerClassNames => {
-  const { size, isCentered } = classNameProps;
-  return mergeStyleSets({
-    root: {
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: size === SpinnerSize.LARGE ? 'column' : 'row',
-      justifyContent: isCentered ? 'center' : undefined,
-    },
-    label: {
-      margin: labelMargins[size],
-    },
-  });
-});
+export const getClassNames = memoizeFunction(
+  (classNameProps: SpinnerClassNameProps): SpinnerClassNames => {
+    const { size, isCentered } = classNameProps;
+    return mergeStyleSets({
+      root: {
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: size === SpinnerSize.LARGE ? 'column' : 'row',
+        justifyContent: isCentered ? 'center' : undefined,
+      },
+      label: {
+        margin: labelMargins[size],
+      },
+    });
+  },
+);
 
 export interface FabricSpinnerStyleProps {
   color: SpinnerColor;
