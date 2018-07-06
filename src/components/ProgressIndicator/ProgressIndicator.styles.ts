@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { IProgressIndicatorStyles } from 'office-ui-fabric-react/lib/ProgressIndicator';
 
 export interface ProgressIndicatorStyleProps {
@@ -8,24 +8,24 @@ export interface ProgressIndicatorStyleProps {
   theme: ITheme;
 }
 
-export const getProgressIndicatorStyles = memoizeFunction((styleProps: ProgressIndicatorStyleProps): (() => Partial<
-  IProgressIndicatorStyles
->) => {
-  const { percentComplete, theme } = styleProps;
-  const progressBarBorderRightRadius = percentComplete === 1 ? undefined : '0';
+export const getProgressIndicatorStyles = memoizeFunction(
+  (styleProps: ProgressIndicatorStyleProps): (() => Partial<IProgressIndicatorStyles>) => {
+    const { percentComplete, theme } = styleProps;
+    const progressBarBorderRightRadius = percentComplete === 1 ? undefined : '0';
 
-  return () => ({
-    itemName: { display: 'none' },
-    itemProgress: {
-      padding: 0,
-    },
-    progressTrack: {
-      borderRadius: '1px',
-      backgroundColor: theme.palette.neutralDark,
-    },
-    progressBar: {
-      borderRightRadius: progressBarBorderRightRadius,
-      backgroundColor: theme.palette.themeDark,
-    },
-  });
-});
+    return () => ({
+      itemName: { display: 'none' },
+      itemProgress: {
+        padding: 0,
+      },
+      progressTrack: {
+        borderRadius: '1px',
+        backgroundColor: theme.palette.neutralDark,
+      },
+      progressBar: {
+        borderRightRadius: progressBarBorderRightRadius,
+        backgroundColor: theme.palette.themeDark,
+      },
+    });
+  },
+);

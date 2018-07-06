@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { TextSize, TextColor } from '../../components/Text/Text.types';
-import { IRawStyle, IFontWeight, ITheme } from '@uifabric/styling';
+import { IRawStyle, IFontWeight, ITheme } from 'office-ui-fabric-react/lib/Styling';
 
 export type Sizes = { [size in TextSize]: string };
 

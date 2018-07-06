@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { TextSize, TextColor } from './Text.types';
-import { memoizeFunction } from '@uifabric/utilities';
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { ellipsisStyle, fontWeights, textColors, verticalAligns } from '../../util/styles/fonts';
 
 export interface TextClassNameProps {

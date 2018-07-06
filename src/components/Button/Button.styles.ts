@@ -3,8 +3,8 @@ import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Butt
 import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
 import { fontWeights } from '../../util/styles/fonts';
 import { borders } from '../../util/styles/borders';
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 const primaryColors = (theme: ITheme): IButtonStyles => ({
   root: {
@@ -62,41 +62,43 @@ export interface BaseButtonStyleProps {
   fullWidth: boolean;
 }
 
-export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
-  const { size, color, status, fullWidth, theme } = styleProps;
+export const getBaseButtonStyles = memoizeFunction(
+  (styleProps): IButtonStyles => {
+    const { size, color, status, fullWidth, theme } = styleProps;
 
-  const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
-  const { root, rootHovered, rootFocused, rootPressed } = colors;
+    const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
+    const { root, rootHovered, rootFocused, rootPressed } = colors;
 
-  return {
-    root: {
-      ...(root as {}),
-      borderRadius: borders.soft,
-      fontWeight: fontWeights.bold,
-      textAlign: 'center',
-      display: fullWidth ? 'block' : 'inline-block',
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      transition: 'all 0.05s ease-out',
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
-      padding: size === ButtonSize.REGULAR ? '7px 15px' : '4px 9px 6px',
-      cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
-      opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',
-      width: fullWidth ? '100%' : undefined,
-    },
-    rootHovered: {
-      ...(rootHovered as {}),
-    },
-    rootFocused: {
-      ...(rootFocused as {}),
-    },
-    rootPressed: {
-      ...(rootPressed as {}),
-    },
-  };
-});
+    return {
+      root: {
+        ...(root as {}),
+        borderRadius: borders.soft,
+        fontWeight: fontWeights.bold,
+        textAlign: 'center',
+        display: fullWidth ? 'block' : 'inline-block',
+        position: 'relative',
+        whiteSpace: 'nowrap',
+        transition: 'all 0.05s ease-out',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
+        padding: size === ButtonSize.REGULAR ? '7px 15px' : '4px 9px 6px',
+        cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
+        opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',
+        width: fullWidth ? '100%' : undefined,
+      },
+      rootHovered: {
+        ...(rootHovered as {}),
+      },
+      rootFocused: {
+        ...(rootFocused as {}),
+      },
+      rootPressed: {
+        ...(rootPressed as {}),
+      },
+    };
+  },
+);
 
 export interface ButtonClassNameProps {
   status: ButtonStatus;
