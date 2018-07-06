@@ -136,7 +136,7 @@
     {
       "name": "Demo FileHovercard",
       "path": "dist-commonjs/demos/FileHovercard/FileHovercard.js",
-      "limit": "250 KB",
+      "limit": "300 KB",
       "gzip": false
     }
   ]
