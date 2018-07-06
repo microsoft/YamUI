@@ -3,8 +3,8 @@ import { TextSize, TextColor } from './Block.types';
 import { GutterSize } from '../FixedGrid/types';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (push) {
@@ -15,17 +15,6 @@ const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
     return gutterSize[topSpacing];
   }
 };
-
-const iconSizeForTextSize = {
-  [TextSize.XXLARGE]: '2.4rem',
-  [TextSize.XLARGE]: '2.2rem',
-  [TextSize.LARGE]: '1.5rem',
-  [TextSize.MEDIUM]: '1.4rem',
-  [TextSize.MEDIUM_SUB]: '1.4rem',
-  [TextSize.SMALL]: '1.2rem',
-  [TextSize.XSMALL]: '1.0rem',
-};
-
 export interface BlockClassNameProps {
   theme: ITheme;
   topSpacing?: GutterSize;
@@ -71,8 +60,8 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
           top: textSize === TextSize.XSMALL || textSize === TextSize.SMALL ? '0.1rem' : undefined,
         },
         '.y-icon': {
-          height: textSize ? iconSizeForTextSize[textSize] : undefined,
-          width: textSize ? iconSizeForTextSize[textSize] : undefined,
+          height: font ? font.fontSize : undefined,
+          width: font ? font.fontSize : undefined,
         },
         '.y-text__ellipsis': {
           verticalAlign: textSize ? verticalAligns[textSize] : undefined,

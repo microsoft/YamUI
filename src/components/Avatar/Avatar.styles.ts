@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { IPersonaCoinStyles } from 'office-ui-fabric-react/lib/PersonaCoin';
 import { AvatarSize, BorderType } from './Avatar.types';
 import { borders } from '../../util/styles/borders';
