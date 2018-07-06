@@ -1,10 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import Clickable from '../Clickable';
 import EditableText from '../EditableText';
-import PreviewCard, { PreviewCardProps } from './index';
+import CustomizablePreviewCard, { PreviewCard } from './PreviewCard';
+import { PreviewCardProps } from './PreviewCard.types';
 import { renderIntoDocument, findRenderedComponentWithType } from 'react-dom/test-utils';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<PreviewCard />', () => {
   let component: ShallowWrapper<PreviewCardProps>;
@@ -33,12 +35,12 @@ describe('<PreviewCard />', () => {
 
   describe('when description is edible', () => {
     describe('with onDescriptionChange callback', () => {
-      let jsxComponent: JSX.Element;
+      let previewComponent: React.ReactElement<PreviewCardProps>;
       let testComponent: React.Component;
 
       beforeEach(() => {
         onChange = jest.fn();
-        jsxComponent = (
+        previewComponent = (
           <PreviewCard
             name="Filename.gif"
             description="file description"
@@ -51,12 +53,12 @@ describe('<PreviewCard />', () => {
       });
 
       it('matches its snapshot', () => {
-        expect(shallow(jsxComponent)).toMatchSnapshot();
+        expect(shallow(previewComponent)).toMatchSnapshot();
       });
 
       describe('when entering edit mode', () => {
         beforeEach(() => {
-          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedPreviewCard = renderIntoDocument(previewComponent) as PreviewCard;
           const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
           (renderedEditableText.props.onBeginEditing as Function)();
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
@@ -73,7 +75,7 @@ describe('<PreviewCard />', () => {
 
       describe('when exiting edit mode', () => {
         beforeEach(() => {
-          const renderedPreviewCard = renderIntoDocument(jsxComponent) as PreviewCard;
+          const renderedPreviewCard = renderIntoDocument(previewComponent) as PreviewCard;
           const renderedEditableText = findRenderedComponentWithType(renderedPreviewCard, EditableText);
           (renderedEditableText.props.onEndEditing as Function)();
           testComponent = findRenderedComponentWithType(renderedPreviewCard, PreviewCard as React.ClassType<
@@ -176,6 +178,23 @@ describe('<PreviewCard />', () => {
       it('triggers the onRemoveClick callback prop', () => {
         expect(onClick).toHaveBeenCalledTimes(1);
       });
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizablePreviewCard name="Filename.gif" />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizablePreviewCard').prop('theme')).toBe(theme);
     });
   });
 });

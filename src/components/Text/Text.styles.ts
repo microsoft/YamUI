@@ -1,13 +1,19 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextProps } from './Text';
-import { TextSize } from './types';
+import { TextSize, TextColor } from './Text.types';
 import { memoizeFunction } from '@uifabric/utilities';
-import { mergeStyleSets } from '@uifabric/styling';
+import { mergeStyleSets, ITheme } from '@uifabric/styling';
 import { ellipsisStyle, fontWeights, textColors, verticalAligns } from '../../util/styles/fonts';
-import { getTheme } from '../../util/colors';
 
-const getMemoizedClassNames = memoizeFunction((styleProps: TextProps, theme) => {
-  const { size, maxWidth, bold, uppercase, color } = styleProps;
+export interface TextClassNameProps {
+  color?: TextColor;
+  size?: TextSize;
+  maxWidth?: string;
+  bold?: boolean;
+  uppercase?: boolean;
+  theme: ITheme;
+}
+export const getClassNames = memoizeFunction((classNameProps: TextClassNameProps) => {
+  const { size, maxWidth, bold, uppercase, color, theme } = classNameProps;
   const font = size ? theme.fonts[size === TextSize.MEDIUM_SUB ? 'smallPlus' : size] : undefined;
 
   return mergeStyleSets({
@@ -18,7 +24,7 @@ const getMemoizedClassNames = memoizeFunction((styleProps: TextProps, theme) => 
       textTransform: uppercase ? 'uppercase' : undefined,
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
-      color: color ? textColors[color] : undefined,
+      color: color ? textColors(theme)[color] : undefined,
       maxWidth: maxWidth || undefined,
       height: maxWidth && font ? font.lineHeight : undefined,
       verticalAlign: maxWidth ? '-0.4rem' : undefined,
@@ -38,8 +44,3 @@ const getMemoizedClassNames = memoizeFunction((styleProps: TextProps, theme) => 
     },
   });
 });
-
-export const getClassNames = (styleProps: TextProps & { contextTextSize?: TextSize }) => {
-  const theme = getTheme();
-  return getMemoizedClassNames(styleProps, theme);
-};

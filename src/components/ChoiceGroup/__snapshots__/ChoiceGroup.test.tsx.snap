@@ -80,12 +80,12 @@ Object {
 
 exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
 <React.Fragment>
-  <Text
+  <CustomizedText
     bold={true}
   >
     Sublabel for A
     : 
-  </Text>
+  </CustomizedText>
    
   Option A
 </React.Fragment>

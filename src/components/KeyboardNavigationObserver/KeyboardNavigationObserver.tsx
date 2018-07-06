@@ -26,12 +26,12 @@ export interface KeyboardNavigationObserverProps extends BaseComponentProps {
   /**
    * Render prop to return child content when user is navigating via keyboard.
    */
-  renderInKeyboardMode?: (() => React.ReactElement<any>);
+  renderInKeyboardMode?: (() => React.ReactNode);
 
   /**
    * Render prop to return child content when user is navigating via mouse.
    */
-  renderInMouseMode?: (() => React.ReactElement<any>);
+  renderInMouseMode?: (() => React.ReactNode);
 }
 
 export interface KeyboardNavigationObserverState {

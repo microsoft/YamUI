@@ -7,7 +7,7 @@ import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/C
 
 describe('<ChoiceGroup />', () => {
   let component: ShallowWrapper<ChoiceGroupProps>;
-  let labelWithSublabel: JSX.Element;
+  let labelWithSublabel: React.ReactNode;
   let firstOption: IChoiceGroupOptionProps;
   let onChange: jest.Mock<Function>;
 

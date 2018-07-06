@@ -5,8 +5,8 @@ import { create as createRenderer, ReactTestRendererJSON } from 'react-test-rend
 import { renderIntoDocument, Simulate, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 import { Focusable } from '../../util/Focusable';
 
-const render = (jsx: JSX.Element) => {
-  return createRenderer(jsx).toJSON();
+const render = (node: React.ReactElement<any>) => {
+  return createRenderer(node).toJSON();
 };
 
 describe('<Clickable />', () => {

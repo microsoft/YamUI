@@ -68,6 +68,7 @@ export const palette: Partial<IPalette> = {
  * Used globally by Fabric
  */
 export const semanticColors: Partial<ISemanticColors> = {
+  bodyBackground: palette.white,
   bodyText: palette.neutralPrimary,
   disabledBodyText: palette.neutralTertiaryAlt,
   bodySubtext: palette.neutralSecondary,

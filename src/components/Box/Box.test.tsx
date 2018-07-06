@@ -30,7 +30,7 @@ describe('<Box />', () => {
 
   describe('with children passed', () => {
     beforeEach(() => {
-      component = shallow(<Box />);
+      component = shallow(<Box>CHILDREN</Box>);
     });
 
     it('matches its snapshot', () => {

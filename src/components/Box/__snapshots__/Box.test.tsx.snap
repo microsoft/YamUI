@@ -45,7 +45,9 @@ exports[`<Box /> with children passed matches its snapshot 1`] = `
           position: relative;
         }
     padding="small"
-  />
+  >
+    CHILDREN
+  </CustomizedBlock>
 </div>
 `;
 

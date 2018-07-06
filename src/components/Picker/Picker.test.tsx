@@ -1,9 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/types';
-import Picker, { PickerProps } from './index';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizablePicker, { Picker } from './Picker';
+import { PickerProps } from './Picker.types';
+import { SuggestionItem, SuggestionsListItemTemplate } from '../SuggestionsList/';
 import { IPickerItemProps } from 'office-ui-fabric-react/lib/Pickers';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<Picker />', () => {
   let component: ShallowWrapper<PickerProps>;
@@ -25,16 +27,20 @@ describe('<Picker />', () => {
     },
   ];
 
+  const baseProps = {
+    onResolveSuggestions: () => suggestions,
+    selectedItems: [],
+    inputAriaLabel: 'People to mention',
+    removeItemAriaLabel: 'Remove this item',
+    suggestionsHeaderText: 'People',
+    noResultsFoundText: 'No results found',
+  };
+
   const getPicker = (overrides?: Partial<PickerProps>) => {
     onChange = jest.fn();
     const props = {
       onChange,
-      onResolveSuggestions: () => suggestions,
-      selectedItems: [],
-      inputAriaLabel: 'People to mention',
-      removeItemAriaLabel: 'Remove this item',
-      suggestionsHeaderText: 'People',
-      noResultsFoundText: 'No results found',
+      ...baseProps,
       ...overrides,
     };
     return <Picker {...props} />;
@@ -96,6 +102,23 @@ describe('<Picker />', () => {
 
     it('matches its snapshot', () => {
       expect(onChange).toHaveBeenCalled();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizablePicker onChange={jest.fn()} {...baseProps} />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizablePicker').prop('theme')).toBe(theme);
     });
   });
 });

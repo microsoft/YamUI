@@ -1,8 +1,9 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import { default as SuggestionsList, SuggestionsListProps } from '.';
-import { SuggestionsListItemTemplate } from './types';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableSuggestionsList, { SuggestionsList } from './SuggestionsList';
+import { SuggestionsListProps, SuggestionsListItemTemplate } from './SuggestionsList.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<SuggestionsList />', () => {
   let component: ShallowWrapper<SuggestionsListProps>;
@@ -117,6 +118,23 @@ describe('<SuggestionsList />', () => {
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
       });
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableSuggestionsList {...getProps({})} />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableSuggestionsList').prop('theme')).toBe(theme);
     });
   });
 });
