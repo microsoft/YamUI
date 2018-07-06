@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { addAlpha } from '../../util/colors';
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { SpinnerColor, SpinnerSize } from './Spinner.types';
 import { getGutterValue } from '../../util/styles/gutters';
 import { ITheme } from '../Customizer';
