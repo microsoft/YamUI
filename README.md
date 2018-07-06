@@ -98,12 +98,11 @@ or `patch` as appropriate, based on [SemVer](https://semver.org):-
 git checkout -b awesome-release-branch
 npm version version_type -m "Release version %s"
 git push
-git push --tags
 ```
 
 This will add a commit that updates `package.json` and `package-lock.json` with the updated version number.
 
-Once this branch's PR is merged to master, do the following to publish the release so it can be consumed from npm:-
+Once this branch's PR is merged to master, create a [release tag](https://github.com/Microsoft/YamUI/releases/new), and publish the release to npm:-
 
 ```sh
 # requires an npm user with permissions to release
