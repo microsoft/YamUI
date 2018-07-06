@@ -3,8 +3,8 @@ import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Butt
 import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
 import { fontWeights } from '../../util/styles/fonts';
 import { borders } from '../../util/styles/borders';
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 const primaryColors = (theme: ITheme): IButtonStyles => ({
   root: {

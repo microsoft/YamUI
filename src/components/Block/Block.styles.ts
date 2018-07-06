@@ -3,8 +3,8 @@ import { TextSize, TextColor } from './Block.types';
 import { GutterSize } from '../FixedGrid/types';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
-import { mergeStyleSets, ITheme } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (push) {
