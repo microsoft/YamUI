@@ -1,8 +1,20 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import 'src/css/variables/links.css';
+@import 'src/css/variables/colors.css';
 
 .y-fakeLink {
-  @mixin linkComplete;
+  color: $linkColor;
+  text-decoration: none;
+}
+
+.y-fakeLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.y-fakeLink:active,
+.y-fakeLink:focus,
+.y-fakeLink:hover {
+  color: $linkColor__active;
 }
 
 /* TODO: Add descendant selectors for UnstyledButton classes after we create that component */
@@ -12,6 +24,7 @@
 .y-navigationLink:active .y-fakeLink,
 .y-navigationLink:focus .y-fakeLink,
 .y-navigationLink:hover .y-fakeLink {
-  @extend linkHover;
-  @extend linkActive;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $linkColor__active;
 }

@@ -1,8 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/colors.css";
-@import "src/css/variables/fonts.css";
-@import "src/css/variables/links.css";
-
+@import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
 
 html {
   /* Sets 1.0rem to 10px */
@@ -143,13 +141,25 @@ button {
   border-radius: 0;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   margin: 0 4px 0 0;
 }
 
 /* Links */
 a {
-  @mixin linkComplete;
+  color: $linkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: $linkColor__active;
 }
 
 /* Use @dark-gray for placeholder text for 4.5:1 contrast ratio. */
