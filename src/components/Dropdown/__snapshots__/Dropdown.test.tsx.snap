@@ -236,6 +236,7 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                   "neutralQuaternary": "#d0d0d0",
                   "neutralQuaternaryAlt": "#dadada",
                   "neutralSecondary": "#646d7a",
+                  "neutralSecondaryAlt": "#767676",
                   "neutralTertiary": "#dde0e6",
                   "neutralTertiaryAlt": "#a8b0bd",
                   "orange": "#d83b01",

@@ -2,7 +2,7 @@
   "name": "yamui",
   "productName": "YamUI",
   "description": "UI component framework for Yammer.com",
-  "version": "8.7.0",
+  "version": "8.8.0",
   "style": "dist/yamui-base.css",
   "license": "MIT",
   "repository": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "normalize.css": "6.0.0",
-    "office-ui-fabric-react": "6.9.0",
+    "office-ui-fabric-react": "6.25.0",
     "react-intersection-observer": "3.0.2"
   },
   "devDependencies": {
@@ -64,11 +64,12 @@
     "react-test-renderer": "16.3.2",
     "resize-observer-polyfill": "1.5.0",
     "rimraf": "2.6.2",
+    "size-limit": "0.18.3",
     "style-loader": "0.21.0",
     "svgo": "1.0.5",
-    "ts-jest": "23.0.0",
-    "ts-loader": "3.5.0",
-    "tslint": "5.10.0",
+    "ts-jest": "22.4.2",
+    "ts-loader": "3.1.0",
+    "tslint": "5.9.1",
     "tslint-microsoft-contrib": "5.0.3",
     "tslint-react": "3.6.0",
     "typescript": "2.8.4",
@@ -94,7 +95,7 @@
     "build:commonjs:css:global": "postcss src/css/index.css --output dist-commonjs/yamui-base.css",
     "build:commonjs:css:components": "postcss \"src/components/**/*.css\" --dir \"dist-commonjs/components\" --base \"src/components\"",
     "build:commonjs:ts:components": "tsc --project tsconfig.commonjs.json",
-    "build": "run-s clean build:**",
+    "build": "run-s clean build:** size",
     "test:eslint:root": "eslint \"./*.+(js|jsx)\"",
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
     "test:eslint": "run-p test:eslint:*",
@@ -111,6 +112,7 @@
     "test": "run-s build test:*",
     "start": "npm run start:dev",
     "watch:jest": "npm run start:test",
+    "size": "size-limit",
     "start:dev": "styleguidist server --config config/styleguide/config.js",
     "start:test": "jest --config config/jest/config.json --watchAll",
     "svg:generate:icons": "node config/svg/generateIcons",
@@ -128,5 +130,13 @@
       "prettier --write",
       "git add -f"
     ]
-  }
+  },
+  "size-limit": [
+    {
+      "name": "Demo FileHovercard",
+      "path": "dist-commonjs/demos/FileHovercard/FileHovercard.js",
+      "limit": "300 KB",
+      "gzip": false
+    }
+  ]
 }
