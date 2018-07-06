@@ -83,7 +83,7 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 ### Size limit
 
-* `npm run size` - package test component(s) with webpack, and inspect file size. If the size limit is exceeded, the build will fail with `Package size limit has exceeded by x KB`. Configured in package.json. Add `-- --why` to visualize the package in the browser.
+* `npm run size` - package test component(s) with webpack and inspect file size. If the size limit is exceeded, the build will fail with `Package size limit has exceeded by x KB`. Configured in package.json. Add `-- --why` to visualize the package in the browser.
 
 ### Adding icons
 
