@@ -65,6 +65,7 @@
     "react-test-renderer": "16.3.2",
     "resize-observer-polyfill": "1.5.0",
     "rimraf": "2.6.1",
+    "size-limit": "^0.18.3",
     "style-loader": "0.16.1",
     "svgo": "1.0.3",
     "ts-jest": "22.4.2",
@@ -95,7 +96,7 @@
     "build:commonjs:css:global": "postcss src/css/index.css --output dist-commonjs/yamui-base.css",
     "build:commonjs:css:components": "postcss \"src/components/**/*.css\" --dir \"dist-commonjs/components\" --base \"src/components\"",
     "build:commonjs:ts:components": "tsc --project tsconfig.commonjs.json",
-    "build": "run-s clean build:**",
+    "build": "run-s clean build:** size",
     "test:eslint:root": "eslint \"./*.+(js|jsx)\"",
     "test:eslint:sources": "eslint \"+(src|config)/**/*.+(js|jsx)\"",
     "test:eslint": "run-p test:eslint:*",
@@ -112,6 +113,7 @@
     "test": "run-s build test:*",
     "start": "npm run start:dev",
     "watch:jest": "npm run start:test",
+    "size": "size-limit",
     "start:dev": "styleguidist server --config config/styleguide/config.js",
     "start:test": "jest --config config/jest/config.json --watchAll",
     "svg:generate:icons": "node config/svg/generateIcons",
@@ -129,5 +131,13 @@
       "prettier --write",
       "git add -f"
     ]
-  }
+  },
+  "size-limit": [
+    {
+      "name": "Demo FileHovercard",
+      "path": "dist-commonjs/demos/FileHovercard/FileHovercard.js",
+      "limit": "250 KB",
+      "gzip": false
+    }
+  ]
 }
