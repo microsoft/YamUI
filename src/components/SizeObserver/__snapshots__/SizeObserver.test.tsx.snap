@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SizeObserver /> renders at the default size on first render 1`] = `
+<span>
+  Other
+</span>
+`;
+
+exports[`<SizeObserver /> when its size changes renders at the corresponding size 1`] = `
+<span>
+  Small
+</span>
+`;
+
+exports[`<SizeObserver /> when its size changes twice but both changes match the same query renders at the corresponding size 1`] = `
+<span>
+  Large
+</span>
+`;
