@@ -61,10 +61,7 @@ module.exports = {
     user: path.resolve(__dirname, 'context/user.json'),
     group: path.resolve(__dirname, 'context/group.json'),
     file: path.resolve(__dirname, 'context/file.json'),
-  },
-  ribbon: {
-    url: 'http://localhost:5556?theme=dark',
-    text: 'Toggle Theme',
+    redirectToDark: path.resolve(__dirname, 'context/redirectToDark.js'),
   },
   require: [path.resolve(root, 'src/css/index.css')],
   serverPort: 5555,

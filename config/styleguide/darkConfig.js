@@ -1,11 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-const path = require('path');
 const config = require('./config');
-
-const root = path.resolve(__dirname, '../../');
+const pkg = require('../../package.json');
 
 module.exports = {
   ...config,
+  title: `${pkg.productName} v${pkg.version} DARK`,
   theme: {
     color: {
       base: '#CCCCCC',
@@ -24,10 +23,4 @@ module.exports = {
       ribbonText: '#fff',
     },
   },
-  styleguideDir: path.resolve(root, 'build/darkDocs'),
-  ribbon: {
-    url: 'http://localhost:5555?theme=default',
-    text: 'Toggle Theme',
-  },
-  serverPort: 5556,
 };

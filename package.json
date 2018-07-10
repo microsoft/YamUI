@@ -121,7 +121,6 @@
     "svg:generate": "run-p svg:generate:*",
     "svg": "run-s clean:svg svg:*",
     "docs:build": "styleguidist build --config config/styleguide/config.js",
-    "docs:build:dark": "styleguidist build --config config/styleguide/darkConfig.js",
     "docs": "run-s clean:docs docs:*",
     "create:component": "yo component",
     "precommit": "lint-staged",

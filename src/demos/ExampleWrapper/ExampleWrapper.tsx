@@ -11,7 +11,7 @@ export default class ExampleWrapper extends React.Component {
   }
 
   private getExample = () => {
-    const theme = window.location.href.split('?')[1] === 'theme=dark' ? darkTheme : defaultTheme;
+    const theme = window.location.href.match(/theme=dark/) ? darkTheme : defaultTheme;
     return (
       <Fabric>
         <Customizer settings={{ theme }}>{this.props.children}</Customizer>
