@@ -42,9 +42,19 @@ const yammerColors = {
   forest: '#27641b',
 };
 
-/*
- * Used globally by Fabric
- */
+const darkYammerColors = {
+  ...yammerColors,
+  white: '#000000',
+  popRock: '#0C0A07',
+  altRock: '#12100D',
+  indieRock: '#221F19',
+  punkRock: '#574F42',
+  heavyMetal: '#9B9285',
+  deathMetal: '#B6AC9E',
+  blackMetal: '#CBC5BE',
+  black: '#ffffff',
+};
+
 export const palette: Partial<IPalette> = {
   themeDarker: yammerColors.bay,
   themeDark: yammerColors.river,
@@ -65,37 +75,23 @@ export const palette: Partial<IPalette> = {
   yellow: yammerColors.noon,
 };
 
-/*
- * Used globally by Fabric
- */
-export const semanticColors: Partial<ISemanticColors> = {
-  bodyBackground: palette.white,
-  bodyText: palette.neutralPrimary,
-  disabledBodyText: palette.neutralTertiaryAlt,
-  bodySubtext: palette.neutralSecondary,
-  buttonText: palette.neutralPrimaryAlt,
-  errorText: palette.red,
-  link: palette.themeDark,
-  menuItemBackgroundHovered: palette.neutralLighter,
-  inputBackgroundCheckedHovered: palette.themePrimary,
-  inputBackgroundChecked: palette.themeDark,
-  bodyDivider: palette.neutralDark,
+const getSemanticColors = (p: Partial<IPalette> = palette): Partial<ISemanticColors> => ({
+  bodyBackground: p.white,
+  bodyText: p.neutralPrimary,
+  disabledBodyText: p.neutralTertiaryAlt,
+  bodySubtext: p.neutralSecondary,
+  buttonText: p.neutralPrimaryAlt,
+  errorText: p.red,
+  link: p.themeDark,
+  menuItemBackgroundHovered: p.neutralLighter,
+  inputBackgroundCheckedHovered: p.themePrimary,
+  inputBackgroundChecked: p.themeDark,
+  bodyDivider: p.neutralDark,
   errorBackground: yammerColors.angel,
-  warningBackground: palette.yellow,
-};
+  warningBackground: p.yellow,
+});
 
-const darkYammerColors = {
-  ...yammerColors,
-  white: '#000000',
-  popRock: '#0C0A07',
-  altRock: '#12100D',
-  indieRock: '#221F19',
-  punkRock: '#574F42',
-  heavyMetal: '#9B9285',
-  deathMetal: '#B6AC9E',
-  blackMetal: '#CBC5BE',
-  black: '#ffffff',
-};
+export const semanticColors = getSemanticColors();
 
 export const darkPalette: Partial<IPalette> = {
   ...palette,
@@ -111,21 +107,7 @@ export const darkPalette: Partial<IPalette> = {
   black: darkYammerColors.black,
 };
 
-export const darkSemanticColors: Partial<ISemanticColors> = {
-  bodyBackground: darkPalette.white,
-  bodyText: darkPalette.neutralPrimary,
-  disabledBodyText: darkPalette.neutralTertiaryAlt,
-  bodySubtext: darkPalette.neutralSecondary,
-  buttonText: darkPalette.neutralPrimaryAlt,
-  errorText: darkPalette.red,
-  link: darkPalette.themeDark,
-  menuItemBackgroundHovered: darkPalette.neutralLighter,
-  inputBackgroundCheckedHovered: darkPalette.themePrimary,
-  inputBackgroundChecked: darkPalette.themeDark,
-  bodyDivider: darkPalette.neutralDark,
-  errorBackground: yammerColors.angel,
-  warningBackground: palette.yellow,
-};
+export const darkSemanticColors = getSemanticColors(darkPalette);
 
 /**
  * Generates a new CSS color value with alpha transparency.
