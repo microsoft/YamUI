@@ -1,71 +1,71 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './types';
+import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
 import { fontWeights } from '../../util/styles/fonts';
 import { borders } from '../../util/styles/borders';
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
-const primaryColors: IButtonStyles = {
+const primaryColors = (theme: ITheme): IButtonStyles => ({
   root: {
-    color: palette.white,
-    backgroundColor: palette.themeDark,
-    borderColor: palette.themeDark,
+    color: theme.palette.white,
+    backgroundColor: theme.palette.themeDark,
+    borderColor: theme.palette.themeDark,
   },
   rootHovered: {
-    color: palette.white,
-    backgroundColor: palette.themeDarkAlt,
-    borderColor: palette.themeDarkAlt,
+    color: theme.palette.white,
+    backgroundColor: theme.palette.themeDarkAlt,
+    borderColor: theme.palette.themeDarkAlt,
     textDecoration: 'none',
   },
   rootFocused: {
-    color: palette.white,
-    backgroundColor: palette.themeDarkAlt,
-    borderColor: palette.themeDarkAlt,
+    color: theme.palette.white,
+    backgroundColor: theme.palette.themeDarkAlt,
+    borderColor: theme.palette.themeDarkAlt,
   },
   rootPressed: {
-    color: palette.white,
-    backgroundColor: palette.themeDarker,
-    borderColor: palette.themeDarker,
+    color: theme.palette.white,
+    backgroundColor: theme.palette.themeDarker,
+    borderColor: theme.palette.themeDarker,
   },
-};
+});
 
-const secondaryColors: IButtonStyles = {
+const secondaryColors = (theme: ITheme): IButtonStyles => ({
   root: {
-    color: palette.themeDark,
-    backgroundColor: palette.white,
-    borderColor: palette.neutralDark,
+    color: theme.palette.themeDark,
+    backgroundColor: theme.palette.white,
+    borderColor: theme.palette.neutralDark,
   },
   rootHovered: {
-    color: palette.themeDark,
-    backgroundColor: palette.white,
-    borderColor: palette.themeLighter,
+    color: theme.palette.themeDark,
+    backgroundColor: theme.palette.white,
+    borderColor: theme.palette.themeLighter,
     textDecoration: 'none',
   },
   rootFocused: {
-    color: palette.themeDark,
-    backgroundColor: palette.white,
-    borderColor: palette.themeLighter,
+    color: theme.palette.themeDark,
+    backgroundColor: theme.palette.white,
+    borderColor: theme.palette.themeLighter,
   },
   rootPressed: {
-    color: palette.themeDark,
-    backgroundColor: palette.white,
-    borderColor: palette.themePrimary,
+    color: theme.palette.themeDark,
+    backgroundColor: theme.palette.white,
+    borderColor: theme.palette.themePrimary,
   },
-};
+});
 
 export interface BaseButtonStyleProps {
+  theme: ITheme;
   size: ButtonSize;
   color: ButtonColor;
   status: ButtonStatus;
   fullWidth: boolean;
 }
 
-export const getBaseButtonStyles = memoizeFunction((props: BaseButtonStyleProps): IButtonStyles => {
-  const { size, color, status, fullWidth } = props;
+export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
+  const { size, color, status, fullWidth, theme } = styleProps;
 
-  const colors = color === ButtonColor.PRIMARY ? primaryColors : secondaryColors;
+  const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
   const { root, rootHovered, rootFocused, rootPressed } = colors;
 
   return {
@@ -98,12 +98,12 @@ export const getBaseButtonStyles = memoizeFunction((props: BaseButtonStyleProps)
   };
 });
 
-export interface ButtonStyleProps {
+export interface ButtonClassNameProps {
   status: ButtonStatus;
   iconPosition: ButtonIconPosition;
 }
 
-export const getClassNames = memoizeFunction((styleProps: ButtonStyleProps) => {
+export const getClassNames = memoizeFunction((styleProps: ButtonClassNameProps) => {
   const { status, iconPosition } = styleProps;
 
   return mergeStyleSets({

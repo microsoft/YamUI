@@ -47,7 +47,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -66,7 +66,7 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -117,7 +117,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -136,7 +136,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
   <span
     className=
 
@@ -147,7 +147,7 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="light"
       hideText={true}
       isCentered={true}
@@ -204,7 +204,7 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -223,7 +223,7 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -275,7 +275,7 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -294,7 +294,7 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -345,7 +345,7 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -364,7 +364,7 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -415,7 +415,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -434,7 +434,7 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -485,7 +485,7 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -504,7 +504,7 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -555,7 +555,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -595,7 +595,7 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
         <Accounts />
       </span>
     </div>
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -646,7 +646,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -686,7 +686,7 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
         <Accounts />
       </span>
     </div>
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -738,7 +738,7 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   }
   type=""
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -757,7 +757,7 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -808,7 +808,7 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -827,7 +827,7 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -878,7 +878,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -897,7 +897,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
   <span
     className=
 
@@ -908,7 +908,7 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="dark"
       hideText={true}
       isCentered={true}
@@ -965,7 +965,7 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
   }
   type="reset"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -984,7 +984,7 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -1035,7 +1035,7 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -1054,7 +1054,7 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -1105,7 +1105,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -1124,7 +1124,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
   <span
     className=
 
@@ -1135,7 +1135,7 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
           transform: translate(-50%, -50%);
         }
   >
-    <Spinner
+    <CustomizedSpinner
       color="light"
       hideText={true}
       isCentered={true}
@@ -1192,7 +1192,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
   }
   type="button"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -1232,7 +1232,7 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
         <Accounts />
       </span>
     </div>
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -1283,7 +1283,7 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
   }
   type="submit"
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -1302,7 +1302,7 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;
 
@@ -1354,7 +1354,7 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   }
   type=""
 >
-  <Block
+  <CustomizedBlock
     className=
 
         {
@@ -1373,6 +1373,6 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
             visibility: hidden;
           }
     />
-  </Block>
+  </CustomizedBlock>
 </BaseButton>
 `;

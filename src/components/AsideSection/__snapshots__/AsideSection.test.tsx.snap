@@ -4,7 +4,7 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <Block
+  <CustomizedBlock
     textSize="small"
   >
     <FixedGridRow
@@ -20,20 +20,20 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Block
+          <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
-          </Block>
+            </CustomizedText>
+          </CustomizedBlock>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
-  </Block>
+  </CustomizedBlock>
   <div />
 </div>
 `;
@@ -42,7 +42,7 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
 <div
   className="y-aside-section"
 >
-  <Block
+  <CustomizedBlock
     textSize="small"
   >
     <FixedGridRow
@@ -58,16 +58,16 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
           level="2"
           size="none"
         >
-          <Block
+          <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
-          </Block>
+            </CustomizedText>
+          </CustomizedBlock>
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
@@ -78,7 +78,7 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
         </Clickable>
       </FixedGridColumn>
     </FixedGridRow>
-  </Block>
+  </CustomizedBlock>
   <div />
 </div>
 `;
@@ -87,7 +87,7 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <Block
+  <CustomizedBlock
     textSize="small"
   >
     <FixedGridRow
@@ -103,20 +103,20 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
           level="2"
           size="none"
         >
-          <Block
+          <CustomizedBlock
             bottomSpacing="xSmall"
           >
-            <Text
+            <CustomizedText
               bold={true}
               uppercase={true}
             >
               Test title
-            </Text>
-          </Block>
+            </CustomizedText>
+          </CustomizedBlock>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
-  </Block>
+  </CustomizedBlock>
   <div>
     <div>
       Child Content

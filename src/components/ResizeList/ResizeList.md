@@ -2,7 +2,7 @@
 
 Basic usage:
 
-```js { "props": { "data-description": "basic" } }
+```js { "props": { "data-description": "basic", "data-action-states": "[{\"action\":\"none\",\"wait\":\"50\"}]" } }
 const { ButtonColor } = require('../Button');
 const { BorderType } = require('../Image');
 
@@ -26,7 +26,7 @@ const actionItem = <Image source="logo.png" description="Some action" borderType
 
 With a custom gutter size:
 
-```js { "props": { "data-description": "large gutter" } }
+```js { "props": { "data-description": "large gutter", "data-action-states": "[{\"action\":\"none\",\"wait\":\"50\"}]" } }
 const { GutterSize } = require('.');
 const { ButtonColor } = require('../Button');
 const { BorderType } = require('../Image');

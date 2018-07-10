@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BistateButton /> matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -12,7 +12,7 @@ exports[`<BistateButton /> matches its snapshot 1`] = `
 `;
 
 exports[`<BistateButton /> when focuses matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -23,7 +23,7 @@ exports[`<BistateButton /> when focuses matches its snapshot 1`] = `
 `;
 
 exports[`<BistateButton /> when focuses when blurs matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -34,7 +34,7 @@ exports[`<BistateButton /> when focuses when blurs matches its snapshot 1`] = `
 `;
 
 exports[`<BistateButton /> when focuses when mouse leaves matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -45,7 +45,7 @@ exports[`<BistateButton /> when focuses when mouse leaves matches its snapshot 1
 `;
 
 exports[`<BistateButton /> when mouse enters matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -56,7 +56,7 @@ exports[`<BistateButton /> when mouse enters matches its snapshot 1`] = `
 `;
 
 exports[`<BistateButton /> when mouse enters when blurs matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}
@@ -67,7 +67,7 @@ exports[`<BistateButton /> when mouse enters when blurs matches its snapshot 1`]
 `;
 
 exports[`<BistateButton /> when mouse enters when mouse leaves matches its snapshot 1`] = `
-<Button
+<CustomizedButton
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseEnter={[Function]}

@@ -1,8 +1,10 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import Button, { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from '.';
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableButton, { Button } from './Button';
+import { ButtonProps, ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize, ButtonType } from './Button.types';
 import AccountsIcon from '../Icon/icons/Accounts';
+import Customizer, { defaultTheme } from '../Customizer';
 
 const sampleText = 'Click Me';
 const sampleAriaLabel = 'Aria description';
@@ -269,6 +271,23 @@ describe('<Button />', () => {
       it('triggers its onBlur callback', () => {
         expect(onBlur).toHaveBeenCalled();
       });
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableButton text="TEXT" />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableButton').prop('theme')).toBe(theme);
     });
   });
 });

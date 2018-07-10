@@ -1,66 +1,23 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import Block, { TextSize, TextColor } from '../Block';
 import SuggestionsListItem from './SuggestionsListItem';
 import Spinner from '../Spinner';
 import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames, SuggestionsListClassNames } from './SuggestionsList.styles';
-import { SuggestionItem } from './types';
-
-export interface SuggestionItemGroup {
-  title: string;
-  items: SuggestionItem[];
-}
-
-export interface SuggestionsListProps extends BaseComponentProps {
-  /**
-   * The groups of items to render.
-   */
-  groupedItems: SuggestionItemGroup[];
-
-  /**
-   * The active search that produced the current state.
-   */
-  searchText: string;
-
-  /**
-   * Text to show next to the loading spinner.
-   */
-  loadingText: string;
-
-  /**
-   * Text to show when the results are empty for the active search.
-   */
-  noResultsText: string;
-
-  /**
-   * Flag to indicate that a search is in flight
-   * @default false
-   */
-  isLoading?: boolean;
-
-  /**
-   * The index of current keyboard selection.
-   */
-  selectedId?: string | number;
-
-  /**
-   * Called when an item in a group is selected by clicking.
-   */
-  onItemSelected(id: string | number): void;
-}
+import { SuggestionItem, SuggestionsListProps, SuggestionItemGroup } from './SuggestionsList.types';
 
 /**
  * A `SuggestionsList` displays a list of search results in a dropdown.
  */
-export default class SuggestionsList extends React.PureComponent<SuggestionsListProps> {
+export class SuggestionsList extends React.PureComponent<SuggestionsListProps & CustomizableComponentProps> {
   public render() {
-    const { className, isLoading } = this.props;
+    const { className, isLoading, theme = defaultTheme } = this.props;
     const hasResults = this.hasResults();
-    const classNames = getClassNames({ isLoading, hasResults });
+    const classNames = getClassNames({ isLoading, hasResults, theme });
 
     return (
       <div className={join(['y-suggestions-list', 'y-hc-border', className, classNames.root])}>
@@ -139,3 +96,6 @@ export default class SuggestionsList extends React.PureComponent<SuggestionsList
     );
   };
 }
+
+@customizable('SuggestionsList', ['theme'])
+export default class CustomizableSuggestionsList extends SuggestionsList {}

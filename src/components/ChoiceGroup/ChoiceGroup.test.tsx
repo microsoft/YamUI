@@ -2,40 +2,43 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import ChoiceGroup, { ChoiceGroupProps } from '.';
+import { defaultTheme as theme } from '../Customizer';
 import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption';
 
 describe('<ChoiceGroup />', () => {
+  let component: ShallowWrapper<ChoiceGroupProps>;
+  let labelWithSublabel: React.ReactNode;
+  let firstOption: IChoiceGroupOptionProps;
   let onChange: jest.Mock<Function>;
+
+  const options = [
+    {
+      key: 'A',
+      text: 'Option A',
+      label: 'Sublabel for A',
+    },
+    {
+      key: 'B',
+      text: 'Option B',
+    },
+  ];
 
   const getChoiceGroup = (overrides?: Partial<ChoiceGroupProps>) => {
     onChange = jest.fn();
+
     const props = {
       onChange,
-      options: [
-        {
-          key: 'A',
-          text: 'Option A',
-          label: 'Sublabel for A',
-        },
-        {
-          key: 'B',
-          text: 'Option B',
-        },
-      ],
+      options,
       ...overrides,
     };
     return <ChoiceGroup {...props} />;
   };
 
-  let component: ShallowWrapper<ChoiceGroupProps>;
-  let labelWithSublabel: JSX.Element;
-  let firstOption: IChoiceGroupOptionProps;
-
   describe('with minimal props', () => {
     beforeEach(() => {
       component = shallow(getChoiceGroup());
-      const options = component.find('StyledCustomizedChoiceGroup').prop('options');
-      firstOption = (options as IChoiceGroupOptionProps[])[0];
+      const componentOptions = component.find('StyledCustomizedChoiceGroup').prop('options');
+      firstOption = (componentOptions as IChoiceGroupOptionProps[])[0];
     });
 
     it('renders as expected', () => {
@@ -50,17 +53,17 @@ describe('<ChoiceGroup />', () => {
 
     it('styled as expected', () => {
       const getStyles = component.find('StyledCustomizedChoiceGroup').prop('styles');
-      expect((getStyles as Function)()).toMatchSnapshot();
+      expect((getStyles as Function)({ theme })).toMatchSnapshot();
     });
 
     it('option styled as expected', () => {
       const getOptionStyles = firstOption.styles as Function;
-      expect(getOptionStyles({})).toMatchSnapshot();
+      expect(getOptionStyles({ theme })).toMatchSnapshot();
     });
 
     it('when checked, option styled as expected', () => {
       const getOptionStyles = firstOption.styles as Function;
-      expect(getOptionStyles({ checked: true })).toMatchSnapshot();
+      expect(getOptionStyles({ checked: true, theme })).toMatchSnapshot();
     });
 
     describe('when a change is triggered with an option', () => {

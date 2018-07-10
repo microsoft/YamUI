@@ -1,21 +1,21 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { semanticColors } from '../../util/colors';
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 export interface EditableTextStyleProps {
   isEditing: boolean;
+  theme: ITheme;
 }
 
 export const getClassNames = memoizeFunction((styleProps: EditableTextStyleProps) => {
-  const { isEditing } = styleProps;
-  const activeColorStyle = { color: semanticColors.buttonText };
+  const { isEditing, theme } = styleProps;
+  const activeColorStyle = { color: theme.semanticColors.buttonText };
   const underlineStyle = { textDecoration: 'underline' };
 
   const root = isEditing
     ? {}
     : {
-        color: semanticColors.bodySubtext,
+        color: theme.semanticColors.bodySubtext,
         selectors: {
           ':hover': activeColorStyle,
           ':active': activeColorStyle,

@@ -9,11 +9,12 @@ exports[`<SuggestionsListItemContentContent /> with avatar item matches its snap
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
   <MediaObject
     imageContent={
-      <Avatar
+      <CustomizedAvatar
         badgeContent="badge"
         imageUrl="user.png"
         name="John Smith"
@@ -36,6 +37,7 @@ exports[`<SuggestionsListItemContentContent /> with media item without image mat
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
   <MediaObject
@@ -56,6 +58,7 @@ exports[`<SuggestionsListItemContentContent /> with media soft item matches its 
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
   <MediaObject
@@ -92,6 +95,7 @@ exports[`<SuggestionsListItemContentContent /> with media square item matches it
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
   <MediaObject
@@ -127,11 +131,12 @@ exports[`<SuggestionsListItemContentContent /> with search text matches its snap
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
   <MediaObject
     imageContent={
-      <Avatar
+      <CustomizedAvatar
         badgeContent="badge"
         imageUrl="user.png"
         name="John Smith"
@@ -169,12 +174,14 @@ exports[`<SuggestionsListItemContentContent /> with text item matches its snapsh
         padding-left: 12px;
         padding-right: 12px;
         padding-top: 4px;
+        text-align: left;
       }
 >
-  <Block
+  <CustomizedBlock
+    textColor="primary"
     textSize="mediumSub"
   >
     John Smith
-  </Block>
+  </CustomizedBlock>
 </div>
 `;

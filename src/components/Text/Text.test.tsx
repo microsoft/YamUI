@@ -1,19 +1,16 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { renderIntoDocument, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
-import Text, { TextColor, TextSize } from '.';
-
-const render = (jsx: JSX.Element) => {
-  const renderedText = renderIntoDocument(jsx) as Text;
-  return findRenderedDOMComponentWithClass(renderedText, 'y-text');
-};
+import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import CustomizableText, { Text } from './Text';
+import { TextProps, TextColor, TextSize } from './Text.types';
+import Customizer, { defaultTheme } from '../Customizer';
 
 describe('<Text />', () => {
-  let component: Element;
+  let component: ShallowWrapper<TextProps>;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = render(<Text>test content</Text>);
+      component = shallow(<Text>test content</Text>);
     });
 
     it('matches its snapshot', () => {
@@ -23,7 +20,7 @@ describe('<Text />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = render(<Text className="TEST_CLASSNAME">test content</Text>);
+      component = shallow(<Text className="TEST_CLASSNAME">test content</Text>);
     });
 
     it('matches its snapshot', () => {
@@ -33,7 +30,7 @@ describe('<Text />', () => {
 
   describe('with a valid size', () => {
     beforeEach(() => {
-      component = render(<Text size={TextSize.XLARGE}>test content</Text>);
+      component = shallow(<Text size={TextSize.XLARGE}>test content</Text>);
     });
 
     it('matches its snapshot', () => {
@@ -41,10 +38,40 @@ describe('<Text />', () => {
     });
   });
 
-  describe('with a valid size and maxWidth', () => {
+  describe('with bold', () => {
     beforeEach(() => {
-      component = render(
-        <Text size={TextSize.XLARGE} maxWidth="200px">
+      component = shallow(<Text bold={true}>test content</Text>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with uppercase', () => {
+    beforeEach(() => {
+      component = shallow(<Text uppercase={true}>test content</Text>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with maxWidth 500px', () => {
+    beforeEach(() => {
+      component = shallow(<Text maxWidth="500px">test content</Text>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with maxWidth and size', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Text maxWidth="500px" size={TextSize.XLARGE}>
           test content
         </Text>,
       );
@@ -55,39 +82,9 @@ describe('<Text />', () => {
     });
   });
 
-  describe('with bold', () => {
-    beforeEach(() => {
-      component = render(<Text bold={true}>test content</Text>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with uppercase', () => {
-    beforeEach(() => {
-      component = render(<Text uppercase={true}>test content</Text>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with maxWidth 500px', () => {
-    beforeEach(() => {
-      component = render(<Text maxWidth="500px">test content</Text>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
   describe('with color secondary', () => {
     beforeEach(() => {
-      component = render(<Text color={TextColor.SECONDARY}>test content</Text>);
+      component = shallow(<Text color={TextColor.SECONDARY}>test content</Text>);
     });
 
     it('matches its snapshot', () => {
@@ -97,7 +94,7 @@ describe('<Text />', () => {
 
   describe('with screenreader text', () => {
     beforeEach(() => {
-      component = render(<Text screenreaderText="SCREENREADER TEXT">test content</Text>);
+      component = shallow(<Text screenreaderText="SCREENREADER TEXT">test content</Text>);
     });
 
     it('matches its snapshot', () => {
@@ -107,11 +104,28 @@ describe('<Text />', () => {
 
   describe('with screenreader text empty string', () => {
     beforeEach(() => {
-      component = render(<Text screenreaderText="">test content</Text>);
+      component = shallow(<Text screenreaderText="">test content</Text>);
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with customizer', () => {
+    let mountedComponent: ReactWrapper;
+    const theme = defaultTheme;
+
+    beforeEach(() => {
+      mountedComponent = mount(
+        <Customizer settings={{ theme }}>
+          <CustomizableText />
+        </Customizer>,
+      );
+    });
+
+    it('receives custom theme', () => {
+      expect(mountedComponent.find('CustomizableText').prop('theme')).toBe(theme);
     });
   });
 });

@@ -27,7 +27,7 @@ exports[`<List /> ordered with additional className matches its snapshot 1`] = `
 `;
 
 exports[`<List /> ordered with textSize matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   textSize="small"
 >
   <ol
@@ -52,7 +52,7 @@ exports[`<List /> ordered with textSize matches its snapshot 1`] = `
           padding-top: 0;
         }
   />
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<List /> ordered without textSize matches its snapshot 1`] = `
@@ -106,7 +106,7 @@ exports[`<List /> unordered with additional className matches its snapshot 1`] =
 `;
 
 exports[`<List /> unordered with textSize matches its snapshot 1`] = `
-<Block
+<CustomizedBlock
   textSize="small"
 >
   <ul
@@ -130,7 +130,7 @@ exports[`<List /> unordered with textSize matches its snapshot 1`] = `
           padding-top: 0;
         }
   />
-</Block>
+</CustomizedBlock>
 `;
 
 exports[`<List /> unordered without textSize matches its snapshot 1`] = `

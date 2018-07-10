@@ -1,51 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ChoiceGroup as FabricChoiceGroup, IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
 import { IChoiceGroupOptionProps } from 'office-ui-fabric-react/lib/components/ChoiceGroup/ChoiceGroupOption';
-import { getStyles, getOptionStyles } from './ChoiceGroup.styles';
 import { join } from '../../util/classNames';
 import Text from '../Text';
-
-export interface ChoiceGroupOption {
-  /**
-   * A required key to uniquely identify the option.
-   */
-  key: string;
-
-  /**
-   * Text for the option.
-   */
-  text: string;
-
-  /**
-   * Label text for the option.
-   */
-  label?: string;
-}
-
-export interface ChoiceGroupProps extends BaseComponentProps {
-  /**
-   * Items to be presented to the user.
-   */
-  options: ChoiceGroupOption[];
-
-  /**
-   * Label text that will be rendered above the choices.
-   */
-  label?: string;
-
-  /**
-   * The selected option.
-   */
-  selectedKey?: ChoiceGroupOption['key'];
-
-  /**
-   * Function to call when user changes the selected item.
-   */
-  onChange(key: ChoiceGroupOption['key']): void;
-}
+import { getStyles, getOptionStyles } from './ChoiceGroup.styles';
+import { ChoiceGroupOption, ChoiceGroupProps } from './ChoiceGroup.types';
 
 const getTextWithLabel = (text: string, label?: string) => {
   const labelContent = label ? <Text bold={true}>{label}: </Text> : null;

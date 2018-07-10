@@ -2,10 +2,8 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps as HovercardBodyProps } from '../../util/BaseComponent/props';
 import Block, { GutterSize } from '../Block';
-
-export { HovercardBodyProps };
+import { HovercardBodyProps } from './Hovercard.types';
 
 /**
  * Body of a `Hovercard` component. Used to maintain a consistent layout.

@@ -1,18 +1,22 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { palette } from '../../util/colors';
-import { fontSizes, lineHeights } from '../../util/styles/fonts';
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
-export const getClassNames = memoizeFunction(() =>
-  mergeStyleSets({
+export interface HovercardClassNameProps {
+  theme: ITheme;
+}
+
+export const getClassNames = memoizeFunction((props: HovercardClassNameProps) => {
+  const { theme } = props;
+
+  return mergeStyleSets({
     modalContainer: {
       width: '340px',
-      fontSize: fontSizes.medium,
-      lineHeight: lineHeights.medium,
+      fontSize: theme.fonts.medium.fontSize,
+      lineHeight: theme.fonts.medium.lineHeight,
     },
     header: {
-      borderBottom: `2px solid ${palette.neutralLighter}`,
+      borderBottom: `2px solid ${theme.palette.neutralLighter}`,
     },
-  }),
-);
+  });
+});

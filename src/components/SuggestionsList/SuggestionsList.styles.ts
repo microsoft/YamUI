@@ -1,13 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
-import { getTheme } from '../../util/colors';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { getGutterValue } from '../../util/styles/gutters';
 import { borderStylePopOver } from '../../util/styles/borders';
 
-export interface SuggestionsListStyleProps {
+export interface SuggestionsClassNameProps {
   isLoading?: boolean;
   hasResults: boolean;
+  theme: ITheme;
 }
 
 export interface SuggestionsListClassNames {
@@ -16,8 +16,8 @@ export interface SuggestionsListClassNames {
   noResultsWrapper: string;
 }
 
-const getMemoizedClassNames = memoizeFunction((styleProps, theme): SuggestionsListClassNames => {
-  const { isLoading, hasResults } = styleProps;
+export const getClassNames = memoizeFunction((classNameProps: SuggestionsClassNameProps) => {
+  const { isLoading, hasResults, theme } = classNameProps;
 
   return mergeStyleSets({
     root: {
@@ -37,8 +37,3 @@ const getMemoizedClassNames = memoizeFunction((styleProps, theme): SuggestionsLi
     },
   });
 });
-
-export const getClassNames = (styleProps: SuggestionsListStyleProps) => {
-  const theme = getTheme();
-  return getMemoizedClassNames(styleProps, theme);
-};

@@ -1,14 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets } from '@uifabric/styling';
-import { memoizeFunction } from '@uifabric/utilities';
-import { getTheme } from '../../util/colors';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 export interface SuggestionsListItemStyleProps {
   isSelected: boolean;
+  theme: ITheme;
 }
 
-const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
-  const { isSelected } = styleProps;
+export const getClassNames = memoizeFunction(classNameProps => {
+  const { isSelected, theme } = classNameProps;
 
   return mergeStyleSets({
     root: {
@@ -22,8 +22,3 @@ const getMemoizedClassNames = memoizeFunction((styleProps, theme) => {
     },
   });
 });
-
-export const getClassNames = (styleProps: SuggestionsListItemStyleProps) => {
-  const theme = getTheme();
-  return getMemoizedClassNames(styleProps, theme);
-};
