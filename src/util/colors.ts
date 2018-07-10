@@ -24,6 +24,7 @@ const yammerColors = {
   heavyMetal: '#646d7a',
   deathMetal: '#495361',
   blackMetal: '#343A41',
+  black: '#000000',
 
   /* Yellow */
   sunrise: '#ffe7b8',
@@ -79,6 +80,49 @@ export const semanticColors: Partial<ISemanticColors> = {
   inputBackgroundCheckedHovered: palette.themePrimary,
   inputBackgroundChecked: palette.themeDark,
   bodyDivider: palette.neutralDark,
+  errorBackground: yammerColors.angel,
+  warningBackground: palette.yellow,
+};
+
+const darkYammerColors = {
+  ...yammerColors,
+  white: '#000000',
+  popRock: '#0C0A07',
+  altRock: '#12100D',
+  indieRock: '#221F19',
+  punkRock: '#574F42',
+  heavyMetal: '#9B9285',
+  deathMetal: '#B6AC9E',
+  blackMetal: '#CBC5BE',
+  black: '#ffffff',
+};
+
+export const darkPalette: Partial<IPalette> = {
+  ...palette,
+  neutralDark: darkYammerColors.indieRock,
+  neutralPrimary: darkYammerColors.blackMetal,
+  neutralPrimaryAlt: darkYammerColors.deathMetal,
+  neutralSecondary: darkYammerColors.heavyMetal,
+  neutralTertiary: darkYammerColors.indieRock,
+  neutralTertiaryAlt: darkYammerColors.punkRock,
+  neutralLight: darkYammerColors.altRock,
+  neutralLighter: darkYammerColors.popRock,
+  white: darkYammerColors.white,
+  black: darkYammerColors.black,
+};
+
+export const darkSemanticColors: Partial<ISemanticColors> = {
+  bodyBackground: darkPalette.white,
+  bodyText: darkPalette.neutralPrimary,
+  disabledBodyText: darkPalette.neutralTertiaryAlt,
+  bodySubtext: darkPalette.neutralSecondary,
+  buttonText: darkPalette.neutralPrimaryAlt,
+  errorText: darkPalette.red,
+  link: darkPalette.themeDark,
+  menuItemBackgroundHovered: darkPalette.neutralLighter,
+  inputBackgroundCheckedHovered: darkPalette.themePrimary,
+  inputBackgroundChecked: darkPalette.themeDark,
+  bodyDivider: darkPalette.neutralDark,
   errorBackground: yammerColors.angel,
   warningBackground: palette.yellow,
 };
