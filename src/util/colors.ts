@@ -23,7 +23,7 @@ const yammerColors = {
   punkRock: '#a8b0bd',
   heavyMetal: '#646d7a',
   deathMetal: '#495361',
-  blackMetal: '#343A41',
+  blackMetal: '#343a41',
   black: '#000000',
 
   /* Yellow */
@@ -45,13 +45,13 @@ const yammerColors = {
 const darkYammerColors = {
   ...yammerColors,
   white: '#000000',
-  popRock: '#0C0A07',
-  altRock: '#12100D',
-  indieRock: '#221F19',
-  punkRock: '#574F42',
-  heavyMetal: '#9B9285',
-  deathMetal: '#B6AC9E',
-  blackMetal: '#CBC5BE',
+  popRock: '#0c0a07',
+  altRock: '#12100d',
+  indieRock: '#221f19',
+  punkRock: '#574f42',
+  heavyMetal: '#9b9285',
+  deathMetal: '#b6ac9e',
+  blackMetal: '#cbc5be',
   black: '#ffffff',
 };
 
