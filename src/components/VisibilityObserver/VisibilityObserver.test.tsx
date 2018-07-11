@@ -1,11 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import Observer from 'react-intersection-observer';
+import Observer from '@researchgate/react-intersection-observer';
 import { shallow, ShallowWrapper } from 'enzyme';
 import VisibilityObserver, { VisibilityObserverProps } from './index';
-
-type CallbackProp = ((inView: boolean) => void);
-type RenderProp = ((inView: boolean) => React.ReactNode);
 
 describe('<VisibilityObserver />', () => {
   let component: ShallowWrapper<VisibilityObserverProps>;
@@ -13,30 +10,37 @@ describe('<VisibilityObserver />', () => {
   const renderOutOfView = () => <span>OUT OF VIEW</span>;
   let onEnterCallback: jest.Mock;
   let onLeaveCallback: jest.Mock;
-  let renderProp: RenderProp;
-  let callbackProp: CallbackProp;
+  let inViewEntry: IntersectionObserverEntry;
+  let outOfViewEntry: IntersectionObserverEntry;
 
   beforeEach(() => {
     onEnterCallback = jest.fn();
     onLeaveCallback = jest.fn();
+    /* tslint:disable:no-object-literal-type-assertion */
+    inViewEntry = {
+      boundingClientRect: {} as DOMRect,
+      intersectionRatio: 0,
+      intersectionRect: {} as DOMRect,
+      isIntersecting: true,
+      rootBounds: {} as DOMRect,
+      target: {} as Element,
+      time: 0,
+    };
+    /* tslint:enable:no-object-literal-type-assertion */
+    outOfViewEntry = { ...inViewEntry, isIntersecting: false };
   });
 
   describe('with minimal options', () => {
     beforeEach(() => {
       component = shallow(<VisibilityObserver />);
-      renderProp = component.find(Observer).prop('render') as RenderProp;
     });
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
-
-    it('renders empty content via its in-view render prop', () => {
-      expect(renderProp(true)).toMatchSnapshot();
-    });
   });
 
-  describe('with render, callback, rootMargin and tag options', () => {
+  describe('with render, callback and rootMargin options', () => {
     beforeEach(() => {
       component = shallow(
         <VisibilityObserver
@@ -45,7 +49,6 @@ describe('<VisibilityObserver />', () => {
           onEnterView={onEnterCallback}
           onLeaveView={onLeaveCallback}
           rootMargin="100px"
-          tag="span"
         />,
       );
     });
@@ -54,53 +57,66 @@ describe('<VisibilityObserver />', () => {
       expect(component).toMatchSnapshot();
     });
 
-    describe('Observer rendering', () => {
+    describe('enters view', () => {
       beforeEach(() => {
-        renderProp = component.find(Observer).prop('render') as RenderProp;
+        const onChange = component.find(Observer).prop('onChange');
+        onChange(inViewEntry, () => {});
+        component.update();
       });
 
-      it('in view render matches its snapshot', () => {
-        expect(renderProp(true)).toMatchSnapshot();
+      it('matches its snapshot', () => {
+        expect(component.children()).toMatchSnapshot();
       });
 
-      it('out of view render matches its snapshot', () => {
-        expect(renderProp(false)).toMatchSnapshot();
+      it('calls onEnterCallback', () => {
+        expect(onEnterCallback).toHaveBeenCalled();
+      });
+
+      describe('then leaves view', () => {
+        beforeEach(() => {
+          const onChange = component.find(Observer).prop('onChange');
+          onChange(outOfViewEntry, () => {});
+          component.update();
+        });
+
+        it('matches its snapshot', () => {
+          expect(component.children()).toMatchSnapshot();
+        });
+
+        it('calls onLeaveCallback', () => {
+          expect(onLeaveCallback).toHaveBeenCalled();
+        });
       });
     });
 
-    describe('Observer callbacks', () => {
+    describe('leaves view', () => {
       beforeEach(() => {
-        callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
-        renderProp = component.find(Observer).prop('render') as RenderProp;
+        const onChange = component.find(Observer).prop('onChange');
+        onChange(outOfViewEntry, () => {});
+        component.update();
       });
 
-      describe('when in view', () => {
+      it('matches its snapshot', () => {
+        expect(component.children()).toMatchSnapshot();
+      });
+
+      it('calls onLeaveCallback', () => {
+        expect(onLeaveCallback).toHaveBeenCalled();
+      });
+
+      describe('then re-enters view', () => {
         beforeEach(() => {
-          callbackProp(true);
+          const onChange = component.find(Observer).prop('onChange');
+          onChange(inViewEntry, () => {});
+          component.update();
         });
 
-        it('in view callback is properly called', () => {
+        it('matches its snapshot', () => {
+          expect(component.children()).toMatchSnapshot();
+        });
+
+        it('calls onEnterCallback', () => {
           expect(onEnterCallback).toHaveBeenCalled();
-        });
-
-        describe('and scrolled back out of view', () => {
-          beforeEach(() => {
-            callbackProp(false);
-          });
-
-          it('the in-view render prop remains rendered', () => {
-            expect(renderProp(true)).toMatchSnapshot();
-          });
-        });
-      });
-
-      describe('when out of view', () => {
-        beforeEach(() => {
-          callbackProp(false);
-        });
-
-        it('out of view callback is properly called', () => {
-          expect(onLeaveCallback).toHaveBeenCalled();
         });
       });
     });
@@ -109,32 +125,32 @@ describe('<VisibilityObserver />', () => {
   describe('without callbacks', () => {
     beforeEach(() => {
       component = shallow(<VisibilityObserver renderInView={renderInView} renderOutOfView={renderOutOfView} />);
-      callbackProp = component.find(Observer).prop('onChange') as CallbackProp;
-      renderProp = component.find(Observer).prop('render') as RenderProp;
     });
 
-    describe('when out of view', () => {
-      it('renders without blowing up', () => {
-        expect(renderProp(false)).toMatchSnapshot();
+    it('matches snapshot', () => {
+      expect(component.children()).toMatchSnapshot();
+    });
+
+    describe('enters view', () => {
+      beforeEach(() => {
+        const onChange = component.find(Observer).prop('onChange');
+        onChange(inViewEntry, () => {});
+        component.update();
       });
 
-      describe('and scrolled into view', () => {
+      it('matches snapshot', () => {
+        expect(component.children()).toMatchSnapshot();
+      });
+
+      describe('and scrolled out of view', () => {
         beforeEach(() => {
-          callbackProp(true);
+          const onChange = component.find(Observer).prop('onChange');
+          onChange(outOfViewEntry, () => {});
+          component.update();
         });
 
-        it('renders without blowing up', () => {
-          expect(renderProp(true)).toMatchSnapshot();
-        });
-
-        describe('and scrolled out of view', () => {
-          beforeEach(() => {
-            callbackProp(false);
-          });
-
-          it('persists its in-view content without blowing up', () => {
-            expect(renderProp(false)).toMatchSnapshot();
-          });
+        it('matches snapshot', () => {
+          expect(component.children()).toMatchSnapshot();
         });
       });
     });

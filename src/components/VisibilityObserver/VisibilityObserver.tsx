@@ -55,11 +55,7 @@ export default class VisibilityObserver extends React.Component<VisibilityObserv
   }
 
   public render() {
-    const {
-      rootMargin,
-      renderInView = () => <div data-in={true} />,
-      renderOutOfView = () => <div data-out={true} />,
-    } = this.props;
+    const { rootMargin, renderInView = () => <div />, renderOutOfView = () => <div /> } = this.props;
 
     return (
       <Observer rootMargin={rootMargin} onChange={this.onVisibilityChange}>
