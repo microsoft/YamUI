@@ -59,8 +59,7 @@ describe('<VisibilityObserver />', () => {
 
     describe('enters view', () => {
       beforeEach(() => {
-        const onChange = component.find(Observer).prop('onChange');
-        onChange(inViewEntry, () => {});
+        component.find(Observer).prop('onChange')(inViewEntry, jest.fn());
         component.update();
       });
 
@@ -74,8 +73,7 @@ describe('<VisibilityObserver />', () => {
 
       describe('then leaves view', () => {
         beforeEach(() => {
-          const onChange = component.find(Observer).prop('onChange');
-          onChange(outOfViewEntry, () => {});
+          component.find(Observer).prop('onChange')(outOfViewEntry, jest.fn());
           component.update();
         });
 
@@ -91,8 +89,7 @@ describe('<VisibilityObserver />', () => {
 
     describe('leaves view', () => {
       beforeEach(() => {
-        const onChange = component.find(Observer).prop('onChange');
-        onChange(outOfViewEntry, () => {});
+        component.find(Observer).prop('onChange')(outOfViewEntry, jest.fn());
         component.update();
       });
 
@@ -106,8 +103,7 @@ describe('<VisibilityObserver />', () => {
 
       describe('then re-enters view', () => {
         beforeEach(() => {
-          const onChange = component.find(Observer).prop('onChange');
-          onChange(inViewEntry, () => {});
+          component.find(Observer).prop('onChange')(inViewEntry, jest.fn());
           component.update();
         });
 
@@ -133,8 +129,7 @@ describe('<VisibilityObserver />', () => {
 
     describe('enters view', () => {
       beforeEach(() => {
-        const onChange = component.find(Observer).prop('onChange');
-        onChange(inViewEntry, () => {});
+        component.find(Observer).prop('onChange')(inViewEntry, jest.fn());
         component.update();
       });
 
@@ -144,8 +139,7 @@ describe('<VisibilityObserver />', () => {
 
       describe('and scrolled out of view', () => {
         beforeEach(() => {
-          const onChange = component.find(Observer).prop('onChange');
-          onChange(outOfViewEntry, () => {});
+          component.find(Observer).prop('onChange')(outOfViewEntry, jest.fn());
           component.update();
         });
 
