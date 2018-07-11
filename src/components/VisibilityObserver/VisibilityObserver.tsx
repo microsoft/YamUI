@@ -1,36 +1,30 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import Observer from 'react-intersection-observer';
+import Observer from '@researchgate/react-intersection-observer';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 
 export interface VisibilityObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the component is scrolled into view.
    */
-  onEnterView?: (() => void);
+  onEnterView?: ((entry?: IntersectionObserverEntry) => void);
 
   /**
    * A callback which will be triggered when the component is scrolled out of view.
    */
-  onLeaveView?: (() => void);
+  onLeaveView?: ((entry?: IntersectionObserverEntry) => void);
 
   /**
    * Render prop to return child content when the component is visible in the viewport. Once the component
    * has been in view it will always use this render prop, even when scrolled back out of view.
    */
-  renderInView?: (() => React.ReactNode);
+  renderInView?: (() => React.ReactElement<HTMLElement>);
 
   /**
    * Render prop to return child content before the component becomes visible in the viewport.
    */
-  renderOutOfView?: (() => React.ReactNode);
-
-  /**
-   * Wrapper element tag name.
-   * @default 'div'
-   */
-  tag?: string;
+  renderOutOfView?: (() => React.ReactElement<HTMLElement>);
 
   /**
    * A CSS margin string which pushes the intersection boundary further in or out of the viewport.
@@ -61,42 +55,24 @@ export default class VisibilityObserver extends React.Component<VisibilityObserv
   }
 
   public render() {
-    const { rootMargin, tag } = this.props;
+    const { rootMargin, renderInView = () => <div />, renderOutOfView = () => <div /> } = this.props;
 
     return (
-      <Observer
-        tag={tag || 'div'}
-        rootMargin={rootMargin}
-        onChange={this.onVisibilityChange}
-        render={this.getObserverChildren}
-      />
+      <Observer rootMargin={rootMargin} onChange={this.onVisibilityChange}>
+        {this.state.hasBeenInView ? renderInView() : renderOutOfView()}
+      </Observer>
     );
   }
 
-  private getObserverChildren = (isVisible: boolean) => {
-    const { renderInView, renderOutOfView } = this.props;
-    const shouldRenderAsInView = isVisible || this.state.hasBeenInView;
-
-    if (shouldRenderAsInView && renderInView) {
-      return renderInView();
-    }
-
-    if (!isVisible && renderOutOfView) {
-      return renderOutOfView();
-    }
-
-    return null;
-  };
-
-  private onVisibilityChange = (isVisible: boolean) => {
-    if (isVisible) {
+  private onVisibilityChange = (entry: IntersectionObserverEntry) => {
+    if (entry.isIntersecting) {
       this.setState({ hasBeenInView: true });
       if (this.props.onEnterView) {
-        this.props.onEnterView();
+        this.props.onEnterView(entry);
       }
     } else {
       if (this.props.onLeaveView) {
-        this.props.onLeaveView();
+        this.props.onLeaveView(entry);
       }
     }
   };
