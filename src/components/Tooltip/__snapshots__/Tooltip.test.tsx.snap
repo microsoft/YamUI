@@ -7,14 +7,14 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -60,14 +60,14 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "container": Object {
           "backgroundColor": "inherit",
@@ -115,14 +115,14 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
       "beakWidth": 8,
       "styles": Object {
         "beak": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "beakCurtain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
           "borderRadius": "2px",
         },
         "calloutMain": Object {
-          "backgroundColor": "#343A41",
+          "backgroundColor": "#343a41",
         },
         "container": Object {
           "backgroundColor": "inherit",
