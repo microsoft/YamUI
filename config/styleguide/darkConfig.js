@@ -1,9 +1,22 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 const config = require('./config');
 
+const template = {
+  head: {
+    raw: `<script>const redirectToDark = () => {
+      if (!window.location.href.match(/theme=dark/)) {
+        window.location = window.location.pathname + '?theme=dark' + window.location.hash;
+      }
+    };
+
+    redirectToDark();
+    window.onhashchange = redirectToDark;</script>`,
+  },
+};
+
 module.exports = {
   ...config,
-  title: `${config.title} DARK`,
+  template,
   theme: {
     color: {
       base: '#cccccc',

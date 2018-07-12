@@ -13,7 +13,7 @@ module.exports = {
   },
   launchOptions: {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting medium'],
-    slowMo: 10,
+    slowMo: 15,
   },
   navigationOptions: {
     waitUntil: 'networkidle0',
