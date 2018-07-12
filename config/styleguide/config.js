@@ -7,6 +7,15 @@ const pkg = require('../../package.json');
 
 const componentsWithoutPathLine = ['Icons'];
 
+const redirectToDarkScript = `const redirectToDark = () => {
+  if (document.title.match(/DARK/) && !window.location.href.match(/theme=dark/)) {
+    window.location = window.location.pathname + '?theme=dark' + window.location.hash ;
+  }
+};
+
+redirectToDark();
+window.onhashchange = redirectToDark;`;
+
 const getComponentPathLine = componentPath => {
   const ext = path.extname(componentPath);
   const name = path.basename(componentPath, ext);
@@ -50,6 +59,11 @@ module.exports = {
     '**/components/Icon/icons/*',
     '**/components/Illustration/illustrations/*',
   ],
+  template: {
+    head: {
+      raw: `<script>${redirectToDarkScript}</script>`,
+    },
+  },
   skipComponentsWithoutExample: true,
   resolver: docgen.resolver.findAllComponentDefinitions,
   propsParser: docgenParser.parse,
@@ -61,7 +75,6 @@ module.exports = {
     user: path.resolve(__dirname, 'context/user.json'),
     group: path.resolve(__dirname, 'context/group.json'),
     file: path.resolve(__dirname, 'context/file.json'),
-    redirectToDark: path.resolve(__dirname, 'context/redirectToDark.js'),
   },
   require: [path.resolve(root, 'src/css/index.css')],
   serverPort: 5555,
