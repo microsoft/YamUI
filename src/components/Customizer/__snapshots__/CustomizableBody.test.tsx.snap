@@ -7,7 +7,7 @@ exports[`<Body /> with additional className matches its snapshot 1`] = `
       TEST_CLASSNAME
       {
         background-color: #ffffff;
-        color: #343A41;
+        color: #343a41;
         font-size: 1.5rem;
         line-height: 2.0rem;
       }
@@ -20,7 +20,7 @@ exports[`<Body /> with children passed matches its snapshot 1`] = `
       y-customizable-body
       {
         background-color: #ffffff;
-        color: #343A41;
+        color: #343a41;
         font-size: 1.5rem;
         line-height: 2.0rem;
       }
@@ -35,7 +35,7 @@ exports[`<Body /> with default options matches its snapshot 1`] = `
       y-customizable-body
       {
         background-color: #ffffff;
-        color: #343A41;
+        color: #343a41;
         font-size: 1.5rem;
         line-height: 2.0rem;
       }

@@ -3,6 +3,7 @@ import 'intersection-observer'; /* Polyfill */
 import * as React from 'react';
 import VisibilityObserver from '../../../src/components/VisibilityObserver';
 import Fabric from '../../../src/components/Fabric';
+import Customizer, { defaultTheme, darkTheme } from '../../../src/components/Customizer';
 
 export default class ExampleWrapper extends React.Component {
   public render() {
@@ -10,6 +11,11 @@ export default class ExampleWrapper extends React.Component {
   }
 
   private getExample = () => {
-    return <Fabric>{this.props.children}</Fabric>;
+    const theme = window.location.href.match(/theme=dark/) ? darkTheme : defaultTheme;
+    return (
+      <Fabric>
+        <Customizer settings={{ theme }}>{this.props.children}</Customizer>
+      </Fabric>
+    );
   };
 }

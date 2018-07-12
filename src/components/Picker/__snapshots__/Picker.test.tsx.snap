@@ -8,7 +8,7 @@ exports[`<Picker /> when rendering a selected item matches its snapshot 1`] = `
         background-color: #f3f5f8;
         border-radius: 2px;
         border: solid 1px #dde0e6;
-        color: #343A41;
+        color: #343a41;
         cursor: default;
         height: 26px;
         margin-bottom: 2px;

@@ -72,14 +72,14 @@
     "tslint": "5.9.1",
     "tslint-microsoft-contrib": "5.0.3",
     "tslint-react": "3.6.0",
-    "typescript": "2.9.2",
+    "typescript": "2.9.1",
     "webpack": "3.12.0",
     "yo": "2.0.3"
   },
   "peerDependencies": {
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "typescript": "^2.7.0"
+    "typescript": "^2.9.1"
   },
   "scripts": {
     "clean:build": "rimraf build/*",
@@ -114,6 +114,7 @@
     "watch:jest": "npm run start:test",
     "size": "size-limit",
     "start:dev": "styleguidist server --config config/styleguide/config.js",
+    "start:dev:dark": "styleguidist server --config config/styleguide/darkConfig.js",
     "start:test": "jest --config config/jest/config.json --watchAll",
     "svg:generate:icons": "node config/svg/generateIcons",
     "svg:generate:illustrations": "node config/svg/generateIllustrations",
