@@ -53,6 +53,11 @@ export interface BlockProps extends NestableBaseComponentProps {
   textSize?: TextSize;
 
   /**
+   * Background color of the block.
+   */
+  backgroundColor?: string;
+
+  /**
    * Limits text content to a single line, hiding additional text with an ellipsis.
    */
   ellipsis?: boolean;

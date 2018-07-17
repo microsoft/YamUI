@@ -25,6 +25,7 @@ export interface BlockClassNameProps {
   push?: number;
   textAlign?: 'left' | 'right' | 'center';
   textColor?: TextColor;
+  backgroundColor?: string;
   textSize?: TextSize;
   ellipsis?: boolean;
 }
@@ -37,6 +38,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
     bottomSpacing,
     textAlign,
     textColor,
+    backgroundColor,
     theme,
     ellipsis,
     padding,
@@ -48,6 +50,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
   return mergeStyleSets({
     root: {
       textAlign,
+      backgroundColor,
       color: textColor ? textColors(theme)[textColor] : undefined,
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
