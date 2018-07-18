@@ -8,7 +8,7 @@ export interface FixedGridColumnStyleProps {
   verticalAlign: 'top' | 'middle' | 'bottom';
 }
 
-const alignItems: { [i in 'top' | 'middle' | 'bottom']: IRawStyle['alignItems'] } = {
+const alignItems: Record<FixedGridColumnStyleProps['verticalAlign'], IRawStyle['alignItems']> = {
   top: 'flex-start',
   middle: 'center',
   bottom: 'flex-end',
