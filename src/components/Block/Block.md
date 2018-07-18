@@ -214,7 +214,7 @@ const { GutterSize, TextColor } = require('.');
   <Block textColor={TextColor.METADATA} bottomSpacing={GutterSize.MEDIUM}>
     This example has <strong>textColor: METADATA</strong>.
   </Block>
-  <Block textColor={TextColor.WHITE} backgroundColor="#a8b0bd" verticalPadding={GutterSize.LARGE} horizontalPadding={GutterSize.LARGE}>
+  <Block textColor={TextColor.WHITE} backgroundColor="neutralTertiaryAlt" verticalPadding={GutterSize.LARGE} horizontalPadding={GutterSize.LARGE}>
     This example has <strong>textColor: WHITE</strong>. It should be used where the background is a darker color.
   </Block>
 </div>

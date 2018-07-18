@@ -2,8 +2,11 @@
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../FixedGrid/types';
 import { TextColor, TextSize } from '../Text/Text.types';
+import { IPalette } from 'office-ui-fabric-react/lib/Styling';
 
 export { GutterSize, TextColor, TextSize };
+
+export type BackgroundColor = keyof IPalette;
 
 export interface BlockProps extends NestableBaseComponentProps {
   /**
@@ -55,7 +58,7 @@ export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Background color of the block.
    */
-  backgroundColor?: string;
+  backgroundColor?: BackgroundColor;
 
   /**
    * Limits text content to a single line, hiding additional text with an ellipsis.
