@@ -20,6 +20,27 @@ exports[`<Block /> with additional className matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<Block /> with backgroundColor matches its snapshot 1`] = `
+<div
+  className=
+      y-block
+      {
+        background-color: #6c98d9;
+      }
+>
+  <div
+    className=
+        y-block--inner
+        {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+        }
+  >
+    block content
+  </div>
+</div>
+`;
+
 exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
 <div
   className=

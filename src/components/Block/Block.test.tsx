@@ -48,6 +48,16 @@ describe('<Block />', () => {
     });
   });
 
+  describe('with backgroundColor', () => {
+    beforeEach(() => {
+      component = shallow(<Block backgroundColor="themePrimary">block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with textAlign', () => {
     beforeEach(() => {
       component = shallow(<Block textAlign="right">block content</Block>);

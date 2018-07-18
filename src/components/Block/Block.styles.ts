@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextSize, TextColor } from './Block.types';
+import { TextSize, TextColor, BackgroundColor } from './Block.types';
 import { GutterSize } from '../FixedGrid/types';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
@@ -25,7 +25,7 @@ export interface BlockClassNameProps {
   push?: number;
   textAlign?: 'left' | 'right' | 'center';
   textColor?: TextColor;
-  backgroundColor?: string;
+  backgroundColor?: BackgroundColor;
   textSize?: TextSize;
   ellipsis?: boolean;
 }
@@ -50,7 +50,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
   return mergeStyleSets({
     root: {
       textAlign,
-      backgroundColor,
+      backgroundColor: backgroundColor ? theme.palette[backgroundColor] : undefined,
       color: textColor ? textColors(theme)[textColor] : undefined,
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
