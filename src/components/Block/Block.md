@@ -220,6 +220,24 @@ const { GutterSize, TextColor } = require('.');
 </div>
 ```
 
+Dividers:
+
+```js { "props": { "data-description": "dividers" } }
+const { GutterSize } = require('.');
+
+<div>
+  <Block divider={true} backgroundColor="neutralLight" padding={GutterSize.MEDIUM}>
+    1
+  </Block>
+  <Block divider={true} backgroundColor="neutralLight" padding={GutterSize.MEDIUM}>
+    2
+  </Block>
+  <Block backgroundColor="neutralLight" padding={GutterSize.MEDIUM}>
+    3
+  </Block>
+</div>
+```
+
 Text sizes:
 
 ```js { "props": { "data-description": "text sizes" } }

@@ -61,6 +61,11 @@ export interface BlockProps extends NestableBaseComponentProps {
   backgroundColor?: BackgroundColor;
 
   /**
+   * Adds a horizontal line to the bottom of the Block for visual separation.
+   */
+  divider?: boolean;
+
+  /**
    * Limits text content to a single line, hiding additional text with an ellipsis.
    */
   ellipsis?: boolean;
