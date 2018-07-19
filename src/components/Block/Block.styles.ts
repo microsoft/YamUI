@@ -27,6 +27,7 @@ export interface BlockClassNameProps {
   textColor?: TextColor;
   backgroundColor?: BackgroundColor;
   textSize?: TextSize;
+  divider?: boolean;
   ellipsis?: boolean;
 }
 
@@ -40,6 +41,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
     textColor,
     backgroundColor,
     theme,
+    divider,
     ellipsis,
     padding,
     horizontalPadding,
@@ -56,6 +58,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
       lineHeight: font ? font.lineHeight : undefined,
       marginTop: getMarginTop(topSpacing, push),
       marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
+      borderBottom: divider ? `1px solid ${theme.semanticColors.bodyDivider}` : undefined,
       // For positive push, "push" it down with top padding (because margins can collapse).
       paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
       selectors: {

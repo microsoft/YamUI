@@ -28,6 +28,16 @@ describe('<Block />', () => {
     });
   });
 
+  describe('with divider', () => {
+    beforeEach(() => {
+      component = shallow(<Block divider={true}>block content</Block>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with xLarge text size', () => {
     beforeEach(() => {
       component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
