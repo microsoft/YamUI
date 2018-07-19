@@ -6,6 +6,7 @@ exports[`<SuggestionsList /> when isLoading=false with results matches its snaps
       y-suggestions-list
       y-hc-border
       {
+        background-color: #ffffff;
         border-radius: 1px;
         border-width: 0px;
         border: none;
@@ -52,6 +53,7 @@ exports[`<SuggestionsList /> when isLoading=false without results matches its sn
       y-suggestions-list
       y-hc-border
       {
+        background-color: #ffffff;
         border-radius: 1px;
         border-width: 0px;
         border: none;
@@ -81,6 +83,7 @@ exports[`<SuggestionsList /> when isLoading=true with results matches its snapsh
       y-suggestions-list
       y-hc-border
       {
+        background-color: #ffffff;
         border-radius: 1px;
         border-width: 0px;
         border: none;
@@ -140,6 +143,7 @@ exports[`<SuggestionsList /> when isLoading=true without results matches its sna
       y-suggestions-list
       y-hc-border
       {
+        background-color: #ffffff;
         border-radius: 1px;
         border-width: 0px;
         border: none;
