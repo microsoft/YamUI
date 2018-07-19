@@ -2,7 +2,7 @@
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { getGutterValue } from '../../util/styles/gutters';
-import { borderStylePopOver } from '../../util/styles/borders';
+import { addAlpha } from '../../util/colors';
 
 export interface SuggestionsClassNameProps {
   isLoading?: boolean;
@@ -18,11 +18,16 @@ export interface SuggestionsListClassNames {
 
 export const getClassNames = memoizeFunction((classNameProps: SuggestionsClassNameProps) => {
   const { isLoading, hasResults, theme } = classNameProps;
+  const boxShadowOpacity = theme.isInverted ? 40 : 20;
 
   return mergeStyleSets({
     root: {
-      ...borderStylePopOver,
+      boxShadow: `0 0 12px ${addAlpha(theme.palette.black, boxShadowOpacity)}`,
+      border: 'none',
+      borderRadius: '1px',
+      borderWidth: 0,
       width: '280px',
+      backgroundColor: theme.palette.white,
       paddingTop: hasResults ? getGutterValue(1) : undefined,
       paddingBottom: hasResults && !isLoading ? getGutterValue(1) : undefined,
     },
