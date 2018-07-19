@@ -33,7 +33,7 @@ export const getGutterValue = (gutterUnits: number, resizeWithText?: boolean): C
 /**
  * @deprecated
  */
-export const gutterSize: { [size in GutterSize]: string } = {
+export const gutterSize: Record<GutterSize, string> = {
   none: '0',
   xSmall: getGutterValue(1, true),
   small: getGutterValue(2, true),

@@ -2,9 +2,7 @@
 import { TextSize, TextColor } from '../../components/Text/Text.types';
 import { IRawStyle, IFontWeight, ITheme } from 'office-ui-fabric-react/lib/Styling';
 
-export type Sizes = { [size in TextSize]: string };
-
-export const verticalAligns: Sizes = {
+export const verticalAligns: Record<TextSize, string> = {
   xSmall: '-0.4rem',
   small: '-0.3rem',
   mediumSub: '-0.5rem',
@@ -14,7 +12,7 @@ export const verticalAligns: Sizes = {
   xxLarge: '-0.4rem',
 };
 
-export const textColors = (theme: ITheme): { [color in TextColor]: string } => ({
+export const textColors = (theme: ITheme): Record<TextColor, string> => ({
   primary: theme.semanticColors.bodyText,
   secondary: theme.palette.neutralPrimaryAlt,
   metadata: theme.semanticColors.bodySubtext,
@@ -23,7 +21,7 @@ export const textColors = (theme: ITheme): { [color in TextColor]: string } => (
   disabled: theme.semanticColors.disabledBodyText,
 });
 
-export const fontWeights: { [weight in 'normal' | 'bold']: IFontWeight } = {
+export const fontWeights: Record<'normal' | 'bold', IFontWeight> = {
   normal: '400',
   bold: '600',
 };
