@@ -45,4 +45,5 @@ export const darkTheme = createTheme({
   palette: darkPalette,
   semanticColors: darkSemanticColors,
   fonts,
+  isInverted: true,
 });
