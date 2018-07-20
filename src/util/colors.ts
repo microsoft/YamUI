@@ -62,6 +62,7 @@ export const palette: Partial<IPalette> = {
   themeDarkAlt: yammerColors.newBlue,
   themePrimary: yammerColors.lake,
   themeLighter: yammerColors.pond,
+  themeLighterAlt: yammerColors.stream,
   neutralDark: yammerColors.indieRock,
   neutralPrimary: yammerColors.blackMetal,
   neutralPrimaryAlt: yammerColors.deathMetal,
@@ -96,6 +97,12 @@ export const semanticColors = getSemanticColors();
 
 export const darkPalette: Partial<IPalette> = {
   ...palette,
+  themeDarker: yammerColors.stream,
+  themeDark: yammerColors.pond,
+  themeDarkAlt: '#4579C8', // lake lightend by 5%,
+  themePrimary: yammerColors.lake,
+  themeLighter: yammerColors.river,
+  themeLighterAlt: yammerColors.bay,
   neutralDark: darkYammerColors.indieRock,
   neutralPrimary: darkYammerColors.blackMetal,
   neutralPrimaryAlt: darkYammerColors.deathMetal,

@@ -3,6 +3,8 @@ import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { PaletteColor } from '../../util/colors';
 
+export { PaletteColor };
+
 export interface BoxClassNameProps {
   hasOnClick: boolean;
   theme: ITheme;

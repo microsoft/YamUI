@@ -255,7 +255,7 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                   "themeDarker": "#264f8c",
                   "themeLight": "#c7e0f4",
                   "themeLighter": "#9ac3ff",
-                  "themeLighterAlt": "#eff6fc",
+                  "themeLighterAlt": "#e9eff8",
                   "themePrimary": "#6c98d9",
                   "themeSecondary": "#2b88d8",
                   "themeTertiary": "#71afe5",
