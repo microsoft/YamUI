@@ -4,7 +4,7 @@ import * as React from 'react';
 import { PersonaCoin, PersonaSize } from 'office-ui-fabric-react/lib/PersonaCoin';
 import ScreenreaderText from '../ScreenreaderText';
 import { AvatarSize, AvatarProps } from './Avatar.types';
-import { BorderType } from '../Image/types';
+import { BorderType } from '../Image';
 import { getPersonaCoinStyles, getClassNames } from './Avatar.styles';
 import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 

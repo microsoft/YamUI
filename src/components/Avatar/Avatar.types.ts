@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { BorderType } from '../Image/types';
+import { BorderType } from '../Image';
 export { BorderType };
 
 export enum AvatarSize {

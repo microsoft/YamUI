@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { GutterSize } from '../FixedGrid/types';
+import { GutterSize } from '../FixedGrid';
 import { TextColor, TextSize } from '../Text/Text.types';
 import { PaletteColor } from '../../util/colors';
 

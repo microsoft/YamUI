@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { gutterSize } from '../../util/styles/gutters';
+import { getGutterValue } from '../../util/styles/gutters';
 import { TextSize } from './';
 import { mergeStyleSets } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
@@ -11,9 +11,9 @@ export interface ListStyleProps {
 
 const getMarginBottom = (textSize?: TextSize) => {
   if (textSize === TextSize.XSMALL || textSize === TextSize.SMALL || textSize === TextSize.MEDIUM_SUB) {
-    return gutterSize.medium;
+    return getGutterValue(3, true);
   }
-  return gutterSize.xLarge;
+  return getGutterValue(5, true);
 };
 
 export const getClassNames = memoizeFunction((styleProps: ListStyleProps) => {
@@ -29,7 +29,7 @@ export const getClassNames = memoizeFunction((styleProps: ListStyleProps) => {
       listStyleType: isOrdered ? 'decimal' : 'disc',
       selectors: {
         '> .y-list--item': {
-          padding: `0 0 ${gutterSize.xSmall} 0`,
+          padding: `0 0 ${getGutterValue(1, true)} 0`,
           paddingLeft: isOrdered ? '0.7rem' : undefined,
         },
       },

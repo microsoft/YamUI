@@ -1,5 +1,5 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { GutterSize } from '../../components/FixedGrid/types';
+import { GutterSize } from '../../components/FixedGrid';
 
 export type CSSLengthUnit = string;
 
@@ -33,7 +33,7 @@ export const getGutterValue = (gutterUnits: number, resizeWithText?: boolean): C
 /**
  * @deprecated
  */
-export const gutterSize: Record<GutterSize, string> = {
+export const gutterSizes: Record<GutterSize, string> = {
   none: '0',
   xSmall: getGutterValue(1, true),
   small: getGutterValue(2, true),

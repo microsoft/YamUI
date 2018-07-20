@@ -1,10 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { NestableBaseComponentProps as LayoutListItemProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
-
-export { LayoutListItemProps };
+import { LayoutListItemProps } from './LayoutList.types';
 
 /**
  * To be nested within a `LayoutList` component.

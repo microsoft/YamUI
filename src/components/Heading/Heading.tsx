@@ -2,12 +2,11 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import Block, { TextSize, GutterSize } from '../Block';
-import { HeadingLevel, HeadingSize } from './types';
+import Block, { TextSize, GutterSize, BlockProps } from '../Block';
 import { getClassNames } from './Heading.styles';
+import { HeadingProps, HeadingLevel } from './Heading.types';
 
-const blockPropsMap = {
+const blockPropsMap: Record<HeadingLevel, Partial<BlockProps>> = {
   1: {
     textSize: TextSize.XXLARGE,
     bottomSpacing: GutterSize.SMALL,
@@ -33,20 +32,6 @@ const blockPropsMap = {
     bottomSpacing: GutterSize.SMALL,
   },
 };
-
-export { HeadingLevel, HeadingSize };
-
-export interface HeadingProps extends NestableBaseComponentProps {
-  /**
-   * The heading level to render, i.e. h1-h6
-   */
-  level: HeadingLevel;
-
-  /** Allows a heading tag at a given level to render visually as a different level,
-   * or as plain inline text.
-   */
-  size?: HeadingSize;
-}
 
 /**
  * A `Heading` component renders an h1-h6 tag depending on the given level. You can also

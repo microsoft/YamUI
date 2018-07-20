@@ -2,10 +2,8 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps as FakeLinkProps } from '../../util/BaseComponent/props';
+import { FakeLinkProps } from './FakeLink.types';
 import './FakeLink.css';
-
-export { FakeLinkProps };
 
 /**
  * A `FakeLink` is simply a span which imitates the styling of an `<a>` tag (or `NavigationLink`

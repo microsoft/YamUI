@@ -1,8 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { TextSize, TextColor } from './Block.types';
-import { GutterSize } from '../FixedGrid/types';
+import { GutterSize } from '../FixedGrid';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
-import { gutterSize } from '../../util/styles/gutters';
+import { gutterSizes } from '../../util/styles/gutters';
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { PaletteColor } from '../../util/colors';
@@ -13,7 +13,7 @@ const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
     return push < 0 ? `${push / 10}rem` : undefined;
   }
   if (topSpacing) {
-    return gutterSize[topSpacing];
+    return gutterSizes[topSpacing];
   }
 };
 export interface BlockClassNameProps {
@@ -58,7 +58,7 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
       fontSize: font ? font.fontSize : undefined,
       lineHeight: font ? font.lineHeight : undefined,
       marginTop: getMarginTop(topSpacing, push),
-      marginBottom: bottomSpacing ? gutterSize[bottomSpacing] : undefined,
+      marginBottom: bottomSpacing ? gutterSizes[bottomSpacing] : undefined,
       borderBottom: divider ? `1px solid ${theme.semanticColors.bodyDivider}` : undefined,
       // For positive push, "push" it down with top padding (because margins can collapse).
       paddingTop: push && push > 0 ? `${push / 10}rem` : undefined,
@@ -77,17 +77,17 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
     },
     inner: {
       ...(ellipsis ? ellipsisStyle : {}),
-      padding: padding ? gutterSize[padding] : undefined,
+      padding: padding ? gutterSizes[padding] : undefined,
       ...(horizontalPadding
         ? {
-            paddingLeft: gutterSize[horizontalPadding],
-            paddingRight: gutterSize[horizontalPadding],
+            paddingLeft: gutterSizes[horizontalPadding],
+            paddingRight: gutterSizes[horizontalPadding],
           }
         : {}),
       ...(verticalPadding
         ? {
-            paddingTop: gutterSize[verticalPadding],
-            paddingBottom: gutterSize[verticalPadding],
+            paddingTop: gutterSizes[verticalPadding],
+            paddingBottom: gutterSizes[verticalPadding],
           }
         : {}),
       wordWrap: 'break-word',
