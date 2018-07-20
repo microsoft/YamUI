@@ -62,6 +62,7 @@ export const palette: Partial<IPalette> = {
   themeDarkAlt: yammerColors.newBlue,
   themePrimary: yammerColors.lake,
   themeLighter: yammerColors.pond,
+  themeLighterAlt: yammerColors.stream,
   neutralDark: yammerColors.indieRock,
   neutralPrimary: yammerColors.blackMetal,
   neutralPrimaryAlt: yammerColors.deathMetal,
