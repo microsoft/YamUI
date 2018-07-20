@@ -15,5 +15,5 @@ With onClick:
 Background color:
 
 ```js { "props": { "data-description": "background color" } }
-<Box backgroundColor="neutralTertiaryAlt">This is a Box</Box>
+<Box backgroundColor="neutralTertiaryAlt" borderColor="black">This is a Box</Box>
 ```

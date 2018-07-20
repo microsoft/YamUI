@@ -1,6 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { BackgroundColor } from '../Block';
+import { PaletteColor } from '../../util/colors';
 
 export interface BoxProps extends NestableBaseComponentProps {
   /**
@@ -11,5 +11,10 @@ export interface BoxProps extends NestableBaseComponentProps {
   /**
    * Background color of the box.
    */
-  backgroundColor?: BackgroundColor;
+  backgroundColor?: PaletteColor;
+
+  /**
+   * Color of the border.
+   */
+  borderColor?: PaletteColor;
 }

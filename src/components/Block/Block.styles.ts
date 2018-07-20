@@ -1,10 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { TextSize, TextColor, BackgroundColor } from './Block.types';
+import { TextSize, TextColor } from './Block.types';
 import { GutterSize } from '../FixedGrid/types';
 import { textColors, ellipsisStyle, verticalAligns } from '../../util/styles/fonts';
 import { gutterSize } from '../../util/styles/gutters';
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
+import { PaletteColor } from '../../util/colors';
 
 const getMarginTop = (topSpacing?: GutterSize, push?: number) => {
   if (push) {
@@ -25,7 +26,7 @@ export interface BlockClassNameProps {
   push?: number;
   textAlign?: 'left' | 'right' | 'center';
   textColor?: TextColor;
-  backgroundColor?: BackgroundColor;
+  backgroundColor?: PaletteColor;
   textSize?: TextSize;
   divider?: boolean;
   ellipsis?: boolean;

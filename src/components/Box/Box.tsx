@@ -13,13 +13,13 @@ import { BoxProps } from './Box.types';
  */
 export class Box extends React.Component<BoxProps & CustomizableComponentProps> {
   public render() {
-    const { children, onClick, className, backgroundColor, theme = defaultTheme } = this.props;
-    const classNames = getClassNames({ hasOnClick: !!onClick, theme });
+    const { children, onClick, className, backgroundColor, borderColor, theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ hasOnClick: !!onClick, backgroundColor, borderColor, theme });
     const rootClassNames = join(['y-box', classNames.root, className]);
 
     return (
       <div className={rootClassNames} onClick={onClick} role={onClick ? 'button' : undefined}>
-        <Block className={classNames.inner} padding={GutterSize.SMALL} backgroundColor={backgroundColor}>
+        <Block className={classNames.inner} padding={GutterSize.SMALL}>
           {children}
         </Block>
       </div>
