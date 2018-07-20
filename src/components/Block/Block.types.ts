@@ -4,7 +4,7 @@ import { GutterSize } from '../FixedGrid';
 import { TextColor, TextSize } from '../Text/Text.types';
 import { PaletteColor } from '../../util/colors';
 
-export { GutterSize, TextColor, TextSize };
+export { GutterSize, TextColor, TextSize, PaletteColor };
 export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Gutter spacing to be added above this block.

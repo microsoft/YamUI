@@ -1,5 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { PaletteColor } from '../../util/colors';
+
+export { PaletteColor };
 
 export enum TextColor {
   /**
@@ -97,6 +100,11 @@ export interface TextProps extends NestableBaseComponentProps {
    * Sets text to uppercase.
    */
   uppercase?: boolean;
+
+  /**
+   * Background color.
+   */
+  backgroundColor?: PaletteColor;
 
   /**
    * If provided, will hide child content from screenreaders using aria-hidden while making
