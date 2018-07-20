@@ -2,7 +2,7 @@
 import { fontWeights } from '../../util/styles/fonts';
 import { mergeStyleSets } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
-import { HeadingSize } from './Heading';
+import { HeadingSize } from './Heading.types';
 
 export interface HeadingStyleProps {
   size?: HeadingSize;
