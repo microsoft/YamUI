@@ -2,24 +2,8 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { GutterSize } from './types';
+import { FixedGridRowProps, GutterSize } from './FixedGrid.types';
 import { getClassNames } from './FixedGridRow.styles';
-
-export interface FixedGridRowProps extends NestableBaseComponentProps {
-  /**
-   * Margin added below the row.
-   */
-  bottomSpacing?: GutterSize;
-
-  /**
-   * Horizontal gutter space between each column.
-   * @default GutterSize.SMALL
-   */
-  gutterSize?: GutterSize;
-}
-
-export { GutterSize };
 
 /**
  * A `FixedGridRow` represents each row inside a `FixedGrid`. It should wrap `FixedGridColumn`s.
