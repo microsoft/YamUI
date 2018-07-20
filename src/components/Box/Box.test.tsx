@@ -28,6 +28,26 @@ describe('<Box />', () => {
     });
   });
 
+  describe('with borderColor', () => {
+    beforeEach(() => {
+      component = shallow(<Box borderColor="black" />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
+  describe('with backgroundColor', () => {
+    beforeEach(() => {
+      component = shallow(<Box backgroundColor="white" />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with children passed', () => {
     beforeEach(() => {
       component = shallow(<Box>CHILDREN</Box>);

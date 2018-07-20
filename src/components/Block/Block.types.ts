@@ -2,12 +2,9 @@
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { GutterSize } from '../FixedGrid/types';
 import { TextColor, TextSize } from '../Text/Text.types';
-import { IPalette } from 'office-ui-fabric-react/lib/Styling';
+import { PaletteColor } from '../../util/colors';
 
 export { GutterSize, TextColor, TextSize };
-
-export type BackgroundColor = keyof IPalette;
-
 export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Gutter spacing to be added above this block.
@@ -58,7 +55,7 @@ export interface BlockProps extends NestableBaseComponentProps {
   /**
    * Background color of the block.
    */
-  backgroundColor?: BackgroundColor;
+  backgroundColor?: PaletteColor;
 
   /**
    * Adds a horizontal line to the bottom of the Block for visual separation.
