@@ -92,6 +92,16 @@ describe('<Text />', () => {
     });
   });
 
+  describe('with backgroundColor', () => {
+    beforeEach(() => {
+      component = shallow(<Text backgroundColor="white">test content</Text>);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with screenreader text', () => {
     beforeEach(() => {
       component = shallow(<Text screenreaderText="SCREENREADER TEXT">test content</Text>);

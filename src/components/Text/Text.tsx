@@ -29,13 +29,13 @@ export class Text extends React.Component<TextProps & CustomizableComponentProps
   }
 
   private getClasses() {
-    const { className, size, maxWidth, bold, uppercase, color, theme = defaultTheme } = this.props;
+    const { className, size, maxWidth, bold, uppercase, color, backgroundColor, theme = defaultTheme } = this.props;
     return join([
       'y-text',
       size ? `y-textSize-${size}` : '',
       maxWidth ? 'y-text__ellipsis' : '',
       className,
-      getClassNames({ size, maxWidth, bold, uppercase, color, theme }).root,
+      getClassNames({ size, maxWidth, bold, uppercase, color, backgroundColor, theme }).root,
     ]);
   }
 }

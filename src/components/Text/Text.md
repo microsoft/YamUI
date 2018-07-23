@@ -190,3 +190,14 @@ const { TextSize } = require('.');
   </p>
 </div>
 ```
+
+With background color:
+```jsx { "props": { "data-description": "background-color" } }
+const { TextColor } = require('.');
+
+<div>
+  Before the Text. <Text backgroundColor="themeLighterAlt">
+    Text with <strong>backgroundColor: themeLighterAlt</strong>.
+  </Text> After the Text.
+</div>
+```
