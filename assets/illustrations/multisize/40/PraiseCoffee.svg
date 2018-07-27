@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4464"
+   version="1.1"
+   viewBox="0 0 40 39.999996"
+   height="39.999996"
+   width="40">
+  <metadata
+     id="metadata4470">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4468" />
+  <ellipse
+     style="fill:#9ac3ff;stroke-width:0.26666662"
+     id="ellipse4456"
+     ry="20"
+     rx="19.999998"
+     cy="20.595692"
+     cx="-19.386011"
+     transform="rotate(-88.266999)" />
+  <path
+     style="fill:#d1423b;stroke-width:0.26667732"
+     id="path4458"
+     d="m 20.669094,30.10631 h -4.400176 c -3.306798,0 -5.973571,-2.666772 -5.973571,-5.973571 V 11.785582 c 0,-0.666693 0.533354,-1.200048 1.200047,-1.200048 h 13.947223 c 0.666694,0 1.200049,0.533355 1.200049,1.200048 v 12.32049 c 0,3.333466 -2.666773,6.000238 -5.973572,6.000238 z" />
+  <path
+     style="fill:#d1423b;stroke-width:0.26667732"
+     id="path4460"
+     d="m 25.895969,25.012777 v -1.946744 c 0.346681,0 1.680067,-0.240011 4.506846,-3.466805 0.666693,-0.7467 0.666693,-1.840072 0.05333,-2.640105 -0.613358,-0.7467 -1.626732,-0.986706 -2.506767,-0.560022 l -1.41339,0.693361 -0.853367,-1.760072 1.413389,-0.693362 c 1.706735,-0.826699 3.706815,-0.373349 4.880195,1.093378 1.226716,1.520061 1.17338,3.68015 -0.106671,5.146872 -2.453431,2.800111 -4.400175,4.133499 -5.973571,4.133499 z" />
+  <path
+     style="fill:#fb7f78;stroke-width:0.26667732"
+     id="path4462"
+     d="M 25.469285,10.612202 H 11.442059 c -0.640026,0 -1.146712,0.506687 -1.146712,1.146712 v 3.093459 h 16.320651 v -3.093459 c 0,-0.640025 -0.506687,-1.146712 -1.146713,-1.146712 z" />
+</svg>

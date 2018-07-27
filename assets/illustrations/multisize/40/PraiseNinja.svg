@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg336"
+   version="1.1"
+   viewBox="0 0 40 40"
+   height="40"
+   width="40">
+  <metadata
+     id="metadata342">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs340" />
+  <circle
+     style="fill:#8cc63f;stroke-width:0.26666665"
+     id="circle320"
+     r="20"
+     cy="20"
+     cx="20" />
+  <circle
+     style="fill:#343a41;stroke-width:0.26666665"
+     id="circle322"
+     r="13.386667"
+     cy="20.053333"
+     cx="19.093334" />
+  <g
+     style="fill:#343a41"
+     transform="scale(0.26666667)"
+     id="g328">
+    <path
+       id="path324"
+       d="m 141.5,78.4 c 0,0 -5.9,2 -12.8,-0.3 -6.8,-2.3 -10.5,-9.8 -10.5,-9.8 0,0 6.5,-1.1 13.4,1.2 6.8,2.3 9.9,8.9 9.9,8.9 z" />
+    <path
+       id="path326"
+       d="m 142.7,62.1 c 0,0 -3.5,5.2 -10.3,7.6 -6.8,2.4 -14.3,-1.3 -14.3,-1.3 0,0 4.5,-4.9 11.3,-7.2 6.9,-2.4 13.3,0.9 13.3,0.9 z" />
+  </g>
+  <path
+     style="fill:#f5fafa;stroke-width:0.26666665"
+     id="path330"
+     d="m 6.9333333,20.133333 c 0,1.413334 0.24,3.333334 0.6933334,4.133334 H 30.533333 c 0.453334,-0.8 0.693334,-2.72 0.693334,-4.133334 0,-0.826666 -0.08,-1.733333 -0.24,-2.533333 H 7.1733333 c -0.16,0.8 -0.24,1.68 -0.24,2.533333 z" />
+  <circle
+     style="fill:#343a41;stroke-width:0.26666665"
+     id="circle332"
+     r="1.2800001"
+     cy="20.933334"
+     cx="12.986667" />
+  <circle
+     style="fill:#343a41;stroke-width:0.26666665"
+     id="circle334"
+     r="1.2800001"
+     cy="20.933334"
+     cx="25.200001" />
+</svg>
