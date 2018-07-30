@@ -11,5 +11,8 @@ export const getClassNames = memoizeFunction((props: AsideSectionStyleProps) => 
     header: {
       borderBottom: `1px solid ${props.theme.semanticColors.bodyDivider}`,
     },
+    action: {
+      flexShrink: 0,
+    },
   });
 });

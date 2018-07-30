@@ -71,6 +71,11 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
+        className=
+
+            {
+              flex-shrink: 0;
+            }
         fixed={true}
       >
         <Clickable>
