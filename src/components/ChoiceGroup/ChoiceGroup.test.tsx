@@ -47,7 +47,7 @@ describe('<ChoiceGroup />', () => {
 
     it('sublabel renders as expected', () => {
       const onRenderLabel = firstOption.onRenderLabel;
-      labelWithSublabel = (onRenderLabel as Function)();
+      labelWithSublabel = (onRenderLabel as Function)({ labelId: 'label-for-aria' });
       expect(labelWithSublabel).toMatchSnapshot();
     });
 
