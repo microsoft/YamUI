@@ -79,7 +79,9 @@ Object {
 `;
 
 exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
-<React.Fragment>
+<span
+  id="label-for-aria"
+>
   <CustomizedText
     bold={true}
   >
@@ -88,7 +90,7 @@ exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
   </CustomizedText>
    
   Option A
-</React.Fragment>
+</span>
 `;
 
 exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option renders as expected 1`] = `
