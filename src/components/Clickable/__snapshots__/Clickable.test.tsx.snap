@@ -28,10 +28,27 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   type="button"
 >
   <span
-    className="y-fakeLink"
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>
@@ -65,10 +82,27 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   type="button"
 >
   <span
-    className="y-fakeLink"
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>
@@ -102,10 +136,27 @@ exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   type="button"
 >
   <span
-    class="y-fakeLink"
+    class=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>
@@ -139,11 +190,28 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   title="extra browser tooltip content"
   type="button"
 >
   <span
-    className="y-fakeLink"
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>
@@ -176,6 +244,11 @@ exports[`<Clickable /> when unstyled matches its snapshot 1`] = `
       }
       & > .y-block {
         width: 100%;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
       }
   type="button"
 >
@@ -211,10 +284,27 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   type="button"
 >
   <span
-    className="y-fakeLink"
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>
@@ -248,10 +338,81 @@ exports[`<Clickable /> with default options matches its snapshot 1`] = `
       & > .y-block {
         width: 100%;
       }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   type="button"
 >
   <span
-    className="y-fakeLink"
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
+  >
+    clickable content
+  </span>
+</button>
+`;
+
+exports[`<Clickable /> with theme matches its snapshot 1`] = `
+<button
+  className=
+      y-clickable
+      {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        line-height: inherit;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        overflow: visible;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        text-align: inherit;
+        width: undefined;
+      }
+      & > .y-block {
+        width: 100%;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #e9eff8;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+  type="button"
+>
+  <span
+    className=
+        y-fakeLink
+        {
+          color: #386cbb;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active, &:focus, &:hover {
+          color: #264f8c;
+        }
   >
     clickable content
   </span>

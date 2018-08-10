@@ -20,7 +20,7 @@ exports[`<SidebarListItem /> at large size matches its snapshot 1`] = `
           padding-top: 0;
         }
   >
-    <NavigationLink
+    <CustomizedNavigationLink
       block={true}
       href="https://www.yammer.dev"
       unstyled={true}
@@ -47,7 +47,7 @@ exports[`<SidebarListItem /> at large size matches its snapshot 1`] = `
           titleContent="TITLE"
         />
       </div>
-    </NavigationLink>
+    </CustomizedNavigationLink>
   </div>
 </LayoutListItem>
 `;
@@ -72,7 +72,7 @@ exports[`<SidebarListItem /> at medium size matches its snapshot 1`] = `
           padding-top: 0;
         }
   >
-    <NavigationLink
+    <CustomizedNavigationLink
       block={true}
       href="https://www.yammer.dev"
       unstyled={true}
@@ -99,7 +99,7 @@ exports[`<SidebarListItem /> at medium size matches its snapshot 1`] = `
           titleContent="TITLE"
         />
       </div>
-    </NavigationLink>
+    </CustomizedNavigationLink>
   </div>
 </LayoutListItem>
 `;
@@ -124,7 +124,7 @@ exports[`<SidebarListItem /> with clickable and illustration matches its snapsho
           padding-top: 0;
         }
   >
-    <Clickable
+    <CustomizedClickable
       block={true}
       onClick={[Function]}
       unstyled={true}
@@ -151,7 +151,7 @@ exports[`<SidebarListItem /> with clickable and illustration matches its snapsho
           titleContent="TITLE"
         />
       </div>
-    </Clickable>
+    </CustomizedClickable>
   </div>
 </LayoutListItem>
 `;
@@ -176,7 +176,7 @@ exports[`<SidebarListItem /> with clickable and image matches its snapshot 1`] =
           padding-top: 0;
         }
   >
-    <Clickable
+    <CustomizedClickable
       block={true}
       onClick={[Function]}
       unstyled={true}
@@ -202,7 +202,7 @@ exports[`<SidebarListItem /> with clickable and image matches its snapshot 1`] =
           titleContent="TITLE"
         />
       </div>
-    </Clickable>
+    </CustomizedClickable>
   </div>
 </LayoutListItem>
 `;
@@ -227,7 +227,7 @@ exports[`<SidebarListItem /> with link and illustration and newWindow matches it
           padding-top: 0;
         }
   >
-    <NavigationLink
+    <CustomizedNavigationLink
       block={true}
       href="https://www.yammer.dev"
       newWindow={true}
@@ -255,7 +255,7 @@ exports[`<SidebarListItem /> with link and illustration and newWindow matches it
           titleContent="TITLE"
         />
       </div>
-    </NavigationLink>
+    </CustomizedNavigationLink>
   </div>
 </LayoutListItem>
 `;
@@ -280,7 +280,7 @@ exports[`<SidebarListItem /> with link and illustration matches its snapshot 1`]
           padding-top: 0;
         }
   >
-    <NavigationLink
+    <CustomizedNavigationLink
       block={true}
       href="https://www.yammer.dev"
       unstyled={true}
@@ -307,7 +307,7 @@ exports[`<SidebarListItem /> with link and illustration matches its snapshot 1`]
           titleContent="TITLE"
         />
       </div>
-    </NavigationLink>
+    </CustomizedNavigationLink>
   </div>
 </LayoutListItem>
 `;
@@ -332,7 +332,7 @@ exports[`<SidebarListItem /> with link and image matches its snapshot 1`] = `
           padding-top: 0;
         }
   >
-    <NavigationLink
+    <CustomizedNavigationLink
       block={true}
       href="https://www.yammer.dev"
       unstyled={true}
@@ -358,7 +358,7 @@ exports[`<SidebarListItem /> with link and image matches its snapshot 1`] = `
           titleContent="TITLE"
         />
       </div>
-    </NavigationLink>
+    </CustomizedNavigationLink>
   </div>
 </LayoutListItem>
 `;

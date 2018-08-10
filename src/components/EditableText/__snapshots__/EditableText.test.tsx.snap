@@ -18,7 +18,7 @@ exports[`<EditableText /> with additional className matches its snapshot 1`] = `
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -40,7 +40,7 @@ exports[`<EditableText /> with additional className matches its snapshot 1`] = `
             text-decoration: underline;
           }
     />
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -61,7 +61,7 @@ exports[`<EditableText /> with all props except promptText matches its snapshot 
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -85,7 +85,7 @@ exports[`<EditableText /> with all props except promptText matches its snapshot 
     >
       TEXT
     </span>
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -106,7 +106,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -130,7 +130,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
     >
       TEXT
     </span>
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -151,7 +151,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -175,7 +175,7 @@ exports[`<EditableText /> with all props except promptText when clicked and text
     >
       TEXT
     </span>
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -272,7 +272,7 @@ exports[`<EditableText /> with promptText matches its snapshot 1`] = `
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     ariaLabel="PROMPT TEXT"
     focusableRef={[Function]}
     onClick={[Function]}
@@ -297,7 +297,7 @@ exports[`<EditableText /> with promptText matches its snapshot 1`] = `
     >
       PROMPT TEXT
     </span>
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -318,7 +318,7 @@ exports[`<EditableText /> without props when clicked and text is changed and ENT
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -340,7 +340,7 @@ exports[`<EditableText /> without props when clicked and text is changed and ENT
             text-decoration: underline;
           }
     />
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;
 
@@ -361,7 +361,7 @@ exports[`<EditableText /> without props when clicked and text is changed and ESC
         color: #495361;
       }
 >
-  <Clickable
+  <CustomizedClickable
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
@@ -383,6 +383,6 @@ exports[`<EditableText /> without props when clicked and text is changed and ESC
             text-decoration: underline;
           }
     />
-  </Clickable>
+  </CustomizedClickable>
 </span>
 `;

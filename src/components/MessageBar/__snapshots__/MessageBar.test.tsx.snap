@@ -58,9 +58,9 @@ exports[`<MessageBar /> with actions matches its snapshot 1`] = `
           }
       fixed={true}
     >
-      <FakeLink>
+      <CustomizedFakeLink>
         Link
-      </FakeLink>
+      </CustomizedFakeLink>
     </FixedGridColumn>
   </FixedGridRow>
 </CustomizedBlock>
