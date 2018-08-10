@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import FakeLink from '../FakeLink';
 import { join } from '../../util/classNames';
 import { getClassNames } from './Clickable.styles';
@@ -11,7 +12,7 @@ import { ClickableProps } from './Clickable.types';
  * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
  * content in a `button` element.
  */
-export default class Clickable extends React.Component<ClickableProps> {
+export class Clickable extends React.Component<ClickableProps & CustomizableComponentProps> {
   private buttonRef = React.createRef<HTMLButtonElement>();
 
   public constructor(props: ClickableProps) {
@@ -22,8 +23,8 @@ export default class Clickable extends React.Component<ClickableProps> {
   }
 
   public render() {
-    const { ariaLabel, title, unstyled, onClick, children, block, className } = this.props;
-    const classNames = getClassNames({ block });
+    const { ariaLabel, title, unstyled, onClick, children, block, className, theme = defaultTheme } = this.props;
+    const classNames = getClassNames({ block, theme });
 
     return (
       <button
@@ -46,3 +47,6 @@ export default class Clickable extends React.Component<ClickableProps> {
     }
   }
 }
+
+@customizable('Clickable', ['theme'])
+export default class CustomizableClickable extends Clickable {}

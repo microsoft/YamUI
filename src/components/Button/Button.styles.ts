@@ -11,6 +11,7 @@ const primaryColors = (theme: ITheme): IButtonStyles => ({
     color: theme.palette.white,
     backgroundColor: theme.palette.themeDark,
     borderColor: theme.palette.themeDark,
+    textDecoration: 'none',
   },
   rootHovered: {
     color: theme.palette.white,
@@ -35,6 +36,7 @@ const secondaryColors = (theme: ITheme): IButtonStyles => ({
     color: theme.palette.themeDark,
     backgroundColor: theme.palette.white,
     borderColor: theme.palette.neutralDark,
+    textDecoration: 'none',
   },
   rootHovered: {
     color: theme.palette.themeDark,
