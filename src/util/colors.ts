@@ -85,6 +85,7 @@ const getSemanticColors = (p: Partial<IPalette> = palette): Partial<ISemanticCol
   buttonText: p.neutralPrimaryAlt,
   errorText: p.red,
   link: p.themeDark,
+  linkHovered: p.themeDarker,
   menuItemBackgroundHovered: p.neutralLighter,
   inputBackgroundCheckedHovered: p.themePrimary,
   inputBackgroundChecked: p.themeDark,

@@ -1,13 +1,14 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-import { mergeStyleSets } from 'office-ui-fabric-react/lib/Styling';
+import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
 export interface ClickableStyleProps {
   block?: boolean;
+  theme: ITheme;
 }
 
 export const getClassNames = memoizeFunction((styleProps: ClickableStyleProps) => {
-  const { block } = styleProps;
+  const { block, theme } = styleProps;
 
   return mergeStyleSets({
     root: {
@@ -26,6 +27,11 @@ export const getClassNames = memoizeFunction((styleProps: ClickableStyleProps) =
       selectors: {
         '> .y-block': {
           width: '100%',
+        },
+        '&:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink': {
+          textDecoration: 'underline',
+          cursor: 'pointer',
+          color: theme.semanticColors.linkHovered,
         },
       },
     },

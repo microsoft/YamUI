@@ -3,7 +3,8 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { FakeLinkProps } from './FakeLink.types';
-import './FakeLink.css';
+import { getClassNames } from '../FakeLink/FakeLink.styles';
+import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 
 /**
  * A `FakeLink` is simply a span which imitates the styling of an `<a>` tag (or `NavigationLink`
@@ -13,10 +14,14 @@ import './FakeLink.css';
  *
  * NOTE: If you are looking for click interaction please see [Clickable](#clickable).
  */
-export default class FakeLink extends React.Component<FakeLinkProps> {
+export class FakeLink extends React.Component<FakeLinkProps & CustomizableComponentProps> {
   public render() {
-    const { className, children } = this.props;
+    const { className, children, theme = defaultTheme } = this.props;
+    const { root } = getClassNames({ theme });
 
-    return <span className={join(['y-fakeLink', className])}>{children}</span>;
+    return <span className={join(['y-fakeLink', className, root])}>{children}</span>;
   }
 }
+
+@customizable('FakeLink', ['theme'])
+export default class CustomizableFakeLink extends FakeLink {}
