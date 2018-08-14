@@ -6,7 +6,6 @@ exports[`<Tile /> with additional className matches its snapshot 1`] = `
       y-tile
       TEST_CLASSNAME
       {
-        background-color: #dde0e6;
         box-shadow: 0 0 0 1px #dde0e6;
         padding-bottom: 56.25%;
         position: relative;
@@ -32,7 +31,6 @@ exports[`<Tile /> with default options matches its snapshot 1`] = `
   className=
       y-tile
       {
-        background-color: #dde0e6;
         box-shadow: 0 0 0 1px #dde0e6;
         padding-bottom: 75%;
         position: relative;

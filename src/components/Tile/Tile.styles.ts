@@ -19,7 +19,6 @@ export const getClassNames = memoizeFunction((classNameProps: TileClassNameProps
 
   return mergeStyleSets({
     root: {
-      backgroundColor: theme.semanticColors.bodyDivider,
       boxShadow: `0 0 0 1px ${theme.semanticColors.bodyDivider}`,
       paddingBottom: mapAspectRatioToPercent[aspectRatio],
       position: 'relative',
