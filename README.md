@@ -1,7 +1,7 @@
 # YamUI [![Travis](https://img.shields.io/travis/Microsoft/YamUI.svg)](https://travis-ci.org/Microsoft/YamUI)
 
 This is the UI component framework for [Yammer.com](https://www.yammer.com/).
-
+8
 It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Styleguidist](https://react-styleguidist.js.org/), and visual diff regression is done with [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [pixelmatch](https://github.com/mapbox/pixelmatch). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
 
 ## Using YamUI in your own app
