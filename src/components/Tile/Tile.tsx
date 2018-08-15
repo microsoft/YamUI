@@ -18,8 +18,8 @@ export class Tile extends React.Component<TileProps & CustomizableComponentProps
   }
 
   private getClasses() {
-    const { aspectRatio, className, theme = defaultTheme } = this.props;
-    return join(['y-tile', className, getClassNames({ aspectRatio, theme }).root]);
+    const { aspectRatio, className, borderColor, theme = defaultTheme } = this.props;
+    return join(['y-tile', className, getClassNames({ aspectRatio, borderColor, theme }).root]);
   }
 }
 
