@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
-<NavigationLink
+<CustomizedNavigationLink
   ariaLabel="Download the file"
   block={true}
   className="y-actionLink TEST_CLASSNAME"
@@ -38,11 +38,11 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
       </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
-</NavigationLink>
+</CustomizedNavigationLink>
 `;
 
 exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
-<NavigationLink
+<CustomizedNavigationLink
   ariaLabel="Download file"
   block={true}
   className="y-actionLink"
@@ -80,11 +80,11 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
       </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
-</NavigationLink>
+</CustomizedNavigationLink>
 `;
 
 exports[`<ActionLink /> with href matches its snapshot 1`] = `
-<NavigationLink
+<CustomizedNavigationLink
   block={true}
   className="y-actionLink"
   href="https://yammer.com"
@@ -121,11 +121,11 @@ exports[`<ActionLink /> with href matches its snapshot 1`] = `
       </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
-</NavigationLink>
+</CustomizedNavigationLink>
 `;
 
 exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
-<Clickable
+<CustomizedClickable
   ariaLabel="Download file"
   block={true}
   className="y-actionLink"
@@ -162,11 +162,11 @@ exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
       </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
-</Clickable>
+</CustomizedClickable>
 `;
 
 exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
-<Clickable
+<CustomizedClickable
   block={true}
   className="y-actionLink"
   onClick={[MockFunction]}
@@ -202,5 +202,5 @@ exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
       </CustomizedBlock>
     </FixedGridColumn>
   </FixedGridRow>
-</Clickable>
+</CustomizedClickable>
 `;

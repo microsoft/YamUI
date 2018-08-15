@@ -300,12 +300,12 @@ exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
     size="medium"
     titleContent={
       <CustomizedBlock>
-        <Clickable
+        <CustomizedClickable
           ariaLabel="Show file preview"
           unstyled={true}
         >
           Filename.gif
-        </Clickable>
+        </CustomizedClickable>
       </CustomizedBlock>
     }
   />
@@ -341,7 +341,7 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
           top: 4px;
         }
   >
-    <Clickable
+    <CustomizedClickable
       ariaLabel="Remove this attachment"
       block={true}
       onClick={[Function]}
@@ -355,7 +355,7 @@ exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
           size="12"
         />
       </CustomizedBlock>
-    </Clickable>
+    </CustomizedClickable>
   </span>
 </CustomizedBox>
 `;

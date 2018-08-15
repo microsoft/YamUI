@@ -10,10 +10,10 @@ import { ChoiceGroupOption, ChoiceGroupProps } from './ChoiceGroup.types';
 
 const getTextWithLabel = (text: string, label?: string) => {
   const labelContent = label ? <Text bold={true}>{label}: </Text> : null;
-  return () => (
-    <React.Fragment>
+  return ({ labelId }: { labelId?: string }) => (
+    <span id={labelId}>
       {labelContent} {text}
-    </React.Fragment>
+    </span>
   );
 };
 

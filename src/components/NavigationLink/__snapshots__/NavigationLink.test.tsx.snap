@@ -4,7 +4,21 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
   className=
       y-navigationLink
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
   rel="nofollow noopener noreferrer"
   target="_blank"
@@ -22,21 +36,6 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
         cursor: pointer;
         text-decoration: none;
       }
-      &:active {
-        color: inherit;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      &:focus {
-        color: inherit;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      &:hover {
-        color: inherit;
-        cursor: pointer;
-        text-decoration: none;
-      }
   href="test.html"
 >
   link content
@@ -48,7 +47,21 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
   className=
       y-navigationLink
       TEST_CLASSNAME
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
 >
   test content
@@ -60,7 +73,21 @@ exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
   aria-current="page"
   className=
       y-navigationLink
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
 >
   link content
@@ -72,7 +99,21 @@ exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
   aria-label="ARIA LABEL CONTENT"
   className=
       y-navigationLink
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
 >
   link content
@@ -84,7 +125,20 @@ exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
   className=
       y-navigationLink
       {
+        color: #386cbb;
+        cursor: pointer;
         display: block;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
       }
   href="test.html"
 >
@@ -96,7 +150,21 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 <a
   className=
       y-navigationLink
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
 >
   link content
@@ -107,7 +175,21 @@ exports[`<NavigationLink /> with title matches its snapshot 1`] = `
 <a
   className=
       y-navigationLink
-
+      {
+        color: #386cbb;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active, &:focus, &:hover {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: #264f8c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
   href="test.html"
   title="TITLE CONTENT"
 >

@@ -73,9 +73,9 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
       <FixedGridColumn
         fixed={true}
       >
-        <Clickable>
+        <CustomizedClickable>
           Add
-        </Clickable>
+        </CustomizedClickable>
       </FixedGridColumn>
     </FixedGridRow>
   </CustomizedBlock>

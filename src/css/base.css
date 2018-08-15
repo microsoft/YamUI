@@ -145,23 +145,6 @@ input[type='checkbox'] {
   margin: 0 4px 0 0;
 }
 
-/* Links */
-a {
-  color: $linkColor;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-a:active,
-a:focus,
-a:hover {
-  color: $linkColor__active;
-}
-
 /* Use @dark-gray for placeholder text for 4.5:1 contrast ratio. */
 /* Specify opacity to override semi-transparent placeholder text on firefox */
 input::placeholder,
