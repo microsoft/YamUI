@@ -12,7 +12,6 @@ exports[`<Block /> with additional className matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -34,7 +33,6 @@ exports[`<Block /> with backgroundColor matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -56,7 +54,6 @@ exports[`<Block /> with bottom spacing matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -76,7 +73,6 @@ exports[`<Block /> with default options matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -98,7 +94,6 @@ exports[`<Block /> with divider matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -121,7 +116,6 @@ exports[`<Block /> with ellipsis matches its snapshot 1`] = `
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -143,7 +137,6 @@ exports[`<Block /> with horizontal padding matches its snapshot 1`] = `
           overflow-wrap: break-word;
           padding-left: 1.2rem;
           padding-right: 1.2rem;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -165,7 +158,6 @@ exports[`<Block /> with negative push matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -189,7 +181,6 @@ exports[`<Block /> with padding matches its snapshot 1`] = `
           padding-left: 0.8rem;
           padding-right: 0.8rem;
           padding-top: 0.8rem;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -211,7 +202,6 @@ exports[`<Block /> with positive push matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -233,7 +223,6 @@ exports[`<Block /> with secondary textColor matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -255,7 +244,6 @@ exports[`<Block /> with textAlign matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -277,7 +265,6 @@ exports[`<Block /> with top spacing matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -299,7 +286,6 @@ exports[`<Block /> with vertical padding matches its snapshot 1`] = `
           overflow-wrap: break-word;
           padding-bottom: 2.0rem;
           padding-top: 2.0rem;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -330,7 +316,6 @@ exports[`<Block /> with xLarge text size matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >

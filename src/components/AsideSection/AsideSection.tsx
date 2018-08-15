@@ -30,7 +30,7 @@ export class AsideSection extends React.Component<AsideSectionProps & Customizab
                 </Block>
               </Heading>
             </FixedGridColumn>
-            {this.getActionColumn(classes)}
+            {this.getActionColumn()}
           </FixedGridRow>
         </Block>
         <div>{children}</div>
@@ -38,13 +38,9 @@ export class AsideSection extends React.Component<AsideSectionProps & Customizab
     );
   }
 
-  private getActionColumn(classes: { action: string }) {
+  private getActionColumn() {
     if (this.props.action) {
-      return (
-        <FixedGridColumn className={classes.action} fixed={true}>
-          {this.props.action}
-        </FixedGridColumn>
-      );
+      return <FixedGridColumn fixed={true}>{this.props.action}</FixedGridColumn>;
     }
 
     return null;
