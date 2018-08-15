@@ -90,7 +90,6 @@ export const getClassNames = memoizeFunction((props: BlockClassNameProps) => {
             paddingBottom: gutterSizes[verticalPadding],
           }
         : {}),
-      wordBreak: 'break-word',
       wordWrap: 'break-word',
       overflowWrap: 'break-word',
     },
