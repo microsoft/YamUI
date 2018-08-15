@@ -23,7 +23,6 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -140,7 +139,6 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
@@ -475,7 +473,6 @@ exports[`<Dropdown /> with section header matches its snapshot 1`] = `
         y-block--inner
         {
           overflow-wrap: break-word;
-          word-break: break-word;
           word-wrap: break-word;
         }
   >
