@@ -2,25 +2,29 @@
 import { TileAspectRatio } from './Tile.types';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
+import { PaletteColor } from '../../util/colors';
 
 export interface TileClassNameProps {
   aspectRatio: TileAspectRatio;
+  borderColor?: PaletteColor;
   theme: ITheme;
 }
 
 const mapAspectRatioToPercent: Record<TileAspectRatio, string> = {
+  [TileAspectRatio.OneOne]: '100%',
   [TileAspectRatio.FourThree]: '75%',
   [TileAspectRatio.SixteenNine]: '56.25%',
   [TileAspectRatio.TwentyOneNine]: '42.85%',
 };
 
 export const getClassNames = memoizeFunction((classNameProps: TileClassNameProps) => {
-  const { aspectRatio, theme } = classNameProps;
+  const { aspectRatio, borderColor, theme } = classNameProps;
+
+  const borderWidth = borderColor ? '1px' : '0';
+  const border = borderColor ? `solid ${borderWidth} ${theme.palette[borderColor]}` : undefined;
 
   return mergeStyleSets({
     root: {
-      backgroundColor: theme.semanticColors.bodyDivider,
-      boxShadow: `0 0 0 1px ${theme.semanticColors.bodyDivider}`,
       paddingBottom: mapAspectRatioToPercent[aspectRatio],
       position: 'relative',
       width: '100%',
@@ -29,11 +33,13 @@ export const getClassNames = memoizeFunction((classNameProps: TileClassNameProps
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          border,
+          width: '100%',
           position: 'absolute',
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
+          top: borderWidth,
+          bottom: borderWidth,
+          left: borderWidth,
+          right: borderWidth,
         },
       },
     },

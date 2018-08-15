@@ -91,3 +91,37 @@ const image = <Image source={yammerLogo} description={yammerLogoDescription} ful
   </FixedGridRow>
 </div>
 ```
+
+With border color:
+
+```js { "props": { "data-description": "with border color" } }
+const { TileAspectRatio } = require('.');
+const { ImageFit } = require('../Image');
+const { TextColor } = require('../Text');
+
+const yammerLogo = 'logo.png';
+const yammerLogoDescription = 'Yammer "y" logo';
+
+const image = <Image source={yammerLogo} description={yammerLogoDescription} fullWidth={true} />;
+
+<div>
+  <FixedGridRow>
+    <FixedGridColumn>
+      <Tile borderColor="themeDarker" aspectRatio={TileAspectRatio.FourThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile borderColor="themeDarker" aspectRatio={TileAspectRatio.FourThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile borderColor="themeDarker" aspectRatio={TileAspectRatio.FourThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile borderColor="themeDarker" aspectRatio={TileAspectRatio.FourThree}>
+        <Clickable unstyled={true} block={true} onClick={action('button clicked')}>
+          <Text color={TextColor.METADATA}>+ 2 MORE</Text>
+        </Clickable>
+      </Tile>
+    </FixedGridColumn>
+  </FixedGridRow>
+</div>
+```

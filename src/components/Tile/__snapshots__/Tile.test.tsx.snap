@@ -6,21 +6,46 @@ exports[`<Tile /> with additional className matches its snapshot 1`] = `
       y-tile
       TEST_CLASSNAME
       {
-        background-color: #dde0e6;
-        box-shadow: 0 0 0 1px #dde0e6;
         padding-bottom: 56.25%;
         position: relative;
         width: 100%;
       }
       &.y-tile > * {
         align-items: center;
-        bottom: 0px;
+        bottom: 0;
         display: flex;
         justify-content: center;
-        left: 0px;
+        left: 0;
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+>
+  test content
+</div>
+`;
+
+exports[`<Tile /> with borderColor matches its snapshot 1`] = `
+<div
+  className=
+      y-tile
+      {
+        padding-bottom: 56.25%;
+        position: relative;
+        width: 100%;
+      }
+      &.y-tile > * {
+        align-items: center;
+        border: solid 1px #6c98d9;
+        bottom: 1px;
+        display: flex;
+        justify-content: center;
+        left: 1px;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        width: 100%;
       }
 >
   test content
@@ -32,21 +57,20 @@ exports[`<Tile /> with default options matches its snapshot 1`] = `
   className=
       y-tile
       {
-        background-color: #dde0e6;
-        box-shadow: 0 0 0 1px #dde0e6;
         padding-bottom: 75%;
         position: relative;
         width: 100%;
       }
       &.y-tile > * {
         align-items: center;
-        bottom: 0px;
+        bottom: 0;
         display: flex;
         justify-content: center;
-        left: 0px;
+        left: 0;
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        width: 100%;
       }
 >
   test content

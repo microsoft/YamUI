@@ -32,6 +32,20 @@ describe('<Tile />', () => {
     });
   });
 
+  describe('with borderColor', () => {
+    beforeEach(() => {
+      component = shallow(
+        <Tile borderColor="themePrimary" aspectRatio={TileAspectRatio.SixteenNine}>
+          test content
+        </Tile>,
+      );
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('with customizer', () => {
     let mountedComponent: ReactWrapper;
     const theme = defaultTheme;
