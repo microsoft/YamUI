@@ -7,7 +7,6 @@ import Clickable from '../Clickable';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
-import { getClassNames } from './ActionLink.styles';
 import { ActionLinkProps, NavigationActionLinkProps, ClickableActionLinkProps } from './ActionLink.types';
 
 /**
@@ -17,11 +16,9 @@ import { ActionLinkProps, NavigationActionLinkProps, ClickableActionLinkProps } 
 export default class ActionLink extends React.Component<ActionLinkProps> {
   public render() {
     const { ariaLabel, className, icon: Icon, text } = this.props;
-    const classNames = getClassNames();
-
     // Remove Block around Icon when this is addressed: https://github.com/Microsoft/YamUI/issues/327
     const content = (
-      <FixedGridRow gutterSize={GutterSize.SMALL} className={classNames.wrapper}>
+      <FixedGridRow gutterSize={GutterSize.SMALL}>
         <FixedGridColumn fixed={true}>
           <Block push={2}>
             <Icon size={IconSize.MEDIUM} block={true} />

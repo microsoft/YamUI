@@ -8,14 +8,6 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
   href="https://yammer.com"
 >
   <FixedGridRow
-    className=
-
-        {
-          padding-bottom: 0.6rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.2rem;
-        }
     gutterSize="small"
   >
     <FixedGridColumn
@@ -50,14 +42,6 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
   newWindow={true}
 >
   <FixedGridRow
-    className=
-
-        {
-          padding-bottom: 0.6rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.2rem;
-        }
     gutterSize="small"
   >
     <FixedGridColumn
@@ -91,14 +75,6 @@ exports[`<ActionLink /> with href matches its snapshot 1`] = `
   newWindow={true}
 >
   <FixedGridRow
-    className=
-
-        {
-          padding-bottom: 0.6rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.2rem;
-        }
     gutterSize="small"
   >
     <FixedGridColumn
@@ -132,14 +108,6 @@ exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
   onClick={[MockFunction]}
 >
   <FixedGridRow
-    className=
-
-        {
-          padding-bottom: 0.6rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.2rem;
-        }
     gutterSize="small"
   >
     <FixedGridColumn
@@ -172,14 +140,6 @@ exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
   onClick={[MockFunction]}
 >
   <FixedGridRow
-    className=
-
-        {
-          padding-bottom: 0.6rem;
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: 0.2rem;
-        }
     gutterSize="small"
   >
     <FixedGridColumn
