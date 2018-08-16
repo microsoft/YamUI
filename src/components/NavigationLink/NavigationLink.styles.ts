@@ -12,7 +12,11 @@ export const getClassNames = memoizeFunction((styleProps: NavigationLinkStylePro
   const { unstyled, block, theme } = styleProps;
 
   const overrides = unstyled
-    ? {}
+    ? {
+        textDecoration: 'none',
+        cursor: 'pointer',
+        color: 'inherit',
+      }
     : {
         textDecoration: 'underline',
         cursor: 'pointer',
