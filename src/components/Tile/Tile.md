@@ -18,6 +18,40 @@ const image = <Image source={yammerLogo} description={yammerLogoDescription} ful
 <div>
   <FixedGridRow>
     <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.TwoThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.TwoThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.TwoThree}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.TwoThree}>{image}</Tile>
+    </FixedGridColumn>
+  </FixedGridRow>
+
+  <br />
+
+  <FixedGridRow>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.OneOne}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.OneOne}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.OneOne}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.OneOne}>{image}</Tile>
+    </FixedGridColumn>
+  </FixedGridRow>
+
+  <br />
+
+  <FixedGridRow>
+    <FixedGridColumn>
       <Tile aspectRatio={TileAspectRatio.FourThree}>{image}</Tile>
     </FixedGridColumn>
     <FixedGridColumn>
