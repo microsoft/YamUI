@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea /> with className matches its snapshot 1`] = `
+<p
+  className=
+      TEST_CLASSNAME
+      {
+        line-height: inherit;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+      }
+>
+  paragraph text
+</p>
+`;
+
+exports[`<TextArea /> with default options matches its snapshot 1`] = `
+<p
+  className=
+
+      {
+        line-height: inherit;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+      }
+>
+  paragraph text
+</p>
+`;

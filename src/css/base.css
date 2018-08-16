@@ -36,11 +36,6 @@ h6 {
 }
 
 /* Text elements */
-p {
-  margin: 0 0 1.5rem;
-  line-height: inherit;
-}
-
 ol,
 ul {
   list-style: none;
