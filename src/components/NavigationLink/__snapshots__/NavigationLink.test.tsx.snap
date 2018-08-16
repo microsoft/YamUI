@@ -36,6 +36,16 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
         cursor: pointer;
         text-decoration: none;
       }
+      &:active, &:focus, &:hover {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
   href="test.html"
 >
   link content
