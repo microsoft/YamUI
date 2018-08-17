@@ -15,26 +15,6 @@ body {
   font-weight: $fontWeight__normal;
 }
 
-/* Headings */
-h1 {
-  @extend heading__1;
-}
-h2 {
-  @extend heading__2;
-}
-h3 {
-  @extend heading__3;
-}
-h4 {
-  @extend heading__4;
-}
-h5 {
-  @extend heading__5;
-}
-h6 {
-  @extend heading__6;
-}
-
 /* Text elements */
 ol,
 ul {

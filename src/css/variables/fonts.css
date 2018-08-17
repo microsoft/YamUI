@@ -1,10 +1,11 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-@import "src/css/variables/gutters.css";
+@import 'src/css/variables/gutters.css';
 
 /**
   * Only use these sizes. $fontSize__xSmall should rarely be used.
   */
-$fontStack: Segoe UI WestEuropean, Segoe UI, Segoe UI Emoji, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+$fontStack: Segoe UI WestEuropean, Segoe UI, Segoe UI Emoji, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+  sans-serif;
 
 $fontSize__xxLarge: 2.4rem;
 $lineHeight__xxLarge: 2.8rem;
@@ -16,20 +17,19 @@ $fontSize__large: 1.8rem;
 $lineHeight__large: 2.4rem;
 
 $fontSize__medium: 1.5rem;
-$lineHeight__medium: 2.0rem;
+$lineHeight__medium: 2rem;
 
 $fontSize__mediumSub: 1.4rem;
-$lineHeight__mediumSub: 2.0rem;
+$lineHeight__mediumSub: 2rem;
 
 $fontSize__small: 1.2rem;
 $lineHeight__small: 1.6rem;
 
-$fontSize__xSmall: 1.0rem;
+$fontSize__xSmall: 1rem;
 $lineHeight__xSmall: 1.6rem;
 
 $fontWeight__normal: 400;
 $fontWeight__bold: 600;
-
 
 /* Extend helpers for typography sets */
 @define-extend text__xxLarge {
@@ -59,44 +59,6 @@ $fontWeight__bold: 600;
 @define-extend text__xSmall {
   font-size: $fontSize__xSmall;
   line-height: $lineHeight__xSmall;
-}
-
-/* Headings */
-@define-extend heading__1 {
-  font-size: $fontSize__xxLarge;
-  line-height: $lineHeight__xxLarge;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
-}
-@define-extend heading__2 {
-  font-size: $fontSize__xLarge;
-  line-height: $lineHeight__xLarge;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
-}
-@define-extend heading__3 {
-  font-size: $fontSize__large;
-  line-height: $lineHeight__large;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__medium;
-}
-@define-extend heading__4 {
-  font-size: $fontSize__large;
-  line-height: $lineHeight__large;
-  font-weight: $fontWeight__normal;
-  margin-bottom: $gutterWidth__medium;
-}
-@define-extend heading__5 {
-  font-size: $fontSize__medium;
-  line-height: $lineHeight__medium;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__medium;
-}
-@define-extend heading__6 {
-  font-size: $fontSize__mediumSub;
-  line-height: $lineHeight__mediumSub;
-  font-weight: $fontWeight__bold;
-  margin-bottom: $gutterWidth__small;
 }
 
 @define-extend ellipsis {
