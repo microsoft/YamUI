@@ -46,14 +46,6 @@ table thead th {
   font-weight: $fontWeight__bold;
 }
 
-hr {
-  clear: both;
-  margin: 15px auto;
-  width: 80%;
-  height: 0;
-  border-top: 1px solid $borderColor__secondary;
-}
-
 /* Links */
 a {
   color: $linkColor;

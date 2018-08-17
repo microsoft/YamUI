@@ -89,7 +89,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
   <Paragraph>
-    The <Strong>imageFit: none</Strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
+    The <Strong>imageFit: none</Strong> option places the image at the top left of its <Emphasis>div</Emphasis> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
   </Paragraph>
   <Image source={yammerLogo} description={yammerLogoDescription} height={240} width={240} />
 </div>
@@ -105,7 +105,7 @@ const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
   <Paragraph>
-    The <Strong>imageFit: none</Strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
+    The <Strong>imageFit: none</Strong> option places the image at the top left of its <Emphasis>div</Emphasis> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
   </Paragraph>
   <Image
     source={yammerLogo}
