@@ -5,6 +5,8 @@ import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { SpinnerColor, SpinnerSize } from './Spinner.types';
 import { getGutterValue } from '../../util/styles/gutters';
 import { ITheme } from '../Customizer';
+import { getFont } from '../../util/styles/fonts';
+import { TextSize } from '../Text';
 
 export interface SpinnerClassNames {
   root: string;
@@ -20,15 +22,20 @@ const labelMargins = {
 export interface SpinnerClassNameProps {
   size: SpinnerSize;
   isCentered: boolean;
+  theme: ITheme;
+  textSize: TextSize;
 }
 
 export const getClassNames = memoizeFunction((classNameProps: SpinnerClassNameProps): SpinnerClassNames => {
-  const { size, isCentered } = classNameProps;
+  const { size, isCentered, theme, textSize } = classNameProps;
+  const font = getFont(textSize, theme);
+
   return mergeStyleSets({
     root: {
       display: 'flex',
       alignItems: 'center',
       flexDirection: size === SpinnerSize.LARGE ? 'column' : 'row',
+      minHeight: font.lineHeight,
       justifyContent: isCentered ? 'center' : undefined,
     },
     label: {

@@ -9,6 +9,7 @@ exports[`<Spinner /> when centered matches its snapshot 1`] = `
         display: flex;
         flex-direction: row;
         justify-content: center;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -46,6 +47,7 @@ exports[`<Spinner /> with additional className matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -83,6 +85,7 @@ exports[`<Spinner /> with dark color matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -120,6 +123,7 @@ exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -146,6 +150,7 @@ exports[`<Spinner /> with large size matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: column;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -184,6 +189,7 @@ exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -221,6 +227,7 @@ exports[`<Spinner /> with visible text matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 2.0rem;
       }
 >
   <StyledCustomizedSpinner
@@ -258,6 +265,7 @@ exports[`<Spinner /> with xSmall size matches its snapshot 1`] = `
         align-items: center;
         display: flex;
         flex-direction: row;
+        min-height: 1.6rem;
       }
 >
   <StyledCustomizedSpinner
