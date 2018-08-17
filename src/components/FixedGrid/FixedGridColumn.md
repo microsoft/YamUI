@@ -10,12 +10,12 @@ Fixed left column with width:
     <Image source="logo.png" description="" fullWidth={true} />
   </FixedGridColumn>
   <FixedGridColumn>
-    <p>
+    <Paragraph>
       The left column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       The right column is not fixed, and will grow or shrink to fill the grid's container.
-    </p>
+    </Paragraph>
   </FixedGridColumn>
 </FixedGridRow>
 ```
@@ -28,12 +28,12 @@ Fixed left column without width:
     <Image source="logo.png" description="" width={100} />
   </FixedGridColumn>
   <FixedGridColumn>
-    <p>
+    <Paragraph>
       The left column is fixed with <strong>fixed: true</strong>, but doesn't have a set <strong>width</strong>, so it will shrink to fit its contents. Its child <strong>Image</strong> has set <strong>width: 100</strong>.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       The right column is not fixed, and will grow or shrink to fill the grid's container.
-    </p>
+    </Paragraph>
   </FixedGridColumn>
 </FixedGridRow>
 ```
@@ -43,12 +43,12 @@ Fixed right column with width:
 ```js { "props": { "data-description": "fixed right column with width" } }
 <FixedGridRow>
   <FixedGridColumn>
-    <p>
+    <Paragraph>
       The right column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       The left column is not fixed, and will grow or shrink to fill the grid's container.
-    </p>
+    </Paragraph>
   </FixedGridColumn>
   <FixedGridColumn fixed={true} width={150}>
     <Image source="logo.png" description="" fullWidth={true} />
@@ -61,12 +61,12 @@ Fixed right column without width:
 ```js { "props": { "data-description": "fixed right column without width" } }
 <FixedGridRow>
   <FixedGridColumn>
-    <p>
+    <Paragraph>
       The right column is fixed with <strong>fixed: true</strong>, but doesn't have a set <strong>width</strong>, so it will shrink to fit its contents. Its child <strong>Image</strong> has set <strong>width: 100</strong>.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       The left column is not fixed, and will grow or shrink to fill the grid's container.
-    </p>
+    </Paragraph>
   </FixedGridColumn>
   <FixedGridColumn fixed={true}>
     <Image source="logo.png" description="" width={100} />

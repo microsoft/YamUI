@@ -24,9 +24,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <p>
+  <Paragraph>
     The <strong>imageFit: cover</strong> option can be used to nicely fill the desired image area while hiding any overflow.
-  </p>
+  </Paragraph>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -46,9 +46,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <p>
+  <Paragraph>
     The <strong>imageFit: contain</strong> option displays the entire image within our image area and leaves whitespace.
-  </p>
+  </Paragraph>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -68,9 +68,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <p>
+  <Paragraph>
     The <strong>imageFit: center</strong> option centers the image horizontally and vertically, using the image's original size and cropping its overflow.
-  </p>
+  </Paragraph>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -88,9 +88,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <p>
+  <Paragraph>
     The <strong>imageFit: none</strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
-  </p>
+  </Paragraph>
   <Image source={yammerLogo} description={yammerLogoDescription} height={240} width={240} />
 </div>
 ```
@@ -104,9 +104,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <p>
+  <Paragraph>
     The <strong>imageFit: none</strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
-  </p>
+  </Paragraph>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -242,9 +242,9 @@ class StateChangeDemo extends React.Component {
 }
 
 <div>
-  <p>
+  <Paragraph>
     When an image's loading state changes, it will trigger the <strong>onLoadingStateChange</strong> callback. This example updates the source URL passed to the image when its <strong>onLoadingStateChange</strong> is called with an error.
-  </p>
+  </Paragraph>
   <StateChangeDemo />
 </div>
 ```

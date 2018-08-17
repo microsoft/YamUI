@@ -55,7 +55,7 @@ const textSample = (
 );
 
 <Block>
-  <p>Adjacent Buttons, sized Text, and Text with ellipsis + inherited size, will all share a common baseline when wrapped by different Block textSizes.</p>
+  <Paragraph>Adjacent Buttons, sized Text, and Text with ellipsis + inherited size, will all share a common baseline when wrapped by different Block textSizes.</Paragraph>
 
   <Block bottomSpacing={GutterSize.MEDIUM}>
     <b>xSmall</b>
