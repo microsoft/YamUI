@@ -47,11 +47,6 @@ caption {
   background: $captionBackgroundColor;
 }
 
-b,
-strong {
-  font-weight: $fontWeight__bold;
-}
-
 em {
   font-style: italic;
 }
