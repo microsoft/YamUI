@@ -11,7 +11,7 @@ Fixed left column with width:
   </FixedGridColumn>
   <FixedGridColumn>
     <Paragraph>
-      The left column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
+      The left column is fixed with <Strong>fixed: true</Strong> and <Strong>width: 150</Strong>. Its child <Strong>Image</Strong> has set <Strong>fullWidth: true</Strong> to fill the parent.
     </Paragraph>
     <Paragraph>
       The right column is not fixed, and will grow or shrink to fill the grid's container.
@@ -29,7 +29,7 @@ Fixed left column without width:
   </FixedGridColumn>
   <FixedGridColumn>
     <Paragraph>
-      The left column is fixed with <strong>fixed: true</strong>, but doesn't have a set <strong>width</strong>, so it will shrink to fit its contents. Its child <strong>Image</strong> has set <strong>width: 100</strong>.
+      The left column is fixed with <Strong>fixed: true</Strong>, but doesn't have a set <Strong>width</Strong>, so it will shrink to fit its contents. Its child <Strong>Image</Strong> has set <Strong>width: 100</Strong>.
     </Paragraph>
     <Paragraph>
       The right column is not fixed, and will grow or shrink to fill the grid's container.
@@ -44,7 +44,7 @@ Fixed right column with width:
 <FixedGridRow>
   <FixedGridColumn>
     <Paragraph>
-      The right column is fixed with <strong>fixed: true</strong> and <strong>width: 150</strong>. Its child <strong>Image</strong> has set <strong>fullWidth: true</strong> to fill the parent.
+      The right column is fixed with <Strong>fixed: true</Strong> and <Strong>width: 150</Strong>. Its child <Strong>Image</Strong> has set <Strong>fullWidth: true</Strong> to fill the parent.
     </Paragraph>
     <Paragraph>
       The left column is not fixed, and will grow or shrink to fill the grid's container.
@@ -62,7 +62,7 @@ Fixed right column without width:
 <FixedGridRow>
   <FixedGridColumn>
     <Paragraph>
-      The right column is fixed with <strong>fixed: true</strong>, but doesn't have a set <strong>width</strong>, so it will shrink to fit its contents. Its child <strong>Image</strong> has set <strong>width: 100</strong>.
+      The right column is fixed with <Strong>fixed: true</Strong>, but doesn't have a set <Strong>width</Strong>, so it will shrink to fit its contents. Its child <Strong>Image</Strong> has set <Strong>width: 100</Strong>.
     </Paragraph>
     <Paragraph>
       The left column is not fixed, and will grow or shrink to fill the grid's container.
@@ -101,7 +101,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: XXLARGE</strong> and <strong>bottomSpacing: XXLARGE</strong>.
+      This is an example with <Strong>gutterSize: XXLARGE</Strong> and <Strong>bottomSpacing: XXLARGE</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -110,7 +110,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: XLARGE</strong> and <strong>bottomSpacing: XLARGE</strong>.
+      This is an example with <Strong>gutterSize: XLARGE</Strong> and <Strong>bottomSpacing: XLARGE</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -119,7 +119,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: LARGE</strong> and <strong>bottomSpacing: LARGE</strong>.
+      This is an example with <Strong>gutterSize: LARGE</Strong> and <Strong>bottomSpacing: LARGE</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -128,7 +128,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: MEDIUM</strong> and <strong>bottomSpacing: MEDIUM</strong>.
+      This is an example with <Strong>gutterSize: MEDIUM</Strong> and <Strong>bottomSpacing: MEDIUM</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -137,7 +137,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: SMALL</strong> and <strong>bottomSpacing: SMALL</strong>.
+      This is an example with <Strong>gutterSize: SMALL</Strong> and <Strong>bottomSpacing: SMALL</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -146,7 +146,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: XSMALL</strong> and <strong>bottomSpacing: XSMALL</strong>.
+      This is an example with <Strong>gutterSize: XSMALL</Strong> and <Strong>bottomSpacing: XSMALL</Strong>.
     </FixedGridColumn>
   </FixedGridRow>
 
@@ -155,7 +155,7 @@ const { GutterSize } = require('.');
       <Image source="logo.png" description="" fullWidth={true} />
     </FixedGridColumn>
     <FixedGridColumn>
-      This is an example with <strong>gutterSize: XSMALL</strong> and no bottomSpacing.
+      This is an example with <Strong>gutterSize: XSMALL</Strong> and no bottomSpacing.
     </FixedGridColumn>
   </FixedGridRow>
 </div>

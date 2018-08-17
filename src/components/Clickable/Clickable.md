@@ -17,7 +17,7 @@ Unstyled:
 
 ```js { "props": { "data-description": "unstyled", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 <div>
-  The following Clickable example has <strong>unstyled: true</strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
+  The following Clickable example has <Strong>unstyled: true</Strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
 </div>
 ```
 
@@ -26,7 +26,7 @@ Unstyled block with FakeLink:
 ```js { "props": { "data-description": "unstyled block with fakelink", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
 <div>
   <Clickable onClick={action('clickable clicked')} unstyled={true} block={true}>
-    This entire area is a Clickable with <strong>unstyled: true</strong> and <strong>block: true</strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
+    This entire area is a Clickable with <Strong>unstyled: true</Strong> and <Strong>block: true</Strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
   </Clickable>
 </div>
 ```
@@ -37,7 +37,7 @@ Wrapping block content:
 
 <Clickable onClick={action('clickable clicked')} block={true}>
   <div>
-    This <strong>Clickable</strong> component wraps an entire block of text. By default all text content within a <strong>Clickable</strong> tag will be styled like a link.
+    This <Strong>Clickable</Strong> component wraps an entire block of text. By default all text content within a <Strong>Clickable</Strong> tag will be styled like a link.
   </div>
 </Clickable>
 ```
