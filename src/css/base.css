@@ -27,51 +27,6 @@ ol {
   margin: 0 1.5rem;
 }
 
-abbr,
-acronym {
-  border-bottom: 1px dotted $textColor__secondary;
-}
-
-address {
-  margin-top: 1.5rem;
-  font-style: italic;
-}
-
-blockquote {
-  margin: 1.5rem;
-  color: $textColor__secondary;
-  font-style: italic;
-}
-
-caption {
-  background: $captionBackgroundColor;
-}
-
-em {
-  font-style: italic;
-}
-
-small {
-  @extend text__small;
-}
-big {
-  @extend text__large;
-}
-
-dfn {
-  font-style: italic;
-  font-weight: $fontWeight__bold;
-}
-
-pre,
-code {
-  font-size: 1rem;
-  font-family: 'andale mono', 'monotype.com', 'lucida console', monospace;
-  margin: 1.5rem 0;
-  white-space: pre;
-  line-height: 1.5;
-}
-
 /* Tables, layout */
 table {
   border-collapse: collapse;
@@ -99,22 +54,6 @@ hr {
   border-top: 1px solid $borderColor__secondary;
 }
 
-/* Forms */
-button,
-input,
-textarea,
-select {
-  font-family: $fontStack;
-}
-
-button {
-  border-radius: 0;
-}
-
-input[type='checkbox'] {
-  margin: 0 4px 0 0;
-}
-
 /* Links */
 a {
   color: $linkColor;
@@ -128,12 +67,4 @@ a:active,
 a:focus,
 a:hover {
   color: $linkColor__active;
-}
-
-/* Use @dark-gray for placeholder text for 4.5:1 contrast ratio. */
-/* Specify opacity to override semi-transparent placeholder text on firefox */
-input::placeholder,
-textarea::placeholder {
-  color: $textColor__metadata;
-  opacity: 1;
 }
