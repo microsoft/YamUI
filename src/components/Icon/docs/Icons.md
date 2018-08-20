@@ -43,40 +43,26 @@ Sizes:
 const { IconSize } = require('../index');
 const Attach = require('../icons/Attach').default;
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th>XXL</th>
-      <th>XL</th>
-      <th>L</th>
-      <th>M</th>
-      <th>S</th>
-      <th>XS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <Attach size={IconSize.XXLARGE} />
-      </td>
-      <td>
-        <Attach size={IconSize.XLARGE} />
-      </td>
-      <td>
-        <Attach size={IconSize.LARGE} />
-      </td>
-      <td>
-        <Attach size={IconSize.MEDIUM} />
-      </td>
-      <td>
-        <Attach size={IconSize.SMALL} />
-      </td>
-      <td>
-        <Attach size={IconSize.XSMALL} />
-      </td>
-    </tr>
-  </tbody>
-</table>
+<LayoutList direction="horizontal">
+  <LayoutListItem>
+    <Attach size={IconSize.XXLARGE} block={true} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Attach size={IconSize.XLARGE} block={true} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Attach size={IconSize.LARGE} block={true} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Attach size={IconSize.MEDIUM} block={true} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Attach size={IconSize.SMALL} block={true} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Attach size={IconSize.XSMALL} block={true} />
+  </LayoutListItem>
+</LayoutList>
 ```
 
 Auto-sized to text in Text:

@@ -9,36 +9,23 @@ Without image:
 ```js { "props": { "data-description": "without image" } }
 const { AvatarSize } = require('.');
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th>XL</th>
-      <th>L</th>
-      <th>M</th>
-      <th>S</th>
-      <th>XS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <Avatar size={AvatarSize.XLARGE} name={user.name} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.LARGE} name={user.name} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.MEDIUM} name={user.name} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.SMALL} name={user.name} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.XSMALL} name={user.name} />
-      </td>
-    </tr>
-  </tbody>
-</table>
+<LayoutList direction="horizontal">
+  <LayoutListItem>
+    <Avatar size={AvatarSize.XLARGE} name="Xtra Large" />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.LARGE} name="Large" />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.MEDIUM} name="Medium" />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.SMALL} name="Small" />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.XSMALL} name="Xtra Small" />
+  </LayoutListItem>
+</LayoutList>
 ```
 
 With image:
@@ -46,36 +33,23 @@ With image:
 ```js { "props": { "data-description": "with image" } }
 const { AvatarSize } = require('.');
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th>XL</th>
-      <th>L</th>
-      <th>M</th>
-      <th>S</th>
-      <th>XS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <Avatar size={AvatarSize.XLARGE} name={user.name} imageUrl={user.imageUrl} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.LARGE} name={user.name} imageUrl={user.imageUrl} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.MEDIUM} name={user.name} imageUrl={user.imageUrl} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.SMALL} name={user.name} imageUrl={user.imageUrl} />
-      </td>
-      <td>
-        <Avatar size={AvatarSize.XSMALL} name={user.name} imageUrl={user.imageUrl} />
-      </td>
-    </tr>
-  </tbody>
-</table>
+<LayoutList direction="horizontal">
+  <LayoutListItem>
+    <Avatar size={AvatarSize.XLARGE} name={user.name} imageUrl={user.imageUrl} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.LARGE} name={user.name} imageUrl={user.imageUrl} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.MEDIUM} name={user.name} imageUrl={user.imageUrl} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.SMALL} name={user.name} imageUrl={user.imageUrl} />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar size={AvatarSize.XSMALL} name={user.name} imageUrl={user.imageUrl} />
+  </LayoutListItem>
+</LayoutList>
 ```
 
 With image and badge:
@@ -88,66 +62,53 @@ const badgeContent = (
   <AdminBadge block={true} />
 );
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th>XL</th>
-      <th>L</th>
-      <th>M</th>
-      <th>S</th>
-      <th>XS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <Avatar
-          size={AvatarSize.XLARGE}
-          name={user.name}
-          imageUrl={user.imageUrl}
-          badgeContent={badgeContent}
-          badgeDescription="Admin"
-        />
-      </td>
-      <td>
-        <Avatar
-          size={AvatarSize.LARGE}
-          name={user.name}
-          imageUrl={user.imageUrl}
-          badgeContent={badgeContent}
-          badgeDescription="Admin"
-        />
-      </td>
-      <td>
-        <Avatar
-          size={AvatarSize.MEDIUM}
-          name={user.name}
-          imageUrl={user.imageUrl}
-          badgeContent={badgeContent}
-          badgeDescription="Admin"
-        />
-      </td>
-      <td>
-        <Avatar
-          size={AvatarSize.SMALL}
-          name={user.name}
-          imageUrl={user.imageUrl}
-          badgeContent={badgeContent}
-          badgeDescription="Admin"
-        />
-      </td>
-      <td>
-        <Avatar
-          size={AvatarSize.XSMALL}
-          name={user.name}
-          imageUrl={user.imageUrl}
-          badgeContent={badgeContent}
-          badgeDescription="Admin"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
+<LayoutList direction="horizontal">
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.XLARGE}
+      name={user.name}
+      imageUrl={user.imageUrl}
+      badgeContent={badgeContent}
+      badgeDescription="Admin"
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.LARGE}
+      name={user.name}
+      imageUrl={user.imageUrl}
+      badgeContent={badgeContent}
+      badgeDescription="Admin"
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.MEDIUM}
+      name={user.name}
+      imageUrl={user.imageUrl}
+      badgeContent={badgeContent}
+      badgeDescription="Admin"
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.SMALL}
+      name={user.name}
+      imageUrl={user.imageUrl}
+      badgeContent={badgeContent}
+      badgeDescription="Admin"
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.XSMALL}
+      name={user.name}
+      imageUrl={user.imageUrl}
+      badgeContent={badgeContent}
+      badgeDescription="Admin"
+    />
+  </LayoutListItem>
+</LayoutList>
 ```
 
 With image and soft border:
@@ -155,61 +116,48 @@ With image and soft border:
 ```js { "props": { "data-description": "with image and soft border" } }
 const { BorderType, AvatarSize } = require('.');
 
-<table style={{ textAlign: 'center' }}>
-  <thead>
-    <tr>
-      <th>XL</th>
-      <th>L</th>
-      <th>M</th>
-      <th>S</th>
-      <th>XS</th>
-    </tr>
-  </thead>
-    <tbody>
-      <tr>
-        <td>
-          <Avatar
-            size={AvatarSize.XLARGE}
-            name={group.name}
-            imageUrl={group.imageUrl}
-            borderType={BorderType.SOFT}
-          />
-        </td>
-        <td>
-          <Avatar
-            size={AvatarSize.LARGE}
-            name={group.name}
-            imageUrl={group.imageUrl}
-            borderType={BorderType.SOFT}
-          />
-        </td>
-        <td>
-          <Avatar
-            size={AvatarSize.MEDIUM}
-            name={group.name}
-            imageUrl={group.imageUrl}
-            borderType={BorderType.SOFT}
-          />
-        </td>
-        <td>
-          <Avatar
-            size={AvatarSize.SMALL}
-            name={group.name}
-            imageUrl={group.imageUrl}
-            borderType={BorderType.SOFT}
-          />
-        </td>
-        <td>
-          <Avatar
-            size={AvatarSize.XSMALL}
-            name={group.name}
-            imageUrl={group.imageUrl}
-            borderType={BorderType.SOFT}
-          />
-        </td>
-      </tr>
-    </tbody>
-</table>
+<LayoutList direction="horizontal">
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.XLARGE}
+      name={group.name}
+      imageUrl={group.imageUrl}
+      borderType={BorderType.SOFT}
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.LARGE}
+      name={group.name}
+      imageUrl={group.imageUrl}
+      borderType={BorderType.SOFT}
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.MEDIUM}
+      name={group.name}
+      imageUrl={group.imageUrl}
+      borderType={BorderType.SOFT}
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.SMALL}
+      name={group.name}
+      imageUrl={group.imageUrl}
+      borderType={BorderType.SOFT}
+    />
+  </LayoutListItem>
+  <LayoutListItem>
+    <Avatar
+      size={AvatarSize.XSMALL}
+      name={group.name}
+      imageUrl={group.imageUrl}
+      borderType={BorderType.SOFT}
+    />
+  </LayoutListItem>
+</LayoutList>
 ```
 
 Example colors:
