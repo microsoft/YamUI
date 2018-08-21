@@ -35,6 +35,23 @@ const image = <Image source={yammerLogo} description={yammerLogoDescription} ful
 
   <FixedGridRow>
     <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.EightNine}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.EightNine}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.EightNine}>{image}</Tile>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <Tile aspectRatio={TileAspectRatio.EightNine}>{image}</Tile>
+    </FixedGridColumn>
+  </FixedGridRow>
+
+  <br />
+
+  <FixedGridRow>
+    <FixedGridColumn>
       <Tile aspectRatio={TileAspectRatio.OneOne}>{image}</Tile>
     </FixedGridColumn>
     <FixedGridColumn>
