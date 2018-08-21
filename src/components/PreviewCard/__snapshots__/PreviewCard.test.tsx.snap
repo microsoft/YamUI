@@ -130,7 +130,6 @@ exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
         }
     metadataContent={
       <CustomizedBlock
-        push={1}
         textColor="metadata"
       >
         <CustomizedSpinner
