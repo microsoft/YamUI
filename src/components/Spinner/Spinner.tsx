@@ -39,13 +39,22 @@ const fabricSpinnerSizes = {
  */
 export class Spinner extends React.Component<SpinnerProps & CustomizableComponentProps> {
   public render() {
-    const { text, hideText, color = SpinnerColor.LIGHT, size = SpinnerSize.MEDIUM, isCentered = false } = this.props;
-    const classNames = getClassNames({ size, isCentered });
+    const {
+      theme = defaultTheme,
+      text,
+      hideText,
+      color = SpinnerColor.LIGHT,
+      size = SpinnerSize.MEDIUM,
+      isCentered = false,
+    } = this.props;
+
+    const textSize = labelSizes[size];
+    const classNames = getClassNames({ size, isCentered, theme, textSize });
 
     const label = hideText ? (
       <ScreenreaderText>{text}</ScreenreaderText>
     ) : (
-      <Text className={classNames.label} color={labelColors[color]} size={labelSizes[size]}>
+      <Text className={classNames.label} color={labelColors[color]} size={textSize}>
         {text}
       </Text>
     );

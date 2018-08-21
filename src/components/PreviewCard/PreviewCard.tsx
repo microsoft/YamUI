@@ -113,7 +113,7 @@ export class PreviewCard extends React.Component<PreviewCardProps & Customizable
 
     if (isLoading && !this.hasProgress()) {
       return (
-        <Block textColor={TextColor.METADATA} push={1}>
+        <Block textColor={TextColor.METADATA}>
           <Spinner text={loadingText as string} size={SpinnerSize.XSMALL} color={SpinnerColor.METADATA} />
         </Block>
       );
