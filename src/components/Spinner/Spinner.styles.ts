@@ -5,6 +5,8 @@ import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { SpinnerColor, SpinnerSize } from './Spinner.types';
 import { getGutterValue } from '../../util/styles/gutters';
 import { ITheme } from '../Customizer';
+import { getFont } from '../../util/styles/fonts';
+import { TextSize } from '../Text';
 
 export interface SpinnerClassNames {
   root: string;
@@ -12,23 +14,28 @@ export interface SpinnerClassNames {
 }
 
 const labelMargins = {
-  [SpinnerSize.XSMALL]: `-1px 0 0 ${getGutterValue(1.5, true)}`,
-  [SpinnerSize.SMALL]: `-1px 0 0 ${getGutterValue(2, true)}`,
-  [SpinnerSize.MEDIUM]: `-2px 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.XSMALL]: `0 0 0 ${getGutterValue(1.5, true)}`,
+  [SpinnerSize.SMALL]: `0 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.MEDIUM]: `-1px 0 0 ${getGutterValue(2, true)}`,
   [SpinnerSize.LARGE]: `${getGutterValue(1, true)} 0 0`,
 };
 export interface SpinnerClassNameProps {
   size: SpinnerSize;
   isCentered: boolean;
+  theme: ITheme;
+  textSize: TextSize;
 }
 
 export const getClassNames = memoizeFunction((classNameProps: SpinnerClassNameProps): SpinnerClassNames => {
-  const { size, isCentered } = classNameProps;
+  const { size, isCentered, theme, textSize } = classNameProps;
+  const font = getFont(textSize, theme);
+
   return mergeStyleSets({
     root: {
       display: 'flex',
       alignItems: 'center',
       flexDirection: size === SpinnerSize.LARGE ? 'column' : 'row',
+      minHeight: font.lineHeight,
       justifyContent: isCentered ? 'center' : undefined,
     },
     label: {

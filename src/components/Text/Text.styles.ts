@@ -2,7 +2,7 @@
 import { TextSize, TextColor } from './Text.types';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
-import { ellipsisStyle, fontWeights, textColors, verticalAligns } from '../../util/styles/fonts';
+import { ellipsisStyle, fontWeights, getFont, textColors, verticalAligns } from '../../util/styles/fonts';
 import { PaletteColor } from '../../util/colors';
 
 export interface TextClassNameProps {
@@ -16,7 +16,7 @@ export interface TextClassNameProps {
 }
 export const getClassNames = memoizeFunction((classNameProps: TextClassNameProps) => {
   const { size, maxWidth, bold, uppercase, color, backgroundColor, theme } = classNameProps;
-  const font = size ? theme.fonts[size === TextSize.MEDIUM_SUB ? 'smallPlus' : size] : undefined;
+  const font = size ? getFont(size, theme) : undefined;
 
   return mergeStyleSets({
     root: {
