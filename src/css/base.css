@@ -1,52 +1,6 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import 'src/css/variables/colors.css';
-@import 'src/css/variables/fonts.css';
 
-html {
-  /* Sets 1.0rem to 10px */
-  font-size: 62.5%;
-}
-
-body {
-  background-color: #fff;
-  color: $textColor;
-  @extend text__medium;
-  font-family: $fontStack;
-  font-weight: $fontWeight__normal;
-}
-
-/* Text elements */
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ol {
-  list-style-type: decimal;
-  margin: 0 1.5rem;
-}
-
-/* Tables, layout */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  @extend text__mediumSub;
-  padding: 6px 10px 6px 0;
-  vertical-align: top;
-}
-th {
-  padding-bottom: 2px;
-}
-th,
-table thead th {
-  font-weight: $fontWeight__bold;
-}
-
-/* Links */
 a {
   color: $linkColor;
   text-decoration: none;
