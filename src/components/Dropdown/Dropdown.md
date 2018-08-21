@@ -45,7 +45,7 @@ class ControlledDropdown extends React.Component {
 
 <div style={{ paddingBottom: '100px' }}>
   <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the <strong>Dropdown</strong> is controlled by the parent component using the <strong>selectedKey</strong> and <strong>onChanged</strong> props.
+    In this example, the state of the <Strong>Dropdown</Strong> is controlled by the parent component using the <Strong>selectedKey</Strong> and <Strong>onChanged</Strong> props.
   </Block>
   <ControlledDropdown />
 </div>
@@ -64,7 +64,7 @@ const options = [
 
 <div>
   <Block bottomSpacing={GutterSize.LARGE}>
-    In this example, the state of the <strong>Dropdown</strong> is maintained within the component, rather than being set using <strong>selectedKey</strong>. This might be used when a parent component is listening to the <strong>onChanged</strong> event and doesn't need to manage the dropdown's visual state, but this is generally not recommended.
+    In this example, the state of the <Strong>Dropdown</Strong> is maintained within the component, rather than being set using <Strong>selectedKey</Strong>. This might be used when a parent component is listening to the <Strong>onChanged</Strong> event and doesn't need to manage the dropdown's visual state, but this is generally not recommended.
   </Block>
   <Dropdown
     placeHolder="Please select..."
@@ -101,7 +101,7 @@ const options = [
 
 <div style={{ paddingBottom: '350px' }}>
   <Block bottomSpacing={GutterSize.LARGE}>
-    This <strong>Dropdown</strong> renders section headers and dividers, and uses icons and labels in options.
+    This <Strong>Dropdown</Strong> renders section headers and dividers, and uses icons and labels in options.
   </Block>
   <Dropdown
     label="Please choose from the following options:"
@@ -127,7 +127,7 @@ const options = [
 
 <div>
   <Block bottomSpacing={GutterSize.LARGE}>
-    A <strong>Dropdown</strong> fills 100% of its container's width. To manage its width, nest it within a layout component.
+    A <Strong>Dropdown</Strong> fills 100% of its container's width. To manage its width, nest it within a layout component.
   </Block>
   <FixedGridRow>
     <FixedGridColumn fixed={true} width={100}>

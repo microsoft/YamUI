@@ -124,7 +124,7 @@ const items = [
 <SidebarList items={items} size="large" />
 ```
 
-Items can provide <strong>href</strong> to render as a link, or <strong>onClick</strong> to render as a button:
+Items can provide href to render as a link, or onClick to render as a button:
 
 ```js { "props": { "data-description": "interaction options" } }
 const Docx32 = require('../Illustration/illustrations/Docx32').default;

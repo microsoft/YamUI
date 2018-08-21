@@ -10,7 +10,6 @@
     "url": "https://github.com/Microsoft/YamUI.git"
   },
   "dependencies": {
-    "normalize.css": "6.0.0",
     "office-ui-fabric-react": "6.25.0",
     "@researchgate/react-intersection-observer": "0.7.3"
   },

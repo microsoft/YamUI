@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Strong /> with className matches its snapshot 1`] = `
+<strong
+  className=
+      TEST_CLASSNAME
+      {
+        font-weight: 600;
+      }
+>
+  Strong text
+</strong>
+`;
+
+exports[`<Strong /> with default options matches its snapshot 1`] = `
+<strong
+  className=
+
+      {
+        font-weight: 600;
+      }
+>
+  Strong text
+</strong>
+`;

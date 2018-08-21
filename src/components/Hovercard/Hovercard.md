@@ -7,10 +7,10 @@ Default hover trigger:
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <strong>HovercardHeader</strong> component)
+      Title (nested <Strong>HovercardHeader</Strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
+      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -42,10 +42,10 @@ const { DirectionalHint, TriggerType } = require('.');
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <strong>HovercardHeader</strong> component)
+      Title (nested <Strong>HovercardHeader</Strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
+      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -78,10 +78,10 @@ Hovercard without beak:
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <strong>HovercardHeader</strong> component)
+      Title (nested <Strong>HovercardHeader</Strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
+      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -114,10 +114,10 @@ Hovercard with different alignments:
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <strong>HovercardHeader</strong> component)
+      Title (nested <Strong>HovercardHeader</Strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
+      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );

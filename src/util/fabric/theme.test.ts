@@ -1,5 +1,24 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 jest.mock('office-ui-fabric-react/lib/Styling', () => ({
+  getTheme: jest.fn(() => ({
+    disableGlobalClassNames: false,
+    fonts: {
+      large: {},
+      medium: {},
+      mediumPlus: {},
+      mega: {},
+      small: {},
+      smallPlus: {},
+      superLarge: {},
+      tiny: {},
+      xLarge: {},
+      xSmall: {},
+      xxLarge: {},
+    },
+    isInverted: false,
+    palette: {},
+    semanticColors: {},
+  })),
   loadTheme: jest.fn(),
   createTheme: jest.fn(),
 }));
