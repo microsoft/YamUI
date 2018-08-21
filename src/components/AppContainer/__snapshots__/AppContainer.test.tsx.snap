@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppContainer /> with className matches its snapshot 1`] = `
+<CustomizedFabric>
+  <div
+    className=
+        y-appContainer
+        TEST_CLASSNAME
+        {
+          color: #343a41;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2.0rem;
+        }
+        html {
+          font-size: 62.5%;
+        }
+  >
+    paragraph text
+  </div>
+</CustomizedFabric>
+`;
+
+exports[`<AppContainer /> with default options matches its snapshot 1`] = `
+<CustomizedFabric>
+  <div
+    className=
+        y-appContainer
+        {
+          color: #343a41;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 2.0rem;
+        }
+        html {
+          font-size: 62.5%;
+        }
+  >
+    paragraph text
+  </div>
+</CustomizedFabric>
+`;
