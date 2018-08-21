@@ -14,9 +14,9 @@ export interface SpinnerClassNames {
 }
 
 const labelMargins = {
-  [SpinnerSize.XSMALL]: `-1px 0 0 ${getGutterValue(1.5, true)}`,
-  [SpinnerSize.SMALL]: `-1px 0 0 ${getGutterValue(2, true)}`,
-  [SpinnerSize.MEDIUM]: `-2px 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.XSMALL]: `0 0 0 ${getGutterValue(1.5, true)}`,
+  [SpinnerSize.SMALL]: `0 0 0 ${getGutterValue(2, true)}`,
+  [SpinnerSize.MEDIUM]: `-1px 0 0 ${getGutterValue(2, true)}`,
   [SpinnerSize.LARGE]: `${getGutterValue(1, true)} 0 0`,
 };
 export interface SpinnerClassNameProps {
