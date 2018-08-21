@@ -156,11 +156,19 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                 "disableGlobalClassNames": false,
                 "fonts": Object {
                   "large": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "1.8rem",
+                    "fontWeight": 300,
                     "lineHeight": "2.4rem",
                   },
                   "medium": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "1.5rem",
+                    "fontWeight": 400,
                     "lineHeight": "2.0rem",
                   },
                   "mediumPlus": Object {
@@ -178,11 +186,19 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                     "fontWeight": 100,
                   },
                   "small": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "1.2rem",
+                    "fontWeight": 400,
                     "lineHeight": "1.6rem",
                   },
                   "smallPlus": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "1.4rem",
+                    "fontWeight": 400,
                     "lineHeight": "2.0rem",
                   },
                   "superLarge": Object {
@@ -200,15 +216,27 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
                     "fontWeight": 600,
                   },
                   "xLarge": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "2.2rem",
+                    "fontWeight": 100,
                     "lineHeight": "2.8rem",
                   },
                   "xSmall": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "1.0rem",
+                    "fontWeight": 400,
                     "lineHeight": "1.6rem",
                   },
                   "xxLarge": Object {
+                    "MozOsxFontSmoothing": "grayscale",
+                    "WebkitFontSmoothing": "antialiased",
+                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
                     "fontSize": "2.4rem",
+                    "fontWeight": 100,
                     "lineHeight": "2.8rem",
                   },
                 },
