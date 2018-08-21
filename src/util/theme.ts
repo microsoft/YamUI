@@ -7,7 +7,7 @@ export { ITheme };
 const initialFontStyles = getTheme().fonts;
 
 const fonts = {
-  initialFontStyles,
+  ...initialFontStyles,
   xSmall: {
     ...getTheme().fonts.xSmall,
     fontSize: '1.0rem',
