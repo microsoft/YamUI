@@ -12,6 +12,7 @@ export interface TileClassNameProps {
 
 const mapAspectRatioToPercent: Record<TileAspectRatio, string> = {
   [TileAspectRatio.TwoThree]: '150%',
+  [TileAspectRatio.EightNine]: '112.5%',
   [TileAspectRatio.OneOne]: '100%',
   [TileAspectRatio.FourThree]: '75%',
   [TileAspectRatio.SixteenNine]: '56.25%',

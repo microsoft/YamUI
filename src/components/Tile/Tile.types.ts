@@ -13,6 +13,8 @@ export enum TileAspectRatio {
   FourThree = '4_3',
   /** 1:1 aspect ratio */
   OneOne = '1_1',
+  /** 8:9 aspect ratio */
+  EightNine = '8_9',
   /** 2:3 aspect ratio */
   TwoThree = '2_3',
 }
