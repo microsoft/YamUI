@@ -16,6 +16,16 @@ exports[`<AppContainer /> with className matches its snapshot 1`] = `
           box-sizing: border-box;
           font-size: 62.5%;
         }
+        html, body {
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+        }
         *, *::before, *::after {
           box-sizing: inherit;
         }
@@ -39,6 +49,16 @@ exports[`<AppContainer /> with default options matches its snapshot 1`] = `
         html {
           box-sizing: border-box;
           font-size: 62.5%;
+        }
+        html, body {
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
         }
         *, *::before, *::after {
           box-sizing: inherit;
