@@ -24,6 +24,10 @@ export const getClassNames = memoizeFunction((props: AppContainerClassNameProps)
           fontSize: '62.5%',
           boxSizing: 'border-box',
         },
+        ':global(html, body)': {
+          margin: 0,
+          padding: 0,
+        },
         ':global(*, *::before, *::after)': {
           boxSizing: 'inherit',
         },
