@@ -9,6 +9,8 @@ exports[`<Body /> with additional className matches its snapshot 1`] = `
         background-color: #ffffff;
         color: #343a41;
         font-size: 1.5rem;
+        font-weight: 400;
+        font: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
         line-height: 2.0rem;
       }
 />
@@ -22,6 +24,8 @@ exports[`<Body /> with children passed matches its snapshot 1`] = `
         background-color: #ffffff;
         color: #343a41;
         font-size: 1.5rem;
+        font-weight: 400;
+        font: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
         line-height: 2.0rem;
       }
 >
@@ -37,6 +41,8 @@ exports[`<Body /> with default options matches its snapshot 1`] = `
         background-color: #ffffff;
         color: #343a41;
         font-size: 1.5rem;
+        font-weight: 400;
+        font: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
         line-height: 2.0rem;
       }
 />

@@ -118,12 +118,12 @@ With isCentered:
 
 <div>
   <div>
-    <p>Default alignment:</p>
+    <Paragraph>Default alignment:</Paragraph>
     <Spinner text="Loading" />
   </div>
   <br />
   <div>
-    <p>Centered within its container:</p>
+    <Paragraph>Centered within its container:</Paragraph>
     <Spinner text="Loading" isCentered={true} />
   </div>
 </div>

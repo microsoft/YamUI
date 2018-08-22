@@ -55,52 +55,52 @@ const textSample = (
 );
 
 <Block>
-  <p>Adjacent Buttons, sized Text, and Text with ellipsis + inherited size, will all share a common baseline when wrapped by different Block textSizes.</p>
+  <Paragraph>Adjacent Buttons, sized Text, and Text with ellipsis + inherited size, will all share a common baseline when wrapped by different Block textSizes.</Paragraph>
 
   <Block bottomSpacing={GutterSize.MEDIUM}>
-    <b>xSmall</b>
+    <Strong>xSmall</Strong>
     <Block textSize={TextSize.XSMALL}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>small</b>
+    <Strong>small</Strong>
     <Block textSize={TextSize.SMALL}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>mediumSub</b>
+    <Strong>mediumSub</Strong>
     <Block textSize={TextSize.MEDIUM_SUB}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>medium</b>
+    <Strong>medium</Strong>
     <Block textSize={TextSize.MEDIUM}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>large</b>
+    <Strong>large</Strong>
     <Block textSize={TextSize.LARGE}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>xLarge</b>
+    <Strong>xLarge</Strong>
     <Block textSize={TextSize.XLARGE}>
       {textSample}
     </Block>
   </Block>
 
   <Block bottomSpacing={GutterSize.MEDIUM} push={-1}>
-    <b>xxLarge</b>
+    <Strong>xxLarge</Strong>
     <Block textSize={TextSize.XXLARGE}>
       {textSample}
     </Block>

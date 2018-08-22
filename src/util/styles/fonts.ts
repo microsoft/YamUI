@@ -12,6 +12,9 @@ export const verticalAligns: Record<TextSize, string> = {
   xxLarge: '-0.4rem',
 };
 
+export const getFont = (size: TextSize, theme: ITheme): IRawStyle =>
+  theme.fonts[size === TextSize.MEDIUM_SUB ? 'smallPlus' : size];
+
 export const textColors = (theme: ITheme): Record<TextColor, string> => ({
   primary: theme.semanticColors.bodyText,
   secondary: theme.palette.neutralPrimaryAlt,

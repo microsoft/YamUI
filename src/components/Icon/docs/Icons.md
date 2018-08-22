@@ -225,14 +225,16 @@ const { IconSize } = require('../index');
 const Add = require('../icons/Add').default;
 
 <div>
-  <p>
+  <Paragraph>
     This is a line of text with a <Add size={IconSize.MEDIUM} /> inline icon.
-  </p>
-  <p style={{ color: 'blue' }}>
-    This is a line of colored text with a <Add size={IconSize.MEDIUM} /> inline icon.
-  </p>
-  <p>
+  </Paragraph>
+  <Paragraph>
+    <span style={{ color: 'blue' }}>
+      This is a line of colored text with a <Add size={IconSize.MEDIUM} /> inline icon.
+    </span>
+  </Paragraph>
+  <Paragraph>
     This is a line of colored text with a <Add size={IconSize.MEDIUM} color="red" /> inline icon that overrides its color.
-  </p>
+  </Paragraph>
 </div>
 ```

@@ -168,7 +168,7 @@ const { AvatarSize } = require('.');
 
 <div>
   <Block bottomSpacing={GutterSize.SMALL}>
-    A background color will be automatically set when an <em>imageUrl</em> is not provided. Fabric handles this behind the scenes for us, based on the <em>name</em> prop passed in.
+    A background color will be automatically set when an <Emphasis>imageUrl</Emphasis> is not provided. Fabric handles this behind the scenes for us, based on the <Emphasis>name</Emphasis> prop passed in.
   </Block>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>

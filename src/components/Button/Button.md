@@ -583,7 +583,7 @@ const { ButtonColor } = require('.');
 const { FixedGridRow, FixedGridColumn, GutterSize } = require('../FixedGrid');
 
 <div>
-  <p>Sometimes a layout can be achieved easier if the button stretches to fill its container's width. Here's an example of <strong>fullWidth</strong> buttons in a grid layout.</p>
+  <Paragraph>Sometimes a layout can be achieved easier if the button stretches to fill its container's width. Here's an example of <Strong>fullWidth</Strong> buttons in a grid layout.</Paragraph>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <Button text="Full width" fullWidth={true} />
