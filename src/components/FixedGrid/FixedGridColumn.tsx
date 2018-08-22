@@ -12,6 +12,11 @@ import { FixedGridColumnProps } from './FixedGrid.types';
 export default class FixedGridColumn extends React.Component<FixedGridColumnProps> {
   public render() {
     const { children, verticalAlign = 'top', className, fixed, width } = this.props;
+
+    if (!children) {
+      return null;
+    }
+
     const classNames = getClassNames({ fixed, width, verticalAlign });
 
     return (
