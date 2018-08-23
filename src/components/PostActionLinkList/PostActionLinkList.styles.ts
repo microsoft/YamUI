@@ -14,5 +14,8 @@ export const getClassNames = memoizeFunction((classNameProps: PostActionLinkList
       color: theme.semanticColors.link,
       paddingLeft: '2px',
     },
+    menuButton: {
+      color: theme.semanticColors.link,
+    },
   });
 });

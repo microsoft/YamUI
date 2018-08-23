@@ -5,30 +5,31 @@ const Like = require('../Icon/icons/Like').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Share = require('../Icon/icons/Share').default;
 const Flag = require('../Icon/icons/Flag').default;
+const Strong = require('../Strong').default;
 
 const items = [
   {
     key: 'like',
     icon: Like,
-    text: 'Like',
+    text: (<Strong>Like</Strong>),
     onClick: () => action('clicked like'),
   },
   {
     key: 'reply',
     icon: Reply,
-    text: 'Reply',
+    text: (<Strong>Reply</Strong>),
     onClick: () => action('clicked reply'),
   },
   {
     key: 'share',
     icon: Share,
-    text: 'Share',
+    text: (<Strong>Share</Strong>),
     onClick: () => action('clicked share'),
   },
   {
     key: 'flag',
     icon: Flag,
-    text: 'Follow in Inbox',
+    text: (<Strong>Follow in Inbox</Strong>),
     onClick: () => action('clicked follow'),
   },
 ];
@@ -94,5 +95,5 @@ const items = [
 
 <div style={{ maxWidth: '400px' }}>
   <PostActionLinkList items={items} maxVisibleItemCount={2} />
-</div>;
+</div>
 ```

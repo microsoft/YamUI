@@ -16,7 +16,12 @@ export interface BaseActionLinkProps extends BaseComponentProps {
   /**
    * The visible text.
    */
-  text: string;
+  text: string | React.ReactNode;
+
+  /**
+   * A more compressed format.
+   */
+  compact?: boolean;
 }
 
 export interface NavigationActionLinkProps extends BaseActionLinkProps {

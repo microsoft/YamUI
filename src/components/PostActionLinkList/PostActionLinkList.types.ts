@@ -5,7 +5,7 @@ import { BaseIcon } from '../Icon';
 export interface PostActionLinkListProps extends BaseComponentProps {
   items?: PostActionLinkListItem[];
   maxVisibleItemCount?: number;
-  overFlowMenuAriaLabel: string;
+  overflowMenuAriaLabel: string;
 }
 
 export type PostActionLinkListItem = {
