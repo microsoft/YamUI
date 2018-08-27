@@ -16,6 +16,7 @@ export const getClassNames = memoizeFunction((classNameProps: PostActionLinkList
     },
     menuButton: {
       color: theme.semanticColors.link,
+      top: '0.2rem',
     },
   });
 });

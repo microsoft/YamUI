@@ -4,6 +4,7 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import Block, { TextSize } from '../Block';
 import Clickable from '../Clickable';
+import Strong from '../Strong';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
@@ -28,7 +29,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
           </Block>
         </FixedGridColumn>
         <FixedGridColumn>
-          <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>
+          <Block textSize={TextSize.MEDIUM_SUB}>{compact ? <Strong>{text}</Strong> : text}</Block>
         </FixedGridColumn>
       </FixedGridRow>
     );

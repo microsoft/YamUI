@@ -10,7 +10,7 @@ import MenuButton from '../MenuButton';
 import ActionLink from '../ActionLink';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
 import Block, { TextSize } from '../Block';
-import { IconSize } from '../../../dist-commonjs/components/Icon';
+import { IconSize } from '../Icon';
 
 /**
  * A set of links that dispaly in a horizontal list below a message post.
@@ -54,7 +54,6 @@ export class PostActionLinkList extends React.Component<PostActionLinkListProps 
             <MenuButton
               ariaLabel={overflowMenuAriaLabel}
               iconSize={IconSize.SMALL}
-              iconColor={theme.semanticColors.link}
               menuItems={overflowItems}
               className={classNames.menuButton}
             />

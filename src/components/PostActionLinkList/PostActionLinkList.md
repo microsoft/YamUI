@@ -11,25 +11,25 @@ const items = [
   {
     key: 'like',
     icon: Like,
-    text: (<Strong>Like</Strong>),
+    text: 'Like',
     onClick: () => action('clicked like'),
   },
   {
     key: 'reply',
     icon: Reply,
-    text: (<Strong>Reply</Strong>),
+    text: 'Reply',
     onClick: () => action('clicked reply'),
   },
   {
     key: 'share',
     icon: Share,
-    text: (<Strong>Share</Strong>),
+    text: 'Share',
     onClick: () => action('clicked share'),
   },
   {
     key: 'flag',
     icon: Flag,
-    text: (<Strong>Follow in Inbox</Strong>),
+    text: 'Follow in Inbox',
     onClick: () => action('clicked follow'),
   },
 ];

@@ -88,11 +88,6 @@ export interface MenuButtonProps extends BaseComponentProps {
    * @default IconSize.LARGE
    */
   iconSize?: IconSize;
-
-  /**
-   * Color of the icon
-   */
-  iconColor?: string;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps> {
@@ -119,10 +114,10 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   }
 
   private getIcon = () => {
-    const { icon, iconSize, iconColor } = this.props;
+    const { icon, iconSize } = this.props;
     const Icon = icon || MoreIcon;
 
-    return <Icon size={iconSize} block={true} color={iconColor} />;
+    return <Icon size={iconSize} block={true} />;
   };
 
   private getMenuProps(): IContextualMenuProps {
