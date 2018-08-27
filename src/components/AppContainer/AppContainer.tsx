@@ -15,7 +15,7 @@ export default class AppContainer extends React.Component<NestableBaseComponentP
     const { children, className, theme = defaultTheme } = this.props;
     const classNames = getClassNames({ theme });
     return (
-      <Fabric>
+      <Fabric theme={theme}>
         <div className={join(['y-appContainer', classNames.root, className])}>{children}</div>
       </Fabric>
     );

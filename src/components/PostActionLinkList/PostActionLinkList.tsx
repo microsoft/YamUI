@@ -54,6 +54,7 @@ export class PostActionLinkList extends React.Component<PostActionLinkListProps 
             <MenuButton
               ariaLabel={overflowMenuAriaLabel}
               iconSize={IconSize.SMALL}
+              iconColor={theme.semanticColors.link}
               menuItems={overflowItems}
               className={classNames.menuButton}
             />
