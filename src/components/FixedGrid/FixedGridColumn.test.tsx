@@ -69,4 +69,14 @@ describe('<FixedGridColumn />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('with no children', () => {
+    beforeEach(() => {
+      component = shallow(<FixedGridColumn />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

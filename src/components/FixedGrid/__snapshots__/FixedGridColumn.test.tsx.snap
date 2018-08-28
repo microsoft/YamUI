@@ -77,6 +77,8 @@ exports[`<FixedGridColumn /> with default options matches its snapshot 1`] = `
 </div>
 `;
 
+exports[`<FixedGridColumn /> with no children matches its snapshot 1`] = `""`;
+
 exports[`<FixedGridColumn /> with vertical align middle matches its snapshot 1`] = `
 <div
   className=
