@@ -41,6 +41,8 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
         onResolveSuggestions={onResolveSuggestions}
         pickerSuggestionsProps={{
           suggestionsHeaderText,
+          className: classNames.suggestionsBox,
+          suggestionsClassName: classNames.suggestionsList,
           noResultsFoundText,
         }}
         itemLimit={itemLimit}
