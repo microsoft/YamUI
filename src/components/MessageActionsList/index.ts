@@ -1,3 +1,3 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
-export { default } from './PostActionLinkList';
-export * from './PostActionLinkList.types';
+export { default } from './MessageActionsList';
+export * from './MessageActionsList.types';

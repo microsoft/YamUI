@@ -2,11 +2,11 @@
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BaseIcon } from '../Icon';
 
-export interface PostActionLinkListProps extends BaseComponentProps {
+export interface MessageActionsListProps extends BaseComponentProps {
   /**
    * Items to show in the list.
    */
-  items: PostActionLinkListItem[];
+  items: MessageActionsListItem[];
 
   /**
    * Aria label for the overflow menu button.
@@ -19,7 +19,7 @@ export interface PostActionLinkListProps extends BaseComponentProps {
   maxVisibleItemCount?: number;
 }
 
-export type PostActionLinkListItem = {
+export type MessageActionsListItem = {
   icon: typeof BaseIcon;
   text: string;
   ariaLabel: string;
