@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PostActionLinkListItem /> with a theme matches its snapshot 1`] = `
+exports[`<MessageActionsList /> with a theme matches its snapshot 1`] = `
 <LayoutList
-  className="y-postActionLinkList"
+  className="y-messageActionsList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -65,9 +65,9 @@ exports[`<PostActionLinkListItem /> with a theme matches its snapshot 1`] = `
 </LayoutList>
 `;
 
-exports[`<PostActionLinkListItem /> with all items matches its snapshot 1`] = `
+exports[`<MessageActionsList /> with all items matches its snapshot 1`] = `
 <LayoutList
-  className="y-postActionLinkList"
+  className="y-messageActionsList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -130,9 +130,9 @@ exports[`<PostActionLinkListItem /> with all items matches its snapshot 1`] = `
 </LayoutList>
 `;
 
-exports[`<PostActionLinkListItem /> with all items, and maxVisibleItemCount of 1 matches its snapshot 1`] = `
+exports[`<MessageActionsList /> with all items, and maxVisibleItemCount of 1 matches its snapshot 1`] = `
 <LayoutList
-  className="y-postActionLinkList"
+  className="y-messageActionsList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -197,9 +197,9 @@ exports[`<PostActionLinkListItem /> with all items, and maxVisibleItemCount of 1
 </LayoutList>
 `;
 
-exports[`<PostActionLinkListItem /> with one item matches its snapshot 1`] = `
+exports[`<MessageActionsList /> with one item matches its snapshot 1`] = `
 <LayoutList
-  className="y-postActionLinkList"
+  className="y-messageActionsList"
   direction="horizontal"
   gutterSize="medium"
 >

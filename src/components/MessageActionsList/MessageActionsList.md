@@ -35,7 +35,7 @@ const items = [
 ];
 
 <div style={{ maxWidth: '400px' }}>
-  <PostActionLinkList items={items} maxVisibleItemCount={3} />
+  <MessageActionsList items={items} maxVisibleItemCount={3} />
 </div>;
 ```
 
@@ -68,7 +68,7 @@ const items = [
 ];
 
 <div style={{ maxWidth: '400px' }}>
-  <PostActionLinkList items={items} maxVisibleItemCount={2} />
+  <MessageActionsList items={items} maxVisibleItemCount={2} />
 </div>;
 ```
 
@@ -94,6 +94,6 @@ const items = [
 ];
 
 <div style={{ maxWidth: '400px' }}>
-  <PostActionLinkList items={items} maxVisibleItemCount={2} />
+  <MessageActionsList items={items} maxVisibleItemCount={2} />
 </div>
 ```

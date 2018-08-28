@@ -4,8 +4,8 @@ import * as React from 'react';
 import { LayoutList, LayoutListItem, GutterSize } from '../LayoutList';
 import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { PostActionLinkListProps } from './PostActionLinkList.types';
-import { getClassNames } from './PostActionLinkList.styles';
+import { MessageActionsListProps } from './MessageActionsList.types';
+import { getClassNames } from './MessageActionsList.styles';
 import MenuButton from '../MenuButton';
 import ActionLink from '../ActionLink';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
@@ -16,7 +16,7 @@ import { IconSize } from '../Icon';
  * A set of links that dispaly in a horizontal list below a message post.  When a maxVisibleItemCount
  * prop is provided, items that exceed this value will show in a overflow menu.
  */
-export class PostActionLinkList extends React.Component<PostActionLinkListProps & CustomizableComponentProps> {
+export class MessageActionsList extends React.Component<MessageActionsListProps & CustomizableComponentProps> {
   public render() {
     const { className, overflowMenuAriaLabel, items, maxVisibleItemCount, theme = defaultTheme } = this.props;
     const classNames = getClassNames({ theme });
@@ -27,7 +27,7 @@ export class PostActionLinkList extends React.Component<PostActionLinkListProps 
     return (
       <LayoutList
         direction="horizontal"
-        className={join(['y-postActionLinkList', className])}
+        className={join(['y-messageActionsList', className])}
         gutterSize={GutterSize.MEDIUM}
       >
         {visibleItems.map((item, key) => (
@@ -65,5 +65,5 @@ export class PostActionLinkList extends React.Component<PostActionLinkListProps 
   }
 }
 
-@customizable('PostActionLinkList', ['theme'])
-export default class CustomizablePostActionLinkList extends PostActionLinkList {}
+@customizable('MessageActionsList', ['theme'])
+export default class CustomizableMessageActionsList extends MessageActionsList {}
