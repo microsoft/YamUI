@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostActionLinkListItem /> with a theme matches its snapshot 1`] = `
+<LayoutList
+  className="y-postActionLinkList"
+  direction="horizontal"
+  gutterSize="medium"
+>
+  <LayoutListItem
+    key="0"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="like"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction likeOnClick]}
+            text="like"
+          />
+        </FixedGridColumn>
+        <FixedGridColumn
+          className=
+
+              {
+                color: #9ac3ff;
+                padding-left: 2px;
+              }
+        >
+          1
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+  <LayoutListItem
+    key="1"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="reply"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction replyOnClick]}
+            text="reply"
+          />
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+</LayoutList>
+`;
+
+exports[`<PostActionLinkListItem /> with all items matches its snapshot 1`] = `
+<LayoutList
+  className="y-postActionLinkList"
+  direction="horizontal"
+  gutterSize="medium"
+>
+  <LayoutListItem
+    key="0"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="like"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction likeOnClick]}
+            text="like"
+          />
+        </FixedGridColumn>
+        <FixedGridColumn
+          className=
+
+              {
+                color: #386cbb;
+                padding-left: 2px;
+              }
+        >
+          1
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+  <LayoutListItem
+    key="1"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="reply"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction replyOnClick]}
+            text="reply"
+          />
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+</LayoutList>
+`;
+
+exports[`<PostActionLinkListItem /> with all items, and maxVisibleItemCount of 1 matches its snapshot 1`] = `
+<LayoutList
+  className="y-postActionLinkList"
+  direction="horizontal"
+  gutterSize="medium"
+>
+  <LayoutListItem
+    key="0"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="like"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction likeOnClick]}
+            text="like"
+          />
+        </FixedGridColumn>
+        <FixedGridColumn
+          className=
+
+              {
+                color: #386cbb;
+                padding-left: 2px;
+              }
+        >
+          1
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+  <LayoutListItem
+    key="overflowMenu"
+  >
+    <MenuButton
+      ariaLabel="more items"
+      className=
+
+          {
+            color: #386cbb;
+            top: 0.2rem;
+          }
+      iconSize="14"
+      menuItems={
+        Array [
+          Object {
+            "ariaLabel": "reply",
+            "icon": [Function],
+            "key": "reply",
+            "onClick": [MockFunction replyOnClick],
+            "text": "reply",
+          },
+        ]
+      }
+    />
+  </LayoutListItem>
+</LayoutList>
+`;
+
+exports[`<PostActionLinkListItem /> with one item matches its snapshot 1`] = `
+<LayoutList
+  className="y-postActionLinkList"
+  direction="horizontal"
+  gutterSize="medium"
+>
+  <LayoutListItem
+    key="0"
+  >
+    <CustomizedBlock
+      textSize="mediumSub"
+    >
+      <FixedGridRow
+        gutterSize="xSmall"
+      >
+        <FixedGridColumn
+          fixed={true}
+        >
+          <ActionLink
+            ariaLabel="like"
+            compact={true}
+            icon={[Function]}
+            onClick={[MockFunction likeOnClick]}
+            text="like"
+          />
+        </FixedGridColumn>
+        <FixedGridColumn
+          className=
+
+              {
+                color: #386cbb;
+                padding-left: 2px;
+              }
+        >
+          1
+        </FixedGridColumn>
+      </FixedGridRow>
+    </CustomizedBlock>
+  </LayoutListItem>
+</LayoutList>
+`;

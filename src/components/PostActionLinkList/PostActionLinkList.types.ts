@@ -3,16 +3,28 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { BaseIcon } from '../Icon';
 
 export interface PostActionLinkListProps extends BaseComponentProps {
-  items?: PostActionLinkListItem[];
-  maxVisibleItemCount?: number;
+  /**
+   * Items to show in the list.
+   */
+  items: PostActionLinkListItem[];
+
+  /**
+   * Aria label for the overflow menu button.
+   */
   overflowMenuAriaLabel: string;
+
+  /**
+   * The maximum number of items to display in the list.  The remaining will show in the menuButton.
+   */
+  maxVisibleItemCount?: number;
 }
 
 export type PostActionLinkListItem = {
   icon: typeof BaseIcon;
   text: string;
-  unlinkedText?: string;
-  onClick: () => React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
-  key: string;
   ariaLabel: string;
+  unlinkedText?: string;
+  unlinkedTextAriaLabel?: string;
+  key: string;
+  onClick(): React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
 };

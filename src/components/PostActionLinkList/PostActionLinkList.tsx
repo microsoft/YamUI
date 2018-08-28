@@ -13,15 +13,16 @@ import Block, { TextSize } from '../Block';
 import { IconSize } from '../Icon';
 
 /**
- * A set of links that dispaly in a horizontal list below a message post.
+ * A set of links that dispaly in a horizontal list below a message post.  When a maxVisibleItemCount
+ * prop is provided, items that exceed this value will show in a overflow menu.
  */
 export class PostActionLinkList extends React.Component<PostActionLinkListProps & CustomizableComponentProps> {
   public render() {
-    const { className, overflowMenuAriaLabel, items = [], maxVisibleItemCount, theme = defaultTheme } = this.props;
+    const { className, overflowMenuAriaLabel, items, maxVisibleItemCount, theme = defaultTheme } = this.props;
     const classNames = getClassNames({ theme });
 
     const visibleItems = items.slice(0, maxVisibleItemCount);
-    const overflowItems = items.slice(maxVisibleItemCount);
+    const overflowItems = items.slice(maxVisibleItemCount || items.length);
 
     return (
       <LayoutList
