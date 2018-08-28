@@ -13,7 +13,7 @@ import { getClassNames } from './AppContainer.styles';
 export default class AppContainer extends React.Component<NestableBaseComponentProps & CustomizableComponentProps> {
   public render() {
     const { children, className, theme = defaultTheme } = this.props;
-    const classNames = getClassNames({ theme });
+    const classNames = getClassNames();
     return (
       <Fabric theme={theme}>
         <Customizer settings={{ theme }}>
