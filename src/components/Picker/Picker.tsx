@@ -85,11 +85,10 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
             <FixedGridColumn fixed={true}>
               {!props.disabled && (
                 <div
-                  className={join([classNames.selectedItemCloseButton, 'is-focused', 'is-focused-within'])}
+                  className={classNames.selectedItemCloseButton}
                   onClick={props.onRemoveItem}
                   aria-label={this.props.removeItemAriaLabel}
                 >
-                  <input type="hidden" className="is-focused" />
                   <RemoveIcon block={true} />
                 </div>
               )}
