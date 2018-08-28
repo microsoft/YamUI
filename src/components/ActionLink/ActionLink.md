@@ -49,6 +49,6 @@ Compact:
 const Like = require('../Icon/icons/Like').default;
 
 <div>
-  <ActionLink text="Like" icon={Icon} ariaLabel="Like this Post" compact={true} />
+  <ActionLink text="Like" icon={Like} ariaLabel="Like this Post" compact={true} />
 </div>
 ```
