@@ -31,6 +31,11 @@ export const getClassNames = memoizeFunction((classNameProps: PickerClassNamePro
     },
     suggestionItem: {
       width: '100%',
+      selectors: {
+        ':hover': {
+          backgroundColor: theme.palette.neutralTertiaryAlt,
+        },
+      },
     },
   });
 });
