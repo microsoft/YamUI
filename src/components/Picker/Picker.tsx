@@ -31,11 +31,13 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
       inputAriaLabel,
       suggestionsHeaderText,
       noResultsFoundText,
+      theme = defaultTheme,
     } = this.props;
+    const classNames = getClassNames({ theme });
 
     return (
       <SuggestionListBasePicker
-        className={join(['y-picker', className])}
+        className={join(['y-picker', classNames.pickerFocused, className])}
         onResolveSuggestions={onResolveSuggestions}
         pickerSuggestionsProps={{
           suggestionsHeaderText,
@@ -83,10 +85,11 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
             <FixedGridColumn fixed={true}>
               {!props.disabled && (
                 <div
-                  className={classNames.selectedItemCloseButton}
+                  className={join([classNames.selectedItemCloseButton, 'is-focused', 'is-focused-within'])}
                   onClick={props.onRemoveItem}
                   aria-label={this.props.removeItemAriaLabel}
                 >
+                  <input type="hidden" className="is-focused" />
                   <RemoveIcon block={true} />
                 </div>
               )}
