@@ -8,6 +8,7 @@
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
   padding-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
 /* Chevron Icon */
@@ -23,11 +24,6 @@
 /* Dropdown options */
 .y-dropdown .ms-Dropdown-items {
   padding-bottom: 0.4rem;
-}
-
-.y-dropdown.ms-Dropdown-item {
-  padding: 0.4rem 1.1rem 0.6rem;
-  text-align: left;
 }
 
 .y-dropdown .ms-Dropdown-item:hover,

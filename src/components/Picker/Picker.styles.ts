@@ -8,7 +8,7 @@ export interface PickerClassNameProps {
 export const getClassNames = memoizeFunction((classNameProps: PickerClassNameProps) => {
   const { theme } = classNameProps;
   return mergeStyleSets({
-    pickerFocused: {
+    root: {
       selectors: {
         '.ms-BasePicker-text[class*="pickerText"][class*="inputFocused"]': {
           borderColor: theme.palette.themePrimary,

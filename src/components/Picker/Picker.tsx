@@ -37,7 +37,7 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
 
     return (
       <SuggestionListBasePicker
-        className={join(['y-picker', classNames.pickerFocused, className])}
+        className={join(['y-picker', classNames.root, className])}
         onResolveSuggestions={onResolveSuggestions}
         pickerSuggestionsProps={{
           suggestionsHeaderText,
