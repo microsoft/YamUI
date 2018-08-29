@@ -4,8 +4,8 @@ import * as React from 'react';
 import { LayoutList, LayoutListItem, GutterSize } from '../LayoutList';
 import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { MessageActionsListProps } from './MessageActionsList.types';
-import { getClassNames } from './MessageActionsList.styles';
+import { HorizontalActionListProps } from './HorizontalActionList.types';
+import { getClassNames } from './HorizontalActionList.styles';
 import MenuButton from '../MenuButton';
 import ActionLink from '../ActionLink';
 import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
@@ -16,7 +16,7 @@ import { IconSize } from '../Icon';
  * A set of links that dispaly in a horizontal list below a message post.  When a maxVisibleItemCount
  * prop is provided, items that exceed this value will show in a overflow menu.
  */
-export class MessageActionsList extends React.Component<MessageActionsListProps & CustomizableComponentProps> {
+export class HorizontalActionList extends React.Component<HorizontalActionListProps & CustomizableComponentProps> {
   public render() {
     const { className, overflowMenuAriaLabel, items, maxVisibleItemCount, theme = defaultTheme } = this.props;
     const classNames = getClassNames({ theme });
@@ -27,7 +27,7 @@ export class MessageActionsList extends React.Component<MessageActionsListProps 
     return (
       <LayoutList
         direction="horizontal"
-        className={join(['y-messageActionsList', className])}
+        className={join(['y-HorizontalActionList', className])}
         gutterSize={GutterSize.MEDIUM}
       >
         {visibleItems.map((item, key) => (
@@ -65,5 +65,5 @@ export class MessageActionsList extends React.Component<MessageActionsListProps 
   }
 }
 
-@customizable('MessageActionsList', ['theme'])
-export default class CustomizableMessageActionsList extends MessageActionsList {}
+@customizable('HorizontalActionList', ['theme'])
+export default class CustomizableHorizontalActionList extends HorizontalActionList {}

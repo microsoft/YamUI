@@ -3,11 +3,11 @@ import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ClickableActionLinkProps, NavigationActionLinkProps } from '../ActionLink';
 import { MenuButtonItem } from '../MenuButton';
 
-export interface MessageActionsListProps extends BaseComponentProps {
+export interface HorizontalActionListProps extends BaseComponentProps {
   /**
    * Items to show in the list.
    */
-  items: MessageActionsListItem[];
+  items: HorizontalActionListItem[];
 
   /**
    * Aria label for the overflow menu button.
@@ -20,17 +20,17 @@ export interface MessageActionsListProps extends BaseComponentProps {
   maxVisibleItemCount?: number;
 }
 
-export interface MessageActionsListLinkItem extends NavigationActionLinkProps, MenuButtonItem {
+export interface HorizontalActionListLinkItem extends NavigationActionLinkProps, MenuButtonItem {
   unlinkedText?: string;
   unlinkedTextAriaLabel?: string;
   href: NavigationActionLinkProps['href'];
   icon: NavigationActionLinkProps['icon'];
 }
 
-export interface MessageActionsListClickableItem extends ClickableActionLinkProps, MenuButtonItem {
+export interface HorizontalActionListClickableItem extends ClickableActionLinkProps, MenuButtonItem {
   unlinkedText?: string;
   unlinkedTextAriaLabel?: string;
   icon: ClickableActionLinkProps['icon'];
 }
 
-export type MessageActionsListItem = MessageActionsListLinkItem | MessageActionsListClickableItem;
+export type HorizontalActionListItem = HorizontalActionListLinkItem | HorizontalActionListClickableItem;

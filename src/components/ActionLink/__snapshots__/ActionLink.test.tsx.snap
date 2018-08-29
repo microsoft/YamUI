@@ -47,7 +47,7 @@ exports[`<ActionLink /> with compact set to true matches its snapshot 1`] = `
       fixed={true}
     >
       <CustomizedBlock
-        push={2}
+        push={1}
       >
         <Down
           block={true}

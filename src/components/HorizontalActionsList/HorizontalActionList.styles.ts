@@ -2,11 +2,11 @@
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
 
-export interface MessageActionsListClassNameProps {
+export interface HorizontalActionListClassNameProps {
   theme: ITheme;
 }
 
-export const getClassNames = memoizeFunction((classNameProps: MessageActionsListClassNameProps) => {
+export const getClassNames = memoizeFunction((classNameProps: HorizontalActionListClassNameProps) => {
   const { theme } = classNameProps;
 
   return mergeStyleSets({

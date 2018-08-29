@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MessageActionsList /> with a theme matches its snapshot 1`] = `
+exports[`<HorizontalActionList /> with a theme matches its snapshot 1`] = `
 <LayoutList
-  className="y-messageActionsList"
+  className="y-HorizontalActionList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -31,7 +31,7 @@ exports[`<MessageActionsList /> with a theme matches its snapshot 1`] = `
 
               {
                 color: #9ac3ff;
-                padding-left: 2px;
+                padding-left: 0.2rem;
               }
         >
           1
@@ -65,9 +65,9 @@ exports[`<MessageActionsList /> with a theme matches its snapshot 1`] = `
 </LayoutList>
 `;
 
-exports[`<MessageActionsList /> with all items matches its snapshot 1`] = `
+exports[`<HorizontalActionList /> with all items matches its snapshot 1`] = `
 <LayoutList
-  className="y-messageActionsList"
+  className="y-HorizontalActionList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -96,7 +96,7 @@ exports[`<MessageActionsList /> with all items matches its snapshot 1`] = `
 
               {
                 color: #386cbb;
-                padding-left: 2px;
+                padding-left: 0.2rem;
               }
         >
           1
@@ -130,9 +130,9 @@ exports[`<MessageActionsList /> with all items matches its snapshot 1`] = `
 </LayoutList>
 `;
 
-exports[`<MessageActionsList /> with all items, and maxVisibleItemCount of 1 matches its snapshot 1`] = `
+exports[`<HorizontalActionList /> with all items, and maxVisibleItemCount of 1 matches its snapshot 1`] = `
 <LayoutList
-  className="y-messageActionsList"
+  className="y-HorizontalActionList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -161,7 +161,7 @@ exports[`<MessageActionsList /> with all items, and maxVisibleItemCount of 1 mat
 
               {
                 color: #386cbb;
-                padding-left: 2px;
+                padding-left: 0.2rem;
               }
         >
           1
@@ -178,7 +178,7 @@ exports[`<MessageActionsList /> with all items, and maxVisibleItemCount of 1 mat
 
           {
             color: #386cbb;
-            top: 0.2rem;
+            top: 0.1rem;
           }
       iconSize="14"
       menuItems={
@@ -197,9 +197,9 @@ exports[`<MessageActionsList /> with all items, and maxVisibleItemCount of 1 mat
 </LayoutList>
 `;
 
-exports[`<MessageActionsList /> with one item matches its snapshot 1`] = `
+exports[`<HorizontalActionList /> with one item matches its snapshot 1`] = `
 <LayoutList
-  className="y-messageActionsList"
+  className="y-HorizontalActionList"
   direction="horizontal"
   gutterSize="medium"
 >
@@ -228,7 +228,7 @@ exports[`<MessageActionsList /> with one item matches its snapshot 1`] = `
 
               {
                 color: #386cbb;
-                padding-left: 2px;
+                padding-left: 0.2rem;
               }
         >
           1

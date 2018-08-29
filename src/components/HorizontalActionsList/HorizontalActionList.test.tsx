@@ -1,15 +1,15 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { MessageActionsList } from './MessageActionsList';
-import { MessageActionsListItem, MessageActionsListProps } from './MessageActionsList.types';
+import { HorizontalActionList } from './HorizontalActionList';
+import { HorizontalActionListItem, HorizontalActionListProps } from './HorizontalActionList.types';
 import Reply from '../Icon/icons/Reply';
 import Like from '../Icon/icons/Like';
 import { darkTheme } from '../Customizer';
 
-describe('<MessageActionsList />', () => {
-  let component: ShallowWrapper<MessageActionsListProps>;
-  let items: MessageActionsListItem[];
+describe('<HorizontalActionList />', () => {
+  let component: ShallowWrapper<HorizontalActionListProps>;
+  let items: HorizontalActionListItem[];
 
   beforeEach(() => {
     items = [
@@ -34,7 +34,7 @@ describe('<MessageActionsList />', () => {
 
   describe('with one item', () => {
     beforeEach(() => {
-      component = shallow(<MessageActionsList items={items.slice(0, 1)} overflowMenuAriaLabel="more items" />);
+      component = shallow(<HorizontalActionList items={items.slice(0, 1)} overflowMenuAriaLabel="more items" />);
     });
 
     it('matches its snapshot', () => {
@@ -44,7 +44,7 @@ describe('<MessageActionsList />', () => {
 
   describe('with all items', () => {
     beforeEach(() => {
-      component = shallow(<MessageActionsList items={items} overflowMenuAriaLabel="more items" />);
+      component = shallow(<HorizontalActionList items={items} overflowMenuAriaLabel="more items" />);
     });
 
     it('matches its snapshot', () => {
@@ -55,7 +55,7 @@ describe('<MessageActionsList />', () => {
   describe('with all items, and maxVisibleItemCount of 1', () => {
     beforeEach(() => {
       component = shallow(
-        <MessageActionsList items={items} maxVisibleItemCount={1} overflowMenuAriaLabel="more items" />,
+        <HorizontalActionList items={items} maxVisibleItemCount={1} overflowMenuAriaLabel="more items" />,
       );
     });
 
@@ -66,7 +66,7 @@ describe('<MessageActionsList />', () => {
 
   describe('with a theme', () => {
     beforeEach(() => {
-      component = shallow(<MessageActionsList items={items} theme={darkTheme} overflowMenuAriaLabel="more items" />);
+      component = shallow(<HorizontalActionList items={items} theme={darkTheme} overflowMenuAriaLabel="more items" />);
     });
 
     it('matches its snapshot', () => {
