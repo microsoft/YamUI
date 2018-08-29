@@ -16,7 +16,7 @@ export interface BaseActionLinkProps extends BaseComponentProps {
   /**
    * The visible text.
    */
-  text: string | React.ReactNode;
+  text: string;
 
   /**
    * A more compressed format.
@@ -40,7 +40,7 @@ export interface ClickableActionLinkProps extends BaseActionLinkProps {
   /**
    * A click handler.
    */
-  onClick: ((e: React.MouseEvent<HTMLButtonElement | HTMLLinkElement>) => void);
+  onClick?: ((ev?: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void);
 }
 
 export type ActionLinkProps = NavigationActionLinkProps | ClickableActionLinkProps;

@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { BaseIcon } from '../Icon';
+import { ClickableActionLinkProps, NavigationActionLinkProps } from '../ActionLink';
+import { MenuButtonItem } from '../MenuButton';
 
 export interface MessageActionsListProps extends BaseComponentProps {
   /**
@@ -19,12 +20,17 @@ export interface MessageActionsListProps extends BaseComponentProps {
   maxVisibleItemCount?: number;
 }
 
-export type MessageActionsListItem = {
-  icon: typeof BaseIcon;
-  text: string;
-  ariaLabel: string;
+export interface MessageActionsListLinkItem extends NavigationActionLinkProps, MenuButtonItem {
   unlinkedText?: string;
   unlinkedTextAriaLabel?: string;
-  key: string;
-  onClick(): React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
-};
+  href: NavigationActionLinkProps['href'];
+  icon: NavigationActionLinkProps['icon'];
+}
+
+export interface MessageActionsListClickableItem extends ClickableActionLinkProps, MenuButtonItem {
+  unlinkedText?: string;
+  unlinkedTextAriaLabel?: string;
+  icon: ClickableActionLinkProps['icon'];
+}
+
+export type MessageActionsListItem = MessageActionsListLinkItem | MessageActionsListClickableItem;
