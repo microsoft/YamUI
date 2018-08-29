@@ -12,10 +12,6 @@ import { FixedGridRow, FixedGridColumn } from '../FixedGrid';
 import Block, { TextSize } from '../Block';
 import { IconSize } from '../Icon';
 
-/**
- * A set of links that dispaly in a horizontal list below a message post.  When a maxVisibleItemCount
- * prop is provided, items that exceed this value will show in a overflow menu.
- */
 export class HorizontalActionList extends React.Component<HorizontalActionListProps & CustomizableComponentProps> {
   public render() {
     const { className, overflowMenuAriaLabel, items, maxVisibleItemCount, theme = defaultTheme } = this.props;
@@ -65,5 +61,9 @@ export class HorizontalActionList extends React.Component<HorizontalActionListPr
   }
 }
 
+/**
+ * A set of links that dispaly in a horizontal list.  When a maxVisibleItemCount
+ * prop is provided, items that exceed this value will show in a overflow menu.
+ */
 @customizable('HorizontalActionList', ['theme'])
 export default class CustomizableHorizontalActionList extends HorizontalActionList {}
