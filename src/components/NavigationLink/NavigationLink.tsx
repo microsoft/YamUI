@@ -6,9 +6,6 @@ import { join } from '../../util/classNames';
 import { getClassNames } from './NavigationLink.styles';
 import { NavigationLinkProps } from './NavigationLink.types';
 
-/**
- * A `NavigationLink` renders an `a` tag for navigation between web pages.
- */
 export class NavigationLink extends React.Component<NavigationLinkProps & CustomizableComponentProps> {
   public render() {
     const {
@@ -41,5 +38,8 @@ export class NavigationLink extends React.Component<NavigationLinkProps & Custom
   }
 }
 
+/**
+ * A `NavigationLink` renders an `a` tag for navigation between web pages.
+ */
 @customizable('NavigationLink', ['theme'])
 export default class CustomizableNavigationLink extends NavigationLink {}

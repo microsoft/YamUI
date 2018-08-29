@@ -7,11 +7,6 @@ import ScreenReaderText from '../ScreenreaderText';
 import { getClassNames } from './Text.styles';
 import { TextProps } from './Text.types';
 
-/**
- * A `Text` component simply renders a `span`. It offers size and color props so UI features don't
- * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
- * of supported text colors and `font-size`/`line-height` combinations.
- */
 export class Text extends React.Component<TextProps & CustomizableComponentProps> {
   public render() {
     const { children, screenreaderText } = this.props;
@@ -40,5 +35,10 @@ export class Text extends React.Component<TextProps & CustomizableComponentProps
   }
 }
 
+/**
+ * A `Text` component simply renders a `span`. It offers size and color props so UI features don't
+ * need to own this CSS. This is both a convenience for engineers and a way to enforce consistency
+ * of supported text colors and `font-size`/`line-height` combinations.
+ */
 @customizable('Text', ['theme'])
 export default class CustomizableText extends Text {}

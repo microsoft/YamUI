@@ -7,11 +7,6 @@ import { join } from '../../util/classNames';
 import { getClassNames } from './Clickable.styles';
 import { ClickableProps } from './Clickable.types';
 
-/**
- * A `Clickable` is an accessible, clickable area that accepts arbitrary children. It is styled
- * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
- * content in a `button` element.
- */
 export class Clickable extends React.Component<ClickableProps & CustomizableComponentProps> {
   private buttonRef = React.createRef<HTMLButtonElement>();
 
@@ -48,5 +43,10 @@ export class Clickable extends React.Component<ClickableProps & CustomizableComp
   }
 }
 
+/**
+ * A `Clickable` is an accessible, clickable area that accepts arbitrary children. It is styled
+ * like a link by default, but can also be unstyled. Under the hood `Clickable` simply wraps
+ * content in a `button` element.
+ */
 @customizable('Clickable', ['theme'])
 export default class CustomizableClickable extends Clickable {}

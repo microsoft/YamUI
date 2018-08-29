@@ -7,10 +7,6 @@ import { join } from '../../util/classNames';
 import { getClassNames } from './Box.styles';
 import { BoxProps } from './Box.types';
 
-/**
- * A Box is a div with a border and fixed padding. It also has `display: relative` so you can
- * absolutely-position elements like a close button. Boxes will primarily be used for card views.
- */
 export class Box extends React.Component<BoxProps & CustomizableComponentProps> {
   public render() {
     const { children, onClick, className, backgroundColor, borderColor, theme = defaultTheme } = this.props;
@@ -27,5 +23,9 @@ export class Box extends React.Component<BoxProps & CustomizableComponentProps> 
   }
 }
 
+/**
+ * A Box is a div with a border and fixed padding. It also has `display: relative` so you can
+ * absolutely-position elements like a close button. Boxes will primarily be used for card views.
+ */
 @customizable('Box', ['theme'])
 export default class CustomizableBox extends Box {}
