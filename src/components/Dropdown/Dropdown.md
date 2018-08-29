@@ -6,7 +6,7 @@ A `Dropdown` can be used in a <a href="https://facebook.github.io/react/docs/for
 
 Controlled dropdown:
 
-```js { "props": { "data-description": "controlled", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
+```js { "props": { "data-description": "controlled", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown .ms-Dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown .ms-Dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
 const { GutterSize } = require('../Block');
 
 const options = [
@@ -77,7 +77,7 @@ const options = [
 
 With option templates, dividers and headers:
 
-```js { "props": { "data-description": "with templates dividers headers", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
+```js { "props": { "data-description": "with templates dividers headers", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-dropdown .ms-Dropdown\"},{\"action\":\"click\",\"selector\":\".y-dropdown .ms-Dropdown\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"},{\"action\":\"keyPress\",\"key\":\"Enter\"}]"} }
 const { GutterSize } = require('../Block');
 const { DropdownMenuItemType } = require('.');
 const AttachIcon = require('../Icon/icons/Attach').default;
