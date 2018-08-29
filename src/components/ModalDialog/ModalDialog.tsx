@@ -13,10 +13,6 @@ import { join } from '../../util/classNames';
 import { getClassNames } from './ModalDialog.styles';
 import { ModalDialogProps } from './ModalDialog.types';
 
-/**
- * A `ModalDialog` is a temporary, modal UI overlay that generally provides contextual app
- * information or requires user confirmation/input.
- */
 export class ModalDialog extends React.Component<ModalDialogProps & CustomizableComponentProps> {
   public render() {
     const { children, className, isOpen, onDismiss, size, theme = defaultTheme } = this.props;
@@ -69,5 +65,9 @@ export class ModalDialog extends React.Component<ModalDialogProps & Customizable
   };
 }
 
+/**
+ * A `ModalDialog` is a temporary, modal UI overlay that generally provides contextual app
+ * information or requires user confirmation/input.
+ */
 @customizable('ModalDialog', ['theme'])
 export default class CustomizableModalDialog extends ModalDialog {}

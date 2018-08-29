@@ -19,9 +19,6 @@ import {
 
 const hrefBlacklist = ['', '#', 'javascript://'];
 
-/**
- * A `Button` allows a user to take an action.
- */
 export class Button extends React.Component<ButtonProps & CustomizableComponentProps> {
   public static propTypes = {
     // TypeScript does not support negated types, so we need to do a runtime validation instead.
@@ -116,5 +113,8 @@ export class Button extends React.Component<ButtonProps & CustomizableComponentP
   }
 }
 
+/**
+ * A `Button` allows a user to take an action.
+ */
 @customizable('Button', ['theme'])
 export default class CustomizableButton extends Button {}

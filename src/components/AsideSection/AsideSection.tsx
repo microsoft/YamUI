@@ -9,9 +9,6 @@ import { AsideSectionProps } from './AsideSection.types';
 import Text, { TextSize } from '../Text';
 import { getClassNames } from './AsideSection.styles';
 
-/**
- * A section component to be used primarily for sidebar modules
- */
 export class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
   public render() {
     const { title, children, theme = defaultTheme } = this.props;
@@ -47,5 +44,8 @@ export class AsideSection extends React.Component<AsideSectionProps & Customizab
   }
 }
 
+/**
+ * A section component to be used primarily for sidebar modules
+ */
 @customizable('AsideSection', ['theme'])
 export default class CustomizableAsideSection extends AsideSection {}

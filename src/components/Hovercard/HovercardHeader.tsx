@@ -7,9 +7,6 @@ import Block, { GutterSize } from '../Block';
 import { getClassNames } from './Hovercard.styles';
 import { HovercardHeaderProps } from './Hovercard.types';
 
-/**
- * Header of a `Hovercard` component. Used to maintain a consistent layout.
- */
 export class HovercardHeader extends React.Component<HovercardHeaderProps & CustomizableComponentProps> {
   public render() {
     const { className, children, theme = defaultTheme } = this.props;
@@ -23,5 +20,8 @@ export class HovercardHeader extends React.Component<HovercardHeaderProps & Cust
   }
 }
 
+/**
+ * Header of a `Hovercard` component. Used to maintain a consistent layout.
+ */
 @customizable('HovercardHeader', ['theme'])
 export default class CustomizableHovercardHeader extends HovercardHeader {}

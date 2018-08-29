@@ -16,10 +16,6 @@ import Spinner, { SpinnerColor, SpinnerSize } from '../Spinner';
 import { getClassNames } from './PreviewCard.styles';
 import { PreviewCardProps, PreviewCardState } from './PreviewCard.types';
 
-/**
- * PreviewCard is a compact representation of an uploaded file or other attachment. It supports an
- * editable description, and a loading experience (Spinner or percentage ProgressIndicator).
- */
 export class PreviewCard extends React.Component<PreviewCardProps & CustomizableComponentProps, PreviewCardState> {
   constructor(props: PreviewCardProps) {
     super(props);
@@ -156,5 +152,9 @@ export class PreviewCard extends React.Component<PreviewCardProps & Customizable
   }
 }
 
+/**
+ * PreviewCard is a compact representation of an uploaded file or other attachment. It supports an
+ * editable description, and a loading experience (Spinner or percentage ProgressIndicator).
+ */
 @customizable('PreviewCard', ['theme'])
 export default class CustomizablePreviewCard extends PreviewCard {}

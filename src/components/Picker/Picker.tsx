@@ -14,9 +14,6 @@ import './Picker.css'; // Required for the Callout content as there aren't JS st
 
 class SuggestionListBasePicker extends BasePicker<SuggestionItem, IBasePickerProps<SuggestionItem>> {}
 
-/**
- * Pickers are used to pick one or more entities (e.g. people, groups, topics) from a list with typeahead capabilities.
- */
 export class Picker extends React.Component<PickerProps & CustomizableComponentProps> {
   public render() {
     const {
@@ -101,5 +98,9 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
     );
   };
 }
+
+/**
+ * Pickers are used to pick one or more entities (e.g. people, groups, topics) from a list with typeahead capabilities.
+ */
 @customizable('Picker', ['theme'])
 export default class CustomizablePicker extends Picker {}
