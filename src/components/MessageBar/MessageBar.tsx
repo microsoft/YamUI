@@ -8,10 +8,6 @@ import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { getClassNames } from './MessageBar.styles';
 import { MessageBarType, MessageBarProps } from './MessageBar.types';
 
-/**
- * A `MessageBar` displays relevant status information. You can use a `MessageBar` to tell the user
- * about a situation, and optionally provide actions for them to take.
- */
 export class MessageBar extends React.Component<MessageBarProps & CustomizableComponentProps> {
   public render() {
     const { actions, children, className, type = MessageBarType.INFO, theme = defaultTheme } = this.props;
@@ -32,5 +28,9 @@ export class MessageBar extends React.Component<MessageBarProps & CustomizableCo
   }
 }
 
+/**
+ * A `MessageBar` displays relevant status information. You can use a `MessageBar` to tell the user
+ * about a situation, and optionally provide actions for them to take.
+ */
 @customizable('MessageBar', ['theme'])
 export default class CustomizableMessageBar extends MessageBar {}

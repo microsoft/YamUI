@@ -12,11 +12,6 @@ import { HovercardProps, HovercardState, TriggerType } from './Hovercard.types';
 const hideDelay = 500;
 const showDelay = 750;
 
-/**
- * A `Hovercard` is a small popover overlay. It opens on click or
- * mouse enter, and closes on mouse out and `ESC`. It should be used with `HovercardHeader` and
- * `HovercardBody` components for consistent internal padding.
- */
 export class Hovercard extends React.Component<HovercardProps & CustomizableComponentProps, HovercardState> {
   public static defaultProps: Partial<HovercardProps> = {
     directionalHint: DirectionalHint.bottomCenter,
@@ -203,5 +198,10 @@ export class Hovercard extends React.Component<HovercardProps & CustomizableComp
   };
 }
 
+/**
+ * A `Hovercard` is a small popover overlay. It opens on click or
+ * mouse enter, and closes on mouse out and `ESC`. It should be used with `HovercardHeader` and
+ * `HovercardBody` components for consistent internal padding.
+ */
 @customizable('Hovercard', ['theme'])
 export default class CustomizableHovercard extends Hovercard {}

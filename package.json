@@ -57,7 +57,7 @@
     "raw-loader": "0.5.1",
     "react": "16.3.2",
     "react-docgen": "2.21.0",
-    "react-docgen-typescript": "1.6.1",
+    "react-docgen-typescript": "1.7.0",
     "react-dom": "16.3.2",
     "react-styleguidist": "7.0.20",
     "react-styleguidist-visual": "0.8.0",

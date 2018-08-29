@@ -6,14 +6,6 @@ import { FakeLinkProps } from './FakeLink.types';
 import { getClassNames } from '../FakeLink/FakeLink.styles';
 import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 
-/**
- * A `FakeLink` is simply a span which imitates the styling of an `<a>` tag (or `NavigationLink`
- * component). It is meant to be nested within unstyled `NavigationLink` or `Clickable`
- * components, allowing an entire block of content to be an accessible tabbable element while
- * still showing individual nested "links" for sighted users.
- *
- * NOTE: If you are looking for click interaction please see [Clickable](#clickable).
- */
 export class FakeLink extends React.Component<FakeLinkProps & CustomizableComponentProps> {
   public render() {
     const { className, children, theme = defaultTheme } = this.props;
@@ -23,5 +15,13 @@ export class FakeLink extends React.Component<FakeLinkProps & CustomizableCompon
   }
 }
 
+/**
+ * A `FakeLink` is simply a span which imitates the styling of an `<a>` tag (or `NavigationLink`
+ * component). It is meant to be nested within unstyled `NavigationLink` or `Clickable`
+ * components, allowing an entire block of content to be an accessible tabbable element while
+ * still showing individual nested "links" for sighted users.
+ *
+ * NOTE: If you are looking for click interaction please see [Clickable](#clickable).
+ */
 @customizable('FakeLink', ['theme'])
 export default class CustomizableFakeLink extends FakeLink {}

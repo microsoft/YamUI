@@ -6,9 +6,6 @@ import { join } from '../../util/classNames';
 import { getClassNames } from './Tile.styles';
 import { TileProps } from './Tile.types';
 
-/**
- * A `Tile` component is a container what maintains a certain aspect ratio.
- */
 export class Tile extends React.Component<TileProps & CustomizableComponentProps> {
   public render() {
     const { children } = this.props;
@@ -23,5 +20,8 @@ export class Tile extends React.Component<TileProps & CustomizableComponentProps
   }
 }
 
+/**
+ * A `Tile` component is a container what maintains a certain aspect ratio.
+ */
 @customizable('Tile', ['theme'])
 export default class CustomizableTile extends Tile {}

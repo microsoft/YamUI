@@ -33,10 +33,6 @@ const fabricSpinnerSizes = {
   [SpinnerSize.XSMALL]: FabricSpinnerSize.xSmall,
 };
 
-/**
- * A `Spinner` is an outline of a circle which animates around itself indicating to the user that
- * things are processing. It is shown when we're unsure how long a task will take.
- */
 export class Spinner extends React.Component<SpinnerProps & CustomizableComponentProps> {
   public render() {
     const {
@@ -77,5 +73,9 @@ export class Spinner extends React.Component<SpinnerProps & CustomizableComponen
   }
 }
 
+/**
+ * A `Spinner` is an outline of a circle which animates around itself indicating to the user that
+ * things are processing. It is shown when we're unsure how long a task will take.
+ */
 @customizable('Spinner', ['theme'])
 export default class CustomizableSpinner extends Spinner {}

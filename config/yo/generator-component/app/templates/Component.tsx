@@ -6,10 +6,7 @@ import { join } from '../../util/classNames';
 import { <%= name %>Props, <%= name %>Type } from './<%= name %>.types';
 import { getClassNames } from './<%= name %>.styles';
 
-/**
- * Describe what `<%= name %>` does. This will also appear as part of this component's
- * documentation.
- */
+
 export class <%= name %> extends React.Component<<%= name %>Props & CustomizableComponentProps> {
   public render() {
     const { className, type = <%= name %>Type.BLACK, theme = defaultTheme } = this.props;
@@ -23,5 +20,9 @@ export class <%= name %> extends React.Component<<%= name %>Props & Customizable
   }
 }
 
+/**
+ * Describe what `<%= name %>` does. This will also appear as part of this component's
+ * documentation.
+ */
 @customizable('<%= name %>', ['theme'])
 export default class Customizable<%= name %> extends <%= name %> {}

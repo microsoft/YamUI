@@ -6,10 +6,6 @@ import { ProgressIndicator as OfficeFabricProgressIndicator } from 'office-ui-fa
 import { getProgressIndicatorStyles } from './ProgressIndicator.styles';
 import { ProgressIndicatorProps } from './ProgressIndicator.types';
 
-/**
- * A `ProgressIndicator` is used to show the progress of an ongoing operation
- * e.g. a file upload.
- */
 export class ProgressIndicator extends React.Component<ProgressIndicatorProps & CustomizableComponentProps> {
   public render() {
     const { ariaValueText, percentComplete, className, theme = defaultTheme } = this.props;
@@ -25,5 +21,9 @@ export class ProgressIndicator extends React.Component<ProgressIndicatorProps & 
   }
 }
 
+/**
+ * A `ProgressIndicator` is used to show the progress of an ongoing operation
+ * e.g. a file upload.
+ */
 @customizable('ProgressIndicator', ['theme'])
 export default class CustomizableProgressIndicator extends ProgressIndicator {}

@@ -10,9 +10,6 @@ import { LayoutList, LayoutListItem } from '../LayoutList';
 import { getClassNames, SuggestionsListClassNames } from './SuggestionsList.styles';
 import { SuggestionItem, SuggestionsListProps, SuggestionItemGroup } from './SuggestionsList.types';
 
-/**
- * A `SuggestionsList` displays a list of search results in a dropdown.
- */
 export class SuggestionsList extends React.PureComponent<SuggestionsListProps & CustomizableComponentProps> {
   public render() {
     const { className, isLoading, theme = defaultTheme } = this.props;
@@ -97,5 +94,8 @@ export class SuggestionsList extends React.PureComponent<SuggestionsListProps & 
   };
 }
 
+/**
+ * A `SuggestionsList` displays a list of search results in a dropdown.
+ */
 @customizable('SuggestionsList', ['theme'])
 export default class CustomizableSuggestionsList extends SuggestionsList {}

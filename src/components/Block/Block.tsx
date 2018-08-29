@@ -6,12 +6,6 @@ import { getClassNames } from './Block.styles';
 import { BlockProps } from './Block.types';
 import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 
-/**
- * A `Block` is a layout component to build consistent padding and vertical spacing between
- * components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in
- * the `4px` vertical rhythm. It's also the primary place you should set `textSize` in your UIs,
- * providing enumerated options for the supported `font-size`/`line-height` combinations.
- */
 export class Block extends React.Component<BlockProps & CustomizableComponentProps> {
   public render() {
     const { children, textSize, className, theme = defaultTheme, ...remainingProps } = this.props;
@@ -26,5 +20,11 @@ export class Block extends React.Component<BlockProps & CustomizableComponentPro
   }
 }
 
+/**
+ * A `Block` is a layout component to build consistent padding and vertical spacing between
+ * components. It allows you to `push` a chunk of UI up or down by individual pixels to keep text in
+ * the `4px` vertical rhythm. It's also the primary place you should set `textSize` in your UIs,
+ * providing enumerated options for the supported `font-size`/`line-height` combinations.
+ */
 @customizable('Block', ['theme'])
 export default class CustomizableBlock extends Block {}

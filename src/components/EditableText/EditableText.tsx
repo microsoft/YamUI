@@ -11,9 +11,6 @@ import { KeyCodes } from '../../util/keyCodes';
 import { getClassNames } from './EditableText.styles';
 import { EditableTextProps, EditableTextState } from './EditableText.types';
 
-/**
- * Displays text which can be edited on click.
- */
 export class EditableText extends React.Component<EditableTextProps & CustomizableComponentProps, EditableTextState> {
   private textFieldFocusable: Focusable | null;
   private clickableFocusable: Focusable | null;
@@ -140,5 +137,8 @@ export class EditableText extends React.Component<EditableTextProps & Customizab
   };
 }
 
+/**
+ * Displays text which can be edited on click.
+ */
 @customizable('EditableText', ['theme'])
 export default class CustomizableEditableText extends EditableText {}

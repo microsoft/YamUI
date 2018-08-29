@@ -51,5 +51,8 @@ export class Avatar extends React.Component<AvatarProps & CustomizableComponentP
   }
 }
 
+/**
+ * An `Avatar` shows a thumbnail representation of both an individual or group.
+ */
 @customizable('Avatar', ['theme'])
 export default class CustomizableAvatar extends Avatar {}
