@@ -15,7 +15,6 @@ export const getClassNames = memoizeFunction((classNameProps: HorizontalActionLi
       paddingLeft: '0.2rem',
     },
     menuButton: {
-      color: theme.semanticColors.link,
       top: '0.1rem',
     },
   });
