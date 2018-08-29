@@ -8,7 +8,6 @@ services:
       - ./build:/usr/src/yamui/build
       - ./config:/usr/src/yamui/config
       - ./dist:/usr/src/yamui/dist
-      - ./dist:/usr/src/yamui/dist-commonjs
       - ./src:/usr/src/yamui/src
     environment:
       - CI
