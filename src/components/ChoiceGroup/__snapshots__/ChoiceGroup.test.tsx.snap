@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ChoiceGroup /> when \`props.selectedKey\` is set renders as expected 1`] = `
-<StyledCustomizedChoiceGroup
+<StyledChoiceGroupBase
   className="y-choice-group"
   onChange={[Function]}
   options={
@@ -44,7 +44,7 @@ Object {
 `;
 
 exports[`<ChoiceGroup /> with minimal props renders as expected 1`] = `
-<StyledCustomizedChoiceGroup
+<StyledChoiceGroupBase
   className="y-choice-group"
   onChange={[Function]}
   options={
@@ -94,7 +94,7 @@ exports[`<ChoiceGroup /> with minimal props sublabel renders as expected 1`] = `
 `;
 
 exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option renders as expected 1`] = `
-<StyledCustomizedChoiceGroup
+<StyledChoiceGroupBase
   className="y-choice-group"
   onChange={[Function]}
   options={
@@ -118,7 +118,7 @@ exports[`<ChoiceGroup /> with minimal props when a change is triggered with an o
 `;
 
 exports[`<ChoiceGroup /> with minimal props when a change is triggered with an option that is \`undefined\` renders as expected 1`] = `
-<StyledCustomizedChoiceGroup
+<StyledChoiceGroupBase
   className="y-choice-group"
   onChange={[Function]}
   options={

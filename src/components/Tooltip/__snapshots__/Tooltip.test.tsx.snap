@@ -44,8 +44,8 @@ exports[`<Tooltip /> with additional className matches its snapshot 1`] = `
         },
         "subText": Object {
           "color": "#ffffff",
-          "fontSize": "1.2rem",
-          "lineHeight": "1.6rem",
+          "fontSize": "12px",
+          "lineHeight": undefined,
         },
       },
     }
@@ -97,8 +97,8 @@ exports[`<Tooltip /> with default options matches its snapshot 1`] = `
         },
         "subText": Object {
           "color": "#ffffff",
-          "fontSize": "1.2rem",
-          "lineHeight": "1.6rem",
+          "fontSize": "12px",
+          "lineHeight": undefined,
         },
       },
     }
@@ -153,8 +153,8 @@ exports[`<Tooltip /> with directionalHint matches its snapshot 1`] = `
         },
         "subText": Object {
           "color": "#ffffff",
-          "fontSize": "1.2rem",
-          "lineHeight": "1.6rem",
+          "fontSize": "12px",
+          "lineHeight": undefined,
         },
       },
     }

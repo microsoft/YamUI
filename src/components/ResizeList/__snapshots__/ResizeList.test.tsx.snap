@@ -62,7 +62,7 @@ exports[`<ResizeList /> onRenderData prop with actionItem matches its snapshot 1
 `;
 
 exports[`<ResizeList /> with action item matches its snapshot 1`] = `
-<StyledCustomizedResizeGroup
+<StyledResizeGroupBase
   data={
     Object {
       "cacheKey": "4",
@@ -76,7 +76,7 @@ exports[`<ResizeList /> with action item matches its snapshot 1`] = `
 `;
 
 exports[`<ResizeList /> with additional className matches its snapshot 1`] = `
-<StyledCustomizedResizeGroup
+<StyledResizeGroupBase
   data={
     Object {
       "cacheKey": "4",
@@ -90,7 +90,7 @@ exports[`<ResizeList /> with additional className matches its snapshot 1`] = `
 `;
 
 exports[`<ResizeList /> with gutter size matches its snapshot 1`] = `
-<StyledCustomizedResizeGroup
+<StyledResizeGroupBase
   data={
     Object {
       "cacheKey": "4",
@@ -104,7 +104,7 @@ exports[`<ResizeList /> with gutter size matches its snapshot 1`] = `
 `;
 
 exports[`<ResizeList /> with items matches its snapshot 1`] = `
-<StyledCustomizedResizeGroup
+<StyledResizeGroupBase
   data={
     Object {
       "cacheKey": "4",

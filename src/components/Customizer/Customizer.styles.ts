@@ -8,15 +8,16 @@ export interface CustomizerClassNameProps {
 
 export const getClassNames = memoizeFunction((styleProps: CustomizerClassNameProps) => {
   const { theme } = styleProps;
+  const { fontSize, lineHeight, fontFamily, fontWeight } = theme.fonts.medium;
 
   return mergeStyleSets({
     root: {
       backgroundColor: theme.semanticColors.bodyBackground,
       color: theme.semanticColors.bodyText,
-      fontSize: theme.fonts.medium.fontSize,
-      lineHeight: theme.fonts.medium.lineHeight,
-      font: theme.fonts.medium.fontFamily,
-      fontWeight: theme.fonts.medium.fontWeight,
+      fontSize,
+      lineHeight,
+      fontFamily,
+      fontWeight,
     },
   });
 });

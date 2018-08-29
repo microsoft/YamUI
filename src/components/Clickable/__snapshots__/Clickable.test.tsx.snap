@@ -39,7 +39,7 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -47,7 +47,7 @@ exports[`<Clickable /> when ariaLabel is passed matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -93,7 +93,7 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -101,7 +101,7 @@ exports[`<Clickable /> when block is true matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -147,7 +147,7 @@ exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
     class=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -155,7 +155,7 @@ exports[`<Clickable /> when focusableRef is passed matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -202,7 +202,7 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -210,7 +210,7 @@ exports[`<Clickable /> when title is passed matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -295,7 +295,7 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -303,7 +303,7 @@ exports[`<Clickable /> with additional className matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -349,7 +349,7 @@ exports[`<Clickable /> with default options matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -357,7 +357,7 @@ exports[`<Clickable /> with default options matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content
@@ -403,7 +403,7 @@ exports[`<Clickable /> with theme matches its snapshot 1`] = `
     className=
         y-fakeLink
         {
-          color: #386cbb;
+          color: #0078d4;
           text-decoration: none;
         }
         &:hover {
@@ -411,7 +411,7 @@ exports[`<Clickable /> with theme matches its snapshot 1`] = `
           text-decoration: underline;
         }
         &:active, &:focus, &:hover {
-          color: #264f8c;
+          color: #004578;
         }
   >
     clickable content

@@ -1,16 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
-<WithResponsiveMode
-  className=""
+<StyledWithResponsiveMode
   containerClassName=
       y-modalDialog
       TEST_CLASSNAME
       {
         width: 580px;
       }
-  isBlocking={false}
-  isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
@@ -29,20 +26,17 @@ exports[`<ModalDialog /> when the title is hidden matches its snapshot 1`] = `
       </div>
     </ScreenreaderText>
   </CustomizedBlock>
-</WithResponsiveMode>
+</StyledWithResponsiveMode>
 `;
 
 exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
-<WithResponsiveMode
-  className=""
+<StyledWithResponsiveMode
   containerClassName=
       y-modalDialog
       TEST_CLASSNAME
       {
         width: 580px;
       }
-  isBlocking={false}
-  isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
@@ -83,19 +77,16 @@ exports[`<ModalDialog /> with additional className matches its snapshot 1`] = `
       </FixedGridColumn>
     </FixedGridRow>
   </CustomizedBlock>
-</WithResponsiveMode>
+</StyledWithResponsiveMode>
 `;
 
 exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
-<WithResponsiveMode
-  className=""
+<StyledWithResponsiveMode
   containerClassName=
       y-modalDialog
       {
         width: 580px;
       }
-  isBlocking={false}
-  isDarkOverlay={true}
   isOpen={false}
   onDismiss={[MockFunction]}
   titleAriaId="y-modalDialog--title"
@@ -136,5 +127,5 @@ exports[`<ModalDialog /> with default options matches its snapshot 1`] = `
       </FixedGridColumn>
     </FixedGridRow>
   </CustomizedBlock>
-</WithResponsiveMode>
+</StyledWithResponsiveMode>
 `;
