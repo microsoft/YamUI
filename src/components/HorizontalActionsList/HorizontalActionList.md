@@ -1,6 +1,6 @@
 ### Examples
 
-```js { "props": { "data-description": "basic" } }
+```js { "props": { "data-description": "basic", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"hover\",\"selector\":\".y-menu-button--item-text\"}]" } }
 const Like = require('../Icon/icons/Like').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Share = require('../Icon/icons/Share').default;
@@ -34,7 +34,7 @@ const items = [
   },
 ];
 
-<div style={{ maxWidth: '400px' }}>
+<div style={{ maxWidth: '400px', height: '60px' }}>
   <HorizontalActionList items={items} maxVisibleItemCount={3} />
 </div>;
 ```
