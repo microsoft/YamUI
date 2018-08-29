@@ -8,6 +8,7 @@
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
   padding-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
 /* Chevron Icon */
