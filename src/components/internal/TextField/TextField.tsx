@@ -62,7 +62,7 @@ export interface BaseTextFieldProps
   maxLength?: number;
 
   /**
-   * Callback for the onChanged event.
+   * Callback for the onChange event.
    */
   onChange?: ((newValue: any) => void);
 
@@ -185,7 +185,7 @@ class TextField extends React.Component<TextFieldProps> implements Focusable {
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}
         onKeyDown={props.onKeyDown}
-        onChanged={props.unifiedOnChange}
+        onChange={props.unifiedOnChange}
         // Input or TextArea specific props
         {...inputOrTextAreaProps}
       />

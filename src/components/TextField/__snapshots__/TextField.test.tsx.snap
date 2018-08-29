@@ -13,7 +13,7 @@ exports[`<TextField /> with all options matches its snapshot 1`] = `
   maxLength={100}
   multiline={false}
   onBlur={[MockFunction onBlur]}
-  onChanged={[Function]}
+  onChange={[Function]}
   onFocus={[MockFunction onFocus]}
   onMouseEnter={[MockFunction onMouseEnter]}
   onMouseLeave={[MockFunction onMouseLeave]}
@@ -32,7 +32,7 @@ exports[`<TextField /> with default options matches its snapshot 1`] = `
   className="y-textField y-textInput"
   componentRef={[Function]}
   multiline={false}
-  onChanged={[Function]}
+  onChange={[Function]}
   onRenderDescription={[Function]}
   resizable={false}
 />
