@@ -12,11 +12,11 @@ export const getClassNames = memoizeFunction((classNameProps: MessageActionsList
   return mergeStyleSets({
     unlinkedText: {
       color: theme.semanticColors.link,
-      paddingLeft: '2px',
+      paddingLeft: '0.2rem',
     },
     menuButton: {
       color: theme.semanticColors.link,
-      top: '0.2rem',
+      top: '0.1rem',
     },
   });
 });

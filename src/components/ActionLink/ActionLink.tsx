@@ -24,7 +24,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
     const content = (
       <FixedGridRow gutterSize={gutterSize}>
         <FixedGridColumn fixed={true}>
-          <Block push={2}>
+          <Block push={compact ? 1 : 2}>
             <Icon size={iconSize} block={true} />
           </Block>
         </FixedGridColumn>
