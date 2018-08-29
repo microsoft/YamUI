@@ -13,7 +13,7 @@ exports[`<TextArea /> with all options matches its snapshot 1`] = `
   label="LABEL"
   multiline={true}
   onBlur={[MockFunction onBlur]}
-  onChange={[Function]}
+  onChanged={[Function]}
   onFocus={[MockFunction onFocus]}
   onMouseEnter={[MockFunction onMouseEnter]}
   onMouseLeave={[MockFunction onMouseLeave]}
@@ -30,7 +30,7 @@ exports[`<TextArea /> with default options matches its snapshot 1`] = `
   className="y-textField y-textArea"
   componentRef={[Function]}
   multiline={true}
-  onChange={[Function]}
+  onChanged={[Function]}
   onRenderDescription={[Function]}
   resizable={false}
 />
@@ -42,7 +42,7 @@ exports[`<TextArea /> with description and no error matches its snapshot 1`] = `
   componentRef={[Function]}
   description="true"
   multiline={true}
-  onChange={[Function]}
+  onChanged={[Function]}
   onRenderDescription={[Function]}
   resizable={false}
 />
