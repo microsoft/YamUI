@@ -8,7 +8,7 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -30,7 +30,7 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -52,7 +52,7 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -74,7 +74,7 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -118,7 +118,7 @@ exports[`<Avatar /> with image url matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -140,7 +140,7 @@ exports[`<Avatar /> with imageShouldFadeIn matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={true}
     size={12}
@@ -161,7 +161,7 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -183,7 +183,7 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
@@ -205,7 +205,7 @@ exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
         position: relative;
       }
 >
-  <StyledCustomizedPersonaCoin
+  <StyledPersonaCoinBase
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     size={12}

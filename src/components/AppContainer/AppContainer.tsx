@@ -3,7 +3,7 @@ import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
 import { Fabric } from 'office-ui-fabric-react/lib/Fabric';
-import { CustomizableComponentProps, defaultTheme } from '../Customizer';
+import Customizer, { CustomizableComponentProps, defaultTheme } from '../Customizer';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { getClassNames } from './AppContainer.styles';
 
@@ -13,10 +13,12 @@ import { getClassNames } from './AppContainer.styles';
 export default class AppContainer extends React.Component<NestableBaseComponentProps & CustomizableComponentProps> {
   public render() {
     const { children, className, theme = defaultTheme } = this.props;
-    const classNames = getClassNames({ theme });
+    const classNames = getClassNames();
     return (
       <Fabric theme={theme}>
-        <div className={join(['y-appContainer', classNames.root, className])}>{children}</div>
+        <Customizer settings={{ theme }}>
+          <div className={join(['y-appContainer', classNames.root, className])}>{children}</div>
+        </Customizer>
       </Fabric>
     );
   }

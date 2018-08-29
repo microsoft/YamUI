@@ -8,6 +8,16 @@ export interface PickerClassNameProps {
 export const getClassNames = memoizeFunction((classNameProps: PickerClassNameProps) => {
   const { theme } = classNameProps;
   return mergeStyleSets({
+    root: {
+      selectors: {
+        '.ms-BasePicker-text[class*="pickerText"][class*="inputFocused"]': {
+          borderColor: theme.palette.themePrimary,
+        },
+        '.ms-BasePicker-text[class*="pickerText"]': {
+          borderColor: theme.palette.neutralTertiary,
+        },
+      },
+    },
     selectedItem: {
       backgroundColor: theme.semanticColors.menuItemBackgroundHovered,
       borderRadius: '2px',
@@ -17,6 +27,7 @@ export const getClassNames = memoizeFunction((classNameProps: PickerClassNamePro
       height: '26px',
       color: theme.semanticColors.bodyText,
       cursor: 'default',
+      display: 'inline-flex',
     },
     selectedItemCloseButton: {
       cursor: 'pointer',
@@ -24,6 +35,36 @@ export const getClassNames = memoizeFunction((classNameProps: PickerClassNamePro
     },
     suggestionItem: {
       width: '100%',
+    },
+    suggestionsBox: {
+      selectors: {
+        '.ms-Suggestions-title': {
+          color: theme.palette.themePrimary,
+          borderBottomColor: theme.palette.neutralLight,
+        },
+        '.ms-Suggestions-container': {
+          borderBottomColor: theme.palette.neutralLight,
+        },
+      },
+    },
+    suggestionsList: {
+      selectors: {
+        '.ms-Suggestions-item': {
+          selectors: {
+            ':hover': {
+              backgroundColor: theme.palette.neutralLighter,
+            },
+          },
+        },
+        '.ms-Suggestions-item[class*="suggestionsItemIsSuggested"]': {
+          backgroundColor: theme.palette.neutralLight,
+          selectors: {
+            ':hover': {
+              backgroundColor: theme.palette.neutralTertiaryAlt,
+            },
+          },
+        },
+      },
     },
   });
 });
