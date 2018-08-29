@@ -56,7 +56,7 @@ export const getClassNames = memoizeFunction((classNameProps: PickerClassNamePro
             },
           },
         },
-        '.ms-Suggestions-item[class*="suggestionsItemIsSuggested"]': {
+        '[aria-selected="true"]>.ms-Suggestions-item': {
           backgroundColor: theme.palette.neutralLight,
           selectors: {
             ':hover': {
