@@ -8,11 +8,11 @@
   font-weight: $fontWeight__bold;
   color: $textColor__secondary;
   padding-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
 /* Chevron Icon */
 .y-dropdown .ms-Dropdown-caretDownWrapper {
-  top: 0.2rem;
   right: 1.1rem;
   height: 3.2rem;
   line-height: 3.4rem;
@@ -26,17 +26,12 @@
   padding-bottom: 0.4rem;
 }
 
-.y-dropdown .ms-Dropdown-item {
-  padding: 0.4rem 1.1rem 0.6rem;
-  text-align: left;
-}
-
 .y-dropdown .ms-Dropdown-item:hover,
 .y-dropdown .ms-Dropdown-item:active,
 .y-dropdown .ms-Dropdown-item:focus {
   background-color: $interactiveElementBackround__focused;
 }
-.y-dropdown .ms-Dropdown-item.is-selected {
+.y-dropdown .ms-Dropdown-item[aria-selected='true'] {
   background-color: $interactiveElementBackround__selected;
 }
 

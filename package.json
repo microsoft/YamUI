@@ -10,10 +10,11 @@
     "url": "https://github.com/Microsoft/YamUI.git"
   },
   "dependencies": {
-    "office-ui-fabric-react": "6.25.0",
-    "@researchgate/react-intersection-observer": "0.7.3"
+    "@researchgate/react-intersection-observer": "0.7.3",
+    "office-ui-fabric-react": "6.53.0"
   },
   "devDependencies": {
+    "@uifabric/utilities": "6.16.0",
     "@types/enzyme": "3.1.11",
     "@types/jest": "23.1.4",
     "@types/node": "8.10.21",

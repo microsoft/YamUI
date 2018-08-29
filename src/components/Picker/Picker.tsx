@@ -31,14 +31,18 @@ export class Picker extends React.Component<PickerProps & CustomizableComponentP
       inputAriaLabel,
       suggestionsHeaderText,
       noResultsFoundText,
+      theme = defaultTheme,
     } = this.props;
+    const classNames = getClassNames({ theme });
 
     return (
       <SuggestionListBasePicker
-        className={join(['y-picker', className])}
+        className={join(['y-picker', classNames.root, className])}
         onResolveSuggestions={onResolveSuggestions}
         pickerSuggestionsProps={{
           suggestionsHeaderText,
+          className: classNames.suggestionsBox,
+          suggestionsClassName: classNames.suggestionsList,
           noResultsFoundText,
         }}
         itemLimit={itemLimit}

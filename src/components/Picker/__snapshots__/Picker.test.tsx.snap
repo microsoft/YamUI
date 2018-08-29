@@ -10,6 +10,7 @@ exports[`<Picker /> when rendering a selected item matches its snapshot 1`] = `
         border: solid 1px #dde0e6;
         color: #343a41;
         cursor: default;
+        display: inline-flex;
         height: 26px;
         margin-bottom: 2px;
         margin-left: 2px;
@@ -77,7 +78,15 @@ exports[`<Picker /> when rendering a suggestion item matches its snapshot 1`] = 
 
 exports[`<Picker /> with additional className matches its snapshot 1`] = `
 <SuggestionListBasePicker
-  className="y-picker TEST_CLASSNAME"
+  className=
+      y-picker
+      TEST_CLASSNAME
+      & .ms-BasePicker-text[class*="pickerText"][class*="inputFocused"] {
+        border-color: #6c98d9;
+      }
+      & .ms-BasePicker-text[class*="pickerText"] {
+        border-color: #dde0e6;
+      }
   inputProps={
     Object {
       "aria-label": "People to mention",
@@ -91,7 +100,27 @@ exports[`<Picker /> with additional className matches its snapshot 1`] = `
   onResolveSuggestions={[Function]}
   pickerSuggestionsProps={
     Object {
+      "className": 
+
+        & .ms-Suggestions-title {
+          border-bottom-color: #edeff2;
+          color: #6c98d9;
+        }
+        & .ms-Suggestions-container {
+          border-bottom-color: #edeff2;
+        },
       "noResultsFoundText": "No results found",
+      "suggestionsClassName": 
+
+        & .ms-Suggestions-item:hover {
+          background-color: #f3f5f8;
+        }
+        & .ms-Suggestions-item[class*="suggestionsItemIsSuggested"] {
+          background-color: #edeff2;
+        }
+        & .ms-Suggestions-item[class*="suggestionsItemIsSuggested"]:hover {
+          background-color: #a8b0bd;
+        },
       "suggestionsHeaderText": "People",
     }
   }
@@ -101,7 +130,14 @@ exports[`<Picker /> with additional className matches its snapshot 1`] = `
 
 exports[`<Picker /> with default options matches its snapshot 1`] = `
 <SuggestionListBasePicker
-  className="y-picker"
+  className=
+      y-picker
+      & .ms-BasePicker-text[class*="pickerText"][class*="inputFocused"] {
+        border-color: #6c98d9;
+      }
+      & .ms-BasePicker-text[class*="pickerText"] {
+        border-color: #dde0e6;
+      }
   inputProps={
     Object {
       "aria-label": "People to mention",
@@ -115,7 +151,27 @@ exports[`<Picker /> with default options matches its snapshot 1`] = `
   onResolveSuggestions={[Function]}
   pickerSuggestionsProps={
     Object {
+      "className": 
+
+        & .ms-Suggestions-title {
+          border-bottom-color: #edeff2;
+          color: #6c98d9;
+        }
+        & .ms-Suggestions-container {
+          border-bottom-color: #edeff2;
+        },
       "noResultsFoundText": "No results found",
+      "suggestionsClassName": 
+
+        & .ms-Suggestions-item:hover {
+          background-color: #f3f5f8;
+        }
+        & .ms-Suggestions-item[class*="suggestionsItemIsSuggested"] {
+          background-color: #edeff2;
+        }
+        & .ms-Suggestions-item[class*="suggestionsItemIsSuggested"]:hover {
+          background-color: #a8b0bd;
+        },
       "suggestionsHeaderText": "People",
     }
   }

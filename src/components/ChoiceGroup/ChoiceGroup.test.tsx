@@ -37,7 +37,7 @@ describe('<ChoiceGroup />', () => {
   describe('with minimal props', () => {
     beforeEach(() => {
       component = shallow(getChoiceGroup());
-      const componentOptions = component.find('StyledCustomizedChoiceGroup').prop('options');
+      const componentOptions = component.find('StyledChoiceGroupBase').prop('options');
       firstOption = (componentOptions as IChoiceGroupOptionProps[])[0];
     });
 
@@ -52,7 +52,7 @@ describe('<ChoiceGroup />', () => {
     });
 
     it('styled as expected', () => {
-      const getStyles = component.find('StyledCustomizedChoiceGroup').prop('styles');
+      const getStyles = component.find('StyledChoiceGroupBase').prop('styles');
       expect((getStyles as Function)({ theme })).toMatchSnapshot();
     });
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Image /> with additional className matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -15,7 +15,7 @@ exports[`<Image /> with additional className matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with block matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -28,7 +28,7 @@ exports[`<Image /> with block matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with border type matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -42,7 +42,7 @@ exports[`<Image /> with border type matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with default options matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -55,7 +55,7 @@ exports[`<Image /> with default options matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -70,7 +70,7 @@ exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with fullWidth matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -84,7 +84,7 @@ exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -99,7 +99,7 @@ exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
@@ -113,7 +113,7 @@ exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with shouldFadeIn matches its snapshot 1`] = `
-<StyledCustomizedImage
+<StyledImageBase
   alt="description"
   className=
       y-image
