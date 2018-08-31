@@ -177,7 +177,6 @@ exports[`<HorizontalActionList /> with all items, and maxVisibleItemCount of 1 m
       className=
 
           {
-            color: #386cbb;
             top: 0.1rem;
           }
       iconSize="14"
