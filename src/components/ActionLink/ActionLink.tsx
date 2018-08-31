@@ -4,6 +4,7 @@ import * as React from 'react';
 import { join } from '../../util/classNames';
 import Block, { TextSize } from '../Block';
 import Clickable from '../Clickable';
+import Strong from '../Strong';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
 import { IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
@@ -15,17 +16,20 @@ import { ActionLinkProps, NavigationActionLinkProps, ClickableActionLinkProps } 
  */
 export default class ActionLink extends React.Component<ActionLinkProps> {
   public render() {
-    const { ariaLabel, className, icon: Icon, text } = this.props;
+    const { ariaLabel, className, compact = false, icon: Icon, text } = this.props;
+
+    const gutterSize = compact ? GutterSize.XSMALL : GutterSize.SMALL;
+    const iconSize = compact ? IconSize.SMALL : IconSize.MEDIUM;
     // Remove Block around Icon when this is addressed: https://github.com/Microsoft/YamUI/issues/327
     const content = (
-      <FixedGridRow gutterSize={GutterSize.SMALL}>
+      <FixedGridRow gutterSize={gutterSize}>
         <FixedGridColumn fixed={true}>
-          <Block push={2}>
-            <Icon size={IconSize.MEDIUM} block={true} />
+          <Block push={compact ? 1 : 2}>
+            <Icon size={iconSize} block={true} />
           </Block>
         </FixedGridColumn>
         <FixedGridColumn>
-          <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>
+          <Block textSize={TextSize.MEDIUM_SUB}>{compact ? <Strong>{text}</Strong> : text}</Block>
         </FixedGridColumn>
       </FixedGridRow>
     );

@@ -42,3 +42,13 @@ const text = 'SharePoint Document Library website';
   <ActionLink text={text} icon={Icon} ariaLabel={text} href="https://www.yammer.com" newWindow={true} />
 </div>
 ```
+
+Compact:
+
+```js { "props": { "data-description": "with compact" } }
+const Like = require('../Icon/icons/Like').default;
+
+<div>
+  <ActionLink text="Like" icon={Like} ariaLabel="Like this Post" compact={true} />
+</div>
+```

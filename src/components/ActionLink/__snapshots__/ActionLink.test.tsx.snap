@@ -33,6 +33,41 @@ exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
 </CustomizedNavigationLink>
 `;
 
+exports[`<ActionLink /> with compact set to true matches its snapshot 1`] = `
+<CustomizedNavigationLink
+  ariaLabel="Download the file"
+  block={true}
+  className="y-actionLink TEST_CLASSNAME"
+  href="https://yammer.com"
+>
+  <FixedGridRow
+    gutterSize="xSmall"
+  >
+    <FixedGridColumn
+      fixed={true}
+    >
+      <CustomizedBlock
+        push={1}
+      >
+        <Down
+          block={true}
+          size="14"
+        />
+      </CustomizedBlock>
+    </FixedGridColumn>
+    <FixedGridColumn>
+      <CustomizedBlock
+        textSize="mediumSub"
+      >
+        <Strong>
+          Download
+        </Strong>
+      </CustomizedBlock>
+    </FixedGridColumn>
+  </FixedGridRow>
+</CustomizedNavigationLink>
+`;
+
 exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
 <CustomizedNavigationLink
   ariaLabel="Download file"
