@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`focusOutlines getNormalFocusStyle() matches snapshot 1`] = `
+Object {
+  "outline": "none",
+  "selectors": Object {
+    ".ms-Fabric--isFocusVisible &:focus": Object {
+      "boxShadow": "inset 0 0 0 1px",
+      "selectors": Object {
+        "@media screen and (-ms-high-contrast: active)": Object {
+          "boxShadow": "inset 0 0 0 1px",
+        },
+      },
+    },
+  },
+}
+`;

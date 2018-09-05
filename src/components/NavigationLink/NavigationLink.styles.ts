@@ -1,6 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
 import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
+import { getNormalFocusStyle } from '../../util/styles/focusOutlines';
 
 export interface NavigationLinkStyleProps {
   block?: boolean;
@@ -23,16 +24,20 @@ export const getClassNames = memoizeFunction((styleProps: NavigationLinkStylePro
         color: theme.semanticColors.linkHovered,
       };
 
-  return mergeStyleSets({
-    root: {
-      display: block ? 'block' : undefined,
-      cursor: 'pointer',
-      color: unstyled ? 'inherit' : theme.semanticColors.link,
-      textDecoration: 'none',
-      selectors: {
-        '&:active, &:focus, &:hover': overrides,
-        '&:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink': overrides,
-      },
+  const baseStyles = {
+    display: block ? 'block' : undefined,
+    cursor: 'pointer',
+    color: unstyled ? 'inherit' : theme.semanticColors.link,
+    textDecoration: 'none',
+    selectors: {
+      '&:active, &:focus, &:hover': overrides,
+      '&:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink': overrides,
     },
+  };
+
+  const focusOutlineStyles = getNormalFocusStyle();
+
+  return mergeStyleSets({
+    root: [baseStyles, focusOutlineStyles],
   });
 });
