@@ -308,6 +308,34 @@ exports[`<AppContainer /> with className matches its snapshot 1`] = `
   }
 >
   <Customizer
+    scopedSettings={
+      Object {
+        "CalloutContent": Object {
+          "styles": Object {
+            "calloutMain": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+        "Modal": Object {
+          "styles": Object {
+            "root": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+      }
+    }
     settings={
       Object {
         "theme": Object {
@@ -619,8 +647,13 @@ exports[`<AppContainer /> with className matches its snapshot 1`] = `
       className=
           y-appContainer
           TEST_CLASSNAME
-          html {
+          {
             box-sizing: border-box;
+          }
+          & *, *::before, *::after {
+            box-sizing: inherit;
+          }
+          html {
             font-size: 62.5%;
           }
           html, body {
@@ -632,9 +665,6 @@ exports[`<AppContainer /> with className matches its snapshot 1`] = `
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 0px;
-          }
-          *, *::before, *::after {
-            box-sizing: inherit;
           }
     >
       app container text
@@ -951,6 +981,34 @@ exports[`<AppContainer /> with default options matches its snapshot 1`] = `
   }
 >
   <Customizer
+    scopedSettings={
+      Object {
+        "CalloutContent": Object {
+          "styles": Object {
+            "calloutMain": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+        "Modal": Object {
+          "styles": Object {
+            "root": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+      }
+    }
     settings={
       Object {
         "theme": Object {
@@ -1261,8 +1319,13 @@ exports[`<AppContainer /> with default options matches its snapshot 1`] = `
     <div
       className=
           y-appContainer
-          html {
+          {
             box-sizing: border-box;
+          }
+          & *, *::before, *::after {
+            box-sizing: inherit;
+          }
+          html {
             font-size: 62.5%;
           }
           html, body {
@@ -1274,9 +1337,6 @@ exports[`<AppContainer /> with default options matches its snapshot 1`] = `
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 0px;
-          }
-          *, *::before, *::after {
-            box-sizing: inherit;
           }
     >
       app container text
@@ -1593,6 +1653,34 @@ exports[`<AppContainer /> with theme matches its snapshot 1`] = `
   }
 >
   <Customizer
+    scopedSettings={
+      Object {
+        "CalloutContent": Object {
+          "styles": Object {
+            "calloutMain": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+        "Modal": Object {
+          "styles": Object {
+            "root": Object {
+              "boxSizing": "border-box",
+              "selectors": Object {
+                "*, *::before, *::after": Object {
+                  "boxSizing": "inherit",
+                },
+              },
+            },
+          },
+        },
+      }
+    }
     settings={
       Object {
         "theme": Object {
@@ -1903,8 +1991,13 @@ exports[`<AppContainer /> with theme matches its snapshot 1`] = `
     <div
       className=
           y-appContainer
-          html {
+          {
             box-sizing: border-box;
+          }
+          & *, *::before, *::after {
+            box-sizing: inherit;
+          }
+          html {
             font-size: 62.5%;
           }
           html, body {
@@ -1916,9 +2009,6 @@ exports[`<AppContainer /> with theme matches its snapshot 1`] = `
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 0px;
-          }
-          *, *::before, *::after {
-            box-sizing: inherit;
           }
     >
       app container text
