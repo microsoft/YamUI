@@ -5,7 +5,7 @@ import { join } from '../../util/classNames';
 import { Fabric } from 'office-ui-fabric-react/lib/Fabric';
 import Customizer, { CustomizableComponentProps, defaultTheme } from '../Customizer';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
-import { getClassNames } from './AppContainer.styles';
+import { getClassNames, scopedSettings } from './AppContainer.styles';
 
 /**
  * AppContainer sets some baseline visual and accessibility styling.
@@ -16,7 +16,7 @@ export default class AppContainer extends React.Component<NestableBaseComponentP
     const classNames = getClassNames();
     return (
       <Fabric theme={theme}>
-        <Customizer settings={{ theme }}>
+        <Customizer settings={{ theme }} scopedSettings={scopedSettings}>
           <div className={join(['y-appContainer', classNames.root, className])}>{children}</div>
         </Customizer>
       </Fabric>
