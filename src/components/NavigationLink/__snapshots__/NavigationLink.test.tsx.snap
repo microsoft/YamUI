@@ -7,6 +7,7 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -18,6 +19,12 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
   rel="nofollow noopener noreferrer"
@@ -34,6 +41,7 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
       {
         color: inherit;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -45,6 +53,12 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -60,6 +74,7 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -71,6 +86,12 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -86,6 +107,7 @@ exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -97,6 +119,12 @@ exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -112,6 +140,7 @@ exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -123,6 +152,12 @@ exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -138,6 +173,7 @@ exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
         color: #386cbb;
         cursor: pointer;
         display: block;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -149,6 +185,12 @@ exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -163,6 +205,7 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -174,6 +217,12 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
 >
@@ -188,6 +237,7 @@ exports[`<NavigationLink /> with title matches its snapshot 1`] = `
       {
         color: #386cbb;
         cursor: pointer;
+        outline: none;
         text-decoration: none;
       }
       &:active, &:focus, &:hover {
@@ -199,6 +249,12 @@ exports[`<NavigationLink /> with title matches its snapshot 1`] = `
         color: #264f8c;
         cursor: pointer;
         text-decoration: underline;
+      }
+      .ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
+      }
+      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
+        box-shadow: inset 0 0 0 1px;
       }
   href="test.html"
   title="TITLE CONTENT"
