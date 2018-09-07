@@ -8,9 +8,10 @@ import { join } from '../../util/classNames';
 import './Pivot.css';
 
 export interface PivotItem {
-  ariaLabel?: string;
   key: string;
   text: string;
+  ariaLabel?: string;
+  itemCount?: number;
 }
 
 export interface PivotProps extends BaseComponentProps {
@@ -48,9 +49,10 @@ export default class Pivot extends React.Component<PivotProps> {
   }
 
   private getFabricPivotItems() {
-    return this.props.pivotItems.map((child: PivotItem) => (
-      <FabricPivotItem ariaLabel={child.ariaLabel} itemKey={child.key} headerText={child.text} key={child.key} />
-    ));
+    return this.props.pivotItems.map((child: PivotItem) => {
+      const { key, text, ariaLabel, itemCount } = child;
+      return <FabricPivotItem ariaLabel={ariaLabel} itemKey={key} headerText={text} key={key} itemCount={itemCount} />;
+    });
   }
 
   private onLinkClick = (item?: FabricPivotItem) => {

@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Pivot /> when a PivotItem is given an itemCount matches its snapshot 1`] = `
+<StyledPivotBase
+  className="y-pivot"
+  headersOnly={true}
+  onLinkClick={[Function]}
+  selectedKey="1"
+>
+  <PivotItem
+    headerText="Tab 4"
+    itemCount={15}
+    itemKey="4"
+    key="4"
+  />
+</StyledPivotBase>
+`;
+
 exports[`<Pivot /> when given a className matches its snapshot 1`] = `
 <StyledPivotBase
   className="y-pivot Test"

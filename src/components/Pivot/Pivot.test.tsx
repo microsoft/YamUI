@@ -71,4 +71,15 @@ describe('<Pivot />', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  describe('when a PivotItem is given an itemCount', () => {
+    beforeEach(() => {
+      const pivotItems: PivotItem[] = [{ key: '4', text: 'Tab 4', itemCount: 15 }];
+      component = shallow(<Pivot selectedKey="1" pivotItems={pivotItems} onChange={jest.fn()} />);
+    });
+
+    it('matches its snapshot', () => {
+      expect(component).toMatchSnapshot();
+    });
+  });
 });
