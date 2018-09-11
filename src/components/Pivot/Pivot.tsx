@@ -2,7 +2,7 @@
 import '../../yamui';
 import * as React from 'react';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
-import { Pivot as FabricPivot, PivotItem as FabricPivotItem } from 'office-ui-fabric-react/lib/Pivot';
+import { Pivot as FabricPivot, PivotItem as FabricPivotItem, PivotLinkSize } from 'office-ui-fabric-react/lib/Pivot';
 import { join } from '../../util/classNames';
 
 import './Pivot.css';
@@ -13,6 +13,8 @@ export interface PivotItem {
   ariaLabel?: string;
   itemCount?: number;
 }
+
+export { PivotLinkSize };
 
 export interface PivotProps extends BaseComponentProps {
   /**
@@ -29,6 +31,10 @@ export interface PivotProps extends BaseComponentProps {
    */
   pivotItems: PivotItem[];
   /**
+   * Sets the size of the individual pivot items.
+   */
+  linkSize?: PivotLinkSize;
+  /**
    * Callback that will be executed every time there is a change in the selected pivot item.
    */
   onChange(key: string): void;
@@ -42,6 +48,7 @@ export default class Pivot extends React.Component<PivotProps> {
         selectedKey={this.props.selectedKey}
         onLinkClick={this.onLinkClick}
         headersOnly={true}
+        linkSize={this.props.linkSize}
       >
         {this.getFabricPivotItems()}
       </FabricPivot>
