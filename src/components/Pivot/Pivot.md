@@ -8,6 +8,20 @@ const pivotItems = [{ text: 'DISCOVERY', key: '0' }, { text: 'ALL', key: '1' }, 
 <Pivot onChange={action('onChange')} pivotItems={pivotItems} />;
 ```
 
+With large pivot items:
+
+```js { "props": { "data-description": "with large pivot items" } }
+const { PivotLinkSize } = require('./Pivot');
+
+const pivotItems = [
+  { text: 'DISCOVERY', key: '0' },
+  { text: 'ALL', key: '1' },
+  { text: 'FOLLOWING', key: '2' }
+];
+
+<Pivot onChange={action('onChange')} pivotItems={pivotItems} linkSize={PivotLinkSize.large} />
+```
+
 With Dark theme:
 
 ```js { "props": { "data-description": "with dark background" } }
