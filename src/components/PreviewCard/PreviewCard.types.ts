@@ -18,8 +18,7 @@ export interface PreviewCardProps extends BaseComponentProps {
   isDescriptionEditable?: boolean;
 
   /**
-   * Will display on the left of the PreviewCard. If not provided the image will be replaced
-   * by an icon depending on the file type.
+   * If provided, will display on the left of the PreviewCard.
    */
   imageUrl?: string;
 
