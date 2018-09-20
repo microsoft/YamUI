@@ -28,13 +28,17 @@ exports[`<ChoiceGroup /> when \`props.selectedKey\` is set renders as expected 1
 exports[`<ChoiceGroup /> with minimal props option styled as expected 1`] = `
 Object {
   "field": Object {
-    "paddingLeft": "2.6rem",
+    "paddingLeft": "0",
     "selectors": Object {
       ":before": Object {
         "borderColor": "#dde0e6",
         "borderWidth": "1px",
       },
+      "span": Object {
+        "textIndent": "0",
+      },
     },
+    "textIndent": "2.6rem",
   },
   "root": Object {
     "marginBottom": "1.2rem",
@@ -144,13 +148,17 @@ exports[`<ChoiceGroup /> with minimal props when a change is triggered with an o
 exports[`<ChoiceGroup /> with minimal props when checked, option styled as expected 1`] = `
 Object {
   "field": Object {
-    "paddingLeft": "2.6rem",
+    "paddingLeft": "0",
     "selectors": Object {
       ":before": Object {
         "borderColor": "#6c98d9",
         "borderWidth": "2px",
       },
+      "span": Object {
+        "textIndent": "0",
+      },
     },
+    "textIndent": "2.6rem",
   },
   "root": Object {
     "marginBottom": "1.2rem",
