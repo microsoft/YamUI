@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Fabric /> with default options renders 1`] = `
+<div
+  class=
+      ms-Fabric
+      {
+        color: #343A41;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+      }
+      & button {
+        font-family: inherit;
+      }
+      & input {
+        font-family: inherit;
+      }
+      & textarea {
+        font-family: inherit;
+      }
+      button {
+        overflow: visible;
+      }
+>
+  wrapped content
+</div>
+`;

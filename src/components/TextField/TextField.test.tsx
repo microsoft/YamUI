@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 import TextField, { TextFieldProps } from '.';
-import { TextFieldBase as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
+import { TextField as FabricTextField } from 'office-ui-fabric-react/lib/TextField';
 import { Focusable } from '../../util/Focusable';
 
 describe('<TextField />', () => {

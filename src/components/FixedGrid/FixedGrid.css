@@ -1,0 +1,91 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/gutters.css';
+
+.y-fixedGridRow {
+  display: flex;
+}
+
+.y-fixedGridRow__bottomSpacing-xxLarge {
+  margin-bottom: $gutterWidth__xxLarge;
+}
+.y-fixedGridRow__bottomSpacing-xLarge {
+  margin-bottom: $gutterWidth__xLarge;
+}
+.y-fixedGridRow__bottomSpacing-large {
+  margin-bottom: $gutterWidth__large;
+}
+.y-fixedGridRow__bottomSpacing-medium {
+  margin-bottom: $gutterWidth__medium;
+}
+.y-fixedGridRow__bottomSpacing-small {
+  margin-bottom: $gutterWidth__small;
+}
+.y-fixedGridRow__bottomSpacing-xSmall {
+  margin-bottom: $gutterWidth__xSmall;
+}
+
+/* Non-fixed columns grow and shrink to fill their content */
+.y-fixedGridColumn {
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  /* Flexible (non-fixed) flex children must have a min-width to allow them to shrink narrower than the
+     possible width of their text content. This is required for ellipsis to work within FixedGridColumn.
+     Setting flex-basis: 100% for non-fixed columns also makes sure this works in IE11.
+     https://css-tricks.com/flexbox-truncated-text/ */
+  flex-basis: 100%;
+  min-width: 0;
+}
+/* Fixed columns do not grow, only shrink to fit their content */
+.y-fixedGridColumn__isFixed {
+  flex-grow: 0;
+  flex-basis: auto;
+  min-width: auto;
+}
+/* Fixed columns with a specified width also do not shrink, just remain their fixed pixel width */
+.y-fixedGridColumn__isFixed.y-fixedGridColumn__hasWidth {
+  flex-shrink: 0;
+}
+
+/* Some inevitable specificity here, since rows and columns are independent components */
+.y-fixedGridRow__gutter-xxLarge > .y-fixedGridColumn {
+  margin-left: $gutterWidth__xxLarge;
+}
+.y-fixedGridRow__gutter-xLarge > .y-fixedGridColumn {
+  margin-left: $gutterWidth__xLarge;
+}
+.y-fixedGridRow__gutter-large > .y-fixedGridColumn {
+  margin-left: $gutterWidth__large;
+}
+.y-fixedGridRow__gutter-medium > .y-fixedGridColumn {
+  margin-left: $gutterWidth__medium;
+}
+.y-fixedGridRow__gutter-small > .y-fixedGridColumn {
+  margin-left: $gutterWidth__small;
+}
+.y-fixedGridRow__gutter-xSmall > .y-fixedGridColumn {
+  margin-left: $gutterWidth__xSmall;
+}
+
+.y-fixedGridRow > .y-fixedGridColumn:first-child {
+  margin-left: 0;
+}
+
+.y-fixedGridColumn--inner__top,
+.y-fixedGridColumn--inner__middle,
+.y-fixedGridColumn--inner__bottom {
+  height: 100%;
+  display: flex;
+}
+
+.y-fixedGridColumn--inner__middle {
+  align-items: flex-start;
+}
+
+.y-fixedGridColumn--inner__middle {
+  align-items: center;
+}
+
+.y-fixedGridColumn--inner__bottom {
+  align-items: flex-end;
+}

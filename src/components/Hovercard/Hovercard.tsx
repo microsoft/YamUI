@@ -1,21 +1,91 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
 import Callout, { DirectionalHint } from '../Callout';
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { KeyCodes } from '../../util/keyCodes';
 import ScreenreaderText from '../ScreenreaderText';
-import { getClassNames } from './Hovercard.styles';
-import { HovercardProps, HovercardState, TriggerType } from './Hovercard.types';
+import './Hovercard.css';
 
 const hideDelay = 500;
 const showDelay = 750;
 
-export class Hovercard extends React.Component<HovercardProps & CustomizableComponentProps, HovercardState> {
+export enum TriggerType {
+  CLICK = 'click',
+  HOVER = 'hover',
+}
+
+export interface HovercardProps extends NestableBaseComponentProps {
+  /**
+   * The content to populate the Hovercard's popup area.
+   */
+  content: React.ReactNode;
+
+  /**
+   * Direction to place the Hovercard in relationship to its visible trigger content. Note that this
+   * is a hint, and the popup position will adjust to available screen real estate.
+   * @default DirectionalHint.bottomCenter
+   */
+  directionalHint?: DirectionalHint;
+
+  /**
+   * Whether to display the Hovercard's arrow/beak.
+   * @default true
+   */
+  isBeakVisible?: boolean;
+
+  /**
+   * A hidden title to be rendered in an `h1` tag.
+   */
+  screenreaderTitle?: string;
+
+  /**
+   * Whether the Hovercard should start visible. Note that it will wait until `componentDidMount` to
+   * ensure it can properly position itself in relation to the trigger. Only exposed for testing.
+   * @default false
+   */
+  startVisible?: boolean;
+
+  /**
+   * Whether a mouse click or hover should trigger the Hovercard.
+   * @default TriggerType.HOVER
+   */
+  triggerType?: TriggerType;
+
+  /**
+   * Callback to be fired when the Hovercard content is removed.
+   */
+  onContentDismiss?: (() => void);
+
+  /**
+   * Callback to be fired when the Hovercard content is displayed.
+   */
+  onContentDisplay?: (() => void);
+
+  /**
+   * Callback to be fired on trigger hover. Can be used to preload content early before the
+   * Hovercard content is actually displayed.
+   */
+  onTriggerHover?: (() => void);
+}
+
+export interface HovercardState {
+  visible: boolean;
+}
+
+export { DirectionalHint };
+
+/**
+ * A `Hovercard` is a small popover overlay. It opens on click or
+ * mouse enter, and closes on mouse out and `ESC`. It should be used with `HovercardHeader` and
+ * `HovercardBody` components for consistent internal padding.
+ */
+export default class Hovercard extends React.Component<HovercardProps, HovercardState> {
   public static defaultProps: Partial<HovercardProps> = {
     directionalHint: DirectionalHint.bottomCenter,
     isBeakVisible: true,
+    startVisible: false,
     triggerType: TriggerType.HOVER,
   };
 
@@ -34,16 +104,28 @@ export class Hovercard extends React.Component<HovercardProps & CustomizableComp
   }
 
   public render() {
-    const {
-      className,
-      content,
-      directionalHint,
-      isBeakVisible,
-      screenreaderTitle,
-      children,
-      theme = defaultTheme,
-    } = this.props;
-    const classNames = getClassNames({ theme });
+    const { className, content, directionalHint, isBeakVisible, screenreaderTitle, children } = this.props;
+
+    const screenreaderTitleChild = screenreaderTitle && (
+      <ScreenreaderText>
+        <h1>{screenreaderTitle}</h1>
+      </ScreenreaderText>
+    );
+
+    const hovercard = this.state.visible && (
+      <Callout
+        isBeakVisible={isBeakVisible}
+        directionalHint={directionalHint}
+        target={this.triggerElement}
+        onDismiss={this.hide}
+        preventDismissOnScroll={false}
+      >
+        <div className="y-hovercard--modal-container" onMouseEnter={this.handleBodyHover} onMouseLeave={this.beginHide}>
+          {screenreaderTitleChild}
+          {content}
+        </div>
+      </Callout>
+    );
 
     return (
       <span className={join(['y-hovercard', className])}>
@@ -56,30 +138,18 @@ export class Hovercard extends React.Component<HovercardProps & CustomizableComp
         >
           {children}
         </span>
-        {this.state.visible && (
-          <Callout
-            isBeakVisible={isBeakVisible}
-            directionalHint={directionalHint}
-            target={this.triggerElement}
-            onDismiss={this.hide}
-            preventDismissOnScroll={false}
-          >
-            <div
-              className={`y-hovercard--modal-container ${classNames.modalContainer}`}
-              onMouseEnter={this.handleBodyHover}
-              onMouseLeave={this.beginHide}
-            >
-              {screenreaderTitle && (
-                <ScreenreaderText>
-                  <h1>{screenreaderTitle}</h1>
-                </ScreenreaderText>
-              )}
-              {content}
-            </div>
-          </Callout>
-        )}
+        {hovercard}
       </span>
     );
+  }
+
+  // Set initial visible state after mount so the trigger ref exists for positioning
+  public componentDidMount() {
+    const { startVisible } = this.props;
+
+    if (startVisible) {
+      this.show();
+    }
   }
 
   public componentWillUnmount() {
@@ -197,11 +267,3 @@ export class Hovercard extends React.Component<HovercardProps & CustomizableComp
     document.removeEventListener('keydown', this.handleKeyDown);
   };
 }
-
-/**
- * A `Hovercard` is a small popover overlay. It opens on click or
- * mouse enter, and closes on mouse out and `ESC`. It should be used with `HovercardHeader` and
- * `HovercardBody` components for consistent internal padding.
- */
-@customizable('Hovercard', ['theme'])
-export default class CustomizableHovercard extends Hovercard {}

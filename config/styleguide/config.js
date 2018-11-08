@@ -68,11 +68,4 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.resolve(root, 'src/demos/ExampleWrapper'),
   },
-  styles: {
-    Sections: {
-      root: {
-        fontSize: '1.5rem',
-      },
-    },
-  },
 };

@@ -1,12 +1,42 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { getMode, subscribe, unsubscribe } from '../../util/accessibility/keyboardNavigation';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import {
-  KeyboardNavigationObserverProps,
-  KeyboardNavigationObserverState,
+  getMode,
+  subscribe,
+  unsubscribe,
   NavigationMode,
-} from './KeyboardNavigationObserver.types';
+  NavigationModeCallback,
+} from '../../util/accessibility/keyboardNavigation';
+
+export { NavigationMode, NavigationModeCallback };
+
+export interface KeyboardNavigationObserverProps extends BaseComponentProps {
+  /**
+   * A callback which will be triggered when the user begins navigating via keyboard.
+   */
+  onEnterKeyboardMode?: (() => void);
+
+  /**
+   * A callback which will be triggered when the user begins navigating via mouse.
+   */
+  onEnterMouseMode?: (() => void);
+
+  /**
+   * Render prop to return child content when user is navigating via keyboard.
+   */
+  renderInKeyboardMode?: (() => React.ReactElement<any>);
+
+  /**
+   * Render prop to return child content when user is navigating via mouse.
+   */
+  renderInMouseMode?: (() => React.ReactElement<any>);
+}
+
+export interface KeyboardNavigationObserverState {
+  mode: NavigationMode;
+}
 
 /**
  * KeyboardNavigationObserver allows for conditional child rendering and callbacks depending on whether the user

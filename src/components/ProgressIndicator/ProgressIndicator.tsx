@@ -1,29 +1,50 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { join } from '../../util/classNames';
-import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { ProgressIndicator as OfficeFabricProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { getProgressIndicatorStyles } from './ProgressIndicator.styles';
-import { ProgressIndicatorProps } from './ProgressIndicator.types';
+import './ProgressIndicator.css';
 
-export class ProgressIndicator extends React.Component<ProgressIndicatorProps & CustomizableComponentProps> {
-  public render() {
-    const { ariaValueText, percentComplete, className, theme = defaultTheme } = this.props;
-    return (
-      <OfficeFabricProgressIndicator
-        ariaValueText={ariaValueText}
-        percentComplete={percentComplete}
-        barHeight={4}
-        className={join(['y-progress-indicator', className])}
-        styles={getProgressIndicatorStyles({ percentComplete, theme })}
-      />
-    );
-  }
+export interface ProgressIndicatorProps extends BaseComponentProps {
+  /**
+   * Used by screen readers to convey percentComplete value
+   */
+  ariaValueText: string;
+
+  /**
+   * A decimal number that indicates in percentage the completeness of an operation
+   * e.g. setting it to 0.1 equates to 10%
+   */
+  percentComplete: number;
 }
 
 /**
  * A `ProgressIndicator` is used to show the progress of an ongoing operation
  * e.g. a file upload.
  */
-@customizable('ProgressIndicator', ['theme'])
-export default class CustomizableProgressIndicator extends ProgressIndicator {}
+export default class ProgressIndicator extends React.Component<ProgressIndicatorProps> {
+  public render() {
+    const { ariaValueText, percentComplete } = this.props;
+    return (
+      <OfficeFabricProgressIndicator
+        ariaValueText={ariaValueText}
+        percentComplete={percentComplete}
+        className={this.getClasses()}
+      />
+    );
+  }
+
+  private getClasses() {
+    const { className, percentComplete } = this.props;
+    const classes = ['y-progress-indicator'];
+
+    if (percentComplete < 1) {
+      classes.push('y-progress-indicator__incomplete');
+    }
+
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+}

@@ -2,18 +2,13 @@
 
 exports[`<Avatar /> accessible text with badge description matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -24,18 +19,13 @@ exports[`<Avatar /> accessible text with badge description matches its snapshot 
 
 exports[`<Avatar /> accessible text without badge description matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -46,18 +36,13 @@ exports[`<Avatar /> accessible text without badge description matches its snapsh
 
 exports[`<Avatar /> with additional className matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium TEST_CLASSNAME"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -68,41 +53,21 @@ exports[`<Avatar /> with additional className matches its snapshot 1`] = `
 
 exports[`<Avatar /> with badge content matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-xSmall"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={10}
-    styles={[Function]}
     text="NAME"
   />
   <div
-    className=
-
-        {
-          background: #ffffff;
-          border-radius: 50%;
-          border: solid 2px #ffffff;
-          bottom: -2px;
-          color: #386cbb;
-          height: 16px;
-          position: absolute;
-          right: -2px;
-          width: 16px;
-        }
-        & > .y-icon {
-          top: 0px;
-        }
+    className="y-avatar--badge y-avatar__size-xSmall--badge"
   >
-    <CustomizedText>
+    <Text>
       badge
-    </CustomizedText>
+    </Text>
   </div>
   <ScreenreaderText>
     NAME
@@ -112,39 +77,13 @@ exports[`<Avatar /> with badge content matches its snapshot 1`] = `
 
 exports[`<Avatar /> with image url matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
-    styles={[Function]}
-    text="NAME"
-  />
-  <ScreenreaderText>
-    NAME
-  </ScreenreaderText>
-</div>
-`;
-
-exports[`<Avatar /> with imageShouldFadeIn matches its snapshot 1`] = `
-<div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
->
-  <StyledPersonaCoinBase
-    hidePersonaDetails={true}
-    imageShouldFadeIn={true}
-    size={12}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -155,18 +94,13 @@ exports[`<Avatar /> with imageShouldFadeIn matches its snapshot 1`] = `
 
 exports[`<Avatar /> with size matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-xLarge"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={14}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -177,18 +111,13 @@ exports[`<Avatar /> with size matches its snapshot 1`] = `
 
 exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium y-avatar__borderType-soft"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     imageUrl="test.jpg"
     size={12}
-    styles={[Function]}
     text="NAME"
   />
   <ScreenreaderText>
@@ -199,17 +128,12 @@ exports[`<Avatar /> with soft border type matches its snapshot 1`] = `
 
 exports[`<Avatar /> with too many characters matches its snapshot 1`] = `
 <div
-  className=
-      y-avatar
-      {
-        position: relative;
-      }
+  className="y-avatar y-avatar__size-medium"
 >
-  <StyledPersonaCoinBase
+  <StyledCustomizedPersonaCoin
     hidePersonaDetails={true}
     imageShouldFadeIn={false}
     size={12}
-    styles={[Function]}
     text="First Last"
   />
   <ScreenreaderText>

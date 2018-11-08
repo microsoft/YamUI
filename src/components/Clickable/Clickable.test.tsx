@@ -1,13 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { Clickable } from './Clickable';
+import Clickable from '.';
 import { create as createRenderer, ReactTestRendererJSON } from 'react-test-renderer';
 import { renderIntoDocument, Simulate, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 import { Focusable } from '../../util/Focusable';
-import { darkTheme } from '../Customizer';
 
-const render = (node: React.ReactElement<any>) => {
-  return createRenderer(node).toJSON();
+const render = (jsx: JSX.Element) => {
+  return createRenderer(jsx).toJSON();
 };
 
 describe('<Clickable />', () => {
@@ -66,16 +65,6 @@ describe('<Clickable />', () => {
   describe('when ariaLabel is passed', () => {
     beforeEach(() => {
       component = render(<Clickable ariaLabel="aria label content">clickable content</Clickable>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with theme', () => {
-    beforeEach(() => {
-      component = render(<Clickable theme={darkTheme}>clickable content</Clickable>);
     });
 
     it('matches its snapshot', () => {

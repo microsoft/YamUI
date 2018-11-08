@@ -1,0 +1,17 @@
+/*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+@import 'src/css/variables/links.css';
+
+.y-fakeLink {
+  @mixin linkComplete;
+}
+
+/* TODO: Add descendant selectors for UnstyledButton classes after we create that component */
+.y-clickable:active .y-fakeLink,
+.y-clickable:focus .y-fakeLink,
+.y-clickable:hover .y-fakeLink,
+.y-navigationLink:active .y-fakeLink,
+.y-navigationLink:focus .y-fakeLink,
+.y-navigationLink:hover .y-fakeLink {
+  @extend linkHover;
+  @extend linkActive;
+}

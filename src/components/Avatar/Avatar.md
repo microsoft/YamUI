@@ -9,23 +9,36 @@ Without image:
 ```js { "props": { "data-description": "without image" } }
 const { AvatarSize } = require('.');
 
-<LayoutList direction="horizontal">
-  <LayoutListItem>
-    <Avatar size={AvatarSize.XLARGE} name="Xtra Large" />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.LARGE} name="Large" />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.MEDIUM} name="Medium" />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.SMALL} name="Small" />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.XSMALL} name="Xtra Small" />
-  </LayoutListItem>
-</LayoutList>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th>XL</th>
+      <th>L</th>
+      <th>M</th>
+      <th>S</th>
+      <th>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Avatar size={AvatarSize.XLARGE} name={user.name} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.LARGE} name={user.name} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.SMALL} name={user.name} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.XSMALL} name={user.name} />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 With image:
@@ -33,23 +46,36 @@ With image:
 ```js { "props": { "data-description": "with image" } }
 const { AvatarSize } = require('.');
 
-<LayoutList direction="horizontal">
-  <LayoutListItem>
-    <Avatar size={AvatarSize.XLARGE} name={user.name} imageUrl={user.imageUrl} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.LARGE} name={user.name} imageUrl={user.imageUrl} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.MEDIUM} name={user.name} imageUrl={user.imageUrl} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.SMALL} name={user.name} imageUrl={user.imageUrl} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar size={AvatarSize.XSMALL} name={user.name} imageUrl={user.imageUrl} />
-  </LayoutListItem>
-</LayoutList>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th>XL</th>
+      <th>L</th>
+      <th>M</th>
+      <th>S</th>
+      <th>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Avatar size={AvatarSize.XLARGE} name={user.name} imageUrl={user.imageUrl} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.LARGE} name={user.name} imageUrl={user.imageUrl} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.MEDIUM} name={user.name} imageUrl={user.imageUrl} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.SMALL} name={user.name} imageUrl={user.imageUrl} />
+      </td>
+      <td>
+        <Avatar size={AvatarSize.XSMALL} name={user.name} imageUrl={user.imageUrl} />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 With image and badge:
@@ -62,53 +88,66 @@ const badgeContent = (
   <AdminBadge block={true} />
 );
 
-<LayoutList direction="horizontal">
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.XLARGE}
-      name={user.name}
-      imageUrl={user.imageUrl}
-      badgeContent={badgeContent}
-      badgeDescription="Admin"
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.LARGE}
-      name={user.name}
-      imageUrl={user.imageUrl}
-      badgeContent={badgeContent}
-      badgeDescription="Admin"
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.MEDIUM}
-      name={user.name}
-      imageUrl={user.imageUrl}
-      badgeContent={badgeContent}
-      badgeDescription="Admin"
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.SMALL}
-      name={user.name}
-      imageUrl={user.imageUrl}
-      badgeContent={badgeContent}
-      badgeDescription="Admin"
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.XSMALL}
-      name={user.name}
-      imageUrl={user.imageUrl}
-      badgeContent={badgeContent}
-      badgeDescription="Admin"
-    />
-  </LayoutListItem>
-</LayoutList>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th>XL</th>
+      <th>L</th>
+      <th>M</th>
+      <th>S</th>
+      <th>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Avatar
+          size={AvatarSize.XLARGE}
+          name={user.name}
+          imageUrl={user.imageUrl}
+          badgeContent={badgeContent}
+          badgeDescription="Admin"
+        />
+      </td>
+      <td>
+        <Avatar
+          size={AvatarSize.LARGE}
+          name={user.name}
+          imageUrl={user.imageUrl}
+          badgeContent={badgeContent}
+          badgeDescription="Admin"
+        />
+      </td>
+      <td>
+        <Avatar
+          size={AvatarSize.MEDIUM}
+          name={user.name}
+          imageUrl={user.imageUrl}
+          badgeContent={badgeContent}
+          badgeDescription="Admin"
+        />
+      </td>
+      <td>
+        <Avatar
+          size={AvatarSize.SMALL}
+          name={user.name}
+          imageUrl={user.imageUrl}
+          badgeContent={badgeContent}
+          badgeDescription="Admin"
+        />
+      </td>
+      <td>
+        <Avatar
+          size={AvatarSize.XSMALL}
+          name={user.name}
+          imageUrl={user.imageUrl}
+          badgeContent={badgeContent}
+          badgeDescription="Admin"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 With image and soft border:
@@ -116,48 +155,61 @@ With image and soft border:
 ```js { "props": { "data-description": "with image and soft border" } }
 const { BorderType, AvatarSize } = require('.');
 
-<LayoutList direction="horizontal">
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.XLARGE}
-      name={group.name}
-      imageUrl={group.imageUrl}
-      borderType={BorderType.SOFT}
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.LARGE}
-      name={group.name}
-      imageUrl={group.imageUrl}
-      borderType={BorderType.SOFT}
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.MEDIUM}
-      name={group.name}
-      imageUrl={group.imageUrl}
-      borderType={BorderType.SOFT}
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.SMALL}
-      name={group.name}
-      imageUrl={group.imageUrl}
-      borderType={BorderType.SOFT}
-    />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Avatar
-      size={AvatarSize.XSMALL}
-      name={group.name}
-      imageUrl={group.imageUrl}
-      borderType={BorderType.SOFT}
-    />
-  </LayoutListItem>
-</LayoutList>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th>XL</th>
+      <th>L</th>
+      <th>M</th>
+      <th>S</th>
+      <th>XS</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+        <td>
+          <Avatar
+            size={AvatarSize.XLARGE}
+            name={group.name}
+            imageUrl={group.imageUrl}
+            borderType={BorderType.SOFT}
+          />
+        </td>
+        <td>
+          <Avatar
+            size={AvatarSize.LARGE}
+            name={group.name}
+            imageUrl={group.imageUrl}
+            borderType={BorderType.SOFT}
+          />
+        </td>
+        <td>
+          <Avatar
+            size={AvatarSize.MEDIUM}
+            name={group.name}
+            imageUrl={group.imageUrl}
+            borderType={BorderType.SOFT}
+          />
+        </td>
+        <td>
+          <Avatar
+            size={AvatarSize.SMALL}
+            name={group.name}
+            imageUrl={group.imageUrl}
+            borderType={BorderType.SOFT}
+          />
+        </td>
+        <td>
+          <Avatar
+            size={AvatarSize.XSMALL}
+            name={group.name}
+            imageUrl={group.imageUrl}
+            borderType={BorderType.SOFT}
+          />
+        </td>
+      </tr>
+    </tbody>
+</table>
 ```
 
 Example colors:
@@ -168,7 +220,7 @@ const { AvatarSize } = require('.');
 
 <div>
   <Block bottomSpacing={GutterSize.SMALL}>
-    A background color will be automatically set when an <Emphasis>imageUrl</Emphasis> is not provided. Fabric handles this behind the scenes for us, based on the <Emphasis>name</Emphasis> prop passed in.
+    A background color will be automatically set when an <em>imageUrl</em> is not provided. Fabric handles this behind the scenes for us, based on the <em>name</em> prop passed in.
   </Block>
   <FixedGridRow gutterSize={GutterSize.SMALL} bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>

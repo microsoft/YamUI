@@ -2,30 +2,7 @@
 
 exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink"
   href="test.html"
   rel="nofollow noopener noreferrer"
   target="_blank"
@@ -36,30 +13,7 @@ exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      {
-        color: inherit;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: inherit;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: inherit;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink y-navigationLink__unstyled"
   href="test.html"
 >
   link content
@@ -68,31 +22,7 @@ exports[`<NavigationLink /> when unstyled matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with additional className matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      TEST_CLASSNAME
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink TEST_CLASSNAME"
   href="test.html"
 >
   test content
@@ -102,30 +32,7 @@ exports[`<NavigationLink /> with additional className matches its snapshot 1`] =
 exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
 <a
   aria-current="page"
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink"
   href="test.html"
 >
   link content
@@ -135,30 +42,7 @@ exports[`<NavigationLink /> with ariaCurrent matches its snapshot 1`] = `
 exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
 <a
   aria-label="ARIA LABEL CONTENT"
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink"
   href="test.html"
 >
   link content
@@ -167,31 +51,7 @@ exports[`<NavigationLink /> with ariaLabel matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        display: block;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink y-navigationLink__block"
   href="test.html"
 >
   test content
@@ -200,30 +60,7 @@ exports[`<NavigationLink /> with block={true} matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink"
   href="test.html"
 >
   link content
@@ -232,30 +69,7 @@ exports[`<NavigationLink /> with default options matches its snapshot 1`] = `
 
 exports[`<NavigationLink /> with title matches its snapshot 1`] = `
 <a
-  className=
-      y-navigationLink
-      {
-        color: #386cbb;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active .y-fakeLink, &:focus .y-fakeLink, &:hover .y-fakeLink {
-        color: #264f8c;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      .ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
-      @media screen and (-ms-high-contrast: active){.ms-Fabric--isFocusVisible &:focus {
-        box-shadow: inset 0 0 0 1px;
-      }
+  className="y-navigationLink"
   href="test.html"
   title="TITLE CONTENT"
 >

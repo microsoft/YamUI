@@ -8,29 +8,7 @@ Use `type='submit'` for submitting forms. Doing this will trigger the onClick ac
 
 ### Examples
 
-Primary button:
-
-```js { "props": { "data-description": "primary", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-button\"},{\"action\":\"focus\",\"selector\":\".y-button\"},{\"action\":\"mouseDown\",\"selector\":\".y-button\"}]" } }
-const { ButtonColor } = require('.');
-
-<Button
-  text="Primary"
-  color={ButtonColor.PRIMARY}
-/>
-```
-
-Secondary button:
-
-```js { "props": { "data-description": "secondary", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-button\"},{\"action\":\"focus\",\"selector\":\".y-button\"},{\"action\":\"mouseDown\",\"selector\":\".y-button\"}]" } }
-const { ButtonColor } = require('.');
-
-<Button
-  text="Secondary"
-  color={ButtonColor.Secondary}
-/>
-```
-
-Default size:
+Regular buttons:
 
 ```js { "props": { "data-description": "regular" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
@@ -38,218 +16,237 @@ const Add = require('../Icon/icons/Add').default;
 const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
 const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
+const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<div>
-  Primary Button variations
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With left icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-        icon={Add}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        icon={Add}
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        icon={Add}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        icon={Add}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With right icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        icon={ChevronDownMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  Secondary Button variations
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        href={sampleUrl}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        status={ButtonStatus.DISABLED}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        status={ButtonStatus.LOADING}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With left icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-        icon={Add}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        icon={Add}
-        href={sampleUrl}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        icon={Add}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        icon={Add}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With right icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        text="Button"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Link"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        href={sampleUrl}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Disabled"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        text="Loading"
-        icon={ChevronDownMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'right' }} />
+      <th>Default</th>
+      <th>Link</th>
+      <th>Disabled</th>
+      <th>Loading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: 'right' }}>Primary</td>
+      <td>
+        <Button
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.DISABLED}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.LOADING}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronDownMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: 'right' }}>Secondary</td>
+      <td>
+        <Button
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          text={sampleText}
+          href={sampleUrl}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.DISABLED}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.LOADING}
+          text={sampleText}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.DISABLED}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.LOADING}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.REGULAR}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.DISABLED}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronDownMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.LOADING}
+          text={sampleText}
+          color={ButtonColor.SECONDARY}
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-Small size:
+Small buttons:
 
 ```js { "props": { "data-description": "small" } }
 const { ButtonColor, ButtonStatus, ButtonIconPosition, ButtonSize } = require('.');
@@ -257,244 +254,241 @@ const Add = require('../Icon/icons/Add').default;
 const ChevronRightMed = require('../Icon/icons/ChevronRightMed').default;
 const ChevronDownMed = require('../Icon/icons/ChevronDownMed').default;
 
+const sampleText = 'Next';
 const sampleUrl = 'https://www.yammer.com';
 
-<div>
-  Primary Button variations
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With left icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-        icon={Add}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        icon={Add}
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        icon={Add}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        icon={Add}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With right icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        href={sampleUrl}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        icon={ChevronDownMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.PRIMARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  Secondary Button variations
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        href={sampleUrl}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        status={ButtonStatus.DISABLED}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        status={ButtonStatus.LOADING}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With left icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-        icon={Add}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        icon={Add}
-        href={sampleUrl}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        icon={Add}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        icon={Add}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-  <br />
-  With right icon
-  <LayoutList direction="horizontal">
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Button"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Link"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        href={sampleUrl}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Disabled"
-        icon={ChevronRightMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.DISABLED}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-    <LayoutListItem>
-      <Button
-        size={ButtonSize.SMALL}
-        text="Loading"
-        icon={ChevronDownMed}
-        iconPosition={ButtonIconPosition.RIGHT}
-        status={ButtonStatus.LOADING}
-        color={ButtonColor.SECONDARY}
-      />
-    </LayoutListItem>
-  </LayoutList>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th style={{ textAlign: 'right' }} />
+      <th>Default</th>
+      <th>Link</th>
+      <th>Disabled</th>
+      <th>Loading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: 'right' }}>Primary</td>
+      <td>
+        <Button
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button icon={Add}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronDownMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          color={ButtonColor.PRIMARY}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: 'right' }}>Secondary</td>
+      <td>
+        <Button
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          icon={Add}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+          href={sampleUrl}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronRightMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.DISABLED}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+      <td>
+        <Button
+          icon={ChevronDownMed}
+          iconPosition={ButtonIconPosition.RIGHT}
+          status={ButtonStatus.LOADING}
+          size={ButtonSize.SMALL}
+          text={sampleText}
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 Bistate button - Join/Leave:
 
-```js { "props": { "data-description": "bistate button join-leave", "data-action-states": "[{\"action\":\"none\"}, {\"action\":\"hover\",\"selector\":\".y-button\"}]" } }
+```js { "props": { "data-description": "bistate button join-leave" } }
 const BistateButton = require('./BistateButton').default;
 const CheckMark = require('../Icon/icons/CheckMark').default;
 const SignOut = require('../Icon/icons/SignOut').default;
@@ -513,7 +507,7 @@ const leaveJoinProps = {
 
 Bistate button - Follow/Unfollow:
 
-```js { "props": { "data-description": "bistate button follow-unfollow", "data-action-states": "[{\"action\":\"none\"}, {\"action\":\"hover\",\"selector\":\".y-button\"}]" } }
+```js { "props": { "data-description": "bistate button follow-unfollow" } }
 const { ButtonColor } = require('.');
 const BistateButton = require('./BistateButton').default;
 const CheckMark = require('../Icon/icons/CheckMark').default;
@@ -533,15 +527,21 @@ const followUnfollowProps = {
 <BistateButton {...followUnfollowProps} />
 ```
 
+Link button:
+
+```js { "props": { "data-description": "link" } }
+<Button text="I am a link" href="https://www.yammer.com" />
+```
+
 Submit button:
 
-```js { "props": { "data-description": "submit button", "data-action-states": "[]" } }
+```js { "props": { "data-description": "submit button" } }
 <Button text="Submit" type="submit" />
 ```
 
 Loading button:
 
-```js { "props": { "data-description": "loading", "data-action-states": "[]" } }
+```js { "props": { "data-description": "loading" } }
 const { ButtonStatus } = require('.');
 
 class LoadingButton extends React.Component {
@@ -583,7 +583,7 @@ const { ButtonColor } = require('.');
 const { FixedGridRow, FixedGridColumn, GutterSize } = require('../FixedGrid');
 
 <div>
-  <Paragraph>Sometimes a layout can be achieved easier if the button stretches to fill its container's width. Here's an example of <Strong>fullWidth</Strong> buttons in a grid layout.</Paragraph>
+  <p>Sometimes a layout can be achieved easier if the button stretches to fill its container's width. Here's an example of <strong>fullWidth</strong> buttons in a grid layout.</p>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <Button text="Full width" fullWidth={true} />

@@ -82,23 +82,4 @@ describe('<ActionLink />', () => {
       expect(component).toMatchSnapshot();
     });
   });
-
-  describe('with compact set to true', () => {
-    beforeEach(() => {
-      component = shallow(
-        <ActionLink
-          className="TEST_CLASSNAME"
-          text="Download"
-          icon={Down}
-          ariaLabel="Download the file"
-          href="https://yammer.com"
-          compact={true}
-        />,
-      );
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
 });

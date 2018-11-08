@@ -61,6 +61,44 @@ $fontWeight__bold: 600;
   line-height: $lineHeight__xSmall;
 }
 
+/* Headings */
+@define-extend heading__1 {
+  font-size: $fontSize__xxLarge;
+  line-height: $lineHeight__xxLarge;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+@define-extend heading__2 {
+  font-size: $fontSize__xLarge;
+  line-height: $lineHeight__xLarge;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+@define-extend heading__3 {
+  font-size: $fontSize__large;
+  line-height: $lineHeight__large;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__medium;
+}
+@define-extend heading__4 {
+  font-size: $fontSize__large;
+  line-height: $lineHeight__large;
+  font-weight: $fontWeight__normal;
+  margin-bottom: $gutterWidth__medium;
+}
+@define-extend heading__5 {
+  font-size: $fontSize__medium;
+  line-height: $lineHeight__medium;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__medium;
+}
+@define-extend heading__6 {
+  font-size: $fontSize__mediumSub;
+  line-height: $lineHeight__mediumSub;
+  font-weight: $fontWeight__bold;
+  margin-bottom: $gutterWidth__small;
+}
+
 @define-extend ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;

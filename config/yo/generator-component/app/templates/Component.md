@@ -9,11 +9,3 @@ Basic usage:
 ```js { "props": { "data-description": "basic" } }
 <<%= name %> />
 ```
-
-With light color:
-
-```js { "props": { "data-description": "light" } }
-const { <%= name %>Type } = require('.');
-
-<<%= name %> type={<%= name %>Type.WHITE} />
-```

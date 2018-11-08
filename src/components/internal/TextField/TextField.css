@@ -12,11 +12,8 @@
 
 .y-textField .ms-TextField-fieldGroup {
   line-height: 3.3rem;
+  height: 3.6rem;
   border-radius: 1px;
-}
-
-.y-textInput .ms-TextField-fieldGroup {
-  min-height: 3.6rem;
 }
 
 .y-textField .ms-TextField-field {
@@ -55,7 +52,6 @@
 .y-textField.ms-TextField--underlined .ms-TextField-fieldGroup {
   height: 2.5rem;
   padding-bottom: 0.3rem;
-  min-height: initial;
 }
 
 .y-textField.ms-TextField--underlined .ms-TextField-field {

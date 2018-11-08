@@ -30,3 +30,6 @@ $captionBackgroundColor: $color__sunrise;
 $alertColor__info: $color__punkRock;
 $alertColor__warning: $color__noon;
 $alertColor__error: $color__angel;
+
+$spinnerColor__light: $color__river;
+$spinnerColor__dark: $color__white;

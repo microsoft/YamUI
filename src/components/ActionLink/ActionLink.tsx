@@ -1,14 +1,52 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { join } from '../../util/classNames';
 import Block, { TextSize } from '../Block';
 import Clickable from '../Clickable';
-import Strong from '../Strong';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
-import { IconSize } from '../Icon';
+import { BaseIcon, IconSize } from '../Icon';
 import NavigationLink from '../NavigationLink';
-import { ActionLinkProps, NavigationActionLinkProps, ClickableActionLinkProps } from './ActionLink.types';
+import './ActionLink.css';
+
+export interface BaseActionLinkProps extends BaseComponentProps {
+  /**
+   * The icon component class to be rendered.
+   */
+  icon: typeof BaseIcon;
+
+  /**
+   * A well-curated string describing the action for screen readers.
+   */
+  ariaLabel?: string;
+
+  /**
+   * The visible text.
+   */
+  text: string;
+}
+
+export interface NavigationActionLinkProps extends BaseActionLinkProps {
+  /**
+   * A valid URL.
+   */
+  href: string;
+
+  /**
+   * Whether the link should open in a new window. It securely removes access to the opening window.
+   */
+  newWindow?: boolean;
+}
+
+export interface ClickableActionLinkProps extends BaseActionLinkProps {
+  /**
+   * A click handler.
+   */
+  onClick: ((e: React.MouseEvent<HTMLButtonElement | HTMLLinkElement>) => void);
+}
+
+export type ActionLinkProps = NavigationActionLinkProps | ClickableActionLinkProps;
 
 /**
  * An actionable element with icon and text which will either render a button with an onClick callback
@@ -16,20 +54,16 @@ import { ActionLinkProps, NavigationActionLinkProps, ClickableActionLinkProps } 
  */
 export default class ActionLink extends React.Component<ActionLinkProps> {
   public render() {
-    const { ariaLabel, className, compact = false, icon: Icon, text } = this.props;
+    const { ariaLabel, className, icon: Icon, text } = this.props;
+    const classNames = join(['y-actionLink', className]);
 
-    const gutterSize = compact ? GutterSize.XSMALL : GutterSize.SMALL;
-    const iconSize = compact ? IconSize.SMALL : IconSize.MEDIUM;
-    // Remove Block around Icon when this is addressed: https://github.com/Microsoft/YamUI/issues/327
     const content = (
-      <FixedGridRow gutterSize={gutterSize}>
+      <FixedGridRow gutterSize={GutterSize.SMALL} className="y-actionLink--wrapper">
         <FixedGridColumn fixed={true}>
-          <Block push={compact ? 1 : 2}>
-            <Icon size={iconSize} block={true} />
-          </Block>
+          <Icon size={IconSize.MEDIUM} block={true} className="y-actionLink--icon" />
         </FixedGridColumn>
         <FixedGridColumn>
-          <Block textSize={TextSize.MEDIUM_SUB}>{compact ? <Strong>{text}</Strong> : text}</Block>
+          <Block textSize={TextSize.MEDIUM_SUB}>{text}</Block>
         </FixedGridColumn>
       </FixedGridRow>
     );
@@ -40,7 +74,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
           href={(this.props as NavigationActionLinkProps).href}
           newWindow={(this.props as NavigationActionLinkProps).newWindow}
           ariaLabel={ariaLabel}
-          className={join(['y-actionLink', className])}
+          className={classNames}
           block={true}
         >
           {content}
@@ -51,7 +85,7 @@ export default class ActionLink extends React.Component<ActionLinkProps> {
       <Clickable
         onClick={(this.props as ClickableActionLinkProps).onClick}
         ariaLabel={ariaLabel}
-        className={join(['y-actionLink', className])}
+        className={classNames}
         block={true}
       >
         {content}

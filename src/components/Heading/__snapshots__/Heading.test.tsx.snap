@@ -2,76 +2,46 @@
 
 exports[`<Heading /> with additional className matches its snapshot 1`] = `
 <h4
-  className=
-      y-heading
-      TEST_CLASSNAME
-      {
-        display: inline;
-        font-size: inherit;
-        font-weight: 400;
-        line-height: inherit;
-      }
+  className="y-heading TEST_CLASSNAME"
 >
-  <CustomizedBlock
+  <Block
     bottomSpacing="medium"
     textSize="large"
   >
     test content
-  </CustomizedBlock>
+  </Block>
 </h4>
 `;
 
 exports[`<Heading /> with level 1 matches its snapshot 1`] = `
 <h1
-  className=
-      y-heading
-      {
-        display: inline;
-        font-size: inherit;
-        font-weight: 600;
-        line-height: inherit;
-      }
+  className="y-heading"
 >
-  <CustomizedBlock
+  <Block
     bottomSpacing="small"
     textSize="xxLarge"
   >
     test content
-  </CustomizedBlock>
+  </Block>
 </h1>
 `;
 
 exports[`<Heading /> with level 2 and size 3 matches its snapshot 1`] = `
 <h2
-  className=
-      y-heading
-      {
-        display: inline;
-        font-size: inherit;
-        font-weight: 600;
-        line-height: inherit;
-      }
+  className="y-heading y-heading__size-3"
 >
-  <CustomizedBlock
+  <Block
     bottomSpacing="medium"
     textSize="large"
   >
     test content
-  </CustomizedBlock>
+  </Block>
 </h2>
 `;
 
 exports[`<Heading /> with size "none" matches its snapshot 1`] = `
 <h5
-  className=
-      y-heading
-      {
-        display: inline;
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        margin-bottom: 0px;
-      }
+  className="y-heading y-heading__size-none"
 >
   test content
 </h5>

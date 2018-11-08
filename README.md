@@ -1,5 +1,7 @@
 # YamUI [![Travis](https://img.shields.io/travis/Microsoft/YamUI.svg)](https://travis-ci.org/Microsoft/YamUI)
 
+> Please note that YamUI is now in maintenance mode and only minor changes will be made to support existing Yammer applications. If you are using YamUI in your own projects we'd recommend locking your version to 9.4.1, or forking the project from [this commit](https://github.com/Microsoft/YamUI/tree/e5cf2542bd3b25681ce62edd7f5d5e115b1724d2) before we rolled back some features in the 10.0.0 release. Thanks!
+
 This is the UI component framework for [Yammer.com](https://www.yammer.com/).
 
 It is built with [React](https://reactjs.org/) on top of [Office UI Fabric](https://dev.office.com/fabric#/components/) components. Unit tests are run through [Jest](https://facebook.github.io/jest/), isolated development environment and documentation is provided by [Styleguidist](https://react-styleguidist.js.org/), and visual diff regression is done with [Puppeteer](https://github.com/GoogleChrome/puppeteer) and [pixelmatch](https://github.com/mapbox/pixelmatch). Visual diff tasks run within a [Docker](https://www.docker.com/) container to ensure consistency between local development environments and CI.
@@ -81,13 +83,9 @@ It's best to have at least 30GB of free space for Docker containers and images. 
 
 * `y run test` will run all validations - linting, unit tests and visual diff regression tests. If this passes you should be all good to go.
 
-### Size limit
-
-* `npm run size` - package test component(s) with webpack and inspect file size. If the size limit is exceeded, the build will fail with `Package size limit has exceeded by x KB`. Configured in package.json. Add `-- --why` to visualize the package in the browser.
-
 ### Adding icons
 
-* Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/icons/README.md).
+* Prepare source SVG and React SVG following [these instructions](https://github.com/Microsoft/YamUI/tree/master/assets/icons).
 
 ## Releasing a new version
 
@@ -98,11 +96,12 @@ or `patch` as appropriate, based on [SemVer](https://semver.org):-
 git checkout -b awesome-release-branch
 npm version version_type -m "Release version %s"
 git push
+git push --tags
 ```
 
 This will add a commit that updates `package.json` and `package-lock.json` with the updated version number.
 
-Once this branch's PR is merged to master, create a [release tag](https://github.com/Microsoft/YamUI/releases/new), and publish the release to npm:-
+Once this branch's PR is merged to master, do the following to publish the release so it can be consumed from npm:-
 
 ```sh
 # requires an npm user with permissions to release
@@ -112,13 +111,9 @@ npm install
 npm publish
 ```
 
-## Roadmap
-
-The YamUI project is currently in a pre-release state. We are building out the components and features we need for [Yammer.com](https://www.yammer.com/) to meet our specific UX Design guidelines.
-
 ## Contributing
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
 
 When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
 

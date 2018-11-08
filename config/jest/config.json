@@ -12,7 +12,7 @@
     "<rootDir>/src/demos"
   ],
   "moduleNameMapper": {
-    "office-ui-fabric-react/lib/(.*)": "<rootDir>/node_modules/office-ui-fabric-react/lib-commonjs/$1",
+    "office-ui-fabric-react/lib/": "office-ui-fabric-react/lib-commonjs/",
     "^.+\\.css$": "identity-obj-proxy"
   },
   "snapshotSerializers": ["enzyme-to-json/serializer", "@uifabric/jest-serializer-merge-styles"],

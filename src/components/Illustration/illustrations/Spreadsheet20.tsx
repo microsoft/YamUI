@@ -7,12 +7,12 @@ import BaseIllustration from '../BaseIllustration';
 
 export default class Spreadsheet extends BaseIllustration {
   public render() {
-    const { size = 20 } = this.props;
-
     return (
       <svg
         viewBox="0 0 20 20"
-        className={this.getClassName(size)}
+        height="20"
+        width="20"
+        className={this.getClassName()}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"

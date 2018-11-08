@@ -24,9 +24,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <Paragraph>
-    The <Strong>imageFit: cover</Strong> option can be used to nicely fill the desired image area while hiding any overflow.
-  </Paragraph>
+  <p>
+    The <strong>imageFit: cover</strong> option can be used to nicely fill the desired image area while hiding any overflow.
+  </p>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -46,9 +46,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <Paragraph>
-    The <Strong>imageFit: contain</Strong> option displays the entire image within our image area and leaves whitespace.
-  </Paragraph>
+  <p>
+    The <strong>imageFit: contain</strong> option displays the entire image within our image area and leaves whitespace.
+  </p>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -68,9 +68,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <Paragraph>
-    The <Strong>imageFit: center</Strong> option centers the image horizontally and vertically, using the image's original size and cropping its overflow.
-  </Paragraph>
+  <p>
+    The <strong>imageFit: center</strong> option centers the image horizontally and vertically, using the image's original size and cropping its overflow.
+  </p>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -88,9 +88,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <Paragraph>
-    The <Strong>imageFit: none</Strong> option places the image at the top left of its <Emphasis>div</Emphasis> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
-  </Paragraph>
+  <p>
+    The <strong>imageFit: none</strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
+  </p>
   <Image source={yammerLogo} description={yammerLogoDescription} height={240} width={240} />
 </div>
 ```
@@ -104,9 +104,9 @@ const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 
 <div>
-  <Paragraph>
-    The <Strong>imageFit: none</Strong> option places the image at the top left of its <Emphasis>div</Emphasis> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
-  </Paragraph>
+  <p>
+    The <strong>imageFit: none</strong> option places the image at the top left of its <em>div</em> wrapper. It will render at its original size, possibly showing whitespace or hiding its overflow. This is generally not an option you will want to use.
+  </p>
   <Image
     source={yammerLogo}
     description={yammerLogoDescription}
@@ -136,7 +136,7 @@ const fullWidthImageWithHeight = (
 <div style={{ maxWidth: '500px' }}>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
-      Use <Strong>fullWidth: true</Strong> when your layout should determine the image width. If <Strong>height</Strong> is not provided then the image will maintain its aspect ratio:
+      Use <strong>fullWidth: true</strong> when your layout should determine the image width. If <strong>height</strong> is not provided then the image will maintain its aspect ratio:
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
@@ -156,7 +156,7 @@ const fullWidthImageWithHeight = (
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
     <FixedGridColumn>
       <br />
-      If <Strong>height</Strong> is also provided then the height will remain fixed while the width stretches to fill its container. In this case you will probably want to set an <Strong>imageFit</Strong> value to prevent a skewed aspect ratio:
+      If <strong>height</strong> is also provided then the height will remain fixed while the width stretches to fill its container. In this case you will probably want to set an <strong>imageFit</strong> value to prevent a skewed aspect ratio:
     </FixedGridColumn>
   </FixedGridRow>
   <FixedGridRow bottomSpacing={GutterSize.SMALL}>
@@ -242,9 +242,9 @@ class StateChangeDemo extends React.Component {
 }
 
 <div>
-  <Paragraph>
-    When an image's loading state changes, it will trigger the <Strong>onLoadingStateChange</Strong> callback. This example updates the source URL passed to the image when its <Strong>onLoadingStateChange</Strong> is called with an error.
-  </Paragraph>
+  <p>
+    When an image's loading state changes, it will trigger the <strong>onLoadingStateChange</strong> callback. This example updates the source URL passed to the image when its <strong>onLoadingStateChange</strong> is called with an error.
+  </p>
   <StateChangeDemo />
 </div>
 ```

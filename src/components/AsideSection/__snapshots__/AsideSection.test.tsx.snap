@@ -4,36 +4,29 @@ exports[`<AsideSection /> With minimal options matches snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <CustomizedBlock
+  <Block
     textSize="small"
   >
     <FixedGridRow
       bottomSpacing="small"
-      className=
-
-          {
-            border-bottom: 1px solid #dde0e6;
-          }
+      className="y-aside-section--header"
+      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
           level="2"
           size="none"
         >
-          <CustomizedBlock
-            bottomSpacing="xSmall"
+          <Text
+            bold={true}
+            uppercase={true}
           >
-            <CustomizedText
-              bold={true}
-              uppercase={true}
-            >
-              Test title
-            </CustomizedText>
-          </CustomizedBlock>
+            Test title
+          </Text>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
-  </CustomizedBlock>
+  </Block>
   <div />
 </div>
 `;
@@ -42,43 +35,36 @@ exports[`<AsideSection /> with action prop renders the action in its own FixedGr
 <div
   className="y-aside-section"
 >
-  <CustomizedBlock
+  <Block
     textSize="small"
   >
     <FixedGridRow
       bottomSpacing="small"
-      className=
-
-          {
-            border-bottom: 1px solid #dde0e6;
-          }
+      className="y-aside-section--header"
+      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
           level="2"
           size="none"
         >
-          <CustomizedBlock
-            bottomSpacing="xSmall"
+          <Text
+            bold={true}
+            uppercase={true}
           >
-            <CustomizedText
-              bold={true}
-              uppercase={true}
-            >
-              Test title
-            </CustomizedText>
-          </CustomizedBlock>
+            Test title
+          </Text>
         </Heading>
       </FixedGridColumn>
       <FixedGridColumn
         fixed={true}
       >
-        <CustomizedClickable>
+        <Clickable>
           Add
-        </CustomizedClickable>
+        </Clickable>
       </FixedGridColumn>
     </FixedGridRow>
-  </CustomizedBlock>
+  </Block>
   <div />
 </div>
 `;
@@ -87,36 +73,29 @@ exports[`<AsideSection /> with children matches the snapshot 1`] = `
 <div
   className="y-aside-section"
 >
-  <CustomizedBlock
+  <Block
     textSize="small"
   >
     <FixedGridRow
       bottomSpacing="small"
-      className=
-
-          {
-            border-bottom: 1px solid #dde0e6;
-          }
+      className="y-aside-section--header"
+      gutterSize="small"
     >
       <FixedGridColumn>
         <Heading
           level="2"
           size="none"
         >
-          <CustomizedBlock
-            bottomSpacing="xSmall"
+          <Text
+            bold={true}
+            uppercase={true}
           >
-            <CustomizedText
-              bold={true}
-              uppercase={true}
-            >
-              Test title
-            </CustomizedText>
-          </CustomizedBlock>
+            Test title
+          </Text>
         </Heading>
       </FixedGridColumn>
     </FixedGridRow>
-  </CustomizedBlock>
+  </Block>
   <div>
     <div>
       Child Content

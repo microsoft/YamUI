@@ -1,19 +1,12 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
-import CustomizableSuggestionsListItem, { SuggestionsListItem } from './SuggestionsListItem';
-import { SuggestionItem, SuggestionsListItemTemplate, SuggestionsListItemProps } from './SuggestionsList.types';
-import Customizer, { defaultTheme } from '../Customizer';
+import { shallow, ShallowWrapper } from 'enzyme';
+import SuggestionsListItem, { SuggestionsListItemProps } from './SuggestionsListItem';
+import { BorderType } from '../Avatar';
 
 describe('<SuggestionsListItem />', () => {
-  let component: ShallowWrapper<SuggestionsListItemProps>;
+  let rendered: ShallowWrapper<SuggestionsListItemProps>;
   let onSelect: jest.Mock;
-
-  const textItem: SuggestionItem = {
-    template: SuggestionsListItemTemplate.TEXT,
-    id: '1',
-    name: 'John Smith',
-  };
 
   const getProps = (overrides?: Partial<SuggestionsListItemProps>) => {
     onSelect = jest.fn();
@@ -21,8 +14,11 @@ describe('<SuggestionsListItem />', () => {
     return {
       onSelect,
       isSelected: false,
+      id: '1',
+      imageUrl: 'imageUrl',
+      name: 'John Smith',
+      description: 'Software Engineer',
       searchText: 'Joh',
-      item: textItem,
       ...overrides,
     };
   };
@@ -33,11 +29,32 @@ describe('<SuggestionsListItem />', () => {
 
   describe('when isSelected=true', () => {
     beforeEach(() => {
-      component = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
+      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: true })} />);
     });
 
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('when isSelected=false', () => {
+    beforeEach(() => {
+      rendered = shallow(<SuggestionsListItem {...getProps({ isSelected: false })} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
+  describe('with avatarProps', () => {
+    beforeEach(() => {
+      const avatarProps = { borderType: BorderType.SOFT };
+      rendered = shallow(<SuggestionsListItem {...getProps({ avatarProps })} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
     });
   });
 
@@ -45,9 +62,9 @@ describe('<SuggestionsListItem />', () => {
     let preventDefault: jest.Mock;
 
     beforeEach(() => {
-      component = shallow(<SuggestionsListItem {...getProps()} />);
+      rendered = shallow(<SuggestionsListItem {...getProps()} />);
       preventDefault = jest.fn();
-      component.simulate('mouseDown', { preventDefault });
+      rendered.simulate('mouseDown', { preventDefault });
     });
 
     it('calls props.onSelect', () => {
@@ -56,23 +73,6 @@ describe('<SuggestionsListItem />', () => {
 
     it('calls event preventDefault', () => {
       expect(preventDefault).toBeCalled();
-    });
-  });
-
-  describe('with customizer', () => {
-    let mountedComponent: ReactWrapper;
-    const theme = defaultTheme;
-
-    beforeEach(() => {
-      mountedComponent = mount(
-        <Customizer settings={{ theme }}>
-          <CustomizableSuggestionsListItem {...getProps({ isSelected: true })} />
-        </Customizer>,
-      );
-    });
-
-    it('receives custom theme', () => {
-      expect(mountedComponent.find('CustomizableSuggestionsListItem').prop('theme')).toBe(theme);
     });
   });
 });

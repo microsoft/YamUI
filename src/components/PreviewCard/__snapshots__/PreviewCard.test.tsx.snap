@@ -1,23 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     metadataContent={
-      <CustomizedBlock
+      <Block
         push={0}
         textColor="metadata"
       >
-        <CustomizedEditableText
+        <EditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -26,36 +21,31 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </CustomizedBlock>
+      </Block>
     }
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when entering edit mode matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     metadataContent={
-      <CustomizedBlock
+      <Block
         push={-3}
         textColor="metadata"
       >
-        <CustomizedEditableText
+        <EditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -64,38 +54,33 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </CustomizedBlock>
+      </Block>
     }
     size="medium"
     titleContent={
-      <CustomizedBlock
+      <Block
         textSize="xSmall"
       >
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> when description is edible with onDescriptionChange callback when exiting edit mode matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     metadataContent={
-      <CustomizedBlock
+      <Block
         push={0}
         textColor="metadata"
       >
-        <CustomizedEditableText
+        <EditableText
           maxLength={120}
           onBeginEditing={[Function]}
           onEndEditing={[Function]}
@@ -104,109 +89,90 @@ exports[`<PreviewCard /> when description is edible with onDescriptionChange cal
           promptText="empty placeholder text"
           text="file description"
         />
-      </CustomizedBlock>
+      </Block>
     }
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> when loading matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     metadataContent={
-      <CustomizedBlock
+      <Block
+        className="y-previewCard--spinner"
+        push={1}
         textColor="metadata"
       >
-        <CustomizedSpinner
+        <Spinner
           color="metadata"
+          hideText={false}
           size="xSmall"
           text="loading..."
         />
-      </CustomizedBlock>
+      </Block>
     }
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with additional className matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-      TEST_CLASSNAME
-
+<Box
+  className="y-previewCard TEST_CLASSNAME"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with description matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     metadataContent="file description"
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with image matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
     imageContent={
       <Image
         description="file description"
@@ -217,144 +183,108 @@ exports[`<PreviewCard /> with image matches its snapshot 1`] = `
     }
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with loading progress matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-  <CustomizedProgressIndicator
+  <ProgressIndicator
     ariaValueText="Uploading, currently at 50%"
-    className=
-
-        {
-          bottom: 0px;
-          left: 0px;
-          position: absolute;
-          right: 0px;
-        }
+    className="y-previewCard--progress"
     percentComplete={0.5}
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with minimal options matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with onClick handler matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-      &:hover {
-        background-color: #f3f5f8;
-      }
+<Box
+  className="y-previewCard y-previewCard__hasClick"
   onClick={[MockFunction]}
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     size="medium"
     titleContent={
-      <CustomizedBlock>
-        <CustomizedClickable
+      <Block>
+        <Clickable
           ariaLabel="Show file preview"
           unstyled={true}
         >
           Filename.gif
-        </CustomizedClickable>
-      </CustomizedBlock>
+        </Clickable>
+      </Block>
     }
   />
-</CustomizedBox>
+</Box>
 `;
 
 exports[`<PreviewCard /> with onRemoveClick handler matches its snapshot 1`] = `
-<CustomizedBox
-  className=
-      y-previewCard
-
+<Box
+  className="y-previewCard"
 >
   <MediaObject
-    className=
-
-        {
-          padding-bottom: 2px;
-        }
+    className="y-previewCard--media"
+    imageContent={null}
     size="medium"
     titleContent={
-      <CustomizedBlock>
+      <Block>
         Filename.gif
-      </CustomizedBlock>
+      </Block>
     }
   />
   <span
-    className=
-
-        {
-          color: #646d7a;
-          position: absolute;
-          right: 2px;
-          top: 4px;
-        }
+    className="y-previewCard--remove"
   >
-    <CustomizedClickable
+    <Clickable
       ariaLabel="Remove this attachment"
       block={true}
       onClick={[Function]}
       unstyled={true}
     >
-      <CustomizedBlock
+      <Block
         padding="small"
       >
         <Cancel
           block={true}
           size="12"
         />
-      </CustomizedBlock>
-    </CustomizedClickable>
+      </Block>
+    </Clickable>
   </span>
-</CustomizedBox>
+</Box>
 `;

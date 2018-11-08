@@ -1,33 +1,64 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
-import { getClassNames } from './NavigationLink.styles';
-import { NavigationLinkProps } from './NavigationLink.types';
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import './NavigationLink.css';
 
-export class NavigationLink extends React.Component<NavigationLinkProps & CustomizableComponentProps> {
+export interface NavigationLinkProps extends NestableBaseComponentProps {
+  /**
+   * Whether the clickable should be `display: block`.
+   */
+  block?: boolean;
+
+  /**
+   * URL or a URL fragment that the link points to.
+   */
+  href: string;
+
+  /**
+   * Whether the link should open in a new window. It securely removes access to the opening window.
+   */
+  newWindow?: boolean;
+
+  /**
+   * If present, indicates the link refers to the current page. This is usually used in cases where the link
+   * is visually styled to indicate it is selected or is the current page, such as in a navigation list.
+   */
+  ariaCurrent?: 'page';
+
+  /**
+   * Title or description of the linked document for screenreaders.
+   */
+  ariaLabel?: string;
+
+  /**
+   * Title or description of the linked document for the anchor tag. You should generally avoid using this.
+   */
+  title?: string;
+
+  /**
+   * Whether to remove all styles from the link. Useful for allowing a large area to be clickable
+   * while nesting `FakeLink` components to show link and hover state visuals.
+   */
+  unstyled?: boolean;
+}
+
+/**
+ * A `NavigationLink` renders an `a` tag for navigation between web pages.
+ */
+export default class NavigationLink extends React.Component<NavigationLinkProps> {
   public render() {
-    const {
-      ariaCurrent,
-      ariaLabel,
-      href,
-      newWindow,
-      title,
-      children,
-      unstyled,
-      block,
-      className,
-      theme = defaultTheme,
-    } = this.props;
-    const classNames = getClassNames({ unstyled, block, theme });
+    const { ariaCurrent, ariaLabel, href, newWindow, title, children } = this.props;
+    const target = newWindow ? '_blank' : undefined;
+    const rel = newWindow ? 'nofollow noopener noreferrer' : undefined;
 
     return (
       <a
-        className={join(['y-navigationLink', className, classNames.root])}
+        className={this.getClasses()}
         href={href}
-        rel={newWindow ? 'nofollow noopener noreferrer' : undefined}
-        target={newWindow ? '_blank' : undefined}
+        rel={rel}
+        target={target}
         title={title}
         aria-label={ariaLabel}
         aria-current={ariaCurrent}
@@ -36,10 +67,23 @@ export class NavigationLink extends React.Component<NavigationLinkProps & Custom
       </a>
     );
   }
-}
 
-/**
- * A `NavigationLink` renders an `a` tag for navigation between web pages.
- */
-@customizable('NavigationLink', ['theme'])
-export default class CustomizableNavigationLink extends NavigationLink {}
+  private getClasses() {
+    const { className, block, unstyled } = this.props;
+
+    const classes: string[] = ['y-navigationLink'];
+    if (unstyled) {
+      classes.push('y-navigationLink__unstyled');
+    }
+
+    if (block) {
+      classes.push('y-navigationLink__block');
+    }
+
+    if (className) {
+      classes.push(className);
+    }
+
+    return join(classes);
+  }
+}

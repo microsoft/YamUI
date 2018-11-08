@@ -58,8 +58,6 @@ WORKDIR $APP_ROOT
 COPY ./config/yo/generator-component/package.json $APP_ROOT/config/yo/generator-component/package.json
 COPY ./package.json $APP_ROOT/package.json
 COPY ./package-lock.json $APP_ROOT/package-lock.json
-# Get latest npm to avoid random issues...
-RUN npm install npm@latest -g
 RUN npm install --unsafe-perm
 
 # Copy the app

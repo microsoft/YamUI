@@ -8,16 +8,16 @@ Basic text:
 
 ```js { "props": { "data-description": "basic" } }
 <div>
-  <Paragraph>
+  <p>
     <Text>
-      The <Strong>Text</Strong> component renders its children in a <Strong>span</Strong>. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
+      The <strong>Text</strong> component renders its children in a <strong>span</strong>. It's a convenient way to render a piece of text with a specific size. Text will support more options in the future.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text>
-      By default the <Strong>Text</Strong> component does not render any styling so it can inherit styles of its parent.
+      By default the <strong>Text</strong> component does not render any styling so it can inherit styles of its parent.
     </Text>
-  </Paragraph>
+  </p>
 </div>
 ```
 
@@ -25,16 +25,16 @@ With screenreader text:
 
 ```js { "props": { "data-description": "with screenreader text" } }
 <div>
-  <Paragraph>
+  <p>
     <Text>
       This `Text` component does not have a `screenreaderText` value provided.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text screenreaderText="This text is available to screenreaders">
       This `Text` component has `screenreaderText` provided. This visible text is hidden from screenreaders while the screenreaderText value is made available to them.
     </Text>
-  </Paragraph>
+  </p>
 </div>
 ```
 
@@ -43,7 +43,7 @@ Bold:
 ```js { "props": { "data-description": "bold" } }
 <div>
   <Text bold={true}>
-    This example has <Strong>bold: true</Strong>.
+    This example has <strong>bold: true</strong>.
   </Text>
 </div>
 ```
@@ -53,7 +53,7 @@ Uppercase:
 ```js { "props": { "data-description": "uppercase" } }
 <div>
   <Text uppercase={true}>
-    This example has <Strong>uppercase: true</Strong>.
+    This example has <strong>uppercase: true</strong>.
   </Text>
 </div>
 ```
@@ -79,29 +79,29 @@ Different text colors:
 const { TextColor } = require('.');
 
 <div>
-  <Paragraph>
+  <p>
     <Text>
       This is text without a color specified. It will inherit its color from its parent.
     </Text>
-  </Paragraph>
-  <Paragraph>
-    <Text color={TextColor.PRIMARY}>This example has <Strong>color: PRIMARY</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text color={TextColor.SECONDARY}>This example has <Strong>color: SECONDARY</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text color={TextColor.METADATA}>This example has <Strong>color: METADATA</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text color={TextColor.ERROR}>This example has <Strong>color: ERROR</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text color={TextColor.DISABLED}>This example has <Strong>color: DISABLED</Strong>.</Text>
-  </Paragraph>
+  </p>
+  <p>
+    <Text color={TextColor.PRIMARY}>This example has <strong>color: PRIMARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.SECONDARY}>This example has <strong>color: SECONDARY</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.METADATA}>This example has <strong>color: METADATA</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.ERROR}>This example has <strong>color: ERROR</strong>.</Text>
+  </p>
+  <p>
+    <Text color={TextColor.DISABLED}>This example has <strong>color: DISABLED</strong>.</Text>
+  </p>
   <div style={{ backgroundColor: '#a8b0bd', padding: '16px' }}>
     <Text color={TextColor.WHITE}>
-      This example has <Strong>color: WHITE</Strong>. It should be used where the background is a darker color.
+      This example has <strong>color: WHITE</strong>. It should be used where the background is a darker color.
     </Text>
   </div>
 </div>
@@ -113,32 +113,32 @@ Different text sizes:
 const { TextSize } = require('.');
 
 <div>
-  <Paragraph>
+  <p>
     <Text>
       This is text without a size specified. It will inherit its size and line-height from its parent.
     </Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.XXLARGE}>This example has <Strong>size: XXLARGE</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.XLARGE}>This example has <Strong>size: XLARGE</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.LARGE}>This example has <Strong>size: LARGE</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.MEDIUM}>This example has <Strong>size: MEDIUM</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.MEDIUM_SUB}>This example has <Strong>size: MEDIUM_SUB</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.SMALL}>This example has <Strong>size: SMALL</Strong>.</Text>
-  </Paragraph>
-  <Paragraph>
-    <Text size={TextSize.XSMALL}>This example has <Strong>size: XSMALL</Strong>.</Text>
-  </Paragraph>
+  </p>
+  <p>
+    <Text size={TextSize.XXLARGE}>This example has <strong>size: XXLARGE</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.XLARGE}>This example has <strong>size: XLARGE</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.LARGE}>This example has <strong>size: LARGE</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.MEDIUM}>This example has <strong>size: MEDIUM</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.MEDIUM_SUB}>This example has <strong>size: MEDIUM_SUB</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.SMALL}>This example has <strong>size: SMALL</strong>.</Text>
+  </p>
+  <p>
+    <Text size={TextSize.XSMALL}>This example has <strong>size: XSMALL</strong>.</Text>
+  </p>
 </div>
 ```
 
@@ -148,56 +148,45 @@ Different text sizes with long text:
 const { TextSize } = require('.');
 
 <div>
-  <Paragraph>
+  <p>
     <Text>
-      This is text without <Strong>size</Strong> specified. It will inherit its size and line-height from its parent. This is text without <Strong>size</Strong> specified. It will inherit its size and line-height from its parent. This is text without <Strong>size</Strong> specified. It will inherit its size and line-height from its parent.
+      This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent. This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent. This is text without <strong>size</strong> specified. It will inherit its size and line-height from its parent.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.XXLARGE}>
-      This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>. This example has <Strong>size: XXLARGE</Strong>.
+      This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>. This example has <strong>size: XXLARGE</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.XLARGE}>
-      This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>. This example has <Strong>size: XLARGE</Strong>.
+      This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>. This example has <strong>size: XLARGE</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.LARGE}>
-      This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>. This example has <Strong>size: LARGE</Strong>.
+      This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>. This example has <strong>size: LARGE</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.MEDIUM}>
-      This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>. This example has <Strong>size: MEDIUM</Strong>.
+      This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>. This example has <strong>size: MEDIUM</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.MEDIUM_SUB}>
-      This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>. This example has <Strong>size: MEDIUM_SUB</Strong>.
+      This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>. This example has <strong>size: MEDIUM_SUB</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.SMALL}>
-      This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>. This example has <Strong>size: SMALL</Strong>.
+      This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>. This example has <strong>size: SMALL</strong>.
     </Text>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p>
     <Text size={TextSize.XSMALL}>
-      This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>. This example has <Strong>size: XSMALL</Strong>.
+      This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>. This example has <strong>size: XSMALL</strong>.
     </Text>
-  </Paragraph>
-</div>
-```
-
-With background color:
-```jsx { "props": { "data-description": "background-color" } }
-const { TextColor } = require('.');
-
-<div>
-  Before the Text. <Text backgroundColor="themeLighterAlt">
-    Text with <Strong>backgroundColor: themeLighterAlt</Strong>.
-  </Text> After the Text.
+  </p>
 </div>
 ```
