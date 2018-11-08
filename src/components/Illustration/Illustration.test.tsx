@@ -1,7 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { IllustrationProps } from '.';
+import { BaseIllustration, IllustrationProps } from '.';
+import * as allExportedIllustrations from './illustrations';
 import AccDB16 from './illustrations/AccDB16';
 
 describe('<Illustration />', () => {
@@ -11,16 +12,6 @@ describe('<Illustration />', () => {
     describe('with minimal options', () => {
       beforeEach(() => {
         component = shallow(<AccDB16 />);
-      });
-
-      it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
-      });
-    });
-
-    describe('with size', () => {
-      beforeEach(() => {
-        component = shallow(<AccDB16 size={24} />);
       });
 
       it('matches its snapshot', () => {
@@ -45,6 +36,22 @@ describe('<Illustration />', () => {
 
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('each illustration', () => {
+    let Illustration: typeof BaseIllustration;
+
+    // tslint:disable-next-line:mocha-no-side-effect-code
+    Object.keys(allExportedIllustrations).forEach(name => {
+      beforeEach(() => {
+        Illustration = (allExportedIllustrations as any)[name];
+        component = shallow(<Illustration />);
+      });
+
+      it('has a viewbox', () => {
+        expect(component.getElement().props.viewBox).toBeDefined();
       });
     });
   });

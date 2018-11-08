@@ -3,17 +3,7 @@
 exports[`<Icon /> an Icon with additional className matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className=
-      y-icon
-      TEST_CLASSNAME
-      {
-        display: inline;
-        fill: currentColor;
-        pointer-events: none;
-        position: relative;
-        top: 0.2rem;
-        vertical-align: 0;
-      }
+  className="y-icon TEST_CLASSNAME"
   focusable="false"
   style={Object {}}
   tabIndex={-1}
@@ -29,16 +19,7 @@ exports[`<Icon /> an Icon with additional className matches its snapshot 1`] = `
 exports[`<Icon /> an Icon with block matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className=
-      y-icon
-      {
-        display: block;
-        fill: currentColor;
-        pointer-events: none;
-        position: relative;
-        top: 0.2rem;
-        vertical-align: 0;
-      }
+  className="y-icon y-icon__isBlock"
   focusable="false"
   style={Object {}}
   tabIndex={-1}
@@ -54,19 +35,13 @@ exports[`<Icon /> an Icon with block matches its snapshot 1`] = `
 exports[`<Icon /> an Icon with color matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className=
-      y-icon
-      {
-        color: blue;
-        display: inline;
-        fill: currentColor;
-        pointer-events: none;
-        position: relative;
-        top: 0.2rem;
-        vertical-align: 0;
-      }
+  className="y-icon"
   focusable="false"
-  style={Object {}}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
   tabIndex={-1}
   viewBox="0 0 240 240"
 >
@@ -80,16 +55,7 @@ exports[`<Icon /> an Icon with color matches its snapshot 1`] = `
 exports[`<Icon /> an Icon with minimal options matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className=
-      y-icon
-      {
-        display: inline;
-        fill: currentColor;
-        pointer-events: none;
-        position: relative;
-        top: 0.2rem;
-        vertical-align: 0;
-      }
+  className="y-icon"
   focusable="false"
   style={Object {}}
   tabIndex={-1}
@@ -105,16 +71,7 @@ exports[`<Icon /> an Icon with minimal options matches its snapshot 1`] = `
 exports[`<Icon /> an Icon with passed size value matches its snapshot 1`] = `
 <svg
   aria-hidden="true"
-  className=
-      y-icon
-      {
-        display: inline;
-        fill: currentColor;
-        pointer-events: none;
-        position: relative;
-        top: 0.2rem;
-        vertical-align: 0;
-      }
+  className="y-icon"
   focusable="false"
   style={
     Object {

@@ -2,15 +2,15 @@
 
 Default hover trigger:
 
-```js { "props": { "data-description": "default hover trigger", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "default hover trigger" } }
 
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <Strong>HovercardHeader</Strong> component)
+      Title (nested <strong>HovercardHeader</strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
+      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -26,6 +26,7 @@ const handlers = {
   <Hovercard
     content={content}
     directionalHint={4}
+    startVisible={true}
     {...handlers}
   >
     <Clickable>hovercard trigger</Clickable>
@@ -36,16 +37,16 @@ const handlers = {
 
 Click trigger:
 
-```js { "props": { "data-description": "click trigger", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "click trigger" } }
 const { DirectionalHint, TriggerType } = require('.');
 
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <Strong>HovercardHeader</Strong> component)
+      Title (nested <strong>HovercardHeader</strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
+      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -61,6 +62,7 @@ const handlers = {
   <Hovercard
     content={content}
     directionalHint={4}
+    startVisible={true}
     triggerType={TriggerType.CLICK}
     {...handlers}
   >
@@ -72,16 +74,16 @@ const handlers = {
 
 Hovercard without beak:
 
-```js { "props": { "data-description": "without beak", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "without beak" } }
 
 
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <Strong>HovercardHeader</Strong> component)
+      Title (nested <strong>HovercardHeader</strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
+      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -98,6 +100,7 @@ const handlers = {
     content={content}
     directionalHint={4}
     isBeakVisible={false}
+    startVisible={true}
     {...handlers}
   >
     <Clickable>hover trigger</Clickable>
@@ -108,16 +111,16 @@ const handlers = {
 
 Hovercard with different alignments:
 
-```js { "props": { "data-description": "alignments", "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js { "props": { "data-description": "alignments" } }
 
 
 const content = (
   <div>
     <HovercardHeader>
-      Title (nested <Strong>HovercardHeader</Strong> component)
+      Title (nested <strong>HovercardHeader</strong> component)
     </HovercardHeader>
     <HovercardBody>
-      Content (nested <Strong>HovercardBody</Strong> component). Any arbitrary content can be nested here.
+      Content (nested <strong>HovercardBody</strong> component). Any arbitrary content can be nested here.
     </HovercardBody>
   </div>
 );
@@ -129,7 +132,7 @@ const handlers = {
 };
 
 const HintedPositionHovercard = (props) => (
-  <Hovercard content={content} directionalHint={props.hint} {...handlers} >
+  <Hovercard content={content} directionalHint={props.hint} startVisible={true} {...handlers} >
     <Block textAlign={props.align}>
       <Clickable>
         {props.label}

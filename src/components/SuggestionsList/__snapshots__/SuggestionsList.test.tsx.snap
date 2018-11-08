@@ -1,168 +1,259 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SuggestionsList /> when isLoading=false with results matches its snapshot 1`] = `
+exports[`<SuggestionsList /> when isLoading=false with results renders as expected 1`] = `
 <div
-  className=
-      y-suggestions-list
-      y-hc-border
-      {
-        background-color: #ffffff;
-        border-radius: 1px;
-        border-width: 0px;
-        border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        padding-bottom: 4px;
-        padding-top: 4px;
-        width: 280px;
-      }
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
 >
-  <LayoutList
-    direction="vertical"
+  <ul
+    className="y-suggestions-list--results"
   >
-    <LayoutListItem
+    <li
       key="groupTitle"
     >
-      <LayoutList
-        direction="vertical"
-      >
-        <LayoutListItem
+      <ul>
+        <li
           key="id"
         >
-          <CustomizedSuggestionsListItem
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
             isSelected={false}
-            item={
-              Object {
-                "id": "id",
-                "name": "name",
-                "template": "text",
-              }
-            }
+            name="name"
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </LayoutListItem>
-      </LayoutList>
-    </LayoutListItem>
-  </LayoutList>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=false without results matches its snapshot 1`] = `
-<div
-  className=
-      y-suggestions-list
-      y-hc-border
-      {
-        background-color: #ffffff;
-        border-radius: 1px;
-        border-width: 0px;
-        border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        width: 280px;
-      }
->
-  <CustomizedBlock
-    className=
+exports[`<SuggestionsList /> when isLoading=false with results when onHover is called updates the state 1`] = `null`;
 
-        {
-          padding-bottom: 17px;
-          padding-top: 15px;
-        }
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li
+      key="groupTitle"
+    >
+      <ul>
+        <li
+          key="id"
+        >
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isSelected={false}
+            name="name"
+            onSelect={[MockFunction]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<SuggestionsList /> when isLoading=false with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-results"
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li
+      key="groupTitle"
+    >
+      <ul>
+        <li
+          key="id"
+        >
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isSelected={false}
+            name="name"
+            onSelect={[MockFunction]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<SuggestionsList /> when isLoading=false without results renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+>
+  <Block
+    padding="large"
     textAlign="center"
-    textColor="metadata"
     textSize="small"
   >
-    noResultsText
-  </CustomizedBlock>
+    <Text
+      className="y-suggestions-list--no-results"
+      color="metadata"
+    >
+      noResultsText
+    </Text>
+  </Block>
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true with results matches its snapshot 1`] = `
+exports[`<SuggestionsList /> when isLoading=true with results renders as expected 1`] = `
 <div
-  className=
-      y-suggestions-list
-      y-hc-border
-      {
-        background-color: #ffffff;
-        border-radius: 1px;
-        border-width: 0px;
-        border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        padding-top: 4px;
-        width: 280px;
-      }
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
 >
-  <LayoutList
-    direction="vertical"
+  <ul
+    className="y-suggestions-list--results"
   >
-    <LayoutListItem
+    <li
       key="groupTitle"
     >
-      <LayoutList
-        direction="vertical"
-      >
-        <LayoutListItem
+      <ul>
+        <li
           key="id"
         >
-          <CustomizedSuggestionsListItem
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
             isSelected={false}
-            item={
-              Object {
-                "id": "id",
-                "name": "name",
-                "template": "text",
-              }
-            }
+            name="name"
             onSelect={[MockFunction]}
             searchText="searchText"
           />
-        </LayoutListItem>
-      </LayoutList>
-    </LayoutListItem>
-  </LayoutList>
-  <div
-    className=
-
-        {
-          border-top: 1px solid #f3f5f8;
-          padding-bottom: 14px;
-          padding-top: 13px;
-        }
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Block
+    push={-2}
   >
-    <CustomizedSpinner
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
       isCentered={true}
+      size="medium"
       text="loadingText"
     />
-  </div>
+  </Block>
 </div>
 `;
 
-exports[`<SuggestionsList /> when isLoading=true without results matches its snapshot 1`] = `
-<div
-  className=
-      y-suggestions-list
-      y-hc-border
-      {
-        background-color: #ffffff;
-        border-radius: 1px;
-        border-width: 0px;
-        border: none;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        width: 280px;
-      }
->
-  <div
-    className=
+exports[`<SuggestionsList /> when isLoading=true with results when onHover is called updates the state 1`] = `null`;
 
-        {
-          padding-bottom: 14px;
-          padding-top: 14px;
-        }
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+>
+  <ul
+    className="y-suggestions-list--results"
   >
-    <CustomizedSpinner
+    <li
+      key="groupTitle"
+    >
+      <ul>
+        <li
+          key="id"
+        >
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isSelected={false}
+            name="name"
+            onSelect={[MockFunction]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
       isCentered={true}
+      size="medium"
       text="loadingText"
     />
-  </div>
+  </Block>
+</div>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true with results with state.hoveredId=id when the mouse leaves renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status y-suggestions-list--with-results"
+>
+  <ul
+    className="y-suggestions-list--results"
+  >
+    <li
+      key="groupTitle"
+    >
+      <ul>
+        <li
+          key="id"
+        >
+          <SuggestionsListItem
+            description="description"
+            id="id"
+            imageUrl="imageUrl"
+            isSelected={false}
+            name="name"
+            onSelect={[MockFunction]}
+            searchText="searchText"
+          />
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      isCentered={true}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
+</div>
+`;
+
+exports[`<SuggestionsList /> when isLoading=true without results renders as expected 1`] = `
+<div
+  className="y-suggestions-list y-hc-border y-suggestions-list--with-status"
+>
+  <Block
+    push={-2}
+  >
+    <Spinner
+      className="y-suggestions-list--loading"
+      color="light"
+      hideText={false}
+      isCentered={true}
+      size="medium"
+      text="loadingText"
+    />
+  </Block>
 </div>
 `;

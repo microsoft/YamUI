@@ -4,112 +4,108 @@ With visible text:
 
 ```js { "props": { "data-description": "with visible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
-const { GutterSize } = require('../FixedGrid');
 
-<div>
-  <FixedGridRow bottomSpacing={GutterSize.LARGE}>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} />
-    </FixedGridColumn>
-  </FixedGridRow>
-
-  <FixedGridRow bottomSpacing={GutterSize.LARGE}>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-  </FixedGridRow>
-
-  <div style={{ backgroundColor: '#386cbb', padding: '2rem 0' }}>
-    <FixedGridRow>
-      <FixedGridColumn fixed={true} width={100}>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th style={{ width: '100px' }}>L</th>
+      <th style={{ width: '100px' }}>M</th>
+      <th style={{ width: '100px' }}>S</th>
+      <th style={{ width: '100px' }}>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} color={SpinnerColor.METADATA} />
+      </td>
+    </tr>
+    <tr style={{ backgroundColor: '#386cbb' }}>
+      <td>
         <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" isCentered={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
+      </td>
+      <td>
         <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
+      </td>
+      <td>
         <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" isCentered={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
+      </td>
+      <td>
         <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" isCentered={true} />
-      </FixedGridColumn>
-    </FixedGridRow>
-  </div>
-</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 With invisible text:
 
 ```js { "props": { "data-description": "with invisible text" } }
 const { SpinnerColor, SpinnerSize } = require('.');
-const { GutterSize } = require('../FixedGrid');
 
-<div>
-  <FixedGridRow bottomSpacing={GutterSize.LARGE}>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} hideText={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} hideText={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} hideText={true} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} hideText={true} />
-    </FixedGridColumn>
-  </FixedGridRow>
-
-  <FixedGridRow bottomSpacing={GutterSize.LARGE}>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.LARGE} text="Loading" isCentered={true} hideText={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} hideText={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.SMALL} text="Loading" isCentered={true} hideText={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-    <FixedGridColumn fixed={true} width={100}>
-      <Spinner size={SpinnerSize.XSMALL} text="Loading" isCentered={true} hideText={true} color={SpinnerColor.METADATA} />
-    </FixedGridColumn>
-  </FixedGridRow>
-
-  <div style={{ backgroundColor: '#386cbb', padding: '2rem 0' }}>
-    <FixedGridRow>
-      <FixedGridColumn fixed={true} width={100}>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" isCentered={true} hideText={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" isCentered={true} hideText={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" isCentered={true} hideText={true} />
-      </FixedGridColumn>
-      <FixedGridColumn fixed={true} width={100}>
-        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" isCentered={true} hideText={true} />
-      </FixedGridColumn>
-    </FixedGridRow>
-  </div>
-</div>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th style={{ width: '100px' }}>L</th>
+      <th style={{ width: '100px' }}>M</th>
+      <th style={{ width: '100px' }}>S</th>
+      <th style={{ width: '100px' }}>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Spinner size={SpinnerSize.LARGE} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.MEDIUM} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.SMALL} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner size={SpinnerSize.XSMALL} text="Loading" hideText={true} isCentered={true} />
+      </td>
+    </tr>
+    <tr style={{ backgroundColor: '#386cbb' }}>
+      <td>
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.LARGE} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.MEDIUM} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.SMALL} text="Loading" hideText={true} isCentered={true} />
+      </td>
+      <td>
+        <Spinner color={SpinnerColor.DARK} size={SpinnerSize.XSMALL} text="Loading" hideText={true} isCentered={true} />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 With isCentered:
@@ -118,12 +114,12 @@ With isCentered:
 
 <div>
   <div>
-    <Paragraph>Default alignment:</Paragraph>
+    <p>Default alignment:</p>
     <Spinner text="Loading" />
   </div>
   <br />
   <div>
-    <Paragraph>Centered within its container:</Paragraph>
+    <p>Centered within its container:</p>
     <Spinner text="Loading" isCentered={true} />
   </div>
 </div>

@@ -6,14 +6,14 @@ module.exports = {
   dir: 'config/styleguide-visual/reference/',
   viewports: {
     desktop: {
-      width: 1024,
+      width: 600,
       height: 600,
       deviceScaleFactor: 2,
     },
   },
   launchOptions: {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting medium'],
-    slowMo: 50,
+    slowMo: 40,
   },
   navigationOptions: {
     waitUntil: 'networkidle0',

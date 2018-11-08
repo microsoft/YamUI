@@ -6,13 +6,13 @@ Context menu should be used as a menu button where you want to provide options t
 
 MenuButton with default Icon, and all applicable children properties
 
-```js { "props": { "data-description": "with default icon and all menu item types", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "with default icon and all menu item types" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
-const types = require('./types.ts');
+const enums = require('./enums.ts');
 
-<div style={{paddingBottom: '210px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     menuItems={[{
@@ -32,7 +32,7 @@ const types = require('./types.ts');
     }, {
       key: 'header',
       text: 'Header Type',
-      type: types.MenuItemType.Header,
+      type: enums.MenuItemType.Header,
     }, {
       key: 'longText',
       icon: Edit,
@@ -40,7 +40,7 @@ const types = require('./types.ts');
     },
     {
       key: 'divider',
-      type: types.MenuItemType.Divider,
+      type: enums.MenuItemType.Divider,
     }, {
       key: 'link',
       text: 'Link!',
@@ -55,19 +55,19 @@ const types = require('./types.ts');
 
 MenuButton with multiple headers in children
 
-```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"}]" } }
+```js { "props": { "data-description": "multiple headers" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
-const types = require('./types.ts');
+const enums = require('./enums.ts');
 
-<div style={{paddingBottom: '270px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     menuItems={[{
       key: 'header',
       text: 'Header',
-      type: types.MenuItemType.Header,
+      type: enums.MenuItemType.Header,
     },
     {
       key: 'edit',
@@ -84,7 +84,7 @@ const types = require('./types.ts');
     }, {
       key: 'anotherHeader',
       text: 'Header',
-      type: types.MenuItemType.Header,
+      type: enums.MenuItemType.Header,
     }, {
       key: 'edit1',
       icon: Edit,
@@ -104,15 +104,15 @@ const types = require('./types.ts');
 
 MenuButton with custom icon and dividers
 
-```js { "props": { "data-description": "with custom icon and dividers", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"hover\",\"selector\":\".y-menu-button--item-text\"}]" } }
+```js { "props": { "data-description": "with custom icon and dividers" } }
 const Home = require('../Icon/icons/Home').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const View = require('../Icon/icons/View').default;
-const types = require('./types.ts');
+const enums = require('./enums.ts');
 
-<div style={{paddingBottom: '170px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     icon={Home}
@@ -122,7 +122,7 @@ const types = require('./types.ts');
       text: 'Edit',
     }, {
       key: 'divider',
-      type: types.MenuItemType.Divider,
+      type: enums.MenuItemType.Divider,
     }, {
       key: 'reply',
       text: 'Reply',
@@ -133,7 +133,7 @@ const types = require('./types.ts');
       icon: Share,
     }, {
       key: 'divider',
-      type: types.MenuItemType.Divider,
+      type: enums.MenuItemType.Divider,
     }, {
       key: 'view',
       text: 'View',
@@ -145,13 +145,13 @@ const types = require('./types.ts');
 
 MenuButton with iconSize specified
 
-```js { "props": { "data-description": "custom icon size", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "custom icon size" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const { IconSize } = require('../Icon');
 
-<div style={{paddingBottom: '110px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     iconSize={IconSize.XSMALL}

@@ -7,12 +7,12 @@ import BaseIllustration from '../BaseIllustration';
 
 export default class AccDB extends BaseIllustration {
   public render() {
-    const { size = 40 } = this.props;
-
     return (
       <svg
         viewBox="0 0 40 40"
-        className={this.getClassName(size)}
+        height="40"
+        width="40"
+        className={this.getClassName()}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"

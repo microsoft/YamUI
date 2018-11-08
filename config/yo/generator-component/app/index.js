@@ -16,9 +16,9 @@ module.exports = class extends Generator {
       },
     ];
 
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       const { name } = props;
-      const className = `y-${name.charAt(0).toLowerCase()}${name.slice(1)}`;
+      const className = `y-${name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}`;
       this.props = { name, className };
     });
   }
@@ -27,7 +27,7 @@ module.exports = class extends Generator {
     const { name } = this.props;
 
     this.registerTransformStream(
-      rename(file => {
+      rename((file) => {
         // eslint-disable-next-line no-param-reassign
         file.basename = file.basename.replace('Component', name);
         return file;

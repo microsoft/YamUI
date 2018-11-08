@@ -2,10 +2,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Callout from '../Callout';
-import { KeyCodes } from '../../util/keyCodes';
-import CustomizableHovercard, { Hovercard } from './Hovercard';
-import { HovercardProps, HovercardState, TriggerType } from '.';
-import Customizer, { defaultTheme } from '../Customizer';
+import { KeyCodes } from '../../util/enums';
+import { Hovercard, HovercardProps, HovercardState, TriggerType } from '.';
 
 jest.useFakeTimers();
 
@@ -264,6 +262,39 @@ describe('<Hovercard />', () => {
     });
   });
 
+  describe('when asked to start visible', () => {
+    beforeEach(() => {
+      // Need to fully render to fire off componentDidMount
+      fullComponent = mount(
+        <Hovercard content={<div>Hovercard content</div>} startVisible={true}>
+          <span>Trigger</span>
+        </Hovercard>,
+      );
+    });
+
+    it('renders the Hovercard', () => {
+      expect(fullComponent.find(Callout).length).toBe(1);
+    });
+
+    describe('when a hover out triggers its close timeout', () => {
+      beforeEach(() => {
+        fullComponent.find('.y-hovercard--trigger').simulate('mouseLeave');
+      });
+
+      describe('and the component is unmounted before the timeout completes', () => {
+        beforeEach(() => {
+          jest.advanceTimersByTime(250);
+          fullComponent.unmount();
+        });
+
+        it('the timeout has been cleared without throwing an error', () => {
+          jest.advanceTimersByTime(500);
+          expect(fullComponent.find('.y-hovercard--trigger').length).toEqual(0);
+        });
+      });
+    });
+  });
+
   describe('callbacks', () => {
     let onHover: jest.Mock;
     let onShow: jest.Mock;
@@ -314,43 +345,6 @@ describe('<Hovercard />', () => {
           });
         });
       });
-
-      describe('when a hover out triggers its close timeout', () => {
-        beforeEach(() => {
-          component.find('.y-hovercard--trigger').simulate('mouseLeave');
-        });
-
-        describe('and the component is unmounted before the timeout completes', () => {
-          beforeEach(() => {
-            jest.advanceTimersByTime(250);
-            fullComponent.unmount();
-          });
-
-          it('the timeout has been cleared without throwing an error', () => {
-            jest.advanceTimersByTime(500);
-            expect(fullComponent.find('.y-hovercard--trigger').length).toEqual(0);
-          });
-        });
-      });
-    });
-  });
-
-  describe('with customizer', () => {
-    let mountedComponent: ReactWrapper;
-    const theme = defaultTheme;
-
-    beforeEach(() => {
-      mountedComponent = mount(
-        <Customizer settings={{ theme }}>
-          <CustomizableHovercard content={<div>Hovercard content</div>}>
-            <span>Trigger</span>
-          </CustomizableHovercard>
-        </Customizer>,
-      );
-    });
-
-    it('receives custom theme', () => {
-      expect(mountedComponent.find('CustomizableHovercard').prop('theme')).toBe(theme);
     });
   });
 });

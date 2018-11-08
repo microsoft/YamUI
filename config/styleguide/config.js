@@ -41,7 +41,7 @@ module.exports = {
   ignore: [
     '**/index.ts',
     '**/index.tsx',
-    '**/types.ts',
+    '**/enums.ts',
     '**/*.test.ts',
     '**/*.test.tsx',
     '**/*.spec.ts',
@@ -67,12 +67,5 @@ module.exports = {
   styleguideDir: path.resolve(root, 'build/docs'),
   styleguideComponents: {
     Wrapper: path.resolve(root, 'src/demos/ExampleWrapper'),
-  },
-  styles: {
-    Sections: {
-      root: {
-        fontSize: '1.5rem',
-      },
-    },
   },
 };

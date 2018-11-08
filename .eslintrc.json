@@ -1,13 +1,11 @@
 {
   "extends": "airbnb",
-  "env": { "browser": true },
   "plugins": ["react", "jsx-a11y", "import", "header"],
   "rules": {
     "global-require": "off",
     "import/no-extraneous-dependencies": "off",
     "max-len": [2, 120],
     "function-paren-newline": ["error", "consistent"],
-    "arrow-parens": ["error", "as-needed"],
     "header/header": [
       2,
       "block",

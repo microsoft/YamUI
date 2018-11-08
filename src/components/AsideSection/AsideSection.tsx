@@ -1,36 +1,45 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
+import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import Block from '../Block';
 import { FixedGridColumn, FixedGridRow, GutterSize } from '../FixedGrid';
 import Heading from '../Heading';
-import { AsideSectionProps } from './AsideSection.types';
 import Text, { TextSize } from '../Text';
-import { getClassNames } from './AsideSection.styles';
+import './AsideSection.css';
 
-export class AsideSection extends React.Component<AsideSectionProps & CustomizableComponentProps> {
+export interface AsideSectionProps extends NestableBaseComponentProps {
+  /**
+   * The visual title of the aside section
+   */
+  title: string;
+
+  /**
+   * An actionable react component to the right of the title
+   */
+  action?: React.ReactNode;
+}
+
+/**
+ * A section component to be used primarily for sidebar modules
+ */
+export default class AsideSection extends React.Component<AsideSectionProps> {
   public render() {
-    const { title, children, theme = defaultTheme } = this.props;
-    const classes = getClassNames({ theme });
-
     return (
       <div className="y-aside-section">
         <Block textSize={TextSize.SMALL}>
-          <FixedGridRow className={classes.header} bottomSpacing={GutterSize.SMALL}>
+          <FixedGridRow className="y-aside-section--header" bottomSpacing={GutterSize.SMALL}>
             <FixedGridColumn>
               <Heading level="2" size="none">
-                <Block bottomSpacing={GutterSize.XSMALL}>
-                  <Text uppercase={true} bold={true}>
-                    {title}
-                  </Text>
-                </Block>
+                <Text uppercase={true} bold={true}>
+                  {this.props.title}
+                </Text>
               </Heading>
             </FixedGridColumn>
             {this.getActionColumn()}
           </FixedGridRow>
         </Block>
-        <div>{children}</div>
+        <div>{this.props.children}</div>
       </div>
     );
   }
@@ -43,9 +52,3 @@ export class AsideSection extends React.Component<AsideSectionProps & Customizab
     return null;
   }
 }
-
-/**
- * A section component to be used primarily for sidebar modules
- */
-@customizable('AsideSection', ['theme'])
-export default class CustomizableAsideSection extends AsideSection {}

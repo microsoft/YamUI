@@ -2,33 +2,24 @@
 
 exports[`<HovercardHeader /> with additional className matches its snapshot 1`] = `
 <div
-  className=
-      y-hovercard--header
-      TEST_CLASSNAME
-      {
-        border-bottom: 2px solid #f3f5f8;
-      }
+  className="y-hovercard--header TEST_CLASSNAME"
 >
-  <CustomizedBlock
+  <Block
     padding="xLarge"
   >
     header content
-  </CustomizedBlock>
+  </Block>
 </div>
 `;
 
 exports[`<HovercardHeader /> with default options matches its snapshot 1`] = `
 <div
-  className=
-      y-hovercard--header
-      {
-        border-bottom: 2px solid #f3f5f8;
-      }
+  className="y-hovercard--header"
 >
-  <CustomizedBlock
+  <Block
     padding="xLarge"
   >
     header content
-  </CustomizedBlock>
+  </Block>
 </div>
 `;

@@ -43,93 +43,43 @@ Sizes:
 const { IconSize } = require('../index');
 const Attach = require('../icons/Attach').default;
 
-<LayoutList direction="horizontal">
-  <LayoutListItem>
-    <Attach size={IconSize.XXLARGE} block={true} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Attach size={IconSize.XLARGE} block={true} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Attach size={IconSize.LARGE} block={true} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Attach size={IconSize.MEDIUM} block={true} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Attach size={IconSize.SMALL} block={true} />
-  </LayoutListItem>
-  <LayoutListItem>
-    <Attach size={IconSize.XSMALL} block={true} />
-  </LayoutListItem>
-</LayoutList>
+<table style={{ textAlign: 'center' }}>
+  <thead>
+    <tr>
+      <th>XXL</th>
+      <th>XL</th>
+      <th>L</th>
+      <th>M</th>
+      <th>S</th>
+      <th>XS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <Attach size={IconSize.XXLARGE} />
+      </td>
+      <td>
+        <Attach size={IconSize.XLARGE} />
+      </td>
+      <td>
+        <Attach size={IconSize.LARGE} />
+      </td>
+      <td>
+        <Attach size={IconSize.MEDIUM} />
+      </td>
+      <td>
+        <Attach size={IconSize.SMALL} />
+      </td>
+      <td>
+        <Attach size={IconSize.XSMALL} />
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-Auto-sized to text in Text:
-
-```js { "props": { "data-description": "autosized to text in Text" } }
-const { GutterSize, TextSize } = require('../../Block');
-const Attach = require('../icons/Attach').default;
-const CheckMark = require('../icons/CheckMark').default;
-const Group = require('../icons/Group').default;
-const Add = require('../icons/Add').default;
-const Like = require('../icons/Like').default;
-
-const longText = (
-  <span>
-    <Attach /> The quick brown fox jumps over the lazy dog.
-    <CheckMark /> The quick brown fox jumps over the lazy dog.
-    <Group /> The quick brown fox jumps over the lazy dog.
-    <Add /> The quick brown fox jumps over the lazy dog.
-    <Like /> LIKE
-  </span>
-);
-
-<div>
-  <Block bottomSpacing={GutterSize.XLARGE}>
-    <Text>
-      If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Text` component with a valid textSize:
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.XXLARGE}>
-      XXLARGE. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.XLARGE}>
-      XLARGE. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.LARGE}>
-      LARGE. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.MEDIUM}>
-      MEDIUM. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.MEDIUM_SUB}>
-      MEDIUM_SUB. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.SMALL}>
-      SMALL. {longText}
-    </Text>
-  </Block>
-  <Block bottomSpacing={GutterSize.MEDIUM}>
-    <Text size={TextSize.XSMALL}>
-      XSMALL. {longText}
-    </Text>
-  </Block>
-</div>
-```
-
-Auto-sized to text in Block:
+Auto-sized to text:
 
 ```js { "props": { "data-description": "autosized to text" } }
 const { GutterSize, TextSize } = require('../../Block');
@@ -151,7 +101,7 @@ const longText = (
 
 <div>
   <Block bottomSpacing={GutterSize.XLARGE}>
-    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` component with a valid textSize:
+    If a `size` prop is not given, the icon will be auto-sized to match the closest parent `Block` or `Text` component with a valid textSize:
   </Block>
   <Block bottomSpacing={GutterSize.MEDIUM} textSize={TextSize.XXLARGE}>
     XXLARGE. {longText}
@@ -225,16 +175,14 @@ const { IconSize } = require('../index');
 const Add = require('../icons/Add').default;
 
 <div>
-  <Paragraph>
+  <p>
     This is a line of text with a <Add size={IconSize.MEDIUM} /> inline icon.
-  </Paragraph>
-  <Paragraph>
-    <span style={{ color: 'blue' }}>
-      This is a line of colored text with a <Add size={IconSize.MEDIUM} /> inline icon.
-    </span>
-  </Paragraph>
-  <Paragraph>
+  </p>
+  <p style={{ color: 'blue' }}>
+    This is a line of colored text with a <Add size={IconSize.MEDIUM} /> inline icon.
+  </p>
+  <p>
     This is a line of colored text with a <Add size={IconSize.MEDIUM} color="red" /> inline icon that overrides its color.
-  </Paragraph>
+  </p>
 </div>
 ```

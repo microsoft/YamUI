@@ -17,15 +17,6 @@ module.exports = {
           transpileOnly: true,
         },
       },
-      {
-        test: require.resolve('resize-observer-polyfill'),
-        use: [
-          {
-            loader: 'expose-loader',
-            options: 'ResizeObserver',
-          },
-        ],
-      },
     ],
   },
   resolve: {

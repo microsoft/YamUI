@@ -1,75 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActionLink /> with additional className matches its snapshot 1`] = `
-<CustomizedNavigationLink
+<NavigationLink
   ariaLabel="Download the file"
   block={true}
   className="y-actionLink TEST_CLASSNAME"
   href="https://yammer.com"
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
       fixed={true}
     >
-      <CustomizedBlock
-        push={2}
-      >
-        <Down
-          block={true}
-          size="16"
-        />
-      </CustomizedBlock>
+      <Down
+        block={true}
+        className="y-actionLink--icon"
+        size="16"
+      />
     </FixedGridColumn>
     <FixedGridColumn>
-      <CustomizedBlock
+      <Block
         textSize="mediumSub"
       >
         Download
-      </CustomizedBlock>
+      </Block>
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedNavigationLink>
-`;
-
-exports[`<ActionLink /> with compact set to true matches its snapshot 1`] = `
-<CustomizedNavigationLink
-  ariaLabel="Download the file"
-  block={true}
-  className="y-actionLink TEST_CLASSNAME"
-  href="https://yammer.com"
->
-  <FixedGridRow
-    gutterSize="xSmall"
-  >
-    <FixedGridColumn
-      fixed={true}
-    >
-      <CustomizedBlock
-        push={1}
-      >
-        <Down
-          block={true}
-          size="14"
-        />
-      </CustomizedBlock>
-    </FixedGridColumn>
-    <FixedGridColumn>
-      <CustomizedBlock
-        textSize="mediumSub"
-      >
-        <Strong>
-          Download
-        </Strong>
-      </CustomizedBlock>
-    </FixedGridColumn>
-  </FixedGridRow>
-</CustomizedNavigationLink>
+</NavigationLink>
 `;
 
 exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
-<CustomizedNavigationLink
+<NavigationLink
   ariaLabel="Download file"
   block={true}
   className="y-actionLink"
@@ -77,125 +40,117 @@ exports[`<ActionLink /> with href and ariaLabel matches its snapshot 1`] = `
   newWindow={true}
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
       fixed={true}
     >
-      <CustomizedBlock
-        push={2}
-      >
-        <Down
-          block={true}
-          size="16"
-        />
-      </CustomizedBlock>
+      <Down
+        block={true}
+        className="y-actionLink--icon"
+        size="16"
+      />
     </FixedGridColumn>
     <FixedGridColumn>
-      <CustomizedBlock
+      <Block
         textSize="mediumSub"
       >
         Download
-      </CustomizedBlock>
+      </Block>
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedNavigationLink>
+</NavigationLink>
 `;
 
 exports[`<ActionLink /> with href matches its snapshot 1`] = `
-<CustomizedNavigationLink
+<NavigationLink
   block={true}
   className="y-actionLink"
   href="https://yammer.com"
   newWindow={true}
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
       fixed={true}
     >
-      <CustomizedBlock
-        push={2}
-      >
-        <Down
-          block={true}
-          size="16"
-        />
-      </CustomizedBlock>
+      <Down
+        block={true}
+        className="y-actionLink--icon"
+        size="16"
+      />
     </FixedGridColumn>
     <FixedGridColumn>
-      <CustomizedBlock
+      <Block
         textSize="mediumSub"
       >
         Download
-      </CustomizedBlock>
+      </Block>
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedNavigationLink>
+</NavigationLink>
 `;
 
 exports[`<ActionLink /> with onClick and ariaLabel matches its snapshot 1`] = `
-<CustomizedClickable
+<Clickable
   ariaLabel="Download file"
   block={true}
   className="y-actionLink"
   onClick={[MockFunction]}
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
       fixed={true}
     >
-      <CustomizedBlock
-        push={2}
-      >
-        <Down
-          block={true}
-          size="16"
-        />
-      </CustomizedBlock>
+      <Down
+        block={true}
+        className="y-actionLink--icon"
+        size="16"
+      />
     </FixedGridColumn>
     <FixedGridColumn>
-      <CustomizedBlock
+      <Block
         textSize="mediumSub"
       >
         Download
-      </CustomizedBlock>
+      </Block>
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedClickable>
+</Clickable>
 `;
 
 exports[`<ActionLink /> with onClick matches its snapshot 1`] = `
-<CustomizedClickable
+<Clickable
   block={true}
   className="y-actionLink"
   onClick={[MockFunction]}
 >
   <FixedGridRow
+    className="y-actionLink--wrapper"
     gutterSize="small"
   >
     <FixedGridColumn
       fixed={true}
     >
-      <CustomizedBlock
-        push={2}
-      >
-        <Down
-          block={true}
-          size="16"
-        />
-      </CustomizedBlock>
+      <Down
+        block={true}
+        className="y-actionLink--icon"
+        size="16"
+      />
     </FixedGridColumn>
     <FixedGridColumn>
-      <CustomizedBlock
+      <Block
         textSize="mediumSub"
       >
         Download
-      </CustomizedBlock>
+      </Block>
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedClickable>
+</Clickable>
 `;

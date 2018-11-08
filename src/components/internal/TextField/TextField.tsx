@@ -49,7 +49,7 @@ export interface BaseTextFieldProps
   /**
    * The textfield input description
    */
-  description?: React.ReactNode;
+  description?: string | JSX.Element;
 
   /**
    * Use to indicate that a value must be provided to allow the containing form to be submitted.

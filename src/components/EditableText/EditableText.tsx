@@ -1,17 +1,61 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { CustomizableComponentProps, defaultTheme, customizable } from '../Customizer';
 import { join } from '../../util/classNames';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { Focusable } from '../../util/Focusable';
 import Clickable from '../Clickable';
 import EditIcon from '../Icon/icons/Edit';
 import TextField from '../TextField';
-import { KeyCodes } from '../../util/keyCodes';
-import { getClassNames } from './EditableText.styles';
-import { EditableTextProps, EditableTextState } from './EditableText.types';
+import { KeyCodes } from '../../util/enums';
+import './EditableText.css';
 
-export class EditableText extends React.Component<EditableTextProps & CustomizableComponentProps, EditableTextState> {
+export interface EditableTextProps extends BaseComponentProps {
+  /**
+   * Current text.
+   */
+  text?: string;
+
+  /**
+   * The text to display when text is empty.
+   */
+  promptText?: string;
+
+  /**
+   * The TextField placeHolder text.
+   */
+  placeHolder?: string;
+
+  /**
+   * An optional max length for the description field when editing.
+   */
+  maxLength?: number;
+
+  /**
+   * Returns the new text string when updated. Triggered by enter keypress or blur event to close the textfield.
+   */
+  onUpdate?: ((text: string) => void);
+
+  /**
+   * Triggered when the user enters edit mode.
+   */
+  onBeginEditing?: (() => void);
+
+  /**
+   * Triggered when the user exits edit mode.
+   */
+  onEndEditing?: (() => void);
+}
+
+export interface EditableTextState {
+  isEditing: boolean;
+  editedValue: string;
+}
+
+/**
+ * Displays text which can be edited on click.
+ */
+export default class EditableText extends React.Component<EditableTextProps, EditableTextState> {
   private textFieldFocusable: Focusable | null;
   private clickableFocusable: Focusable | null;
 
@@ -24,14 +68,14 @@ export class EditableText extends React.Component<EditableTextProps & Customizab
 
   public render() {
     const { editedValue, isEditing } = this.state;
-    const { text, promptText, placeHolder, maxLength, className, theme = defaultTheme } = this.props;
-    const classNames = getClassNames({ isEditing, theme });
-    const rootClassNames = join(['y-editableText', className, classNames.root]);
+    const { text, promptText, placeHolder, maxLength, className } = this.props;
+    const classes = join(['y-editableText', className]);
 
     if (isEditing) {
       return (
-        <div className={rootClassNames}>
+        <div className={classes}>
           <TextField
+            className="y-editableText--textfield"
             underlined={true}
             onChange={this.updateInternalEditedDescription}
             value={editedValue}
@@ -46,15 +90,16 @@ export class EditableText extends React.Component<EditableTextProps & Customizab
     }
 
     return (
-      <span className={rootClassNames}>
+      <span className={classes}>
         <Clickable
           onClick={this.handleEditClick}
           unstyled={true}
+          className="y-editableText--clickable"
           ariaLabel={promptText}
           focusableRef={this.setClickableFocusable}
         >
           <EditIcon />
-          <span className={classNames.clickableText}>{text || promptText}</span>
+          <span className="y-editableText--clickableText">{text || promptText}</span>
         </Clickable>
       </span>
     );
@@ -136,9 +181,3 @@ export class EditableText extends React.Component<EditableTextProps & Customizab
     }
   };
 }
-
-/**
- * Displays text which can be edited on click.
- */
-@customizable('EditableText', ['theme'])
-export default class CustomizableEditableText extends EditableText {}

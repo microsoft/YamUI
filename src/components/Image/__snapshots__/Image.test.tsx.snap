@@ -1,67 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Image /> with additional className matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      TEST_CLASSNAME
-      {
-        display: inline-block;
-      }
+  className="y-image TEST_CLASSNAME"
   shouldFadeIn={false}
   src="image.png"
 />
 `;
 
 exports[`<Image /> with block matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: block;
-      }
+  className="y-image y-image__block"
   shouldFadeIn={false}
   src="image.png"
 />
 `;
 
 exports[`<Image /> with border type matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        border-radius: 50%;
-        display: inline-block;
-      }
+  className="y-image y-image__border-round"
   shouldFadeIn={false}
   src="image.png"
 />
 `;
 
 exports[`<Image /> with default options matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: inline-block;
-      }
+  className="y-image"
   shouldFadeIn={false}
   src="image.png"
 />
 `;
 
 exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: block;
-      }
+  className="y-image y-image__fullWidth"
   height={50}
   shouldFadeIn={false}
   src="image.png"
@@ -70,13 +48,9 @@ exports[`<Image /> with fullWidth and height matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with fullWidth matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: block;
-      }
+  className="y-image y-image__fullWidth"
   shouldFadeIn={false}
   src="image.png"
   width="100%"
@@ -84,13 +58,9 @@ exports[`<Image /> with fullWidth matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: inline-block;
-      }
+  className="y-image"
   height={50}
   shouldFadeIn={false}
   src="image.png"
@@ -99,13 +69,9 @@ exports[`<Image /> with height 50 and width 100 matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: inline-block;
-      }
+  className="y-image"
   imageFit={2}
   shouldFadeIn={false}
   src="image.png"
@@ -113,13 +79,9 @@ exports[`<Image /> with imageFit cover matches its snapshot 1`] = `
 `;
 
 exports[`<Image /> with shouldFadeIn matches its snapshot 1`] = `
-<StyledImageBase
+<StyledCustomizedImage
   alt="description"
-  className=
-      y-image
-      {
-        display: inline-block;
-      }
+  className="y-image"
   shouldFadeIn={true}
   src="image.png"
 />

@@ -73,12 +73,12 @@ describe('<MenuButton />', () => {
     });
 
     it('passes an icon method to fabric that defaults to the More icon with size large', () => {
-      const onRenderIcon: (() => React.ReactNode) = component.find('CustomizedIconButton').prop('onRenderIcon');
+      const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
       expect(onRenderIcon()).toMatchSnapshot();
     });
 
     it('passes a menu icon method to fabric that returns null to replace the chevron down icon', () => {
-      const onRenderMenuIcon: (() => React.ReactNode) = component.find('CustomizedIconButton').prop('onRenderMenuIcon');
+      const onRenderMenuIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderMenuIcon');
       expect(onRenderMenuIcon()).toMatchSnapshot();
     });
 
@@ -108,7 +108,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with a default size of LARGE', () => {
-        const onRenderIcon: (() => React.ReactNode) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });
@@ -121,7 +121,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with the passed size', () => {
-        const onRenderIcon: (() => React.ReactNode) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });

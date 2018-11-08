@@ -2,17 +2,13 @@
 
 exports[`<MediaObject /> with additional className matches its snapshot 1`] = `
 <div
-  className="y-media-object TEST_CLASSNAME"
+  className="y-media-object y-media-object__size-medium TEST_CLASSNAME"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -23,17 +19,13 @@ exports[`<MediaObject /> with additional className matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with arbitrary children matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -50,15 +42,13 @@ exports[`<MediaObject /> with arbitrary children matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with extra content at extra large size matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-xLarge"
 >
   <FixedGridRow
     gutterSize="xLarge"
   >
     <FixedGridColumn
-      className=
-
-
+      className="y-media-object__size-xLarge--image"
       fixed={true}
       width={72}
     />
@@ -79,17 +69,13 @@ exports[`<MediaObject /> with extra content at extra large size matches its snap
 
 exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -100,15 +86,13 @@ exports[`<MediaObject /> with extra content matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with extra content with allowTextWrap matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-xLarge"
 >
   <FixedGridRow
     gutterSize="xLarge"
   >
     <FixedGridColumn
-      className=
-
-
+      className="y-media-object__size-xLarge--image"
       fixed={true}
       width={72}
     />
@@ -129,17 +113,13 @@ exports[`<MediaObject /> with extra content with allowTextWrap matches its snaps
 
 exports[`<MediaObject /> with image content matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     >
@@ -154,44 +134,15 @@ exports[`<MediaObject /> with image content matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<MediaObject /> with image content, size small matches its snapshot 1`] = `
-<div
-  className="y-media-object"
->
-  <FixedGridRow
-    gutterSize="medium"
-  >
-    <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.4rem;
-          }
-      fixed={true}
-      width={32}
-    >
-      <img
-        alt=""
-        role="presentation"
-        src="404.jpg"
-      />
-    </FixedGridColumn>
-    <FixedGridColumn />
-  </FixedGridRow>
-</div>
-`;
-
 exports[`<MediaObject /> with metadata content at extra small size matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-xSmall"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-
+      className="y-media-object__size-xSmall--image"
       fixed={true}
       width={24}
     />
@@ -202,17 +153,13 @@ exports[`<MediaObject /> with metadata content at extra small size matches its s
 
 exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -234,17 +181,13 @@ exports[`<MediaObject /> with metadata content matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with metadata content with allowTextWrap matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -266,17 +209,13 @@ exports[`<MediaObject /> with metadata content with allowTextWrap matches its sn
 
 exports[`<MediaObject /> with minimal options matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -287,17 +226,13 @@ exports[`<MediaObject /> with minimal options matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with title content matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />
@@ -319,17 +254,13 @@ exports[`<MediaObject /> with title content matches its snapshot 1`] = `
 
 exports[`<MediaObject /> with title content with allowTextWrap matches its snapshot 1`] = `
 <div
-  className="y-media-object"
+  className="y-media-object y-media-object__size-medium"
 >
   <FixedGridRow
     gutterSize="medium"
   >
     <FixedGridColumn
-      className=
-
-          {
-            padding-top: 0.2rem;
-          }
+      className="y-media-object__size-medium--image"
       fixed={true}
       width={40}
     />

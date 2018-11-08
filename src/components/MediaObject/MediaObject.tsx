@@ -1,14 +1,13 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import { join } from '../../util/classNames';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import { FixedGridRow, FixedGridColumn, GutterSize } from '../FixedGrid';
-import { MediaObjectSize } from './types';
+import { MediaObjectSize } from './enums';
 import MediaObjectTitle from './MediaObjectTitle';
 import MediaObjectMetadata from './MediaObjectMetadata';
 import MediaObjectExtra from './MediaObjectExtra';
-import { getClassNames } from './MediaObject.styles';
+import './MediaObject.css';
 
 export { MediaObjectSize };
 
@@ -67,32 +66,76 @@ export default class MediaObject extends React.Component<MediaObjectProps> {
   public render() {
     const { size, imageContent, titleContent, metadataContent, extraContent, children, allowTextWrap } = this.props;
 
+    const gutterSize = this.getGutterSize();
+    const imageColumnClass = `y-media-object__size-${size}--image`;
+
+    const titleContentChild = titleContent && (
+      <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>
+        {titleContent}
+      </MediaObjectTitle>
+    );
+    const metadataContentChild = this.showMetadata() && (
+      <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>
+        {metadataContent}
+      </MediaObjectMetadata>
+    );
+    const extraContentChild = this.showExtra() && (
+      <MediaObjectExtra ellipsis={!allowTextWrap}>{extraContent}</MediaObjectExtra>
+    );
+
     return (
-      <div className={join(['y-media-object', this.props.className])}>
-        <FixedGridRow gutterSize={size === MediaObjectSize.XLARGE ? GutterSize.XLARGE : GutterSize.MEDIUM}>
-          <FixedGridColumn width={ImageWidthMap[size]} fixed={true} className={getClassNames({ size }).imageColumn}>
+      <div className={this.getClasses()}>
+        <FixedGridRow gutterSize={gutterSize}>
+          <FixedGridColumn width={ImageWidthMap[size]} fixed={true} className={imageColumnClass}>
             {imageContent}
           </FixedGridColumn>
           <FixedGridColumn>
-            {titleContent && (
-              <MediaObjectTitle ellipsis={!allowTextWrap} size={size}>
-                {titleContent}
-              </MediaObjectTitle>
-            )}
-            {metadataContent &&
-              size !== MediaObjectSize.XSMALL && (
-                <MediaObjectMetadata ellipsis={!allowTextWrap} size={size}>
-                  {metadataContent}
-                </MediaObjectMetadata>
-              )}
-            {extraContent &&
-              size === MediaObjectSize.XLARGE && (
-                <MediaObjectExtra ellipsis={!allowTextWrap}>{extraContent}</MediaObjectExtra>
-              )}
+            {titleContentChild}
+            {metadataContentChild}
+            {extraContentChild}
             {children}
           </FixedGridColumn>
         </FixedGridRow>
       </div>
     );
+  }
+
+  private getClasses() {
+    const { className, size } = this.props;
+
+    const classes: string[] = ['y-media-object', `y-media-object__size-${size}`];
+    if (className) {
+      classes.push(className);
+    }
+
+    return classes.join(' ');
+  }
+
+  private getGutterSize() {
+    const { size } = this.props;
+
+    return size === MediaObjectSize.XLARGE ? GutterSize.XLARGE : GutterSize.MEDIUM;
+  }
+
+  private showMetadata() {
+    const { metadataContent, size } = this.props;
+
+    if (!metadataContent) {
+      return false;
+    }
+    if (size === MediaObjectSize.XSMALL) {
+      return false;
+    }
+    return true;
+  }
+
+  private showExtra() {
+    const { extraContent, size } = this.props;
+
+    if (!extraContent) {
+      return false;
+    }
+
+    return size === MediaObjectSize.XLARGE;
   }
 }

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MenuButtonItem /> when it is a header type matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item y-menu-button--item-header"
   textColor="primary"
   textSize="small"
@@ -15,11 +15,11 @@ exports[`<MenuButtonItem /> when it is a header type matches its snapshot 1`] = 
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<MenuButtonItem /> when it is disabled with an icon matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item"
   textColor="disabled"
   textSize="mediumSub"
@@ -42,11 +42,11 @@ exports[`<MenuButtonItem /> when it is disabled with an icon matches its snapsho
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<MenuButtonItem /> when it is disabled without an icon matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item"
   textColor="disabled"
   textSize="mediumSub"
@@ -60,11 +60,11 @@ exports[`<MenuButtonItem /> when it is disabled without an icon matches its snap
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item"
   textColor="secondary"
   textSize="mediumSub"
@@ -78,11 +78,11 @@ exports[`<MenuButtonItem /> with an href matches its snapshot 1`] = `
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item"
   textColor="secondary"
   textSize="mediumSub"
@@ -105,11 +105,11 @@ exports[`<MenuButtonItem /> with an icon passed matches its snapshot 1`] = `
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `
-<CustomizedBlock
+<Block
   className="y-menu-button--item"
   textColor="secondary"
   textSize="mediumSub"
@@ -123,5 +123,5 @@ exports[`<MenuButtonItem /> with default options matches its snapshot 1`] = `
       test
     </FixedGridColumn>
   </FixedGridRow>
-</CustomizedBlock>
+</Block>
 `;

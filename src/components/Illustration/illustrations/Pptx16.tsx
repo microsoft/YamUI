@@ -7,12 +7,12 @@ import BaseIllustration from '../BaseIllustration';
 
 export default class Pptx extends BaseIllustration {
   public render() {
-    const { size = 16 } = this.props;
-
     return (
       <svg
         viewBox="0 0 16 16"
-        className={this.getClassName(size)}
+        height="16"
+        width="16"
+        className={this.getClassName()}
         aria-hidden="true"
         tabIndex={-1}
         focusable="false"
