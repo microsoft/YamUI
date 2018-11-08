@@ -1,9 +1,10 @@
-```js { "props": { "data-action-states": "[{\"action\":\"hover\",\"selector\":\".y-clickable\",\"wait\":\"1000\"}]" } }
+```js
 
 <div style={{ height: '375px' }}>
   <Hovercard
     content={<UserHovercard user={user} />}
     directionalHint={4}
+    startVisible={true}
   >
     <Clickable>{user.name}</Clickable>
   </Hovercard>

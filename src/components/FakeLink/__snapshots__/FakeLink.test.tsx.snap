@@ -2,20 +2,7 @@
 
 exports[`<FakeLink /> with additional className matches its snapshot 1`] = `
 <span
-  className=
-      y-fakeLink
-      TEST_CLASSNAME
-      {
-        color: #386cbb;
-        text-decoration: none;
-      }
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-      }
+  className="y-fakeLink TEST_CLASSNAME"
 >
   test content
 </span>
@@ -23,19 +10,7 @@ exports[`<FakeLink /> with additional className matches its snapshot 1`] = `
 
 exports[`<FakeLink /> with default options matches its snapshot 1`] = `
 <span
-  className=
-      y-fakeLink
-      {
-        color: #386cbb;
-        text-decoration: none;
-      }
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-      &:active, &:focus, &:hover {
-        color: #264f8c;
-      }
+  className="y-fakeLink"
 >
   link content
 </span>

@@ -1,61 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VisibilityObserver /> with minimal options matches its snapshot 1`] = `
-<IntersectionObserver
+<Observer
   onChange={[Function]}
->
-  <div />
-</IntersectionObserver>
+  render={[Function]}
+  tag="div"
+  threshold={0}
+  triggerOnce={false}
+/>
 `;
 
-exports[`<VisibilityObserver /> with render, callback and rootMargin options enters view matches its snapshot 1`] = `
+exports[`<VisibilityObserver /> with minimal options renders empty content via its in-view render prop 1`] = `null`;
+
+exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options Observer callbacks when in view and scrolled back out of view the in-view render prop remains rendered 1`] = `
 <span>
   IN VIEW
 </span>
 `;
 
-exports[`<VisibilityObserver /> with render, callback and rootMargin options enters view then leaves view matches its snapshot 1`] = `
+exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options Observer rendering in view render matches its snapshot 1`] = `
 <span>
   IN VIEW
 </span>
 `;
 
-exports[`<VisibilityObserver /> with render, callback and rootMargin options leaves view matches its snapshot 1`] = `
+exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options Observer rendering out of view render matches its snapshot 1`] = `
 <span>
   OUT OF VIEW
 </span>
 `;
 
-exports[`<VisibilityObserver /> with render, callback and rootMargin options leaves view then re-enters view matches its snapshot 1`] = `
-<span>
-  IN VIEW
-</span>
-`;
-
-exports[`<VisibilityObserver /> with render, callback and rootMargin options matches its snapshot 1`] = `
-<IntersectionObserver
+exports[`<VisibilityObserver /> with render, callback, rootMargin and tag options matches its snapshot 1`] = `
+<Observer
   onChange={[Function]}
+  render={[Function]}
   rootMargin="100px"
->
-  <span>
-    OUT OF VIEW
-  </span>
-</IntersectionObserver>
+  tag="span"
+  threshold={0}
+  triggerOnce={false}
+/>
 `;
 
-exports[`<VisibilityObserver /> without callbacks enters view and scrolled out of view matches snapshot 1`] = `
+exports[`<VisibilityObserver /> without callbacks when out of view and scrolled into view and scrolled out of view persists its in-view content without blowing up 1`] = `
 <span>
   IN VIEW
 </span>
 `;
 
-exports[`<VisibilityObserver /> without callbacks enters view matches snapshot 1`] = `
+exports[`<VisibilityObserver /> without callbacks when out of view and scrolled into view renders without blowing up 1`] = `
 <span>
   IN VIEW
 </span>
 `;
 
-exports[`<VisibilityObserver /> without callbacks matches snapshot 1`] = `
+exports[`<VisibilityObserver /> without callbacks when out of view renders without blowing up 1`] = `
 <span>
   OUT OF VIEW
 </span>

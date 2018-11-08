@@ -2,139 +2,83 @@
 
 exports[`<Spinner /> when centered matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-light y-spinner__size-medium y-spinner__isCentered"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.8rem;
-          margin-right: 0;
-          margin-top: -1px;
-        }
+  <Text
+    className="y-spinner--label"
     color="primary"
     size="mediumSub"
   >
     Loading
-  </CustomizedText>
+  </Text>
+</div>
+`;
+
+exports[`<Spinner /> with a size matches its snapshot 1`] = `
+<div
+  className="y-spinner y-spinner__color-light y-spinner__size-xSmall"
+>
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={0}
+  />
+  <Text
+    className="y-spinner--label"
+    color="primary"
+    size="small"
+  >
+    Loading
+  </Text>
 </div>
 `;
 
 exports[`<Spinner /> with additional className matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-light y-spinner__size-medium TEST_CLASSNAME"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.8rem;
-          margin-right: 0;
-          margin-top: -1px;
-        }
+  <Text
+    className="y-spinner--label"
     color="primary"
     size="mediumSub"
   >
     Loading
-  </CustomizedText>
+  </Text>
 </div>
 `;
 
 exports[`<Spinner /> with dark color matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-dark y-spinner__size-medium"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(255, 255, 255, 0.3)",
-          "borderTopColor": "#ffffff",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.8rem;
-          margin-right: 0;
-          margin-top: -1px;
-        }
+  <Text
+    className="y-spinner--label"
     color="white"
     size="mediumSub"
   >
     Loading
-  </CustomizedText>
+  </Text>
 </div>
 `;
 
 exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
   <ScreenreaderText>
     Loading
@@ -142,156 +86,38 @@ exports[`<Spinner /> with invisible text matches its snapshot 1`] = `
 </div>
 `;
 
-exports[`<Spinner /> with large size matches its snapshot 1`] = `
-<div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        min-height: 2.0rem;
-      }
->
-  <StyledSpinnerBase
-    size={3}
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
-  />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0.4rem;
-        }
-    color="primary"
-    size="mediumSub"
-  >
-    Loading
-  </CustomizedText>
-</div>
-`;
-
 exports[`<Spinner /> with metadata color matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-metadata y-spinner__size-medium"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.8rem;
-          margin-right: 0;
-          margin-top: -1px;
-        }
+  <Text
+    className="y-spinner--label"
     color="metadata"
     size="mediumSub"
   >
     Loading
-  </CustomizedText>
+  </Text>
 </div>
 `;
 
 exports[`<Spinner /> with visible text matches its snapshot 1`] = `
 <div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 2.0rem;
-      }
+  className="y-spinner y-spinner__color-light y-spinner__size-medium"
 >
-  <StyledSpinnerBase
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
+  <StyledCustomizedSpinner
+    className="y-spinner--circle"
+    size={2}
   />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.8rem;
-          margin-right: 0;
-          margin-top: -1px;
-        }
+  <Text
+    className="y-spinner--label"
     color="primary"
     size="mediumSub"
   >
     Loading
-  </CustomizedText>
-</div>
-`;
-
-exports[`<Spinner /> with xSmall size matches its snapshot 1`] = `
-<div
-  className=
-      y-spinner
-      {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        min-height: 1.6rem;
-      }
->
-  <StyledSpinnerBase
-    size={0}
-    styles={
-      Object {
-        "circle": Object {
-          "border": "2px solid rgba(56, 108, 187, 0.3)",
-          "borderTopColor": "#386cbb",
-        },
-      }
-    }
-  />
-  <CustomizedText
-    className=
-
-        {
-          margin-bottom: 0;
-          margin-left: 0.6rem;
-          margin-right: 0;
-          margin-top: 0;
-        }
-    color="primary"
-    size="small"
-  >
-    Loading
-  </CustomizedText>
+  </Text>
 </div>
 `;

@@ -1,16 +1,160 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 @import 'src/css/variables/colors.css';
+@import 'src/css/variables/fonts.css';
+@import 'src/css/variables/links.css';
 
+html {
+  /* Sets 1.0rem to 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: $textColor;
+  @extend text__medium;
+  font-family: $fontStack;
+  font-weight: $fontWeight__normal;
+}
+
+/* Headings */
+h1 {
+  @extend heading__1;
+}
+h2 {
+  @extend heading__2;
+}
+h3 {
+  @extend heading__3;
+}
+h4 {
+  @extend heading__4;
+}
+h5 {
+  @extend heading__5;
+}
+h6 {
+  @extend heading__6;
+}
+
+/* Text elements */
+p {
+  margin: 0 0 1.5rem;
+  line-height: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol {
+  list-style-type: decimal;
+  margin: 0 1.5rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $textColor__secondary;
+}
+
+address {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 1.5rem;
+  color: $textColor__secondary;
+  font-style: italic;
+}
+
+caption {
+  background: $captionBackgroundColor;
+}
+
+b,
+strong {
+  font-weight: $fontWeight__bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  @extend text__small;
+}
+big {
+  @extend text__large;
+}
+
+dfn {
+  font-style: italic;
+  font-weight: $fontWeight__bold;
+}
+
+pre,
+code {
+  font-size: 1rem;
+  font-family: 'andale mono', 'monotype.com', 'lucida console', monospace;
+  margin: 1.5rem 0;
+  white-space: pre;
+  line-height: 1.5;
+}
+
+/* Tables, layout */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  @extend text__mediumSub;
+  padding: 6px 10px 6px 0;
+  vertical-align: top;
+}
+th {
+  padding-bottom: 2px;
+}
+th,
+table thead th {
+  font-weight: $fontWeight__bold;
+}
+
+hr {
+  clear: both;
+  margin: 15px auto;
+  width: 80%;
+  height: 0;
+  border-top: 1px solid $borderColor__secondary;
+}
+
+/* Forms */
+button,
+input,
+textarea,
+select {
+  font-family: $fontStack;
+}
+
+button {
+  border-radius: 0;
+}
+
+input[type='checkbox'] {
+  margin: 0 4px 0 0;
+}
+
+/* Links */
 a {
-  color: $linkColor;
-  text-decoration: none;
+  @mixin linkComplete;
 }
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-a:active,
-a:focus,
-a:hover {
-  color: $linkColor__active;
+
+/* Use @dark-gray for placeholder text for 4.5:1 contrast ratio. */
+/* Specify opacity to override semi-transparent placeholder text on firefox */
+input::placeholder,
+textarea::placeholder {
+  color: $textColor__metadata;
+  opacity: 1;
 }

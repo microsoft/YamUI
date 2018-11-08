@@ -1,49 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextArea /> with all options matches its snapshot 1`] = `
-<StyledTextFieldBase
+<TextField
   aria-required={true}
   ariaLabel="ARIA_LABEL"
   autoAdjustHeight={true}
+  borderless={false}
   className="y-textField y-textArea CLASS"
   componentRef={[Function]}
+  deferredValidationTime={200}
   description="true"
   disabled={true}
   errorMessage="ERROR MESSAGE"
   label="LABEL"
   multiline={true}
+  onBeforeChange={[Function]}
   onBlur={[MockFunction onBlur]}
   onChanged={[Function]}
   onFocus={[MockFunction onFocus]}
+  onGetErrorMessage={[Function]}
   onMouseEnter={[MockFunction onMouseEnter]}
   onMouseLeave={[MockFunction onMouseLeave]}
+  onNotifyValidationResult={[Function]}
   onRenderDescription={[Function]}
   placeholder="PLACEHOLDER"
   resizable={false}
   rows={2}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
   value="VALUE"
 />
 `;
 
 exports[`<TextArea /> with default options matches its snapshot 1`] = `
-<StyledTextFieldBase
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
   className="y-textField y-textArea"
   componentRef={[Function]}
+  deferredValidationTime={200}
+  errorMessage=""
   multiline={true}
+  onBeforeChange={[Function]}
   onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
   onRenderDescription={[Function]}
   resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
 />
 `;
 
 exports[`<TextArea /> with description and no error matches its snapshot 1`] = `
-<StyledTextFieldBase
+<TextField
+  autoAdjustHeight={false}
+  borderless={false}
   className="y-textField y-textArea"
   componentRef={[Function]}
+  deferredValidationTime={200}
   description="true"
+  errorMessage=""
   multiline={true}
+  onBeforeChange={[Function]}
   onChanged={[Function]}
+  onGetErrorMessage={[Function]}
+  onNotifyValidationResult={[Function]}
   onRenderDescription={[Function]}
   resizable={false}
+  underlined={false}
+  validateOnFocusIn={false}
+  validateOnFocusOut={false}
+  validateOnLoad={true}
 />
 `;

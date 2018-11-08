@@ -4,7 +4,7 @@ Basic example:
 
 ```js { "props": { "data-description": "basic" } }
 <div>
-  Here is a <FakeLink><Strong>FakeLink</Strong> component</FakeLink>. It styles text as if it were a <Strong>NavigationLink</Strong>. It does not accept any options.
+  Here is a <FakeLink><strong>FakeLink</strong> component</FakeLink>. It styles text as if it were a <strong>NavigationLink</strong>. It does not accept any options.
 </div>
 ```
 

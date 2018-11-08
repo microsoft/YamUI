@@ -1,30 +1,36 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import '../../yamui';
 import * as React from 'react';
-import Observer from '@researchgate/react-intersection-observer';
+import Observer from 'react-intersection-observer';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 
 export interface VisibilityObserverProps extends BaseComponentProps {
   /**
    * A callback which will be triggered when the component is scrolled into view.
    */
-  onEnterView?: ((entry?: IntersectionObserverEntry) => void);
+  onEnterView?: (() => void);
 
   /**
    * A callback which will be triggered when the component is scrolled out of view.
    */
-  onLeaveView?: ((entry?: IntersectionObserverEntry) => void);
+  onLeaveView?: (() => void);
 
   /**
    * Render prop to return child content when the component is visible in the viewport. Once the component
    * has been in view it will always use this render prop, even when scrolled back out of view.
    */
-  renderInView?: (() => React.ReactElement<HTMLElement>);
+  renderInView?: (() => React.ReactNode);
 
   /**
    * Render prop to return child content before the component becomes visible in the viewport.
    */
-  renderOutOfView?: (() => React.ReactElement<HTMLElement>);
+  renderOutOfView?: (() => React.ReactNode);
+
+  /**
+   * Wrapper element tag name.
+   * @default 'div'
+   */
+  tag?: string;
 
   /**
    * A CSS margin string which pushes the intersection boundary further in or out of the viewport.
@@ -42,7 +48,7 @@ export interface VisibilityObserverState {
 }
 
 /**
- * `VisibilityObserver` uses the `IntersectionObserver` API to allow conditional child rendering and callbacks based
+ * VisibilityObserver uses the IntersectionObserver API to allow conditional child rendering and callbacks based
  * on viewport visibility. It will render the `renderOutOfView` prop until it is scrolled into view, then will
  * always render the `renderInView` prop instead. Callbacks will always be triggered on visibility changes.
  */
@@ -55,24 +61,42 @@ export default class VisibilityObserver extends React.Component<VisibilityObserv
   }
 
   public render() {
-    const { rootMargin, renderInView = () => <div />, renderOutOfView = () => <div /> } = this.props;
+    const { rootMargin, tag } = this.props;
 
     return (
-      <Observer rootMargin={rootMargin} onChange={this.onVisibilityChange}>
-        {this.state.hasBeenInView ? renderInView() : renderOutOfView()}
-      </Observer>
+      <Observer
+        tag={tag || 'div'}
+        rootMargin={rootMargin}
+        onChange={this.onVisibilityChange}
+        render={this.getObserverChildren}
+      />
     );
   }
 
-  private onVisibilityChange = (entry: IntersectionObserverEntry) => {
-    if (entry.isIntersecting) {
+  private getObserverChildren = (isVisible: boolean) => {
+    const { renderInView, renderOutOfView } = this.props;
+    const shouldRenderAsInView = isVisible || this.state.hasBeenInView;
+
+    if (shouldRenderAsInView && renderInView) {
+      return renderInView();
+    }
+
+    if (!isVisible && renderOutOfView) {
+      return renderOutOfView();
+    }
+
+    return null;
+  };
+
+  private onVisibilityChange = (isVisible: boolean) => {
+    if (isVisible) {
       this.setState({ hasBeenInView: true });
       if (this.props.onEnterView) {
-        this.props.onEnterView(entry);
+        this.props.onEnterView();
       }
     } else {
       if (this.props.onLeaveView) {
-        this.props.onLeaveView(entry);
+        this.props.onLeaveView();
       }
     }
   };

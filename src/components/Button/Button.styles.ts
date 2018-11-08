@@ -1,79 +1,72 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
+import { palette } from '../../util/colors';
 import { IButtonStyles } from 'office-ui-fabric-react/lib/components/Button/Button.types';
-import { ButtonColor, ButtonSize, ButtonStatus, ButtonIconPosition } from './Button.types';
+import { ButtonColor, ButtonSize, ButtonStatus } from './types';
+import { ButtonProps } from './Button';
 import { fontWeights } from '../../util/styles/fonts';
-import { borders } from '../../util/styles/borders';
-import { mergeStyleSets, ITheme } from 'office-ui-fabric-react/lib/Styling';
-import { memoizeFunction } from 'office-ui-fabric-react/lib/Utilities';
+import { borderRadiusSoft } from '../../util/styles/borders';
 
-const primaryColors = (theme: ITheme): IButtonStyles => ({
+const smallPadding = '4px 9px 6px';
+const regularPadding = '7px 15px';
+
+const primaryColors: IButtonStyles = {
   root: {
-    color: theme.palette.white,
-    backgroundColor: theme.palette.themeDark,
-    borderColor: theme.palette.themeDark,
-    textDecoration: 'none',
+    color: palette.white,
+    backgroundColor: palette.themeDark,
+    borderColor: palette.themeDark,
   },
   rootHovered: {
-    color: theme.palette.white,
-    backgroundColor: theme.palette.themeDarkAlt,
-    borderColor: theme.palette.themeDarkAlt,
+    color: palette.white,
+    backgroundColor: palette.themeDarkAlt,
+    borderColor: palette.themeDarkAlt,
     textDecoration: 'none',
   },
   rootFocused: {
-    color: theme.palette.white,
-    backgroundColor: theme.palette.themeDarkAlt,
-    borderColor: theme.palette.themeDarkAlt,
+    color: palette.white,
+    backgroundColor: palette.themeDarkAlt,
+    borderColor: palette.themeDarkAlt,
   },
   rootPressed: {
-    color: theme.palette.white,
-    backgroundColor: theme.palette.themeDarker,
-    borderColor: theme.palette.themeDarker,
+    color: palette.white,
+    backgroundColor: palette.themeDarker,
+    borderColor: palette.themeDarker,
   },
-});
+};
 
-const secondaryColors = (theme: ITheme): IButtonStyles => ({
+const secondaryColors: IButtonStyles = {
   root: {
-    color: theme.palette.themeDark,
-    backgroundColor: theme.palette.white,
-    borderColor: theme.palette.neutralDark,
-    textDecoration: 'none',
+    color: palette.themeDark,
+    backgroundColor: palette.white,
+    borderColor: palette.neutralDark,
   },
   rootHovered: {
-    color: theme.palette.themeDark,
-    backgroundColor: theme.palette.white,
-    borderColor: theme.palette.themeLighter,
+    color: palette.themeDark,
+    backgroundColor: palette.white,
+    borderColor: palette.themeLighter,
     textDecoration: 'none',
   },
   rootFocused: {
-    color: theme.palette.themeDark,
-    backgroundColor: theme.palette.white,
-    borderColor: theme.palette.themeLighter,
+    color: palette.themeDark,
+    backgroundColor: palette.white,
+    borderColor: palette.themeLighter,
   },
   rootPressed: {
-    color: theme.palette.themeDark,
-    backgroundColor: theme.palette.white,
-    borderColor: theme.palette.themePrimary,
+    color: palette.themeDark,
+    backgroundColor: palette.white,
+    borderColor: palette.themePrimary,
   },
-});
+};
 
-export interface BaseButtonStyleProps {
-  theme: ITheme;
-  size: ButtonSize;
-  color: ButtonColor;
-  status: ButtonStatus;
-  fullWidth: boolean;
-}
+export const getStyles = (props: ButtonProps): IButtonStyles => {
+  const { size, color, status, fullWidth } = props;
 
-export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles => {
-  const { size, color, status, fullWidth, theme } = styleProps;
-
-  const colors = color === ButtonColor.PRIMARY ? primaryColors(theme) : secondaryColors(theme);
+  const colors = color === ButtonColor.PRIMARY ? primaryColors : secondaryColors;
   const { root, rootHovered, rootFocused, rootPressed } = colors;
 
   return {
     root: {
       ...(root as {}),
-      borderRadius: borders.soft,
+      borderRadius: borderRadiusSoft,
       fontWeight: fontWeights.bold,
       textAlign: 'center',
       display: fullWidth ? 'block' : 'inline-block',
@@ -83,7 +76,7 @@ export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles =
       borderWidth: '1px',
       borderStyle: 'solid',
       boxShadow: '0 1px 1px 0 rgba(0, 0, 0, 0.05)',
-      padding: size === ButtonSize.REGULAR ? '7px 15px' : '4px 9px 6px',
+      padding: size === ButtonSize.REGULAR ? regularPadding : smallPadding,
       cursor: status === ButtonStatus.ENABLED ? 'pointer' : 'default',
       opacity: status === ButtonStatus.DISABLED ? '0.5' : '1',
       width: fullWidth ? '100%' : undefined,
@@ -98,34 +91,4 @@ export const getBaseButtonStyles = memoizeFunction((styleProps): IButtonStyles =
       ...(rootPressed as {}),
     },
   };
-});
-
-export interface ButtonClassNameProps {
-  status: ButtonStatus;
-  iconPosition: ButtonIconPosition;
-}
-
-export const getClassNames = memoizeFunction((styleProps: ButtonClassNameProps) => {
-  const { status, iconPosition } = styleProps;
-
-  return mergeStyleSets({
-    content: {
-      visibility: status === ButtonStatus.LOADING ? 'hidden' : 'visible',
-    },
-    spinner: {
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-    },
-    iconWrapper: {
-      paddingLeft: iconPosition === ButtonIconPosition.RIGHT ? '4px' : 0,
-      paddingRight: iconPosition === ButtonIconPosition.LEFT ? '5px' : 0,
-    },
-    secondaryText: {
-      visibility: 'hidden',
-      overflow: 'hidden',
-      height: 0,
-    },
-  });
-});
+};

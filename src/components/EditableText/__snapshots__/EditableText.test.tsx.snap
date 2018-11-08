@@ -2,190 +2,88 @@
 
 exports[`<EditableText /> with additional className matches its snapshot 1`] = `
 <span
-  className=
-      y-editableText
-      TEST_CLASSNAME
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText TEST_CLASSNAME"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     />
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> with all props except promptText matches its snapshot 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     >
       TEXT
     </span>
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> with all props except promptText when clicked and text is changed and ENTER is pressed exits edit mode 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     >
       TEXT
     </span>
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> with all props except promptText when clicked and text is changed and ESC is pressed exits edit mode 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     >
       TEXT
     </span>
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> with all props except promptText when clicked and text is changed and an unimportant key is pressed remains in edit mode 1`] = `
 <div
-  className=
-      y-editableText
-
+  className="y-editableText"
 >
   <TextField
+    className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
@@ -200,11 +98,10 @@ exports[`<EditableText /> with all props except promptText when clicked and text
 
 exports[`<EditableText /> with all props except promptText when clicked enters edit mode 1`] = `
 <div
-  className=
-      y-editableText
-
+  className="y-editableText"
 >
   <TextField
+    className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
@@ -219,11 +116,10 @@ exports[`<EditableText /> with all props except promptText when clicked enters e
 
 exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode again remains in edit mode 1`] = `
 <div
-  className=
-      y-editableText
-
+  className="y-editableText"
 >
   <TextField
+    className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
@@ -238,11 +134,10 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 
 exports[`<EditableText /> with all props except promptText when clicked when triggered to enter edit mode without private textFieldRef remains in edit mode 1`] = `
 <div
-  className=
-      y-editableText
-
+  className="y-editableText"
 >
   <TextField
+    className="y-editableText--textfield"
     focusableRef={[Function]}
     maxLength={120}
     onBlur={[Function]}
@@ -257,132 +152,57 @@ exports[`<EditableText /> with all props except promptText when clicked when tri
 
 exports[`<EditableText /> with promptText matches its snapshot 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
     ariaLabel="PROMPT TEXT"
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     >
       PROMPT TEXT
     </span>
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> without props when clicked and text is changed and ENTER is pressed exits edit mode 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     />
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;
 
 exports[`<EditableText /> without props when clicked and text is changed and ESC is pressed exits edit mode 1`] = `
 <span
-  className=
-      y-editableText
-      {
-        color: #646d7a;
-      }
-      &:hover {
-        color: #495361;
-      }
-      &:active {
-        color: #495361;
-      }
-      &:focus {
-        color: #495361;
-      }
+  className="y-editableText"
 >
-  <CustomizedClickable
+  <Clickable
+    className="y-editableText--clickable"
     focusableRef={[Function]}
     onClick={[Function]}
     unstyled={true}
   >
     <Edit />
     <span
-      className=
-
-          {
-            padding-left: 0.2rem;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            text-decoration: underline;
-          }
-          &:focus {
-            text-decoration: underline;
-          }
+      className="y-editableText--clickableText"
     />
-  </CustomizedClickable>
+  </Clickable>
 </span>
 `;

@@ -1,10 +1,8 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import Text from '../Text';
-import CustomizableAvatar, { Avatar } from './Avatar';
-import { AvatarProps, AvatarSize, BorderType } from './Avatar.types';
-import Customizer, { defaultTheme } from '../Customizer';
+import Avatar, { AvatarProps, AvatarSize, BorderType } from '.';
 
 describe('<Avatar />', () => {
   let component: ShallowWrapper<AvatarProps>;
@@ -22,16 +20,6 @@ describe('<Avatar />', () => {
   describe('with too many characters', () => {
     beforeEach(() => {
       component = shallow(<Avatar name="First Last" />);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with imageShouldFadeIn', () => {
-    beforeEach(() => {
-      component = shallow(<Avatar name="NAME" imageShouldFadeIn={true} />);
     });
 
     it('matches its snapshot', () => {
@@ -100,23 +88,6 @@ describe('<Avatar />', () => {
       it('matches its snapshot', () => {
         expect(component).toMatchSnapshot();
       });
-    });
-  });
-
-  describe('with customizer', () => {
-    let mountedComponent: ReactWrapper;
-    const theme = defaultTheme;
-
-    beforeEach(() => {
-      mountedComponent = mount(
-        <Customizer settings={{ theme }}>
-          <CustomizableAvatar name="NAME" />
-        </Customizer>,
-      );
-    });
-
-    it('receives custom theme', () => {
-      expect(mountedComponent.find('CustomizableAvatar').prop('theme')).toBe(theme);
     });
   });
 });

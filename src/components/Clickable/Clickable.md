@@ -7,7 +7,7 @@ Clickable should be used in place of NavigationLink when you need click interact
 
 Inline:
 
-```js { "props": { "data-description": "inline", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "inline" } }
 <div>
   The following Clickable example looks like a link but is actually rendered as a button: <Clickable onClick={action('clickable clicked')}>Click me</Clickable>
 </div>
@@ -15,36 +15,36 @@ Inline:
 
 Unstyled:
 
-```js { "props": { "data-description": "unstyled", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "unstyled" } }
 <div>
-  The following Clickable example has <Strong>unstyled: true</Strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
+  The following Clickable example has <strong>unstyled: true</strong>: <Clickable onClick={action('clickable clicked')} unstyled={true}>Click me</Clickable>
 </div>
 ```
 
 Unstyled block with FakeLink:
 
-```js { "props": { "data-description": "unstyled block with fakelink", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "unstyled block with fakelink" } }
 <div>
   <Clickable onClick={action('clickable clicked')} unstyled={true} block={true}>
-    This entire area is a Clickable with <Strong>unstyled: true</Strong> and <Strong>block: true</Strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
+    This entire area is a Clickable with <strong>unstyled: true</strong> and <strong>block: true</strong>. Here is a nested <FakeLink>FakeLink component</FakeLink>, which looks like a link and shows link hoverstate when any part of the Clickable is hovered. This can work with <FakeLink>multiple nested FakeLinks</FakeLink>.
   </Clickable>
 </div>
 ```
 
 Wrapping block content:
 
-```js { "props": { "data-description": "wrapping block", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "wrapping block" } }
 
 <Clickable onClick={action('clickable clicked')} block={true}>
   <div>
-    This <Strong>Clickable</Strong> component wraps an entire block of text. By default all text content within a <Strong>Clickable</Strong> tag will be styled like a link.
+    This <strong>Clickable</strong> component wraps an entire block of text. By default all text content within a <strong>Clickable</strong> tag will be styled like a link.
   </div>
 </Clickable>
 ```
 
 Wrapping image:
 
-```js { "props": { "data-description": "wrapping image", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "wrapping image" } }
 const yammerLogo = 'logo.png';
 const yammerLogoDescription = 'Yammer "y" logo';
 

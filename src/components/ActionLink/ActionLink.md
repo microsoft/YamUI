@@ -1,9 +1,15 @@
+
+
+### Notes for use
+
+Add here any notes on how to use the component, or delete this section.
+
 ### Examples
 
 
 With onClick (button implementation):
 
-```js { "props": { "data-description": "with onClick", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"hover\",\"selector\":\".y-clickable\"}]" } }
+```js { "props": { "data-description": "with onClick" } }
 const Icon = require('../Icon/icons/Download').default;
 
 <div>
@@ -40,15 +46,5 @@ const text = 'SharePoint Document Library website';
 
 <div style={{ maxWidth: '200px' }}>
   <ActionLink text={text} icon={Icon} ariaLabel={text} href="https://www.yammer.com" newWindow={true} />
-</div>
-```
-
-Compact:
-
-```js { "props": { "data-description": "with compact" } }
-const Like = require('../Icon/icons/Like').default;
-
-<div>
-  <ActionLink text="Like" icon={Like} ariaLabel="Like this Post" compact={true} />
 </div>
 ```

@@ -1,7 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import { LayoutList, LayoutListItem, LayoutListProps, GutterSize } from '.';
+import { LayoutList, LayoutListProps, GutterSize } from '.';
 
 describe('<LayoutList />', () => {
   let component: ShallowWrapper<LayoutListProps>;
@@ -92,20 +92,6 @@ describe('<LayoutList />', () => {
     describe('with child content', () => {
       beforeEach(() => {
         component = shallow(<LayoutList direction="vertical">list content</LayoutList>);
-      });
-
-      it('matches its snapshot', () => {
-        expect(component).toMatchSnapshot();
-      });
-    });
-
-    describe('with LayoutListItem child content', () => {
-      beforeEach(() => {
-        component = shallow(
-          <LayoutList direction="vertical">
-            <LayoutListItem className="TEST_CLASSNAME" />
-          </LayoutList>,
-        );
       });
 
       it('matches its snapshot', () => {

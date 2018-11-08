@@ -2,73 +2,10 @@
 
 exports[`<Box /> with additional className matches its snapshot 1`] = `
 <div
-  className=
-      y-box
-      TEST_CLASSNAME
-      {
-        border-radius: 1px;
-        border: 1px solid #dde0e6;
-      }
+  className="y-box TEST_CLASSNAME"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          margin-bottom: -1px;
-          margin-left: -1px;
-          margin-right: -1px;
-          margin-top: -1px;
-          position: relative;
-        }
-    padding="small"
-  />
-</div>
-`;
-
-exports[`<Box /> with backgroundColor matches its snapshot 1`] = `
-<div
-  className=
-      y-box
-      {
-        background-color: #ffffff;
-        border-radius: 1px;
-        border: 1px solid #dde0e6;
-      }
->
-  <CustomizedBlock
-    className=
-
-        {
-          margin-bottom: -1px;
-          margin-left: -1px;
-          margin-right: -1px;
-          margin-top: -1px;
-          position: relative;
-        }
-    padding="small"
-  />
-</div>
-`;
-
-exports[`<Box /> with borderColor matches its snapshot 1`] = `
-<div
-  className=
-      y-box
-      {
-        border-radius: 1px;
-        border: 1px solid #000000;
-      }
->
-  <CustomizedBlock
-    className=
-
-        {
-          margin-bottom: -1px;
-          margin-left: -1px;
-          margin-right: -1px;
-          margin-top: -1px;
-          position: relative;
-        }
+  <Block
+    className="y-box--inner"
     padding="small"
   />
 </div>
@@ -76,49 +13,21 @@ exports[`<Box /> with borderColor matches its snapshot 1`] = `
 
 exports[`<Box /> with children passed matches its snapshot 1`] = `
 <div
-  className=
-      y-box
-      {
-        border-radius: 1px;
-        border: 1px solid #dde0e6;
-      }
+  className="y-box"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          margin-bottom: -1px;
-          margin-left: -1px;
-          margin-right: -1px;
-          margin-top: -1px;
-          position: relative;
-        }
+  <Block
+    className="y-box--inner"
     padding="small"
-  >
-    CHILDREN
-  </CustomizedBlock>
+  />
 </div>
 `;
 
 exports[`<Box /> with default options matches its snapshot 1`] = `
 <div
-  className=
-      y-box
-      {
-        border-radius: 1px;
-        border: 1px solid #dde0e6;
-      }
+  className="y-box"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          margin-bottom: -1px;
-          margin-left: -1px;
-          margin-right: -1px;
-          margin-top: -1px;
-          position: relative;
-        }
+  <Block
+    className="y-box--inner"
     padding="small"
   />
 </div>

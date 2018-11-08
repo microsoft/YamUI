@@ -18,7 +18,7 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then(props => {
       const { name } = props;
-      const className = `y-${name.charAt(0).toLowerCase()}${name.slice(1)}`;
+      const className = `y-${name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}`;
       this.props = { name, className };
     });
   }

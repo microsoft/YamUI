@@ -1,9 +1,7 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
-import CustomizableSpinner, { Spinner } from './Spinner';
-import { SpinnerProps, SpinnerColor, SpinnerSize } from './Spinner.types';
-import Customizer, { defaultTheme } from '../Customizer';
+import { shallow, ShallowWrapper } from 'enzyme';
+import Spinner, { SpinnerProps, SpinnerColor, SpinnerSize } from '.';
 
 describe('<Spinner />', () => {
   let component: ShallowWrapper<SpinnerProps>;
@@ -58,19 +56,9 @@ describe('<Spinner />', () => {
     });
   });
 
-  describe('with xSmall size', () => {
+  describe('with a size', () => {
     beforeEach(() => {
       component = shallow(<Spinner text="Loading" size={SpinnerSize.XSMALL} />);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with large size', () => {
-    beforeEach(() => {
-      component = shallow(<Spinner text="Loading" size={SpinnerSize.LARGE} />);
     });
 
     it('matches its snapshot', () => {
@@ -85,23 +73,6 @@ describe('<Spinner />', () => {
 
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with customizer', () => {
-    let mountedComponent: ReactWrapper;
-    const theme = defaultTheme;
-
-    beforeEach(() => {
-      mountedComponent = mount(
-        <Customizer settings={{ theme }}>
-          <CustomizableSpinner text="Loading" />
-        </Customizer>,
-      );
-    });
-
-    it('receives custom theme', () => {
-      expect(mountedComponent.find('CustomizableSpinner').prop('theme')).toBe(theme);
     });
   });
 });

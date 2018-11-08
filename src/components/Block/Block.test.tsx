@@ -1,16 +1,20 @@
 /*! Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. */
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
-import CustomizableBlock, { Block } from './Block';
-import { BlockProps, GutterSize, TextColor, TextSize } from '.';
-import Customizer, { defaultTheme } from '../Customizer';
+import { create as createRenderer, ReactTestRendererJSON } from 'react-test-renderer';
+import { renderIntoDocument, findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
+import Block, { GutterSize, TextColor, TextSize } from '.';
+import Clickable from '../Clickable';
+
+const render = (jsx: JSX.Element) => {
+  return createRenderer(jsx).toJSON();
+};
 
 describe('<Block />', () => {
-  let component: ShallowWrapper<BlockProps>;
+  let component: ReactTestRendererJSON | null;
 
   describe('with default options', () => {
     beforeEach(() => {
-      component = shallow(<Block>block content</Block>);
+      component = render(<Block>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -20,17 +24,7 @@ describe('<Block />', () => {
 
   describe('with additional className', () => {
     beforeEach(() => {
-      component = shallow(<Block className="TEST_CLASSNAME">block content</Block>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with divider', () => {
-    beforeEach(() => {
-      component = shallow(<Block divider={true}>block content</Block>);
+      component = render(<Block className="TEST_CLASSNAME">block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -40,7 +34,7 @@ describe('<Block />', () => {
 
   describe('with xLarge text size', () => {
     beforeEach(() => {
-      component = shallow(<Block textSize={TextSize.XLARGE}>block content</Block>);
+      component = render(<Block textSize={TextSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -50,17 +44,7 @@ describe('<Block />', () => {
 
   describe('with secondary textColor', () => {
     beforeEach(() => {
-      component = shallow(<Block textColor={TextColor.SECONDARY}>block content</Block>);
-    });
-
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
-    });
-  });
-
-  describe('with backgroundColor', () => {
-    beforeEach(() => {
-      component = shallow(<Block backgroundColor="themePrimary">block content</Block>);
+      component = render(<Block textColor={TextColor.SECONDARY}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -69,18 +53,30 @@ describe('<Block />', () => {
   });
 
   describe('with textAlign', () => {
-    beforeEach(() => {
-      component = shallow(<Block textAlign="right">block content</Block>);
+    describe('right', () => {
+      beforeEach(() => {
+        component = render(<Block textAlign="right">block content</Block>);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
 
-    it('matches its snapshot', () => {
-      expect(component).toMatchSnapshot();
+    describe('center', () => {
+      beforeEach(() => {
+        component = render(<Block textAlign="center">block content</Block>);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 
   describe('with ellipsis', () => {
     beforeEach(() => {
-      component = shallow(<Block ellipsis={true}>block content</Block>);
+      component = render(<Block ellipsis={true}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -90,7 +86,7 @@ describe('<Block />', () => {
 
   describe('with top spacing', () => {
     beforeEach(() => {
-      component = shallow(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
+      component = render(<Block topSpacing={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -100,7 +96,7 @@ describe('<Block />', () => {
 
   describe('with bottom spacing', () => {
     beforeEach(() => {
-      component = shallow(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
+      component = render(<Block bottomSpacing={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -110,7 +106,7 @@ describe('<Block />', () => {
 
   describe('with padding', () => {
     beforeEach(() => {
-      component = shallow(<Block padding={GutterSize.SMALL}>block content</Block>);
+      component = render(<Block padding={GutterSize.SMALL}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -120,7 +116,7 @@ describe('<Block />', () => {
 
   describe('with horizontal padding', () => {
     beforeEach(() => {
-      component = shallow(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
+      component = render(<Block horizontalPadding={GutterSize.MEDIUM}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -130,7 +126,7 @@ describe('<Block />', () => {
 
   describe('with vertical padding', () => {
     beforeEach(() => {
-      component = shallow(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
+      component = render(<Block verticalPadding={GutterSize.XLARGE}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -140,7 +136,7 @@ describe('<Block />', () => {
 
   describe('with positive push', () => {
     beforeEach(() => {
-      component = shallow(<Block push={3}>block content</Block>);
+      component = render(<Block push={3}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -150,7 +146,7 @@ describe('<Block />', () => {
 
   describe('with negative push', () => {
     beforeEach(() => {
-      component = shallow(<Block push={-2}>block content</Block>);
+      component = render(<Block push={-2}>block content</Block>);
     });
 
     it('matches its snapshot', () => {
@@ -158,20 +154,19 @@ describe('<Block />', () => {
     });
   });
 
-  describe('with customizer', () => {
-    let mountedComponent: ReactWrapper;
-    const theme = defaultTheme;
+  describe('within clickable', () => {
+    let rendered: Clickable;
 
     beforeEach(() => {
-      mountedComponent = mount(
-        <Customizer settings={{ theme }}>
-          <CustomizableBlock />
-        </Customizer>,
-      );
+      rendered = renderIntoDocument(
+        <Clickable>
+          <Block>block content</Block>
+        </Clickable>,
+      ) as Clickable;
     });
 
-    it('receives custom theme', () => {
-      expect(mountedComponent.find('CustomizableBlock').prop('theme')).toBe(theme);
+    it('matches its snapshot', () => {
+      expect(findRenderedDOMComponentWithClass(rendered, 'y-block')).toMatchSnapshot();
     });
   });
 });

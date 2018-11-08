@@ -7,14 +7,8 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
       y-textSize-mediumSub
       y-dropdown--item
       {
-        font-size: 13px;
-      }
-      & .y-icon {
-        height: 13px;
-        width: 13px;
-      }
-      & .y-text__ellipsis {
-        vertical-align: -0.5rem;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
       }
 >
   <div
@@ -29,32 +23,15 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
       gutterSize="small"
     >
       <div
-        className=
-            y-fixedGridRow
-            {
-              display: flex;
-            }
-            & > .y-fixedGridColumn {
-              margin-left: 0.8rem;
-            }
-            & > .y-fixedGridColumn:first-child {
-              margin-left: 0px;
-            }
+        className="y-fixedGridRow y-fixedGridRow__gutter-small"
       >
         <FixedGridColumn
           className="y-dropdown--option-icon"
           fixed={true}
         >
           <div
-            className=
-                y-fixedGridColumn
-                y-dropdown--option-icon
-                {
-                  flex-basis: auto;
-                  flex-grow: 0;
-                  flex-shrink: 1;
-                  min-width: auto;
-                }
+            className="y-fixedGridColumn y-fixedGridColumn__isFixed y-dropdown--option-icon"
+            style={Object {}}
           >
             <Add
               block={true}
@@ -62,16 +39,7 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
             >
               <svg
                 aria-hidden="true"
-                className=
-                    y-icon
-                    {
-                      display: block;
-                      fill: currentColor;
-                      pointer-events: none;
-                      position: relative;
-                      top: 0.2rem;
-                      vertical-align: 0;
-                    }
+                className="y-icon y-icon__isBlock"
                 focusable="false"
                 style={
                   Object {
@@ -94,15 +62,8 @@ exports[`<Dropdown /> option templates with icon matches its snapshot 1`] = `
           className="y-dropdown--ellipsed-title"
         >
           <div
-            className=
-                y-fixedGridColumn
-                y-dropdown--ellipsed-title
-                {
-                  flex-basis: 100%;
-                  flex-grow: 1;
-                  flex-shrink: 1;
-                  min-width: 0px;
-                }
+            className="y-fixedGridColumn y-dropdown--ellipsed-title"
+            style={Object {}}
           >
             <span>
               with icon
@@ -122,14 +83,8 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       y-textSize-mediumSub
       y-dropdown--item
       {
-        font-size: 13px;
-      }
-      & .y-icon {
-        height: 13px;
-        width: 13px;
-      }
-      & .y-text__ellipsis {
-        vertical-align: -0.5rem;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
       }
 >
   <div
@@ -144,322 +99,21 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
       className="y-dropdown--ellipsed-title"
     >
       <span>
-        <CustomizedText
+        <Text
           bold={true}
         >
-          <CustomizableText
-            bold={true}
-            theme={
-              Object {
-                "disableGlobalClassNames": false,
-                "fonts": Object {
-                  "large": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "17px",
-                    "fontWeight": 300,
-                  },
-                  "medium": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "14px",
-                    "fontWeight": 400,
-                  },
-                  "mediumPlus": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "15px",
-                    "fontWeight": 400,
-                  },
-                  "mega": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "72px",
-                    "fontWeight": 100,
-                  },
-                  "small": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "12px",
-                    "fontWeight": 400,
-                  },
-                  "smallPlus": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "13px",
-                    "fontWeight": 400,
-                  },
-                  "superLarge": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "42px",
-                    "fontWeight": 100,
-                  },
-                  "tiny": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "10px",
-                    "fontWeight": 600,
-                  },
-                  "xLarge": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "21px",
-                    "fontWeight": 100,
-                  },
-                  "xSmall": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "11px",
-                    "fontWeight": 400,
-                  },
-                  "xxLarge": Object {
-                    "MozOsxFontSmoothing": "grayscale",
-                    "WebkitFontSmoothing": "antialiased",
-                    "fontFamily": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "fontSize": "28px",
-                    "fontWeight": 100,
-                  },
-                },
-                "isInverted": false,
-                "palette": Object {
-                  "accent": "#0078d4",
-                  "black": "#000000",
-                  "blackTranslucent40": "rgba(0,0,0,.4)",
-                  "blue": "#0078d4",
-                  "blueDark": "#002050",
-                  "blueLight": "#00bcf2",
-                  "blueMid": "#00188f",
-                  "green": "#107c10",
-                  "greenDark": "#004b1c",
-                  "greenLight": "#bad80a",
-                  "magenta": "#b4009e",
-                  "magentaDark": "#5c005c",
-                  "magentaLight": "#e3008c",
-                  "neutralDark": "#212121",
-                  "neutralLight": "#eaeaea",
-                  "neutralLighter": "#f4f4f4",
-                  "neutralLighterAlt": "#f8f8f8",
-                  "neutralPrimary": "#333333",
-                  "neutralPrimaryAlt": "#3c3c3c",
-                  "neutralQuaternary": "#d0d0d0",
-                  "neutralQuaternaryAlt": "#dadada",
-                  "neutralSecondary": "#666666",
-                  "neutralSecondaryAlt": "#767676",
-                  "neutralTertiary": "#a6a6a6",
-                  "neutralTertiaryAlt": "#c8c8c8",
-                  "orange": "#d83b01",
-                  "orangeLight": "#ea4300",
-                  "orangeLighter": "#ff8c00",
-                  "purple": "#5c2d91",
-                  "purpleDark": "#32145a",
-                  "purpleLight": "#b4a0ff",
-                  "red": "#e81123",
-                  "redDark": "#a80000",
-                  "teal": "#008272",
-                  "tealDark": "#004b50",
-                  "tealLight": "#00b294",
-                  "themeDark": "#005a9e",
-                  "themeDarkAlt": "#106ebe",
-                  "themeDarker": "#004578",
-                  "themeLight": "#c7e0f4",
-                  "themeLighter": "#deecf9",
-                  "themeLighterAlt": "#eff6fc",
-                  "themePrimary": "#0078d4",
-                  "themeSecondary": "#2b88d8",
-                  "themeTertiary": "#71afe5",
-                  "white": "#ffffff",
-                  "whiteTranslucent40": "rgba(255,255,255,.4)",
-                  "yellow": "#ffb900",
-                  "yellowLight": "#fff100",
-                },
-                "semanticColors": Object {
-                  "actionLink": "#333333",
-                  "actionLinkHovered": "#212121",
-                  "blockingBackground": "rgba(234, 67, 0, .2)",
-                  "bodyBackground": "#ffffff",
-                  "bodyDivider": "#c8c8c8",
-                  "bodyFrameBackground": "#ffffff",
-                  "bodyFrameDivider": "#eaeaea",
-                  "bodyStandoutBackground": "#ffffff",
-                  "bodySubtext": "#666666",
-                  "bodyText": "#333333",
-                  "bodyTextChecked": "#000000",
-                  "buttonBackground": "#f4f4f4",
-                  "buttonBackgroundChecked": "#c8c8c8",
-                  "buttonBackgroundCheckedHovered": "#eaeaea",
-                  "buttonBackgroundHovered": "#eaeaea",
-                  "buttonBackgroundPressed": "#eaeaea",
-                  "buttonBorder": "transparent",
-                  "buttonBorderDisabled": "transparent",
-                  "buttonText": "#333333",
-                  "buttonTextChecked": "#212121",
-                  "buttonTextCheckedHovered": "#000000",
-                  "buttonTextDisabled": "#d0d0d0",
-                  "buttonTextHovered": "#000000",
-                  "buttonTextPressed": "#212121",
-                  "defaultStateBackground": "#eaeaea",
-                  "disabledBackground": "#f4f4f4",
-                  "disabledBodyText": "#c8c8c8",
-                  "disabledSubtext": "#d0d0d0",
-                  "disabledText": "#a6a6a6",
-                  "errorBackground": "rgba(232, 17, 35, .2)",
-                  "errorText": "#a80000",
-                  "focusBorder": "#000000",
-                  "inputBackground": "#ffffff",
-                  "inputBackgroundChecked": "#0078d4",
-                  "inputBackgroundCheckedHovered": "#106ebe",
-                  "inputBorder": "#a6a6a6",
-                  "inputBorderHovered": "#212121",
-                  "inputFocusBorderAlt": "#0078d4",
-                  "inputForegroundChecked": "#ffffff",
-                  "inputPlaceholderText": "#666666",
-                  "link": "#0078d4",
-                  "linkHovered": "#004578",
-                  "listBackground": "#ffffff",
-                  "listHeaderBackgroundHovered": "#f4f4f4",
-                  "listHeaderBackgroundPressed": "#eaeaea",
-                  "listItemBackgroundChecked": "#eaeaea",
-                  "listItemBackgroundCheckedHovered": "#dadada",
-                  "listItemBackgroundHovered": "#f4f4f4",
-                  "listText": "#333333",
-                  "listTextColor": "#333333",
-                  "menuHeader": "#0078d4",
-                  "menuIcon": "#0078d4",
-                  "menuItemBackgroundChecked": "#eaeaea",
-                  "menuItemBackgroundHovered": "#f4f4f4",
-                  "primaryButtonBackground": "#0078d4",
-                  "primaryButtonBackgroundHovered": "#106ebe",
-                  "primaryButtonBackgroundPressed": "#005a9e",
-                  "primaryButtonBorder": "transparent",
-                  "primaryButtonText": "#ffffff",
-                  "primaryButtonTextHovered": "#ffffff",
-                  "primaryButtonTextPressed": "#ffffff",
-                  "smallInputBorder": "#666666",
-                  "successBackground": "rgba(186, 216, 10, .2)",
-                  "variantBorder": "#eaeaea",
-                  "variantBorderHovered": "#a6a6a6",
-                  "warningBackground": "rgba(255, 185, 0, .2)",
-                  "warningHighlight": "#ffb900",
-                  "warningText": "#333333",
-                },
-                "typography": Object {
-                  "families": Object {
-                    "default": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                    "monospace": "Menlo, Monaco, \\"Courier New\\", monospace",
-                  },
-                  "sizes": Object {
-                    "large": "17px",
-                    "medium": "14px",
-                    "mediumPlus": "15px",
-                    "mega": "72px",
-                    "mini": "10px",
-                    "small": "12px",
-                    "smallPlus": "13px",
-                    "xLarge": "21px",
-                    "xSmall": "11px",
-                    "xxLarge": "28px",
-                  },
-                  "variants": Object {
-                    "caption": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "11px",
-                      "weight": 400,
-                    },
-                    "default": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "14px",
-                      "weight": 400,
-                    },
-                    "h1": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "72px",
-                      "weight": 100,
-                    },
-                    "h2": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "28px",
-                      "weight": 100,
-                    },
-                    "h3": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "21px",
-                      "weight": 100,
-                    },
-                    "h4": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "17px",
-                      "weight": 100,
-                    },
-                    "h5": Object {
-                      "color": undefined,
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": undefined,
-                      "size": "15px",
-                      "weight": 100,
-                    },
-                    "link": Object {
-                      "color": "#0078d4",
-                      "disabledColor": undefined,
-                      "family": "'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif",
-                      "hoverColor": "#004578",
-                      "size": "14px",
-                      "weight": 400,
-                    },
-                  },
-                  "weights": Object {
-                    "bold": 700,
-                    "default": 400,
-                    "light": 100,
-                    "regular": 400,
-                    "semibold": 600,
-                  },
-                },
-              }
-            }
+          <span
+            className=
+                y-text
+                {
+                  display: inline-block;
+                  font-weight: 600;
+                }
           >
-            <span
-              className=
-                  y-text
-                  {
-                    display: inline-block;
-                    font-weight: 600;
-                  }
-            >
-              label
-              :
-            </span>
-          </CustomizableText>
-        </CustomizedText>
+            label
+            :
+          </span>
+        </Text>
          
         with icon
       </span>
@@ -469,12 +123,12 @@ exports[`<Dropdown /> option templates with label matches its snapshot 1`] = `
 `;
 
 exports[`<Dropdown /> when onRenderTitle is called with an array of items renders as expected 1`] = `
-<CustomizedBlock
+<Block
   className="y-dropdown--item y-dropdown--header"
   textSize="small"
 >
   foo
-</CustomizedBlock>
+</Block>
 `;
 
 exports[`<Dropdown /> when onRenderTitle is called with an empty array renders as expected 1`] = `null`;
@@ -485,7 +139,7 @@ exports[`<Dropdown /> with additional className matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"
 >
-  <StyledWithResponsiveMode
+  <WithResponsiveMode
     calloutProps={
       Object {
         "directionalHintFixed": false,
@@ -507,7 +161,7 @@ exports[`<Dropdown /> with all props matches its snapshot 1`] = `
 <div
   className="y-dropdown TEST_CLASSNAME"
 >
-  <StyledWithResponsiveMode
+  <WithResponsiveMode
     ariaLabel="ARIA_LABEL"
     calloutProps={
       Object {
@@ -554,7 +208,7 @@ exports[`<Dropdown /> with default options matches its snapshot 1`] = `
 <div
   className="y-dropdown"
 >
-  <StyledWithResponsiveMode
+  <WithResponsiveMode
     calloutProps={
       Object {
         "directionalHintFixed": false,
@@ -582,17 +236,8 @@ exports[`<Dropdown /> with section header matches its snapshot 1`] = `
       y-dropdown--item
       y-dropdown--header
       {
-        font-size: 12px;
-      }
-      &.y-block .y-icon {
-        top: 0.1rem;
-      }
-      & .y-icon {
-        height: 12px;
-        width: 12px;
-      }
-      & .y-text__ellipsis {
-        vertical-align: -0.3rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
       }
 >
   <div
@@ -612,7 +257,7 @@ exports[`<Dropdown /> without onChanged handler when an option is selected does 
 <div
   className="y-dropdown"
 >
-  <StyledWithResponsiveMode
+  <WithResponsiveMode
     calloutProps={
       Object {
         "directionalHintFixed": false,

@@ -23,7 +23,6 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -48,26 +47,16 @@ exports[`<Button /> set as disabled matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -94,7 +83,6 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -119,37 +107,20 @@ exports[`<Button /> set as loading matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: hidden;
-        }
+  <Block
+    className="y-button--content__hidden"
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
   <span
-    className=
-
-        {
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+    className="y-button--spinner"
   >
-    <CustomizedSpinner
+    <Spinner
       color="light"
       hideText={true}
       isCentered={true}
@@ -182,7 +153,6 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -207,26 +177,16 @@ exports[`<Button /> with additional className matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -254,7 +214,6 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -279,26 +238,16 @@ exports[`<Button /> with aria label matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -325,7 +274,6 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -350,26 +298,16 @@ exports[`<Button /> with button type matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -396,7 +334,6 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -421,26 +358,16 @@ exports[`<Button /> with default options matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -467,7 +394,6 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": "100%",
@@ -492,26 +418,16 @@ exports[`<Button /> with fullWidth matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -538,7 +454,6 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -563,47 +478,27 @@ exports[`<Button /> with icon matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     <span
-      className=
-
-          {
-            padding-left: 0px;
-            padding-right: 5px;
-          }
+      className="y-button--icon-wrapper-left"
     >
       <Accounts />
     </span>
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     >
       <span
-        className=
-
-            {
-              padding-left: 0px;
-              padding-right: 5px;
-            }
+        className="y-button--icon-wrapper-left"
       >
         <Accounts />
       </span>
     </div>
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -630,7 +525,6 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -655,47 +549,27 @@ exports[`<Button /> with icon on the right matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <span
-      className=
-
-          {
-            padding-left: 4px;
-            padding-right: 0px;
-          }
+      className="y-button--icon-wrapper-right"
     >
       <Accounts />
     </span>
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     >
       <span
-        className=
-
-            {
-              padding-left: 4px;
-              padding-right: 0px;
-            }
+        className="y-button--icon-wrapper-right"
       >
         <Accounts />
       </span>
     </div>
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -723,7 +597,6 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -748,26 +621,16 @@ exports[`<Button /> with invalid href matches its snapshot 1`] = `
   }
   type=""
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -794,7 +657,6 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -819,26 +681,16 @@ exports[`<Button /> with primary color matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -865,7 +717,6 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -890,37 +741,20 @@ exports[`<Button /> with primary color set as loading matches its snapshot 1`] =
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: hidden;
-        }
+  <Block
+    className="y-button--content__hidden"
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
   <span
-    className=
-
-        {
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+    className="y-button--spinner"
   >
-    <CustomizedSpinner
+    <Spinner
       color="dark"
       hideText={true}
       isCentered={true}
@@ -953,7 +787,6 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -978,26 +811,16 @@ exports[`<Button /> with reset type matches its snapshot 1`] = `
   }
   type="reset"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -1024,7 +847,6 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
         "padding": "4px 9px 6px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -1049,26 +871,16 @@ exports[`<Button /> with small size matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="small"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -1095,7 +907,6 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
         "padding": "4px 9px 6px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -1120,37 +931,20 @@ exports[`<Button /> with small size set as loading matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: hidden;
-        }
+  <Block
+    className="y-button--content__hidden"
     textAlign="center"
     textSize="small"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
   <span
-    className=
-
-        {
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+    className="y-button--spinner"
   >
-    <CustomizedSpinner
+    <Spinner
       color="light"
       hideText={true}
       isCentered={true}
@@ -1183,7 +977,6 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
         "padding": "4px 9px 6px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -1208,47 +1001,27 @@ exports[`<Button /> with small size with icon matches its snapshot 1`] = `
   }
   type="button"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="small"
   >
     <span
-      className=
-
-          {
-            padding-left: 0px;
-            padding-right: 5px;
-          }
+      className="y-button--icon-wrapper-left"
     >
       <Accounts />
     </span>
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     >
       <span
-        className=
-
-            {
-              padding-left: 0px;
-              padding-right: 5px;
-            }
+        className="y-button--icon-wrapper-left"
       >
         <Accounts />
       </span>
     </div>
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -1275,7 +1048,6 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -1300,26 +1072,16 @@ exports[`<Button /> with submit type matches its snapshot 1`] = `
   }
   type="submit"
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;
 
@@ -1347,7 +1109,6 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
         "padding": "7px 15px",
         "position": "relative",
         "textAlign": "center",
-        "textDecoration": "none",
         "transition": "all 0.05s ease-out",
         "whiteSpace": "nowrap",
         "width": undefined,
@@ -1372,25 +1133,15 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   }
   type=""
 >
-  <CustomizedBlock
-    className=
-
-        {
-          visibility: visible;
-        }
+  <Block
+    className=""
     textAlign="center"
     textSize="mediumSub"
   >
     Click Me
     <div
-      className=
-
-          {
-            height: 0px;
-            overflow: hidden;
-            visibility: hidden;
-          }
+      className="y-button--secondary-text"
     />
-  </CustomizedBlock>
+  </Block>
 </BaseButton>
 `;

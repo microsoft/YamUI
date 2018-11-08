@@ -6,13 +6,13 @@ Context menu should be used as a menu button where you want to provide options t
 
 MenuButton with default Icon, and all applicable children properties
 
-```js { "props": { "data-description": "with default icon and all menu item types", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "with default icon and all menu item types" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const types = require('./types.ts');
 
-<div style={{paddingBottom: '210px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     menuItems={[{
@@ -55,13 +55,13 @@ const types = require('./types.ts');
 
 MenuButton with multiple headers in children
 
-```js { "props": { "data-description": "multiple headers", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"keyPress\",\"key\":\"ArrowDown\"}]" } }
+```js { "props": { "data-description": "multiple headers" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const types = require('./types.ts');
 
-<div style={{paddingBottom: '270px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     menuItems={[{
@@ -104,7 +104,7 @@ const types = require('./types.ts');
 
 MenuButton with custom icon and dividers
 
-```js { "props": { "data-description": "with custom icon and dividers", "data-action-states": "[{\"action\":\"click\",\"selector\":\".y-menu-button\"},{\"action\":\"hover\",\"selector\":\".y-menu-button--item-text\"}]" } }
+```js { "props": { "data-description": "with custom icon and dividers" } }
 const Home = require('../Icon/icons/Home').default;
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
@@ -112,7 +112,7 @@ const Share = require('../Icon/icons/Share').default;
 const View = require('../Icon/icons/View').default;
 const types = require('./types.ts');
 
-<div style={{paddingBottom: '170px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     icon={Home}
@@ -145,13 +145,13 @@ const types = require('./types.ts');
 
 MenuButton with iconSize specified
 
-```js { "props": { "data-description": "custom icon size", "data-action-states": "[{\"action\":\"none\"},{\"action\":\"click\",\"selector\":\".y-menu-button\"}]" } }
+```js { "props": { "data-description": "custom icon size" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
 const { IconSize } = require('../Icon');
 
-<div style={{paddingBottom: '110px'}}>
+<div>
   <MenuButton
     ariaLabel="aria"
     iconSize={IconSize.XSMALL}

@@ -2,18 +2,7 @@
 
 exports[`<FixedGridRow /> with additional className matches its snapshot 1`] = `
 <div
-  className=
-      y-fixedGridRow
-      TEST_CLASSNAME
-      {
-        display: flex;
-      }
-      & > .y-fixedGridColumn {
-        margin-left: 0.8rem;
-      }
-      & > .y-fixedGridColumn:first-child {
-        margin-left: 0px;
-      }
+  className="y-fixedGridRow y-fixedGridRow__gutter-small TEST_CLASSNAME"
 >
   grid content
 </div>
@@ -21,18 +10,7 @@ exports[`<FixedGridRow /> with additional className matches its snapshot 1`] = `
 
 exports[`<FixedGridRow /> with bottom spacing matches its snapshot 1`] = `
 <div
-  className=
-      y-fixedGridRow
-      {
-        display: flex;
-        margin-bottom: 2.0rem;
-      }
-      & > .y-fixedGridColumn {
-        margin-left: 0.8rem;
-      }
-      & > .y-fixedGridColumn:first-child {
-        margin-left: 0px;
-      }
+  className="y-fixedGridRow y-fixedGridRow__gutter-small y-fixedGridRow__bottomSpacing-xLarge"
 >
   grid content
 </div>
@@ -40,17 +18,7 @@ exports[`<FixedGridRow /> with bottom spacing matches its snapshot 1`] = `
 
 exports[`<FixedGridRow /> with default options matches its snapshot 1`] = `
 <div
-  className=
-      y-fixedGridRow
-      {
-        display: flex;
-      }
-      & > .y-fixedGridColumn {
-        margin-left: 0.8rem;
-      }
-      & > .y-fixedGridColumn:first-child {
-        margin-left: 0px;
-      }
+  className="y-fixedGridRow y-fixedGridRow__gutter-small"
 >
   grid content
 </div>
@@ -58,17 +26,7 @@ exports[`<FixedGridRow /> with default options matches its snapshot 1`] = `
 
 exports[`<FixedGridRow /> with gutter size matches its snapshot 1`] = `
 <div
-  className=
-      y-fixedGridRow
-      {
-        display: flex;
-      }
-      & > .y-fixedGridColumn {
-        margin-left: 1.6rem;
-      }
-      & > .y-fixedGridColumn:first-child {
-        margin-left: 0px;
-      }
+  className="y-fixedGridRow y-fixedGridRow__gutter-large"
 >
   grid content
 </div>

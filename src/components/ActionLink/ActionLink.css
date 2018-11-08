@@ -1,0 +1,11 @@
+.y-actionLink--wrapper {
+  padding: 0.2rem 0 0.6rem;
+}
+
+.y-actionLink--icon {
+  margin-top: 0.4rem;
+
+  /* Remove when this is addressed: https://github.com/Microsoft/YamUI/issues/327 */
+  position: static;
+  top: 0;
+}
