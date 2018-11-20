@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<NavigationLink /> when focusableRef is passed matches its snapshot 1`] = `
+<a
+  class="y-navigationLink"
+  href="test.html"
+>
+  test content
+</a>
+`;
+
 exports[`<NavigationLink /> when newWindow is true matches its snapshot 1`] = `
 <a
   className="y-navigationLink"

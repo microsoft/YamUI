@@ -2,10 +2,10 @@
 import '../../yamui';
 import * as React from 'react';
 import { join } from '../../util/classNames';
-import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
+import { NestableBaseComponentProps, FocusableComponentProps } from '../../util/BaseComponent/props';
 import './NavigationLink.css';
 
-export interface NavigationLinkProps extends NestableBaseComponentProps {
+export interface NavigationLinkProps extends NestableBaseComponentProps, FocusableComponentProps {
   /**
    * Whether the clickable should be `display: block`.
    */
@@ -48,6 +48,15 @@ export interface NavigationLinkProps extends NestableBaseComponentProps {
  * A `NavigationLink` renders an `a` tag for navigation between web pages.
  */
 export default class NavigationLink extends React.Component<NavigationLinkProps> {
+  private anchorRef = React.createRef<HTMLAnchorElement>();
+
+  public constructor(props: NavigationLinkProps) {
+    super(props);
+    if (this.props.focusableRef) {
+      this.props.focusableRef(this);
+    }
+  }
+
   public render() {
     const { ariaCurrent, ariaLabel, href, newWindow, title, children } = this.props;
     const target = newWindow ? '_blank' : undefined;
@@ -62,10 +71,18 @@ export default class NavigationLink extends React.Component<NavigationLinkProps>
         title={title}
         aria-label={ariaLabel}
         aria-current={ariaCurrent}
+        ref={this.anchorRef}
       >
         {children}
       </a>
     );
+  }
+
+  public focus() {
+    const anchor = this.anchorRef.current;
+    if (anchor) {
+      anchor.focus();
+    }
   }
 
   private getClasses() {
