@@ -68,6 +68,40 @@ exports[`<SuggestionsListItem /> when isSelected=true renders as expected 1`] = 
 </div>
 `;
 
+exports[`<SuggestionsListItem /> when searchText has a "(" renders as expected 1`] = `
+<div
+  className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"
+  onMouseDown={[Function]}
+  role="button"
+>
+  <MediaObject
+    imageContent={
+      <Avatar
+        borderType="round"
+        imageShouldFadeIn={false}
+        imageUrl="imageUrl"
+        name="Jo(hn)"
+        size="small"
+      />
+    }
+    metadataContent="Software Engineer"
+    size="small"
+    titleContent={
+      Array [
+        <span
+          className="y-suggestions-list-item--match-highlight"
+        >
+          Jo(
+        </span>,
+        <span>
+          hn)
+        </span>,
+      ]
+    }
+  />
+</div>
+`;
+
 exports[`<SuggestionsListItem /> with avatarProps renders as expected 1`] = `
 <div
   className="y-suggestions-list-item y-hc-select-on-hover y-hc-suppress-text-background"

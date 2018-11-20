@@ -47,6 +47,16 @@ describe('<SuggestionsListItem />', () => {
     });
   });
 
+  describe('when searchText has a "("', () => {
+    beforeEach(() => {
+      rendered = shallow(<SuggestionsListItem {...getProps({ name: 'Jo(hn)', searchText: 'Jo(' })} />);
+    });
+
+    it('renders as expected', () => {
+      expect(rendered).toMatchSnapshot();
+    });
+  });
+
   describe('with avatarProps', () => {
     beforeEach(() => {
       const avatarProps = { borderType: BorderType.SOFT };
