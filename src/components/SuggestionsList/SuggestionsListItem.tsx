@@ -4,6 +4,7 @@ import * as React from 'react';
 import { NestableBaseComponentProps } from '../../util/BaseComponent/props';
 import MediaObject, { MediaObjectSize } from '../MediaObject';
 import Avatar, { AvatarProps, AvatarSize } from '../Avatar';
+import * as escapeStringRegexp from 'escape-string-regexp';
 
 import './SuggestionsListItem.css';
 
@@ -29,7 +30,7 @@ const matchHighlightClass = 'y-suggestions-list-item--match-highlight';
 
 const getHighlightedName = (name: string, search: string) => {
   return name
-    .split(new RegExp(`(${search})`, 'gi'))
+    .split(new RegExp(`(${escapeStringRegexp(search)})`, 'gi'))
     .filter(content => !!content)
     .map((content, index) => {
       const className = search.toLowerCase() === content.toLowerCase() ? matchHighlightClass : undefined;
