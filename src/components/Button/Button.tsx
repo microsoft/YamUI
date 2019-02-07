@@ -123,6 +123,11 @@ export interface LinkButtonProps extends BaseButtonProps {
   href: string;
 
   /**
+   * Whether the link should open in a new window. It securely removes access to the opening window.
+   */
+  newWindow?: boolean;
+
+  /**
    * Links cannot be disabled nor loading.
    */
   status?: void;
@@ -167,6 +172,8 @@ export default class Button extends React.Component<ButtonProps> {
     const { ariaLabel, type, onClick, onFocus, onBlur, onMouseEnter, onMouseLeave, className } = this.props;
 
     const href = (this.props as LinkButtonProps).href;
+    const newWindow = (this.props as LinkButtonProps).newWindow;
+    const target = newWindow ? '_blank' : undefined;
     const status = (this.props as RegularButtonProps).status;
     const isDisabled = status === ButtonStatus.DISABLED || status === ButtonStatus.LOADING;
 
@@ -176,6 +183,7 @@ export default class Button extends React.Component<ButtonProps> {
         className={`y-button ${className ? className : ''}`}
         disabled={isDisabled}
         href={href}
+        target={target}
         type={href ? '' : type}
         onBlur={onBlur}
         onClick={onClick}

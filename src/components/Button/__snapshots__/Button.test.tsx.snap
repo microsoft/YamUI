@@ -1145,3 +1145,65 @@ exports[`<Button /> with valid href matches its snapshot 1`] = `
   </Block>
 </BaseButton>
 `;
+
+exports[`<Button /> with valid href with newWindow matches its snapshot 1`] = `
+<BaseButton
+  baseClassName="ms-Button"
+  className="y-button "
+  disabled={false}
+  href="https://www.yammer.com"
+  split={false}
+  styles={
+    Object {
+      "root": Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#dde0e6",
+        "borderRadius": "2px",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "boxShadow": "0 1px 1px 0 rgba(0, 0, 0, 0.05)",
+        "color": "#386cbb",
+        "cursor": "pointer",
+        "display": "inline-block",
+        "fontWeight": "600",
+        "opacity": "1",
+        "padding": "7px 15px",
+        "position": "relative",
+        "textAlign": "center",
+        "transition": "all 0.05s ease-out",
+        "whiteSpace": "nowrap",
+        "width": undefined,
+      },
+      "rootFocused": Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+      },
+      "rootHovered": Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#9ac3ff",
+        "color": "#386cbb",
+        "textDecoration": "none",
+      },
+      "rootPressed": Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#6c98d9",
+        "color": "#386cbb",
+      },
+    }
+  }
+  target="_blank"
+  type=""
+>
+  <Block
+    className=""
+    textAlign="center"
+    textSize="mediumSub"
+  >
+    Click Me
+    <div
+      className="y-button--secondary-text"
+    />
+  </Block>
+</BaseButton>
+`;
