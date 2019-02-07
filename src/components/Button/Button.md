@@ -533,6 +533,12 @@ Link button:
 <Button text="I am a link" href="https://www.yammer.com" />
 ```
 
+Link button with newWindow:
+
+```js { "props": { "data-description": "link with newWindow" } }
+<Button text="I am a link that opens in a new window" href="https://www.yammer.com" newWindow={true} />
+```
+
 Submit button:
 
 ```js { "props": { "data-description": "submit button" } }

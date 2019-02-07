@@ -178,6 +178,16 @@ describe('<Button />', () => {
     it('matches its snapshot', () => {
       expect(component).toMatchSnapshot();
     });
+
+    describe('with newWindow', () => {
+      beforeEach(() => {
+        component = shallow(<Button text={sampleText} href="https://www.yammer.com" newWindow={true} />);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
   });
 
   describe('with invalid href', () => {
