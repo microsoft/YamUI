@@ -67,7 +67,7 @@ export interface MenuButtonItem {
   icon?: typeof BaseIcon;
 
   /**
-   * YamUI Icon to display in the item content. Default is no icon.
+   * YamUI Illustration to display in the item content. Default is no illustration.
    */
   illustration?: typeof BaseIllustration;
 }
