@@ -13,28 +13,83 @@ import { BaseIllustration } from '../Illustration';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuTextButtonItem';
 import { MenuItemType } from '../MenuButton/types';
+import { BaseComponentProps } from '../../util/BaseComponent/props';
 
 export { MenuItemType };
 
 const renderEmptyIcon = () => null;
 
 export interface MenuTextButtonItem {
+  /**
+   * Unique key for this item.
+   */
   key: string;
+
+  /**
+   * Text to display in the menu item.
+   */
   text: string;
+
+  /**
+   * Type of menu item:
+   *  Normal: Regular item
+   *  Header: Header item
+   *  Divider: Line divider item
+   */
   type?: MenuItemType;
+
+  /**
+   * If item is disabled
+   */
   isDisabled?: boolean;
-  onClick?: any;
+
+  /**
+   * On click method for this item.
+   */
+  onClick?: ((ev?: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void);
+
+  /**
+   * Href for a link. This will turn the item into a hyperlink that looks like a regular item.
+   */
   href?: string;
+
+  /**
+   * Whether the link should open in a new window. This will do nothing if href isn't passed.
+   */
   newWindow?: boolean;
+
+  /**
+   * YamUI Illustration to display in the item content. Default is no illustration.
+   */
   icon?: typeof BaseIllustration;
 }
 
-export interface MenuTextButtonProps {
+export interface MenuTextButtonProps extends BaseComponentProps {
+  /**
+   * Aria label for the MenuButton.
+   */
   ariaLabel: string;
-  className?: string;
+
+  /**
+   * Menu items to show in the menu.
+   */
   menuItems: MenuTextButtonItem[];
+
+  /**
+   * YamUI Icon to display as the click target. Default is the 'More' icon.
+   * @default MoreIcon
+   */
   icon?: typeof BaseIcon;
+
+  /**
+   * Size of the icon
+   * @default IconSize.MEDIUM
+   */
   iconSize?: IconSize;
+
+  /**
+   * Text to display in the menu button.
+   */
   text?: string;
 }
 
