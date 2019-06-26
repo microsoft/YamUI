@@ -26,11 +26,22 @@ const getIconClasses = (isDisabled: boolean) => {
 
 const getIconColumn = (data: any, disabled: boolean) => {
   const Icon = data && data.yamUIIcon;
-  return Icon ? (
-    <FixedGridColumn fixed={true} className={getIconClasses(disabled)}>
-      <Icon size={IconSize.MEDIUM} block={true} />
-    </FixedGridColumn>
-  ) : null;
+  const Illustration = data && data.yamUIIllustration;
+  if (Icon) {
+    return (
+      <FixedGridColumn fixed={true} className={getIconClasses(disabled)}>
+        <Icon size={IconSize.MEDIUM} block={true} />
+      </FixedGridColumn>
+    );
+  } else if (Illustration) {
+    return (
+      <FixedGridColumn fixed={true} className={getIconClasses(disabled)}>
+        <Illustration block={true} />
+      </FixedGridColumn>
+    );
+  } else {
+    return null;
+  }
 };
 
 const MenuButtonItem: React.StatelessComponent<IContextualMenuItemProps> = (props: IContextualMenuItemProps) => {
