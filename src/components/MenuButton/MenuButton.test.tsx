@@ -138,7 +138,7 @@ describe('<MenuButton />', () => {
           menuItems={menuItems}
           className="TEST-ADDITIONAL-CLASSNAME"
           icon={Reply}
-          text={'TEST'}
+          text="TEST"
         />,
       );
     });
