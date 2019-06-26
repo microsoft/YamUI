@@ -5,6 +5,7 @@ import { IContextualMenuProps, IContextualMenuItemProps } from 'office-ui-fabric
 import MenuButton, { MenuButtonProps, MenuButtonItem, MenuItemType } from '.';
 import { IconSize } from '../Icon';
 import Reply from '../Icon/icons/Reply';
+import Docx from '../Illustration/illustrations/Docx16';
 
 describe('<MenuButton />', () => {
   let component: ShallowWrapper<MenuButtonProps>;
@@ -17,11 +18,13 @@ describe('<MenuButton />', () => {
         key: 'test1',
         text: 'test',
         type: MenuItemType.Normal,
+        icon: Reply,
       },
       {
         key: 'test2',
         text: 'test',
         type: MenuItemType.Header,
+        illustration: Docx,
       },
       {
         key: 'test3',

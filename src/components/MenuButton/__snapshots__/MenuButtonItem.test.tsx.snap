@@ -55,7 +55,7 @@ exports[`<MenuButtonItem /> when it is disabled with an illustration matches its
     gutterSize="small"
   >
     <FixedGridColumn
-      className="y-menu-button--item-icon y-menu-button--item-icon__disabled"
+      className="y-menu-button--item-icon"
       fixed={true}
     >
       <Docx

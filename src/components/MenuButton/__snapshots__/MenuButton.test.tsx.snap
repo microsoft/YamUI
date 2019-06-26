@@ -27,7 +27,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
             "yamUIIllustration": undefined,
           },
           "disabled": undefined,
@@ -41,7 +41,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
-            "yamUIIllustration": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
@@ -123,7 +123,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
             "yamUIIllustration": undefined,
           },
           "disabled": undefined,
@@ -137,7 +137,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
-            "yamUIIllustration": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
@@ -220,7 +220,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
             "yamUIIllustration": undefined,
           },
           "disabled": undefined,
@@ -234,7 +234,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
-            "yamUIIllustration": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
