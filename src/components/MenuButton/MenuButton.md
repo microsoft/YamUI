@@ -179,7 +179,7 @@ const { IconSize } = require('../Icon');
 
 MenuButton with text specified
 
-```js { "props": { "data-description": "custom icon size" } }
+```js { "props": { "data-description": "custom text" } }
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
