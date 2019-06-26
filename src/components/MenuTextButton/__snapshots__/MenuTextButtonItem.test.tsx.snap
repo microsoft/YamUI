@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuTextButtonItem /> when it is a header type matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item yj-menu-text-button--item-header"
+  textColor="primary"
+  textSize="small"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuTextButtonItem /> when it is disabled with an icon matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item"
+  textColor="disabled"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-icon yj-menu-text-button--item-icon__disabled"
+      fixed={true}
+    >
+      <Reply
+        block={true}
+        size="16"
+      />
+    </FixedGridColumn>
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuTextButtonItem /> when it is disabled without an icon matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item"
+  textColor="disabled"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuTextButtonItem /> with an href matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item"
+  textColor="secondary"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuTextButtonItem /> with an icon passed matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item"
+  textColor="secondary"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-icon"
+      fixed={true}
+    >
+      <Reply
+        block={true}
+        size="16"
+      />
+    </FixedGridColumn>
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
+
+exports[`<MenuTextButtonItem /> with default options matches its snapshot 1`] = `
+<Block
+  className="yj-menu-text-button--item"
+  textColor="secondary"
+  textSize="mediumSub"
+>
+  <FixedGridRow
+    gutterSize="small"
+  >
+    <FixedGridColumn
+      className="yj-menu-text-button--item-text"
+    >
+      test
+    </FixedGridColumn>
+  </FixedGridRow>
+</Block>
+`;
