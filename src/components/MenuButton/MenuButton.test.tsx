@@ -73,17 +73,17 @@ describe('<MenuButton />', () => {
     });
 
     it('passes an icon method to fabric that defaults to the More icon with size large', () => {
-      const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+      const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
       expect(onRenderIcon()).toMatchSnapshot();
     });
 
     it('passes a menu icon method to fabric that returns null to replace the chevron down icon', () => {
-      const onRenderMenuIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderMenuIcon');
+      const onRenderMenuIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderMenuIcon');
       expect(onRenderMenuIcon()).toMatchSnapshot();
     });
 
     it('passes contextualMenuItemAs method to fabric that returns a MenuButtonItem', () => {
-      const menuProps: IContextualMenuProps = component.find('CustomizedIconButton').prop('menuProps');
+      const menuProps: IContextualMenuProps = component.find('CustomizedActionButton').prop('menuProps');
 
       expect((menuProps.contextualMenuItemAs as Function)(testProps)).toMatchSnapshot();
     });
@@ -108,7 +108,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with a default size of LARGE', () => {
-        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });
@@ -121,7 +121,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with the passed size', () => {
-        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });
