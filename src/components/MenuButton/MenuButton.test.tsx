@@ -130,7 +130,13 @@ describe('<MenuButton />', () => {
   describe('with all props', () => {
     beforeEach(() => {
       component = shallow(
-        <MenuButton ariaLabel={ariaLabel} menuItems={menuItems} className="TEST-ADDITIONAL-CLASSNAME" icon={Reply} />,
+        <MenuButton
+          ariaLabel={ariaLabel}
+          menuItems={menuItems}
+          className="TEST-ADDITIONAL-CLASSNAME"
+          icon={Reply}
+          text={'TEST'}
+        />,
       );
     });
 

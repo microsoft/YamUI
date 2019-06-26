@@ -8,6 +8,7 @@ import {
 } from 'office-ui-fabric-react/lib/ContextualMenu';
 import MenuButtonItem from './MenuButtonItem';
 import Reply from '../Icon/icons/Reply';
+import Docx from '../Illustration/illustrations/Docx16';
 
 describe('<MenuButtonItem />', () => {
   let props: IContextualMenuItemProps;
@@ -98,6 +99,27 @@ describe('<MenuButtonItem />', () => {
             disabled: true,
             data: {
               yamUIIcon: Reply,
+            },
+          },
+        };
+
+        component = shallow(<MenuButtonItem {...props} />);
+      });
+
+      it('matches its snapshot', () => {
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('with an illustration', () => {
+      beforeEach(() => {
+        props = {
+          ...props,
+          item: {
+            ...props.item,
+            disabled: true,
+            data: {
+              yamUIIllustration: Docx,
             },
           },
         };

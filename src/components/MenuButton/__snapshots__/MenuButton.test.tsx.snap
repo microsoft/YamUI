@@ -203,6 +203,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
       },
     }
   }
+  text="TEST"
 />
 `;
 
