@@ -5,6 +5,7 @@ import { IContextualMenuProps, IContextualMenuItemProps } from 'office-ui-fabric
 import MenuButton, { MenuButtonProps, MenuButtonItem, MenuItemType } from '.';
 import { IconSize } from '../Icon';
 import Reply from '../Icon/icons/Reply';
+import Docx from '../Illustration/illustrations/Docx16';
 
 describe('<MenuButton />', () => {
   let component: ShallowWrapper<MenuButtonProps>;
@@ -17,11 +18,13 @@ describe('<MenuButton />', () => {
         key: 'test1',
         text: 'test',
         type: MenuItemType.Normal,
+        icon: Reply,
       },
       {
         key: 'test2',
         text: 'test',
         type: MenuItemType.Header,
+        illustration: Docx,
       },
       {
         key: 'test3',
@@ -73,17 +76,17 @@ describe('<MenuButton />', () => {
     });
 
     it('passes an icon method to fabric that defaults to the More icon with size large', () => {
-      const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+      const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
       expect(onRenderIcon()).toMatchSnapshot();
     });
 
     it('passes a menu icon method to fabric that returns null to replace the chevron down icon', () => {
-      const onRenderMenuIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderMenuIcon');
+      const onRenderMenuIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderMenuIcon');
       expect(onRenderMenuIcon()).toMatchSnapshot();
     });
 
     it('passes contextualMenuItemAs method to fabric that returns a MenuButtonItem', () => {
-      const menuProps: IContextualMenuProps = component.find('CustomizedIconButton').prop('menuProps');
+      const menuProps: IContextualMenuProps = component.find('CustomizedActionButton').prop('menuProps');
 
       expect((menuProps.contextualMenuItemAs as Function)(testProps)).toMatchSnapshot();
     });
@@ -108,7 +111,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with a default size of LARGE', () => {
-        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });
@@ -121,7 +124,7 @@ describe('<MenuButton />', () => {
       });
 
       it('passes an icon method to fabric that returns an Icon with the passed size', () => {
-        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedIconButton').prop('onRenderIcon');
+        const onRenderIcon: (() => JSX.Element) = component.find('CustomizedActionButton').prop('onRenderIcon');
         expect(onRenderIcon()).toMatchSnapshot();
       });
     });
@@ -130,7 +133,13 @@ describe('<MenuButton />', () => {
   describe('with all props', () => {
     beforeEach(() => {
       component = shallow(
-        <MenuButton ariaLabel={ariaLabel} menuItems={menuItems} className="TEST-ADDITIONAL-CLASSNAME" icon={Reply} />,
+        <MenuButton
+          ariaLabel={ariaLabel}
+          menuItems={menuItems}
+          className="TEST-ADDITIONAL-CLASSNAME"
+          icon={Reply}
+          text="TEST"
+        />,
       );
     });
 

@@ -10,12 +10,13 @@ import {
 import { join } from '../../util/classNames';
 import { BaseComponentProps } from '../../util/BaseComponent/props';
 import { semanticColors } from '../../util/colors';
-import { IconButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
+import { CommandButton, IButtonStyles } from 'office-ui-fabric-react/lib/Button';
 import { IconSize, BaseIcon } from '../Icon';
 import MoreIcon from '../Icon/icons/More';
 import MenuButtonItem from './MenuButtonItem';
 import { MenuItemType } from './types';
 import './MenuButton.css';
+import { BaseIllustration } from '../Illustration';
 
 export { MenuItemType };
 
@@ -64,6 +65,11 @@ export interface MenuButtonItem {
    * YamUI Icon to display in the item content. Default is no icon.
    */
   icon?: typeof BaseIcon;
+
+  /**
+   * YamUI Illustration to display in the item content. Default is no illustration.
+   */
+  illustration?: typeof BaseIllustration;
 }
 
 export interface MenuButtonProps extends BaseComponentProps {
@@ -88,6 +94,11 @@ export interface MenuButtonProps extends BaseComponentProps {
    * @default IconSize.LARGE
    */
   iconSize?: IconSize;
+
+  /**
+   * Text to display in the menu button.
+   */
+  text?: string;
 }
 
 export default class MenuButton extends React.Component<MenuButtonProps> {
@@ -97,7 +108,8 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
 
   public render() {
     return (
-      <IconButton
+      <CommandButton
+        text={this.props.text}
         styles={this.getStyles()}
         ariaLabel={this.props.ariaLabel}
         menuProps={this.getMenuProps()}
@@ -131,6 +143,7 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
       target: item.newWindow ? '_blank' : undefined,
       data: {
         yamUIIcon: item.icon,
+        yamUIIllustration: item.illustration,
       },
     }));
 
@@ -153,7 +166,6 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
         border: 0,
         padding: 0,
         opacity: 0.7,
-        width: `${this.props.iconSize}px`,
         height: `${this.props.iconSize}px`,
         color: semanticColors.buttonText,
       },

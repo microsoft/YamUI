@@ -10,6 +10,7 @@ MenuButton with default Icon, and all applicable children properties
 const Reply = require('../Icon/icons/Reply').default;
 const Edit = require('../Icon/icons/Edit').default;
 const Share = require('../Icon/icons/Share').default;
+const Docx = require('../Illustration/illustrations/Docx16').default;
 const types = require('./types.ts');
 
 <div>
@@ -37,6 +38,10 @@ const types = require('./types.ts');
       key: 'longText',
       icon: Edit,
       text: 'A menu option that has very long text in the item',
+    }, {
+      key: 'illustration',
+      illustration: Docx,
+      text: 'Illustration Item'
     },
     {
       key: 'divider',
@@ -155,6 +160,35 @@ const { IconSize } = require('../Icon');
   <MenuButton
     ariaLabel="aria"
     iconSize={IconSize.XSMALL}
+    menuItems={[{
+      key: 'edit',
+      icon: Edit,
+      text: 'Edit',
+    }, {
+      key: 'reply',
+      text: 'Reply',
+      icon: Reply,
+    }, {
+      key: 'share',
+      text: 'Share',
+      icon: Share,
+    }]}
+  />
+</div>
+```
+
+MenuButton with text specified
+
+```js { "props": { "data-description": "custom text" } }
+const Reply = require('../Icon/icons/Reply').default;
+const Edit = require('../Icon/icons/Edit').default;
+const Share = require('../Icon/icons/Share').default;
+const { IconSize } = require('../Icon');
+
+<div>
+  <MenuButton
+    ariaLabel="aria"
+    text="Menu"
     menuItems={[{
       key: 'edit',
       icon: Edit,

@@ -15,7 +15,7 @@ exports[`<MenuButton /> when an icon is passed without iconSize passes an icon m
 `;
 
 exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
-<CustomizedIconButton
+<CustomizedActionButton
   ariaLabel="testAria"
   className="y-menu-button y-menu-button--20 TEST-ADDITIONAL-CLASSNAME"
   menuProps={
@@ -27,7 +27,8 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": undefined,
@@ -40,6 +41,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
@@ -52,6 +54,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -64,6 +67,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -86,7 +90,6 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
-        "width": "20px",
       },
       "rootExpanded": Object {
         "color": "#386cbb",
@@ -108,7 +111,7 @@ exports[`<MenuButton /> with additional classnames matches its snapshot 1`] = `
 `;
 
 exports[`<MenuButton /> with all props matches its snapshot 1`] = `
-<CustomizedIconButton
+<CustomizedActionButton
   ariaLabel="testAria"
   className="y-menu-button y-menu-button--20 TEST-ADDITIONAL-CLASSNAME"
   menuProps={
@@ -120,7 +123,8 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": undefined,
@@ -133,6 +137,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
@@ -145,6 +150,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -157,6 +163,7 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -179,7 +186,6 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
-        "width": "20px",
       },
       "rootExpanded": Object {
         "color": "#386cbb",
@@ -197,11 +203,12 @@ exports[`<MenuButton /> with all props matches its snapshot 1`] = `
       },
     }
   }
+  text="TEST"
 />
 `;
 
 exports[`<MenuButton /> with default options matches its snapshot 1`] = `
-<CustomizedIconButton
+<CustomizedActionButton
   ariaLabel="testAria"
   className="y-menu-button y-menu-button--20"
   menuProps={
@@ -213,7 +220,8 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
       "items": Array [
         Object {
           "data": Object {
-            "yamUIIcon": undefined,
+            "yamUIIcon": [Function],
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": undefined,
@@ -226,6 +234,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": [Function],
           },
           "disabled": undefined,
           "href": undefined,
@@ -238,6 +247,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -250,6 +260,7 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
         Object {
           "data": Object {
             "yamUIIcon": undefined,
+            "yamUIIllustration": undefined,
           },
           "disabled": undefined,
           "href": "http://bing.com",
@@ -272,7 +283,6 @@ exports[`<MenuButton /> with default options matches its snapshot 1`] = `
         "height": "20px",
         "opacity": 0.7,
         "padding": 0,
-        "width": "20px",
       },
       "rootExpanded": Object {
         "color": "#386cbb",
