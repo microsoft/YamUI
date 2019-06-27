@@ -35,7 +35,7 @@ const getIconColumn = (data: any, disabled: boolean) => {
     );
   } else if (Illustration) {
     return (
-      <FixedGridColumn fixed={true} className={'y-menu-button--item-icon'}>
+      <FixedGridColumn fixed={true} className="y-menu-button--item-icon">
         <Illustration block={true} />
       </FixedGridColumn>
     );
